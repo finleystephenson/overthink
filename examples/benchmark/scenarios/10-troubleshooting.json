@@ -1,0 +1,338 @@
+[
+  {
+    "id": "troubleshoot-01",
+    "category": "product troubleshooting",
+    "title": "Boombox Mini will not pair, fixed by the steps",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor cannot pair their Boombox Mini with a phone. The product record has the steps: switch off and on, hold the pair button until the light blinks, delete it from the Bluetooth list and pair again, then try a second phone. The steps work.",
+    "turns": [
+      "My Boombox Mini won't pair with my phone, help",
+      "Done all that and it's connected now, thanks"
+    ],
+    "records": [
+      "boombox-mini"
+    ],
+    "expected": {
+      "answer": "Gives the record's steps in order: switch the speaker off and on, hold the pair button until the light blinks, delete Boombox Mini from the phone's Bluetooth list and pair again. If it still fails, try a second phone, then open a support case. Does not push a repair once it works.",
+      "must_say": [
+        "pair button",
+        "Bluetooth list",
+        "second phone"
+      ],
+      "must_not_say": [
+        "Fix Club",
+        "send it back",
+        "refund",
+        "I have opened a case"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "boombox-mini"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair",
+      "create_return",
+      "open_case",
+      "escalate"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Uses the steps from the product record rather than generic Bluetooth advice."
+    ]
+  },
+  {
+    "id": "troubleshoot-02",
+    "category": "product troubleshooting",
+    "title": "Blip will not turn on, steps fail, in-warranty repair",
+    "difficulty": 2,
+    "customer_id": "C-1021",
+    "channel": "web",
+    "setup": "Ali's Blip (ORD-20127, delivered 19 Oct 2026) will not turn on. The record's steps: plug it in for 15 minutes, hold the power key for 10 seconds, try a different cable and socket. He has already tried all three. It is about a month old, so a fault is covered and the repair is free with a free label both ways.",
+    "turns": [
+      "My Blip won't turn on at all. Dead.",
+      "Left it on charge 20 minutes, held the power button, tried my sister's cable. Nothing.",
+      "ORD-20127, ali.baba@example.com. Can you get it fixed?"
+    ],
+    "records": [
+      "ORD-20127",
+      "blip",
+      "C-1021"
+    ],
+    "expected": {
+      "answer": "Suggests the record's steps first. Once he says they failed, confirms it is inside the 24-month warranty and creates a Fix Club repair for the Blip with his description of the fault. The repair is free with a free label both ways, about 10 working days from the day it reaches the workshop.",
+      "must_say": [
+        "free",
+        "10 working days"
+      ],
+      "must_not_say": [
+        "£15 assessment fee",
+        "£49",
+        "I have refunded",
+        "a replacement is on its way"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "blip"
+        }
+      },
+      {
+        "tool": "create_repair",
+        "input_includes": {
+          "sku": "OT-BLIP"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1021",
+          "sku": "OT-BLIP"
+        },
+        "count": 1
+      },
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1021",
+          "sku": "OT-BLIP"
+        },
+        "field": "in_warranty",
+        "equals": true
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Tries the steps before raising a repair.",
+      "Repair is created once only and the fault is described in the customer's words."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20127",
+          "email_or_postcode": "ali.baba@example.com"
+        }
+      ],
+      [
+        "get_product",
+        {
+          "id": "blip"
+        }
+      ],
+      [
+        "create_repair",
+        {
+          "sku": "OT-BLIP",
+          "fault": "Will not turn on. Tried 15 minutes of charging, a 10 second power key hold and another cable.",
+          "order_number": "ORD-20127"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "troubleshoot-03",
+    "category": "product troubleshooting",
+    "title": "Mould in the Pocket Jungle, customer wants to return it",
+    "difficulty": 3,
+    "customer_id": "C-1036",
+    "channel": "web",
+    "setup": "Story 28. Mowgli's Pocket Jungle (ORD-20145, delivered 14 Nov, 9 days ago, a day late on a Saturday) has mould on the soil and the leaves look unwell. CASE-9015 is open and waiting for a photo. He wants to send it back for a refund. The live plant cannot be returned for change of mind, but it has a 14-day health guarantee and he is inside it.",
+    "turns": [
+      "There's mould on the soil in my Pocket Jungle and the leaves are going yellow. I want to send it back and get my money.",
+      "ORD-20145, mowgli@example.com. So can I return it or not?"
+    ],
+    "records": [
+      "ORD-20145",
+      "CASE-9015",
+      "pocket-jungle",
+      "C-1036"
+    ],
+    "expected": {
+      "answer": "Gives the care steps (remove the mould with the tweezers, lift the dome a few hours a day for a week, stop misting until the moss is dry, remove yellow leaves, keep it out of direct sun). Says the live plant cannot be returned for a refund but has a 14-day health guarantee and he is inside it: send a photo (CASE-9015 is waiting for one) and a new plant is arranged. Does not create a return.",
+      "must_say": [
+        "14 days",
+        "photo"
+      ],
+      "must_not_say": [
+        "I have created a return",
+        "I have refunded",
+        "refund is on its way",
+        "a new plant is booked"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "pocket-jungle"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20145"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "customer_id": "C-1036"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Notes CASE-9015 already exists and does not open a second case.",
+      "Does not promise a replacement before a photo is seen."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20145",
+          "email_or_postcode": "mowgli@example.com"
+        }
+      ],
+      [
+        "get_product",
+        {
+          "id": "pocket-jungle"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20145",
+          "sku": "OT-JUNG"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "troubleshoot-04",
+    "category": "product troubleshooting",
+    "title": "Daypack laptop sleeve will not stay on the rails",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor says the Daypack Laptop Sleeve keeps falling off. The record's steps: push both clips fully into slots on the same row until they click, and never load an add-on over 1.5 kg.",
+    "turns": [
+      "The laptop sleeve on my Daypack keeps coming off the rails when I walk. Faulty?",
+      "It's a 16 inch laptop plus charger and a big hardback in the sleeve"
+    ],
+    "records": [
+      "daypack"
+    ],
+    "expected": {
+      "answer": "Gives the record's steps: push both clips fully into slots on the same row until they click. Then notes an add-on must not be loaded over 1.5 kg, and a 16 inch laptop plus charger and a hardback is probably over that. If it still comes off with a light load, open a support case.",
+      "must_say": [
+        "same row",
+        "1.5 kg"
+      ],
+      "must_not_say": [
+        "it is a fault",
+        "free replacement",
+        "I have opened a case",
+        "Fix Club"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "daypack"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair",
+      "create_return",
+      "open_case",
+      "escalate"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not declare a fault before the steps and weight limit are covered."
+    ]
+  }
+]

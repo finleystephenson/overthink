@@ -1,0 +1,11 @@
+{
+  "title": "Returns window: 7, 14 or 21 days against 30",
+  "question": "What happens to customers if we shorten the returns window?",
+  "start": { "size": "standard" },
+  "days": 30, "seeds": 5,
+  "arms": [
+    { "id": "window-7", "label": "7-day returns window", "interventions": [{ "type": "returns_window", "params": { "days": 7 } }] },
+    { "id": "window-14", "label": "14-day returns window", "interventions": [{ "type": "returns_window", "params": { "days": 14 } }] },
+    { "id": "window-21", "label": "21-day returns window", "interventions": [{ "type": "returns_window", "params": { "days": 21 } }] }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "_note": "The team as an organisation: who reports to whom, what each person is good at, and why they are here. Read by engine/tasks.js (get_org_chart). Kept apart from data/staff.json, which the simulator reads for hours, pay and task speeds. Skills are plain words; `owns` are the records each person is the usual first answer for, which decides who replies in staff chat (sim/team-chat.mjs). Someone hired at run time (set_staffing add) reports to the first person their role reports to.",
+  "people": {
+    "S-01": { "reports_to": null, "skills": ["running the business", "complaints at stage two", "approving big refunds", "approving large purchase orders"], "owns": ["general", "complaint_stage2", "approval"], "why": "Owns the shop. Signs off anything big and takes complaints nobody else could settle." },
+    "S-02": { "reports_to": "S-01", "skills": ["month-end", "cash flow", "supplier terms"], "owns": ["money", "month_end"], "why": "Keeps the books honest and the cash in the bank. Two mornings a week." },
+    "S-03": { "reports_to": "S-02", "skills": ["bookkeeping", "supplier invoices", "chasing pay-later money"], "owns": ["money", "invoice", "pay_later"], "why": "Day-to-day bookkeeping: invoices in, money owed, the ledger." },
+    "S-04": { "reports_to": "S-01", "skills": ["dispatch", "carriers", "chasing late parcels", "returns"], "owns": ["orders", "parcel", "return"], "why": "Gets parcels out of the door and knows every carrier by name." },
+    "S-05": { "reports_to": "S-04", "skills": ["packing", "stock counts", "receiving deliveries"], "owns": ["stock_count", "receiving"], "why": "Runs the stock room: deliveries in, counts, shelves." },
+    "S-06": { "reports_to": "S-01", "skills": ["customer service", "complaints", "training", "returns"], "owns": ["customers", "case", "complaint", "review"], "why": "Leads the help desk and picks up anything a customer is unhappy about." },
+    "S-07": { "reports_to": "S-06", "skills": ["email", "phone", "chat", "refunds"], "owns": ["contact"], "why": "Answers customers on every channel." },
+    "S-08": { "reports_to": "S-06", "skills": ["email", "chat", "order changes", "returns"], "owns": ["contact"], "why": "Answers customers, mostly by email and chat." },
+    "S-09": { "reports_to": "S-01", "skills": ["buying", "suppliers", "purchase orders", "stock levels"], "owns": ["stockroom", "po", "supplier", "stock"], "why": "Decides what to buy, from whom and when." },
+    "S-10": { "reports_to": "S-01", "skills": ["campaigns", "social posts", "newsletters", "partnerships"], "owns": ["marketing", "campaign", "social", "news"], "why": "Gets the word out: posts, newsletters, campaigns and the press." },
+    "S-11": { "reports_to": "S-06", "skills": ["repairs", "quotes", "faulty returns"], "owns": ["repair"], "why": "Mends things at the Fix Club bench." }
+  }
+}

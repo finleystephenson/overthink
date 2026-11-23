@@ -1,0 +1,147 @@
+/* Mutter: the business's own short-post account. Words are the product, so this is one calm column with good type:
+   the post at 17px with a generous line, the byline small and grey, the counts quiet. Text first, no avatar column,
+   no side rail: our own design, not any real feed's. Parts from ../lib/premium.css, results and charts from
+   ../lib/social.css; this file is layout and the few post-only parts. */
+
+.mu { max-width: 680px; margin: 0 auto; padding: 28px var(--x-g) 80px; }
+
+/* ------------------------------------------------------------------ the account, then the tabs */
+.mu-me { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; }
+.mu-co { display: grid; place-items: center; flex: none; width: var(--s); height: var(--s); border-radius: 50%; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule); color: var(--x-ink); }
+.mu-me-text { flex: 1; display: grid; gap: 4px; min-width: 0; }
+/* The business's name in its own face: the one place Anybody appears here. */
+.mu-name { font: 900 22px/1.05 "Anybody", var(--x-display); font-stretch: 125%; letter-spacing: -.01em; }
+.mu-me-text small { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.mu-tabs { display: flex; gap: 22px; overflow-x: auto; border-bottom: 1px solid var(--x-rule-soft); scrollbar-width: none; }
+.mu-tab { display: inline-flex; align-items: center; gap: 6px; height: 44px; color: var(--x-ink-2); font: 400 14.5px/1 var(--x-text); text-decoration: none; white-space: nowrap; }
+.mu-tab:hover { color: var(--x-ink); }
+.mu-tab.is-on { color: var(--x-ink); font-weight: 500; box-shadow: inset 0 -2px 0 var(--x-ink); }
+.mu-waiting { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink); }
+
+.mu-col { min-height: 50vh; }
+.mu-col > .skel-wrap { padding: 24px 0; }
+.mu-sub { padding: 16px 0 6px; font-size: 14px; color: var(--x-ink-2); }
+.mu-quiet { padding: 20px 0; font-size: 14px; color: var(--x-ink-2); }
+.mu-older { margin: 16px 0 0; }
+
+/* ------------------------------------------------------------------ writing */
+.mu-compose { margin: 18px 0 6px; padding: 12px 12px 10px 16px; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule); }
+.mu-compose:focus-within { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.mu-compose textarea { display: block; width: 100%; min-height: 52px; padding: 2px 0; border: 0; background: none; resize: none; outline: none; color: var(--x-ink); font: 400 17px/1.55 var(--x-text); }
+.mu-compose textarea:focus-visible { box-shadow: none; }
+.mu-compose textarea::placeholder { color: var(--x-ink-2); }
+.mu-compose-foot { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+.mu-ring { margin-right: auto; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); font-variant-numeric: tabular-nums; }
+.mu-ring b { font-weight: 400; }
+.mu-ring.is-near { color: var(--x-spark-ink); }
+.mu-ring.is-over { color: var(--x-bad); }
+.mu-keys { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+kbd { font: 400 12px/1 var(--x-mono); padding: 2px 5px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--x-rule); color: var(--x-ink); }
+.mu-compose.is-reply { margin-top: 10px; }
+
+/* ------------------------------------------------------------------ the stream: words first */
+.mu-list { list-style: none; margin: 0; padding: 0; }
+.mu-row { position: relative; padding: 18px 0 14px; border-bottom: 1px solid var(--x-rule-soft); }
+.mu-hit { position: absolute; inset: 0 -12px; z-index: 0; border: 0; border-radius: 8px; background: none; }
+.mu-hit:hover { background: var(--hover); }
+.mu-hit:focus-visible { box-shadow: inset 0 0 0 2px var(--x-spark); }
+.mu-row-body { position: relative; z-index: 1; pointer-events: none; }
+.mu-row-body button, .mu-row-body a { pointer-events: auto; }
+.mu-byline { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 8px; font-size: 14.5px; }
+.mu-byline b { font-weight: 500; }
+.mu-byline > span:not(.mu-mini):not(.by), .mu-byline time { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.mu-byline .by { margin-left: auto; font-size: 12.5px; }
+.mu-mini { align-self: center; display: inline-grid; place-items: center; color: var(--x-ink); }
+.mu-context { margin-top: 2px; font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.mu-text { margin-top: 6px; max-width: 60ch; font: 400 17px/1.55 var(--x-text); letter-spacing: -.003em; overflow-wrap: anywhere; white-space: pre-wrap; }
+.mu-at { font-weight: 500; }
+.mu-counts { display: flex; align-items: center; gap: 22px; margin-top: 8px; }
+.mu-row.is-new { animation: mu-wash .6s var(--x-ease) both; }
+@keyframes mu-wash { from { background: var(--x-wash); } }
+
+/* ------------------------------------------------------------------ one post opened */
+.mu-head-back { padding: 14px 0 4px; }
+.mu-head-back .btn { margin-left: -12px; }
+.mu-chain .mu-row { border-bottom: 0; padding-bottom: 6px; }
+.mu-chain .mu-row-body { padding-left: 14px; border-left: 2px solid var(--x-rule-soft); }
+.mu-focus { padding: 18px 0 20px; border-bottom: 1px solid var(--x-rule-soft); }
+.mu-focus-head { display: flex; align-items: center; gap: 12px; }
+.mu-who { display: grid; gap: 3px; min-width: 0; }
+.mu-who b { font-weight: 500; font-size: 15px; }
+.mu-who small { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.mu-focus-head .avatar { --av-size: 44px !important; width: 44px; height: 44px; }
+.mu-focus-text { margin-top: 16px; font: 400 22px/1.45 var(--x-text); letter-spacing: -.01em; white-space: pre-wrap; overflow-wrap: anywhere; }
+.mu-focus-time { margin-top: 12px; font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.mu-focus-react { margin-top: 10px; }
+.mu-replies { margin-top: 6px; }
+.mu-nest { padding-left: calc(var(--depth) * 20px); }
+.mu-nest .mu-row { padding-left: 0; }
+
+/* ------------------------------------------------------------------ in the news */
+.mu-trend-list > li { border-bottom: 1px solid var(--x-rule-soft); }
+.mu-trend { display: grid; gap: 6px; width: 100%; padding: 14px 12px; margin: 0 -12px; border: 0; border-radius: 8px; background: none; text-align: left; width: calc(100% + 24px); }
+.mu-trend:hover { background: var(--hover); }
+.mu-trend small { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.mu-trend b { font: 500 16px/1.4 var(--x-text); }
+.mu-story { display: grid; gap: 12px; justify-items: start; }
+.mu-story-section { font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.mu-story-head { font: 600 24px/1.15 var(--x-display); letter-spacing: -.025em; }
+.mu-story-text { font-size: 15px; line-height: 1.6; max-width: 62ch; }
+
+/* ------------------------------------------------------------------ messages: the same list and reader as Squint */
+.mu-dm-bar { display: flex; justify-content: flex-end; padding: 14px 0 12px; }
+.mu-dm { display: grid; grid-template-columns: minmax(200px, 260px) minmax(0, 1fr); height: clamp(440px, calc(100dvh - 300px), 720px); border-radius: 12px; background: var(--x-card);
+  box-shadow: inset 0 0 0 1px var(--x-rule-soft); overflow: hidden; }
+.mu-dm-list { list-style: none; margin: 0; padding: 6px; overflow-y: auto; border-right: 1px solid var(--x-rule-soft); }
+.mu-dm-row { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 10px; align-items: center; width: 100%; min-height: 60px; padding: 8px 10px; border: 0; border-radius: 8px; background: none; text-align: left; }
+.mu-dm-row .avatar { --av-size: 28px !important; width: 28px; height: 28px; font-size: 11px; }
+.mu-dm-row:hover { background: var(--hover); }
+.mu-dm-row.is-on { background: var(--x-tint); }
+.mu-dm-row .mu-who b { font-weight: 400; font-size: 14.5px; }
+.mu-dm-row.is-waiting .mu-who b { font-weight: 600; }
+.mu-dm-row .mu-who small { font: 400 13.5px/1.3 var(--x-text); }
+.mu-dm-row time { align-self: start; padding-top: 3px; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.mu-dm-pane { display: flex; flex-direction: column; min-height: 0; background: var(--x-paper); }
+.mu-dm-pane > .skel-wrap, .mu-dm-pane > .empty { padding: 20px; }
+.mu-dm-head { display: flex; align-items: center; gap: 10px; height: 56px; flex: none; padding: 0 16px; border-bottom: 1px solid var(--x-rule-soft); }
+.mu-dm-back { display: none; }
+.mu-lines { flex: 1; min-height: 0; overflow-y: auto; list-style: none; margin: 0; padding: 14px 18px; }
+.mu-line { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 12px; padding: 8px 0; border-top: 1px solid var(--x-rule-soft); }
+.mu-line:first-child { border-top: 0; }
+.mu-line-who { font: 400 12.5px/1.6 var(--x-mono); color: var(--x-ink-2); }
+.mu-line.is-shop .mu-line-who { color: var(--x-ink); }
+.mu-line p { font-size: 14.5px; line-height: 1.5; overflow-wrap: anywhere; }
+.mu-line time { font: 400 12.5px/1.6 var(--x-mono); color: var(--x-ink-2); }
+.mu-line.is-new { animation: mu-wash .6s var(--x-ease) both; }
+.mu-dm-form { display: flex; align-items: flex-end; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--x-rule-soft); background: var(--x-card); }
+.mu-dm-form textarea { flex: 1; min-height: 36px; max-height: 120px; padding: 8px 12px; border: 0; border-radius: 8px; background: var(--x-paper); box-shadow: inset 0 0 0 1px var(--x-rule-soft); resize: none; font: 400 14.5px/1.4 var(--x-text); color: var(--x-ink); }
+.mu-dm-form textarea:focus { outline: none; box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.mu-newmsg { display: grid; gap: 14px; }
+.mu-newmsg-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mu-people { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.mu-person { display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px 0 4px; border: 0; border-radius: 99px; background: none; box-shadow: inset 0 0 0 1px var(--x-rule); font-size: 13.5px; }
+.mu-person:hover { background: var(--x-tint); }
+.mu-person .avatar { --av-size: 24px !important; width: 24px; height: 24px; font-size: 9.5px; }
+
+/* ------------------------------------------------------------------ how it is going */
+.mu-ins { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 24px; margin: 0; padding: 22px 0 24px; list-style: none; border-bottom: 1px solid var(--x-rule-soft); }
+.mu-ins li { display: grid; gap: 8px; align-content: start; }
+.mu-ins-label { font-size: 13.5px; color: var(--x-ink-2); }
+.mu-ins small { font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.mu-chart { padding: 26px 0 10px; border-bottom: 1px solid var(--x-rule-soft); }
+.mu-chart-title { font: 600 19px/1.2 var(--x-display); letter-spacing: -.02em; margin-bottom: 16px; }
+
+@media (max-width: 640px) {
+  .mu { padding-top: 18px; }
+  .mu-name { font-size: 19px; }
+  .mu-keys { display: none; }
+  .mu-text { font-size: 16px; }
+  .mu-focus-text { font-size: 19px; }
+  .mu-byline .by { margin-left: 0; flex-basis: 100%; }
+  .mu-dm { grid-template-columns: minmax(0, 1fr); }
+  .mu-dm-pane { display: none; }
+  .mu-dm.is-reading .mu-dm-list { display: none; }
+  .mu-dm.is-reading .mu-dm-pane { display: flex; }
+  .mu-dm-back { display: inline-flex; }
+  .mu-ins { grid-template-columns: minmax(0, 1fr); }
+}

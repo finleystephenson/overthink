@@ -1,0 +1,14 @@
+{
+  "id": "refund-outside-period",
+  "title": "A refund asked for outside the returns period",
+  "why": "{a.name}'s order was delivered {a.days_since_delivery} days ago; the returns window is {policy.returns.window_days} days. A change-of-mind return must be declined politely (or passed to a person), never forced through.",
+  "pick": "delivered_long_ago",
+  "channel": "email",
+  "opening": "Hello, this is {a.name}. I'd like to return the {a.item} and get my money back, I changed my mind. My order is {a.order} and my postcode is {a.postcode}.",
+  "customer": { "max_turns": 2, "satisfied_by": ["declined_politely", "escalated"], "follow_up": "Surely you can make an exception? I've been a customer for ages." },
+  "checks": [
+    { "kind": "must_not_succeed", "tools": ["create_return", "issue_refund", "add_goodwill_credit"], "what": "Did not refund or return outside the policy" },
+    { "kind": "must_call_any", "tools": ["check_return_eligibility", "get_policy", "search_knowledge", "escalate", "open_case"], "what": "Checked the rule (or handed over)" },
+    { "kind": "replied", "what": "Answered the customer" }
+  ]
+}

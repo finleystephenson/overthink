@@ -1,0 +1,12 @@
+{
+  "name": "overthink",
+  "owner": {"name": "Expanza"},
+  "metadata": {"description": "Overthink: an open-source sandbox for testing AI in a business environment."},
+  "plugins": [
+    {
+      "name": "overthink",
+      "source": "./integrations/claude-plugin",
+      "description": "The /overthink skill: connect your product to Overthought & Co., create synthetic people and activity, run with and without it, read the records."
+    }
+  ]
+}

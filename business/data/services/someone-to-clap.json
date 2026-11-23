@@ -1,0 +1,139 @@
+{
+  "id": "someone-to-clap",
+  "name": "Someone to Clap",
+  "tagline": "A small crew applauds you. Booing is not available.",
+  "summary": "A crew arrives at your address and claps for a named person at a named moment. Three packages, four add-ons.",
+  "concept": "Some achievements get a room of people. Others get one person in a kitchen. We send the room.",
+  "who_its_for": "Anyone marking a finished thesis, a driving test, a first loaf or the end of a long week.",
+  "how_it_works": [
+    "Choose a package and any add-ons.",
+    "Pick a slot at least 72 hours ahead: 10:00, 13:00, 16:00 or 19:00, Monday to Saturday.",
+    "Give us the exact address, the name of the person being clapped and the moment to start.",
+    "The crew arrives a few minutes early and waits out of sight.",
+    "At the agreed moment they clap for the length of the package, then leave."
+  ],
+  "page": {
+    "headline": "Applause, on request.",
+    "intro": "A small crew applauds you. Booing is not available.",
+    "sections": [
+      {
+        "title": "Three packages",
+        "body": "Polite Ripple is 3 people for 2 minutes. Warm Reception is 6 for 5. Standing Ovation is 12 for 10. Prices are on each package."
+      },
+      {
+        "title": "Add-ons",
+        "body": "Light cheering, one whoop, an encore, and paper flowers thrown and collected afterwards. Priced separately and can be combined."
+      },
+      {
+        "title": "What we will not do",
+        "body": "No funerals, courts, exams or medical appointments. No booing, heckling or sarcastic clapping. Nobody is clapped for unless they have agreed."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "How much notice do you need?",
+      "a": "At least 72 hours."
+    },
+    {
+      "q": "What do I have to tell you?",
+      "a": "The exact address, the name of the person to be clapped, and the moment the clapping should start."
+    },
+    {
+      "q": "Does the person being clapped need to know?",
+      "a": "They need to have agreed to it. The exact time can still be a surprise."
+    },
+    {
+      "q": "Can I cancel?",
+      "a": "Full refund up to 48 hours before, half refund up to 24 hours before, none after that."
+    },
+    {
+      "q": "Can I change the time?",
+      "a": "Once, free, up to 48 hours before, if a crew is free. A second change costs £15."
+    },
+    {
+      "q": "Where do you go?",
+      "a": "Within 30 miles of us is included. Up to 60 miles costs £1 per extra mile. We do not go further."
+    },
+    {
+      "q": "Can you clap at a wedding or a party?",
+      "a": "Yes, if the venue lets us in and any tickets needed have been bought for the crew."
+    },
+    {
+      "q": "What are the flowers made of?",
+      "a": "Paper. We collect them afterwards."
+    }
+  ],
+  "image": {
+    "file": "img/someone-to-clap.jpg",
+    "sweep": "#E6D3DC"
+  },
+  "photography_direction": "A crew of clappers in matching plain jackets, shot from behind or cropped at the shoulders, hands mid-clap. No faces. Seamless dusty-pink backdrop, soft light, a hint of motion blur in the hands only.",
+  "image_prompts": {
+    "hero": "Rear view of six people in identical plain charcoal jackets standing in a line, hands raised mid-clap, seamless dusty pink backdrop, soft studio light, no faces visible.",
+    "detail": "Tight crop of two hands clapping in plain charcoal jacket cuffs, slight motion blur, dusty pink background.",
+    "in_use": "A crew of twelve in matching jackets seen from behind, lined up on a pavement outside a front door, hands in mid-clap, overcast daylight, no faces.",
+    "campaign": "Cropped shot from shoulder level of a crew of three in matching jackets applauding, a single paper flower in mid-air in front of them, pink backdrop."
+  },
+  "related": [
+    "someone-to-queue",
+    "borrow-box"
+  ],
+  "occasions": [
+    "A finished thesis",
+    "A passed driving test",
+    "A first loaf that rose",
+    "A retirement, on the last walk out of the building",
+    "Someone arriving home after a long trip",
+    "A very good parallel park",
+    "A promotion that has been announced by email only",
+    "The end of a long project, at 16:00 on a Friday"
+  ],
+  "will_not_source": "business.json services.someone-to-clap.will_not",
+  "packages": [
+    {
+      "id": "CLAP-RIPPLE",
+      "name": "Polite Ripple",
+      "clappers": 3,
+      "minutes": 2,
+      "price": 60
+    },
+    {
+      "id": "CLAP-WARM",
+      "name": "Warm Reception",
+      "clappers": 6,
+      "minutes": 5,
+      "price": 120
+    },
+    {
+      "id": "CLAP-OVATION",
+      "name": "Standing Ovation",
+      "clappers": 12,
+      "minutes": 10,
+      "price": 260
+    }
+  ],
+  "add_ons": [
+    {
+      "id": "ADD-CHEER",
+      "name": "Light cheering",
+      "price": 15
+    },
+    {
+      "id": "ADD-ENCORE",
+      "name": "An encore (second round, same day, same place)",
+      "price": 25
+    },
+    {
+      "id": "ADD-WHOOP",
+      "name": "One whoop",
+      "price": 5
+    },
+    {
+      "id": "ADD-FLOWERS",
+      "name": "Flowers thrown (paper, collected afterwards)",
+      "price": 20
+    }
+  ]
+}

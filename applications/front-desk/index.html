@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Front Desk · Customer help · Overthought &amp; Co.</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap">
+<link rel="stylesheet" href="../lib/premium.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="fd-body">
+<!-- A help desk: the queue of people who got in touch, the open conversation, and who the customer is. -->
+<main class="fd" id="main" data-view="queue">
+  <section class="fd-queue" id="queue" aria-label="Who got in touch"></section>
+  <section class="fd-talk" id="talk" aria-label="The conversation" tabindex="-1"></section>
+  <aside class="fd-who" id="who" aria-label="The customer"></aside>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

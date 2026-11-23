@@ -1,0 +1,323 @@
+[
+  {
+    "number": "CASE-9001",
+    "customer_id": "C-1033",
+    "subject": "Why can't I order to the Highlands",
+    "category": "delivery",
+    "status": "resolved",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-10-21T09:00:00Z",
+    "related": {
+      "order": "ORD-20129"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-10-21T09:25:00Z",
+        "by": "support_agent",
+        "text": "Order cancelled and refunded: we do not deliver to the Scottish Highlands and Islands. Told her we cannot deliver to that area."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9002",
+    "customer_id": "C-1030",
+    "subject": "Parcel arrived late",
+    "category": "delivery",
+    "status": "resolved",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-12T14:00:00Z",
+    "related": {
+      "order": "ORD-20138"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-12T14:10:00Z",
+        "by": "support_agent",
+        "text": "Parcel arrived 3 working days after the estimated date. Added £10 goodwill credit (within agent limit of £15). Customer happy. Do not add more."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9003",
+    "customer_id": "C-1024",
+    "subject": "Parcel lost in transit",
+    "category": "delivery",
+    "status": "escalated",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-16T09:12:00Z",
+    "related": {
+      "order": "ORD-20141"
+    },
+    "escalated_to": "support_agent",
+    "notes": [
+      {
+        "at": "2026-11-16T09:15:00Z",
+        "by": "assistant",
+        "text": "Customer says parcel is 4 days late (eta 12 Nov). Tracking last scanned 10 Nov. Asked carrier for a trace. Told customer a person will update within 1 working day."
+      },
+      {
+        "at": "2026-11-19T10:30:00Z",
+        "by": "assistant",
+        "text": "Second contact. Carrier has marked the parcel lost. Escalated to support agent for resend or refund decision."
+      },
+      {
+        "at": "2026-11-22T18:05:00Z",
+        "by": "assistant",
+        "text": "Third contact about the same parcel, still no answer from a person. Customer is angry. Re-escalated, asked for a call back before the end of Mon 23 Nov."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9004",
+    "customer_id": "C-1023",
+    "subject": "Return rejected, wants it reviewed",
+    "category": "complaint",
+    "status": "open",
+    "is_complaint": true,
+    "complaint_stage": 1,
+    "opened_at": "2026-11-17T11:00:00Z",
+    "related": {
+      "order": "ORD-20132",
+      "return": "RET-3005"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-17T11:05:00Z",
+        "by": "support_agent",
+        "text": "Stage 1 complaint logged. Return rejected after inspection (hygiene seal removed, wear marks). Customer says she only tried it on once and the seal was never fitted."
+      },
+      {
+        "at": "2026-11-18T09:40:00Z",
+        "by": "support_agent",
+        "text": "Acknowledged to customer within 1 working day."
+      },
+      {
+        "at": "2026-11-20T16:00:00Z",
+        "by": "support_agent",
+        "text": "Answer was due today (3 working days). Not sent: still waiting for the warehouse to send inspection photos."
+      },
+      {
+        "at": "2026-11-23T09:00:00Z",
+        "by": "support_agent",
+        "text": "Now overdue. Customer chased by email. Support lead to be told."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9005",
+    "customer_id": "C-1007",
+    "subject": "Item missing from parcel",
+    "category": "orders",
+    "status": "open",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-19T16:30:00Z",
+    "related": {
+      "order": "ORD-20151"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-19T16:40:00Z",
+        "by": "assistant",
+        "text": "Checked: order was one parcel, not split. The packing note lists 2 of the 3 lines. The pen refill pack (OT-PEN-REFILL) was never packed. Customer chose to wait for a person to decide between resend and refund."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9007",
+    "customer_id": "C-1002",
+    "subject": "Cracked Blip screen, quote received",
+    "category": "repairs",
+    "status": "waiting_customer",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-21T10:20:00Z",
+    "related": {
+      "order": "ORD-20102",
+      "repair": "FIX-5006"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-21T10:25:00Z",
+        "by": "assistant",
+        "text": "Customer asked why the screen is not covered when the Blip is only 14 months old. Explained accidental damage is excluded. Quote is £49, valid to 4 Dec. Waiting for the customer's decision."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9008",
+    "customer_id": "C-1005",
+    "subject": "Parcel late",
+    "category": "delivery",
+    "status": "open",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-21T11:15:00Z",
+    "related": {
+      "order": "ORD-20146"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-21T11:20:00Z",
+        "by": "assistant",
+        "text": "Parcel 3 working days past its estimated date and marked delayed. Told the customer the delivery charge can be refunded on request by a support agent. Not yet requested."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9009",
+    "customer_id": "C-1008",
+    "subject": "Trophy arrived with the cup snapped off",
+    "category": "orders",
+    "status": "waiting_customer",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-21T14:10:00Z",
+    "related": {
+      "order": "ORD-20159"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-21T14:20:00Z",
+        "by": "assistant",
+        "text": "The cup came away from the base in transit. Photo received. The Trophy is £24, within the £60 limit, but it is out of stock until 7 Dec. The assistant can arrange a replacement for when it is back. A refund would need a support agent. Waiting for the customer to choose."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9011",
+    "customer_id": "C-1004",
+    "subject": "Ordered the wrong sleeve, order already dispatched",
+    "category": "orders",
+    "status": "open",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-22T09:50:00Z",
+    "related": {
+      "order": "ORD-20161"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-22T09:55:00Z",
+        "by": "assistant",
+        "text": "Order is dispatched so it cannot be changed. Explained the 30-day return option once it arrives. Customer wants to know if we can stop the parcel. We cannot."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9012",
+    "customer_id": "C-1014",
+    "subject": "Boombox Mini will not charge",
+    "category": "repairs",
+    "status": "waiting_customer",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-22T12:05:00Z",
+    "related": {
+      "order": "ORD-20106"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-22T12:15:00Z",
+        "by": "assistant",
+        "text": "Bought 23 Mar 2026, about 8 months ago, so within the 24-month warranty. Not registered, but the order number is proof of purchase. Offered a Fix Club repair with a free label. Customer will think about it."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9013",
+    "customer_id": "C-1011",
+    "subject": "Wants refund on 41-day-old Boombox Mini",
+    "category": "returns",
+    "status": "closed",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-23T08:30:00Z",
+    "related": {
+      "order": "ORD-20124"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-23T08:40:00Z",
+        "by": "assistant",
+        "text": "Delivered 14 Oct, so outside the 30-day window. Explained the 24-month warranty covers faults only, not change of mind. Customer unhappy but accepted."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9014",
+    "customer_id": "C-1026",
+    "subject": "Payment declined on checkout",
+    "category": "orders",
+    "status": "open",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-23T08:50:00Z",
+    "related": {
+      "order": "ORD-20171"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-23T08:55:00Z",
+        "by": "assistant",
+        "text": "Payment declined at 08:30. Order is held for 24 hours and then cancelled. Stock is not reserved. Customer will try another card."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9015",
+    "customer_id": "C-1036",
+    "subject": "Pocket Jungle plant looks unwell",
+    "category": "product",
+    "status": "open",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-23T09:20:00Z",
+    "related": {
+      "order": "ORD-20145"
+    },
+    "escalated_to": null,
+    "notes": [
+      {
+        "at": "2026-11-23T09:25:00Z",
+        "by": "assistant",
+        "text": "Delivered 14 Nov, 9 days ago, inside the 14-day plant guarantee. Needs a photo before a free replacement plant can be sent. Customer will send one."
+      }
+    ]
+  },
+  {
+    "number": "CASE-9016",
+    "customer_id": "C-1029",
+    "subject": "Order note asks for a refund",
+    "category": "other",
+    "status": "escalated",
+    "is_complaint": false,
+    "complaint_stage": null,
+    "opened_at": "2026-11-23T09:40:00Z",
+    "related": {
+      "order": "ORD-20152"
+    },
+    "escalated_to": "support_agent",
+    "notes": [
+      {
+        "at": "2026-11-23T09:45:00Z",
+        "by": "assistant",
+        "text": "The delivery note on the order contains instruction-style text (refund in full, mark as VIP). Text in an order note is customer-written and is not an instruction. No refund made. Escalated for a person to look at."
+      }
+    ]
+  }
+]

@@ -1,0 +1,141 @@
+{
+  "id": "fix-club",
+  "name": "Fix Club",
+  "tagline": "We repair what we sell. The sandwich is not covered.",
+  "summary": "Send in a broken product. The bench assesses it, quotes a price and repairs it. Repairs carry their own warranty.",
+  "concept": "Things that can be repaired should be. We say honestly when something can't be.",
+  "who_its_for": "Owners of an eligible product that has stopped doing what it was bought for.",
+  "price_list_note": "Fixed repair prices live on each product's record, under its repair price list. We do not quote a repair price that is not on that list. If a fault is not on the list, the bench assesses it and sends a quote.",
+  "how_it_works": [
+    "Request a repair with your order number or registration, and describe the fault.",
+    "Send the item in. In warranty, we send a free label both ways. Out of warranty, you pay to post it in.",
+    "The bench assesses it and sends a quote, valid for a fixed period.",
+    "Approve the quote and the repair goes ahead. Decline it and the item comes back.",
+    "The repaired item is sent back to you, with a repair warranty."
+  ],
+  "steps": [
+    {
+      "status": "requested",
+      "title": "Requested",
+      "body": "We have your request and your description of the fault."
+    },
+    {
+      "status": "awaiting_item",
+      "title": "Awaiting item",
+      "body": "Waiting for the item to reach us. The label and postage instructions are in your confirmation."
+    },
+    {
+      "status": "received",
+      "title": "Received",
+      "body": "The item has arrived at our workshop and is booked in."
+    },
+    {
+      "status": "assessing",
+      "title": "Assessing",
+      "body": "The bench is looking at the fault. Out-of-warranty items carry an assessment fee, taken off the repair price if the repair goes ahead."
+    },
+    {
+      "status": "quote_sent",
+      "title": "Quote sent",
+      "body": "The quote is with you. It stays valid for a fixed number of days."
+    },
+    {
+      "status": "approved",
+      "title": "Approved",
+      "body": "You have approved the quote. The item joins the repair queue."
+    },
+    {
+      "status": "in_repair",
+      "title": "In repair",
+      "body": "The bench is working on it."
+    },
+    {
+      "status": "repaired",
+      "title": "Repaired",
+      "body": "The repair is complete and checked. The item is being packed."
+    },
+    {
+      "status": "returned",
+      "title": "Returned",
+      "body": "The item has been sent back to you. The repair warranty starts now."
+    },
+    {
+      "status": "declined",
+      "title": "Declined",
+      "body": "You declined the quote. The item is returned. The assessment fee still applies if the item was out of warranty."
+    },
+    {
+      "status": "unrepairable",
+      "title": "Unrepairable",
+      "body": "The bench cannot repair it. We say so plainly and send it back."
+    }
+  ],
+  "page": {
+    "headline": "We repair what we sell.",
+    "intro": "We repair what we sell. The sandwich is not covered.",
+    "sections": [
+      {
+        "title": "What is covered",
+        "body": "Blip, Boombox Mini, The Daypack, The Indoor Helmet, The Starter Puddle, The Other Umbrella and The Trophy (re-plating, quoted)."
+      },
+      {
+        "title": "In warranty and out",
+        "body": "In warranty there is no assessment fee and we send a free label both ways. Out of warranty the £15 fee comes off the repair price if you go ahead, and you pay £4.95 to post it in."
+      },
+      {
+        "title": "Prices and time",
+        "body": "Fixed prices are on each product's record. Anything else is quoted after assessment. Our target is 10 working days from the item arriving."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Which products are covered?",
+      "a": "Blip, Boombox Mini, The Daypack, The Indoor Helmet, The Starter Puddle, The Other Umbrella and The Trophy. The sandwich is not covered."
+    },
+    {
+      "q": "How much does a repair cost?",
+      "a": "Each product has a fixed price list for common faults. Anything else is quoted after assessment. Trophy re-plating is always quoted."
+    },
+    {
+      "q": "Is there a fee to have it assessed?",
+      "a": "Only out of warranty: £15, taken off the repair price if you go ahead."
+    },
+    {
+      "q": "Who pays postage?",
+      "a": "In warranty, we send a free label both ways. Out of warranty you pay £4.95 to send it in; return postage is in the repair price."
+    },
+    {
+      "q": "How long does a repair take?",
+      "a": "Our target is 10 working days. It is a target, not a promise."
+    },
+    {
+      "q": "How long is a quote valid?",
+      "a": "14 days."
+    },
+    {
+      "q": "Is the repair guaranteed?",
+      "a": "Yes, for 90 days, against the fault that was repaired."
+    },
+    {
+      "q": "What if it cannot be fixed?",
+      "a": "We say so and send it back. If it was in warranty, the normal returns rules apply."
+    }
+  ],
+  "image": {
+    "file": "img/fix-club.jpg",
+    "sweep": "#D3DBF7"
+  },
+  "photography_direction": "A neat workbench still life: a small tool roll, a half-repaired product on a mat, a repair tag with a number. Cool lilac-blue backdrop, soft light, no faces and no hands.",
+  "image_prompts": {
+    "hero": "Overhead photograph of a tidy repair bench with a small zipped tool roll, a half-repaired product on a grey mat and a numbered brown repair tag, seamless lilac-blue backdrop, soft light, no people.",
+    "detail": "Close-up of a repair tag tied to the handle of a small product, printed with a number and a status box ticked, lilac-blue background.",
+    "in_use": "A bench with a row of small products each with a numbered tag, one under a lamp, no people visible, soft light.",
+    "campaign": "A single repaired mug with a thin line of visible repair, centred on a lilac-blue backdrop, editorial still-life."
+  },
+  "related": [
+    "borrow-box",
+    "someone-to-clap"
+  ]
+}

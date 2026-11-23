@@ -1,0 +1,179 @@
+/* Kettle: the staff chat. Built like Letterbox (the template): a paper rail, the conversation on white, a thread
+   that opens at the side. Parts come from ../lib/premium.css; this file is layout and the few chat-only parts.
+   Messages are flat: a quiet avatar, the name in 500, the time in mono grey, the words at 15px. No colour but ink,
+   greys and the spark for "new". Nothing moves on frequent actions; a new message gets a short wash. */
+
+.ket-body { height: 100dvh; overflow: hidden; }
+.ket { display: grid; grid-template-columns: 248px minmax(0, 1fr); height: calc(100dvh - var(--sb-h)); min-height: 0; }
+body.has-thread .ket { grid-template-columns: 248px minmax(0, 1fr) minmax(320px, 400px); }
+.ket-scrim { position: fixed; z-index: 44; inset: var(--sb-h) 0 0 0; background: rgba(10, 18, 38, .28); }
+@media (min-width: 761px) { .ket-scrim { display: none !important; } }
+
+/* ------------------------------------------------------------------ the rail (Letterbox's, row for row) */
+.side { min-height: 0; overflow-y: auto; padding: 16px 10px 24px; border-right: 1px solid var(--x-rule-soft); background: var(--x-paper); }
+.rail-h { padding: 0 10px 6px; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.rail-list + .rail-h { margin-top: 18px; }
+.rail-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1px; }
+.rail-list > li { min-width: 0; }
+.side-item { display: flex; align-items: center; gap: 10px; width: 100%; height: 34px; padding: 0 10px; border: 0; border-radius: 8px; background: none;
+  color: var(--x-ink); font: 400 14.5px/1 var(--x-text); text-align: left; }
+.side-item:hover { background: var(--hover); }
+.side-item.is-on { background: var(--x-tint); font-weight: 500; }
+.side-item.is-unread .side-name { font-weight: 600; }
+.side-name { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.hash { display: grid; place-items: center; width: 20px; font: 400 15px/1 var(--x-mono); color: var(--x-ink-2); }
+.badge { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink); font-variant-numeric: tabular-nums; }
+.side-note { padding: 4px 10px; font-size: 13.5px; color: var(--x-ink-2); }
+.stack { display: inline-flex; flex: none; }
+.stack .avatar + .avatar { margin-left: -6px; box-shadow: 0 0 0 2px var(--x-paper); }
+.side-item .stack .avatar { --av-size: 20px !important; width: 20px; height: 20px; font-size: 8.5px; }
+/* Who is in: one quiet row each, the person and when they are in, in mono. Those not in are grey. */
+.shift-row { display: flex; align-items: center; gap: 10px; height: 32px; padding: 0 10px; font-size: 14px; }
+.shift-row .avatar { --av-size: 22px !important; width: 22px; height: 22px; font-size: 9px; }
+.shift-row .side-name { color: var(--x-ink); }
+.shift-row small { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); white-space: nowrap; }
+.shift-row.is-out .side-name { color: var(--x-ink-2); }
+
+/* ------------------------------------------------------------------ the conversation */
+.convo { display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--x-card); }
+.convo-head { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 12px 24px; border-bottom: 1px solid var(--x-rule-soft); }
+.side-toggle { display: none; }
+.convo-title { flex: 1; display: grid; gap: 3px; min-width: 0; }
+.convo-title h2 { display: flex; align-items: center; gap: 8px; min-width: 0; font: 600 22px/1.1 var(--x-display); letter-spacing: -.025em; }
+.convo-title h2 .hash { width: auto; font: 400 20px/1 var(--x-mono); }
+.convo-title h2 .stack .avatar { --av-size: 24px !important; width: 24px; height: 24px; font-size: 10px; }
+.convo-title h2 > span:last-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.convo-title p { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Search: Letterbox's field, with a calendar to jump to a day. */
+.find { position: relative; display: flex; align-items: center; gap: 6px; height: 36px; width: min(300px, 34vw); padding: 0 4px 0 12px; border-radius: 8px;
+  background: var(--x-paper); box-shadow: inset 0 0 0 1px var(--x-rule-soft); color: var(--x-ink-2); }
+.find:focus-within { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.find-input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; outline: none; font: 400 14px/1 var(--x-text); color: var(--x-ink); }
+.find-input:focus-visible { box-shadow: none; }
+.find-input::-webkit-search-cancel-button { display: none; }
+.find-date { display: grid; place-items: center; width: 28px; height: 28px; border: 0; border-radius: 6px; background: none; color: var(--x-ink-2); }
+.find-date:hover { background: var(--x-tint); color: var(--x-ink); }
+.find-picker { position: absolute; right: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.find-results { position: absolute; z-index: 20; top: calc(100% + 6px); right: 0; width: min(440px, 92vw); max-height: min(60vh, 460px); overflow-y: auto; padding: 6px;
+  border-radius: 12px; background: var(--x-card); box-shadow: 0 24px 60px -24px rgba(11, 23, 48, .35), 0 0 0 1px var(--x-rule-soft); color: var(--x-ink); animation: pm-toast .16s var(--x-ease) both; }
+.find-results ul { list-style: none; margin: 0; padding: 0; }
+.find-results li button { display: flex; align-items: flex-start; gap: 10px; width: 100%; padding: 8px 10px; border: 0; border-radius: 8px; background: none; text-align: left; }
+.find-results li button:hover, .find-results li button:focus-visible { background: var(--x-tint); }
+.find-results li .avatar { --av-size: 24px !important; width: 24px; height: 24px; font-size: 10px; }
+.find-results li span { display: grid; gap: 2px; min-width: 0; }
+.find-results li b { font-weight: 500; font-size: 14px; }
+.find-results li time { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.find-results li em { font-style: normal; font-size: 14px; line-height: 1.45; color: var(--x-ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.find-results mark { background: var(--x-wash); color: inherit; border-radius: 3px; padding: 0 1px; }
+.find-count, .find-none { padding: 6px 10px; font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+
+.stream { flex: 1; overflow-y: auto; padding: 8px 0 20px; outline: none; }
+.stream-empty, .stream-start { padding: 16px 24px 4px; }
+.earlier { display: grid; justify-items: start; padding: 12px 24px; }
+.jumped { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 12px; padding: 8px 24px; background: var(--x-tint); font-size: 14px; }
+
+/* Day dividers: a hairline with the day in small grey mono. No pill. */
+.day { display: flex; align-items: center; gap: 12px; margin: 18px 24px 6px; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); pointer-events: none; }
+.day::after { content: ""; flex: 1; border-top: 1px solid var(--x-rule-soft); }
+/* Where the unread messages begin: the spark, because it means "new". */
+.new-line { display: flex; align-items: center; gap: 10px; margin: 8px 24px; font: 400 12.5px/1 var(--x-mono); color: var(--x-spark-ink); }
+.new-line::before { content: ""; flex: 1; border-top: 1px solid var(--x-spark); }
+:root[data-theme="dark"] .new-line { color: var(--x-spark); }
+
+.msg { position: relative; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 0 12px; padding: 8px 24px; }
+.msg:hover { background: var(--hover); }
+.msg.is-compact { padding-top: 1px; padding-bottom: 3px; }
+.msg-av { display: flex; justify-content: center; padding-top: 2px; }
+.msg-av .avatar { --av-size: 32px !important; width: 32px; height: 32px; font-size: 12px; }
+.msg-hover-time { visibility: hidden; font: 400 11px/1.9 var(--x-mono); color: var(--x-ink-2); }
+.msg:hover .msg-hover-time { visibility: visible; }
+.msg-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 8px; }
+.msg-head b { font-weight: 500; font-size: 15px; }
+.msg-head time { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.msg-text { max-width: 72ch; font-size: 15px; line-height: 1.5; overflow-wrap: anywhere; white-space: pre-wrap; }
+.msg-orphan { font: 400 12.5px/1.4 var(--x-mono); color: var(--x-ink-2); }
+/* The small bar on hover or focus: it floats, so it is one of the few things with a shadow. */
+.msg-tools { position: absolute; z-index: 3; right: 20px; top: -14px; display: flex; align-items: center; gap: 2px; padding: 3px; border-radius: 10px; background: var(--x-card);
+  box-shadow: 0 10px 24px -14px rgba(11, 23, 48, .35), 0 0 0 1px var(--x-rule-soft); opacity: 0; pointer-events: none; }
+.msg-tools .btn { box-shadow: none; }
+.msg:hover .msg-tools, .msg:focus-within .msg-tools, .msg.is-tapped .msg-tools, .msg.is-reacting .msg-tools { opacity: 1; pointer-events: auto; }
+.rx-pop { display: none; align-items: center; gap: 2px; padding-right: 4px; margin-right: 2px; border-right: 1px solid var(--x-rule-soft); }
+.msg.is-reacting .rx-pop { display: flex; }
+.rx-word { height: 30px; padding: 0 10px; border: 0; border-radius: 99px; background: none; font: 500 13.5px/1 var(--x-text); color: var(--x-ink-2); }
+.rx-word:hover, .rx-word:focus-visible { background: var(--x-tint); color: var(--x-ink); }
+.msg.is-found { animation: ket-wash 1.6s var(--x-ease) both; }
+.msg.is-new, .msg.is-sent { animation: ket-wash .6s var(--x-ease) both; }
+@keyframes ket-wash { from { background: var(--x-wash); } }
+:root[data-theme="dark"] .msg.is-new, :root[data-theme="dark"] .msg.is-sent, :root[data-theme="dark"] .msg.is-found { animation-name: ket-wash-dark; }
+@keyframes ket-wash-dark { from { background: rgba(255, 101, 60, .12); } }
+
+/* A record named in a message: a quiet underlined word that opens the record. */
+.chip-rec.inline { display: inline; padding: 0; border: 0; background: none; color: var(--x-ink); font: inherit; text-decoration: underline; text-decoration-color: var(--x-rule);
+  text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.chip-rec.inline:hover { text-decoration-color: var(--x-ink); }
+.msg-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+
+/* Reactions are words: a quiet tint chip with who said it. Your own word wears an ink ring. */
+.rx-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.rx { display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border: 0; border-radius: 99px; background: var(--x-tint); font: 500 13px/1 var(--x-text); color: var(--x-ink); }
+.rx small { font: 400 12.5px/1 var(--x-text); color: var(--x-ink-2); }
+.rx:hover { box-shadow: inset 0 0 0 1px var(--x-rule); }
+.rx.is-mine { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+
+.msg-replies { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; padding: 3px 10px 3px 3px; border: 0; border-radius: 8px; background: none; font-size: 13.5px; color: var(--x-ink); }
+.msg-replies b { font-weight: 500; }
+.msg-replies .avatar { --av-size: 20px !important; width: 20px; height: 20px; font-size: 8.5px; }
+.msg-replies:hover { background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule); }
+.msg-replies small { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+
+/* The message box: one ringed box; who is writing sits in its corner as a small choice. */
+.composer { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; margin: 0 24px 18px; padding: 10px 10px 8px 14px; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule); }
+.composer:focus-within { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.composer.is-sending { opacity: .7; }
+.composer.is-refused { animation: lb-shake .2s ease; }
+@keyframes lb-shake { 30% { transform: translateX(-4px); } 70% { transform: translateX(4px); } }
+.composer-text { width: 100%; min-height: 24px; max-height: 180px; padding: 4px 0; border: 0; background: none; resize: none; font: 400 15px/1.5 var(--x-text); color: var(--x-ink); }
+.composer-text:focus, .composer-text:focus-visible { outline: none; box-shadow: none; }
+.composer-foot { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.as { display: flex; align-items: center; gap: 6px; min-width: 0; margin-right: auto; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.as .select { width: auto; min-height: 28px; max-width: 200px; padding: 0 26px 0 8px; border-radius: 6px; box-shadow: none; background-color: transparent; background-position: right 4px center;
+  font: 500 13.5px/1 var(--x-text); color: var(--x-ink); }
+.as .select:hover { background-color: var(--x-tint); }
+.compose-keys { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); white-space: nowrap; }
+.send { flex: none; }
+kbd { font: 400 12px/1 var(--x-mono); padding: 2px 5px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--x-rule); color: var(--x-ink); }
+
+/* ------------------------------------------------------------------ the thread */
+.thread { display: flex; flex-direction: column; min-height: 0; background: var(--x-paper); border-left: 1px solid var(--x-rule-soft); }
+.thread-head { display: flex; align-items: center; justify-content: space-between; min-height: 64px; padding: 10px 12px 10px 20px; border-bottom: 1px solid var(--x-rule-soft); }
+.thread-head h2 { font: 600 19px/1.2 var(--x-display); letter-spacing: -.02em; }
+.thread-head p { font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.thread-body { flex: 1; overflow-y: auto; padding: 10px 0; }
+.thread-body .msg { padding-left: 20px; padding-right: 20px; }
+.thread-count { display: flex; align-items: center; gap: 10px; margin: 10px 20px; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.thread-count::after { content: ""; flex: 1; border-top: 1px solid var(--x-rule-soft); }
+.composer.in-thread { margin: 0 14px 14px; }
+.in-thread .compose-keys { display: none; }
+
+/* ------------------------------------------------------------------ narrower screens */
+@media (max-width: 1100px) {
+  body.has-thread .ket, .ket { grid-template-columns: 220px minmax(0, 1fr); }
+  .thread { position: fixed; z-index: 60; top: var(--sb-h); right: 0; bottom: 0; width: min(420px, 100vw); box-shadow: 0 30px 70px -30px rgba(10, 18, 38, .45); }
+}
+@media (max-width: 760px) {
+  .ket, body.has-thread .ket { grid-template-columns: minmax(0, 1fr); }
+  .side { position: fixed; z-index: 45; top: var(--sb-h); left: 0; bottom: 0; width: min(300px, 86vw); background: var(--x-card);
+    box-shadow: 0 30px 70px -30px rgba(10, 18, 38, .45); transform: translateX(-104%); transition: transform .22s var(--x-ease); }
+  body.side-open .side { transform: none; }
+  .side-toggle { display: inline-flex; }
+  .convo-head { padding: 10px 12px; gap: 8px; flex-wrap: wrap; }
+  .convo-title p { display: none; }
+  .find { flex: 1 1 100%; order: 3; width: auto; }
+  .find-results { left: 0; right: 0; width: auto; }
+  .msg { padding: 8px 14px; }
+  .msg-tools { right: 8px; }
+  .day, .new-line { margin-left: 14px; margin-right: 14px; }
+  .composer { margin: 0 10px 10px; }
+  .compose-keys { display: none; }
+  .as > span { display: none; }
+}

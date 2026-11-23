@@ -1,0 +1,67 @@
+/* The parts both social apps (Squint and Mutter) draw through lib/social.js, in the calm look of lib/premium.css.
+   Loaded after premium.css by each social app. Ink, greys and the good/bad pair for results only; no shadows, no gloss. */
+
+/* ------------------------------------------------------------------ like, repost, comment counts */
+.react { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 8px; margin-left: -8px; border: 0; border-radius: 99px; background: none;
+  color: var(--x-ink-2); font: 400 13.5px/1 var(--x-text); font-variant-numeric: tabular-nums; }
+.react b { font-weight: 400; }
+button.react:hover { background: var(--x-tint); color: var(--x-ink); }
+.react.is-done { color: var(--x-ink); }
+.react.is-done .i { fill: currentColor; }
+.react.is-static { cursor: default; }
+.react-word { margin-left: 2px; }
+
+/* "Written by Cratchit": small, grey, one line. */
+.by { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--x-ink-2); }
+.by .avatar { --av-size: 18px !important; width: 18px; height: 18px; font-size: 8px; }
+
+/* A customer's stand-in picture fills its box. */
+.stand-in { display: block; width: 100%; height: 100%; }
+
+/* ------------------------------------------------------------------ what this post did: a sober ruled table */
+.did { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--x-rule-soft); }
+.did-title { margin-bottom: 8px; font: 600 15px/1.3 var(--x-display); letter-spacing: -.01em; }
+.did-rows { margin: 0; }
+.did-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; min-height: 36px; padding: 8px 0; border-top: 1px solid var(--x-rule-soft); }
+.did-row:first-child { border-top: 0; }
+.did-row dt { font-size: 14px; color: var(--x-ink-2); }
+.did-row dd { display: flex; align-items: baseline; gap: 10px; margin: 0; }
+.did-num { font: 500 15px/1 var(--x-text); font-variant-numeric: tabular-nums; color: var(--x-ink); }
+.did-row.is-waiting .did-num { color: var(--x-ink-2); }
+.did-goal { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.did-wait { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 10px; padding: 12px 14px; border-radius: 8px; background: var(--x-tint); font-size: 14px; }
+.did-note { margin-top: 10px; font-size: 13.5px; color: var(--x-ink-2); }
+.did-sub { margin-top: 14px; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.did-why { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px; }
+.did-why li { position: relative; padding-left: 18px; font-size: 14px; line-height: 1.45; }
+.did-why li::before { content: "·"; position: absolute; left: 4px; color: var(--x-ink-2); }
+.did-why li.is-up::before { content: "+"; left: 2px; color: var(--x-good); font-family: var(--x-mono); }
+.did-why li.is-down::before { content: "−"; left: 2px; color: var(--x-bad); font-family: var(--x-mono); }
+
+/* ------------------------------------------------------------------ account charts: one ink line, ink-2 bars, no fills */
+.ch { position: relative; margin: 14px 0 0; }
+.ch svg { display: block; width: 100%; height: 150px; overflow: visible; }
+.ch-base { stroke: var(--x-rule); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.ch-area { fill: none; }
+.ch-line { fill: none; stroke: var(--chart-you); stroke-width: 1.75; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.ch-bar { fill: var(--x-ink-2); opacity: .55; }
+.ch:hover .ch-bar { opacity: .4; }
+.ch-cross { stroke: var(--x-ink); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.ch-axis { display: flex; justify-content: space-between; margin-top: 6px; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.ch-max, .ch-min { position: absolute; right: 0; font: 400 12px/1 var(--x-mono); color: var(--x-ink-2); }
+.ch-max { top: -16px; }
+.ch-min { bottom: 22px; }
+.ch-tip { position: absolute; top: -30px; padding: 5px 8px; border-radius: 6px; background: var(--x-night); color: #EAF0FA; font: 400 12.5px/1 var(--x-mono); white-space: nowrap; pointer-events: none; }
+.ch-tip b { font-weight: 500; }
+
+/* The retired burst, in case anything still adds one. */
+.burst { display: none; }
+
+/* A customer's name on a post opens their record. */
+.author-link { padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; text-decoration: underline; text-decoration-color: var(--x-rule); text-underline-offset: 3px; }
+.author-link:hover { text-decoration-color: currentColor; }
+.mu-interest-list { margin-bottom: 18px; }
+.mu-interest-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 10px 16px; border-bottom: 1px solid var(--x-rule-soft); }
+.mu-interest-row b { font-weight: 500; }
+.mu-interest-row span:not(.mu-interest-n) { grid-column: 1; color: var(--x-ink-2); font-size: 13.5px; }
+.mu-interest-n { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }

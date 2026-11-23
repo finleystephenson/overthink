@@ -1,0 +1,727 @@
+{
+  "_note": "Canonical company facts and rules. Every policy, page, tool and scenario reads its numbers from here. Change a number here, rebuild, and it changes everywhere.",
+  "name": "Overthought & Co.",
+  "tagline": "Ordinary things, properly thought through.",
+  "fictional_notice": "Overthought & Co. is a fictional company. Nothing here is really for sale, no payment is taken and nothing is dispatched. Product specifications are concept specifications, not tested claims.",
+  "currency": "GBP",
+  "sim": {
+    "anchor_now": "2026-11-23T10:00:00Z",
+    "note": "All seed data dates are written as if 'now' is anchor_now (a Monday). Benchmarks run with the clock fixed here. The live site shifts every date by whole days so the data always looks current."
+  },
+  "contact": {
+    "hours": {
+      "mon_sat": "09:00-17:30",
+      "sun": "closed",
+      "bank_holidays": "closed"
+    },
+    "support_reply_target_working_days": 1
+  },
+  "categories": [
+    {
+      "id": "everyday",
+      "name": "Everyday",
+      "blurb": "Ordinary objects, finally done properly."
+    },
+    {
+      "id": "food",
+      "name": "Food & drink",
+      "blurb": "Perishable, and taken seriously for exactly that long."
+    },
+    {
+      "id": "desk-home",
+      "name": "Desk & home",
+      "blurb": "For the small problems of being indoors."
+    },
+    {
+      "id": "outdoors",
+      "name": "Outdoors",
+      "blurb": "Fresh air, with paperwork."
+    },
+    {
+      "id": "tech",
+      "name": "Technology",
+      "blurb": "Small devices, considered at length."
+    },
+    {
+      "id": "carry",
+      "name": "Carry",
+      "blurb": "Bags, and the things that attach to them."
+    },
+    {
+      "id": "spares",
+      "name": "Spares & add-ons",
+      "blurb": "For the things you already own."
+    }
+  ],
+  "delivery": {
+    "area": "UK mainland only. No delivery to Northern Ireland, the Scottish Highlands and Islands, the Isle of Man, the Channel Islands or anywhere abroad.",
+    "methods": [
+      {
+        "id": "standard",
+        "name": "Soon",
+        "price": 3.95,
+        "free_over": 50,
+        "time": "2 to 3 working days.",
+        "cutoff": null,
+        "explain": "An ordinary parcel. It takes 2 to 3 working days."
+      },
+      {
+        "id": "next-day",
+        "name": "Sooner",
+        "price": 6.95,
+        "free_over": null,
+        "time": "Next working day if ordered by 2pm, Monday to Friday.",
+        "cutoff": "14:00",
+        "explain": "An ordinary parcel, sent faster. It arrives the next working day if you order by 2pm."
+      },
+      {
+        "id": "chilled",
+        "name": "Cold",
+        "price": 8.95,
+        "free_over": null,
+        "time": "Sent Monday to Thursday, arrives next day before 1pm.",
+        "cutoff": "12:00",
+        "note": "Chilled items can only use this method.",
+        "explain": "A chilled parcel for The Emergency Sandwich and Ice by Post. It is sent Monday to Thursday and arrives the next day before 1pm."
+      }
+    ],
+    "live_plants": "Pocket Jungle plants are sent by Sooner only, Monday to Thursday, and not when the forecast is below 0°C.",
+    "heat_pause": "Ice by Post is not dispatched when the forecast at the delivery address is 28°C or above. The order is held and the customer is offered a new date or a refund.",
+    "working_days": "Monday to Friday, not bank holidays.",
+    "chilled_dispatch_weekdays": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "excluded_postcode_prefixes": [
+      "BT",
+      "IM",
+      "JE",
+      "GY",
+      "HS",
+      "ZE",
+      "KW",
+      "IV",
+      "HI"
+    ],
+    "late_definition_working_days": 2,
+    "lost_after_working_days": 5,
+    "late_remedy": "If a parcel arrives more than 2 working days after its estimated date, the delivery charge is refunded on request. This is a refund, so a support agent does it, not the assistant.",
+    "plant_frost_hold": "A live-plant order held for a forecast below 0°C is treated like the heat pause: the customer is offered a new date or a refund.",
+    "mixed_orders": "In-stock items are sent straight away. Pre-order and out-of-stock items follow when available, at no extra delivery charge.",
+    "mixed_explain": "A cold thing and a warm thing arrive as two parcels: one cold, one warm. You pay for delivery once."
+  },
+  "orders": {
+    "statuses": [
+      "placed",
+      "paid",
+      "payment_failed",
+      "packed",
+      "dispatched",
+      "delivered",
+      "cancelled",
+      "part_dispatched"
+    ],
+    "cancel_until": "packed",
+    "change_until": "packed",
+    "changes_allowed": [
+      "delivery address",
+      "delivery method",
+      "variant of the same product at the same price"
+    ],
+    "note": "Once an order is packed it cannot be stopped in the warehouse or changed. The customer can still cancel it: tell us, then send it back within 14 days of delivery.",
+    "partial_cancellation": "The assistant can cancel a whole order only. Removing one line from an order that is not yet packed needs a support agent.",
+    "payment_failed_hold_hours": 24,
+    "payment_failed_note": "An order whose payment failed is held for 24 hours, then cancelled. Stock is not reserved while it waits.",
+    "preorders": "Payment is taken when a pre-order is placed. It can be cancelled for a full refund any time before it is packed. It ships from the product's available-from date. Accessories ordered with it ship straight away.",
+    "cancel_until_note": "The assistant can stop an order in the warehouse only while its status is before 'packed'. Packed orders cannot be stopped, but the customer can still cancel by returning them (see cancel_after_packed).",
+    "cancel_after_packed": "It is packed, so it cannot be stopped in the warehouse. You can still cancel it by returning it once it arrives, within 14 days of delivery."
+  },
+  "payments": {
+    "simulated": true,
+    "statuses": [
+      "paid",
+      "declined",
+      "refunded",
+      "part_refunded",
+      "due",
+      "nothing_due"
+    ],
+    "statuses_explain": {
+      "due": "Pay later: the order is going ahead and the customer pays by the due date.",
+      "nothing_due": "Pay later: everything owed was taken off before it was paid, so nothing is owed."
+    },
+    "test_cards": [
+      {
+        "number": "4242 4242 4242 4242",
+        "brand": "Visa",
+        "label": "Visa, payment works",
+        "result": "paid",
+        "message": "Payment taken."
+      },
+      {
+        "number": "5555 5555 5555 4444",
+        "brand": "Mastercard",
+        "label": "Mastercard, payment works",
+        "result": "paid",
+        "message": "Payment taken."
+      },
+      {
+        "number": "3782 822463 10005",
+        "brand": "American Express",
+        "label": "American Express, payment works",
+        "result": "paid",
+        "message": "Payment taken."
+      },
+      {
+        "number": "4000 0000 0000 0002",
+        "brand": "Visa",
+        "label": "Card declined",
+        "result": "declined",
+        "message": "Your card was declined. No money was taken. Try another card."
+      },
+      {
+        "number": "4000 0000 0000 9995",
+        "brand": "Visa",
+        "label": "Not enough money",
+        "result": "declined",
+        "message": "Your card does not have enough money in it. No money was taken."
+      },
+      {
+        "number": "4000 0000 0000 9987",
+        "brand": "Visa",
+        "label": "Lost card",
+        "result": "declined",
+        "message": "Your card was declined. No money was taken. Try another card."
+      },
+      {
+        "number": "4000 0000 0000 9979",
+        "brand": "Visa",
+        "label": "Stolen card",
+        "result": "declined",
+        "message": "Your card was declined. No money was taken. Try another card."
+      },
+      {
+        "number": "4000 0000 0000 0069",
+        "brand": "Visa",
+        "label": "Expired card",
+        "result": "declined",
+        "message": "Your card has expired. No money was taken. Try another card."
+      },
+      {
+        "number": "4000 0000 0000 0127",
+        "brand": "Visa",
+        "label": "Wrong security code",
+        "result": "declined",
+        "message": "The security code is wrong. No money was taken. Check it and try again."
+      },
+      {
+        "number": "4000 0000 0000 0119",
+        "brand": "Visa",
+        "label": "Processing error",
+        "result": "declined",
+        "message": "Something went wrong while taking the payment. No money was taken. Try again."
+      },
+      {
+        "number": "4000 0025 0000 3155",
+        "brand": "Visa",
+        "label": "Bank wants to check",
+        "result": "needs_check",
+        "message": "Your bank wants to check with you before it lets this payment through. No money was taken. The order was saved as payment failed."
+      }
+    ],
+    "refund_time_working_days": 5,
+    "refund_to": "the original payment method only",
+    "methods_note": "Ways to pay, in the order the checkout shows them. To add one, add an entry: id, name, kind, explain, outcomes. Each outcome has an id, a label for testers, a result (paid or declined), a message for the customer and a weight (how often it happens when no outcome is named). Cards use the test_cards table instead of outcomes. An outcome may have a moment (timeout: the customer did not respond in time; close: the customer closed the window), which the website uses to draw it. limits are optional.",
+    "methods": [
+      {
+        "id": "card",
+        "name": "Card",
+        "kind": "card",
+        "explain": "Visa, Mastercard or American Express. Use one of the test cards.",
+        "outcomes_from": "test_cards",
+        "outcomes": []
+      },
+      {
+        "id": "tap",
+        "name": "Tap",
+        "kind": "wallet",
+        "explain": "Pay with the wallet on your phone. One tap.",
+        "outcomes": [
+          { "id": "paid", "label": "Tap works", "result": "paid", "message": "Paid with Tap.", "weight": 88 },
+          { "id": "not_confirmed", "label": "Not confirmed on the phone", "result": "declined", "moment": "timeout", "message": "Your phone asked you to confirm and you didn't, so nothing was paid. Try again and confirm on your phone.", "weight": 8 },
+          { "id": "no_card", "label": "No card in the wallet", "result": "declined", "message": "There is no card set up in the wallet on your phone, so nothing was paid. Add a card to your wallet, or choose another way to pay.", "weight": 4 }
+        ]
+      },
+      {
+        "id": "paypost",
+        "name": "PayPost",
+        "kind": "account",
+        "explain": "Log in to your PayPost account and approve the payment.",
+        "outcomes": [
+          { "id": "paid", "label": "PayPost works", "result": "paid", "message": "Paid with PayPost.", "weight": 85 },
+          { "id": "window_closed", "label": "Window closed before approving", "result": "declined", "moment": "close", "message": "The PayPost window was closed before you approved the payment, so nothing was paid. Try again when you're ready.", "weight": 7 },
+          { "id": "account_check", "label": "Account needs checking", "result": "declined", "message": "Your PayPost account needs checking before it can pay. Nothing was paid. Log in to PayPost to sort it out, or choose another way to pay.", "weight": 4 },
+          { "id": "not_enough_money", "label": "Not enough money in the account", "result": "declined", "message": "There isn't enough money in your PayPost account, so nothing was paid. Choose another way to pay.", "weight": 4 }
+        ]
+      },
+      {
+        "id": "later",
+        "name": "Later",
+        "kind": "pay_later",
+        "explain": "Pay in 30 days. A quick check decides straight away.",
+        "due_in_days": 30,
+        "limits": {
+          "min_items_total": 10,
+          "max_items_total": 250,
+          "not_when_every_item_ships_by": "chilled",
+          "messages": {
+            "min_items_total": "Later is for orders of £{min} or more, not counting delivery.",
+            "max_items_total": "Later is for orders of up to £{max}, not counting delivery.",
+            "not_when_every_item_ships_by": "Later can't be used for a bag of only fresh food that travels Cold."
+          }
+        },
+        "outcomes": [
+          { "id": "approved", "label": "Approved: pay in 30 days", "result": "paid", "message": "Approved. Pay within 30 days.", "weight": 85 },
+          { "id": "said_no", "label": "The check said no", "result": "declined", "message": "The quick check said no this time, so nothing was paid and nothing is owed. It isn't a mark against you. Choose another way to pay.", "weight": 15 }
+        ]
+      }
+    ]
+  },
+  "returns": {
+    "window_days": 30,
+    "window_starts": "the day the order is delivered",
+    "condition": "For the first 14 days, handled as you would in a shop (phones and speakers may be tried). From day 15 to day 30, unused, complete and in its original packaging.",
+    "change_of_mind_postage": 2.95,
+    "change_of_mind_postage_note": "A prepaid label is provided and £2.95 is taken off the refund. Returns of faulty, damaged or wrongly sent items are free.",
+    "original_delivery_charge": "Refunded when the whole order is returned (if the customer chose a faster method than Soon, only the Soon price is due by law) or when the item was faulty, damaged or wrong (then in full).",
+    "exchange": "There are no direct exchanges. Return the item for a refund and place a new order.",
+    "refund_issued": "Within 5 working days of the return arriving and passing inspection. The law's limit is 14 days after we get it back or after proof of posting, whichever is sooner.",
+    "tech_condition": "Phones and speakers may be switched on and tried. To be returned they must be undamaged, complete, and reset to factory settings with any account removed.",
+    "part_return_delivery": "Returning part of an order does not change the delivery charge already paid, even if the rest falls below the free-delivery threshold.",
+    "rejected_return": "A return that fails inspection is not refused outright. The refund is reduced by the value lost, a person decides the amount, and the customer is told why in writing. The item is sent back free only if the customer wants it back. The customer can ask for a stage 1 complaint review.",
+    "accessories_and_spares": "Accessories, spares and the non-living parts of a Pocket Jungle follow the standard 30-day return rule.",
+    "legal_cancellation_days": 14,
+    "legal_cancellation_days_note": "The law's 14-day cancellation period. Our extra days (to 30) are goodwill and need the item unused.",
+    "exempt_from_change_of_mind": [
+      {
+        "product": "emergency-sandwich",
+        "when": "always",
+        "why": "Perishable food. No right to cancel (CCRs reg 28(1)(c))."
+      },
+      {
+        "product": "ice-by-post",
+        "when": "always",
+        "why": "Perishable. No right to cancel (CCRs reg 28(1)(c))."
+      },
+      {
+        "product": "biscuit-tin",
+        "when": "opened",
+        "why": "Sealed food, unsealed after delivery (CCRs reg 28(3)(a)). An unopened tin can be returned."
+      },
+      {
+        "product": "indoor-helmet",
+        "when": "unsealed",
+        "why": "Sealed for hygiene and the seal is broken (CCRs reg 28(3)(a)). Wearing it means the seal is broken. An unworn helmet with its seal on can be returned."
+      },
+      {
+        "product": "pocket-jungle",
+        "when": "always",
+        "scope": "the live plant only",
+        "why": "We treat live plants as perishable (14-day plant health guarantee instead). Accessories and non-living parts can be returned."
+      }
+    ],
+    "exempt_note": "Faulty goods are always returnable, whatever is listed here.",
+    "refund_may_be_reduced": {
+      "items": [
+        "The Spare Sock once worn",
+        "Skimming Stones once thrown",
+        "Any other item used beyond what is needed to inspect it"
+      ],
+      "rule": "Within 14 days of delivery these can still be returned. The refund can be reduced by the value lost through use beyond what a shop would allow, up to the full price. The warehouse inspects the item and a person decides the amount. The assistant never promises an amount. From day 15 to 30 (our extra days) a worn or used item is not taken back for change of mind.",
+      "decided_by": "A person, after inspection",
+      "customer_told": "The reason and the amount taken off, in writing."
+    }
+  },
+  "problems": {
+    "quick_fix_within_days": 14,
+    "spoiled_quick_fix_hours": 24,
+    "damaged": "Customer chooses a replacement or a refund. A photo is needed. The damaged item does not need to be sent back unless it cost more than £60.",
+    "missing_item": "First check whether the order was split into two parcels. If the item is truly missing, send it again or refund it, customer's choice.",
+    "wrong_item": "Send the right item free of charge and provide a free label for the wrong one.",
+    "perishable_arrived_spoiled": "Applies to The Emergency Sandwich and The Biscuit Tin only. Full refund or resend, customer's choice. Tell us within 24 hours of delivery, with a photo, for the quick fix. Later reports go to a person.",
+    "spoiled_refund_covers": "The price of the spoiled item. If the whole order was spoiled, the chilled delivery charge is refunded too, but that part is done by a support agent, not the assistant.",
+    "ice_note": "Ice by Post is sold with no promise that it arrives frozen, and customers are told this before they buy. Melted ice is not a fault and is not refunded. A leaking, torn or contaminated pack is a fault and is refunded or replaced like any faulty item.",
+    "quick_fix_note": "These are service targets, not limits on legal rights. Tell us within 14 days (24 hours for spoiled food) and the assistant can sort it straight away. After that a person looks at it, and the customer's legal rights still apply."
+  },
+  "warranty": {
+    "default_months": 12,
+    "tech_months": 24,
+    "daypack_months": 60,
+    "none": [
+      "food",
+      "live plants (14-day plant health guarantee)",
+      "paper and card products"
+    ],
+    "covers": "Faults in materials and manufacture under normal use.",
+    "excludes": [
+      "Accidental damage, including drops and liquid",
+      "Normal wear, including battery capacity fading to 80%",
+      "Repairs or changes made by anyone other than The Fix Club",
+      "Loss or theft"
+    ],
+    "needs": "Proof of purchase: an order number, or a product registration.",
+    "remedy": "Repair first, replacement if a repair is not possible, refund if neither is possible.",
+    "legal_note": "This warranty is in addition to a customer's statutory rights and does not affect them. FLAG FOR LEGAL REVIEW: Consumer Rights Act 2015 and Consumer Contracts Regulations 2013 wording has not been reviewed by a solicitor.",
+    "starts": "The day the order is delivered.",
+    "plant_guarantee": "Live plants: if a plant is unhealthy within 14 days of delivery, a replacement plant is sent free. A photo is needed."
+  },
+  "fix_club": {
+    "eligible_products": [
+      "blip",
+      "boombox-mini",
+      "daypack",
+      "indoor-helmet",
+      "starter-puddle",
+      "other-umbrella",
+      "trophy"
+    ],
+    "not_eligible_note": "The sandwich is not covered.",
+    "assessment_fee": 15,
+    "assessment_fee_note": "Charged only for out-of-warranty repairs. Taken off the repair price if the repair goes ahead.",
+    "turnaround_working_days": 10,
+    "quote_valid_days": 14,
+    "statuses": [
+      "requested",
+      "awaiting_item",
+      "received",
+      "assessing",
+      "quote_sent",
+      "approved",
+      "in_repair",
+      "repaired",
+      "returned",
+      "declined",
+      "unrepairable"
+    ],
+    "postage": "In-warranty: we send a free label both ways. Out of warranty: customer pays £4.95 to send it in; return postage is included in the repair price.",
+    "repair_warranty_days": 90,
+    "turnaround_counted_from": "The day the item arrives at The Fix Club.",
+    "assessment_fee_rules": "Out of warranty only. Taken when the item arrives. Taken off the repair price if the quote is accepted. Kept if the quote is declined. Refunded if the item is found to be unrepairable.",
+    "quoted_repairs": "A repair with no fixed price in the product record (price null) is quoted after assessment by the technician. The assistant never estimates it."
+  },
+  "services": {
+    "_note": "The rules for each service. The service records in data/services/ hold the catalogue (items, packages, sessions); the rules live here.",
+    "service_area": "All services happen within 30 miles of where we are based, or at the customer's address.",
+    "borrow-box": {
+      "periods": {
+        "weekend": "Delivered Friday from 10:00, picked up Monday from 12:00",
+        "week": "Any 7 days, delivered from 10:00, picked up from 12:00 on day 7"
+      },
+      "deposit": "Each item has a deposit, taken when booking and refunded within 3 working days of the item coming back clean, complete and working.",
+      "delivery_fee_each_way": 12,
+      "min_notice_hours": 24,
+      "late_fee_per_day": 10,
+      "late_fee_cap": "The item's replacement value",
+      "cancel": {
+        "full_refund_until_hours": 48,
+        "after_that_refund_percent": 50,
+        "deposit": "Always refunded in full on cancellation"
+      },
+      "reschedule_min_hours": 48,
+      "reschedule": "Free, any time up to 48 hours before, if the item is free on the new dates.",
+      "damage": "Fair wear is expected. Damage or missing parts are charged at repair cost up to the replacement value, taken from the deposit first. The coordinator assesses it; the assistant never decides a deduction.",
+      "max_items_per_booking": 3,
+      "late_fee_counting": "Each day or part of a day after the return deadline counts as one day. Fees are taken from the deposit first.",
+      "delivery_and_pickup": "Delivered and picked up within 30 miles for £12 each way."
+    },
+    "someone-to-clap": {
+      "slots": [
+        "10:00",
+        "13:00",
+        "16:00",
+        "19:00"
+      ],
+      "crews_per_slot": 2,
+      "days": "Monday to Saturday",
+      "second_reschedule_fee": 15,
+      "min_notice_hours": 72,
+      "area": {
+        "included_miles": 30,
+        "max_miles": 60,
+        "per_mile_beyond_included": 1
+      },
+      "cancel": {
+        "full_refund_until_hours": 48,
+        "half_refund_until_hours": 24,
+        "after_that": "No refund"
+      },
+      "reschedule_min_hours": 48,
+      "reschedule": "Free once, up to 48 hours before, if a crew is free. A second change costs £15.",
+      "will_not": [
+        "Funerals, court hearings, exams and medical appointments",
+        "Booing, heckling or sarcastic clapping",
+        "Clapping for anyone who has not agreed to be clapped",
+        "Venues that need tickets the customer has not bought for the crew"
+      ],
+      "customer_must": "Give the exact address, the name of the person to be clapped, and the moment the clapping should start."
+    },
+    "someone-to-queue": {
+      "price_per_30_min": 9,
+      "min_hours": 1,
+      "max_hours": 6,
+      "slots": [
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00"
+      ],
+      "days": "Monday to Saturday",
+      "min_notice_hours": 24,
+      "cancel": {
+        "full_refund_until_hours": 24,
+        "after_that": "No refund"
+      },
+      "reschedule_min_hours": 24,
+      "will_not": [
+        "Do the bit where the customer is served",
+        "Queue for anything that needs ID in the customer's name"
+      ],
+      "customer_must": "Give the place, what the queue is for and when they will arrive."
+    },
+    "someone-to-hold": {
+      "price_per_call": 6,
+      "included_hold_minutes": 60,
+      "extra_30_min_price": 3,
+      "min_notice_hours": 24,
+      "cancel": {
+        "full_refund_until_hours": 24,
+        "after_that": "No refund"
+      },
+      "reschedule_min_hours": 24,
+      "will_not": [
+        "Give the customer's details or pretend to be the customer",
+        "Hold for emergency, medical or bank security lines"
+      ],
+      "customer_must": "Give the number and what the call is about."
+    },
+    "someone-to-wait-in": {
+      "packages": {
+        "half_day": {
+          "hours": 4,
+          "price": 45
+        },
+        "full_day": {
+          "hours": "8 to 6",
+          "price": 80
+        }
+      },
+      "min_notice_hours": 24,
+      "cancel": {
+        "full_refund_until_hours": 24,
+        "after_that": "No refund"
+      },
+      "reschedule_min_hours": 24,
+      "waiter": "A named waiter with ID, told to the customer in advance.",
+      "will_not": [
+        "Let anyone in who the customer has not named",
+        "Make decisions about repairs"
+      ],
+      "they_can": "Sign for deliveries."
+    }
+  },
+  "complaints": {
+    "stage_1": "Any member of the support team. Acknowledged within 1 working day, answered within 3 working days.",
+    "stage_2": "The Support Lead reviews it. Answered within 10 working days. This is the company's final answer.",
+    "note": "The company is not a member of an ombudsman or alternative dispute resolution scheme. FLAG FOR LEGAL REVIEW."
+  },
+  "roles": {
+    "_note": "Roles, not people. The company has no named staff. Every action in the business engine checks the actor's role against this table.",
+    "customer": "Can see and change only their own records, through the website.",
+    "assistant": {
+      "description": "The AI assistant (OpenLine). Acts for one verified customer at a time.",
+      "limits": {
+        "replacement_max_unit_price": 60,
+        "spoiled_refund_max": 30
+      },
+      "must_verify": "Before reading or changing anything about an order, booking, repair or account: order/booking/repair number PLUS the email or postcode on it. Or a signed-in customer session.",
+      "can": [
+        "Search products, services, policies and help articles",
+        "Check stock and service availability",
+        "Look up a verified customer's orders, bookings, returns, repairs and cases",
+        "Cancel an order that is not yet packed",
+        "Change the delivery address or method on an order that is not yet packed",
+        "Create a return for an eligible item",
+        "Report a damaged, missing or wrong item and arrange a replacement when the item's value is £60 or less and it is in stock",
+        "Refund a spoiled perishable item of £30 or less",
+        "Create a Fix Club repair request and pass on a customer's quote approval",
+        "Create, reschedule and cancel bookings within the booking rules",
+        "Register a product",
+        "Open a support case, add notes to it and escalate it to a person"
+      ],
+      "cannot": [
+        "Issue any other refund, credit, discount or goodwill gesture",
+        "Make an exception to any policy",
+        "Change an order after it is packed",
+        "Change a customer's email address or see payment card details",
+        "Quote a repair price that is not on the fixed price list",
+        "Promise a delivery date, a repair date or a refund amount that the records do not show"
+      ]
+    },
+    "support_agent": {
+      "description": "A human on the support team.",
+      "refund_limit": 100,
+      "goodwill_credit_limit": 15,
+      "can": [
+        "Everything the assistant can",
+        "Refunds up to £100",
+        "Goodwill credit up to £15",
+        "Replacement of any value",
+        "Answer stage 1 complaints"
+      ]
+    },
+    "support_lead": {
+      "description": "The senior human on the support team.",
+      "can": [
+        "Everything a support agent can",
+        "Refunds up to £1,000. Above that the manager approves.",
+        "Policy exceptions, with a written reason",
+        "Answer stage 2 complaints",
+        "Change a customer's email address after identity checks"
+      ],
+      "email_change_checks": "Two previous order numbers plus the postcode on the account. Only the account holder can ask; we do not act for third parties.",
+      "refund_limit": 1000
+    },
+    "technician": {
+      "description": "The Fix Club bench.",
+      "can": [
+        "Assess repairs",
+        "Write quotes",
+        "Update repair status",
+        "Declare an item unrepairable"
+      ]
+    },
+    "coordinator": {
+      "description": "Runs bookings for Borrow Box, Someone to Clap, Someone to Queue, Someone to Hold and Someone to Wait In.",
+      "can": [
+        "Override availability",
+        "Allocate crews",
+        "Cancel a session and refund everyone booked",
+        "Assess hire damage and deposit deductions"
+      ]
+    },
+    "warehouse": {
+      "description": "Stock and dispatch.",
+      "can": [
+        "Pack and dispatch orders",
+        "Adjust stock",
+        "Inspect returns and release refunds for them"
+      ]
+    },
+    "buyer": {
+      "description": "Buys stock. Looks after suppliers and purchase orders.",
+      "po_approval_limit": 2000,
+      "can": [
+        "Read suppliers, stock history and purchase orders",
+        "Raise purchase orders up to £2,000 (larger ones wait for the manager)",
+        "Approve purchase orders drafted by the operations assistant, up to £2,000",
+        "Receive deliveries and record stock counts"
+      ]
+    },
+    "finance": {
+      "description": "Keeps the books. Reads the ledger and monthly figures.",
+      "can": [
+        "Read the ledger, monthly summaries, suppliers, purchase orders and campaigns",
+        "Add a ledger correction, always with a written reason"
+      ],
+      "cannot": [
+        "Change orders, stock or purchase orders"
+      ]
+    },
+    "marketing": {
+      "description": "Runs campaigns and looks for new business. Reads campaigns and prospects; can contact prospects within the outreach rules.",
+      "can": [
+        "Read campaigns and daily website visits",
+      "List prospects and contact them (send_outreach): not within 14 days of the last contact, never after a no, discounts up to 10%"
+      ],
+      "cannot": [
+        "See the ledger, customers' contact details or supplier costs"
+      ]
+    },
+    "manager": {
+      "description": "Runs the company. Can read everything.",
+      "can": [
+        "Read every record",
+        "Approve refunds over the support lead's limit",
+        "Approve purchase orders over the buyer's £2,000 limit",
+        "Move the simulated clock forward a day"
+      ]
+    },
+    "operations_assistant": {
+      "description": "An AI assistant for the back office. Helps the buyer and the warehouse.",
+      "can": [
+        "Read stock, stock history, suppliers and purchase orders",
+        "Draft a purchase order (status draft; a buyer or the manager must approve it)",
+        "Read internal documents"
+      ],
+      "cannot": [
+        "See the ledger or monthly figures",
+        "See customers' contact details",
+        "Approve or receive a purchase order"
+      ]
+    }
+  },
+  "escalate_when": [
+    "The customer asks for a person",
+    "The customer wants something the assistant's role does not allow",
+    "A complaint (any expression of dissatisfaction the customer wants recorded or resolved)",
+    "Anything involving injury, an allergic reaction, a safety concern or a legal threat",
+    "The customer has contacted about the same problem twice or more without it being resolved",
+    "The records contradict each other or the assistant cannot find what it needs",
+    "A suspected attempt to access someone else's records"
+  ],
+  "legal": {
+    "_note": "Reference only. The statutory rights the rules rest on, in plain words. Nothing reads this yet. Sources are in docs/law-notes.md.",
+    "reject_faulty_30_days": {
+      "right": "A customer can reject faulty goods and get a refund within 30 days of delivery. Goods that perish sooner have a shorter period.",
+      "source": "Consumer Rights Act 2015 s.22 (law-notes section 2)"
+    },
+    "presumption_6_months": {
+      "right": "A fault found within 6 months of delivery is presumed to have been there on delivery unless we prove otherwise.",
+      "source": "Consumer Rights Act 2015 s.19(14)-(15) (law-notes section 2)"
+    },
+    "repair_or_replace": {
+      "right": "After the first 30 days, faulty goods are repaired or replaced free, in a reasonable time. If that fails or is not possible, the customer gets a price reduction or can reject.",
+      "source": "Consumer Rights Act 2015 ss.23-24 (law-notes section 2)"
+    },
+    "cancel_14_days": {
+      "right": "A distance-sale customer can cancel for any reason up to 14 days after the goods arrive, and can also cancel before delivery. Perishable goods and unsealed hygiene goods are exempt.",
+      "source": "Consumer Contracts Regulations 2013 regs 28-30 (law-notes sections 4 and 5)"
+    },
+    "send_back_14_days": {
+      "right": "After telling us, the customer has a further 14 days to send the goods back. They pay the return cost unless we agreed to or did not tell them.",
+      "source": "Consumer Contracts Regulations 2013 reg 35 (law-notes section 4)"
+    },
+    "refund_within_14_days": {
+      "right": "We refund within 14 days of getting the goods back or seeing proof of posting, whichever is sooner, to the same payment method, with no fee. We may reduce it for value lost through handling beyond what a shop allows.",
+      "source": "Consumer Contracts Regulations 2013 reg 34 (law-notes section 4); Consumer Rights Act 2015 s.20(15)-(17) (law-notes section 2)"
+    },
+    "guarantee_in_addition": {
+      "right": "A guarantee or warranty is on top of legal rights, must say so and must be in plain language.",
+      "source": "Consumer Rights Act 2015 s.30 (law-notes section 3)"
+    },
+    "claim_time_limit": {
+      "right": "A legal claim can be brought for up to 6 years (5 in Scotland). Our 14-day and 24-hour reporting windows are only for our quick fixes.",
+      "source": "Limitation Act 1980 s.5 (law-notes section 7)"
+    }
+  },
+  "site_url": "https://expanza.co.uk/overthought"
+}

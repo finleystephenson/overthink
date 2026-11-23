@@ -1,0 +1,443 @@
+[
+  {
+    "id": "multi-01",
+    "category": "multi-turn",
+    "title": "Order status, then a 16-inch laptop question, then cancel everything",
+    "difficulty": 2,
+    "customer_id": "C-1003",
+    "channel": "web",
+    "setup": "Story 1. Tom's ORD-20168 (Daypack £129 and Laptop Sleeve £24, £153, free delivery) is paid and not packed. He first asks where it is, then says his laptop is 16-inch, which does not fit the bag or the sleeve, then asks to cancel the lot. Cancelling is allowed because nothing is packed.",
+    "turns": [
+      "Hi, where's my order? ORD-20168, tom.sawyer@example.com",
+      "Oh. I've got a 16 inch laptop by the way. Will it go in the bag?",
+      "Ugh, that's no good then. Cancel the lot please."
+    ],
+    "records": [
+      "ORD-20168",
+      "C-1003"
+    ],
+    "expected": {
+      "answer": "Turn 1: paid, not packed yet. Turn 2: a 16-inch laptop does not fit the Daypack or the sleeve. Turn 3: cancels ORD-20168 and says £153 goes back to the original payment method.",
+      "must_say": [
+        "not packed",
+        "does not fit",
+        "£153",
+        "original payment method"
+      ],
+      "must_not_say": [
+        "it will fit",
+        "it has been dispatched",
+        "refund to a gift card"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20168"
+        }
+      },
+      {
+        "tool": "check_compatibility"
+      },
+      {
+        "tool": "cancel_order",
+        "input_includes": {
+          "order_number": "ORD-20168"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20168",
+          "email_or_postcode": "tom.sawyer@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20168"
+        }
+      ],
+      [
+        "check_compatibility",
+        {
+          "a": "OT-PACK",
+          "b": "16-inch laptop"
+        }
+      ],
+      [
+        "cancel_order",
+        {
+          "order_number": "ORD-20168",
+          "reason": "Laptop is 16-inch and does not fit the Daypack or sleeve"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "update_order"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20168",
+        "field": "status",
+        "equals": "cancelled"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not cancel before the third message",
+      "Answers the laptop question from the tools, not from memory"
+    ]
+  },
+  {
+    "id": "multi-02",
+    "category": "multi-turn",
+    "title": "Blip waiting on stock, asks to hurry it, then cancels",
+    "difficulty": 2,
+    "customer_id": "C-1019",
+    "channel": "web",
+    "setup": "Story 30. Mary's ORD-20187 (one Blip, £149) is paid and waiting for stock. The supplier is late; Blip is back in stock on 30 Nov per the stock record. She asks where it is, asks if it can be hurried, then cancels. Cancel is allowed, nothing is packed.",
+    "turns": [
+      "Where's my Blip? ORD-20187, mary.lennox@example.com",
+      "Can you not just send it quicker? I'm not waiting weeks.",
+      "Right, forget it. Cancel it."
+    ],
+    "records": [
+      "ORD-20187",
+      "C-1019"
+    ],
+    "expected": {
+      "answer": "Turn 1: paid, waiting for Blip stock because the supplier delivery is late, expected back in stock 30 November. Turn 2: no way to jump the queue and no dispatch date can be promised. Turn 3: cancels ORD-20187 and says £149 goes back to the original payment method.",
+      "must_say": [
+        "30 November",
+        "£149",
+        "original payment method"
+      ],
+      "must_not_say": [
+        "it will ship tomorrow",
+        "I can prioritise",
+        "I have refunded it to your Blip credit"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20187"
+        }
+      },
+      {
+        "tool": "check_stock",
+        "input_includes": {
+          "sku": "OT-BLIP"
+        }
+      },
+      {
+        "tool": "cancel_order",
+        "input_includes": {
+          "order_number": "ORD-20187"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20187",
+          "email_or_postcode": "mary.lennox@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20187"
+        }
+      ],
+      [
+        "check_stock",
+        {
+          "sku": "OT-BLIP"
+        }
+      ],
+      [
+        "cancel_order",
+        {
+          "order_number": "ORD-20187",
+          "reason": "Customer will not wait for Blip stock"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "update_order",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20187",
+        "field": "status",
+        "equals": "cancelled"
+      },
+      {
+        "collection": "orders",
+        "id": "ORD-20170",
+        "field": "status",
+        "equals": "paid"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not cancel her other order ORD-20170",
+      "Does not promise a date, only says what the record shows"
+    ]
+  },
+  {
+    "id": "multi-03",
+    "category": "multi-turn",
+    "title": "Return the sock clip (already returned), then return the socks instead",
+    "difficulty": 3,
+    "customer_id": "C-1001",
+    "channel": "web",
+    "setup": "Priya's ORD-20137 (2 Spare Socks £7 each, Sock Clips £5, £3.95 delivery) was delivered 6 Nov. The clips were already returned under RET-3003 (refunded £2.05 on 15 Nov). She asks where the order is, then wants to return the unused clips, is told they are already returned, then asks to return the socks. The socks are eligible for change of mind; the eligibility check gives a £15 refund (£14 items plus £3.95 delivery less the £2.95 label).",
+    "turns": [
+      "Where's my order ORD-20137? elizabeth.bennet@example.com",
+      "Oh it came ages ago, sorry. I want to send the sock clips back, never used them.",
+      "Hm. Fine, then I'll return the two socks instead."
+    ],
+    "records": [
+      "ORD-20137",
+      "RET-3003",
+      "C-1001"
+    ],
+    "expected": {
+      "answer": "Order was delivered 6 Nov. The clips were already returned (RET-3003, £2.05 refunded). Then creates a change-of-mind return for the 2 socks and says the refund is £15 once the parcel arrives and passes inspection, with a prepaid label emailed.",
+      "must_say": [
+        "RET-3003",
+        "£2.05",
+        "£15"
+      ],
+      "must_not_say": [
+        "I have returned the clips again",
+        "you will get £19",
+        "£22.95"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20137"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20137",
+          "sku": "OT-SOCK"
+        }
+      },
+      {
+        "tool": "create_return",
+        "input_includes": {
+          "order_number": "ORD-20137"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20137",
+          "email_or_postcode": "elizabeth.bennet@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20137"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20137",
+          "sku": "OT-SOCK"
+        }
+      ],
+      [
+        "create_return",
+        {
+          "order_number": "ORD-20137",
+          "items": [
+            {
+              "sku": "OT-SOCK",
+              "qty": 2
+            }
+          ],
+          "reason": "change_of_mind"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "report_problem",
+      "update_order"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20137"
+        },
+        "count": 2
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not create a second return for the clips",
+      "Gives the refund figure from the eligibility check"
+    ]
+  },
+  {
+    "id": "multi-04",
+    "category": "multi-turn",
+    "title": "Stock, then delivery cost, then 'what if my laptop doesn't fit'",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor asks if the Daypack is in stock, then what delivery to SW1A 1AA costs, then what happens if her 16-inch laptop does not fit. Read-only. The Daypack is in stock, Soon is free (order over £50), and a 16-inch laptop does not fit the bag. She can return it within 30 days of delivery (change of mind).",
+    "turns": [
+      "Is the Daypack in stock?",
+      "What would delivery to SW1A 1AA cost?",
+      "My laptop's 16 inch. If it doesn't fit can I send it back?"
+    ],
+    "records": [],
+    "expected": {
+      "answer": "The Daypack is in stock. Soon delivery is free over £50 and takes 2 to 3 working days (Sooner is £6.95). A 16-inch laptop does not fit the Daypack, so she should not expect it to. She has 30 days from delivery to send it back for a change of mind, with £2.95 taken off for the label.",
+      "must_say": [
+        "in stock",
+        "£6.95",
+        "30 days",
+        "does not fit",
+        "£2.95"
+      ],
+      "must_not_say": [
+        "it will fit a 16-inch",
+        "you have 14 days",
+        "returns are free"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "check_stock",
+        "input_includes": {
+          "sku": "OT-PACK"
+        }
+      },
+      {
+        "tool": "delivery_options"
+      },
+      {
+        "tool": "check_compatibility"
+      }
+    ],
+    "ideal": [
+      [
+        "check_stock",
+        {
+          "sku": "OT-PACK"
+        }
+      ],
+      [
+        "delivery_options",
+        {
+          "skus": [
+            "OT-PACK"
+          ],
+          "postcode": "SW1A 1AA"
+        }
+      ],
+      [
+        "check_compatibility",
+        {
+          "a": "OT-PACK",
+          "b": "16-inch laptop"
+        }
+      ],
+      [
+        "get_policy",
+        {
+          "id": "returns-and-refunds"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "cancel_order",
+      "open_case"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "repairs",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Warns about the 16-inch laptop before she buys",
+      "Does not ask for verification: no records are involved"
+    ]
+  }
+]

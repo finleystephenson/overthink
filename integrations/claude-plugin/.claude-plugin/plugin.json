@@ -1,0 +1,10 @@
+{
+  "name": "overthink",
+  "description": "Test an AI product inside Overthought & Co., a simulated business in a sandbox: plan the test, create synthetic people and activity, run it with and without the product, and report what the records show.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Expanza"
+  },
+  "homepage": "https://github.com/finleystephenson/overthink",
+  "license": "Apache-2.0"
+}

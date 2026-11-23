@@ -1,0 +1,271 @@
+[
+  {
+    "number": "FIX-5001",
+    "customer_id": "C-1010",
+    "sku": "OT-PACK",
+    "registration_id": "REG-6009",
+    "order_number": "ORD-20122",
+    "fault": "Chest buckle snapped",
+    "in_warranty": true,
+    "created_at": "2026-10-20T10:00:00Z",
+    "status": "returned",
+    "quote": null,
+    "promised_by": null,
+    "history": [
+      {
+        "at": "2026-10-20T10:00:00Z",
+        "event": "Repair requested"
+      },
+      {
+        "at": "2026-10-23T10:00:00Z",
+        "event": "Item received"
+      },
+      {
+        "at": "2026-10-27T15:00:00Z",
+        "event": "Buckle replaced under warranty (PACK-BUCKLE)"
+      },
+      {
+        "at": "2026-10-29T09:00:00Z",
+        "event": "Returned"
+      }
+    ]
+  },
+  {
+    "number": "FIX-5002",
+    "customer_id": "C-1019",
+    "sku": "OT-UMBR",
+    "registration_id": "REG-6007",
+    "order_number": "ORD-20110",
+    "fault": "Rib bent and sticks when opening",
+    "in_warranty": true,
+    "created_at": "2026-10-26T10:00:00Z",
+    "status": "returned",
+    "quote": null,
+    "promised_by": null,
+    "history": [
+      {
+        "at": "2026-10-26T10:00:00Z",
+        "event": "Repair requested"
+      },
+      {
+        "at": "2026-10-30T11:00:00Z",
+        "event": "Item received"
+      },
+      {
+        "at": "2026-11-04T10:00:00Z",
+        "event": "Rib replaced under warranty"
+      },
+      {
+        "at": "2026-11-06T09:00:00Z",
+        "event": "Returned to customer"
+      }
+    ]
+  },
+  {
+    "number": "FIX-5003",
+    "customer_id": "C-1022",
+    "sku": "OT-TROF",
+    "registration_id": null,
+    "order_number": "ORD-20104",
+    "fault": "Gold plating worn at the rim",
+    "in_warranty": false,
+    "created_at": "2026-11-05T10:00:00Z",
+    "status": "approved",
+    "quote": {
+      "lines": [
+        {
+          "code": "TROF-REPLATE",
+          "name": "Re-plating",
+          "price": 26
+        }
+      ],
+      "total": 26,
+      "sent_at": "2026-11-09T10:00:00Z",
+      "valid_until": "2026-11-23"
+    },
+    "promised_by": "2026-11-27",
+    "history": [
+      {
+        "at": "2026-11-05T10:00:00Z",
+        "event": "Repair requested. Out of warranty. £15 assessment fee applies."
+      },
+      {
+        "at": "2026-11-09T10:00:00Z",
+        "event": "Quote of £26 sent"
+      },
+      {
+        "at": "2026-11-10T09:00:00Z",
+        "event": "Quote approved by the customer"
+      }
+    ]
+  },
+  {
+    "number": "FIX-5004",
+    "customer_id": "C-1018",
+    "sku": "OT-BOOM",
+    "registration_id": "REG-6005",
+    "order_number": "ORD-20112",
+    "fault": "Speaker crackles at high volume",
+    "in_warranty": true,
+    "created_at": "2026-11-10T12:00:00Z",
+    "status": "in_repair",
+    "quote": null,
+    "promised_by": "2026-11-25",
+    "history": [
+      {
+        "at": "2026-11-10T12:00:00Z",
+        "event": "Repair requested"
+      },
+      {
+        "at": "2026-11-11T09:00:00Z",
+        "event": "Free label sent"
+      },
+      {
+        "at": "2026-11-13T10:00:00Z",
+        "event": "Item received"
+      },
+      {
+        "at": "2026-11-16T14:00:00Z",
+        "event": "Fault confirmed: driver fault. In warranty."
+      },
+      {
+        "at": "2026-11-17T09:00:00Z",
+        "event": "In repair"
+      }
+    ]
+  },
+  {
+    "number": "FIX-5005",
+    "customer_id": "C-1021",
+    "sku": "OT-HELM",
+    "registration_id": null,
+    "order_number": "ORD-20103",
+    "fault": "Stitching has come away at the brim",
+    "in_warranty": false,
+    "created_at": "2026-11-12T10:00:00Z",
+    "status": "assessing",
+    "quote": null,
+    "promised_by": null,
+    "history": [
+      {
+        "at": "2026-11-12T10:00:00Z",
+        "event": "Repair requested. Bought about 14 months ago, so out of warranty. £15 assessment fee applies."
+      },
+      {
+        "at": "2026-11-17T09:30:00Z",
+        "event": "Item received"
+      },
+      {
+        "at": "2026-11-18T10:00:00Z",
+        "event": "Assessing. No fixed price for a restitch, so the bench will send a quote."
+      }
+    ]
+  },
+  {
+    "number": "FIX-5006",
+    "customer_id": "C-1002",
+    "sku": "OT-BLIP",
+    "registration_id": "REG-6001",
+    "order_number": "ORD-20102",
+    "fault": "Screen cracked after a drop",
+    "in_warranty": false,
+    "created_at": "2026-11-18T09:40:00Z",
+    "status": "quote_sent",
+    "quote": {
+      "lines": [
+        {
+          "code": "BLIP-SCREEN",
+          "name": "Screen replacement",
+          "price": 49
+        }
+      ],
+      "total": 49,
+      "sent_at": "2026-11-20T15:00:00Z",
+      "valid_until": "2026-12-04"
+    },
+    "promised_by": null,
+    "history": [
+      {
+        "at": "2026-11-18T09:40:00Z",
+        "event": "Repair requested"
+      },
+      {
+        "at": "2026-11-19T11:00:00Z",
+        "event": "Item received at The Fix Club"
+      },
+      {
+        "at": "2026-11-20T14:30:00Z",
+        "event": "Assessed: impact damage to the glass. Accidental damage is not covered by the warranty, although the Blip is inside its 24 months."
+      },
+      {
+        "at": "2026-11-20T15:00:00Z",
+        "event": "Quote of £49 sent. Valid until 2026-12-04. £15 assessment fee comes off the repair price if approved."
+      }
+    ]
+  },
+  {
+    "number": "FIX-5007",
+    "customer_id": "C-1005",
+    "sku": "OT-BOOM",
+    "registration_id": "REG-6010",
+    "order_number": "ORD-20114",
+    "fault": "Battery runs flat within a day",
+    "in_warranty": true,
+    "created_at": "2026-11-19T10:00:00Z",
+    "status": "received",
+    "quote": null,
+    "promised_by": "2026-12-03",
+    "history": [
+      {
+        "at": "2026-11-19T10:00:00Z",
+        "event": "Repair requested"
+      },
+      {
+        "at": "2026-11-20T10:00:00Z",
+        "event": "Free label sent"
+      },
+      {
+        "at": "2026-11-23T08:30:00Z",
+        "event": "Item received"
+      }
+    ]
+  },
+  {
+    "number": "FIX-5008",
+    "customer_id": "C-1017",
+    "sku": "OT-PACK",
+    "registration_id": "REG-6006",
+    "order_number": "ORD-20123",
+    "fault": "Main zip splits at the end",
+    "in_warranty": true,
+    "created_at": "2026-11-21T16:00:00Z",
+    "status": "awaiting_item",
+    "quote": null,
+    "promised_by": null,
+    "history": [
+      {
+        "at": "2026-11-21T16:00:00Z",
+        "event": "Repair requested. Free label sent."
+      }
+    ]
+  },
+  {
+    "number": "FIX-5009",
+    "customer_id": "C-1020",
+    "sku": "OT-PUDL",
+    "registration_id": "REG-6012",
+    "order_number": "ORD-20131",
+    "fault": "Chip on one edge",
+    "in_warranty": true,
+    "created_at": "2026-11-22T18:30:00Z",
+    "status": "requested",
+    "quote": null,
+    "promised_by": null,
+    "history": [
+      {
+        "at": "2026-11-22T18:30:00Z",
+        "event": "Repair requested"
+      }
+    ]
+  }
+]

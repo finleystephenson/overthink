@@ -1,0 +1,8 @@
+{
+  "name": "Support prompt on a local model",
+  "version": "prompt-v1",
+  "transport": "openai",
+  "baseUrl": "http://localhost:11434/v1",
+  "model": "llama3.2",
+  "systemPromptFile": "support-prompt.txt"
+}

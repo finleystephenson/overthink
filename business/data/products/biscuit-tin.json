@@ -1,0 +1,206 @@
+{
+  "id": "biscuit-tin",
+  "code": "BISC",
+  "name": "The Biscuit Tin",
+  "category": "food",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A tin of shortbread biscuits. There are 24, for now.",
+  "summary": "A tin of 24 shortbread biscuits. £16. Not returnable once opened.",
+  "concept": "A round tin of 24 all-butter shortbread biscuits, baked fresh.",
+  "why_it_exists": "Every family has a biscuit tin that does not hold biscuits. This one does.",
+  "target_customer": "Anyone who wants biscuits, or who has been disappointed by a tin before.",
+  "physical": {
+    "form": "A round lidded tin holding 24 shortbread biscuits in two layers.",
+    "materials": [
+      "Steel tin with a printed lid",
+      "Paper liner",
+      "Shortbread: wheat flour, butter, sugar, salt"
+    ],
+    "dimensions": "Tin: 18 cm across, 8 cm tall",
+    "weight": "About 600 g with biscuits"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-BISC-24",
+      "name": "24 shortbread biscuits",
+      "options": {},
+      "price": 16,
+      "stock": 999,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "There are 24 shortbread biscuits in the tin, laid in two layers.",
+    "The biscuits are shortbread made with butter.",
+    "The round tin has a lid that fits snugly, so the biscuits stay crisp.",
+    "Once the biscuits are gone, the tin is yours to keep and fill with anything you like.",
+    "It needs no fridge, so you can leave the tin on the side."
+  ],
+  "arrives": "The tin is packed in a brown card box with paper cushioning around it, so the lid and the biscuits arrive in one piece. The parcel is a plain box with no plastic inside. Open it, and the tin is ready to eat from.",
+  "specs": [
+    [
+      "Size",
+      "18 cm across x 8 cm tall (round tin)"
+    ],
+    [
+      "Weight",
+      "About 600 g with biscuits (biscuits about 480 g)"
+    ],
+    [
+      "Made of",
+      "Steel tin with a printed lid, paper liner"
+    ],
+    [
+      "Colour",
+      "Off-white tin with sunflower yellow and orange print"
+    ],
+    [
+      "Contents",
+      "24 shortbread biscuits, about 20 g each, in two layers of 12"
+    ],
+    [
+      "Ingredients",
+      "Wheat flour, butter (milk), sugar, salt"
+    ],
+    [
+      "Allergens",
+      "Contains wheat (gluten) and milk. Made in a kitchen that also handles nuts, egg and soy."
+    ],
+    [
+      "Storage",
+      "Cool and dry, lid on"
+    ],
+    [
+      "Best before",
+      "At least 6 weeks from dispatch, printed on the tin"
+    ]
+  ],
+  "how_it_works": "Open the lid. Eat the biscuits. Keep the tin.",
+  "in_the_box": [
+    "The Biscuit Tin with 24 shortbread biscuits"
+  ],
+  "accessories": [],
+  "compatibility": [
+    {
+      "with": "chilled delivery",
+      "works": false,
+      "note": "Biscuits are not chilled and travel by Soon or Sooner."
+    },
+    {
+      "with": "empty refill tin",
+      "works": false,
+      "note": "We do not sell an empty tin."
+    }
+  ],
+  "packaging": "The tin travels in a kraft card box with paper-pulp cushioning.",
+  "warranty": {
+    "months": 0,
+    "summary": "It has no warranty, because it is food. If it arrives damaged, see Damaged Items.",
+    "guarantee": null
+  },
+  "care": [
+    "Keep in a cool, dry place with the lid on.",
+    "Eat by the best-before date on the tin."
+  ],
+  "safety": [
+    "Contains wheat (gluten) and milk. Made in a kitchen that also handles nuts, egg and soy."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": false,
+    "note": "It cannot be returned once opened. An unopened tin can be returned within 30 days. If it arrives damaged, see Damaged Items."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "A tin of shortbread biscuits",
+    "intro": "A tin of shortbread biscuits. There are 24, for now.",
+    "sections": [
+      {
+        "title": "What is in it",
+        "body": "24 all-butter shortbread biscuits in a round tin. £16."
+      },
+      {
+        "title": "Allergens",
+        "body": "Contains wheat (gluten) and milk. Made in a kitchen that also handles nuts, egg and soy."
+      },
+      {
+        "title": "Delivery",
+        "body": "It goes by Soon or Sooner."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "What is in the tin?",
+      "a": "24 shortbread biscuits."
+    },
+    {
+      "q": "What allergens are in it?",
+      "a": "Wheat (gluten) and milk. It is made in a kitchen that also handles nuts, egg and soy."
+    },
+    {
+      "q": "What is the best-before date?",
+      "a": "At least 6 weeks from dispatch. It is printed on the tin."
+    },
+    {
+      "q": "Is it sent chilled?",
+      "a": "No."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Not once opened. An unopened tin can be returned within 30 days."
+    },
+    {
+      "q": "Can I buy just the tin?",
+      "a": "No. We do not sell an empty tin."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The biscuits arrived broken.",
+      "steps": [
+        "Photograph the tin and the biscuits.",
+        "Report it within 14 days."
+      ],
+      "if_unresolved": "You can have a new tin or a refund. See Damaged Items."
+    },
+    {
+      "problem": "The lid is stuck.",
+      "steps": [
+        "Run a spoon handle around the edge.",
+        "Lever it gently."
+      ],
+      "if_unresolved": "Open a support case if the tin is dented."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "trophy",
+    "one-good-pen"
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#FFE9B8"
+  },
+  "photography_direction": "A round tin with its lid off beside it, biscuits stacked in neat rows. No crumbs.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and orange accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. A round off-white tin with its lid leaning beside it, filled with neat rows of shortbread biscuits, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and orange accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. Close-up of the shortbread biscuits stacked in the tin, soft crumb and edge detail. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and orange accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. Three shortbread biscuits fanned in front of the closed tin. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and orange accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. A kraft shipping box with paper-pulp cushioning and the tin beside it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and orange accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. The open tin on a pale kitchen counter beside a mug. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and orange accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. One closed tin centred with generous empty space around it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

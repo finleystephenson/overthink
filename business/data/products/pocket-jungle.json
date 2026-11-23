@@ -1,0 +1,322 @@
+{
+  "id": "pocket-jungle",
+  "code": "JUNG",
+  "name": "The Pocket Jungle",
+  "category": "desk-home",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A small terrarium for your desk.",
+  "summary": "A small terrarium: moss and one small live plant under a glass dome on a cork base. £42. Sent by next-day delivery only.",
+  "concept": "Moss, a few stones, charcoal and one small plant, layered in glass. It sits on a desk and needs a light mist every week or two.",
+  "why_it_exists": "Most desks have nothing alive on them. A terrarium needs a bright spot and a little misting, not a watering routine.",
+  "target_customer": "People with a desk, shelf or windowsill and no strong feelings about gardening.",
+  "physical": {
+    "form": "A small planted glass vessel: a glass dome on a cork base.",
+    "materials": [
+      "Glass dome",
+      "Cork base",
+      "Drainage stones, horticultural charcoal and peat-free compost",
+      "Live moss",
+      "One small live plant, chosen by us"
+    ],
+    "dimensions": "140 x 120 mm (height x width, approximate)",
+    "weight": "640 g (approximate, planted)"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-JUNG",
+      "name": "Glass dome",
+      "options": {},
+      "price": 42,
+      "stock": 45,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It arrives planted and put together, so there is nothing for you to build.",
+    "It has one small plant that likes indoor light, so it can sit on a desk or shelf.",
+    "It needs only a light mist of water once every week or two.",
+    "It uses peat-free compost, so it is kinder to the places peat comes from.",
+    "A printed care guide comes with it, so you know what to do from the first day."
+  ],
+  "arrives": "The glass is held upright in a brown card box with paper inserts and a card collar that keeps the soil in place. The box is marked LIVE PLANT, THIS WAY UP, and it travels Sooner only, Monday to Thursday. Take it out as soon as it lands, put it somewhere bright but not in direct sun, and give it a light mist.",
+  "specs": [
+    [
+      "Size",
+      "About 14 cm tall x 12 cm wide"
+    ],
+    [
+      "Weight",
+      "About 640 g planted"
+    ],
+    [
+      "Made of",
+      "Glass dome, cork base, drainage stones, charcoal, peat-free compost, live moss"
+    ],
+    [
+      "Colour",
+      "Clear glass, natural cork, green moss and plant"
+    ],
+    [
+      "Plant",
+      "One small live plant, species chosen at planting"
+    ],
+    [
+      "Light",
+      "Bright, indirect. No direct midday sun. 10 to 25°C."
+    ],
+    [
+      "Watering",
+      "Light mist every 1 to 2 weeks"
+    ],
+    [
+      "Delivery",
+      "Sooner only, Monday to Thursday"
+    ]
+  ],
+  "how_it_works": "Water rises from the soil, collects on the glass and runs back down. Keep it in bright, indirect light, mist it when the moss looks dry and leave it alone.",
+  "in_the_box": [
+    "The planted Pocket Jungle in its glass",
+    "A cork base",
+    "A printed care guide"
+  ],
+  "accessories": [
+    {
+      "sku": "OT-JUNG-PLANT",
+      "name": "Replacement Plant",
+      "kind": "accessory",
+      "price": 9,
+      "stock": 60,
+      "tagline": "A new plant for your Pocket Jungle.",
+      "description": "One small live plant that suits The Pocket Jungle. Swap it in when the old one has had enough. It is sent Sooner only, Monday to Thursday. It does not suit cacti or succulents.",
+      "image": "img/branded/acc-jungle-plant.jpg",
+      "fits": [
+        "pocket-jungle"
+      ],
+      "specs": [
+        [
+          "Size",
+          "About 6 to 9 cm tall, in a 5 cm pot"
+        ],
+        [
+          "Weight",
+          "About 60 g"
+        ],
+        [
+          "Made of",
+          "Live plant in peat-free compost"
+        ],
+        [
+          "Colour",
+          "Green, species chosen by us"
+        ],
+        [
+          "Fits",
+          "The Pocket Jungle only"
+        ],
+        [
+          "In the pack",
+          "1 plant, chosen by us"
+        ],
+        [
+          "Light",
+          "Bright, indirect. No direct midday sun."
+        ],
+        [
+          "Care",
+          "Mist lightly every 1 to 2 weeks. Delivery Sooner only."
+        ]
+      ]
+    },
+    {
+      "sku": "OT-JUNG-KIT",
+      "name": "Maintenance Kit",
+      "kind": "accessory",
+      "price": 14,
+      "stock": 80,
+      "tagline": "A mister, tweezers and a cloth.",
+      "description": "A small mister, a pair of tweezers and a cloth for looking after your Pocket Jungle. It is made for The Pocket Jungle and will also work on similar small glass terrariums.",
+      "image": "img/branded/acc-jungle-kit.jpg",
+      "fits": [
+        "pocket-jungle"
+      ],
+      "specs": [
+        [
+          "Size",
+          "Mister 11 cm tall. Tweezers 12 cm. Cloth 15 x 15 cm."
+        ],
+        [
+          "Weight",
+          "About 140 g"
+        ],
+        [
+          "Made of",
+          "Plastic mister, steel tweezers, microfibre cloth"
+        ],
+        [
+          "Colour",
+          "Off-white and orange mister, blue tweezers, pink cloth"
+        ],
+        [
+          "Mister capacity",
+          "100 ml"
+        ],
+        [
+          "Fits",
+          "The Pocket Jungle. Works on other small terrariums too."
+        ],
+        [
+          "In the pack",
+          "1 mister, 1 pair of tweezers, 1 cloth"
+        ],
+        [
+          "Care",
+          "Empty the mister when not in use. Rinse the cloth and air dry."
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Replacement Plant",
+      "works": true,
+      "note": "It fits the Pocket Jungle. It goes by Sooner delivery only."
+    },
+    {
+      "with": "Maintenance Kit",
+      "works": true,
+      "note": "The mister, tweezers and cloth suit the Pocket Jungle."
+    },
+    {
+      "with": "cacti and succulents",
+      "works": false,
+      "note": "They need dry air and rot in a damp dome."
+    }
+  ],
+  "packaging": "Planted glass sits in a kraft card box with paper-pulp inserts and a card collar to hold the soil. Marked LIVE PLANT, THIS WAY UP. No plastic fill.",
+  "warranty": {
+    "months": 12,
+    "summary": "The glass has a 12-month warranty against faults in how it was made, such as a cracked seam. The plant has a 14-day health guarantee instead. See Warranty.",
+    "guarantee": "14-day plant health guarantee: if the plant dies or arrives unhealthy within 14 days of delivery, send a photo and we send a new plant. It does not cover overwatering, direct sun or frost after delivery."
+  },
+  "care": [
+    "Bright, indirect light, such as a few feet from a north or east window. Not direct midday sun.",
+    "Mist lightly every 1 to 2 weeks, or when the moss looks pale and dry. A few sprays, not a soak.",
+    "Open the lid or lift the dome for an hour once a week.",
+    "Trim dead or yellow leaves with the tweezers.",
+    "Keep between 10 and 25 °C, away from radiators and draughts.",
+    "Turn it a quarter turn each week so the plant grows evenly."
+  ],
+  "safety": [
+    "Live plant. Do not eat any part. Keep away from pets that chew.",
+    "Glass can break. Keep out of reach of small children.",
+    "Glass can focus sunlight. Do not leave it in a south-facing window."
+  ],
+  "delivery": {
+    "methods": [
+      "next-day"
+    ],
+    "note": "Sooner only, sent Monday to Thursday. We do not send it when the forecast is below 0°C."
+  },
+  "returnable": {
+    "ok": false,
+    "note": "The live plant cannot be returned once delivered, but it has a 14-day health guarantee. Accessories and the non-living parts can be returned within 30 days if unused. See Returns."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "A small terrarium for your desk",
+    "intro": "A small terrarium for your desk.",
+    "sections": [
+      {
+        "title": "What is in it",
+        "body": "Drainage stones, charcoal, peat-free compost, live moss and one small plant, under a glass dome on a cork base. It is about the size of a mug. £42."
+      },
+      {
+        "title": "Care",
+        "body": "Give it bright, indirect light and a light mist every one to two weeks. Lift the dome for an hour each week."
+      },
+      {
+        "title": "Delivery",
+        "body": "Live plants go Sooner, Monday to Thursday, so none sits in a depot over a weekend. We do not send them when the forecast is below 0°C."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "How often do I water it?",
+      "a": "Mist it lightly every 1 to 2 weeks, or when the moss looks dry. Do not pour water in."
+    },
+    {
+      "q": "Why can I only pick next-day delivery?",
+      "a": "Live plants go Sooner, Monday to Thursday."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Not the live plant. It has a 14-day health guarantee instead. Unused accessories and the glass can be returned within 30 days."
+    },
+    {
+      "q": "What does the plant guarantee cover?",
+      "a": "A plant that dies or arrives unhealthy within 14 days. Send a photo and we send a new plant."
+    },
+    {
+      "q": "What if the glass arrives broken?",
+      "a": "Report it within 14 days with a photo. You can have a new one or a refund."
+    },
+    {
+      "q": "What plant do I get?",
+      "a": "One small plant that suits indoor light. The kind depends on supply."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "There is mould on the soil or moss.",
+      "steps": [
+        "Remove the mould with the tweezers.",
+        "Lift the dome for a few hours a day for a week.",
+        "Stop misting until the moss looks dry."
+      ],
+      "if_unresolved": "If it comes back within 14 days of delivery, send a photo."
+    },
+    {
+      "problem": "The glass is wet all day.",
+      "steps": [
+        "Some morning damp is normal.",
+        "Lift the dome for an hour or two and wipe the glass.",
+        "Mist less often."
+      ],
+      "if_unresolved": "If it lasts over a week, leave the dome off for two days."
+    },
+    {
+      "problem": "The leaves are turning yellow.",
+      "steps": [
+        "Remove yellow leaves with the tweezers.",
+        "Stop misting if the soil is soaked.",
+        "Move it out of direct sun."
+      ],
+      "if_unresolved": "If it spreads within 14 days of delivery, send a photo for a new plant."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "starter-puddle",
+    "one-good-pen"
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#DCEBD0"
+  },
+  "photography_direction": "Calm and green. Glass shown honestly, with real condensation. Small plant, dense moss. No hands, no tools, no watering can.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated lime and sky blue accents, soft studio light, pale sage single-colour backdrop, gentle contact shadow. A small hand-blown glass cloche on a ground-glass plate holding dense moss, layered stones and one small plant, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated lime and sky blue accents, soft studio light, pale sage single-colour backdrop, gentle contact shadow. Close-up through the side of a glass terrarium showing pale stones, charcoal, dark compost and bright moss, one leaf in frame. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated lime and sky blue accents, soft studio light, pale sage single-colour backdrop, gentle contact shadow. A small hand-blown glass cloche on a ground-glass plate holding dense moss, layered stones and one small plant, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated lime and sky blue accents, soft studio light, pale sage single-colour backdrop, gentle contact shadow. An open kraft box with paper-pulp inserts holding a planted glass jar, a care guide card beside it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated lime and sky blue accents, soft studio light, pale sage single-colour backdrop, gentle contact shadow. A small dome terrarium on a pale wooden desk beside a closed laptop, window light from the left. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated lime and sky blue accents, soft studio light, pale sage single-colour backdrop, gentle contact shadow. A single cloche terrarium centred with generous empty space around it, delicate reflections on the glass. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

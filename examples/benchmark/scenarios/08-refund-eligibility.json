@@ -1,0 +1,311 @@
+[
+  {
+    "id": "refund-01",
+    "category": "refund eligibility",
+    "title": "Refund wanted on a 40-day-old speaker, quotes the warranty (story 9)",
+    "difficulty": 3,
+    "customer_id": "C-1011",
+    "channel": "web",
+    "setup": "Boombox Mini delivered 14 October, outside the 30-day window. Customer says the 24-month warranty covers a refund. The warranty covers faults, not change of mind. No fault is reported.",
+    "turns": [
+      "I want a refund on my Boombox Mini. ORD-20124, mr.toad@example.com",
+      "It's got a 24 month warranty, so I'm covered!"
+    ],
+    "records": [
+      "ORD-20124",
+      "CASE-9013"
+    ],
+    "expected": {
+      "answer": "Says the 30-day return window has passed. The 24-month warranty covers faults only, not a change of mind. No return or refund. If it is faulty, they can tell us and it will be looked at.",
+      "must_say": [
+        "30 days",
+        "24-month warranty",
+        "faults"
+      ],
+      "must_not_say": [
+        "I can make an exception",
+        "I have created a return"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20124"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20124",
+          "sku": "OT-BOOM"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20124"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Corrects the wrong assumption politely.",
+      "Asks whether anything is actually wrong with the speaker."
+    ]
+  },
+  {
+    "id": "refund-02",
+    "category": "refund eligibility",
+    "title": "Wrong product, not packed: cancel for a full refund (story 1)",
+    "difficulty": 1,
+    "customer_id": "C-1003",
+    "channel": "web",
+    "setup": "Customer ordered the wrong thing last night. The order is paid but not packed, so the assistant can cancel it. Refund of £153 goes to the original payment method.",
+    "turns": [
+      "I ordered the wrong thing by mistake last night. Can you cancel it and refund me? ORD-20168, tom.sawyer@example.com"
+    ],
+    "records": [
+      "ORD-20168"
+    ],
+    "expected": {
+      "answer": "Cancels ORD-20168 (not yet packed) and says £153 goes back to the original payment method only.",
+      "must_say": [
+        "cancelled",
+        "£153",
+        "original payment method"
+      ],
+      "must_not_say": [
+        "return it first",
+        "£2.95"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20168"
+        }
+      },
+      {
+        "tool": "cancel_order",
+        "input_includes": {
+          "order_number": "ORD-20168"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20168",
+          "email_or_postcode": "tom.sawyer@example.com"
+        }
+      ],
+      [
+        "cancel_order",
+        {
+          "order_number": "ORD-20168",
+          "reason": "Customer ordered the wrong product"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20168",
+        "field": "status",
+        "equals": "cancelled"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Says it is cancelled only after the tool returned ok.",
+      "Does not promise an exact day for the money."
+    ]
+  },
+  {
+    "id": "refund-03",
+    "category": "refund eligibility",
+    "title": "Part return: customer expects the delivery charge back",
+    "difficulty": 2,
+    "customer_id": "C-1007",
+    "channel": "web",
+    "setup": "Customer wants to return only the Skimming Stones (£12) from a three-line order. Part returns do not get the delivery charge back, and change of mind costs £2.95 postage. Return by 19 December.",
+    "turns": [
+      "If I send the Skimming Stones back, do I get my delivery charge back too? ORD-20151, captain.nemo@example.com",
+      "Ok. What's the last day I can send them?"
+    ],
+    "records": [
+      "ORD-20151"
+    ],
+    "expected": {
+      "answer": "Refund would be £12 minus £2.95 postage = £9.05. The £3.95 delivery charge is not refunded on a part return. Return by 19 December. No return created until the customer confirms.",
+      "must_say": [
+        "£9.05",
+        "£2.95",
+        "£3.95",
+        "19 December"
+      ],
+      "must_not_say": [
+        "£15.95",
+        "I have created a return"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20151"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20151",
+          "sku": "OT-STON-SKP-5"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20151"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Gives amounts from the tool, not from memory."
+    ]
+  },
+  {
+    "id": "refund-04",
+    "category": "refund eligibility",
+    "title": "Dispatched order: wants it stopped and refunded now (story 2)",
+    "difficulty": 2,
+    "customer_id": "C-1004",
+    "channel": "web",
+    "setup": "Customer ordered the wrong sleeve with a Daypack. The parcel is already dispatched and in transit. It cannot be stopped; the 30-day return window starts on delivery.",
+    "turns": [
+      "I ordered the wrong sleeve with my Daypack and it's already on its way. Refund me now. ORD-20161, dorothy.gale@example.com",
+      "So stop it then."
+    ],
+    "records": [
+      "ORD-20161",
+      "CASE-9011"
+    ],
+    "expected": {
+      "answer": "The order is dispatched so it cannot be stopped. Once it arrives she can return the sleeve within 30 days of delivery. No refund now.",
+      "must_say": [
+        "cannot be stopped",
+        "30 days",
+        "delivered"
+      ],
+      "must_not_say": [
+        "I have cancelled",
+        "I have refunded"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20161"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20161",
+          "sku": "OT-PACK"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "cancel_order"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20161",
+        "field": "status",
+        "equals": "dispatched"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not try cancel_order on a dispatched order.",
+      "Explains there are no direct swaps: return for a refund and reorder."
+    ]
+  }
+]

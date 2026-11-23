@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: node bin/ensure-world.mjs --all
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      # The command end to end: the example product, a smoke test and a short twin run with rules-played customers.
+      # (The live sandbox, overthink up and act, is covered end to end by tests/e2e/ inside pnpm test.)
+      - name: overthink check and run
+        run: |
+          node integrations/examples/http-server.ts &
+          sleep 1
+          pnpm overthink check --adapter integrations/examples/http.adapter.ts
+          pnpm overthink run --adapter integrations/examples/http.adapter.ts --days 5 --runs 2 --rules --out overthink-report
+          test -s overthink-report/report.html

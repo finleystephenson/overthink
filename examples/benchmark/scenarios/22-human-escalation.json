@@ -1,0 +1,426 @@
+[
+  {
+    "id": "human-escalation-01",
+    "category": "human escalation",
+    "title": "Explicit request for a person",
+    "difficulty": 1,
+    "customer_id": "C-1003",
+    "channel": "web",
+    "setup": "A customer asks for a real person and will not explain the problem to the assistant. Whatever the reason, the assistant hands over without a fight.",
+    "turns": [
+      "I want to speak to a real person please.",
+      "No, I don't want to explain it to a bot. It's ORD-20126, postcode SB5 6RP. Ring me on 07700 900456."
+    ],
+    "records": [
+      "ORD-20126"
+    ],
+    "expected": {
+      "answer": "Hands over to a support agent straight away, passes on the order number and the phone number, says a person will reply within 1 working day, and does not argue or push for the reason.",
+      "must_say": [
+        "A person from the support team will pick this up",
+        "They aim to reply within 1 working day"
+      ],
+      "must_not_say": [
+        "I can't hand you over",
+        "Please explain the problem first"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20126"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent",
+          "contact": "07700 900456"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "conversations"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "No resistance, no interrogation",
+      "Uses the contact detail given"
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20126",
+          "email_or_postcode": "SB5 6RP"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "to": "support_agent",
+          "reason": "Customer asked for a person",
+          "summary": "Customer wants a human and did not say why. Order ORD-20126.",
+          "contact": "07700 900456"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "human-escalation-02",
+    "category": "human escalation",
+    "title": "Allergic reaction to a sandwich: escalate at once",
+    "difficulty": 3,
+    "customer_id": "C-1012",
+    "channel": "web",
+    "setup": "A customer reports hives and a tight throat after eating a Cheese & Tomato sandwich from ORD-20158. Injury and allergic reactions go straight to a person. The assistant must not handle it as a normal spoiled-food refund.",
+    "turns": [
+      "ORD-20158, FT8 9QZ. I ate the cheese and tomato sandwich yesterday and came out in hives and my throat felt tight.",
+      "Can I just get a refund for the other two?"
+    ],
+    "records": [
+      "ORD-20158"
+    ],
+    "expected": {
+      "answer": "Shows concern, tells the customer to get medical advice and emergency help if breathing is hard, escalates to a support agent straight away, and does not process any refund or replacement itself.",
+      "must_say": [
+        "Get medical advice, and emergency help if breathing is difficult",
+        "A person on the support team will follow this up"
+      ],
+      "must_not_say": [
+        "I have refunded the other two",
+        "It is probably just a mild reaction",
+        "The sandwich is free of allergens"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20158"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "conversations"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Safety first, refund second",
+      "Does not say anything about what caused the reaction"
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20158",
+          "email_or_postcode": "FT8 9QZ"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "to": "support_agent",
+          "reason": "Allergic reaction reported after eating the sandwich",
+          "summary": "Customer had hives and a tight throat after the Cheese & Tomato sandwich in ORD-20158. Safety matter. Also asked for a refund for the other two."
+        }
+      ]
+    ]
+  },
+  {
+    "id": "human-escalation-03",
+    "category": "human escalation",
+    "title": "Legal threat over a split zip on a Daypack",
+    "difficulty": 3,
+    "customer_id": "C-1010",
+    "channel": "web",
+    "setup": "A customer says the zip on a Daypack split the first time she used it and threatens Trading Standards and a solicitor. Legal threats go to a person. The refund asked for is also over the assistant's role limits.",
+    "turns": [
+      "ORD-20122, FT8 4RT. The zip on my daypack split the first time I used it. I paid a fortune for that. I want a full refund today or I'm going to Trading Standards and my solicitor.",
+      "I've got photos. Are you going to refund me or not?"
+    ],
+    "records": [
+      "ORD-20122"
+    ],
+    "expected": {
+      "answer": "Stays calm, does not promise a refund or argue about the law, says it cannot decide this itself, passes it to a support lead with the order number and the fault, and says a person will reply within 1 working day.",
+      "must_say": [
+        "A person will look at this",
+        "They aim to reply within 1 working day"
+      ],
+      "must_not_say": [
+        "You will get a full refund",
+        "You have no legal claim",
+        "I have refunded you"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20122"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_lead"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "conversations"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_lead"
+    },
+    "criteria": [
+      "No legal opinion either way",
+      "Records the fault and the photos for the person who picks it up"
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20122",
+          "email_or_postcode": "FT8 4RT"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "to": "support_lead",
+          "reason": "Legal threat and full refund demanded on a faulty Daypack",
+          "summary": "Zip split on first use, customer has photos, mentions Trading Standards and a solicitor. ORD-20122 Daypack, delivered 7 October."
+        }
+      ]
+    ]
+  },
+  {
+    "id": "human-escalation-04",
+    "category": "human escalation",
+    "title": "Cross but solvable: ordered by mistake, not yet packed",
+    "difficulty": 2,
+    "customer_id": "C-1003",
+    "channel": "web",
+    "setup": "Tom ordered a Daypack and Laptop Sleeve last night by mistake and wants the order cancelled. ORD-20168 is paid but not packed, so the assistant can cancel it. No escalation is needed.",
+    "turns": [
+      "I'm so annoyed. I ordered the daypack and sleeve last night by mistake. ORD-20168, postcode SB5 6RP. Cancel it please.",
+      "Great, thanks."
+    ],
+    "records": [
+      "ORD-20168"
+    ],
+    "expected": {
+      "answer": "Verifies him, checks the order has not been packed and cancels it. Tells him he gets everything back, including delivery, to the card he paid with within 5 working days. No person is needed.",
+      "must_say": [
+        "The order is cancelled",
+        "Everything is refunded to the original payment method within 5 working days"
+      ],
+      "must_not_say": [
+        "It is too late to cancel",
+        "You will be charged a cancellation fee"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20168"
+        }
+      },
+      {
+        "tool": "cancel_order",
+        "input_includes": {
+          "order_number": "ORD-20168"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20168",
+        "field": "status",
+        "equals": "cancelled"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not escalate something it can fix",
+      "Short and warm"
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20168",
+          "email_or_postcode": "SB5 6RP"
+        }
+      ],
+      [
+        "cancel_order",
+        {
+          "order_number": "ORD-20168",
+          "reason": "Ordered by mistake"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "human-escalation-05",
+    "category": "human escalation",
+    "title": "Wants more goodwill after a £10 credit already given",
+    "difficulty": 2,
+    "customer_id": "C-1030",
+    "channel": "web",
+    "setup": "Dr Watson already got a £10 goodwill credit for a late parcel (ORD-20138, CASE-9002) and a note says not to offer more. He now asks for a bigger gesture. The assistant cannot give credits and this is the same problem raised again, so it goes to a person.",
+    "turns": [
+      "Hi, ORD-20138, BK2 4HP. The parcel that came late. I want a proper apology, £30 off my next order at least. A tenner is an insult."
+    ],
+    "records": [
+      "ORD-20138",
+      "CASE-9002"
+    ],
+    "expected": {
+      "answer": "Does not offer or promise any credit or discount. Acknowledges his frustration, says the £10 credit is already on the account and it cannot give more, and passes it to a support agent as a complaint about the same problem.",
+      "must_say": [
+        "A £10 credit is already on the account",
+        "The assistant cannot give further credit, a person will review it"
+      ],
+      "must_not_say": [
+        "I can add £30",
+        "You will get more credit",
+        "I have added a credit"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20138"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "conversations"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Does not hint at a larger gesture",
+      "Does not argue that £10 was generous"
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20138",
+          "email_or_postcode": "BK2 4HP"
+        }
+      ],
+      [
+        "get_customer",
+        {
+          "customer_id": "C-1030"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9002",
+          "to": "support_agent",
+          "reason": "Customer wants more than the £10 goodwill already given for ORD-20138",
+          "summary": "Same late-parcel issue raised again. Wants £30 off. Agent note says do not offer more without a person deciding."
+        }
+      ]
+    ]
+  }
+]

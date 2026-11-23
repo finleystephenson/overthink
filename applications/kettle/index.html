@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kettle · Staff chat · Overthought &amp; Co.</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap">
+<link rel="stylesheet" href="../lib/premium.css">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="team.css">
+</head>
+<body class="ket-body">
+<!-- As in any team chat: channels and private conversations on the left, the conversation, a thread at the side. -->
+<main class="ket" id="main">
+  <nav class="side" id="side" aria-label="Channels and people">
+    <p class="rail-h">Team</p>
+    <ul class="rail-list" id="team-rail"></ul>
+    <p class="rail-h">Channels</p>
+    <ul class="rail-list" id="channels"></ul>
+    <p class="rail-h">Private conversations</p>
+    <ul class="rail-list" id="dms"></ul>
+    <p class="rail-h" id="shift-h">In today</p>
+    <ul class="rail-list shift" id="shift"></ul>
+  </nav>
+  <div class="ket-scrim" id="scrim" hidden></div>
+  <section class="convo" id="convo" aria-label="Conversation">
+    <header class="convo-head" id="convo-head"></header>
+    <div class="stream" id="stream" tabindex="-1"></div>
+    <form class="composer" id="composer" autocomplete="off"></form>
+  </section>
+  <section class="team-view" id="team-view" aria-label="Team" hidden></section>
+  <aside class="thread" id="thread" aria-label="Thread" hidden></aside>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

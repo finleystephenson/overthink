@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-GB" class="pm" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App icons</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lib/ui.css">
+<link rel="stylesheet" href="../lib/premium.css">
+<style>
+  /* A check sheet: every icon at three sizes, on paper and on night, with its plain name. */
+  body { margin: 0; }
+  .half { padding: 36px 40px 28px; }
+  .half.dark { --ot-icon-tile: #0E1830; --ot-icon-ink: #EAF0FA; --ot-icon-ring: rgba(234,240,250,.16); background: #070D1C; color: #EAF0FA; }
+  .row { display: grid; grid-template-columns: repeat(13, 1fr); gap: 10px; align-items: end; justify-items: center; margin-bottom: 22px; }
+  .name { font: 500 12px/1.3 var(--x-text); text-align: center; } .name small { display: block; color: #6C7893; font-weight: 400; }
+</style>
+</head>
+<body>
+<div class="half" id="light"></div><div class="half dark" id="dark"></div>
+<script type="module">
+  import { appIcon } from "../lib/icons.js";
+  const { apps } = await (await fetch("../apps.json")).json();
+  for (const id of ["light", "dark"]) {
+    document.getElementById(id).innerHTML = [112, 56, 28].map((s) => `<div class="row">${apps.map((a) => appIcon(a, { size: s })).join("")}</div>`).join("")
+      + `<div class="row">${apps.map((a) => `<span class="name">${String(a.name).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`)}<small>${String(a.plain || "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`)}</small></span>`).join("")}</div>`;
+  }
+</script>
+</body>
+</html>

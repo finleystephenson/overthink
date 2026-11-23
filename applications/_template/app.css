@@ -1,0 +1,10 @@
+/* Layout for the template app. Parts (cards, lists, avatars, empty states) come from ../lib/ui.css. */
+.tpl { max-width: 880px; }
+.tpl-head { display: grid; gap: 12px; margin-bottom: 28px; }
+.tpl .list > li { padding: 0; }
+.tpl-row { display: flex; align-items: center; gap: 14px; width: 100%; padding: 12px 10px; border: 0; border-radius: 16px; background: none; text-align: left; transition: background .15s, transform .2s var(--ease); }
+.tpl-row:hover { background: var(--hover); transform: translateX(3px); }
+.tpl-text { display: grid; min-width: 0; }
+.tpl-text b { font-weight: 680; }
+.tpl-text small { color: var(--ink-3); font-size: 13.5px; }
+.tpl-empty { display: block !important; }

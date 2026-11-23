@@ -1,0 +1,132 @@
+{
+  "id": "someone-to-queue",
+  "name": "Someone to Queue",
+  "tagline": "We stand in the queue. You turn up at the front.",
+  "summary": "We queue for you, booked by the half hour, so you can arrive when it's nearly your turn.",
+  "concept": "Some queues are long and the bit at the front is short. We do the long bit.",
+  "who_its_for": "Anyone with a launch, a counter or a ticket office to get to and better things to do.",
+  "how_it_works": [
+    "Choose how long you need: £9 per 30 minutes, minimum 1 hour, maximum 6 hours.",
+    "Book at least 24 hours ahead. Slots start on the hour, 08:00 to 18:00, Monday to Saturday.",
+    "Tell us where the queue is, what it's for and when you'll arrive.",
+    "We hold your place. You take over at the front."
+  ],
+  "page": {
+    "headline": "Someone to stand in line",
+    "intro": "We stand in the queue. You turn up at the front.",
+    "sections": [
+      {
+        "title": "Prices",
+        "body": "£9 per 30 minutes. Minimum 1 hour, maximum 6 hours."
+      },
+      {
+        "title": "When",
+        "body": "Slots start on the hour from 08:00 to 18:00, Monday to Saturday. Book 24 hours ahead."
+      },
+      {
+        "title": "What we cannot do",
+        "body": "We cannot do the bit where you are served. We will not queue for anything that needs ID in your name."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "How much does it cost?",
+      "a": "£9 per 30 minutes. The minimum is 1 hour (£18) and the maximum is 6 hours."
+    },
+    {
+      "q": "How much notice do you need?",
+      "a": "At least 24 hours."
+    },
+    {
+      "q": "What times can you start?",
+      "a": "On the hour, 08:00 to 18:00, Monday to Saturday."
+    },
+    {
+      "q": "Can you buy it for me?",
+      "a": "No. We hold the place; you are served. We cannot do that part."
+    },
+    {
+      "q": "What won't you queue for?",
+      "a": "Anything that needs ID in your name, such as collecting a parcel or a passport."
+    },
+    {
+      "q": "Can I cancel?",
+      "a": "Full refund up to 24 hours before. None after that."
+    },
+    {
+      "q": "Where do you queue?",
+      "a": "At your chosen place within 30 miles of us."
+    },
+    {
+      "q": "What if the queue moves faster than expected?",
+      "a": "You pay for the time booked. Tell us your arrival time and we'll aim to match it."
+    }
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#F6C9A8"
+  },
+  "photography_direction": "Colourful premium 3D studio render of a ticket-number dispenser with a paper ticket on a seamless warm coral backdrop. No faces, no hands. One small spiral \"O\" logo mark.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render of a glossy red queue ticket dispenser with a paper ticket sticking out, seamless warm coral backdrop, soft studio light, no faces. One small spiral 'O' logo mark.",
+    "detail": "Close-up 3D render of a single ticket with a bold number being torn from a dispenser, coral background, shallow depth of field, no faces. One small spiral 'O' logo mark.",
+    "in_use": "3D render of a row of floor-standing rope posts and one ticket dispenser in a bright pastel room, no people, no faces. One small spiral 'O' logo mark.",
+    "campaign": "Premium 3D render of three ticket dispensers in red, orange and cream at different heights on a coral backdrop, editorial still life, no faces. One small spiral 'O' logo mark."
+  },
+  "related": [
+    "someone-to-hold",
+    "someone-to-wait-in"
+  ],
+  "packages": [
+    {
+      "id": "QUEUE-1H",
+      "name": "One hour",
+      "price": 18,
+      "hours": 1,
+      "note": "The minimum."
+    },
+    {
+      "id": "QUEUE-2H",
+      "name": "Two hours",
+      "price": 36,
+      "hours": 2,
+      "note": ""
+    },
+    {
+      "id": "QUEUE-4H",
+      "name": "Four hours",
+      "price": 72,
+      "hours": 4,
+      "note": ""
+    },
+    {
+      "id": "QUEUE-6H",
+      "name": "Six hours",
+      "price": 108,
+      "hours": 6,
+      "note": "The maximum."
+    }
+  ],
+  "slots": [
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00"
+  ],
+  "days": "Monday to Saturday",
+  "will_not": [
+    "Queue for anything that needs ID in your name",
+    "Do the bit where you are served",
+    "Book outside 08:00-18:00, Monday to Saturday"
+  ],
+  "will_not_source": "business.json services.someone-to-queue.will_not"
+}

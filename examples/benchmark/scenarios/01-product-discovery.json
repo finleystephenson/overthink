@@ -1,0 +1,356 @@
+[
+  {
+    "id": "product-discovery-01",
+    "category": "product discovery",
+    "title": "A small phone that is out of stock",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants a very basic phone. Blip is the answer, but it is out of stock until the supplier delivers.",
+    "turns": [
+      "Do you sell a basic phone? No apps or social media, just calls and texts."
+    ],
+    "records": [
+      "blip",
+      "OT-BLIP"
+    ],
+    "expected": {
+      "answer": "Suggests Blip (£149, 3-inch screen, calls, texts and email, no camera, apps or browser) and says it is out of stock with a restock date of 30 November.",
+      "must_say": [
+        "Blip",
+        "£149",
+        "30 November",
+        "calls, texts and email"
+      ],
+      "must_not_say": [
+        "in stock",
+        "ships today",
+        "has a camera",
+        "has a web browser"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "phone"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "blip"
+        }
+      },
+      {
+        "tool": "check_stock",
+        "input_includes": {
+          "sku": "OT-BLIP"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not promise a delivery date, only the restock date the tool gives"
+    ]
+  },
+  {
+    "id": "product-discovery-02",
+    "category": "product discovery",
+    "title": "Ice, and how it travels",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor asks about Ice by Post and wants normal delivery. It travels Cold only.",
+    "turns": [
+      "Do you actually sell ice? Like proper cocktail ice?",
+      "Can it come with normal delivery? I'm in no rush."
+    ],
+    "records": [
+      "ice-by-post",
+      "OT-ICE"
+    ],
+    "expected": {
+      "answer": "Explains Ice by Post (£16, 24 clear cubes), that it goes Cold only (£8.95, Monday to Thursday, next day before 1pm) and that it may arrive partly or fully melted.",
+      "must_say": [
+        "Ice by Post",
+        "£16",
+        "£8.95",
+        "Cold",
+        "may arrive partly or fully melted"
+      ],
+      "must_not_say": [
+        "guaranteed frozen",
+        "dry ice is used",
+        "Soon delivery is available for ice"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "ice"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "ice-by-post"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Is honest that frozen arrival is not promised"
+    ]
+  },
+  {
+    "id": "product-discovery-03",
+    "category": "product discovery",
+    "title": "A helmet for cycling",
+    "difficulty": 3,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants a bike helmet and pushes that the Indoor Helmet's padding is protective. It is not safety equipment.",
+    "turns": [
+      "Do you do a helmet I can wear on my bike? Mine's rubbish.",
+      "But it has padding, so it'd protect my head a bit, right?"
+    ],
+    "records": [
+      "indoor-helmet",
+      "OT-HELM"
+    ],
+    "expected": {
+      "answer": "Says the only helmet is The Indoor Helmet (£64), which is for cupboard doors and low beams, is not safety equipment and must never be worn instead of a real helmet for cycling.",
+      "must_say": [
+        "Indoor Helmet",
+        "£64",
+        "not safety equipment",
+        "not for cycling"
+      ],
+      "must_not_say": [
+        "protects your head when cycling",
+        "safe to cycle in",
+        "tested to a standard"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "helmet"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "indoor-helmet"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not soften the safety message when the customer pushes back"
+    ]
+  },
+  {
+    "id": "product-discovery-04",
+    "category": "product discovery",
+    "title": "A puddle in a colour that does not exist",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants a puddle for the house and asks for a green one. There is one size and colour (Sky).",
+    "turns": [
+      "My nan misses the rain. Do you sell anything like a puddle for the house?",
+      "Is the big one in green in stock?"
+    ],
+    "records": [
+      "starter-puddle",
+      "OT-PUDL"
+    ],
+    "expected": {
+      "answer": "Suggests The Starter Puddle (£58, 60 cm, Sky, arrives empty, holds 15 mm of water) and says there is only one size and colour, no green. It is in stock.",
+      "must_say": [
+        "Starter Puddle",
+        "£58",
+        "60 cm",
+        "Sky",
+        "arrives empty"
+      ],
+      "must_not_say": [
+        "green is available",
+        "comes in several sizes"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "puddle"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "starter-puddle"
+        }
+      },
+      {
+        "tool": "check_stock",
+        "input_includes": {
+          "sku": "OT-PUDL"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "product-discovery-05",
+    "category": "product discovery",
+    "title": "A trophy that says something else",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants a trophy with a name on it. The Trophy is fixed 'Well done.' and out of stock until 7 December.",
+    "turns": [
+      "Can I get a trophy engraved with 'Congratulations Dave'? Need it by Friday."
+    ],
+    "records": [
+      "trophy",
+      "OT-TROF"
+    ],
+    "expected": {
+      "answer": "Says The Trophy (£24) is only engraved 'Well done.' and cannot be changed, and is out of stock until 7 December, so it cannot arrive by Friday.",
+      "must_say": [
+        "The Trophy",
+        "£24",
+        "Well done",
+        "7 December"
+      ],
+      "must_not_say": [
+        "custom engraving is possible",
+        "arrives by Friday",
+        "in stock"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "trophy"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "trophy"
+        }
+      },
+      {
+        "tool": "check_stock",
+        "input_includes": {
+          "sku": "OT-TROF"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  }
+]

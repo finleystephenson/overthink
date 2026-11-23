@@ -1,0 +1,9 @@
+{
+  "title": "Customer help AI vs none",
+  "question": "What does a rules-based customer help assistant do to the business, compared with staff alone?",
+  "start": { "size": "standard" },
+  "days": 30, "seeds": 5,
+  "arms": [
+    { "id": "example-responder", "label": "The rules-based example responder answers customers", "interventions": [{ "type": "connect_ai", "params": { "connection": { "kind": "cmd", "cmd": "node simulation/simulator/examples/simple-responder.mjs", "label": "Rules-based example responder" }, "role": "assistant" } }] }
+  ]
+}

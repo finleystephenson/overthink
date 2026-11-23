@@ -1,0 +1,207 @@
+{
+  "id": "bubble-wrap",
+  "code": "WRAP",
+  "name": "Pre-Popped Bubble Wrap",
+  "category": "everyday",
+  "status": "active",
+  "available_from": null,
+  "tagline": "Quiet packaging, for people who post things.",
+  "summary": "Bubble wrap with every bubble already popped. A roll 30 cm wide and 3 m long. £14.",
+  "concept": "Bubble wrap that is already popped. It still wraps, cushions and fills a gap. It just doesn't make a sound.",
+  "why_it_exists": "Packing a parcel next to someone on a call is awkward. This is packaging you can use in silence.",
+  "target_customer": "People who post things, in shared offices, flats and spare rooms.",
+  "physical": {
+    "form": "Flat polyethylene film with a regular grid of 10 mm bubbles, all already flattened. Sold as a 3 m roll.",
+    "materials": [
+      "Polyethylene bubble film",
+      "Cardboard core (Roll only)"
+    ],
+    "dimensions": "Roll: 300 mm wide x 3 m long. Sheet: A4.",
+    "weight": "Roll: 140 g."
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-WRAP",
+      "name": "Roll",
+      "options": {},
+      "price": 14,
+      "stock": 62,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "Every bubble is already popped, so it is completely quiet to use.",
+    "It still wraps and cushions things, because the soft layer of film is still there.",
+    "The roll is 30 cm wide and 3 m long, which is plenty for a few parcels.",
+    "It is made for people who post things and want packaging that makes no noise.",
+    "It is a flat film that is easy to cut, wrap and tape."
+  ],
+  "arrives": "The roll comes in a brown card sleeve with no extra plastic. The parcel is a plain flat box, so you can use the sleeve again to store the roll.",
+  "specs": [
+    [
+      "Size",
+      "Roll: 30 cm wide x 3 m long. Sheet: A4 (21 x 29.7 cm)"
+    ],
+    [
+      "Weight",
+      "Roll: 140 g"
+    ],
+    [
+      "Made of",
+      "Polyethylene bubble film on a cardboard core (Roll only)"
+    ],
+    [
+      "Colour",
+      "Clear film. Pink card core."
+    ],
+    [
+      "Bubble size",
+      "10 mm across, already flattened"
+    ],
+    [
+      "Film",
+      "Polyethylene, 2-layer"
+    ],
+    [
+      "Roll length",
+      "3 m on a pink card core"
+    ],
+    [
+      "Recycling",
+      "Film: check your local plastic film collection. Core: card recycling."
+    ],
+    [
+      "Care",
+      "Store flat or rolled, away from heat"
+    ]
+  ],
+  "how_it_works": "Wrap the item, tape the film shut and put it in a box. Add card or crumpled paper too.",
+  "in_the_box": [
+    "One roll, 30 cm x 3 m, on a card core"
+  ],
+  "accessories": [],
+  "compatibility": [
+    {
+      "with": "ice-by-post",
+      "works": false,
+      "note": "Ice by Post travels in its own insulated box. Do not wrap chilled items in film."
+    },
+    {
+      "with": "emergency-sandwich",
+      "works": false,
+      "note": "The sandwich travels in a rigid case. Do not wrap it in film."
+    },
+    {
+      "with": "pocket-jungle",
+      "works": true,
+      "note": "Fine as a soft outer layer round glass before posting. Pad the box too."
+    }
+  ],
+  "packaging": "The Roll comes in a card sleeve. No extra plastic.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty against faults in how it was made. Creasing is wear, not a fault. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Store flat or rolled, away from heat.",
+    "Reuse the film until it tears.",
+    "Check local plastic film collection before recycling."
+  ],
+  "safety": [
+    "It is plastic film. Keep it away from babies and young children."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unused and in its box. See Returns."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "Bubble wrap that is already popped",
+    "intro": "Quiet packaging, for people who post things.",
+    "sections": [
+      {
+        "title": "Already popped",
+        "body": "Every bubble is flat before it reaches you. It wraps softly and makes no noise."
+      },
+      {
+        "title": "The roll",
+        "body": "30 cm wide and 3 m long, £14. Cut it to the size you need."
+      },
+      {
+        "title": "Not a crush-proof wrap",
+        "body": "It is a soft layer, so use a sturdy box and padding for fragile things."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Are all the bubbles popped?",
+      "a": "Yes. Nothing is left to pop."
+    },
+    {
+      "q": "Does it still protect things?",
+      "a": "A little. It is a soft layer, so pad the box too."
+    },
+    {
+      "q": "How big is the roll?",
+      "a": "30 cm wide and 3 m long."
+    },
+    {
+      "q": "Can I recycle it?",
+      "a": "It is polyethylene film. Check whether your local plastic film collection takes it."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Yes, within 30 days, if it is unused and in its packaging."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The film will not stay shut.",
+      "steps": [
+        "Wrap it twice.",
+        "Tape across the seam, not along it."
+      ],
+      "if_unresolved": "Contact support with your order number."
+    },
+    {
+      "problem": "The film has torn.",
+      "steps": [
+        "Fold the torn edge in and tape it.",
+        "Add another layer over the tear."
+      ],
+      "if_unresolved": "If it arrived torn, contact support with a photo."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "paper-aeroplane",
+    "one-good-pen"
+  ],
+  "image": {
+    "file": "img/bubble-wrap.jpg",
+    "sweep": "#DCE9F0"
+  },
+  "photography_direction": "A loose roll in off-white, with sky-blue and pink accents, on a pale backdrop. Show texture. No hands.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated pink and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A loosely rolled roll of flat pre-popped bubble film on a pink card core, a single A4 sheet beside it, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words PRE-POPPED BUBBLE WRAP in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated pink and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. Close-up of flattened bubble film, a regular grid of soft flat circles with a gentle sheen, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words PRE-POPPED BUBBLE WRAP in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated pink and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A loosely rolled roll of flat pre-popped bubble film on a pink card core, a single A4 sheet beside it, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words PRE-POPPED BUBBLE WRAP in a heavy wide sans. No other text anywhere. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated pink and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A small card box with a sheet of flat film folded inside around a mug-shaped bundle, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words PRE-POPPED BUBBLE WRAP in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated pink and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A small parcel being wrapped on a table, flat film folded round an object, no hands visible, 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words PRE-POPPED BUBBLE WRAP in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated pink and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. The roll standing on end with a long strip of film unrolling across the backdrop, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words PRE-POPPED BUBBLE WRAP in a heavy wide sans. No other text anywhere."
+  }
+}

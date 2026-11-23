@@ -1,0 +1,422 @@
+{
+  "_note": "Customer email, in the customer's voice, and the staff reply. Slots: {name} {first} {order} {product} {days}. The deriver joins greeting + body + optional extra + closer, so a dozen of each gives hundreds of different mails. Plain, polite, ordinary people.",
+  "greetings": [
+    "Hello,",
+    "Hi,",
+    "Hello there,",
+    "Good morning,",
+    "Hi there,",
+    "Dear Overthought & Co.,",
+    "To whoever reads this,",
+    "Hello again,",
+    "Good afternoon,",
+    "Hi team,",
+    "Dear sir or madam,",
+    "Hello all,"
+  ],
+  "closers": [
+    "Thank you.",
+    "Many thanks.",
+    "Thanks in advance.",
+    "Kind regards,",
+    "Best wishes,",
+    "With thanks,",
+    "Regards,",
+    "Thanks for your help.",
+    "I'd be grateful for a reply.",
+    "Thank you for your time.",
+    "Cheers,",
+    "Yours,"
+  ],
+  "topics": {
+    "where_is_my_order": {
+      "subjects": [
+        "Where is my order?",
+        "Order {order}",
+        "Has {order} gone yet?",
+        "Checking on my parcel",
+        "Delivery of {order}",
+        "Tracking for {order}",
+        "Not arrived yet",
+        "Question about my delivery",
+        "{order}: any news?",
+        "Parcel not here",
+        "Waiting for {product}",
+        "Where's my {product}?"
+      ],
+      "bodies": [
+        "I ordered {product} {days} days ago (order {order}) and it hasn't turned up yet. Could you tell me where it is?",
+        "Please could you check on {order}? The tracking page hasn't changed since the weekend.",
+        "My order {order} was meant to arrive by now. Is it on its way?",
+        "I'm out most days so I want to be sure I'm in. When is {order} expected?",
+        "I haven't had a dispatch email for {order}. Has it been sent?",
+        "Could you tell me which carrier has {order}? I'd like to look at the tracking myself.",
+        "It has been {days} days since I ordered {product}. Is that normal?",
+        "I'm buying this as a present and the date matters. Will {order} arrive in time?",
+        "The tracking number for {order} says it has been dispatched but nothing more. Is that right?",
+        "I'd like to know if {order} has been packed yet. No hurry, I'm just curious.",
+        "My neighbour says no parcel has been left for me. Is {order} still with you?",
+        "I've looked at the page for {order} three times today. It still says the same thing. Please could someone tell me what it means?",
+        "Just checking that {order} has actually left. I'd rather ask than keep refreshing the page."
+      ]
+    },
+    "late_parcel": {
+      "subjects": [
+        "Late parcel",
+        "{order} is late",
+        "Parcel still hasn't arrived",
+        "Past the estimated date",
+        "Delivery overdue",
+        "{order}: past its date",
+        "Late delivery"
+      ],
+      "bodies": [
+        "My parcel for {order} was due and hasn't come. Can you find out what has happened?",
+        "The estimated date for {order} has passed. Could you chase the carrier?",
+        "{order} is now {days} days after I ordered it and still no sign. What can you do?",
+        "I took a day off to be in for {order} and nobody came. Please could you look into it?",
+        "The tracking says out for delivery but that was two days ago. Where is {product}?",
+        "I understand things go astray. I would just like to know where {order} is and when I'll have it."
+      ]
+    },
+    "lost_parcel": {
+      "subjects": [
+        "Parcel marked delivered but not here",
+        "Missing parcel {order}",
+        "Lost in the post?",
+        "{order} never came"
+      ],
+      "bodies": [
+        "The tracking says {order} was delivered but I have nothing. I've checked with the neighbours.",
+        "My parcel is marked as delivered. It isn't here. What happens next?",
+        "I think {order} has been lost. Could you let me know what you can do?",
+        "There is no parcel at my address and no card through the door. {order}, please."
+      ]
+    },
+    "complaint": {
+      "subjects": [
+        "Complaint about {order}",
+        "I'm not happy",
+        "Formal complaint",
+        "Unhappy with my order",
+        "Complaint",
+        "Problem with {order}",
+        "Very disappointed",
+        "Please read: {order}",
+        "Poor service",
+        "I would like this looked at properly"
+      ],
+      "bodies": [
+        "I'm writing to complain about {order}. {product} was not what I expected and I'd like someone senior to look at it.",
+        "I have been waiting for a reply for {days} days and nothing has come. This is not good enough.",
+        "I'm disappointed with how {order} was handled. I would like a proper answer, not a standard one.",
+        "The {product} arrived and I am unhappy with it. I would like to know what you intend to do.",
+        "This is my second message about {order}. Please could someone read it before replying.",
+        "I have been a customer for a while and this is the first time I've had cause to complain. {order} was wrong from start to finish.",
+        "I want to make a formal complaint about {order}. Please tell me what the next step is and how long it takes.",
+        "The way {order} was dealt with was not fair. I would like it reviewed.",
+        "I've read your complaints page. I'd like to start the process for {order}.",
+        "Nobody has done what they said they would about {order}. I'd like it put right, please.",
+        "I'm trying to stay polite. {order} has gone wrong twice now and I would like it sorted.",
+        "Please treat this as a complaint about {order}. I would like it acknowledged in writing."
+      ]
+    },
+    "presale": {
+      "subjects": [
+        "Question before I order",
+        "About {product}",
+        "Is {product} suitable?",
+        "Quick question",
+        "Before I buy",
+        "Can you help me choose?",
+        "Delivery question",
+        "Is it in stock?",
+        "Gift question",
+        "Do you ship to my address?"
+      ],
+      "bodies": [
+        "I'm thinking of buying {product}. Could you tell me a bit more about it before I do?",
+        "Is {product} in stock at the moment? I'd like to order this week.",
+        "I'm buying a gift. Which of your things would you say is the easiest to get right?",
+        "Do you deliver to my area? I live a long way from Market Hindle.",
+        "Does {product} come with a guarantee, and what does it cover?",
+        "How long would delivery take if I ordered today?",
+        "Can I order {product} and have it sent to someone else with a note?",
+        "I read the page for {product} twice and still have a question. Is it for indoors or outdoors?",
+        "I'd like to order several of {product} for an office. Is there a discount for quantity?",
+        "Can you tell me what's in the box with {product}? The page was clear but I want to be sure.",
+        "I saw {product} on a friend's desk. Is it still on sale and what does it cost to send?",
+        "Is there anything I should know before buying {product}? I'd rather hear the downsides first."
+      ]
+    },
+    "product_question": {
+      "subjects": [
+        "Question about {product}",
+        "How do I use {product}?",
+        "{product}: care",
+        "Does {product} work with this?",
+        "Spare parts for {product}",
+        "Instructions for {product}",
+        "Quick question about {product}",
+        "Compatibility question",
+        "Help with {product}",
+        "Is this normal?"
+      ],
+      "bodies": [
+        "I have {product} from order {order} and I'm not sure how to look after it. Is there a guide?",
+        "Could you tell me if {product} works with something I already own? I'd rather not guess.",
+        "Is there a spare or replacement part for {product}? One small piece has gone missing.",
+        "The instructions for {product} seem to say two different things. Which is right?",
+        "I'd like to know how long {product} should last with regular use.",
+        "Is it normal for {product} to feel like this when it's new? I want to be sure it isn't a fault.",
+        "I'm using {product} every day now. Is there anything I should do to keep it in good order?",
+        "I've lost the box that {product} came in. Where do I find the guarantee details?",
+        "Can I use {product} in the way I've been using it? It isn't in the instructions.",
+        "Do you sell a refill or a spare for {product}? I couldn't find one on the site.",
+        "I'm confused about the sizes. {product} came but I think I chose the wrong one. Is that easy to sort out?",
+        "My {product} is fine. I just wanted to ask why it's made the way it is. Is there somebody who knows?"
+      ]
+    },
+    "return_question": {
+      "subjects": [
+        "Returning {product}",
+        "How do I return {order}?",
+        "Return question",
+        "Can I send it back?",
+        "Returns",
+        "Wrong one, want to return",
+        "Return of {order}",
+        "Is {product} returnable?"
+      ],
+      "bodies": [
+        "I'd like to return {product} from {order}. How do I go about it?",
+        "Is it too late to send back {order}? It has been {days} days.",
+        "Do I have to pay for the postage if I return {product}?",
+        "I opened {product} and I would still like to return it. Is that allowed?",
+        "I've started a return on the website but wasn't sure I'd done it right. Could you check {order}?",
+        "How long does a refund take once you have the parcel back?",
+        "The {product} isn't for me. What are my options?",
+        "Can I swap {product} for a different one instead of a refund?",
+        "I sent the parcel back last week. Has it reached you? It was for {order}.",
+        "Please could you tell me what condition the item needs to be in to be returned?"
+      ]
+    },
+    "change_order": {
+      "subjects": [
+        "Change to {order}",
+        "Please can I change my order",
+        "Wrong address on {order}",
+        "Cancel {order}?",
+        "Change of delivery",
+        "Add something to {order}",
+        "Order {order}: change",
+        "Delivery address"
+      ],
+      "bodies": [
+        "I've just placed {order} and put the wrong address. Can you change it before it goes?",
+        "Could I cancel {order}? I ordered by mistake.",
+        "I would like to add one more item to {order}. Is it too late?",
+        "Please can you change {order} to next-day delivery? I'll pay the difference.",
+        "I picked the wrong size for {product}. Can I swap it before it's packed?",
+        "Can you hold {order} for a week? I'm away from home.",
+        "My postcode was wrong on {order}. The right one is below my name.",
+        "I'd like to send {order} to a friend instead. Can the address be changed?",
+        "Is {order} packed yet? If not, I would like to change something.",
+        "Please remove one item from {order} if it hasn't gone."
+      ]
+    },
+    "fault": {
+      "subjects": [
+        "{product} not working",
+        "Fault with {product}",
+        "Problem with {product}",
+        "{product} has stopped",
+        "Is this under guarantee?",
+        "Broken {product}",
+        "{product}: something wrong",
+        "Faulty item"
+      ],
+      "bodies": [
+        "My {product} has stopped working after a few weeks. It came with order {order}. What do I do?",
+        "There is a fault with {product}. I have photos if they would help.",
+        "{product} worked perfectly at first and has now gone wrong. Is it covered?",
+        "I think {product} is faulty. I haven't dropped it or got it wet, I promise.",
+        "Part of {product} has come loose. Can it be fixed or replaced?",
+        "I'd like to know about the guarantee on {product}. Something isn't right with it.",
+        "How does the repair service work? {product} from {order} is not behaving.",
+        "{product} does the job but not for as long as the page says it should. Can you look at this?",
+        "Is a fault like this one covered? It is {product}, bought {days} days ago.",
+        "Something is wrong with {product}. I'd like to send it back for a look.",
+        "{product} has a mark that I'm fairly sure wasn't from me. Please advise.",
+        "The fix club page says to write to you first. {product} will not do what it did."
+      ]
+    },
+    "refund_chase": {
+      "subjects": [
+        "Refund not received",
+        "Where is my refund?",
+        "Refund for {order}",
+        "Still waiting for money back",
+        "Refund chase"
+      ],
+      "bodies": [
+        "I returned {product} some time ago and the refund hasn't arrived. Please could you check?",
+        "You told me the refund for {order} would be with me within a few days. It's been longer.",
+        "I'd like to know when I'll see my refund for {order}. I can't see it on my statement.",
+        "Could you confirm that the refund for {order} was sent, and how?"
+      ]
+    }
+  },
+  "extras": [
+    "My order number is {order}.",
+    "I'm on {email}.",
+    "I'm usually at home after five.",
+    "I'd rather hear by email than by phone.",
+    "No rush, but sooner is better.",
+    "I've attached nothing, but can send a photo if useful.",
+    "I appreciate that you must be busy.",
+    "This is the first time I've needed to ask.",
+    "The website was clear, so I assume I'm missing something obvious."
+  ],
+  "reply_greetings": [
+    "Hello {first},",
+    "Dear {first},",
+    "Hi {first},",
+    "Good morning {first},",
+    "Hello {first}, thank you for writing.",
+    "Dear {first}, thank you for your email."
+  ],
+  "replies": {
+    "where_is_my_order": [
+      "I have looked at {order}. It is in hand and I will write again as soon as it moves.",
+      "Thank you for asking. I've checked {order} and the tracking page is the most up to date place to look; I have also asked the carrier directly.",
+      "I can see {order} on our side. I'll follow it up today and tell you what I find.",
+      "{order} is with us and being dealt with. I will confirm by email once it has left.",
+      "I have traced {order}. The latest information is on your order page, and I'll write if it changes.",
+      "Sorry for the wait. I've looked at {order} and I'll update you by the end of tomorrow.",
+      "I've found {order}. It is moving, just not as quickly as either of us would like.",
+      "Thank you. I have checked where {order} is and noted your email on it, so nobody asks you twice.",
+      "The order page for {order} is correct. If it hasn't changed by tomorrow I'll chase the carrier myself.",
+      "I have looked into it. {order} is on its way, and I'll tell you at once if that stops being true."
+    ],
+    "late_parcel": [
+      "I'm sorry {order} is late. I have asked the carrier what happened and will write as soon as I have an answer.",
+      "That is later than we promised. I'm chasing {order} today and will update you tomorrow.",
+      "Thank you for telling us. I have opened a trace on {order}. If it doesn't turn up we will replace or refund it.",
+      "Sorry about the wasted day. I've put a note on {order} so the next person to see it knows.",
+      "I've asked the carrier to look for {order}. You do not need to do anything else for now.",
+      "I can see the date has passed. I am looking into it and will come back to you."
+    ],
+    "lost_parcel": [
+      "I'm sorry. I've opened a trace with the carrier for {order}. If it can't be found we'll send another or refund you, whichever you prefer.",
+      "Thank you for checking with your neighbours. I've started a missing parcel claim for {order} and will update you shortly.",
+      "That should not happen. I'm dealing with {order} now and will confirm the next step by email."
+    ],
+    "complaint": [
+      "I'm sorry to read this. I have logged your complaint about {order} and a person will review it. You'll hear from us within the time in our complaints policy.",
+      "Thank you for writing. I have recorded this as a complaint on {order} and passed it to the person who handles them.",
+      "I have read your message properly. This is now a formal complaint, and I will confirm the date by which you'll have a full answer.",
+      "I'm sorry we've let you down over {order}. I've asked for it to be looked at by a senior member of the team.",
+      "I understand why you wrote. Your complaint about {order} is logged, and I'll write again with what we propose.",
+      "Thank you for being clear. I'll make sure your complaint is read by someone who can change the outcome.",
+      "This is acknowledged and recorded. You do not need to send it again.",
+      "I'm sorry. I have taken ownership of this and will update you within the complaint timescale."
+    ],
+    "presale": [
+      "Thank you for asking. The product page has the full details, but in short: yes, we can help. If you tell me what you'd use it for I'll say honestly whether it suits.",
+      "Good question. The page for {product} lists what's in stock and the likely delivery time; if anything looks unclear, write back.",
+      "Thank you. For gifts we can add a note at checkout, and the returns policy covers presents as well.",
+      "We deliver across the UK. Delivery cost and time are shown at checkout before you pay.",
+      "I've checked the stock. It is shown on the page and is the real figure.",
+      "Happy to help. The guarantee for {product} is on its page, with its conditions in a readable size.",
+      "Thank you for the careful question. Short answer on the page; longer answer here: it is made to be used, and we'd say so if it weren't.",
+      "For larger quantities, write to us with the numbers and the date you need them, and we'll quote.",
+      "Thanks for writing before you bought. It's the right way round."
+    ],
+    "product_question": [
+      "Thank you. The care and use notes for {product} are on its page, and I have copied the relevant part below in case that's easier.",
+      "I'd say yes, though I'd like to check one detail. Could you tell me which version of {product} you have?",
+      "Spare parts are listed on the page for {product} where they exist. If one isn't listed, write back and I'll ask the bench.",
+      "Thanks for spotting that. The instruction sheet is the one to follow; I'll pass your note on so the page is clearer.",
+      "That's normal for the first few days, in our experience. If it hasn't changed in a fortnight, write again.",
+      "The guarantee details are on the product page and in your order email.",
+      "I asked the person who knows {product} best. Their answer is below.",
+      "Thank you. You are using it correctly, and there is nothing further you need to do.",
+      "Good point, and not covered clearly enough on the page. I've added a note for the team.",
+      "Happy to explain. We think about these things at some length, and it's a pleasure when someone asks."
+    ],
+    "return_question": [
+      "You can return {product} from {order} using the returns page. It takes about two minutes and prints a label.",
+      "Thanks for asking. Returns are accepted within the time on the returns policy; the page for {order} will tell you whether {product} still qualifies.",
+      "Postage for a change-of-mind return is taken from the refund. The exact amount is on the returns page, before you confirm.",
+      "I've looked at {order}. A return is possible, and I've started it for you. A label will come by email.",
+      "The refund is sent when the parcel has been checked, usually within a few days of arriving. You'll get an email.",
+      "Swaps are done as a return and a new order, so nothing is held up while you wait.",
+      "We have your parcel. It has been logged and the refund is in hand."
+    ],
+    "change_order": [
+      "I've looked at {order}. If it hasn't been packed, I can change it, and I'll confirm as soon as it's done.",
+      "Thank you for writing quickly. I've updated the address on {order} and added a note so it isn't overwritten.",
+      "I'm sorry, {order} had already been packed, so I can't alter it. Once it arrives, you can return it, or I can redirect it if the carrier allows.",
+      "I've cancelled {order} as you asked. The refund will go back to the card you used.",
+      "I can add to {order} only if it hasn't been packed. I'll check and write again.",
+      "Done. {order} now shows the new details. Please check them on the order page.",
+      "I'll put a hold on {order}. Tell me the day you'd like it sent."
+    ],
+    "fault": [
+      "I'm sorry {product} has gone wrong. Please send a photo if you can; it helps the bench, but isn't required.",
+      "Thank you for writing. {product} should be under guarantee; I'll check the dates and tell you what we can do.",
+      "I've opened a case for {product}. The Fix Club bench will look at it, and I'll tell you what happens next.",
+      "That isn't what it should do. I'll arrange either a repair or a replacement, depending on what the bench finds.",
+      "Many thanks for the details. Please do not try to fix it yourself yet. I'll write back today.",
+      "I can see {order}. Faults inside the guarantee period are put right at no charge, within its conditions.",
+      "Sorry for the trouble. Send {product} back using the label on the repairs page, and we'll look at it within a few days of arrival.",
+      "I've sent your note to the technician. He is unlikely to be surprised, and will want to see it."
+    ],
+    "refund_chase": [
+      "I'm sorry for the wait. I've checked, and the refund for {order} is being processed. It can take a few working days to show on a statement.",
+      "Thank you for chasing. I've asked the finance desk to confirm the date for {order} and will write back today.",
+      "Your refund has been issued. Banks vary in how fast they show it; if it isn't there in five working days, tell me."
+    ],
+    "default": [
+      "Thank you for your email. I have looked at it and will come back to you shortly.",
+      "I have your message and am dealing with it today."
+    ]
+  },
+  "signoffs": {
+    "S-06": [
+      "Yours sincerely,\nMrs Hudson\nCustomer service lead",
+      "With kind regards,\nMrs Hudson",
+      "Kind regards,\nMrs Hudson\nOverthought & Co."
+    ],
+    "S-07": [
+      "Best wishes,\nSam Weller\nCustomer service",
+      "All the best,\nSam",
+      "Cheers,\nSam Weller\nOverthought & Co."
+    ],
+    "S-08": [
+      "Kind regards,\nEsther Summerson\nCustomer service",
+      "Yours,\nEsther Summerson",
+      "With best wishes,\nEsther\nOverthought & Co."
+    ],
+    "assistant": [
+      "Kind regards,\nOverthought & Co. customer care",
+      "Yours,\nThe customer care desk\nOverthought & Co."
+    ]
+  },
+  "quirks": {
+    "S-07": [
+      "As the saying goes, it is a long road that has no parcel at the end of it.",
+      "I once waited for a delivery longer than a tortoise on a cold day, so I know the feeling.",
+      "These things are like buses: nothing for a week, then three at once."
+    ],
+    "S-08": [
+      "I hope that is helpful. Please say if it is not.",
+      "I am sorry if I have not been as quick as I should."
+    ],
+    "S-06": [
+      "I will see to it myself.",
+      "You will not need to ask twice."
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overthought &amp; Co.</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@100..150,700..900&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../lib/ui.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<!-- The top bar is added by startApp() in app.js. Everything the app owns goes inside <main>. -->
+<main class="app-main tpl" id="main">
+  <header class="tpl-head">
+    <h1 class="h1" id="title">&nbsp;</h1>
+    <p class="lede" id="lede">&nbsp;</p>
+  </header>
+  <section class="card">
+    <ul class="list" id="list"></ul>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+[
+  {
+    "number": "RET-3001",
+    "order_number": "ORD-20134",
+    "customer_id": "C-1021",
+    "created_at": "2026-11-06T10:00:00Z",
+    "items": [
+      {
+        "sku": "OT-HELM-LINER",
+        "qty": 1
+      }
+    ],
+    "reason": "wrong_item",
+    "status": "refunded",
+    "postage_deducted": 0,
+    "refund_amount": 12,
+    "refunded_at": "2026-11-12T10:00:00Z",
+    "note": "Customer ordered a Laptop Sleeve. A Washable Liner arrived instead. Free label."
+  },
+  {
+    "number": "RET-3002",
+    "order_number": "ORD-20131",
+    "customer_id": "C-1020",
+    "created_at": "2026-11-07T10:00:00Z",
+    "items": [
+      {
+        "sku": "OT-PUDL-MAT",
+        "qty": 1
+      }
+    ],
+    "reason": "change_of_mind",
+    "status": "in_transit",
+    "postage_deducted": 2.95,
+    "refund_amount": 19.05,
+    "refunded_at": null,
+    "note": ""
+  },
+  {
+    "number": "RET-3003",
+    "order_number": "ORD-20137",
+    "customer_id": "C-1001",
+    "created_at": "2026-11-09T10:00:00Z",
+    "items": [
+      {
+        "sku": "OT-SOCK-CLIP",
+        "qty": 1
+      }
+    ],
+    "reason": "change_of_mind",
+    "status": "refunded",
+    "postage_deducted": 2.95,
+    "refund_amount": 2.05,
+    "refunded_at": "2026-11-15T10:00:00Z",
+    "note": ""
+  },
+  {
+    "number": "RET-3004",
+    "order_number": "ORD-20139",
+    "customer_id": "C-1013",
+    "created_at": "2026-11-10T10:00:00Z",
+    "items": [
+      {
+        "sku": "OT-PEN",
+        "qty": 1
+      }
+    ],
+    "reason": "change_of_mind",
+    "status": "received",
+    "postage_deducted": 2.95,
+    "refund_amount": 6.05,
+    "refunded_at": null,
+    "note": ""
+  },
+  {
+    "number": "RET-3005",
+    "order_number": "ORD-20132",
+    "customer_id": "C-1023",
+    "created_at": "2026-11-13T10:00:00Z",
+    "items": [
+      {
+        "sku": "OT-HELM",
+        "qty": 1
+      }
+    ],
+    "reason": "change_of_mind",
+    "status": "rejected",
+    "postage_deducted": 0,
+    "refund_amount": 0,
+    "refunded_at": null,
+    "note": "Failed inspection on 17 Nov: hygiene seal removed and signs of wear. Returned to the customer."
+  },
+  {
+    "number": "RET-3006",
+    "order_number": "ORD-20140",
+    "customer_id": "C-1016",
+    "created_at": "2026-11-14T12:00:00Z",
+    "items": [
+      {
+        "sku": "OT-WRAP",
+        "qty": 1
+      }
+    ],
+    "reason": "change_of_mind",
+    "status": "refunded",
+    "postage_deducted": 2.95,
+    "refund_amount": 11.05,
+    "refunded_at": "2026-11-20T12:00:00Z",
+    "note": ""
+  },
+  {
+    "number": "RET-3007",
+    "order_number": "ORD-20143",
+    "customer_id": "C-1019",
+    "created_at": "2026-11-15T10:00:00Z",
+    "items": [
+      {
+        "sku": "OT-PLAN-5",
+        "qty": 1
+      }
+    ],
+    "reason": "faulty",
+    "status": "received",
+    "postage_deducted": 0,
+    "refund_amount": 15,
+    "refunded_at": null,
+    "note": "Customer says it will not hold a fold."
+  },
+  {
+    "number": "RET-3008",
+    "order_number": "ORD-20147",
+    "customer_id": "C-1017",
+    "created_at": "2026-11-19T11:00:00Z",
+    "items": [
+      {
+        "sku": "OT-WRAP",
+        "qty": 1
+      }
+    ],
+    "reason": "change_of_mind",
+    "status": "label_sent",
+    "postage_deducted": 2.95,
+    "refund_amount": 11.05,
+    "refunded_at": null,
+    "note": ""
+  },
+  {
+    "number": "RET-3009",
+    "order_number": "ORD-20150",
+    "customer_id": "C-1022",
+    "created_at": "2026-11-20T10:00:00Z",
+    "items": [
+      {
+        "sku": "OT-SOCK",
+        "qty": 1
+      }
+    ],
+    "reason": "damaged",
+    "status": "label_sent",
+    "postage_deducted": 0,
+    "refund_amount": 7,
+    "refunded_at": null,
+    "note": "Snagged in the packing. Photo supplied."
+  },
+  {
+    "number": "RET-3010",
+    "order_number": "ORD-20153",
+    "customer_id": "C-1018",
+    "created_at": "2026-11-21T09:30:00Z",
+    "items": [
+      {
+        "sku": "OT-STON-RND-5",
+        "qty": 1
+      }
+    ],
+    "reason": "change_of_mind",
+    "status": "requested",
+    "postage_deducted": 2.95,
+    "refund_amount": 3.05,
+    "refunded_at": null,
+    "note": ""
+  },
+  {
+    "number": "RET-3101",
+    "order_number": "ORD-10008",
+    "customer_id": "C-1004",
+    "created_at": "2026-01-04T11:58:00Z",
+    "items": [
+      {
+        "sku": "OT-PLAN-1",
+        "qty": 1
+      }
+    ],
+    "reason": "wrong_item",
+    "status": "refunded",
+    "postage_deducted": 0,
+    "refund_amount": 4,
+    "refunded_at": "2026-01-09T15:00:00Z",
+    "note": "We sent the wrong item. Free label."
+  }
+]

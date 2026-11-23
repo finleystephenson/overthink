@@ -1,0 +1,11 @@
+{
+  "title": "Three delivery offers against today's",
+  "question": "Which delivery offer is best: free over £30, always free, or £5.95 with free over £75? (Today: £3.95, free over £50.)",
+  "start": { "size": "standard" },
+  "days": 30, "seeds": 5,
+  "arms": [
+    { "id": "free-over-30", "label": "Free standard delivery over £30", "interventions": [{ "type": "delivery_charges", "params": { "price": 3.95, "free_over": 30 } }] },
+    { "id": "always-free", "label": "Standard delivery always free", "interventions": [{ "type": "delivery_charges", "params": { "price": 0, "free_over": null } }] },
+    { "id": "dearer-higher-threshold", "label": "£5.95, free over £75", "interventions": [{ "type": "delivery_charges", "params": { "price": 5.95, "free_over": 75 } }] }
+  ]
+}

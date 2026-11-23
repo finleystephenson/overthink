@@ -1,0 +1,238 @@
+{
+  "_note": "The other organisations in Overthought & Co.'s world. Every name is invented for this project: none is, or imitates, a real company or public body. Competitor fields marked internal (strategy, rules, weights, ad budget) are seen only through the world lens; business roles see the public face. Numbers are assumptions chosen to give modest, believable effects; see docs/world.md.",
+  "market": {
+    "_note": "The attraction (share) model. Each seller in a category has an attraction: weight x exp(-price_beta x (price_factor - 1)) x ad_factor ^ ad_gamma. Overthought's demand multiplier is its share now over its share when every rival is at its normal price and advertising. outside_weight is the people who buy nothing of the kind at all.",
+    "price_beta": 2.5,
+    "ad_gamma": 0.3,
+    "overthought_weight": 1,
+    "outside_weight": 1.5,
+    "cut_watch_days": 14,
+    "cut_threshold": 0.03,
+    "seasons": {
+      "january": ["01-02", "01-20"],
+      "spring": ["03-20", "04-30"],
+      "summer": ["07-01", "08-15"],
+      "back-to-school": ["08-20", "09-10"],
+      "black-friday": ["11-20", "11-30"],
+      "christmas": ["12-01", "12-18"]
+    },
+    "season_names": {
+      "january": "January sale",
+      "spring": "spring sale",
+      "summer": "summer sale",
+      "back-to-school": "back-to-school sale",
+      "black-friday": "Black Friday sale",
+      "christmas": "Christmas sale"
+    }
+  },
+  "competitors": [
+    {
+      "id": "thriftwhistle",
+      "name": "Thriftwhistle",
+      "kind": "competitor",
+      "about": "A no-frills online shop that sells the same sort of everyday things for a little less, and says so on every page.",
+      "categories": ["everyday", "desk-home"],
+      "price_position": 0.85,
+      "ad_budget_per_month": 3000,
+      "strategy": "undercutter",
+      "strategy_in_words": "Watches Overthought's prices every week. When Overthought cuts, Thriftwhistle usually follows within a week or two so it stays the cheaper one. Runs a Black Friday sale and a January sale.",
+      "weights": { "everyday": 0.55, "desk-home": 0.35 },
+      "rules": {
+        "follow_cuts": { "chance": 0.75, "delay_days": [5, 12], "follow_share": 1.0, "length_days": 60 },
+        "sales": [
+          { "season": "black-friday", "chance": 0.9, "price_factor": 0.85, "length_days": 8 },
+          { "season": "january", "chance": 0.7, "price_factor": 0.88, "length_days": 14 }
+        ],
+        "ad_push": { "chance_per_week": 0.03, "ad_factor": 1.5, "length_days": 14 }
+      }
+    },
+    {
+      "id": "gilded-pebble",
+      "name": "The Gilded Pebble",
+      "kind": "competitor",
+      "about": "A handsome shop for outdoor and home things in heavy paper boxes. Expensive, and proud of it.",
+      "categories": ["outdoors", "desk-home"],
+      "price_position": 1.35,
+      "ad_budget_per_month": 2500,
+      "strategy": "premium",
+      "strategy_in_words": "Never discounts. Raises its own prices a little most springs and spends on advertising before Christmas instead.",
+      "weights": { "outdoors": 0.45, "desk-home": 0.3 },
+      "rules": {
+        "price_rises": { "season": "spring", "chance": 0.5, "price_factor": 1.04, "length_days": 365 },
+        "ad_push": { "chance_per_week": 0.02, "ad_factor": 1.6, "length_days": 21, "q4_multiplier": 4 }
+      }
+    },
+    {
+      "id": "lookalike-lane",
+      "name": "Lookalike Lane",
+      "kind": "competitor",
+      "about": "Sells things that look remarkably like other shops' best sellers, a few weeks later and a few pounds cheaper.",
+      "categories": ["everyday", "tech"],
+      "price_position": 0.8,
+      "ad_budget_per_month": 1500,
+      "strategy": "copycat",
+      "strategy_in_words": "Copies what sells. When Overthought launches something, Lookalike Lane often brings out a cheaper version in the same category within a month. Otherwise it launches a copy now and then.",
+      "weights": { "everyday": 0.3, "tech": 0.35 },
+      "rules": {
+        "launch": { "chance_per_year": 0.8, "after_overthought_launch": 0.35, "price_factor": 0.8, "weight_add": 0.15, "length_days": 180 },
+        "ad_push": { "chance_per_week": 0.02, "ad_factor": 1.4, "length_days": 14 }
+      }
+    },
+    {
+      "id": "bargain-barrow",
+      "name": "Bargain Barrow",
+      "kind": "competitor",
+      "about": "A market-stall shop that went online. Big seasonal sales, loud banners, bags of biscuits by the dozen.",
+      "categories": ["everyday", "food", "carry"],
+      "price_position": 0.9,
+      "ad_budget_per_month": 4000,
+      "strategy": "seasonal discounter",
+      "strategy_in_words": "Lives by its sales calendar: January, summer, Black Friday and Christmas, each with deep cuts and a burst of advertising. Quiet in between.",
+      "weights": { "everyday": 0.35, "food": 0.3, "carry": 0.3 },
+      "rules": {
+        "sales": [
+          { "season": "january", "chance": 0.95, "price_factor": 0.75, "length_days": 18, "ad_factor": 1.5 },
+          { "season": "summer", "chance": 0.85, "price_factor": 0.8, "length_days": 21, "ad_factor": 1.3 },
+          { "season": "black-friday", "chance": 0.95, "price_factor": 0.75, "length_days": 10, "ad_factor": 1.8 },
+          { "season": "christmas", "chance": 0.6, "price_factor": 0.85, "length_days": 14, "ad_factor": 1.4 }
+        ]
+      }
+    },
+    {
+      "id": "hamper-and-hare",
+      "name": "Hamper & Hare",
+      "kind": "competitor",
+      "about": "A food-by-post shop: cakes in tins, cheese in wax, everything wrapped in straw.",
+      "categories": ["food"],
+      "price_position": 1.1,
+      "ad_budget_per_month": 2000,
+      "strategy": "seasonal premium",
+      "strategy_in_words": "Spends most of its year's advertising in the run-up to Christmas. A small Christmas offer, never a sale.",
+      "weights": { "food": 0.6 },
+      "rules": {
+        "sales": [{ "season": "christmas", "chance": 0.8, "price_factor": 0.95, "length_days": 14, "ad_factor": 2.0 }],
+        "ad_push": { "chance_per_week": 0.015, "ad_factor": 1.5, "length_days": 14, "q4_multiplier": 3 }
+      }
+    },
+    {
+      "id": "gadgetry-goose",
+      "name": "Gadgetry Goose",
+      "kind": "competitor",
+      "about": "Small gadgets that beep, blink or play music, sent out in a box with a goose on it.",
+      "categories": ["tech"],
+      "price_position": 0.95,
+      "ad_budget_per_month": 3500,
+      "strategy": "advertiser",
+      "strategy_in_words": "Wins on noise rather than price: frequent advertising pushes, a Black Friday sale, and it follows big tech price cuts only some of the time.",
+      "weights": { "tech": 0.7 },
+      "rules": {
+        "follow_cuts": { "chance": 0.35, "delay_days": [7, 21], "follow_share": 0.6, "length_days": 45 },
+        "sales": [{ "season": "black-friday", "chance": 0.85, "price_factor": 0.85, "length_days": 8, "ad_factor": 1.5 }],
+        "ad_push": { "chance_per_week": 0.06, "ad_factor": 1.6, "length_days": 10 }
+      }
+    },
+    {
+      "id": "wandering-satchel",
+      "name": "The Wandering Satchel Co.",
+      "kind": "competitor",
+      "about": "Bags, umbrellas and things for being outdoors, made to look as if they have already been on an adventure.",
+      "categories": ["carry", "outdoors"],
+      "price_position": 1.05,
+      "ad_budget_per_month": 2000,
+      "strategy": "seasonal",
+      "strategy_in_words": "Busy in spring and summer: a spring sale and advertising pushes when the weather turns. Quiet in winter.",
+      "weights": { "carry": 0.5, "outdoors": 0.4 },
+      "rules": {
+        "sales": [{ "season": "spring", "chance": 0.7, "price_factor": 0.88, "length_days": 14, "ad_factor": 1.3 }],
+        "ad_push": { "chance_per_week": 0.03, "ad_factor": 1.5, "length_days": 14, "season": "summer", "season_multiplier": 3 }
+      }
+    },
+    {
+      "id": "sensible-drawer",
+      "name": "The Sensible Drawer",
+      "kind": "competitor",
+      "about": "Pens, plant pots and desk things for people who like a tidy drawer. Calm, steady, a little dull.",
+      "categories": ["desk-home"],
+      "price_position": 1.0,
+      "ad_budget_per_month": 1000,
+      "strategy": "follower",
+      "strategy_in_words": "Rarely moves first. Follows a clear price cut in its category slowly, and pushes advertising when desk and home things are in fashion.",
+      "weights": { "desk-home": 0.4 },
+      "rules": {
+        "follow_cuts": { "chance": 0.4, "delay_days": [14, 28], "follow_share": 0.5, "length_days": 90 },
+        "trend_push": { "interest_above": 115, "chance": 0.5, "ad_factor": 1.4, "length_days": 14 },
+        "sales": [{ "season": "back-to-school", "chance": 0.5, "price_factor": 0.9, "length_days": 14 }]
+      }
+    }
+  ],
+  "partners": [
+    { "id": "swiftway-parcels", "name": "Swiftway Parcels", "kind": "carrier", "about": "Carries the shop's ordinary parcels. Collects at 09:00 every working day." },
+    { "id": "coldline-couriers", "name": "Coldline Couriers", "kind": "carrier", "about": "Carries chilled parcels (ice, sandwiches) in cold boxes, overnight." },
+    { "id": "pennywise-pay", "name": "Pennywise Pay", "kind": "payment provider", "about": "Takes card payments at checkout and sends refunds back to cards. Charges a small fee on each payment." },
+    { "id": "great-bazaar", "name": "The Great Bazaar", "kind": "marketplace", "about": "An enormous online marketplace where thousands of small sellers list their goods. Takes a fee on every sale. Some shoppers never look anywhere else." },
+    { "id": "shoutabout", "name": "Shoutabout", "kind": "ad network", "about": "Places small shops' adverts on websites and in social feeds, and charges by the click." }
+  ],
+  "institutions": [
+    { "id": "fair-shopping-board", "name": "The Fair Shopping Board", "kind": "consumer regulator", "about": "Looks into complaints about shops that mislead people or treat them unfairly. Publishes guidance and, now and then, a warning." },
+    { "id": "thrift-and-penny", "name": "Thrift & Penny Bank", "kind": "bank", "about": "The high-street bank that holds the shop's account and its overdraft." },
+    { "id": "counting-house", "name": "The Counting House", "kind": "central bank", "about": "The country's central bank in this world. Sets Bank Rate eight times a year to keep price rises near 2%." },
+    { "id": "office-for-plain-figures", "name": "The Office for Plain Figures", "kind": "statistics office", "about": "Publishes the monthly figures: prices, jobs and pay." },
+    { "id": "guild-of-small-shopkeepers", "name": "The Guild of Small Shopkeepers", "kind": "trade body", "about": "A members' club for small independent shops. Runs a confidence survey and lobbies about postage and business rates." },
+    { "id": "brookford-council", "name": "Brookford Town Council", "kind": "local council", "about": "The council for the town where the warehouse sits. Collects business rates, mends roads, and puts cones round things." },
+    { "id": "daily-overthinker", "name": "The Daily Overthinker", "kind": "newspaper", "about": "The newspaper of this world. Reports weather, money, trade, trends and local life." }
+  ],
+  "developments": {
+    "_note": "Changes in the wider world beyond the economy: rules, technology, the labour market, the council. Each may happen on a Monday with a seeded chance (chance_per_year / 52), at most once every three years, lasts length_days, makes the news, and acts through the simulator's own keys. All sizes are assumptions chosen to be small. Staff pay is not among the simulator's plug-in keys, so a labour-market change acts through carriers' prices, not the shop's own wage bill (see docs/world.md).",
+    "list": [
+      { "id": "longer-returns", "kind": "regulation", "institution": "fair-shopping-board", "chance_per_year": 0.15, "length_days": 1095, "section": "Business",
+        "headline": "Shoppers to get longer to send things back, says the Fair Shopping Board",
+        "story": "The Fair Shopping Board has told online shops it expects them to accept returns for longer than before. Shops say they will manage; shoppers say they will buy with a little more confidence.",
+        "effects": { "demand": { "all": 1.01 }, "contact_rate": 1.04 },
+        "why": "Shoppers buy a little more readily when they know they can send things back, and ask more questions about returns." },
+      { "id": "food-labels", "kind": "regulation", "institution": "fair-shopping-board", "chance_per_year": 0.12, "length_days": 1095, "section": "Business",
+        "headline": "New labels for food sent by post",
+        "story": "Food sent by post must now carry a clearer label saying what is in it and how long it keeps. Small food sellers grumble about the cost of reprinting.",
+        "effects": { "demand": { "categories": { "food": 0.99 } }, "costs": { "goods": 1.003 } },
+        "why": "Suppliers pass on the cost of new labels, and a few shoppers hesitate while the labels change." },
+      { "id": "parcel-lockers", "kind": "technology", "institution": "swiftway-parcels", "chance_per_year": 0.2, "length_days": 1460, "section": "Delivery",
+        "headline": "Swiftway Parcels puts lockers in every town",
+        "story": "Swiftway Parcels has opened parcel lockers across the country. Senders who use them pay a little less, and people who are out all day no longer miss their parcels.",
+        "effects": { "costs": { "carrier": 0.97 }, "contact_rate": 0.98 },
+        "why": "Locker deliveries cost the carrier less, and fewer parcels go missing or get carded." },
+      { "id": "pay-by-bank", "kind": "technology", "institution": "pennywise-pay", "chance_per_year": 0.2, "length_days": 1460, "section": "Money",
+        "headline": "Pennywise Pay launches pay-by-bank at the checkout",
+        "story": "Shoppers can now pay straight from their bank account at many online checkouts. The fee to the shop is smaller than for a card.",
+        "effects": { "costs": { "card_fee": 0.9 } },
+        "why": "Some shoppers pay by bank instead of card, and that costs the shop a smaller fee." },
+      { "id": "same-day-bazaar", "kind": "technology", "institution": "great-bazaar", "chance_per_year": 0.15, "length_days": 730, "section": "Business",
+        "headline": "The Great Bazaar promises delivery the same day",
+        "story": "The Great Bazaar now delivers many orders the same day in big towns. Small shops worry that shoppers will expect the same from them.",
+        "effects": { "demand": { "all": 0.99 }, "contact_rate": 1.03 },
+        "why": "Shoppers used to same-day delivery chase slower parcels sooner, and a few buy from the marketplace instead." },
+      { "id": "staff-shortage", "kind": "labour market", "institution": "guild-of-small-shopkeepers", "chance_per_year": 0.15, "length_days": 365, "section": "Business",
+        "headline": "Small shops struggle to find warehouse staff",
+        "story": "The Guild of Small Shopkeepers says members are finding it hard to hire packers and drivers. Carriers are paying more to keep their own drivers, and passing some of it on.",
+        "effects": { "costs": { "carrier": 1.03 } },
+        "why": "Carriers short of drivers pay more to keep them and pass part of it on in their prices." },
+      { "id": "high-street-roadworks", "kind": "council", "institution": "brookford-council", "chance_per_year": 0.5, "length_days": 14, "section": "Local",
+        "headline": "Brookford Town Council digs up the road to the warehouse",
+        "story": "The council has closed one lane of the road past the industrial estate for a fortnight while it mends a pipe. Vans are queuing.",
+        "effects": { "carrier_delay_days": 2 },
+        "why": "Collection vans are held up by the roadworks, so parcels reach people about two days late." }
+    ]
+  },
+  "supplier_constraints": {
+    "_note": "Limits on the shop's existing suppliers (data/world/<size>/suppliers.json), keyed by supplier id. capacity_multiple is how many of the shop's usual-sized orders the supplier can make in a week; an order bigger than that takes an extra week per extra week's worth. lead_time_spread_days is how many extra days a disruption adds at most. disruptions_per_year is how often something goes wrong there. minimum_order_value is what the supplier asks for and is shown for information: the engine already enforces min_order_qty.",
+    "SUP-01": { "capacity_multiple": 4, "lead_time_spread_days": 2, "disruptions_per_year": 0.5, "disruption": "the ovens are down for repairs", "minimum_order_value": 20 },
+    "SUP-02": { "capacity_multiple": 3, "lead_time_spread_days": 2, "disruptions_per_year": 0.8, "disruption": "a freezer has failed", "minimum_order_value": 20 },
+    "SUP-03": { "capacity_multiple": 3, "lead_time_spread_days": 10, "disruptions_per_year": 1.0, "disruption": "two knitting machines are waiting for parts", "minimum_order_value": 100 },
+    "SUP-04": { "capacity_multiple": 4, "lead_time_spread_days": 7, "disruptions_per_year": 0.6, "disruption": "a paper delivery is stuck at the port", "minimum_order_value": 75 },
+    "SUP-05": { "capacity_multiple": 2, "lead_time_spread_days": 21, "disruptions_per_year": 2.0, "disruption": "a shortage of the little chip inside", "minimum_order_value": 250 },
+    "SUP-06": { "capacity_multiple": 2, "lead_time_spread_days": 14, "disruptions_per_year": 1.2, "disruption": "speaker parts are late from abroad", "minimum_order_value": 250 },
+    "SUP-07": { "capacity_multiple": 2, "lead_time_spread_days": 14, "disruptions_per_year": 0.8, "disruption": "the engraver is off sick", "minimum_order_value": 150 },
+    "SUP-08": { "capacity_multiple": 3, "lead_time_spread_days": 14, "disruptions_per_year": 1.0, "disruption": "the fabric mill has a backlog", "minimum_order_value": 150 },
+    "SUP-09": { "capacity_multiple": 3, "lead_time_spread_days": 7, "disruptions_per_year": 1.0, "disruption": "a cold snap in the glasshouses", "minimum_order_value": 75 },
+    "SUP-10": { "capacity_multiple": 4, "lead_time_spread_days": 7, "disruptions_per_year": 0.5, "disruption": "the river is too high to collect stones", "minimum_order_value": 75 },
+    "SUP-11": { "capacity_multiple": 3, "lead_time_spread_days": 7, "disruptions_per_year": 0.6, "disruption": "a tin-plate delivery is late", "minimum_order_value": 100 }
+  }
+}

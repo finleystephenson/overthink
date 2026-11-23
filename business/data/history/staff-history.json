@@ -1,0 +1,93 @@
+{
+  "_note": "Joining dates come from company.json staffing_now (computed from order volume). Reasons are invented to fit the order and money figures in monthly_summary. Nobody should be mentioned in mail, chat or news before their joined date. Hours are the small weekly hours in company.json at scale 0.2.",
+  "staff": [
+    {
+      "id": "S-01", "name": "Mr Fezziwig", "joined": "2021-03-14", "joined_note": "Founder. The shop opened 2021-11-22.",
+      "why": "He lost one sock and found that nobody sold a single one.",
+      "first_job": "Everything: packing, buying, answering the inbox, writing the returns note.",
+      "since": "Now runs the place and approves the big refunds and orders. He packs less and misses it.",
+      "others_say": "He is the only one who has read the whole returns policy, and he wrote it.",
+      "evidence": "company.json staffing_now joined 2021-03-14, 4.4 hrs/week; PO-3001 2021-10-08."
+    },
+    {
+      "id": "S-06", "name": "Mrs Hudson", "joined": "2023-09-11", "joined_note": "Monday.",
+      "why": "Orders went from 31 in August 2023 to 51 in September, and returns and questions needed a person.",
+      "first_job": "Answer the inbox and the phone.",
+      "since": "Leads customer service and trains the others on how complaints are handled.",
+      "others_say": "She notices things before they are said.",
+      "evidence": "company.json joined 2023-09-11, 5.6 hrs/week; monthly_summary 2023-08 orders 31, 2023-09 orders 51."
+    },
+    {
+      "id": "S-10", "name": "Mr Toad", "joined": "2024-01-08", "joined_note": "Monday.",
+      "why": "Marketing spend had grown from £68 to £169 a month and Fezziwig wanted someone to look after it. Toad arrived with a craze for every new channel.",
+      "first_job": "Plan the spring search campaign and the launch of Blip.",
+      "since": "Runs campaigns and outreach. Learned that the gift guide email is cheap and good, and still has a new craze most quarters.",
+      "others_say": "He is always about to make everyone famous.",
+      "evidence": "company.json joined 2024-01-08, 2 hrs/week; monthly_summary marketing_spend 2023-07 £68, 2023-12 £169; CMP-051 (£11, 97 orders)."
+    },
+    {
+      "id": "S-04", "name": "Phileas Fogg", "joined": "2024-03-25", "joined_note": "Monday, three weeks after Blip launched.",
+      "why": "Orders had gone from 48 in January to 81 in March, and parcels needed stated times.",
+      "first_job": "Dispatch and delivery chasing.",
+      "since": "Promises delivery times to the minute. Wrote the packing guide in May 2024.",
+      "others_say": "He has never once said 'around lunchtime'.",
+      "evidence": "company.json joined 2024-03-25, 4.4 hrs/week; monthly_summary 2024-01 orders 48, 2024-03 orders 81; DOC-02 2024-05-13."
+    },
+    {
+      "id": "S-05", "name": "Mole", "joined": "2024-06-17", "joined_note": "Monday.",
+      "why": "June 2024 was the first month over 100 orders and the stock room needed counting.",
+      "first_job": "Receive deliveries and count stock.",
+      "since": "Does the stock counts and the stock room. Knows where everything is and apologises for it.",
+      "others_say": "He is so quiet that the shelves seem to tidy themselves.",
+      "evidence": "company.json joined 2024-06-17, 4 hrs/week; monthly_summary 2024-06 orders 101."
+    },
+    {
+      "id": "S-09", "name": "Robinson Crusoe", "joined": "2024-08-19", "joined_note": "Monday.",
+      "why": "A Beckside order had just arrived 12 days late, and the company needed more than one supplier for each thing.",
+      "first_job": "Find second suppliers and start the speaker.",
+      "since": "Buys for the whole range. Placed the first orders with Tidewater, Glasshouse Growers, Riverstone and Tinsmith & Oven.",
+      "others_say": "He believes in a spare of everything.",
+      "evidence": "company.json joined 2024-08-19, 2 hrs/week; PO-3304 (SUP-03) 12 days late, received 2024-08-30; PO-3468, PO-3904, PO-3919, PO-4006."
+    },
+    {
+      "id": "S-02", "name": "Ebenezer Scrooge", "joined": "2024-09-16", "joined_note": "Monday.",
+      "why": "The company had lost money every month from April to August 2024 and he was asked to find out where it went.",
+      "first_job": "Check what each month's money did.",
+      "since": "Does month-end and chases late invoices. Watches the stock bought ahead of sales, as in the cash dips of Feb 2025 and Feb 2026.",
+      "others_say": "He will tell you the price of a biscuit before you have finished asking for one.",
+      "evidence": "company.json joined 2024-09-16, 1.6 hrs/week; monthly_summary profit 2024-04 to 2024-08 all negative."
+    },
+    {
+      "id": "S-03", "name": "Bob Cratchit", "joined": "2024-11-04", "joined_note": "Monday.",
+      "why": "Orders rose from 173 in October 2024 to 253 in November, and invoices and bills needed entering every day.",
+      "first_job": "Record supplier invoices and reconcile the books.",
+      "since": "Reconciles weekly and chases overdue payments politely.",
+      "others_say": "He never complains, and everyone worries about that.",
+      "evidence": "company.json joined 2024-11-04, 2.8 hrs/week; monthly_summary 2024-10 orders 173, 2024-11 orders 253."
+    },
+    {
+      "id": "S-11", "name": "Hephaestus", "joined": "2024-12-16", "joined_note": "Monday, in the Christmas rush.",
+      "why": "Repairs had been done by whoever was free, and Blips and Daypacks were coming back with faults.",
+      "first_job": "Open the Fix Club bench and assess faults.",
+      "since": "Writes the quotes and repairs what the company sells.",
+      "others_say": "He is the only one allowed to be a little cross about plastic.",
+      "evidence": "company.json joined 2024-12-16, 1.6 hrs/week; first repair record FIX-5101 2023-11-19 (declined); returns 2023 28, 2024 69."
+    },
+    {
+      "id": "S-07", "name": "Sam Weller", "joined": "2025-02-24", "joined_note": "Monday.",
+      "why": "Orders were 148 a month and Mrs Hudson needed another voice on the phone after the Christmas backlog.",
+      "first_job": "Take calls, chat and email alongside Mrs Hudson.",
+      "since": "Handles returns and changed orders. Customers ask for him by name.",
+      "others_say": "Cheerful on the phone, and customers believe him.",
+      "evidence": "company.json joined 2025-02-24, 5.6 hrs/week; monthly_summary 2025-02 orders 148; returns 2025 104."
+    },
+    {
+      "id": "S-08", "name": "Esther Summerson", "joined": "2025-07-07", "joined_note": "Monday.",
+      "why": "July 2025 had 210 orders, the most in a summer month, and mornings on the phone were not covered.",
+      "first_job": "Work through the oldest open cases and take the phone on mornings.",
+      "since": "Now takes the harder cases. Stays kind to people who are not kind to her.",
+      "others_say": "She would apologise to a parcel.",
+      "evidence": "company.json joined 2025-07-07, 4.8 hrs/week; monthly_summary 2025-07 orders 210."
+    }
+  ]
+}

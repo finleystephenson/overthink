@@ -1,0 +1,9 @@
+{
+  "title": "Double the advertising",
+  "question": "What if we double advertising?",
+  "start": { "size": "standard" },
+  "days": 30, "seeds": 5,
+  "arms": [
+    { "id": "marketing-x2", "label": "Marketing budget doubled", "interventions": [{ "type": "marketing_budget", "params": { "multiply": 2 } }] }
+  ]
+}

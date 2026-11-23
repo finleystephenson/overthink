@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overthought &amp; Co.</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@100..150,700..900&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../lib/ui.css">
+<style>
+  .soon { min-height: calc(100vh - var(--bar-h)); display: grid; place-items: center; text-align: center; padding: 40px var(--gutter); overflow: hidden; }
+  .soon-inner { display: grid; justify-items: center; gap: 18px; max-width: 520px; }
+  .soon-icon { position: relative; margin-bottom: 10px; }
+  .soon-icon::before { content: ""; position: absolute; inset: -40px; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--app) 40%, transparent), transparent); animation: glow 4s ease-in-out infinite; }
+  .soon-icon .app-icon { animation: bob 4s ease-in-out infinite; }
+  @keyframes glow { 50% { transform: scale(1.12); opacity: .7; } }
+  @keyframes bob { 50% { transform: translateY(-6px) rotate(-2deg); } }
+  .soon h1 { font: 900 clamp(36px, 6vw, 64px)/.95 var(--display); font-stretch: 130%; letter-spacing: -.02em; }
+  .soon p { font-size: 17px; color: var(--ink-2); }
+  .soon .muted { font-size: 15px; color: var(--ink-3); }
+  .soon-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<main class="soon" id="main"><div class="soon-inner" id="soon"></div></main>
+<script type="module">
+  // The placeholder for an app that is not built yet. Reads which app from ?app=<id>; every name comes from apps.json.
+  import { startApp, appHref, esc } from "../lib/ui.js";
+  import { appIcon } from "../lib/icons.js";
+  const id = new URLSearchParams(location.search).get("app") || "";
+  const { app, apps } = await startApp({ id });
+  document.title = `${app.name} · Overthought & Co.`;
+  const machine = apps.find((a) => a.id === "control-room");
+  document.getElementById("soon").innerHTML = `
+    <div class="soon-icon">${appIcon(app.icon ? app : { icon: "filing", accent: "#d8d2c6" }, { size: 132 })}</div>
+    <h1>${esc(app.name)}</h1>
+    <p>${esc(app.description || "")}</p>
+    <p class="muted">This one is still being fitted. The business carries on underneath it regardless.</p>
+    <div class="soon-actions">
+      <a class="btn primary" href="${appHref({ id: "home" })}">Back to the home screen</a>
+      ${machine ? `<a class="btn" href="${appHref(machine)}">Open ${esc(machine.name)}</a>` : ""}
+    </div>`;
+</script>
+</body>
+</html>

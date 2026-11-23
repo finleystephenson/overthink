@@ -1,0 +1,36 @@
+/* Charts shared by Tally, Megaphone and Rota (drawn by charts.js). Thin marks, one baseline, a hover read-out. */
+.ch { position: relative; width: 100%; }
+.ch svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
+.ch svg:focus-visible { outline: 2px solid var(--focus); outline-offset: 6px; border-radius: 12px; }
+.ch-base { stroke: var(--line-3); stroke-width: 1; }
+.ch-guide { stroke: var(--line-3); stroke-width: 1; stroke-dasharray: 2 4; opacity: 0; transition: opacity .15s; pointer-events: none; }
+.ch-ax { fill: var(--ink-3); font: 600 11.5px/1 var(--font); font-variant-numeric: tabular-nums; }
+.ch-top { fill: var(--ink-4); }
+.ch-line { fill: none; stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.ch-draw { stroke-dasharray: 1; stroke-dashoffset: 0; animation: ch-draw 1.2s var(--ease) both; }
+@keyframes ch-draw { from { stroke-dashoffset: 1; } }
+.ch-end { stroke: var(--panel); stroke-width: 2.5; }
+.ch-col { transform-box: fill-box; transform-origin: 50% 100%; animation: ch-grow .7s var(--ease) both; transition: opacity .15s, filter .15s; }
+.ch-col.is-neg { transform-origin: 50% 0; }
+.ch-col.is-hot { filter: brightness(1.08) saturate(1.1); }
+.ch svg:hover .ch-col:not(.is-hot) { opacity: .55; }
+@keyframes ch-grow { from { transform: scaleY(0); } }
+.ch-tip { position: absolute; top: -8px; z-index: 5; transform: translateY(-100%); display: grid; gap: 3px; min-width: 150px; padding: 10px 12px; border-radius: 14px; background: var(--inv); color: var(--inv-ink); box-shadow: var(--shadow-3); font-size: 12.5px; pointer-events: none; white-space: nowrap; }
+.ch-tip > b { font-weight: 700; margin-bottom: 2px; }
+.ch-row { display: flex; align-items: center; gap: 8px; color: var(--inv-ink-2); }
+.ch-row i { width: 8px; height: 8px; border-radius: 3px; flex: none; }
+.ch-row b { margin-left: auto; padding-left: 14px; color: var(--inv-ink); font-variant-numeric: tabular-nums; }
+.spark { display: block; overflow: visible; }
+
+/* "What your changes did" cards (results.js), for Megaphone and Rota. */
+.rs-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.rs-card { display: grid; align-content: start; gap: 10px; padding: 16px; border-radius: 18px; background: var(--sunken); animation: rise .6s var(--ease) both; }
+.rs-what { font-weight: 650; line-height: 1.35; }
+.rs-when { display: block; font-size: 12px; font-weight: 700; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+.rs-figs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.rs-figs li { display: grid; padding: 8px 12px; border-radius: 12px; background: var(--good-bg); color: var(--good); min-width: 82px; }
+.rs-figs li.bad { background: var(--bad-bg); color: var(--bad); }
+.rs-figs b { font: 880 19px/1.05 var(--display); font-stretch: 120%; font-variant-numeric: tabular-nums; }
+.rs-figs span { font-size: 12px; font-weight: 650; }
+.rs-note, .rs-wait { font-size: 13px; color: var(--ink-3); }
+.rs-empty { color: var(--ink-3); max-width: 60ch; }

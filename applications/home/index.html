@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rummage</title>
+<meta name="description" content="Search everything at Overthought &amp; Co., open its tools, and see what your AI did.">
+<meta name="ot-front-door" content="1">
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@125,800;125,900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="home.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#q">Skip to search</a>
+
+<!-- One page, two faces, like a search engine: the home (name, box, tools) and the results (tabs, results, and a
+     panel with what your AI did). Which one shows follows the address: ?q=...&tab=... -->
+<header class="top">
+  <a class="logo" id="logo" href="./" aria-label="Home"></a>
+  <form class="box" id="box" role="search" action="./" autocomplete="off">
+    <label class="field">
+      <span class="field-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span>
+      <span class="sr" id="qLabel">Search Overthought &amp; Co.</span>
+      <input id="q" name="q" type="search" enterkeyhint="search" spellcheck="false" aria-labelledby="qLabel"
+        placeholder="Search customers, orders, emails, posts…">
+      <button class="clear" id="clear" type="button" aria-label="Clear the search" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <kbd class="key" aria-hidden="true">/</kbd>
+    </label>
+  </form>
+  <nav class="tabs" id="tabs" aria-label="What to search"></nav>
+</header>
+
+<main id="main">
+  <!-- Home -->
+  <section class="home" id="home" aria-label="Overthought &amp; Co.'s tools">
+    <p class="ai-line" id="aiLine" hidden></p>
+    <ul class="apps" id="apps"></ul>
+  </section>
+
+  <!-- Results -->
+  <div class="serp" id="serp" hidden>
+    <div class="col">
+      <p class="about" id="about" role="status" aria-live="polite"></p>
+      <div class="results" id="results"></div>
+    </div>
+    <aside class="panel" id="panel" aria-label="What your AI did" hidden></aside>
+  </div>
+</main>
+
+<footer class="foot" id="foot">
+  <span>Overthought &amp; Co. is a company that isn’t real. Nor are its customers, or its money.</span>
+</footer>
+
+<script type="module" src="home.js"></script>
+</body>
+</html>

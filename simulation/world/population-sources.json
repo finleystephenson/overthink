@@ -1,0 +1,119 @@
+{
+  "_note": "Target distributions for ADULTS (18+) in the UK, used by simulation/world/build-population.mjs. 'checked' means the headline figure in checked_facts was confirmed by a web search on 22 Nov 2026 (search snippets of the ONS pages, not the full tables). Every table of shares below is 'approximate': rounded from memory of the published tables, NOT verified, and must not be quoted as an ONS figure. Replace with the downloaded table and flip status when you have done that.",
+  "adults_only": true,
+  "age": {
+    "bands": ["18-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75+"],
+    "share": [10.9, 16.6, 16.7, 16.0, 15.6, 12.6, 11.6],
+    "source": "ONS, Population estimates for the UK, England, Wales, Scotland and Northern Ireland, mid-2024 (five-year bands regrouped to adult bands)",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2024",
+    "year": 2024,
+    "status": "approximate",
+    "checked_facts": ["UK population 69.3 million at mid-2024 (confirmed by search)", "median age 42.8 in Scotland and Wales, 40.3 in Northern Ireland (confirmed)"],
+    "why_approximate": "The search did not return the age-band table. The shares are our regrouping from memory of earlier releases."
+  },
+  "household": {
+    "types": ["one_person", "couple_no_children", "couple_children", "lone_parent", "multi_adult_other"],
+    "by_age_share": {
+      "18-24": [9, 12, 5, 4, 70],
+      "25-34": [12, 27, 27, 7, 27],
+      "35-44": [11, 16, 50, 10, 13],
+      "45-54": [12, 30, 28, 8, 22],
+      "55-64": [18, 48, 8, 4, 22],
+      "65-74": [23, 60, 1, 2, 14],
+      "75+": [42, 45, 0, 1, 12]
+    },
+    "source": "ONS, Families and households in the UK: 2024 (published 23 July 2025); age split is our assumption",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/bulletins/familiesandhouseholds/2024",
+    "year": 2024,
+    "status": "approximate",
+    "checked_facts": ["one-person households were 29.5% of the 28.6 million UK households in 2024 (confirmed). That counts households, not adults, so the adult share living alone is lower; the report compares only for context.", "lone-parent families were 16.1% of families in 2024 (confirmed)", "married couples were 65.1% and cohabiting couples 17.7% of families (confirmed)"],
+    "why_approximate": "The couple-with-children split and every age cut are not from a table we read."
+  },
+  "income": {
+    "quintiles": ["Q1", "Q2", "Q3", "Q4", "Q5"],
+    "share": [20, 20, 20, 20, 20],
+    "source": "Equal fifths by definition (DWP Households Below Average Income uses equivalised household income quintiles)",
+    "year": 2024,
+    "status": "checked",
+    "checked_facts": ["Quintiles are 20% each by definition, so no search was needed."],
+    "dependence": "Within each person a score is drawn: noise plus a shift for employment and household. People are then ranked on it and cut into exact fifths. The shifts are assumptions (see score_shift)."
+  },
+  "income_score_shift": {
+    "_why": "Rough direction only: two-earner couples and employed people have higher household income, lone parents, unemployed, students and other inactive people lower. Assumptions, small on purpose (noise has sd 1).",
+    "employment": { "employed": 0.3, "self_employed": 0.0, "unemployed": -0.9, "retired": -0.2, "student": -0.6, "other_inactive": -0.7 },
+    "household": { "one_person": -0.2, "couple_no_children": 0.35, "couple_children": 0.35, "lone_parent": -0.5, "multi_adult_other": 0.1 },
+    "status": "approximate"
+  },
+  "employment": {
+    "statuses": ["employed", "self_employed", "unemployed", "retired", "student", "other_inactive"],
+    "by_age_share": {
+      "18-24": [47, 4, 6, 0, 35, 8],
+      "25-34": [70, 11, 4, 0, 2, 13],
+      "35-44": [72, 13, 3, 0, 0, 12],
+      "45-54": [71, 13, 3, 1, 0, 12],
+      "55-64": [52, 13, 3, 17, 0, 15],
+      "65-74": [8, 5, 0, 82, 0, 5],
+      "75+": [2, 1, 0, 95, 0, 2]
+    },
+    "source": "ONS, Labour market overview, UK (Labour Force Survey), 2025 releases; age split is our assumption",
+    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/november2025",
+    "year": 2025,
+    "status": "approximate",
+    "checked_facts": ["UK employment rate (16 to 64) 75.0% in July to September 2025 (confirmed)", "unemployment rate 5.0% in the same period (confirmed; this is a share of the economically active, not of all adults)", "economic inactivity 21.0% (confirmed)"],
+    "why_approximate": "Search gave no self-employed or student breakdown. Table shares are our assumptions shaped to land near the checked rates; the report shows the implied 18-64 employment rate next to 75.0%."
+  },
+  "area": {
+    "types": ["urban", "town", "rural"],
+    "share": [66, 17, 17],
+    "source": "ONS Rural Urban Classification (2021), England, regrouped: major/minor city and conurbation = urban, town and fringe = town, village/hamlet = rural; UK share is an assumption",
+    "year": 2021,
+    "status": "approximate",
+    "why_approximate": "Not searched this session."
+  },
+  "online_shopping": {
+    "bands": ["never", "rarely", "monthly", "weekly_plus"],
+    "_meaning": "never = no online purchase in the last year; rarely = a few times a year; monthly = about monthly; weekly_plus = most weeks",
+    "by_age_share": {
+      "18-24": [3, 12, 40, 45],
+      "25-34": [3, 10, 37, 50],
+      "35-44": [4, 11, 40, 45],
+      "45-54": [6, 16, 42, 36],
+      "55-64": [10, 22, 42, 26],
+      "65-74": [22, 30, 36, 12],
+      "75+": [45, 28, 22, 5]
+    },
+    "source": "ONS, Internet access - households and individuals / Internet users (Great Britain, to 2020); frequency split is our assumption",
+    "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/householdcharacteristics/homeinternetandsocialmediausage/bulletins/internetaccesshouseholdsandindividuals/2019",
+    "year": 2020,
+    "status": "approximate",
+    "checked_facts": ["87% of adults bought online in the last 12 months in 2020, up from 53% in 2008 (reported by a secondary source quoting ONS; confirmed only second-hand)", "2019: 82% bought online in the last 12 months", "2017: 26% of 25-34s bought 11+ times in 3 months against 7% of over-65s", "2019: 14% of over-65s bought 11+ times in 3 months"],
+    "why_approximate": "No current table found; the implied 'bought in the last year' share is compared with 87% in the report."
+  },
+  "channel": {
+    "options": ["email", "chat", "phone"],
+    "by_age_share": {
+      "18-24": [45, 45, 10],
+      "25-34": [55, 35, 10],
+      "35-44": [58, 28, 14],
+      "45-54": [58, 20, 22],
+      "55-64": [55, 12, 33],
+      "65-74": [48, 6, 46],
+      "75+": [35, 3, 62]
+    },
+    "source": "Ofcom consumer research on preferred contact methods (general direction: older people prefer the phone, younger people messaging)",
+    "year": null,
+    "status": "approximate",
+    "why_approximate": "Not searched (search budget). Pure assumption on the direction of the age effect; the numbers are ours."
+  },
+  "circumstances": {
+    "_note": "Prevalence is the share of ALL adults who have the circumstance at a given time. All are assumptions, labelled as such. weights say who is more likely (relative, not probabilities); the build picks exactly round(prevalence x people) using these weights.",
+    "new_parent": { "prevalence": 0.025, "status": "approximate", "label": "has a baby under one", "why": "About 600,000 births a year in the UK over about 54 million adults, plus partners, gives roughly 2 to 3% of adults in a household with a baby. Assumption.", "weights": { "age": { "18-24": 0.8, "25-34": 3, "35-44": 1.5 }, "household": { "couple_children": 1, "lone_parent": 1 } } },
+    "moving_home": { "prevalence": 0.07, "status": "approximate", "label": "moving home in the next few months", "why": "Roughly one household in ten or fewer moves in a year; young adults move most. Assumption.", "weights": { "age": { "18-24": 2.5, "25-34": 3, "35-44": 1.5, "45-54": 0.8, "55-64": 0.6, "65-74": 0.5, "75+": 0.4 } } },
+    "carer": { "prevalence": 0.09, "status": "approximate", "label": "looks after a family member or friend", "why": "Surveys put unpaid carers at roughly one adult in ten, most often aged 45 to 74. Assumption.", "weights": { "age": { "18-24": 0.3, "25-34": 0.4, "35-44": 0.8, "45-54": 1.4, "55-64": 2, "65-74": 1.8, "75+": 1.2 }, "employment": { "other_inactive": 1.5, "_default": 1 } } },
+    "new_job": { "prevalence": 0.05, "status": "approximate", "label": "started a new job recently", "why": "Job-to-job and unemployment-to-work moves are a few percent of adults a year. Assumption.", "weights": { "employment": { "employed": 1, "self_employed": 0.3, "unemployed": 2.5, "student": 0.8 }, "age": { "18-24": 2, "25-34": 2, "35-44": 1, "45-54": 1, "55-64": 0.8, "65-74": 0.1, "75+": 0 } } },
+    "recently_retired": { "prevalence": 0.03, "status": "approximate", "label": "retired in the last couple of years", "why": "Retired people aged 55 to 74 are about 13% of adults; a couple of years of retirement is about a quarter of them. Assumption.", "weights": { "employment": { "retired": 1 }, "age": { "55-64": 1, "65-74": 1 } } },
+    "works_from_home": { "prevalence": 0.16, "status": "approximate", "label": "works from home some or all of the week", "why": "ONS surveys found around a quarter of working adults hybrid and about one in eight fully at home; a share of all adults is lower because many are not working. Assumption.", "weights": { "employment": { "employed": 1, "self_employed": 1.6 }, "age": { "18-24": 0.6, "25-34": 1.3, "35-44": 1.3, "45-54": 1.3, "55-64": 0.6, "65-74": 0.3, "75+": 0 } } },
+    "keen_gardener": { "prevalence": 0.22, "status": "approximate", "label": "keen on gardening", "why": "Gardening is the most common hobby for older adults; more likely with space (rural). Assumption.", "weights": { "age": { "18-24": 0.15, "25-34": 0.4, "35-44": 0.8, "45-54": 1.5, "55-64": 2, "65-74": 3, "75+": 2.5 }, "area": { "rural": 1.5, "urban": 0.8, "_default": 1 } } },
+    "student": { "derived": "employment is student", "status": "approximate", "label": "is a student", "why": "Follows the employment trait, so it is not drawn twice." }
+  }
+}

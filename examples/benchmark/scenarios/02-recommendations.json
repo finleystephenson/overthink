@@ -1,0 +1,264 @@
+[
+  {
+    "id": "recommendations-01",
+    "category": "recommendations",
+    "title": "Birthday gift under £20, needed fast",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor forgot a birthday and has a £20 budget. Today is Monday. Sooner is the fastest delivery.",
+    "turns": [
+      "It's my friend's birthday and I've forgotten. Budget is £20. What can I get that gets to me fast?"
+    ],
+    "records": [
+      "one-good-pen",
+      "skimming-stones",
+      "biscuit-tin"
+    ],
+    "expected": {
+      "answer": "Recommends something under £20 (e.g. One Good Pen £9, Skimming Stones Skips £12, The Biscuit Tin £16) and says fastest delivery is Sooner at £6.95, next working day if ordered by 2pm Monday to Friday. Does not promise it arrives today.",
+      "must_say": [
+        "£6.95",
+        "2pm",
+        "next working day"
+      ],
+      "must_not_say": [
+        "arrives today",
+        "same day"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "gift"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Is clear delivery is extra to the £20 budget, or picks something that fits both",
+      "Only recommends real products with real prices"
+    ]
+  },
+  {
+    "id": "recommendations-02",
+    "category": "recommendations",
+    "title": "Sandwiches for the team",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants lunch for three people. Singles are £9, Three-pack is £24 but all one filling. Cold delivery only.",
+    "turns": [
+      "We've got a long meeting and need lunch for 3 people. What do you suggest?",
+      "We all want different fillings."
+    ],
+    "records": [
+      "emergency-sandwich",
+      "OT-SAND-HAM-1",
+      "OT-SAND-HAM-3"
+    ],
+    "expected": {
+      "answer": "Suggests The Emergency Sandwich: Three-pack £24 is one filling only, so for different fillings order three Singles at £9 each. Cold delivery £8.95, sent Monday to Thursday, use within 48 hours of dispatch.",
+      "must_say": [
+        "Emergency Sandwich",
+        "£24",
+        "£9",
+        "£8.95",
+        "48 hours"
+      ],
+      "must_not_say": [
+        "Three-pack can have mixed fillings",
+        "delivered today",
+        "ships Friday"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "sandwich"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "emergency-sandwich"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "recommendations-03",
+    "category": "recommendations",
+    "title": "Two speakers in stereo",
+    "difficulty": 3,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants two Boombox Minis to play in stereo. They cannot pair; each plays separately.",
+    "turns": [
+      "I want two speakers that play in stereo together. Cheapest way?",
+      "Can't I just get two of the Mini and link them? Surely that's cheaper."
+    ],
+    "records": [
+      "boombox-mini",
+      "OT-BOOM"
+    ],
+    "expected": {
+      "answer": "Says the Boombox Mini (£89) cannot pair two for stereo: two play separately. Does not invent a stereo option. May offer one Mini, or a person.",
+      "must_say": [
+        "Boombox Mini",
+        "£89",
+        "cannot pair",
+        "play separately"
+      ],
+      "must_not_say": [
+        "stereo pairing is supported",
+        "update will add stereo"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "speaker"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "boombox-mini"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not suggest a product that does not exist"
+    ]
+  },
+  {
+    "id": "recommendations-04",
+    "category": "recommendations",
+    "title": "A desk plant for a sunny window",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants something living for a desk. The Pocket Jungle needs bright indirect light, not direct midday sun.",
+    "turns": [
+      "Looking for something green for my desk. Low effort please.",
+      "It's a south-facing windowsill, full sun all afternoon. Fine?"
+    ],
+    "records": [
+      "pocket-jungle",
+      "OT-JUNG"
+    ],
+    "expected": {
+      "answer": "Suggests The Pocket Jungle (£42, mist every 1 to 2 weeks) but warns it needs bright indirect light and no direct midday sun, so the sunny sill is not ideal. Sent by Sooner only.",
+      "must_say": [
+        "Pocket Jungle",
+        "£42",
+        "indirect",
+        "no direct midday sun",
+        "Sooner"
+      ],
+      "must_not_say": [
+        "full sun is fine",
+        "cacti work well"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "search_catalogue",
+        "input_includes": {
+          "query": "plant"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "pocket-jungle"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  }
+]

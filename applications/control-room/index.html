@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Control Room · Time and results</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap">
+<link rel="stylesheet" href="../lib/premium.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-quiet-reset>
+<!-- The full bench behind the first screen: the result, time, the jobs, the levers, the business now, the record. -->
+<main class="cr" id="main">
+  <section class="cr-head" aria-labelledby="verdict">
+    <p class="pm-label"><span id="dayOf">&nbsp;</span><span class="sep">·</span><span id="when">&nbsp;</span></p>
+    <h1 class="cr-verdict" id="verdict">&nbsp;</h1>
+    <p class="cr-sub" id="verdictSub">&nbsp;</p>
+    <div class="cr-runs" role="group" aria-label="Move time on">
+      <button type="button" class="btn" data-days="1" title="D">A day</button>
+      <button type="button" class="btn" data-days="7" title="W">A week</button>
+      <button type="button" class="btn" data-days="30" title="M">A month</button>
+      <button type="button" class="btn" data-days="365">A year</button>
+      <span class="cr-said" id="runSaid" aria-live="polite"></span>
+    </div>
+    <nav class="cr-nav" aria-label="On this page">
+      <a href="#result">Result</a><a href="#ai-jobs">AI jobs</a><a href="#change">Change something</a><a href="#now">The business now</a>
+      <a href="#done">Everything that was done</a><a href="#connect-ai">Connect your AI</a><a href="#again">Start again</a>
+    </nav>
+  </section>
+
+  <section class="cr-sec" id="result" aria-labelledby="result-h">
+    <h2 class="cr-h" id="result-h">Against the same business left alone</h2>
+    <div class="cr-result">
+      <div class="chart" id="chart"></div>
+      <table class="figs" id="measures"></table>
+    </div>
+    <p class="cr-text">This is a made-up business. It shows the kind of thing that happens, not a promise.</p>
+  </section>
+
+  <section class="cr-sec" id="ai-jobs" aria-labelledby="jobs-h">
+    <h2 class="cr-h" id="jobs-h">Jobs an AI has taken</h2>
+    <ul class="cr-list" id="jobs"></ul>
+  </section>
+
+  <section class="cr-sec" id="change" aria-labelledby="change-h">
+    <h2 class="cr-h" id="change-h">Change something</h2>
+    <p class="cr-text">Pull one lever, move time on, then read the result above.</p>
+    <div class="try" id="tryBody"></div>
+  </section>
+
+  <section class="cr-sec" id="now" aria-labelledby="now-h">
+    <div class="cr-h-row"><h2 class="cr-h" id="now-h">The business now</h2><span class="pm-mono" id="nowAsOf"></span></div>
+    <div class="figures" id="figures"></div>
+    <div class="months" id="months"></div>
+  </section>
+
+  <section class="cr-sec" id="done" aria-labelledby="done-h">
+    <h2 class="cr-h" id="done-h">Everything that was done</h2>
+    <ol class="cr-list record" id="record"></ol>
+  </section>
+
+  <section class="cr-sec" id="connect-ai" aria-labelledby="connect-h">
+    <h2 class="cr-h" id="connect-h">Connect your AI</h2>
+    <div id="connect"></div>
+  </section>
+
+  <section class="cr-sec" id="again" aria-labelledby="again-h">
+    <h2 class="cr-h" id="again-h">Start again</h2>
+    <p class="cr-text">Puts the business back to Monday 23 November 2026, 10:00. Everything done is thrown away. Jobs an AI has taken are kept.</p>
+    <div class="cr-runs"><button type="button" class="btn danger" id="resetBtn">Start again</button><span class="cr-said" id="resetSaid" aria-live="polite"></span></div>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

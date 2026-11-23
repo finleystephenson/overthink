@@ -1,0 +1,48 @@
+/* Charts (lib/chart.js) and "what your changes did" cards (lib/results.js), in the premium look.
+   Load after ../lib/premium.css. Marks in ink, a second series in grey, the spark only on the latest point.
+   No gradients, no shadows except the floating read-out, no draw-in animations (charts redraw when time moves). */
+.ch { position: relative; width: 100%; }
+.ch svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
+.ch svg:focus-visible { outline: none; box-shadow: none; }
+.ch svg:focus-visible .ch-base { stroke: var(--x-spark); }
+.ch-base { stroke: var(--x-rule); stroke-width: 1; }
+.ch-guide { stroke: var(--x-rule); stroke-width: 1; opacity: 0; pointer-events: none; }
+.ch-ax { fill: var(--x-ink-2); font: 400 11.5px/1 var(--x-mono); font-variant-numeric: tabular-nums; }
+.ch-lbl { fill: var(--x-ink); font: 500 12.5px/1 var(--x-mono); font-variant-numeric: tabular-nums; }
+.ch-line { fill: none; stroke: var(--chart-you); stroke-width: 1.75; stroke-linejoin: round; stroke-linecap: round; }
+.ch-line.is-thin { stroke-width: 1.5; stroke-dasharray: 4 3; }
+.ch-pt { fill: var(--chart-you); }
+.ch-now { fill: var(--x-spark); stroke: var(--x-card); stroke-width: 2; }
+.ch-dot { fill: var(--chart-you); stroke: var(--x-card); stroke-width: 2; opacity: 0; pointer-events: none; }
+.ch-col { transition: opacity .15s; }
+.ch svg:hover .ch-col:not(.is-hot) { opacity: .45; }
+.ch-tip { position: absolute; top: -8px; z-index: 5; transform: translateY(-100%); display: grid; gap: 3px; min-width: 140px; padding: 9px 12px; border-radius: 12px;
+  background: var(--x-night); color: var(--x-on-night); box-shadow: 0 16px 40px -18px rgba(10, 18, 38, .6); font: 400 12.5px/1.35 var(--x-text); pointer-events: none; white-space: nowrap; }
+.ch-tip > b { font-weight: 500; }
+.ch-tip > span:not(.ch-row) { color: var(--x-on-night-2); }
+.ch-row { display: flex; align-items: center; gap: 8px; color: var(--x-on-night-2); }
+.ch-row i { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+.ch-row b { margin-left: auto; padding-left: 14px; color: var(--x-on-night); font-weight: 500; font-variant-numeric: tabular-nums; }
+.spark { display: block; overflow: visible; }
+.spark path { fill: none; stroke: var(--chart-you); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.spark circle { fill: var(--x-spark); }
+/* A legend swatch: ink for the main series, grey for the second. */
+.ch-key { display: inline-flex; align-items: center; gap: 6px; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.ch-key i { width: 10px; height: 10px; border-radius: 2px; background: var(--chart-you); }
+.ch-key i.is-alone { background: var(--chart-alone); }
+.ch-key i.is-light { background: var(--x-rule); }
+
+/* "What your changes did" (lib/results.js): a ruled list, one change per row, the difference as the figure. */
+.rs-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--x-rule-soft); }
+.rs-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 20px; padding: 12px 0; border-bottom: 1px solid var(--x-rule-soft); }
+.rs-what { font-size: 14.5px; line-height: 1.35; }
+.rs-when { display: block; margin-bottom: 2px; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.rs-figs { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 18px; }
+.rs-figs li { display: grid; justify-items: end; }
+.rs-figs b { font: 500 15px/1.2 var(--x-text); font-variant-numeric: tabular-nums; color: var(--x-good); }
+.rs-figs li.bad b { color: var(--x-bad); }
+.rs-figs span { font-size: 12.5px; color: var(--x-ink-2); }
+.rs-note, .rs-wait { grid-column: 1 / -1; font-size: 13px; color: var(--x-ink-2); }
+.rs-card .rs-wait { grid-column: 1 / -1; }
+.rs-empty { font-size: 14px; color: var(--x-ink-2); max-width: 60ch; }
+@media (max-width: 640px) { .rs-card { grid-template-columns: 1fr; } .rs-figs { justify-content: flex-start; } .rs-figs li { justify-items: start; } }

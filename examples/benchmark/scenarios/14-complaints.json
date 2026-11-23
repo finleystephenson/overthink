@@ -1,0 +1,359 @@
+[
+  {
+    "id": "complaint-01",
+    "category": "complaints",
+    "title": "Formal complaint about a late parcel that already has a case",
+    "difficulty": 2,
+    "customer_id": "C-1005",
+    "channel": "web",
+    "setup": "Story 3. Phileas's ORD-20146 (Skimming Stones and Puddle Mat, £37.95) was due 18 Nov and is marked delayed with no new date. CASE-9008 is open from 21 Nov. He now says he wants to make a formal complaint. The assistant records it on the existing case and passes it to a support agent (stage 1).",
+    "turns": [
+      "This is ridiculous. My parcel was due on the 18th and it's still not here. I want to make a formal complaint. Order ORD-20146, phileas.fogg@example.com"
+    ],
+    "records": [
+      "ORD-20146",
+      "CASE-9008",
+      "C-1005"
+    ],
+    "expected": {
+      "answer": "Apologises, confirms the parcel is delayed with no new date from the carrier, says the complaint is recorded on CASE-9008 and escalated to a support agent who will reply within 1 working day. Says a support agent can refund the delivery charge for a parcel this late. Does not promise a delivery date or any outcome.",
+      "must_say": [
+        "CASE-9008",
+        "support agent",
+        "1 working day",
+        "£3.95"
+      ],
+      "must_not_say": [
+        "it will arrive tomorrow",
+        "I have refunded",
+        "your complaint is upheld",
+        "I have refunded the delivery charge"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20146"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "case_number": "CASE-9008",
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20146",
+          "email_or_postcode": "phileas.fogg@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20146"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9008"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9008",
+          "to": "support_agent",
+          "reason": "Formal complaint about a late parcel",
+          "summary": "Customer wants to make a formal complaint. ORD-20146 was due 18 Nov, marked delayed, no new date."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "cases",
+        "id": "CASE-9008",
+        "field": "escalated_to",
+        "equals": "support_agent"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Reuses CASE-9008 rather than opening a second case",
+      "Does not say the delivery charge has been refunded"
+    ]
+  },
+  {
+    "id": "complaint-02",
+    "category": "complaints",
+    "title": "Stage 1 complaint past its 3-working-day answer date",
+    "difficulty": 3,
+    "customer_id": "C-1023",
+    "channel": "web",
+    "setup": "Story 18. Mrs Bennet's helmet return RET-3005 (ORD-20132, £64) was rejected after inspection. CASE-9004 is a stage 1 complaint opened 17 Nov. The answer was due 20 Nov and has not been sent. She is chasing. The assistant cannot decide the complaint; it escalates the case to the support lead and apologises for the delay.",
+    "turns": [
+      "I complained about my helmet return last week and nobody has answered. Your own website says 3 working days. ORD-20132, mrs.bennet@example.com"
+    ],
+    "records": [
+      "CASE-9004",
+      "RET-3005",
+      "ORD-20132",
+      "C-1023"
+    ],
+    "expected": {
+      "answer": "Apologises that the answer is late (due 20 November). Does not say whether the return will be accepted. Escalates CASE-9004 to the support lead and says someone will reply within 1 working day.",
+      "must_say": [
+        "CASE-9004",
+        "support lead",
+        "3 working days",
+        "1 working day",
+        "20 November"
+      ],
+      "must_not_say": [
+        "your return will be accepted",
+        "you will get a refund",
+        "the rejection is overturned",
+        "I have reviewed the inspection"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_case",
+        "input_includes": {
+          "case_number": "CASE-9004"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "case_number": "CASE-9004",
+          "to": "support_lead"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "cancel_order",
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "cases",
+        "id": "CASE-9004",
+        "field": "escalated_to",
+        "equals": "support_lead"
+      },
+      {
+        "collection": "returns",
+        "id": "RET-3005",
+        "field": "status",
+        "equals": "rejected"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "registrations",
+      "repairs",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_lead"
+    },
+    "criteria": [
+      "Does not open a new case",
+      "Does not argue the inspection result either way"
+    ]
+  },
+  {
+    "id": "complaint-03",
+    "category": "complaints",
+    "title": "How do I complain and how long will it take?",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor wants to know how to make a complaint, who answers, how fast, and whether there is an outside body. A policy question only: no records.",
+    "turns": [
+      "How do I make a complaint, and how long until someone actually answers? Is there an ombudsman or anything if you don't sort it?"
+    ],
+    "records": [],
+    "expected": {
+      "answer": "Stage 1: a member of the support team acknowledges within 1 working day and answers within 3 working days. Stage 2: the Support Lead reviews it and answers within 10 working days, and that is the final answer. The company is not a member of an ombudsman scheme, but she can still use Citizens Advice, Trading Standards, small claims or a card chargeback.",
+      "must_say": [
+        "1 working day",
+        "3 working days",
+        "10 working days",
+        "Support Lead",
+        "not a member"
+      ],
+      "must_not_say": [
+        "the ombudsman will",
+        "we are a member of",
+        "complaints are answered within 24 hours"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_policy",
+        "input_includes": {
+          "id": "complaints"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "open_case",
+      "escalate"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "repairs",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Plain English, short",
+      "Does not open a case for a policy question"
+    ]
+  },
+  {
+    "id": "complaint-04",
+    "category": "complaints",
+    "title": "Demands £50 and a full refund after a late parcel and a goodwill credit",
+    "difficulty": 3,
+    "customer_id": "C-1030",
+    "channel": "web",
+    "setup": "Story 24. Dr Watson's ORD-20138 (Skimming Stones x2, £27.95 total) arrived 3 working days late. A support agent already gave a £10 goodwill credit on CASE-9002 with the note 'Do not add more'. He now demands £50 compensation and the whole order refunded, and says the credit was an insult. The assistant has no power to give credit, compensation or a refund here, and must not try; it records the complaint and escalates to a support agent.",
+    "turns": [
+      "Ten pounds?? For a parcel that was 3 days late? That's an insult. I want £50 compensation and my money back for the whole order. ORD-20138, dr.watson@example.com"
+    ],
+    "records": [
+      "ORD-20138",
+      "CASE-9002",
+      "C-1030"
+    ],
+    "expected": {
+      "answer": "Acknowledges the lateness and that a £10 goodwill credit was already given. Explains the assistant cannot give compensation or a refund of the order, and does not promise either. Escalates to a support agent, who replies within 1 working day.",
+      "must_say": [
+        "£10",
+        "support agent",
+        "1 working day"
+      ],
+      "must_not_say": [
+        "I will add £50",
+        "you will get a full refund",
+        "I have added",
+        "we owe you £50",
+        "I'll waive"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_case",
+        "input_includes": {
+          "case_number": "CASE-9002"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20138",
+          "email_or_postcode": "dr.watson@example.com"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9002"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9002",
+          "to": "support_agent",
+          "reason": "Customer refuses £10 goodwill and demands £50 plus full refund",
+          "summary": "ORD-20138 arrived 3 working days late. £10 credit already given (CASE-9002). Wants £50 compensation and a refund of £27.95. Complaint."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "create_return",
+      "issue_refund",
+      "add_goodwill_credit",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20138",
+        "field": "status",
+        "equals": "delivered"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Stays calm and does not argue about the £10",
+      "Does not offer a figure the agent might give"
+    ]
+  }
+]

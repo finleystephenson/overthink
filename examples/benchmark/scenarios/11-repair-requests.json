@@ -1,0 +1,438 @@
+[
+  {
+    "id": "repair-01",
+    "category": "repair requests",
+    "title": "Create an in-warranty repair for the Boombox Mini",
+    "difficulty": 1,
+    "customer_id": "C-1014",
+    "channel": "web",
+    "setup": "Story 13. Robin decides to go ahead with the free Fix Club repair offered in CASE-9012. Boombox Mini ORD-20106, delivered 23 Mar 2026, 24-month warranty, will not charge. He has no registration; the order number is proof.",
+    "turns": [
+      "Right, I'll have that repair done on my Boombox Mini, it still won't charge. ORD-20106, robin.hood@example.com."
+    ],
+    "records": [
+      "ORD-20106",
+      "CASE-9012",
+      "C-1014"
+    ],
+    "expected": {
+      "answer": "Creates one Fix Club repair for the Boombox Mini on ORD-20106 marked in warranty. It is free, with a free label both ways, and aims for 10 working days from the day it arrives at the workshop. Gives the repair number the tool returned.",
+      "must_say": [
+        "free",
+        "10 working days"
+      ],
+      "must_not_say": [
+        "£15",
+        "£35",
+        "£4.95",
+        "registration is required"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "create_repair",
+        "input_includes": {
+          "sku": "OT-BOOM",
+          "order_number": "ORD-20106"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1014"
+        },
+        "count": 1
+      },
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1014"
+        },
+        "field": "in_warranty",
+        "equals": true
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not ask him to register first."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20106",
+          "email_or_postcode": "robin.hood@example.com"
+        }
+      ],
+      [
+        "create_repair",
+        {
+          "sku": "OT-BOOM",
+          "fault": "Will not charge",
+          "order_number": "ORD-20106"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "repair-02",
+    "category": "repair requests",
+    "title": "Create an out-of-warranty Blip battery repair",
+    "difficulty": 2,
+    "customer_id": "C-1015",
+    "channel": "web",
+    "setup": "Story 14. Miss Havisham's Blip (ORD-20101) is out of warranty (ended 23 September 2026). She now asks for the battery replacement. Out of warranty: battery £29 fixed price, £15 assessment fee taken when it arrives and taken off the price if she accepts the quote, £4.95 to post it in, return postage included.",
+    "turns": [
+      "Fine, it's out of warranty. I want the battery on my Blip replaced. How much and what do I do?",
+      "ORD-20101, miss.havisham@example.com. Go ahead and book it in."
+    ],
+    "records": [
+      "ORD-20101",
+      "REG-6002",
+      "C-1015"
+    ],
+    "expected": {
+      "answer": "Creates a Fix Club repair marked out of warranty. Explains the £29 battery price, the £15 assessment fee that comes off the price if she accepts the quote (and is kept if she declines), and £4.95 to post it in. A technician sends a quote, valid 14 days.",
+      "must_say": [
+        "£29",
+        "£15",
+        "£4.95"
+      ],
+      "must_not_say": [
+        "free",
+        "covered by the warranty",
+        "£49"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "create_repair",
+        "input_includes": {
+          "sku": "OT-BLIP",
+          "order_number": "ORD-20101"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "report_problem",
+      "approve_repair_quote"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1015"
+        },
+        "count": 1
+      },
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1015"
+        },
+        "field": "in_warranty",
+        "equals": false
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Quotes only prices from the Blip price list.",
+      "Says the fee comes off the price only if she accepts."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20101",
+          "email_or_postcode": "miss.havisham@example.com"
+        }
+      ],
+      [
+        "create_repair",
+        {
+          "sku": "OT-BLIP",
+          "fault": "Battery fades fast, barely lasts the morning",
+          "order_number": "ORD-20101"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "repair-03",
+    "category": "repair requests",
+    "title": "Approve the existing £49 quote",
+    "difficulty": 1,
+    "customer_id": "C-1002",
+    "channel": "web",
+    "setup": "Story 12. Jane accepts the £49 screen repair quote on FIX-5006 (quote_sent, valid to 4 December). The assistant passes on the approval.",
+    "turns": [
+      "OK, fine. Go ahead with the £49 screen repair. Repair FIX-5006, jane.eyre@example.com."
+    ],
+    "records": [
+      "FIX-5006",
+      "CASE-9007",
+      "C-1002"
+    ],
+    "expected": {
+      "answer": "Approves the quote through the tool. The repair is now approved at £49 and joins the queue. Gives the date the tool returned (7 December) only as the promised date.",
+      "must_say": [
+        "approved",
+        "£49",
+        "7 December"
+      ],
+      "must_not_say": [
+        "free",
+        "£15 assessment fee on top",
+        "repaired by tomorrow"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "approve_repair_quote",
+        "input_includes": {
+          "repair_number": "FIX-5006"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "id": "FIX-5006",
+        "field": "status",
+        "equals": "approved"
+      },
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1002"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not create a second repair for the same fault."
+    ]
+  },
+  {
+    "id": "repair-04",
+    "category": "repair requests",
+    "title": "Sandwich is not Fix Club eligible; helmet re-stitch has no fixed price",
+    "difficulty": 3,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor asks The Fix Club to repair a squashed Emergency Sandwich, then asks the exact price of re-stitching a seam on an Indoor Helmet. Food is not repaired. The helmet re-stitch has no fixed price: a technician quotes after looking at it.",
+    "turns": [
+      "My Emergency Sandwich got squashed in my bag. Can the Fix Club repair it?",
+      "Fair enough. What about my Indoor Helmet, a seam has opened. How much to re-stitch it? Just give me a ballpark."
+    ],
+    "records": [
+      "emergency-sandwich",
+      "indoor-helmet",
+      "fix-club"
+    ],
+    "expected": {
+      "answer": "Says The Fix Club does not repair the sandwich. For the helmet, a re-stitch is eligible but has no fixed price: a technician quotes after seeing it, and the assistant does not guess a number. Says a faulty item is free to repair inside warranty (12 months for the helmet), and an out-of-warranty repair has a £15 assessment fee.",
+      "must_say": [
+        "quote",
+        "£15"
+      ],
+      "must_not_say": [
+        "£20",
+        "£25",
+        "£30",
+        "about £",
+        "I have created a repair"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "emergency-sandwich"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "indoor-helmet"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Refuses to give a ballpark price when the record has none.",
+      "Offers to start a repair if the customer gives an order number."
+    ]
+  },
+  {
+    "id": "repair-05",
+    "category": "repair requests",
+    "title": "Daypack buckle broke: free in warranty, not £8",
+    "difficulty": 2,
+    "customer_id": "C-1020",
+    "channel": "web",
+    "setup": "Jo's Daypack (ORD-20148, delivered 18 Nov 2026) has a buckle that snapped under normal use. The Daypack warranty is 60 months, so it is free. The £8 buckle price only applies out of warranty.",
+    "turns": [
+      "A buckle on my Daypack snapped on the way to work. Can the Fix Club fit a new one? £8 is it?",
+      "ORD-20148, jo.march@example.com"
+    ],
+    "records": [
+      "ORD-20148",
+      "daypack",
+      "C-1020"
+    ],
+    "expected": {
+      "answer": "Creates a Fix Club repair for the Daypack on ORD-20148 marked in warranty. Corrects her assumption: the £8 buckle price is for out-of-warranty repairs, this one is free with a free label both ways, about 10 working days.",
+      "must_say": [
+        "60 months",
+        "free",
+        "10 working days"
+      ],
+      "must_not_say": [
+        "£15 assessment fee",
+        "you will pay £8"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "create_repair",
+        "input_includes": {
+          "sku": "OT-PACK",
+          "order_number": "ORD-20148"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1020",
+          "order_number": "ORD-20148"
+        },
+        "count": 1
+      },
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1020",
+          "order_number": "ORD-20148"
+        },
+        "field": "in_warranty",
+        "equals": true
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Corrects the wrong assumption about the £8."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20148",
+          "email_or_postcode": "jo.march@example.com"
+        }
+      ],
+      [
+        "create_repair",
+        {
+          "sku": "OT-PACK",
+          "fault": "Buckle snapped in normal use",
+          "order_number": "ORD-20148"
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "title": "Raise all prices 10%",
+  "question": "What if we raise all prices 10%?",
+  "start": { "size": "standard" },
+  "days": 30, "seeds": 5,
+  "arms": [
+    { "id": "prices-up-10", "label": "All prices 10% higher", "interventions": [{ "type": "price_change", "params": { "percent": 10 } }] }
+  ]
+}

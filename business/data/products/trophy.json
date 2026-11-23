@@ -1,0 +1,209 @@
+{
+  "id": "trophy",
+  "code": "TROF",
+  "name": "The Trophy",
+  "category": "everyday",
+  "status": "active",
+  "available_from": null,
+  "tagline": "Engraved \"Well done.\" That's all it says.",
+  "summary": "A trophy cup on a wooden base, engraved \"Well done.\" The engraving cannot be changed. Gold, 20 cm tall. £24.",
+  "concept": "A cup on a stem, on a solid base, with a plate engraved \"Well done.\" It is the same on every trophy. That is the point.",
+  "why_it_exists": "Some things deserve a trophy and there is nobody to give you one. Give it to someone, or to yourself.",
+  "target_customer": "People who want to say well done to a friend, a colleague or themselves, and do not want to write the words.",
+  "physical": {
+    "form": "A two-handled cup on a stem, on a square base with a front plate engraved \"Well done.\"",
+    "materials": [
+      "Cast zinc alloy cup with a gold finish",
+      "Solid ash base",
+      "Brass-effect engraved plate"
+    ],
+    "dimensions": "20 cm tall x 12 cm wide x 8 cm deep",
+    "weight": "520 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-TROF",
+      "name": "One size, gold",
+      "options": {},
+      "price": 24,
+      "stock": 0,
+      "restock_date": "2026-12-07"
+    }
+  ],
+  "features": [
+    "Every trophy is engraved with the words \"Well done.\", and the engraving cannot be changed.",
+    "It comes in one size, 20 cm tall, in gold.",
+    "It stands on a solid wooden base, so it feels weighty in the hand.",
+    "A soft cloth comes in the box, so you can keep it shiny."
+  ],
+  "arrives": "The trophy sits in a paper-pulp cradle inside a brown card box, with no plastic. The soft cloth is folded in with it. Open the box, wipe it with the cloth and hand it over.",
+  "specs": [
+    [
+      "Size",
+      "20 cm tall x 12 cm wide (across handles) x 8 cm deep (base)"
+    ],
+    [
+      "Weight",
+      "520 g"
+    ],
+    [
+      "Made of",
+      "Cast zinc alloy cup with a gold finish, solid ash base, brass-effect engraved plate"
+    ],
+    [
+      "Colour",
+      "Gold cup on a pale wood base"
+    ],
+    [
+      "Engraving",
+      "\"Well done.\" Fixed. Cannot be changed or added to."
+    ],
+    [
+      "Cup",
+      "Two handles, on a stem"
+    ],
+    [
+      "Base",
+      "Solid ash, square, about 8 x 8 cm"
+    ],
+    [
+      "In the box",
+      "The Trophy and a soft cloth"
+    ],
+    [
+      "Care",
+      "Dust with the soft cloth. No polish or abrasive cleaners. Keep out of damp."
+    ]
+  ],
+  "how_it_works": "Put it on a shelf. Hand it to someone.",
+  "in_the_box": [
+    "The Trophy",
+    "A soft cloth"
+  ],
+  "accessories": [],
+  "compatibility": [
+    {
+      "with": "custom engraving",
+      "works": false,
+      "note": "The engraving is \"Well done.\" only. We cannot add names, dates or other words."
+    }
+  ],
+  "packaging": "A kraft card box with a paper-pulp cradle. No plastic.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty against faults in how it was made. Tarnish, scratches and knocks are not covered. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Dust with the soft cloth.",
+    "Do not use polish or abrasive cleaners. They remove the finish.",
+    "Keep out of damp."
+  ],
+  "safety": [
+    "It weighs 520 g. Keep it on a stable shelf.",
+    "It is not a toy."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unused and in its box. See Returns."
+  },
+  "fix_club": {
+    "eligible": true,
+    "repairs": [
+      {
+        "code": "TROF-REPLATE",
+        "name": "Re-plating (quoted after assessment)",
+        "price": null
+      }
+    ]
+  },
+  "page": {
+    "headline": "Engraved: Well done.",
+    "intro": "Engraved \"Well done.\" That's all it says.",
+    "sections": [
+      {
+        "title": "What you get",
+        "body": "A gold trophy cup on a solid wooden base, 20 cm tall. £24."
+      },
+      {
+        "title": "The engraving",
+        "body": "It says \"Well done.\" We cannot add a name, a date or anything else."
+      },
+      {
+        "title": "Looking after it",
+        "body": "Dust it with the cloth. Do not use polish."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Can I change the engraving?",
+      "a": "No. It says \"Well done.\" on every trophy."
+    },
+    {
+      "q": "Can you add a name?",
+      "a": "No."
+    },
+    {
+      "q": "How big is it?",
+      "a": "20 cm tall. It weighs 520 g."
+    },
+    {
+      "q": "Is it real gold?",
+      "a": "No. It is a gold finish on a metal cup."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Yes, within 30 days, if it is unused and in its box. The engraving is not a reason for a refund."
+    },
+    {
+      "q": "The finish has worn. Can you fix it?",
+      "a": "Yes. The Fix Club re-plates it. The price is quoted after assessment."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The finish looks dull or marked.",
+      "steps": [
+        "Dust it with the soft cloth.",
+        "Do not use polish or rough cleaners."
+      ],
+      "if_unresolved": "The Fix Club can re-plate it. Open a support case for a quote."
+    },
+    {
+      "problem": "The cup is loose on the base.",
+      "steps": [
+        "Do not twist it.",
+        "Lay it on its side on a soft cloth and look at the fixing."
+      ],
+      "if_unresolved": "Open a support case. A loose cup is a fault under warranty."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "one-good-pen",
+    "biscuit-tin"
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#FFF1C2"
+  },
+  "photography_direction": "Plain and proud. One trophy, centred. The engraved plate is readable. No confetti, no podium.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and pink accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. A trophy cup with two handles on a square off-white base, glossy gold cup, an engraved plate reading Well done. on the base, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and pink accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. Close-up of the engraved plate on the base reading Well done., with the foot of the cup above. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and pink accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. A trophy cup with two handles on a square off-white base, glossy gold cup, an engraved plate reading Well done. on the base, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and pink accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. A kraft box with a paper-pulp cradle holding a trophy, soft cloth folded beside it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and pink accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. A small trophy on a pale shelf beside a mug and a plant. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated sunflower yellow and pink accents, soft studio light, pale pale yellow single-colour backdrop, gentle contact shadow. One trophy centred with generous empty space around it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

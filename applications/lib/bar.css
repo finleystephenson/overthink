@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap");
+
+/* The company's bar, made by lib/topbar.js: Rummage's mark (home), the open app and its plain word, and on the
+   right only what a run brings (the live line, the with/without switch). Both lib/ui.css and lib/premium.css import
+   this file. Self-contained: its own --sb-* tokens and dark mode, and class names (sbar-*) no other stylesheet uses.
+   --sb-h is the bar's height; apps size their screens with calc(100dvh - var(--sb-h)). */
+
+:root {
+  --sb-paper: #F8F7F3; --sb-ink: #1D1E3C; --sb-ink-2: #5C5E7E; --sb-rule: rgb(29 30 60 / .1); --sb-hover: rgb(29 30 60 / .05);
+  --sb-ai: #FF7433; --sb-ai-ink: #1D1E3C;
+  --sb-text: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sb-h: 48px;
+  --bar-h: 48px;
+}
+:root[data-theme="dark"] {
+  --sb-paper: #111226; --sb-ink: #F3F1EA; --sb-ink-2: #A9AAC4; --sb-rule: rgb(255 255 255 / .09); --sb-hover: rgb(255 255 255 / .06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sb-paper: #111226; --sb-ink: #F3F1EA; --sb-ink-2: #A9AAC4; --sb-rule: rgb(255 255 255 / .09); --sb-hover: rgb(255 255 255 / .06);
+  }
+}
+
+.sbar {
+  position: sticky; top: 0; z-index: 50; height: var(--sb-h);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 0 clamp(10px, 2vw, 20px);
+  background: color-mix(in srgb, var(--sb-paper) 92%, transparent);
+  backdrop-filter: saturate(1.3) blur(12px); -webkit-backdrop-filter: saturate(1.3) blur(12px);
+  border-bottom: 1px solid var(--sb-rule);
+  font: 400 14px/1 var(--sb-text); color: var(--sb-ink); -webkit-font-smoothing: antialiased;
+}
+.sbar :focus-visible { outline: 2px solid var(--sb-ai); outline-offset: 2px; }
+.sbar button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; padding: 0; }
+.sbar-left, .sbar-right { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.sbar-left { flex: 1 1 auto; }
+.sbar-right { flex: 0 1 auto; justify-content: flex-end; min-width: 0; }
+
+.sbar-home { display: grid; place-items: center; width: 40px; height: 40px; margin-left: -5px; border-radius: 10px; flex: none; }
+.sbar-home:hover { background: var(--sb-hover); }
+.sbar-home .app-icon { display: block; width: 30px !important; height: 30px !important; transition: transform .35s cubic-bezier(.22, 1, .36, 1); }
+.sbar-home:hover .app-icon { transform: rotate(-6deg); }
+.sbar .app-icon svg { display: block; margin: 18%; }
+.sbar-app { display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap; }
+.sbar-app .app-icon { display: block; width: 24px !important; height: 24px !important; flex: none; }
+.sbar-app b { font-weight: 600; font-size: 15px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.sbar-plain { color: var(--sb-ink-2); overflow: hidden; text-overflow: ellipsis; }
+.sbar-plain::before { content: "· "; }
+
+/* During a run: what your AI is doing now, one line, opening the record. */
+.sbar-live { display: inline-flex; align-items: center; gap: 8px; min-width: 0; max-width: 46vw; height: 32px; padding: 0 12px 0 10px; border-radius: 99px;
+  color: var(--sb-ink); text-decoration: none; font-weight: 500; font-size: 13.5px; box-shadow: inset 0 0 0 1px var(--sb-rule); }
+.sbar-live:hover { background: var(--sb-hover); }
+.sbar-live-t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; animation: sb-rise .4s cubic-bezier(.22, 1, .36, 1); }
+.sbar-pip { width: 7px; height: 7px; border-radius: 99px; background: var(--sb-ai); flex: none; animation: sb-beat 1.8s infinite; }
+@keyframes sb-beat { 0% { box-shadow: 0 0 0 0 rgb(255 116 51 / .5); } 70% { box-shadow: 0 0 0 7px rgb(255 116 51 / 0); } 100% { box-shadow: 0 0 0 0 rgb(255 116 51 / 0); } }
+@keyframes sb-rise { from { opacity: 0; transform: translateY(4px); } }
+
+/* After a run: the business with your AI, or the same moment without it. */
+.sbar-arms { display: inline-flex; padding: 3px; border-radius: 99px; background: var(--sb-hover); box-shadow: inset 0 0 0 1px var(--sb-rule); flex: none; }
+.sbar-arms button { height: 28px; padding: 0 11px; border-radius: 99px; font-size: 12.5px; font-weight: 600; color: var(--sb-ink-2); white-space: nowrap; }
+.sbar-arms button[aria-pressed="true"] { background: var(--sb-paper); color: var(--sb-ink); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+.sbar-arms button[data-arm="with"][aria-pressed="true"] { background: var(--sb-ai); color: var(--sb-ai-ink); }
+
+@media (max-width: 640px) {
+  .sbar { gap: 8px; }
+  .sbar-plain { display: none; }
+  .sbar-live { max-width: none; flex: 1 1 auto; }
+  /* A phone has room for one line: while the run speaks, the app's own icon stands for its name. */
+  .sbar:has(.sbar-live:not([hidden])) .sbar-app b { display: none; }
+  .sbar:has(.sbar-live:not([hidden])) .sbar-left { flex: none; }
+  .sbar-arms button { padding: 0 8px; }
+  .sbar-arms button[data-arm="without"] { font-size: 0; }
+  .sbar-arms button[data-arm="without"]::after { content: "Without"; font-size: 12.5px; }
+}
+@media (pointer: coarse) { .sbar-home { width: 44px; height: 44px; } .sbar-arms button { min-height: 36px; } }
+@media (prefers-reduced-motion: reduce) { .sbar *, .sbar *::before, .sbar *::after { animation: none !important; transition: none !important; } }

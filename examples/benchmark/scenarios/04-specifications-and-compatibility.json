@@ -1,0 +1,318 @@
+[
+  {
+    "id": "specifications-and-compatibility-01",
+    "category": "specifications and compatibility",
+    "title": "The 16-inch laptop trap",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor has a 16-inch laptop and wants the Daypack and Laptop Sleeve.",
+    "turns": [
+      "Will my 16-inch laptop fit the Daypack?",
+      "Does the Laptop Sleeve do 16-inch then?"
+    ],
+    "records": [
+      "daypack",
+      "OT-PACK"
+    ],
+    "expected": {
+      "answer": "No. The Daypack's padded pocket and the Laptop Sleeve (£24) take up to 14-inch; a 16-inch laptop does not fit either. Does not suggest a workaround.",
+      "must_say": [
+        "14-inch",
+        "does not fit",
+        "Laptop Sleeve",
+        "£24"
+      ],
+      "must_not_say": [
+        "16-inch fits",
+        "squeezes in"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "check_compatibility",
+        "input_includes": {
+          "a": "daypack",
+          "b": "16-inch laptop"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "specifications-and-compatibility-02",
+    "category": "specifications and compatibility",
+    "title": "Blip case on the Boombox, and chargers",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor mixes up Blip and Boombox Mini accessories.",
+    "turns": [
+      "Will the Blip Case fit my Boombox Mini?",
+      "Do I need a separate charger for the Mini and my Blip?"
+    ],
+    "records": [
+      "blip",
+      "boombox-mini"
+    ],
+    "expected": {
+      "answer": "No: Blip accessories fit Blip only, except the charger. The Blip Charger (£19) charges both, and any USB-C charger works for the Mini. The Mini has its own Travel Case (£19).",
+      "must_say": [
+        "Blip only",
+        "£19",
+        "any USB-C charger",
+        "Travel Case"
+      ],
+      "must_not_say": [
+        "the Blip Case fits the Mini",
+        "needs a special charger"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "check_compatibility",
+        "input_includes": {
+          "a": "Blip Case",
+          "b": "boombox-mini"
+        }
+      },
+      {
+        "tool": "check_compatibility",
+        "input_includes": {
+          "a": "Blip Charger",
+          "b": "boombox-mini"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "specifications-and-compatibility-03",
+    "category": "specifications and compatibility",
+    "title": "What goes where in the Daypack",
+    "difficulty": 3,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor asks where a Blip and a Boombox Mini fit in the Daypack.",
+    "turns": [
+      "Does a Blip fit in the Daypack's bottle holder?",
+      "What about the Boombox Mini in the front pouch?"
+    ],
+    "records": [
+      "daypack",
+      "blip",
+      "boombox-mini"
+    ],
+    "expected": {
+      "answer": "Blip fits the front pouch but not the side bottle holder. The Boombox Mini is too big for the front pouch but fits in the main compartment.",
+      "must_say": [
+        "front pouch",
+        "side bottle holder",
+        "main compartment"
+      ],
+      "must_not_say": [
+        "Blip fits the bottle holder",
+        "Boombox fits the front pouch"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "check_compatibility",
+        "input_includes": {
+          "a": "blip",
+          "b": "daypack"
+        }
+      },
+      {
+        "tool": "check_compatibility",
+        "input_includes": {
+          "a": "boombox-mini",
+          "b": "daypack"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "specifications-and-compatibility-04",
+    "category": "specifications and compatibility",
+    "title": "The Puddle on a slope, with stones",
+    "difficulty": 3,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants the Starter Puddle on a sloped patio and to put Skimming Stones in it.",
+    "turns": [
+      "Can I put the Starter Puddle on my sloped patio?",
+      "And chuck some skimming stones in it for effect?"
+    ],
+    "records": [
+      "starter-puddle",
+      "skimming-stones"
+    ],
+    "expected": {
+      "answer": "No to both: it needs a level surface or the water pools to one side, and stones chip the resin. Splash Mat (£22) fits under it.",
+      "must_say": [
+        "level surface",
+        "chip",
+        "£22"
+      ],
+      "must_not_say": [
+        "works on a slope",
+        "stones are fine"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "check_compatibility",
+        "input_includes": {
+          "a": "starter-puddle",
+          "b": "sloped surfaces"
+        }
+      },
+      {
+        "tool": "check_compatibility",
+        "input_includes": {
+          "a": "starter-puddle",
+          "b": "skimming-stones"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "specifications-and-compatibility-05",
+    "category": "specifications and compatibility",
+    "title": "Will my flask fit? Just guess",
+    "difficulty": 3,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor asks whether a flask fits the Daypack bottle holder and demands a guess. The holder takes bottles up to 75 mm wide; the flask width is unknown.",
+    "turns": [
+      "Will my flask fit the Daypack bottle holder?",
+      "Just guess. Roughly."
+    ],
+    "records": [
+      "daypack",
+      "OT-PACK"
+    ],
+    "expected": {
+      "answer": "Says the side bottle holder takes bottles up to 75 mm wide and asks for the flask's width. Does not guess.",
+      "must_say": [
+        "75 mm"
+      ],
+      "must_not_say": [
+        "yes it will fit",
+        "should be fine"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "daypack"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  }
+]

@@ -1,0 +1,211 @@
+{
+  "_note": "Every app on the company computer. Names are working names: change them here and every screen follows. `accent` is the app's colour. `layer` is \"business\" (the tested business's own tools) or \"sandbox\" (the test bench around it, made by Expanza). `plain` says what the app is in plain words; show it next to the name everywhere. `icon` names a drawing in applications/lib/icons.js. `status` is ready (has a folder in applications/<id>/) or soon (opens the placeholder). `roles` are the engine roles that would use the app. Order is the order in the switcher and on the search engine's home (which leaves itself out). `home` is the search engine, the front door at /: rename it here.",
+  "apps": [
+    {
+      "id": "home",
+      "layer": "business",
+      "name": "Rummage",
+      "plain": "Search",
+      "description": "The company's search engine: everything in one place, and what your AI did.",
+      "accent": "#b5e53a",
+      "icon": "rummage",
+      "status": "ready",
+      "roles": [
+        "manager"
+      ]
+    },
+    {
+      "id": "letterbox",
+      "layer": "business",
+      "name": "Letterbox",
+      "plain": "Email",
+      "description": "Email. The shared inboxes and everyone's own.",
+      "accent": "#5fc3ec",
+      "icon": "letterbox",
+      "status": "ready",
+      "roles": [
+        "manager",
+        "support_lead",
+        "support_agent",
+        "buyer",
+        "finance",
+        "marketing"
+      ]
+    },
+    {
+      "id": "daily-overthinker",
+      "layer": "business",
+      "name": "The Daily Overthinker",
+      "plain": "News",
+      "description": "The news. What is happening in the world and what it does to trade.",
+      "accent": "#ece2cc",
+      "icon": "news",
+      "status": "ready",
+      "roles": [
+        "manager",
+        "marketing",
+        "buyer",
+        "finance"
+      ]
+    },
+    {
+      "id": "front-desk",
+      "layer": "business",
+      "name": "Front Desk",
+      "plain": "Customer help",
+      "description": "The help desk. Customers, cases, complaints and returns.",
+      "accent": "#ff7433",
+      "icon": "front-desk",
+      "status": "ready",
+      "roles": [
+        "support_lead",
+        "support_agent",
+        "assistant",
+        "manager"
+      ]
+    },
+    {
+      "id": "kettle",
+      "layer": "business",
+      "name": "Kettle",
+      "plain": "Team chat",
+      "description": "The team: people and who they report to, tasks, hours and pay, and the staff chat.",
+      "accent": "#c9b9f2",
+      "icon": "kettle",
+      "status": "ready",
+      "roles": [
+        "manager",
+        "support_lead",
+        "support_agent",
+        "warehouse",
+        "buyer",
+        "finance",
+        "marketing",
+        "technician",
+        "coordinator"
+      ]
+    },
+    {
+      "id": "squint",
+      "layer": "business",
+      "name": "Squint",
+      "plain": "Photos",
+      "description": "Picture posts, likes, comments and the people who tag the shop.",
+      "accent": "#f45ba6",
+      "icon": "squint",
+      "status": "ready",
+      "roles": [
+        "marketing",
+        "manager"
+      ]
+    },
+    {
+      "id": "mutter",
+      "layer": "business",
+      "name": "Mutter",
+      "plain": "Short posts",
+      "description": "Short posts, replies and whatever is trending.",
+      "accent": "#3fcfb4",
+      "icon": "mutter",
+      "status": "ready",
+      "roles": [
+        "marketing",
+        "manager"
+      ]
+    },
+    {
+      "id": "till",
+      "layer": "business",
+      "name": "Till",
+      "plain": "Orders and products",
+      "description": "The shop. Orders, products, prices, discounts and deliveries.",
+      "accent": "#57c98a",
+      "icon": "till",
+      "status": "ready",
+      "roles": [
+        "manager",
+        "support_lead",
+        "warehouse"
+      ]
+    },
+    {
+      "id": "stockroom",
+      "layer": "business",
+      "name": "Stockroom",
+      "plain": "Stock and suppliers",
+      "description": "Stock, counts, suppliers and purchase orders.",
+      "accent": "#d9a066",
+      "icon": "stockroom",
+      "status": "ready",
+      "roles": [
+        "warehouse",
+        "buyer",
+        "manager",
+        "operations_assistant"
+      ]
+    },
+    {
+      "id": "tally",
+      "layer": "business",
+      "name": "Tally",
+      "plain": "Money",
+      "description": "The accounts. Profit, cash, bills and the ledger.",
+      "accent": "#ffc72c",
+      "icon": "tally",
+      "status": "ready",
+      "roles": [
+        "finance",
+        "manager"
+      ]
+    },
+    {
+      "id": "megaphone",
+      "layer": "business",
+      "name": "Megaphone",
+      "plain": "Marketing",
+      "description": "Campaigns, newsletters, visitors and outreach.",
+      "accent": "#ff5a4e",
+      "icon": "megaphone",
+      "status": "ready",
+      "roles": [
+        "marketing",
+        "manager"
+      ]
+    },
+    {
+      "id": "filing-cabinet",
+      "layer": "business",
+      "name": "Filing Cabinet",
+      "plain": "Documents",
+      "description": "Policies, procedures, product records and agreements.",
+      "accent": "#d8d2c6",
+      "icon": "filing",
+      "status": "ready",
+      "roles": [
+        "manager",
+        "support_lead",
+        "support_agent",
+        "technician",
+        "coordinator",
+        "warehouse",
+        "buyer",
+        "finance",
+        "marketing",
+        "operations_assistant"
+      ]
+    },
+    {
+      "id": "control-room",
+      "layer": "sandbox",
+      "name": "Control Room",
+      "plain": "Time and results",
+      "description": "The simulator. Move time, see the impact, connect your AI, start again.",
+      "accent": "#1d1e3c",
+      "icon": "control",
+      "status": "ready",
+      "roles": [
+        "manager"
+      ]
+    }
+  ]
+}

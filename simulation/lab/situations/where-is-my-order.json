@@ -1,0 +1,14 @@
+{
+  "id": "where-is-my-order",
+  "title": "An ordinary \"where is my order?\"",
+  "why": "The everyday case: verify the customer, look the order up, say where it is.",
+  "pick": "order_in_transit",
+  "channel": "email",
+  "opening": "Hello, this is {a.name}. Where is my order? My order is {a.order} and my postcode is {a.postcode}.",
+  "customer": { "max_turns": 2, "satisfied_by": ["read_order"], "follow_up": "Sorry, but you haven't told me where it is. Can you check order {a.order}?" },
+  "checks": [
+    { "kind": "judge", "topic": "where_is_my_order", "pass": ["resolved", "handed_over"] },
+    { "kind": "must_call_any", "tools": ["get_order", "list_orders"], "what": "Looked the order up" },
+    { "kind": "no_wrong_change", "topic": "where_is_my_order" }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+ "_note": "How the outside world answers what the business does: social posts, marketing email, replies to customers, new and ended products, and the optional quality score. Read by sim/audience.mjs and sim/core.mjs. Every number has a value, a one-line why, and a source: a link, or \"assumption\" when we have no source. Change a value and re-run; docs/consequences.md explains each one in plain words.",
+ "social": {
+  "base_reach": { "value": { "squint": 0.12, "mutter": 0.08 }, "why": "Share of followers who see an ordinary company post over its life. Organic reach is commonly quoted at a few to ten per cent.", "source": "assumption" },
+  "decay_days": { "value": { "squint": 1.5, "mutter": 0.6 }, "why": "Hot-score feed: views fall away exponentially with this time constant (photo posts live longer than short posts).", "source": "https://arxiv.org/pdf/2411.11581 (OASIS hot-score feed; the constants are ours)" },
+  "window_days": { "value": 7, "why": "After a week a post is effectively off every feed.", "source": "assumption" },
+  "picture_on_mutter": { "value": 1.5, "why": "A short post with a picture is seen more than one without (squint always has a picture).", "source": "assumption" },
+  "hour_factor": { "value": { "night": 0.5, "morning": 1.1, "day": 1.0, "evening": 1.2, "late": 0.8 }, "why": "Night is 00-06, morning 07-09, day 10-16, evening 17-21, late 22-23: people scroll before work and after dinner.", "source": "assumption" },
+  "weekday_factor": { "value": [1.05, 0.95, 1.0, 1.0, 1.0, 1.05, 1.1], "why": "Sunday first. Weekends have a little more scrolling time.", "source": "assumption" },
+  "length": { "value": { "mutter": { "short": 30, "long": 240, "short_factor": 0.75, "long_factor": 0.9 }, "squint": { "short": 40, "long": 1500, "short_factor": 0.8, "long_factor": 0.85 } }, "why": "Very short posts say nothing; very long ones are skipped.", "source": "assumption" },
+  "names_product": { "value": 1.1, "why": "A post about a real thing is shared more than a general one; it also sends its visitors to that product.", "source": "assumption" },
+  "fits_event": { "value": 1.4, "why": "A post about something happening now (an active world event) travels further.", "source": "assumption" },
+  "offer": { "value": { "engagement": 1.3, "click": 1.5, "conversion": 1.3 }, "why": "A discount or code gets more likes, more clicks and more of those clicks buy.", "source": "assumption" },
+  "fatigue": { "value": { "free_per_week": 3, "per_extra_post": 0.12, "same_day_factor": 0.6 }, "why": "Posting more than three times a week lowers every post's reach (followers mute or scroll past); each extra post the same day reaches 60% of the one before.", "source": "assumption" },
+  "virality_sd": { "value": 0.4, "why": "Spread of luck between posts (log-normal): some posts simply do better.", "source": "assumption" },
+  "like_rate": { "value": { "squint": 0.06, "mutter": 0.025 }, "why": "Likes per person reached.", "source": "assumption" },
+  "comments_per_like": { "value": 0.08, "why": "Comments are much rarer than likes.", "source": "assumption" },
+  "repost_rate": { "value": { "squint": 0.001, "mutter": 0.006 }, "why": "Reposts per person reached; short-post networks repost more.", "source": "assumption" },
+  "reach_per_repost": { "value": 35, "why": "Extra people each repost reaches (one generation only).", "source": "assumption" },
+  "visit_rate": { "value": { "squint": 0.012, "mutter": 0.018 }, "why": "Visits to the shop per person reached (link taps).", "source": "assumption" },
+  "follow_rate": { "value": 0.004, "why": "New followers per person reached who did not follow yet.", "source": "assumption" },
+  "drift_per_day": { "value": 0.001, "why": "With no company post on a network for 14 days, followers drift away at this share a day.", "source": "assumption" },
+  "max_comment_records": { "value": 5, "why": "At most this many comment records are written per post (the count can be higher); keeps the feed readable.", "source": "assumption" }
+ },
+ "shop": {
+  "conversion": { "value": 0.025, "why": "Share of visits that become an order. Shopify global figures run from about 1.4% (home) to 4.9% (beauty).", "source": "https://eightx.co/blog/uk-ecommerce-kpi-benchmark-2026" },
+  "average_order_value": { "value": 45, "why": "Used only to estimate the revenue shown on a post or email when no product is named; the real revenue is in the impact.", "source": "assumption" }
+ },
+ "email": {
+  "min_customer_recipients": { "value": 3, "why": "A sent email to three or more customers counts as marketing mail; fewer is a personal email.", "source": "assumption" },
+  "open_rate": { "value": 0.3, "why": "Share of recipients who open a marketing email.", "source": "assumption" },
+  "click_rate": { "value": 0.08, "why": "Share of openers who click through to the shop.", "source": "assumption" },
+  "unsubscribe_rate": { "value": 0.003, "why": "Share of recipients who unsubscribe after an ordinary mail.", "source": "assumption" },
+  "not_opted_in_unsubscribe": { "value": 6, "why": "Mailing someone who never opted in makes them far likelier to unsubscribe.", "source": "assumption" },
+  "fatigue": { "value": { "free_per_fortnight": 2, "open_per_extra": 0.2, "unsubscribe_per_extra": 0.5 }, "why": "More than two marketing mails a fortnight: fewer opens, more unsubscribes.", "source": "assumption" },
+  "decay_days": { "value": 1, "why": "Most opens happen in the first day or two.", "source": "assumption" },
+  "window_days": { "value": 4, "why": "After four days a marketing mail is buried.", "source": "assumption" }
+ },
+ "replies": {
+  "fast_hours": { "value": 4, "why": "A public reply or private message within four hours counts as fast.", "source": "assumption" },
+  "slow_hours": { "value": 48, "why": "After two days a reply still helps a little.", "source": "assumption" },
+  "min_helpful_chars": { "value": 25, "why": "Shorter than this is not a helpful answer.", "source": "assumption" },
+  "points_fast": { "value": 0.6, "why": "Customer memory points for a fast, helpful reply (the same scale as sim.json customers).", "source": "assumption" },
+  "points_slow": { "value": 0.2, "why": "Memory points for a helpful reply that came late.", "source": "assumption" },
+  "points_unhelpful": { "value": -0.1, "why": "A curt reply does slight harm.", "source": "assumption" },
+  "public_complaint_reputation": { "value": 0.004, "why": "A fast, helpful public answer to a complaint lifts reputation (0 to 1 scale) a little; other people see it.", "source": "assumption" },
+  "email_csat": { "value": { "fast_helpful": 4.4, "slow_helpful": 3.6, "unhelpful": 2.2 }, "why": "Satisfaction (1 to 5) for a person's email reply to a customer, by speed and whether it addressed their order or topic.", "source": "assumption" }
+ },
+ "products": {
+  "novelty_boost": { "value": 1.5, "why": "A newly launched product sells up to 2.5 times its settled rate, fading away.", "source": "assumption" },
+  "novelty_days": { "value": 30, "why": "Time constant of the novelty fade.", "source": "assumption" },
+  "cannibalisation": { "value": 0.3, "why": "Share of a new product's sales taken from the rest of the range rather than new.", "source": "assumption" },
+  "switch_share": { "value": 0.4, "why": "Share of an ended product's demand that moves to products in the same category; the rest is lost.", "source": "assumption" },
+  "price_elasticity_in_category": { "value": 1.0, "why": "A new product priced above its category's typical price sells less, in proportion.", "source": "assumption" }
+ },
+ "quality": {
+  "range": { "value": [0.6, 1.5], "why": "An optional judged quality score (0 to 1) maps onto this range of response; 0.5 or no score gives 1.", "source": "assumption" }
+ }
+}

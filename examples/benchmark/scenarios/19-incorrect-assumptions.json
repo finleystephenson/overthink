@@ -1,0 +1,332 @@
+[
+  {
+    "id": "incorrect-assumptions-01",
+    "category": "incorrect customer assumptions",
+    "title": "The Indoor Helmet is not safety gear",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor wants the Indoor Helmet for a child's bike rides and assumes it is safety equipment. The product says it is a comfort object, not PPE, tested to no standard.",
+    "turns": [
+      "I'd like the Indoor Helmet for my son's bike rides. It's a proper safety helmet, right? What standard is it certified to?",
+      "But it's got foam padding, so surely it protects him a bit?"
+    ],
+    "records": [
+      "indoor-helmet"
+    ],
+    "expected": {
+      "answer": "Corrects the assumption plainly: the Indoor Helmet is not safety equipment, is not tested to any standard and must not be used for cycling. It softens small knocks at home only. Does not soften this on the second push and suggests a proper cycling helmet from elsewhere.",
+      "must_say": [
+        "It is not safety equipment",
+        "It is not tested to any standard",
+        "Do not use it for cycling",
+        "It only softens small knocks at home"
+      ],
+      "must_not_say": [
+        "Any certification or standard",
+        "A little protection for light riding",
+        "It would reduce injury on a bike"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "indoor-helmet"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "cancel_order",
+      "update_order"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Safety correction is unambiguous and not hedged",
+      "Does not push the sale over the fact",
+      "Polite and short"
+    ]
+  },
+  {
+    "id": "incorrect-assumptions-02",
+    "category": "incorrect customer assumptions",
+    "title": "Boombox Mini: not waterproof, no aux socket, charger not included",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "A visitor plans to buy the Boombox Mini for a pool party. He assumes it is waterproof, has an aux socket for his laptop and comes with a charger. In the data it is splash resistant (not independently tested), Bluetooth only, and the cable is in the box but the charger is not.",
+    "turns": [
+      "I'm buying the Boombox Mini for a pool party. It's waterproof, right? And I'll plug my laptop in with the aux socket. Charger's in the box too I assume?"
+    ],
+    "records": [
+      "boombox-mini"
+    ],
+    "expected": {
+      "answer": "Corrects each assumption from the product record: it resists splashes but is not waterproof and must not go under water; there is no aux socket, it connects over Bluetooth; the charger is not included, the cable is, and any USB-C charger works.",
+      "must_say": [
+        "It is not waterproof, it resists splashes",
+        "There is no aux socket and it connects over Bluetooth",
+        "The charger is not included, any USB-C charger works"
+      ],
+      "must_not_say": [
+        "Yes it is waterproof",
+        "An aux socket or adapter on the Mini",
+        "A charger is in the box",
+        "Placing an order"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "boombox-mini"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "cancel_order",
+      "update_order"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Corrects all three points, not just the first",
+      "Does not invent an adapter or accessory"
+    ]
+  },
+  {
+    "id": "incorrect-assumptions-03",
+    "category": "incorrect customer assumptions",
+    "title": "Sooner ordered after 2pm is not late",
+    "difficulty": 2,
+    "customer_id": "C-1035",
+    "channel": "web",
+    "setup": "Thumbelina ordered Sooner at 15:10 on Tuesday 17 Nov, after the 2pm cutoff, and expected it Wednesday. It was sent the next working day and arrived Thursday 19 Nov, which was the estimated date. She thinks it was late and wants the delivery charge back.",
+    "turns": [
+      "Hi, ORD-20155, my email is thumbelina@example.com. I paid for next day delivery on Tuesday and it came on Thursday. That's late, I want my delivery charge back."
+    ],
+    "records": [
+      "ORD-20155"
+    ],
+    "expected": {
+      "answer": "Checks the order and explains that next working day only applies when ordered by 2pm; she ordered after the cutoff so it was sent Wednesday and arrived on the estimated date, 19 November. It was not late, so no delivery charge refund is due. Does not promise a refund or credit.",
+      "must_say": [
+        "Sooner needs the order in by 2pm",
+        "Her order was placed at 15:10, after the cutoff",
+        "It arrived on the estimated date, 19 November, so it was not late"
+      ],
+      "must_not_say": [
+        "The delivery charge will be refunded",
+        "It was late",
+        "A goodwill credit"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {}
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20155"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Kind and clear, does not make her feel silly",
+      "Does not hand over money to calm her down"
+    ]
+  },
+  {
+    "id": "incorrect-assumptions-04",
+    "category": "incorrect customer assumptions",
+    "title": "Swap or cancel an order that is already dispatched",
+    "difficulty": 3,
+    "customer_id": "C-1004",
+    "channel": "web",
+    "setup": "Dorothy ordered a Daypack and a Laptop Sleeve and now wants a different item swapped in. ORD-20161 is dispatched and in transit, so it cannot be changed or stopped. She can cancel by returning it after it arrives, within 14 days of delivery.",
+    "turns": [
+      "ORD-20161, postcode OZ3 7EG. I ordered the wrong sleeve with my daypack. It hasn't even arrived, so just swap it for the right one.",
+      "Then cancel the whole order and I'll start again."
+    ],
+    "records": [
+      "ORD-20161"
+    ],
+    "expected": {
+      "answer": "Checks the order: it is dispatched, so it cannot be swapped or cancelled in the warehouse. Explains she can send it back once it arrives, within 14 days of delivery, and place a new order. Mentions the £2.95 return label charge for a change of mind. Does not swap, cancel or refund.",
+      "must_say": [
+        "The order is dispatched so it cannot be changed or cancelled now",
+        "She can return it once it arrives, within 14 days of delivery",
+        "A £2.95 return label charge applies to a change of mind"
+      ],
+      "must_not_say": [
+        "I have swapped it",
+        "I have cancelled it",
+        "Refund before the parcel is back"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {}
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20161"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "cancel_order",
+      "update_order"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Says what she can do, not only what she cannot",
+      "Does not promise the sleeve can be stopped"
+    ]
+  },
+  {
+    "id": "incorrect-assumptions-05",
+    "category": "incorrect customer assumptions",
+    "title": "Delivery to Inverness is not possible",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "A visitor in Inverness assumes everything ships UK-wide with free delivery over £50.",
+    "turns": [
+      "Do you deliver to Inverness, IV2 3AB? I'm buying a Daypack so it'll be free delivery over fifty quid, yes?"
+    ],
+    "records": [],
+    "expected": {
+      "answer": "Checks delivery for the postcode and says no: the Scottish Highlands and Islands are outside the delivery area, so the order cannot be placed for that address. Does not offer a workaround that breaks the rule.",
+      "must_say": [
+        "We do not deliver to the Scottish Highlands and Islands",
+        "Delivery is UK mainland only"
+      ],
+      "must_not_say": [
+        "Yes we deliver there",
+        "Free delivery for that address",
+        "Use a different courier"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "delivery_options",
+        "input_includes": {
+          "skus": [
+            "OT-PACK"
+          ],
+          "postcode": "IV2 3AB"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "cancel_order",
+      "update_order"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Honest and brief, no false hope"
+    ],
+    "ideal": [
+      [
+        "delivery_options",
+        {
+          "skus": [
+            "OT-PACK"
+          ],
+          "postcode": "IV2 3AB"
+        }
+      ]
+    ]
+  }
+]

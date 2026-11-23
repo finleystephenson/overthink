@@ -1,0 +1,22 @@
+{
+  "_note": "Running costs, read by sim/. Staff pay comes from staff.json (hours x hourly_pay x (1 + on_cost_rate)). Card fees and carrier costs are charged by the engine itself on every order and parcel (they match tools/world/money.mjs: 1.5% + 20p, and £2.90 standard, £5.10 next-day, £6.80 chilled), so the simulator reads them from the ledger and does not charge them twice. The engine's own fixed-cost lines (wages, rent, software, marketing_spend) are ignored by the simulator, which charges the ones below instead. Numbers per month are for a team sized for staff.json's reference_orders_per_day; the simulator scales them with --scale.",
+  "on_cost_rate": 0.14,
+  "overtime_rate": 1.5,
+  "rent_per_month": 1850,
+  "software_per_month": 420,
+  "insurance_per_month": 180,
+  "utilities_per_month": 240,
+  "packaging_per_order": 0.38,
+  "marketing_per_month": 2600,
+  "marketing_december_multiplier": 1.4,
+  "outreach_cost": { "email": 0.0, "letter": 0.85, "phone": 0.0, "visit": 14.0 },
+  "card_fee": { "rate": 0.015, "fixed": 0.2, "source": "engine ledger payment_fee" },
+  "delivery_cost_per_parcel": { "standard": 2.9, "next-day": 5.1, "chilled": 6.8, "source": "engine ledger delivery_cost" },
+  "days_per_month": 30.4,
+  "assumptions": [
+    "Staff are paid for their contracted hours whether busy or not; extra work is overtime at 1.5 times for people marked overtime: true.",
+    "Time saved by a tool is valued at the pay of the people whose task minutes fell (pay including on-costs), because that is what it would cost to buy back.",
+    "Rent, software, insurance and utilities do not change with a tool, so they cancel out in the comparison; they are there so each run's profit is real.",
+    "Packaging is charged per order and is not in the engine's cost of goods."
+  ]
+}

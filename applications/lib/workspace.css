@@ -1,0 +1,104 @@
+/* The workspace layout shared by the business's admin apps (Till, Tally, Stockroom, Megaphone, Rota), taken from
+   Letterbox (the template): a rail of views on the left (paper) with one ink pill for the main action, and one
+   view on the right that scrolls on its own. Plus the few parts those views share: four figures in a row, ruled
+   tables, section heads, filter chips, a search box and the line of feedback that sits beside a button.
+   Load after ../lib/premium.css. Markup:
+     <div class="ws"><nav class="ws-rail">[a.btn.primary.ws-main-btn] <ul class="rail-list"><li><a class="rail-row">…</a></li></ul></nav>
+       <section class="ws-view"><div class="v-wrap">…</div></section></div> */
+
+.ws-body { height: 100dvh; overflow: hidden; }
+.ws { display: grid; grid-template-columns: 232px minmax(0, 1fr); height: calc(100dvh - var(--sb-h)); min-height: 0; }
+.w5 { font-weight: 500; }
+.muted { color: var(--x-ink-2); }
+.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.grow { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.t-label { font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+kbd { font: 400 12px/1 var(--x-mono); padding: 2px 5px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--x-rule); color: var(--x-ink); }
+
+/* ------------------------------------------------------------------ the rail */
+.ws-rail { min-height: 0; overflow-y: auto; padding: 14px 10px 24px; border-right: 1px solid var(--x-rule-soft); background: var(--x-paper); }
+.ws-main-btn { width: calc(100% - 4px); margin: 0 2px 18px; justify-content: flex-start; padding: 0 16px; }
+.rail-h { padding: 14px 10px 6px; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.rail-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
+.rail-row { display: flex; align-items: center; gap: 10px; width: 100%; height: 34px; padding: 0 10px; border: 0; border-radius: 8px; background: none; color: var(--x-ink); font: 400 14.5px/1 var(--x-text); text-align: left; text-decoration: none; }
+.rail-row .i { color: var(--x-ink-2); flex: none; }
+.rail-row:hover { background: var(--hover); }
+.rail-row.is-on { background: var(--x-tint); font-weight: 500; }
+.rail-name { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rail-count { font: 400 12.5px/1 var(--x-mono); font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------------ one view */
+.ws-view { min-height: 0; overflow-y: auto; outline: none; }
+.v-wrap { max-width: 1180px; margin: 0 auto; padding: 28px clamp(16px, 3vw, 40px) 64px; }
+.v-wrap.is-wide { max-width: 1400px; }
+.sect { margin-top: 36px; }
+.sect.first, .v-wrap > .sect:first-child { margin-top: 0; }
+.sect-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.t-h { font: 600 19px/1.2 var(--x-display); letter-spacing: -.02em; }
+.sect > .t-h { margin-bottom: 10px; }
+.t-lede { margin-top: 4px; font-size: 14px; color: var(--x-ink-2); max-width: 66ch; }
+.said { font-size: 13.5px; color: var(--x-ink-2); }
+.said:empty { display: none; }
+.said.good { color: var(--x-good); }
+.said.bad, .is-bad { color: var(--x-bad); }
+.is-good { color: var(--x-good); }
+
+/* Four figures in one row, no cards; the label above in grey; the biggest number on the screen is 28px. */
+.figs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0; padding-bottom: 20px; border-bottom: 1px solid var(--x-rule-soft); }
+.fig { display: grid; align-content: start; gap: 6px; min-width: 0; }
+.fig dt { font-size: 13.5px; color: var(--x-ink-2); }
+.fig dd { margin: 0; font: 600 28px/1 var(--x-display); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.fig small { font-size: 13px; color: var(--x-ink-2); }
+
+/* Filter chips and a search box, in a header bar above a list. */
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.search { display: flex; align-items: center; gap: 8px; flex: 0 1 320px; height: 36px; padding: 0 12px; border-radius: 8px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); color: var(--x-ink-2); }
+.search:focus-within { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.search input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; outline: none; font: 400 14px/1 var(--x-text); color: var(--x-ink); }
+.search input:focus-visible { box-shadow: none; }
+.select.is-small { width: auto; min-height: 36px; height: 36px; padding: 0 30px 0 12px; font-size: 14px; }
+
+/* Ruled tables: labels in mono, 44px rows, money right-aligned in tabular figures. */
+.tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tbl th { padding: 0 8px 6px; border-bottom: 1px solid var(--x-rule); font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); text-align: left; white-space: nowrap; }
+.tbl td { height: 44px; padding: 4px 8px; border-bottom: 1px solid var(--x-rule-soft); }
+.tbl .r { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tbl .mono { font: 400 12.5px/1.3 var(--x-mono); white-space: nowrap; }
+.tbl tr.is-changed td { animation: ws-arrive .6s var(--x-ease) both; }
+/* Ruled rows (lists in a panel or a section). */
+.od-rows { list-style: none; margin: 0; padding: 0; }
+.od-rows li { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 6px 0; border-bottom: 1px solid var(--x-rule-soft); font-size: 14.5px; }
+.od-rows li:first-child { border-top: 1px solid var(--x-rule-soft); }
+.od-rows b { font-weight: 400; overflow: hidden; text-overflow: ellipsis; }
+.od-rows small { font-size: 12.5px; color: var(--x-ink-2); }
+.od-rows time { flex: none; width: 76px; font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.od-rows li.is-changed { animation: ws-arrive .6s var(--x-ease) both; }
+.od-sub { font-size: 13.5px; color: var(--x-ink-2); }
+.od-h { margin: 0 0 6px; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.od-sect { margin-top: 24px; }
+/* A thin bar in ink for a share of a whole (one hue, never a rainbow). */
+.share { display: block; height: 4px; border-radius: 2px; background: var(--x-tint); overflow: hidden; }
+.share i { display: block; height: 100%; width: calc(var(--w) * 100%); background: var(--x-ink); }
+/* Forms that open in place. */
+.act-form:empty { display: none; }
+.act { display: grid; gap: 12px; margin-top: 12px; padding: 14px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--x-rule); background: var(--x-card); }
+.act-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+.act-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.more { margin-top: 18px; }
+@keyframes ws-arrive { from { background: var(--x-wash); } }
+
+@media (max-width: 860px) {
+  .ws { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .ws-rail { display: flex; align-items: center; gap: 8px; padding: 8px 12px; overflow-x: auto; overflow-y: hidden; border-right: 0; border-bottom: 1px solid var(--x-rule-soft); }
+  .ws-main-btn { width: auto; margin: 0; flex: none; }
+  .ws-main-btn span { display: none; }
+  .ws-main-btn.icon-only { width: 40px; }
+  .rail-h { display: none; }
+  .rail-list { display: flex; gap: 2px; }
+  .rail-row { white-space: nowrap; width: auto; }
+  .rail-row .i { display: none; }
+  .figs { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 18px; }
+  .search { flex: 1 1 100%; }
+}

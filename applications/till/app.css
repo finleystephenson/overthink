@@ -1,0 +1,155 @@
+/* Till: the shop's admin, built like Letterbox (the template). The rail-and-view layout and the shared parts come
+   from ../lib/workspace.css, parts from ../lib/premium.css and ../lib/charts.css; this file is the few shop-only parts. Products are the subject here, so their pictures stay large; everything
+   else is ink, greys and hairlines. Money is right-aligned in tabular figures; the biggest number is 28px. */
+
+.figs-loading { padding: 8px 0 24px; }
+.t-chart { margin-top: 20px; }
+.t-chart .t-label { margin-bottom: 10px; }
+.t-cols { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr); gap: 32px; }
+.todo { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--x-rule-soft); }
+.todo li { border-bottom: 1px solid var(--x-rule-soft); }
+.todo a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 0 4px; color: var(--x-ink); text-decoration: none; font-size: 14.5px; }
+.todo a:hover { background: var(--hover); }
+.todo .i { color: var(--x-ink-2); flex: none; }
+
+/* Product cards: the picture large and flush, a hairline ring, no shadow, no badges. */
+.strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 28px; }
+.pcard { display: grid; align-content: start; padding: 0; border: 0; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); color: var(--x-ink); text-align: left; text-decoration: none; overflow: hidden; }
+.pcard:hover { box-shadow: inset 0 0 0 1px var(--x-rule); }
+.pcard-pic { display: block; aspect-ratio: 4 / 3; background: var(--sweep, var(--x-tint)); overflow: hidden; }
+.pcard-pic img { width: 100%; height: 100%; object-fit: cover; }
+.pcard.is-off .pcard-pic img { opacity: .55; }
+.pcard-body { display: grid; gap: 3px; padding: 10px 12px 12px; min-width: 0; }
+.pcard-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.pcard-name { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 500 14.5px/1.3 var(--x-text); }
+.pcard-price { flex: none; font-size: 14px; font-variant-numeric: tabular-nums; }
+.pcard-sub { font-size: 13px; color: var(--x-ink-2); }
+.pcard-change { font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink); }
+
+/* Thumbnails: a product's picture on its own colour, square-ish, no ring. */
+.thumb { display: block; flex: none; width: var(--s); height: var(--s); border-radius: 6px; background: var(--sweep, var(--x-tint)); overflow: hidden; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Orders as a table: 52px rows, money right-aligned, one coloured pill at most. */
+.o-count { margin: 18px 0 6px; }
+.o-head, .o-row { display: grid; grid-template-columns: 40px minmax(0, 2.2fr) 120px minmax(0, 1.3fr) 92px 130px 88px; align-items: center; gap: 14px; }
+.o-head { padding: 0 8px 6px; border-bottom: 1px solid var(--x-rule); font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.o-head span:last-child { text-align: right; }
+.o-table { list-style: none; margin: 0; padding: 0; }
+.o-li { border-bottom: 1px solid var(--x-rule-soft); }
+.o-row { width: 100%; min-height: 52px; padding: 6px 8px; border: 0; border-radius: 6px; background: none; color: var(--x-ink); text-align: left; font-size: 14.5px; }
+.o-row:hover { background: var(--hover); }
+.o-what, .o-who { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.o-who { color: var(--x-ink-2); }
+.o-num, .o-when { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); white-space: nowrap; }
+.o-state { min-width: 0; }
+.t-status { font-size: 13.5px; color: var(--x-ink-2); white-space: nowrap; }
+.o-total { text-align: right; font-variant-numeric: tabular-nums; }
+.o-li.is-new .o-row { animation: ws-arrive .6s var(--x-ease) both; }
+.t-cols .o-head { display: none; }
+.t-cols .o-row { grid-template-columns: 40px minmax(0, 1fr) 70px 110px 80px; }
+.t-cols .o-num, .t-cols .o-who { display: none; }
+
+
+/* The price-change form for the whole shop. */
+.bulk { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(0, 1.6fr); gap: 20px; align-items: center; padding: 18px 20px; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.bulk-text p { margin-top: 4px; font-size: 14px; color: var(--x-ink-2); }
+.bulk-form { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.bulk-pct { display: flex; align-items: center; gap: 6px; }
+.bulk-pct .input { width: 76px; font-variant-numeric: tabular-nums; }
+.bulk-why { flex: 1 1 180px; width: auto; }
+.bulk-form .said { flex-basis: 100%; }
+
+/* Deliveries: a board of at most four columns; cards are a title and one line. */
+.lanes-note { margin-bottom: 14px; }
+.lanes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; align-items: start; }
+.lane { min-width: 0; padding: 10px; border-radius: 12px; background: var(--x-tint); }
+.lane-head { display: flex; align-items: baseline; justify-content: space-between; padding: 2px 4px 10px; font: 500 14.5px/1.2 var(--x-text); }
+.lane-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.parcel { display: grid; gap: 6px; width: 100%; padding: 10px 12px; border: 0; border-radius: 8px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); color: var(--x-ink); text-align: left; }
+.parcel:hover { box-shadow: inset 0 0 0 1px var(--x-rule); }
+.parcel-top { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.parcel-top b { flex: 1; font: 500 14px/1.2 var(--x-text); }
+.parcel-top .thumb + b { margin-left: 2px; }
+.parcel-sub { font-size: 13px; color: var(--x-ink-2); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.lane-empty, .lane-more { padding: 8px 4px; font-size: 13.5px; color: var(--x-ink-2); }
+
+/* ------------------------------------------------------------------ the slide-overs: an order, a product */
+.od-top { display: flex; align-items: center; gap: 12px; }
+.track { list-style: none; margin: 18px 0 20px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+.track li { position: relative; display: grid; gap: 8px; font-size: 13px; color: var(--x-ink-2); }
+.track li::before { content: ""; position: absolute; top: 4px; left: 0; right: 0; height: 1px; background: var(--x-rule); }
+.track li.is-done::before { background: var(--x-ink); }
+.track i { position: relative; width: 9px; height: 9px; border-radius: 50%; background: var(--x-card); box-shadow: inset 0 0 0 1.5px var(--x-rule); }
+.track li.is-done { color: var(--x-ink); }
+.track li.is-done i { background: var(--x-ink); box-shadow: none; }
+.od-lines, .od-rows { list-style: none; margin: 0; padding: 0; }
+.od-lines li, .od-rows li { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 6px 0; border-bottom: 1px solid var(--x-rule-soft); font-size: 14.5px; }
+.od-lines li:first-child, .od-rows li:first-child { border-top: 1px solid var(--x-rule-soft); }
+.od-lines b, .od-rows b { font-weight: 400; overflow: hidden; text-overflow: ellipsis; }
+.od-lines small, .od-rows small { font-size: 12.5px; color: var(--x-ink-2); }
+.od-rows time { flex: none; width: 76px; font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.od-rows li.is-changed { animation: ws-arrive .6s var(--x-ease) both; }
+.sums { margin: 10px 0 0 auto; max-width: 320px; display: grid; gap: 4px; }
+.sums div { display: flex; justify-content: space-between; gap: 16px; font-size: 14px; color: var(--x-ink-2); }
+.sums dd { margin: 0; font-variant-numeric: tabular-nums; color: var(--x-ink); }
+.sums .sum-total { padding-top: 6px; border-top: 1px solid var(--x-rule-soft); color: var(--x-ink); font-weight: 500; }
+.od-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+.od-person { display: flex; align-items: center; gap: 10px; }
+.od-person span { display: grid; }
+.od-person small { font-size: 12.5px; color: var(--x-ink-2); }
+.od-addr { margin-top: 8px; font-size: 14px; color: var(--x-ink-2); }
+.linkish { padding: 0; border: 0; background: none; color: var(--x-ink); font: 500 14.5px/1.3 var(--x-text); text-align: left; text-decoration: underline; text-decoration-color: var(--x-rule); text-underline-offset: 3px; }
+.history { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.history li { display: grid; grid-template-columns: 84px 1fr; gap: 10px; font-size: 14px; }
+.history time { font: 400 12.5px/1.5 var(--x-mono); color: var(--x-ink-2); }
+.od-acts .said { margin-top: 10px; }
+.radios { display: grid; gap: 6px; margin: 0; padding: 0; border: 0; font-size: 14.5px; }
+.radios legend { margin-bottom: 4px; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.radios input { accent-color: var(--x-ink); }
+.ph { margin: 0; aspect-ratio: 16 / 9; border-radius: 12px; background: var(--sweep); overflow: hidden; }
+.ph img { width: 100%; height: 100%; object-fit: cover; }
+.ph-tag { margin-top: 14px; font: 600 19px/1.25 var(--x-display); letter-spacing: -.02em; }
+.ph-sum { margin-top: 10px; max-width: 66ch; font-size: 15px; line-height: 1.6; }
+.var-price { min-width: 72px; }
+.nudge { display: flex; align-items: center; gap: 8px; }
+.nudge-num { display: flex; align-items: center; gap: 4px; height: 40px; padding: 0 12px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--x-rule); }
+.nudge-num:focus-within { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.nudge-num span { color: var(--x-ink-2); }
+.nudge-num input { width: 90px; border: 0; background: none; outline: none; font: 600 19px/1 var(--x-display); font-variant-numeric: tabular-nums; color: var(--x-ink); }
+.nudge-num input:focus-visible { box-shadow: none; }
+.nudge-diff { font-size: 13.5px; color: var(--x-ink-2); }
+/* Things sold each day: grey before the change, ink after, the spark on the day it changed. */
+.ubars { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; align-items: end; gap: 2px; height: 64px; margin: 10px 0 12px; border-bottom: 1px solid var(--x-rule); }
+.ubars i { display: block; height: max(var(--h), 1px); border-radius: 1px 1px 0 0; background: var(--x-rule); }
+.ubars i.is-after { background: var(--x-ink); }
+.ubars i.is-mark { background: var(--x-spark); }
+.effect { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.effect > div { display: grid; gap: 4px; }
+.fig-num { font: 600 24px/1 var(--x-display); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.fig-num.is-good { color: var(--x-good); }
+.fig-num.is-bad { color: var(--x-bad); }
+
+/* ------------------------------------------------------------------ narrower screens */
+@media (max-width: 1180px) {
+  .strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .strip > :nth-child(n + 4) { display: none; }
+  .o-head, .o-row { grid-template-columns: 40px minmax(0, 1fr) 110px 86px 120px 80px; }
+  .o-who, .o-head span:nth-child(4) { display: none; }
+  .t-cols { grid-template-columns: 1fr; }
+  .bulk { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .strip > :nth-child(n + 3) { display: none; }
+  .o-head { display: none; }
+  .o-row { grid-template-columns: 40px minmax(0, 1fr) auto; grid-template-rows: auto auto; row-gap: 2px; }
+  .o-row > .thumb { grid-row: 1 / 3; }
+  .o-num, .o-who { display: none; }
+  .o-when { grid-column: 2; grid-row: 2; }
+  .o-state { grid-column: 3; grid-row: 2; text-align: right; }
+  .o-total { grid-column: 3; grid-row: 1; }
+  .t-cols .o-row { grid-template-columns: 40px minmax(0, 1fr) auto; }
+    .od-grid, .effect { grid-template-columns: 1fr; }
+  }

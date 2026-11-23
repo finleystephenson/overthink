@@ -1,0 +1,9 @@
+{
+  "title": "One more person for customer help",
+  "question": "What if we hire one more person for customer help?",
+  "start": { "size": "standard" },
+  "days": 30, "seeds": 5,
+  "arms": [
+    { "id": "one-more-agent", "label": "One more support agent, 28 hours a week", "interventions": [{ "type": "staffing", "params": { "action": "hire", "role": "support_agent", "weekly_hours": 28 } }] }
+  ]
+}

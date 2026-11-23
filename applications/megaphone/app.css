@@ -1,0 +1,101 @@
+/* Megaphone: marketing. The rail-and-view layout and the shared parts come from ../lib/workspace.css; charts and
+   "what your changes did" from ../lib/charts.css. This file is the few marketing-only parts: the budget slider,
+   the newsletter composer (shaped like Letterbox's), the campaign table, the social summaries, the prospect board.
+   One hue for every bar; colour only for results. */
+
+.chip-n { font: 400 12.5px/1 var(--x-mono); opacity: .75; }
+.sr-state { font-size: 13px; color: var(--x-ink-2); white-space: nowrap; }
+.mg-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.mg-bar { width: 34%; }
+.mg-note { margin-top: 10px; }
+.mg-sub { display: block; font-size: 12.5px; color: var(--x-ink-2); }
+.mg-tools { margin: 24px 0 12px; }
+.check { display: flex; align-items: center; gap: 8px; font-size: 14.5px; }
+.check input { width: 16px; height: 16px; accent-color: var(--x-ink); }
+
+/* The budget: the figure, a slider in ink with a tick at the plan, and one button. */
+.mg-budget { display: grid; gap: 8px; padding: 18px 20px; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.mg-b-num { display: flex; align-items: baseline; gap: 8px; }
+.mg-b-num b { font: 600 28px/1 var(--x-display); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.mg-b-num span { color: var(--x-ink-2); font-size: 14px; }
+.mg-slide { -webkit-appearance: none; appearance: none; width: 100%; height: 20px; margin: 6px 0 0; background: transparent; --fill: 0%; }
+.mg-slide::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--x-ink) var(--fill), var(--x-tint) var(--fill)); }
+.mg-slide::-moz-range-track { height: 4px; border-radius: 2px; background: var(--x-tint); }
+.mg-slide::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--x-ink); }
+.mg-slide::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7px; border-radius: 50%; background: var(--x-card); box-shadow: inset 0 0 0 2px var(--x-ink); }
+.mg-slide::-moz-range-thumb { width: 18px; height: 18px; border: 0; border-radius: 50%; background: var(--x-card); box-shadow: inset 0 0 0 2px var(--x-ink); }
+.mg-slide:focus-visible { box-shadow: none; }
+.mg-slide:focus-visible::-webkit-slider-thumb { box-shadow: inset 0 0 0 2px var(--x-ink), 0 0 0 3px var(--x-spark); }
+.mg-scale { display: flex; justify-content: space-between; }
+.mg-budget .act-row { margin-top: 6px; }
+
+/* Campaigns. */
+.mg-camps td { height: 56px; }
+.mg-camps td:first-child { max-width: 280px; }
+
+/* The newsletter: a composer like Letterbox's sheet, set in the page. */
+.mg-news { align-items: start; }
+.mg-compose { border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule); overflow: hidden; }
+.mg-compose:focus-within { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.mg-c-line { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 16px; border-bottom: 1px solid var(--x-rule-soft); }
+.mg-c-line > span { width: 60px; flex: none; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.mg-c-line b { font-weight: 500; font-size: 14.5px; }
+.mg-c-who { align-items: flex-start; padding-top: 8px; padding-bottom: 8px; }
+.mg-c-who > span { padding-top: 9px; }
+.mg-c-hint { padding: 8px 16px; border-bottom: 1px solid var(--x-rule-soft); }
+.mg-c-in { flex: 1; min-width: 0; height: 32px; border: 0; background: transparent; outline: none; font: 400 14.5px/1 var(--x-text); color: var(--x-ink); }
+.mg-c-in:focus-visible, .mg-c-body:focus-visible { box-shadow: none; }
+.mg-c-body { display: block; width: 100%; min-height: 240px; padding: 14px 16px; border: 0; resize: vertical; background: transparent; color: var(--x-ink); font: 400 15px/1.6 var(--x-text); outline: none; }
+.mg-c-foot { padding: 10px 14px 12px; border-top: 1px solid var(--x-rule-soft); }
+.mg-compose > .said { padding: 0 16px 12px; }
+/* Chips that act as radio buttons. */
+.mg-radio label { position: relative; }
+.mg-radio input { position: absolute; opacity: 0; pointer-events: none; }
+.mg-radio input:checked + .pm-chip { background: var(--x-ink); color: var(--x-paper); box-shadow: none; }
+.mg-radio input:focus-visible + .pm-chip { box-shadow: 0 0 0 2px var(--x-paper), 0 0 0 4px var(--x-spark); }
+
+.mg-letters small { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+/* Forms in a slide-over. */
+.mg-form { display: grid; gap: 14px; }
+.mono-in { font-family: var(--x-mono); letter-spacing: .02em; }
+
+/* Social: two summaries, each a line of figures, a sparkline in ink, the latest post. */
+.mg-nets { display: grid; gap: 40px; }
+.mg-plain { font: 400 15px/1 var(--x-text); letter-spacing: 0; color: var(--x-ink-2); }
+.mg-net-figs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mg-spark { display: grid; gap: 6px; margin-top: 16px; }
+.mg-spark .spark { width: 100%; height: 48px; }
+.mg-post { display: flex; gap: 14px; align-items: flex-start; margin-top: 16px; padding: 12px; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.mg-post img { width: 88px; height: 88px; flex: none; border-radius: 8px; object-fit: cover; }
+.mg-post p { display: grid; gap: 4px; font-size: 14.5px; line-height: 1.5; }
+
+/* Prospects: a board, cards are a name and one line. */
+.mg-board { display: grid; grid-template-columns: repeat(5, minmax(200px, 1fr)); gap: 10px; align-items: start; margin-top: 14px; overflow-x: auto; padding-bottom: 6px; }
+.lane { min-width: 0; padding: 10px; border-radius: 12px; background: var(--x-tint); }
+.lane-head { display: flex; align-items: baseline; justify-content: space-between; padding: 2px 4px 10px; font: 500 14.5px/1.2 var(--x-text); }
+.lane-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.lane-empty { padding: 8px 4px; font-size: 13.5px; color: var(--x-ink-2); }
+.mg-p { display: grid; gap: 3px; width: 100%; padding: 10px 12px; border: 0; border-radius: 8px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); color: var(--x-ink); text-align: left; }
+.mg-p:hover { box-shadow: inset 0 0 0 1px var(--x-rule); }
+.mg-p b { font: 500 14px/1.3 var(--x-text); }
+.mg-p small { font-size: 12.5px; color: var(--x-ink-2); }
+.mg-p.is-changed { animation: ws-arrive .6s var(--x-ease) both; }
+.mg-pr-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.mg-pr-head div { display: grid; flex: 1; }
+.mg-pr-head small { font-size: 13px; color: var(--x-ink-2); }
+.mg-facts li { min-height: 44px; }
+.mg-need-pic { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; background: var(--x-tint); }
+.mg-pr-notes { margin-top: 10px; }
+.mg-offer { display: grid; gap: 8px; margin: 0; padding: 12px 14px; border: 0; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.mg-off { display: grid; grid-template-columns: auto minmax(0, 1fr) 44px; align-items: center; gap: 12px; font-size: 14px; }
+
+@media (max-width: 1100px) {
+  .mg-cols { grid-template-columns: 1fr; }
+  .mg-camps th:nth-child(4), .mg-camps td:nth-child(4), .mg-camps th:nth-child(8), .mg-camps td:nth-child(8) { display: none; }
+}
+@media (max-width: 860px) {
+  .mg-camps th:nth-child(2), .mg-camps td:nth-child(2), .mg-camps th:nth-child(3), .mg-camps td:nth-child(3), .mg-camps th:nth-child(5), .mg-camps td:nth-child(5) { display: none; }
+  .mg-bar { display: none; }
+  .mg-board { grid-template-columns: repeat(5, 240px); }
+}

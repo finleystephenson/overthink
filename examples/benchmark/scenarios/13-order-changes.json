@@ -1,0 +1,420 @@
+[
+  {
+    "id": "order-changes-01",
+    "category": "order-changes",
+    "title": "Wrong product ordered, not packed yet: cancel it",
+    "difficulty": 1,
+    "customer_id": "C-1003",
+    "channel": "web",
+    "setup": "Story 1. Tom ordered a Daypack and Laptop Sleeve (ORD-20168, £153, paid last night, not packed) by mistake. It is not packed, so it can be cancelled for a full refund to the original payment method within 5 working days.",
+    "turns": [
+      "I ordered the wrong thing last night, a Daypack and a sleeve. Can you cancel it?",
+      "ORD-20168, tom.sawyer@example.com. Yes cancel the lot."
+    ],
+    "records": [
+      "ORD-20168",
+      "C-1003"
+    ],
+    "expected": {
+      "answer": "Confirms the order has not been packed, cancels the whole order and says the full £153 goes back to the original card by 30 November. Mentions he can place a new order for the right product.",
+      "must_say": [
+        "£153",
+        "30 November"
+      ],
+      "must_not_say": [
+        "it is already packed",
+        "store credit",
+        "£2.95"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "cancel_order",
+        "input_includes": {
+          "order_number": "ORD-20168"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20168",
+        "field": "status",
+        "equals": "cancelled"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Cancels only after he confirms."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20168",
+          "email_or_postcode": "tom.sawyer@example.com"
+        }
+      ],
+      [
+        "cancel_order",
+        {
+          "order_number": "ORD-20168",
+          "reason": "Ordered the wrong product by mistake"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "order-changes-02",
+    "category": "order-changes",
+    "title": "Wrong order already dispatched: cannot be stopped",
+    "difficulty": 2,
+    "customer_id": "C-1004",
+    "channel": "web",
+    "setup": "Story 2. Dorothy ordered the wrong sleeve (ORD-20161, dispatched Fri 20 Nov, estimated 24 November). CASE-9011 is open. The parcel is packed and cannot be stopped or changed. She can still cancel by returning it within 14 days of delivery; the standard 30-day return also applies, and a £2.95 label charge comes off a change-of-mind refund.",
+    "turns": [
+      "Can you stop my parcel? I ordered the wrong sleeve with the Daypack. ORD-20161, dorothy.gale@example.com",
+      "Not even if you ring the courier?"
+    ],
+    "records": [
+      "ORD-20161",
+      "CASE-9011",
+      "C-1004"
+    ],
+    "expected": {
+      "answer": "Says the parcel is dispatched, so it cannot be stopped or changed, not even by contacting the courier. Explains she can return it once it arrives (30 days from delivery) for a refund, with the £2.95 return label charge. Does not cancel and does not create a return before it has arrived.",
+      "must_say": [
+        "packed",
+        "30 days",
+        "£2.95"
+      ],
+      "must_not_say": [
+        "I have cancelled",
+        "I will stop the courier",
+        "free return"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20161"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "update_order",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Is honest that it cannot be stopped.",
+      "Uses the existing case rather than opening a new one."
+    ]
+  },
+  {
+    "id": "order-changes-03",
+    "category": "order-changes",
+    "title": "Change the delivery address: Highlands refused, then a mainland address",
+    "difficulty": 2,
+    "customer_id": "C-1021",
+    "channel": "web",
+    "setup": "Ali's The Spare Sock order (ORD-20167, paid, not packed, standard delivery) is going to The Cave Entrance, Baghdad. He first asks to send it to an Inverness postcode (IV2 3AB). The Highlands are outside the delivery area, so the change is refused. He then gives a mainland address: 14 Bazaar Street, Baghdad, BZ4 8SX.",
+    "turns": [
+      "Can I change the address on my sock order to my mum's? IV2 3AB, Inverness.",
+      "Oh. Ok, send it to 14 Bazaar Street, Baghdad, BZ4 8SX then. ORD-20167, ali.baba@example.com"
+    ],
+    "records": [
+      "ORD-20167",
+      "C-1021"
+    ],
+    "expected": {
+      "answer": "Says the order is not packed so the address can be changed, but IV2 is in the Scottish Highlands, which is outside the UK mainland delivery area. Changes it to 14 Bazaar Street, Baghdad, BZ4 8SX and confirms what the tool returned.",
+      "must_say": [
+        "UK mainland",
+        "not packed"
+      ],
+      "must_not_say": [
+        "I have changed it to Inverness",
+        "Highlands are fine",
+        "extra charge for Inverness"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "update_order",
+        "input_includes": {
+          "order_number": "ORD-20167"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20167",
+        "field": "delivery.address.postcode",
+        "equals": "BZ4 8SX"
+      },
+      {
+        "collection": "orders",
+        "id": "ORD-20167",
+        "field": "status",
+        "equals": "paid"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not say the Inverness change worked."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20167",
+          "email_or_postcode": "ali.baba@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20167"
+        }
+      ],
+      [
+        "update_order",
+        {
+          "order_number": "ORD-20167",
+          "address": {
+            "line1": "14 Bazaar Street",
+            "town": "Baghdad",
+            "postcode": "BZ4 8SX"
+          }
+        }
+      ]
+    ]
+  },
+  {
+    "id": "order-changes-04",
+    "category": "order-changes",
+    "title": "Payment failed: held 24 hours, cancel and reorder",
+    "difficulty": 2,
+    "customer_id": "C-1026",
+    "channel": "web",
+    "setup": "Story 21. Ebenezer's order for a Starter Puddle (ORD-20171, £58) failed to pay this morning (declined card). The order is held 24 hours and then cancelled. No money was taken. He decides to cancel it now and order again with another card.",
+    "turns": [
+      "My card was declined for the Starter Puddle I ordered this morning. Has it gone through anyway?",
+      "Right. Cancel that one, I'll order again with a different card. ORD-20171, ebenezer.scrooge@example.com"
+    ],
+    "records": [
+      "ORD-20171",
+      "C-1026"
+    ],
+    "expected": {
+      "answer": "Says the payment was declined, so no money was taken and nothing is packed. The order is held for 24 hours and then cancelled, and stock is not reserved meanwhile. After he confirms, cancels ORD-20171 and tells him he can order again with another card; nothing to refund.",
+      "must_say": [
+        "24 hours",
+        "no money"
+      ],
+      "must_not_say": [
+        "refund of £58",
+        "you have been charged",
+        "I have taken payment"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "cancel_order",
+        "input_includes": {
+          "order_number": "ORD-20171"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20171",
+        "field": "status",
+        "equals": "cancelled"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not promise a refund for money that was never taken.",
+      "Tells him stock is not held while the order waits."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20171",
+          "email_or_postcode": "ebenezer.scrooge@example.com"
+        }
+      ],
+      [
+        "cancel_order",
+        {
+          "order_number": "ORD-20171",
+          "reason": "Payment failed, customer will reorder with another card"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "order-changes-05",
+    "category": "order-changes",
+    "title": "Swap a single aeroplane for the five pack: price differs, so cancel and reorder",
+    "difficulty": 3,
+    "customer_id": "C-1017",
+    "channel": "web",
+    "setup": "Becky's Paper Aeroplane Single (ORD-20172, £4 plus £3.95 delivery, £7.95 total, not packed) should have been the Pack of five (£15). A swap must be at the same price, so it cannot be swapped. She can cancel the order for a full refund and order the pack herself.",
+    "turns": [
+      "I ordered one paper aeroplane by mistake, I wanted the pack of five. Can you just swap it?",
+      "Cancel it then, I'll order the five pack myself. ORD-20172, becky.sharp@example.com"
+    ],
+    "records": [
+      "ORD-20172",
+      "paper-aeroplane",
+      "C-1017"
+    ],
+    "expected": {
+      "answer": "Explains a swap must be another variant at the same price, and the pack of five costs £15 against £4, so it cannot be swapped. Offers to cancel and she reorders. On her yes, cancels ORD-20172 and says the full £7.95 goes back to the original payment method.",
+      "must_say": [
+        "same price",
+        "£7.95"
+      ],
+      "must_not_say": [
+        "I have swapped",
+        "I can charge the difference",
+        "£4 refund"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "cancel_order",
+        "input_includes": {
+          "order_number": "ORD-20172"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20172",
+        "field": "status",
+        "equals": "cancelled"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Cancels only after she says to.",
+      "Does not place a new order for her."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20172",
+          "email_or_postcode": "becky.sharp@example.com"
+        }
+      ],
+      [
+        "cancel_order",
+        {
+          "order_number": "ORD-20172",
+          "reason": "Ordered the single, wanted the pack of five"
+        }
+      ]
+    ]
+  }
+]

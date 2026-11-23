@@ -1,0 +1,63 @@
+/* Rota: the team. The rail-and-view layout and the shared parts come from ../lib/workspace.css; "what changes
+   did" from ../lib/charts.css. This file is the few rota-only parts: the people table, the week grid (people down
+   the side, flat shifts of one hue, hours totalled right), the busy bars, the hours slider. One tint for every
+   face; no rings, no rainbow. */
+
+.ro-open { font-size: 19px !important; letter-spacing: -.02em; }
+.ro-head { margin: 24px 0 8px; }
+.t-lede.ro-lede { margin: 0 0 16px; }
+.ro-sub { display: block; font-size: 12px; color: var(--x-ink-2); }
+
+/* The people. */
+.ro-people td { height: 52px; }
+.ro-name { display: inline-flex; align-items: center; gap: 10px; padding: 0; border: 0; background: none; color: var(--x-ink); font: 500 14.5px/1.2 var(--x-text); text-align: left; }
+.ro-name:hover span { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--x-rule); }
+
+/* One person, and hiring: a big number, a slider in ink, the cost underneath. */
+.ro-o-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.ro-o-head div { display: grid; }
+.ro-o-head small { font-size: 13px; color: var(--x-ink-2); }
+.ro-hours { display: grid; gap: 10px; }
+.ro-h-read { display: flex; align-items: baseline; gap: 8px; }
+.ro-h-read b { font: 600 28px/1 var(--x-display); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.ro-h-read span { font-size: 14px; color: var(--x-ink-2); }
+.ro-slide { -webkit-appearance: none; appearance: none; width: 100%; height: 20px; background: transparent; --fill: 0%; }
+.ro-slide::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--x-ink) var(--fill), var(--x-tint) var(--fill)); }
+.ro-slide::-moz-range-track { height: 4px; border-radius: 2px; background: var(--x-tint); }
+.ro-slide::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--x-ink); }
+.ro-slide::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; margin-top: -7px; border-radius: 50%; background: var(--x-card); box-shadow: inset 0 0 0 2px var(--x-ink); }
+.ro-slide::-moz-range-thumb { width: 18px; height: 18px; border: 0; border-radius: 50%; background: var(--x-card); box-shadow: inset 0 0 0 2px var(--x-ink); }
+.ro-slide:focus-visible { box-shadow: none; }
+.ro-slide:focus-visible::-webkit-slider-thumb { box-shadow: inset 0 0 0 2px var(--x-ink), 0 0 0 3px var(--x-spark); }
+.ro-can { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: 14px; color: var(--x-ink-2); }
+
+/* The week: people down the side, days across, a flat bar per shift, hours on the right. */
+.ro-grid { display: grid; min-width: 0; }
+.ro-g-row { display: grid; grid-template-columns: minmax(150px, 1.4fr) repeat(7, minmax(0, 1fr)) 64px; align-items: center; gap: 4px; min-height: 40px; border-bottom: 1px solid var(--x-rule-soft); }
+.ro-g-headrow { min-height: 28px; border-bottom-color: var(--x-rule); font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.ro-g-headrow .is-today { color: var(--x-ink); font-weight: 500; }
+.ro-g-headrow .r { text-align: right; }
+.ro-g-who { min-width: 0; overflow: hidden; padding: 0 8px 0 0; border: 0; background: none; color: var(--x-ink); font: 400 14px/1.2 var(--x-text); text-align: left; white-space: nowrap; text-overflow: ellipsis; }
+.ro-g-who:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--x-rule); }
+.ro-g-cell { position: relative; height: 22px; border-radius: 4px; background: var(--x-tint); }
+.ro-g-cell.is-today { box-shadow: inset 0 0 0 1px var(--x-rule); }
+.ro-g-cell.is-closed { background: repeating-linear-gradient(135deg, transparent 0 4px, var(--x-rule-soft) 4px 5px); }
+.ro-g-cell i { position: absolute; top: 4px; bottom: 4px; border-radius: 3px; background: var(--x-ink); }
+.ro-g-total { text-align: right; font-variant-numeric: tabular-nums; font-size: 14px; }
+
+/* How busy: one bar per team, the tick at an ordinary week (the middle). */
+.ro-b, .ro-b-h { width: 22%; }
+.ro-bar { position: relative; display: block; height: 4px; border-radius: 2px; background: var(--x-tint); }
+.ro-bar i { position: absolute; inset: 0 auto 0 0; width: calc(var(--w) * 100%); border-radius: 2px; background: var(--x-ink); }
+.ro-bar.is-bad i { background: var(--x-bad); }
+.ro-bar b { position: absolute; top: -3px; bottom: -3px; left: 50%; width: 1.5px; background: var(--x-ink-2); }
+
+@media (max-width: 1100px) {
+  .ro-busy th:nth-child(2), .ro-busy td:nth-child(2) { display: none; }
+}
+@media (max-width: 860px) {
+  .ro-people th:nth-child(2), .ro-people td:nth-child(2), .ro-people th:nth-child(4), .ro-people td:nth-child(4), .ro-people th:nth-child(6), .ro-people td:nth-child(6) { display: none; }
+  .ro-busy th:nth-child(4), .ro-busy td:nth-child(4), .ro-busy th:nth-child(5), .ro-busy td:nth-child(5), .ro-b, .ro-b-h { display: none; }
+  .ro-g-row { grid-template-columns: minmax(84px, 1.2fr) repeat(7, minmax(0, 1fr)) 34px; gap: 2px; }
+  .ro-g-who { font-size: 12.5px; }
+}

@@ -1,0 +1,229 @@
+{
+  "id": "ice-by-post",
+  "code": "ICE",
+  "name": "Ice by Post",
+  "category": "food",
+  "status": "active",
+  "available_from": null,
+  "tagline": "Ice, delivered to your door. We can't promise it'll still be frozen.",
+  "summary": "A box of 24 clear ice cubes in a wool-insulated box with gel packs. £16. It may arrive partly or fully melted.",
+  "concept": "Clear ice, trimmed and packed in a wool-lined box with gel packs, sent Cold, arriving the next day. It is ice, in the post, so it may not stay ice.",
+  "why_it_exists": "Good clear ice is hard to make at home. We make it and post it. We can't promise it'll still be frozen when it arrives.",
+  "target_customer": "People hosting drinks who want clear ice and accept the risk of the post.",
+  "physical": {
+    "form": "24 clear ice cubes, each individually trimmed, packed in a wool-lined box with gel packs.",
+    "materials": [
+      "Ice made from filtered water, frozen directionally",
+      "Wool insulation, recycled fleece",
+      "Gel packs (water and cellulose, non-toxic)",
+      "Corrugated card outer box"
+    ],
+    "dimensions": "Outer box 300 x 220 x 200 mm.",
+    "weight": "Ice about 1.2 kg. Box about 2.4 kg packed."
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-ICE",
+      "name": "Box of 24",
+      "options": {},
+      "price": 16,
+      "stock": 999,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It is clear ice made from filtered water, so it looks good in a glass.",
+    "You get 24 cubes, each one 30 mm across and trimmed to size.",
+    "It travels in a wool-lined box with gel packs, so there is no dry ice and nothing dangerous in the parcel.",
+    "It is sent cold and arrives the next day before 1pm.",
+    "It may not arrive frozen, and we say so before you buy."
+  ],
+  "arrives": "The ice is sealed in a food bag inside a wool-lined box with gel packs, then packed in a card outer box. It travels as its own cold parcel. When it lands, open it straight away and put whatever is still frozen into your freezer.",
+  "specs": [
+    [
+      "Size",
+      "Outer box: 300 x 220 x 200 mm"
+    ],
+    [
+      "Weight",
+      "Ice about 1.2 kg. Box about 2.4 kg packed."
+    ],
+    [
+      "Made of",
+      "Filtered-water ice, wool-fleece lining, gel packs, corrugated card box"
+    ],
+    [
+      "Colour",
+      "Clear ice, off-white box with lilac gel packs"
+    ],
+    [
+      "Cubes",
+      "24 clear cubes, 30 mm each, about 50 g each"
+    ],
+    [
+      "Ingredients",
+      "Filtered water, nothing added"
+    ],
+    [
+      "Cooling",
+      "Wool insulation and gel packs. No dry ice."
+    ],
+    [
+      "Storage",
+      "Freeze at -18°C or below as soon as it arrives, if it is still ice"
+    ],
+    [
+      "Delivery",
+      "Cold, next day before 1pm. It may arrive partly or fully melted."
+    ]
+  ],
+  "how_it_works": "We freeze and pack the ice, and send it Monday to Thursday. Open the box when it arrives and put what is still frozen in the freezer.",
+  "in_the_box": [
+    "24 clear ice cubes in a sealed bag",
+    "A wool-lined box with gel packs",
+    "A card with storage advice"
+  ],
+  "accessories": [],
+  "compatibility": [
+    {
+      "with": "emergency-sandwich",
+      "works": true,
+      "note": "Both travel chilled. In a mixed order they arrive in two parcels and one chilled delivery charge is paid."
+    },
+    {
+      "with": "dry ice or other cooling",
+      "works": false,
+      "note": "No dry ice is used or sent. Do not add it to the box."
+    },
+    {
+      "with": "Soon or Sooner delivery",
+      "works": false,
+      "note": "Ice goes by Cold only."
+    },
+    {
+      "with": "starter-puddle",
+      "works": false,
+      "note": "The Starter Puddle is a tray for rain, not ice."
+    }
+  ],
+  "packaging": "Ice is sealed in a food-grade bag inside a wool-lined box with gel packs, in a corrugated card outer. The card and wool are recyclable where local rules allow. Gel packs can be emptied into the bin.",
+  "warranty": {
+    "months": 0,
+    "summary": "It has no warranty and no frozen guarantee, because it is food.",
+    "guarantee": null
+  },
+  "care": [
+    "Open the box when it arrives and check the ice.",
+    "Put anything still frozen into a freezer at -18°C or below.",
+    "Use clear ice in drinks within a few days of arrival.",
+    "Recycle the box. Empty the gel packs into the bin."
+  ],
+  "safety": [
+    "Do not use it if the bag is open or torn.",
+    "Do not use ice that has been left out for a long time.",
+    "The cubes are hard and cold. Handle with care."
+  ],
+  "delivery": {
+    "methods": [
+      "chilled"
+    ],
+    "note": "Cold only, sent Monday to Thursday. It arrives the next day before 1pm. We hold the order when the forecast at your address is 28°C or above, and offer a new date or a refund."
+  },
+  "returnable": {
+    "ok": false,
+    "note": "Ice cannot be returned, because it is perishable. If it arrives melted, that is the product. If the parcel is wrong or damaged, contact support within 24 hours with a photo."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "Ice, delivered to your door",
+    "intro": "Ice, delivered to your door. We can't promise it'll still be frozen.",
+    "sections": [
+      {
+        "title": "Clear ice",
+        "body": "A box of 24 clear cubes, 30 mm each, for £16."
+      },
+      {
+        "title": "How it travels",
+        "body": "It goes in wool and gel packs, with no dry ice. It is sent Cold, Monday to Thursday."
+      },
+      {
+        "title": "The catch",
+        "body": "It is ice in the post, so it may arrive partly or fully melted. We hold the order in hot weather."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Will it arrive frozen?",
+      "a": "We can't promise it. It is ice in the post."
+    },
+    {
+      "q": "What if it melts?",
+      "a": "That is the product. We do not refund melted ice, and it cannot be returned."
+    },
+    {
+      "q": "Which delivery can I use?",
+      "a": "Cold only. It is sent Monday to Thursday."
+    },
+    {
+      "q": "What happens in hot weather?",
+      "a": "If the forecast at your address is 28°C or above, we hold the order and offer a new date or a refund."
+    },
+    {
+      "q": "Do you use dry ice?",
+      "a": "No. Only wool and gel packs."
+    },
+    {
+      "q": "Can I order it with other things?",
+      "a": "Yes. It travels as its own parcel, so you get two parcels and pay one delivery charge."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The ice has partly melted.",
+      "steps": [
+        "Drain the water.",
+        "Put what is left in the freezer at once."
+      ],
+      "if_unresolved": "Melting is not a fault. Refrozen ice may be cloudy."
+    },
+    {
+      "problem": "The box is damaged or the item is wrong.",
+      "steps": [
+        "Photograph the box and the label.",
+        "Check whether your order came in two parcels."
+      ],
+      "if_unresolved": "Contact support within 24 hours of delivery with the photo."
+    },
+    {
+      "problem": "My order is on hold for hot weather.",
+      "steps": [
+        "Check the forecast for your address.",
+        "Pick a new date when we offer one."
+      ],
+      "if_unresolved": "You can take a refund instead."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "emergency-sandwich"
+  ],
+  "image": {
+    "file": "img/ice-by-post.jpg",
+    "sweep": "#DDE8EC"
+  },
+  "photography_direction": "Clear ice in off-white, glassy cubes with sky-blue and lilac accents on a pale backdrop. Show the box open. No people.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated lilac and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. An open off-white insulated box with a wool lining, clear ice cubes inside, a lilac gel pack beside them, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words ICE BY POST in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated lilac and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. Close-up of one clear ice sphere and one large cube, soft light through the ice, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words ICE BY POST in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated lilac and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. An open off-white insulated box with a wool lining, clear ice cubes inside, a lilac gel pack beside them, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words ICE BY POST in a heavy wide sans. No other text anywhere. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated lilac and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A closed wool-lined box with a corrugated card outer beside two flat gel packs, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words ICE BY POST in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated lilac and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A tall glass with a clear spear of ice and a short glass with one clear sphere, on a plain surface, 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words ICE BY POST in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated lilac and sunflower yellow accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. The open box floating slightly above the backdrop with ice catching the light, long soft shadow, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words ICE BY POST in a heavy wide sans. No other text anywhere."
+  }
+}

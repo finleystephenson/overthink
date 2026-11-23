@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Letterbox · Email · Overthought &amp; Co.</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap">
+<link rel="stylesheet" href="../lib/premium.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="lb-body">
+<!-- Three panes, as in any mail app: boxes and folders, the letters in one folder, the open conversation. -->
+<main class="lb" id="main" data-view="list">
+  <nav class="lb-rail" id="rail" aria-label="Mailboxes and folders"></nav>
+  <div class="lb-scrim" id="scrim" hidden></div>
+  <section class="lb-list" id="list-pane" aria-label="Letters"></section>
+  <section class="lb-read" id="read-pane" aria-label="The open conversation" tabindex="-1"></section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

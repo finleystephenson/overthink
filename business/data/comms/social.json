@@ -1,0 +1,719 @@
+{
+  "_note": "Social text. Two networks: squint (photo sharing) and mutter (short posts). Company voice: a plain statement of what it is plus one honest caveat, no exclamation marks, no emoji. Customers write like people. Slots: {product} {tagline} {caveat} {name} {first} {days} {order} {handle} {shop}.",
+  "shop_handle": "overthoughtco",
+  "caveats": [
+    "It does what it says. It does not do more.",
+    "The photograph is of the real thing on a good day.",
+    "We are fond of it, which may colour our view.",
+    "Not for everyone. Quite good for some people.",
+    "Sold as described. The description is long.",
+    "Stock changes. We would rather say so than pretend.",
+    "It will not change your life. It will be slightly better than the alternative.",
+    "Colours on a screen are an opinion.",
+    "We have used one. It was fine.",
+    "The small print is longer than the product.",
+    "It is not for use as a hat, unless it is the hat.",
+    "Delivery is as quick as the carrier lets it be.",
+    "We would not buy two unless you need two.",
+    "There is a footnote. It is on the website.",
+    "If it does not suit, you can send it back, within the policy.",
+    "Properly made. Properly boring about it.",
+    "It is smaller than you think, or larger. We have the measurements.",
+    "A good gift for someone who says they need nothing.",
+    "It has been thought about more than it needed to be.",
+    "Your results may be exactly what you expected."
+  ],
+  "mutter_general": [
+    "Parcels went out this morning. They are now somebody else's problem, and the carrier's.",
+    "A reminder that our returns policy is in a readable size.",
+    "The workshop kettle has been replaced. We mention it only because it was a long process.",
+    "We have answered all the emails we are allowed to answer today. The rest tomorrow.",
+    "Someone asked if we sell time. We sell products. Time is free, though not unlimited.",
+    "It rained in Market Hindle. The Indoor Helmet stayed indoors.",
+    "Thank you to everyone who sent a question this week. We read all of them, slowly.",
+    "A fact: the packing bench has a clock. It is correct.",
+    "We do not do flash sales. We do sales that last a considered amount of time.",
+    "We are open. The shop is a website. The website is open.",
+    "No news today. We are working on it.",
+    "A parcel left at 9:00 and arrived. This is all we have to report.",
+    "If you have a question, reply to this. A person will read it. Quite possibly Mr Toad.",
+    "We have been asked what we do. We take ordinary things further than they needed to go.",
+    "Our supplier letters are filed alphabetically. We were asked.",
+    "Please do not send us your socks. We have our own."
+  ],
+  "campaign": [
+    "{campaign} starts today. The details are on the website.",
+    "{campaign}: now on. {caveat}",
+    "A note on {campaign}. It is real and it ends when it says it ends.",
+    "{campaign} has begun. There is no countdown clock. We find them tiring.",
+    "{campaign}. See the site. Read the footnote."
+  ],
+  "customer_good": [
+    "Got my {product} and it is exactly what the page said. @{shop}",
+    "{product} arrived and I like it a great deal. @{shop}",
+    "Gift for my sister: {product}. She laughed, then used it. @{shop}",
+    "Took {product} out of the box and, honestly, it is very well made. @{shop}",
+    "I did not need {product}. I now cannot be without it. @{shop}",
+    "The packaging on {product} has a footnote. I read the footnote. @{shop}",
+    "{product} has been in daily use for {days} days. No complaints. @{shop}",
+    "My colleagues have asked where {product} came from. @{shop}",
+    "Ordered {product} on a whim and I am pleased. @{shop}",
+    "Parcel from @{shop} came quickly and {product} is lovely.",
+    "Little thing, well done. {product}. @{shop}",
+    "{product} on my desk and it makes the desk better. @{shop}",
+    "It sounds odd to say I love a {product} but here we are. @{shop}",
+    "Good service and a good {product}. Will buy again. @{shop}",
+    "Neighbour asked about {product}. I told them to read the small print. @{shop}"
+  ],
+  "customer_ok": [
+    "{product} has arrived. Looks fine. @{shop}",
+    "Parcel came. {product} is as described. @{shop}",
+    "{product} from @{shop}. It is what it is. That is not a complaint.",
+    "My order from @{shop} has landed. Early days. {product}.",
+    "Unpacked {product}. More thoughts later. @{shop}",
+    "{product} arrived. I like the box. @{shop}"
+  ],
+  "customer_bad": [
+    "{product} from @{shop} arrived late and the box was squashed. Not impressed.",
+    "Waited {days} days for {product}. Not what I expected from @{shop}.",
+    "@{shop} Where is my order? It has been {days} days.",
+    "{product} is not as good as the page made me think. Disappointed. @{shop}",
+    "Had to chase @{shop} twice about {product}. They answered, but I should not have had to ask.",
+    "{product} has a problem. @{shop} said they'd look at it. Waiting.",
+    "Box came open and {product} was damaged. @{shop}",
+    "Parcel marked delivered. No parcel. @{shop}",
+    "I wanted {product} for a particular day and it came after. @{shop}",
+    "Ordered from @{shop} and got the wrong thing. Sorting it out now.",
+    "Not sure about {product}. It is smaller than I pictured. @{shop}",
+    "@{shop} the refund for {product} has not shown up yet."
+  ],
+  "customer_comment": [
+    "Love this.",
+    "I have one of these. Can confirm.",
+    "Where can I buy it?",
+    "This is the best thing I have seen all day.",
+    "Does it come in a larger size?",
+    "Ordered one.",
+    "How long does delivery take?",
+    "Was thinking of getting one. Convinced now.",
+    "This made my afternoon.",
+    "Not sure why I want this. I do.",
+    "Is it really that small?",
+    "I need a second one.",
+    "Looks great.",
+    "Do you ship abroad?",
+    "Brilliant.",
+    "{product} looks great.",
+    "I have {product} and I like it.",
+    "Is {product} still in stock?",
+    "How big is {product}, really?",
+    "Thinking about {product} for a present.",
+    "My friend has {product}. Now I want one.",
+    "Does {product} come with instructions?",
+    "Lovely picture of {product}.",
+    "{product}: ordered.",
+    "Would {product} suit a small desk?",
+    "I have been looking at {product} for weeks.",
+    "Is {product} easy to send back, if it is not right?",
+    "Just got {product}. First impressions: good.",
+    "How long does {product} last?",
+    "{product} is the one I keep going back to.",
+    "Is the colour of {product} as shown?",
+    "I did not know I needed {product}.",
+    "Do you do {product} in other sizes?",
+    "This is why I read your page for {product}.",
+    "Where do I find the care notes for {product}?",
+    "{product} is on my list.",
+    "Seeing {product} everywhere today.",
+    "Anyone else have {product}? Thoughts?",
+    "I sent {product} to my aunt. She rang to say thank you.",
+    "{product} arrived on time. No complaints.",
+    "Still deciding on {product}.",
+    "Got {product} last month. It has held up.",
+    "The page for {product} made me laugh. Then I bought it.",
+    "Would {product} make a good present for a colleague?",
+    "I've had {product} for a year. It is fine.",
+    "{product}: simple, sensible, slightly odd.",
+    "What is {product} made of?",
+    "Is {product} suitable for a gift?",
+    "Do I need anything else with {product}?",
+    "Proper work on {product}.",
+    "My {product} came with a very polite note.",
+    "{product} would be handy at the office.",
+    "Is there a warranty on {product}?",
+    "Nice use of a plain background for {product}.",
+    "Does {product} ship in its own box?"
+  ],
+  "company_reply_good": [
+    "Thank you. We are glad it arrived in good order.",
+    "That is kind of you. We will pass it on to the bench.",
+    "Thank you for saying so.",
+    "We appreciate it. Please let us know if it needs anything.",
+    "Glad to hear it. The footnote was written with you in mind.",
+    "Thank you. We have noted this on the wall.",
+    "That is good to read on a weekday.",
+    "Thank you, and the packers say thank you too.",
+    "Very glad. Please tell the sister that the laugh was the intended outcome.",
+    "We are pleased. Please tell us if it stops being so."
+  ],
+  "company_reply_bad": [
+    "We are sorry to hear it. Please send us your order number by message and we will look at it today.",
+    "That is not good enough, and we are sorry. Please message us your order number.",
+    "Thank you for telling us. We would like to put it right. Send us your order number in a message.",
+    "We are sorry. Please message us so we can look at it properly.",
+    "We have seen this. A person will write to you shortly.",
+    "Sorry about that. If you message us the details, we will do the work from there.",
+    "We apologise. We would like to see what happened. Please message us.",
+    "Thank you for being clear. We will look into it, and we will write to you directly."
+  ],
+  "company_reply_question": [
+    "Good question. The page has the answer, but in short: yes, within the usual limits.",
+    "Thank you. Delivery is UK-wide and the time and cost show at checkout.",
+    "We would say yes. The page lists the details.",
+    "It is as small as the measurements say. We have a ruler.",
+    "We are not shipping abroad at present. We will say so if that changes.",
+    "Thank you for asking. We will message you the details.",
+    "Yes. The care notes are on the page and in the box.",
+    "We will check and reply by message."
+  ],
+  "handle_bits": [
+    "ordinary",
+    "plain",
+    "small",
+    "quiet",
+    "tidy",
+    "careful",
+    "hello",
+    "daily",
+    "mostly",
+    "nearly"
+  ],
+  "customer_late": [
+    "{product} from @{shop} arrived late and the box was squashed. Not impressed.",
+    "Waited {days} days for {product}. Not what I expected from @{shop}.",
+    "@{shop} Where is my order? It has been {days} days.",
+    "I wanted {product} for a particular day and it came after. @{shop}",
+    "Parcel from @{shop} took {days} days. {product} is fine. The wait was not.",
+    "Had to chase the carrier twice for {product}. @{shop} were helpful but the parcel was not quick.",
+    "Day {days} and still no {product} from @{shop}.",
+    "@{shop} Parcel late again. {product} still on its way.",
+    "{product} arrived {days} days after I ordered. @{shop} could be quicker.",
+    "Not a fan of waiting. {product} took {days} days. @{shop}",
+    "Waiting on {product} from @{shop}. Day {days}.",
+    "Late. {product}, {days} days. @{shop}"
+  ],
+  "company_types": {
+    "new": [
+      "New: {product}. {tagline} {price_line} {caveat}",
+      "{product} is now on sale. {tagline} {price_line}",
+      "We have added {product}. {tagline} {caveat}",
+      "Launch day for {product}. {tagline} {price_line} There is a lot of small print.",
+      "{product}, now available. {tagline} {caveat}",
+      "{tagline} That is {product}, and it starts today. {price_line}",
+      "We took a long time over {product}. It is ready. {caveat}",
+      "From today: {product}. {tagline} {price_line}",
+      "A new thing: {product}. {summary}",
+      "{product} joins the range today. {price_line} {caveat}"
+    ],
+    "back": [
+      "{product} is back in stock. {price_line}",
+      "Back on the shelf: {product}. {tagline}",
+      "The delivery arrived. {product} is available again. {caveat}",
+      "{product}: restocked this morning. {price_line} The number is on the page.",
+      "We have {product} again. {caveat}",
+      "Stock of {product} came in today. {tagline}",
+      "Good news, put plainly: {product} is back. {price_line}",
+      "If you were waiting for {product}, it is here. {caveat}",
+      "{product} has returned from the supplier. {tagline}",
+      "Counted, shelved and on sale: {product}. {price_line}"
+    ],
+    "question": [
+      "Question we get about {product}: {q} {a}",
+      "Someone asked about {product}. {q} {a}",
+      "You asked. {q} (That is about {product}.) {a}",
+      "{product}, a question from the inbox: {q} {a}",
+      "Asked this week, about {product}: {q} {a}",
+      "The answer to \"{q}\" is this. {a} That is for {product}.",
+      "A reader wrote in about {product}. {q} {a}",
+      "Frequently asked, rarely read: {q} {a} ({product})",
+      "Question about {product}: {q} Short answer: {a}",
+      "We were asked: {q} For {product}, {a}"
+    ],
+    "made": [
+      "{product}. {feature}",
+      "Something about {product}: {feature}",
+      "A detail of {product}. {feature} {caveat}",
+      "Why {product} is the way it is. {feature}",
+      "On the bench: {product}. {feature}",
+      "{feature} That is {product}.",
+      "Thought through: {product}. {feature}",
+      "About {product}, plainly: {feature}",
+      "One fact about {product}. {feature}",
+      "A note on how {product} is put together. {feature}"
+    ],
+    "correction": [
+      "A correction. We called {product} \"{tagline}\" and left something out. {label}: {value}.",
+      "Correction to our own description of {product}: we should have said {label}. {value}.",
+      "We said {product} was simple to describe. Here is what we missed. {label}: {value}.",
+      "Small correction about {product}. {label}: {value}. It was on the page, but not in our post.",
+      "We have been asked to be clearer about {product}. {label}: {value}.",
+      "Correction: the picture of {product} does not show everything. {label}: {value}.",
+      "To be exact about {product}. {label}: {value}.",
+      "An omission, corrected: {product}. {label}: {value}.",
+      "For the record, {product}. {label}: {value}.",
+      "We should have said this earlier about {product}. {label}: {value}."
+    ],
+    "price": [
+      "{product} costs {price}. {tagline}",
+      "{product}: {price}. {caveat}",
+      "The price of {product} is {price}. It has not changed since you last looked, unless the page says it has.",
+      "{price} for {product}. {tagline}",
+      "{product}, {price}. {caveat}",
+      "Price check: {product} is {price}. {tagline}",
+      "{product} is {price} at the moment. {caveat}",
+      "You asked what {product} costs. {price}.",
+      "{price}. That is {product}. {tagline}",
+      "{product}: {price}, as stated on its page."
+    ],
+    "care": [
+      "Care note for {product}. {care}",
+      "How to look after {product}: {care}",
+      "{product}, after you have it. {care}",
+      "A small instruction for {product}. {care}",
+      "Please remember, with {product}: {care}",
+      "From the care page of {product}: {care}",
+      "{care} (That is {product}.)",
+      "Looking after {product}. {care} {caveat}",
+      "Plain advice about {product}. {care}",
+      "Care, for {product}: {care}"
+    ],
+    "thanks": [
+      "Thank you to the {n} people who have reviewed {product}. The average is {avg} out of 5. We read every one.",
+      "{product} has {n} reviews, averaging {avg} out of 5. Thank you for writing them.",
+      "We read the reviews of {product}. {n} so far, {avg} out of 5 on average. Thank you.",
+      "Thank you for reviewing {product}. {n} of you have, and the average is {avg}.",
+      "A thank-you: {n} reviews of {product}, average {avg} out of 5. The unkind ones help most.",
+      "Reviews of {product}: {n}. Average: {avg} out of 5. Thank you, and please keep writing.",
+      "To everyone who reviewed {product}: thank you. {n} reviews, {avg} on average.",
+      "{product} is at {avg} out of 5 across {n} reviews. We are grateful for each one.",
+      "Reading your {n} reviews of {product} again. Average {avg}. Thank you.",
+      "Thank you, reviewers of {product}. {avg} out of 5 from {n} of you."
+    ]
+  },
+  "notice": [
+    "Parcels went out this morning. They are now somebody else's problem, and the carrier's.",
+    "A reminder that our returns policy is in a readable size.",
+    "The workshop kettle has been replaced. We mention it only because it was a long process.",
+    "We have answered all the emails we are allowed to answer today. The rest tomorrow.",
+    "Someone asked if we sell time. We sell products. Time is free, though not unlimited.",
+    "It rained in Market Hindle. The Indoor Helmet stayed indoors.",
+    "Thank you to everyone who sent a question this week. We read all of them, slowly.",
+    "A fact: the packing bench has a clock. It is correct.",
+    "We do not do flash sales. We do sales that last a considered amount of time.",
+    "We are open. The shop is a website. The website is open.",
+    "No news today. We are working on it.",
+    "A parcel left at 9:00 and arrived. This is all we have to report.",
+    "If you have a question, reply to this. A person will read it. Quite possibly Mr Toad.",
+    "We have been asked what we do. We take ordinary things further than they needed to go.",
+    "Our supplier letters are filed alphabetically. We were asked.",
+    "Please do not send us your socks. We have our own.",
+    "Our returns policy has not changed since the last time you looked. It is still readable.",
+    "Packing happens on weekdays. Weekends are for resting, and for the carrier.",
+    "We answer messages in the order they arrive. We do not skip the awkward ones.",
+    "A parcel is only late once. After that it is a story.",
+    "The workshop has a clock. It agrees with the other clock.",
+    "If you have a question about an order, include the order number. It helps more than you would think.",
+    "Our order numbers are sequential. We do not skip any, to look busier.",
+    "If a page says one thing and a person says another, the page is the one to trust, and then tell us.",
+    "Please do not tape a parcel to a door. The carrier knows where the door is.",
+    "Our sandwiches are made on weekdays. This is not a mistake.",
+    "We do not have a mascot. We have a returns policy.",
+    "The footnote system is under review. The review has a footnote.",
+    "A customer asked if we are a real company. We are, with a workshop and a kettle.",
+    "Opening hours: the website is open all hours. The people are open on weekdays.",
+    "If something arrives damaged, tell us within the time on the returns page. We would rather know.",
+    "Our prices include VAT where it applies, and the checkout shows the total before you pay.",
+    "We are not able to gift-wrap everything. We say so on the page of each thing.",
+    "It is not yet a good time to ask us for a discount. It was not a good time last month either.",
+    "We have had a request for a larger Spare Sock. The sock is the size it is.",
+    "The post arrived. We read it all."
+  ],
+  "seasonal": {
+    "01": [
+      "January is quiet. Good for a sensible purchase.",
+      "The new year. We have thought about it, and it looks fine.",
+      "A cold month. {product} is not affected by weather, as far as we know.",
+      "Resolutions are optional. So are most of our products."
+    ],
+    "02": [
+      "February. Not a long month, but we have tried to make it a thorough one.",
+      "A short month, with the same amount of small print.",
+      "Gift ideas for people who say they do not need anything. {product}, perhaps.",
+      "Winter, still. {product} is stocked regardless."
+    ],
+    "03": [
+      "Spring is coming. We cannot confirm it, but we are hopeful.",
+      "March. The clocks change soon. Ours are checked in advance.",
+      "A reminder that {product} is useful in all seasons. We have checked.",
+      "Longer days. More light for photographing {product}."
+    ],
+    "04": [
+      "April showers. {product} does not mind them.",
+      "A good month for sorting things out. We have sorted our stockroom.",
+      "Spring clean: we have counted everything twice.",
+      "April. Stock is on the shelves and the kettle is on."
+    ],
+    "05": [
+      "May. The garden is waking up. So is our Pocket Jungle, in a manner of speaking.",
+      "A bright month. We recommend reading the small print in good light.",
+      "May: perfectly good weather for {product}.",
+      "Bank holidays mean slower parcels. The delivery page says by how much."
+    ],
+    "06": [
+      "June. Long days. Parcels leave at the same time as ever.",
+      "Summer begins, officially. Chilled parcels travel in their own boxes.",
+      "A warm month. Please keep chilled items in the fridge.",
+      "June is a good month for a gift. {product} is one idea."
+    ],
+    "07": [
+      "July. We are open. The website does not take holidays.",
+      "A hot month. Chilled parcels go with extra care.",
+      "Summer. {product} is available, and unbothered by it.",
+      "Mid-year. We have counted what we have sold, quietly."
+    ],
+    "08": [
+      "August is quiet. We use it for thinking.",
+      "The holidays. Orders are still packed on weekdays.",
+      "A slow month, with plenty of time to read about {product}.",
+      "Back-to-school things appear later this month. We have a plan."
+    ],
+    "09": [
+      "September. New terms, new notebooks, the same pen.",
+      "Autumn arrives. We have put the biscuits on the shelf.",
+      "A good month for fresh starts. {product} is on offer, as a thought.",
+      "September: orders increase and so does the tea."
+    ],
+    "10": [
+      "October. The evenings are shorter and the pictures are darker.",
+      "Autumn. Wrap up. {product} is available in the usual way.",
+      "The clocks change this month. We will say which way.",
+      "October. Christmas is not yet. We are thinking about it, quietly."
+    ],
+    "11": [
+      "November. Parcels will be busier from here. Order early for gifts.",
+      "The dark months begin. {product} is on the shelf.",
+      "A gift guide is on the way. It is not yet.",
+      "November. We have ordered extra boxes."
+    ],
+    "12": [
+      "December. Order early. The delivery page has the dates.",
+      "Christmas gifts: wrapped on request, not otherwise.",
+      "We are busy. We are also calm. Both are true.",
+      "Last orders for Christmas are on the delivery page. We would rather you read it than guess."
+    ]
+  },
+  "customer_extra": [
+    "I would buy it again.",
+    "Not sure my family agrees.",
+    "The box was nicer than I expected.",
+    "I read the whole manual.",
+    "It is smaller than I pictured, in a good way.",
+    "My dog is not interested.",
+    "It arrived on a Tuesday.",
+    "Still thinking about it.",
+    "Four stars from me, maybe five.",
+    "Quite pleased.",
+    "A friend wanted one too.",
+    "Better than the photo, if that is possible.",
+    "Would recommend to a friend.",
+    "The wrapping was tidy.",
+    "Arrived in one piece.",
+    "Reading the small print now.",
+    "My neighbour is jealous.",
+    "Placed it on the shelf, in pride of place.",
+    "Two thumbs up, if I had them."
+  ],
+  "dm_greetings": [
+    "Hello,",
+    "Hi,",
+    "Hi there,",
+    "Hello there,",
+    "Good morning,",
+    "Hi team,",
+    "Evening,",
+    "",
+    ""
+  ],
+  "dm_closers": [
+    "Thanks.",
+    "Thank you.",
+    "Cheers.",
+    "Many thanks.",
+    "",
+    "",
+    "Thanks in advance."
+  ],
+  "dm_answer_greetings": [
+    "Hello {first},",
+    "Hi {first},",
+    "Dear {first},",
+    "Thank you for writing, {first}.",
+    "Hello {first}, thank you for the message."
+  ],
+  "dm_signoffs": {
+    "S-06": [
+      "Mrs Hudson",
+      "Hudson, customer service",
+      "Mrs Hudson, Overthought & Co."
+    ],
+    "S-07": [
+      "Sam",
+      "Sam Weller",
+      "Sam, customer service"
+    ],
+    "S-08": [
+      "Esther",
+      "Esther Summerson",
+      "Esther, customer service"
+    ],
+    "S-10": [
+      "Mr Toad",
+      "Toad",
+      "Mr Toad, marketing"
+    ]
+  },
+  "comment_openers": [
+    "Honestly, ",
+    "Quick one: ",
+    "Hm. ",
+    "Update: ",
+    "Oh, ",
+    "Right. ",
+    "Well, ",
+    "Fair play. "
+  ],
+  "customer_lead": [
+    "Update:",
+    "Quick one:",
+    "Honestly,",
+    "Day {days}:",
+    "Small thing.",
+    "For the record,",
+    "Right.",
+    "Well,",
+    "Note to self:",
+    "First impressions:"
+  ],
+  "dm_topics": {
+    "stock": {
+      "needs_order": false,
+      "q": [
+        "Hello, is {product} in stock at the moment?",
+        "Do you have {product} available right now?",
+        "Is {product} sold out? I could not tell from the page.",
+        "How many {product} do you have left?"
+      ],
+      "a": [
+        "Thank you for asking. The page for {product} shows the number we have, and it is the real one.",
+        "The stock figure on the page for {product} is kept up to date. If it says in stock, we can send it.",
+        "The page for {product} says what is available. If it says sold out, we will say when it is expected."
+      ]
+    },
+    "delivery_time": {
+      "needs_order": false,
+      "q": [
+        "How long does delivery take to the north of England?",
+        "If I order today, when would it arrive?",
+        "How long is delivery to Scotland?",
+        "What is the delivery time for a parcel to Wales?"
+      ],
+      "a": [
+        "Delivery time and cost are shown at checkout before you pay, for your postcode.",
+        "It depends on the carrier and the postcode. The checkout shows the estimate before you commit.",
+        "We send by the carrier shown at checkout, with an estimated date. Chilled items have their own, quicker, service."
+      ]
+    },
+    "gift_note": {
+      "needs_order": false,
+      "q": [
+        "Could I order {product} as a gift and have a card put in?",
+        "Can I send {product} to a friend with a note?",
+        "Is it possible to add a message to a gift order?",
+        "I would like to send {product} to someone else. Can you include a card?"
+      ],
+      "a": [
+        "Yes. Write the card text in the notes box at checkout and we will put it in the parcel.",
+        "You can. Add the note at checkout and give your friend's address as the delivery address.",
+        "A note can be added at checkout. We pack the card with the order."
+      ]
+    },
+    "voucher": {
+      "needs_order": false,
+      "q": [
+        "Do you do a gift voucher?",
+        "Is there a gift card I could buy?",
+        "Can I buy a voucher for someone?",
+        "Do you sell vouchers?"
+      ],
+      "a": [
+        "We do not have vouchers at present.",
+        "There are no gift vouchers for the moment. A gift order with a card is the closest thing.",
+        "Not yet. If that changes it will be on the website."
+      ]
+    },
+    "child": {
+      "needs_order": false,
+      "q": [
+        "Is {product} suitable for a child?",
+        "Could a ten-year-old use {product}?",
+        "Is {product} safe for younger children?",
+        "Would {product} be all right for my niece, who is seven?"
+      ],
+      "a": [
+        "The safety notes on the page for {product} say who it is for. Please read them before you buy.",
+        "The page for {product} lists age guidance and any safety notes. If it is unclear, tell us the age and we will say.",
+        "Our products are made for adults. The page for {product} has the safety notes in full."
+      ]
+    },
+    "order_where": {
+      "needs_order": true,
+      "q": [
+        "Hello. My parcel has not arrived. Order {order}.",
+        "Where is {order}? It has not come.",
+        "Could you check on {order}? The tracking has not moved.",
+        "Order {order} has not arrived yet. Can you look?"
+      ],
+      "a": [
+        "I have looked at {order}. It is in hand and I will write if anything changes.",
+        "Thank you. I have checked {order} and asked the carrier for an update.",
+        "I have found {order} and put a note on it. You will hear from us by message or email."
+      ]
+    },
+    "change_address": {
+      "needs_order": true,
+      "q": [
+        "Can I change the address on {order}?",
+        "I put the wrong postcode on {order}. Can it be changed?",
+        "Can {order} go to a different address?",
+        "Is it too late to change the delivery address for {order}?"
+      ],
+      "a": [
+        "If {order} has not been packed, the address can be changed. Send it by message and we will check at once.",
+        "Please send the new address and we will change {order} if it has not been packed.",
+        "We can change the address until the parcel is packed. Send the new one here and I will look."
+      ]
+    },
+    "return": {
+      "needs_order": false,
+      "q": [
+        "I'd like to return {product}. How?",
+        "How do I send {product} back?",
+        "Is {product} returnable?",
+        "What is the returns process for {product}?"
+      ],
+      "a": [
+        "You can start a return on the website, and we will help if you get stuck.",
+        "The returns page explains the steps and the time allowed. It prints a label.",
+        "Returns are accepted within the time on the returns page. Start there, and message us if you need a hand."
+      ]
+    },
+    "guarantee": {
+      "needs_order": false,
+      "q": [
+        "What is the guarantee on {product}?",
+        "Does {product} come with a warranty?",
+        "How long is the guarantee for {product}?",
+        "What does the guarantee on {product} cover?"
+      ],
+      "a": [
+        "The guarantee for {product} is on its page, with its conditions, and in your order email.",
+        "The warranty details for {product} are on the product page. They include what is and is not covered.",
+        "Guarantees vary by product. The page for {product} gives the length and the conditions."
+      ]
+    },
+    "discount": {
+      "needs_order": false,
+      "q": [
+        "Is there a discount code at the moment?",
+        "Do you have any offers on?",
+        "Is there a sale on {product}?",
+        "Any codes for a first order?"
+      ],
+      "a": [
+        "No code at the moment. The prices are the prices.",
+        "Any offers are listed on the website, with their conditions. There is nothing running just now.",
+        "If there is a code, it is on the site. If it is not on the site, there is not one."
+      ]
+    },
+    "colour": {
+      "needs_order": false,
+      "q": [
+        "Do you sell {product} in a different colour?",
+        "What colours does {product} come in?",
+        "Is {product} available in other sizes?",
+        "Can I choose the colour of {product}?"
+      ],
+      "a": [
+        "The options for {product} are listed on its page. If an option is not listed, we do not make it.",
+        "Colours and sizes are on the page for {product}, with the price of each.",
+        "The page for {product} shows every option we have."
+      ]
+    },
+    "press": {
+      "needs_order": false,
+      "q": [
+        "Hi, I'm a journalist. Who do I speak to?",
+        "Who should I contact about a feature?",
+        "I write for a magazine. Can I ask about the company?",
+        "Is there someone I can interview?"
+      ],
+      "a": [
+        "Please email press@overthought.example and Mr Toad will answer.",
+        "Our press address is press@overthought.example. Mr Toad reads it.",
+        "Thank you. The press desk is press@overthought.example, and it is answered on weekdays."
+      ]
+    },
+    "spare_part": {
+      "needs_order": false,
+      "q": [
+        "Can I get a replacement part for {product}?",
+        "I lost a small piece of {product}. Is there a spare?",
+        "Do you sell spares for {product}?",
+        "Is there a refill for {product}?"
+      ],
+      "a": [
+        "Spare parts are listed on the page for {product} where they exist. I will check and message you.",
+        "If a spare exists, it is on the page for {product}. If not, tell us what is missing and we will ask the bench.",
+        "Thank you. I will ask the bench whether a spare is available for {product}."
+      ]
+    },
+    "compat": {
+      "needs_order": false,
+      "q": [
+        "Does {product} work with the accessories you sell?",
+        "Will {product} fit with something I already have?",
+        "Is {product} compatible with your other products?",
+        "What goes with {product}?"
+      ],
+      "a": [
+        "The page for {product} lists what it works with, and what it does not.",
+        "Compatibility is on the page for {product}. If your other item is not there, tell us what it is.",
+        "The accessories that fit {product} are listed on its page."
+      ]
+    },
+    "visit_shop": {
+      "needs_order": false,
+      "q": [
+        "Do you have a shop I can visit?",
+        "Can I come and see the products in person?",
+        "Where is your shop?",
+        "Is the workshop open to visitors?"
+      ],
+      "a": [
+        "We do not have a shop to visit. We have a website and a workshop, and the workshop does not take visitors.",
+        "We sell online only. The workshop is not open to visitors.",
+        "There is no shop. Everything is on the website, with pictures and measurements."
+      ]
+    }
+  }
+}

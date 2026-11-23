@@ -1,0 +1,225 @@
+{
+  "id": "paper-aeroplane",
+  "code": "PLAN",
+  "name": "The Paper Aeroplane",
+  "category": "everyday",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A pre-folded paper aeroplane.",
+  "summary": "A paper aeroplane, already folded. One for £4, or a pack of five for £15.",
+  "concept": "One paper aeroplane, folded in advance, in 100 gsm paper. One model.",
+  "why_it_exists": "Folding one takes a minute and a clear desk. This one is already folded.",
+  "target_customer": "Anyone with a desk, a stairwell or a long corridor.",
+  "physical": {
+    "form": "A folded paper aeroplane in one design.",
+    "materials": [
+      "100 gsm uncoated paper",
+      "Kraft card envelope"
+    ],
+    "dimensions": "260 mm long, 150 mm wingspan. Envelope about 270 x 160 mm.",
+    "weight": "About 5 g."
+  },
+  "options": [
+    {
+      "name": "Pack",
+      "values": [
+        "Single",
+        "Pack of five"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "OT-PLAN-1",
+      "name": "Single",
+      "options": {
+        "Pack": "Single"
+      },
+      "price": 4,
+      "stock": 120,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-PLAN-5",
+      "name": "Pack of five",
+      "options": {
+        "Pack": "Pack of five"
+      },
+      "price": 15,
+      "stock": 40,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It is already folded, so it is ready to fly the moment you open the envelope.",
+    "The paper is a firm 100 gsm, which holds its shape in the air.",
+    "It is one design that flies in a straight line.",
+    "You can buy one, or a pack of five if you want a race.",
+    "It comes with simple tips for fixing a dive or a stall."
+  ],
+  "arrives": "It is posted flat in a brown card envelope, so the wings stay crisp. The envelope is plain and recyclable. Open it gently, and it is ready to throw.",
+  "specs": [
+    [
+      "Size",
+      "260 mm long, 150 mm wingspan"
+    ],
+    [
+      "Weight",
+      "About 5 g each"
+    ],
+    [
+      "Made of",
+      "100 gsm uncoated paper. Kraft card envelope."
+    ],
+    [
+      "Colour",
+      "White paper with one pink wing edge"
+    ],
+    [
+      "Pack",
+      "Single, or pack of five (five identical aeroplanes)"
+    ],
+    [
+      "Folded",
+      "Already folded, ready to throw"
+    ],
+    [
+      "Envelope",
+      "Kraft card, about 270 x 160 mm"
+    ],
+    [
+      "Care",
+      "Keep it dry and flat. Flatten the wings gently if they bend."
+    ]
+  ],
+  "how_it_works": "Hold it under the body and throw it level. If it dives, bend the back edge of the wings up a little. If it climbs and stalls, bend it down.",
+  "in_the_box": [
+    "One folded aeroplane, or five, in a kraft envelope"
+  ],
+  "accessories": [],
+  "compatibility": [
+    {
+      "with": "bubble-wrap",
+      "works": true,
+      "note": "Pre-popped Bubble Wrap is a fine soft wrap for posting one."
+    },
+    {
+      "with": "skimming-stones",
+      "works": false,
+      "note": "Not a pair. Stones do not fly like aeroplanes."
+    }
+  ],
+  "packaging": "A kraft card envelope. Plain, flat and recyclable.",
+  "warranty": {
+    "months": 0,
+    "summary": "It has no warranty, because it is paper.",
+    "guarantee": null
+  },
+  "care": [
+    "Keep it dry and flat.",
+    "If the wings bend, flatten them gently.",
+    "Recycle it when it has been through enough."
+  ],
+  "safety": [
+    "Do not throw it at faces. The corners can hurt eyes."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unused and in its box. See Returns."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "A pre-folded paper aeroplane",
+    "intro": "A pre-folded paper aeroplane.",
+    "sections": [
+      {
+        "title": "One design",
+        "body": "It is 260 mm long, in 100 gsm paper, and folded before it arrives."
+      },
+      {
+        "title": "One or five",
+        "body": "One is £4. A pack of five is £15."
+      },
+      {
+        "title": "Throwing it",
+        "body": "Hold it under the body and throw it level. It is paper, so it lasts as long as paper does."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Is it already folded?",
+      "a": "Yes."
+    },
+    {
+      "q": "How much is it?",
+      "a": "£4 for one, or £15 for five."
+    },
+    {
+      "q": "How far will it fly?",
+      "a": "It depends on your throw and the room. We do not promise a distance."
+    },
+    {
+      "q": "Can I unfold it?",
+      "a": "Yes. Folding it again takes a few minutes."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Yes, within 30 days, if it is unused and in its envelope."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It dives nose first.",
+      "steps": [
+        "Bend the back edge of both wings up a little.",
+        "Throw gently and level."
+      ],
+      "if_unresolved": "Flatten the wings and try again."
+    },
+    {
+      "problem": "It climbs, stalls and drops.",
+      "steps": [
+        "Bend the back edge of the wings down a little.",
+        "Throw a little softer."
+      ],
+      "if_unresolved": "Check both wings are the same shape."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "bubble-wrap",
+    "skimming-stones"
+  ],
+  "image": {
+    "file": "img/paper-aeroplane.jpg",
+    "sweep": "#E8E4F2"
+  },
+  "photography_direction": "One folded aeroplane in off-white with a pink wing edge on a pale backdrop. No people.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated pink and sky blue accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. A single folded paper aeroplane resting on a flat surface, one pink wing edge, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE PAPER AEROPLANE in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated pink and sky blue accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. Close-up of the folded nose and crease lines of a paper aeroplane, soft paper texture, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words THE PAPER AEROPLANE in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated pink and sky blue accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. Five paper aeroplanes in a neat row, each with a different saturated wing edge: pink, sky blue, orange, lime and sunflower yellow, 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE PAPER AEROPLANE in a heavy wide sans. No other text anywhere.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated pink and sky blue accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. A flat kraft envelope with one aeroplane half out of it, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE PAPER AEROPLANE in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated pink and sky blue accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. A paper aeroplane in mid flight above a plain surface, 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE PAPER AEROPLANE in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated pink and sky blue accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. One aeroplane floating above the backdrop, long soft shadow, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE PAPER AEROPLANE in a heavy wide sans. No other text anywhere."
+  },
+  "variant_images": {
+    "option": "Pack",
+    "images": {
+      "Single": "img/branded/paper-aeroplane.jpg",
+      "Pack of five": "img/branded/paper-aeroplane-five.jpg"
+    }
+  }
+}

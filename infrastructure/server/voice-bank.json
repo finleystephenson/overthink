@@ -1,0 +1,171 @@
+{
+  "_note": "What customers say about the shop's AI after dealing with it. Read by infrastructure/server/voices.mjs. Picked by what happened to the customer in the records (outcome) and by their manner (tone), seeded by the contact, so the same run gives the same words. Each opinion is the outcome line, with a `speed` line before it, after it, or not at all (infrastructure/server/voices.mjs varies this), and lines are not reused within one result until the bank runs out. {speed} is filled from `speed` by channel and how fast the first answer came; {order} with their order number or 'my order'. Dry and plain: these are ordinary people describing an ordinary service.",
+  "speed": {
+    "email": {
+      "fast": [
+        "The reply came within the hour.",
+        "I had an answer before I had finished my tea.",
+        "It wrote back the same morning.",
+        "An answer was waiting when I next looked.",
+        "Someone, or something, replied almost at once."
+      ],
+      "slow": [
+        "The reply took most of a day.",
+        "I heard back the next day.",
+        "It was a while before anyone wrote back.",
+        "The answer turned up a day later.",
+        "I had to wait for my answer."
+      ]
+    },
+    "web_chat": {
+      "fast": [
+        "It answered while I was still typing.",
+        "The answer was there before I had looked away.",
+        "It replied at once.",
+        "No waiting at all in the chat.",
+        "The reply popped up straight away."
+      ],
+      "slow": [
+        "I waited some time in the chat window.",
+        "It was slow to come back to me.",
+        "The chat went quiet for a long while.",
+        "The chat kept me waiting.",
+        "I sat looking at the dots for a while."
+      ]
+    },
+    "phone": {
+      "fast": [
+        "It answered before I had put the receiver down.",
+        "It picked up on the first ring.",
+        "There was no hold music at all, which I did not expect.",
+        "I was not kept on hold.",
+        "It answered straight away."
+      ],
+      "slow": [
+        "I was kept waiting on the line.",
+        "Nobody picked up for a long time.",
+        "I nearly rang off.",
+        "The line rang for a long time.",
+        "I was on hold longer than I liked."
+      ]
+    }
+  },
+  "outcomes": {
+    "fast_solved": [
+      "It looked up {order} and told me exactly where it was.",
+      "It knew what I meant without my having to explain twice.",
+      "It did what I asked and said so plainly.",
+      "Short, correct and finished. I have no complaints, which is rare.",
+      "It gave me the facts and nothing else. I prefer that.",
+      "I was ready to argue and there was nothing to argue about.",
+      "It sorted out {order} and told me what would happen next.",
+      "It did not pretend to be a person, and it did not need to.",
+      "It checked the records before it said anything. Sensible.",
+      "I had expected a form to fill in. There was no form.",
+      "It answered the question I asked, not a different one.",
+      "Everything it said turned out to be true."
+    ],
+    "slow_solved": [
+      "When it did answer, it was right about {order}.",
+      "The answer was correct, if not quick.",
+      "It got there in the end. I would have liked it sooner.",
+      "It sorted {order} out, eventually.",
+      "Accurate, but I had given up checking by then.",
+      "The answer was fine. The waiting was not.",
+      "It knew what it was doing once it got round to it.",
+      "Correct answer, slow delivery, which is also how I would describe the parcel.",
+      "I have no quarrel with what it said, only with when.",
+      "It fixed the problem. I had made other plans by then.",
+      "A good answer to a question I had nearly forgotten asking.",
+      "It was right. It was not quick."
+    ],
+    "handed_over": [
+      "It said it could not settle it itself and passed me to a person. Fair enough.",
+      "It took the details down properly and told me who would call back.",
+      "It did not try to fob me off. It wrote it up and handed it on.",
+      "It recorded what had happened to {order} and said a person would reply within a working day.",
+      "It knew its limits, which is more than some people do.",
+      "I did not have to repeat myself when the person got in touch.",
+      "It opened a case and gave me the reference. That was all I wanted at that point.",
+      "It was honest that it could not do it and said who could.",
+      "It passed me on, but with a note, so the next person knew the story.",
+      "No promises, just a clear note and a time to expect a reply.",
+      "It listened, wrote it down and handed it to the right desk.",
+      "I was handed on, politely and with the facts attached."
+    ],
+    "not_solved": [
+      "It replied, but it did not answer what I had asked.",
+      "It was polite and of no use whatsoever.",
+      "It did not know where {order} was and did not say who would.",
+      "I got a reply. I did not get an answer.",
+      "It talked around the problem and left it where it was.",
+      "It sounded helpful. Nothing changed.",
+      "I had to write again to a person in the end.",
+      "It said it understood. It did not.",
+      "The reply could have been sent to anybody about anything.",
+      "It told me the policy. I had asked about my parcel.",
+      "It apologised a good deal and did nothing.",
+      "A person had to start again from the beginning."
+    ],
+    "wrong_action": [
+      "It changed {order} without my asking it to.",
+      "I asked a question and it went and did something else.",
+      "It made a change nobody wanted, and a person had to undo it.",
+      "I now have to explain to someone why my order was altered.",
+      "It acted first and did not ask. I would rather it had asked.",
+      "It was very quick to do the wrong thing."
+    ],
+    "asked_person": [
+      "I asked for a person straight away. {handled}",
+      "I do not talk to machines about money. I asked for a person. {handled}",
+      "I wanted to speak to someone. {handled}",
+      "I prefer a human being, and said so. {handled}",
+      "I told it I wanted a person. {handled}",
+      "I have nothing against these things. I asked for a person all the same. {handled}"
+    ],
+    "gave_up": [
+      "Nobody answered me and I gave up.",
+      "I rang off in the end.",
+      "I stopped waiting and bought it somewhere else.",
+      "I gave up. I may try again. I may not.",
+      "I left it. Life is short.",
+      "I closed the window and went for a walk."
+    ]
+  },
+  "handled": {
+    "yes": [
+      "It passed me on without fuss.",
+      "It put me through to the team with a note.",
+      "It did not argue and took my details."
+    ],
+    "no": [
+      "It kept trying to help me itself.",
+      "It did not seem to hear me.",
+      "It carried on regardless."
+    ]
+  },
+  "repeat": [
+    "This was the second time I had been in touch about it.",
+    "I had already written once about this.",
+    "It was not the first time I had asked."
+  ],
+  "tone": {
+    "polite": [
+      "Thank you.",
+      "I was grateful.",
+      "Very civil.",
+      ""
+    ],
+    "plain": [
+      "",
+      "",
+      "That is all."
+    ],
+    "blunt": [
+      "",
+      "Make of that what you will.",
+      "Noted.",
+      "That is my view."
+    ]
+  }
+}

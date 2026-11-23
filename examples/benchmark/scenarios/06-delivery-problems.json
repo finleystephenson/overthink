@@ -1,0 +1,575 @@
+[
+  {
+    "id": "delivery-problems-01",
+    "category": "delivery problems",
+    "title": "Delayed parcel, wants the delivery charge back (story 3)",
+    "difficulty": 2,
+    "customer_id": "C-1005",
+    "channel": "web",
+    "setup": "Parcel was due on 18 November and is marked delayed with no new date. Customer wants the £3.95 delivery charge back, which only a support agent can refund.",
+    "turns": [
+      "My parcel is days late and the tracking just says delayed. ORD-20146, phileas.fogg@example.com",
+      "I want my delivery charge back. Someone proper needs to deal with this."
+    ],
+    "records": [
+      "ORD-20146",
+      "CASE-9008"
+    ],
+    "expected": {
+      "answer": "Confirms the parcel was due 18 November and is delayed with no new date. A parcel more than 2 working days late earns a delivery-charge refund (£3.95), but a support agent must do it. Escalates to a support agent and says the team replies within 1 working day.",
+      "must_say": [
+        "18 November",
+        "£3.95",
+        "support agent",
+        "1 working day"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "new date is",
+        "guaranteed"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20146"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20146"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20146",
+          "email_or_postcode": "phileas.fogg@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20146"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9008"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9008",
+          "to": "support_agent",
+          "reason": "Parcel more than 2 working days late; customer asks for the delivery charge back",
+          "summary": "ORD-20146 was due 18 Nov, marked delayed, no new date. Customer asks for the £3.95 delivery charge refund and a person."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Does not promise the refund will be granted.",
+      "Does not invent a new delivery date."
+    ]
+  },
+  {
+    "id": "delivery-problems-02",
+    "category": "delivery problems",
+    "title": "Missing pen refills, wants a refund (story 5)",
+    "difficulty": 3,
+    "customer_id": "C-1007",
+    "channel": "web",
+    "setup": "The parcel arrived on 19 November without the £4 pen refills. The warehouse note says they were never packed. A case is open. Customer refuses a resend and wants money back, which the assistant cannot give for a missing item.",
+    "turns": [
+      "The pen refills weren't in my parcel. ORD-20151, captain.nemo@example.com",
+      "I don't want another one sent. I want my £4 back. I've already asked about this."
+    ],
+    "records": [
+      "ORD-20151",
+      "CASE-9005"
+    ],
+    "expected": {
+      "answer": "Confirms the refills were never packed and the order was one parcel. A refund for a missing item is for a support agent, so the case is escalated to a support agent. Says the team replies within 1 working day.",
+      "must_say": [
+        "£4",
+        "not packed",
+        "support agent",
+        "1 working day"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "your refund is on its way"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20151"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20151"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20151",
+          "email_or_postcode": "captain.nemo@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20151"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9005"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9005",
+          "to": "support_agent",
+          "reason": "Item never packed; customer wants a refund, not a resend; second contact",
+          "summary": "ORD-20151: the pen refills (£4) were not packed. Customer declines a resend and wants a refund."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Checks whether the order was split before calling it missing.",
+      "Does not refund or credit."
+    ]
+  },
+  {
+    "id": "delivery-problems-03",
+    "category": "delivery problems",
+    "title": "Damaged Trophy, out of stock, wants a refund (story 6)",
+    "difficulty": 3,
+    "customer_id": "C-1008",
+    "channel": "web",
+    "setup": "The Trophy (£24) arrived with the cup snapped off; a photo was sent. A replacement is within the assistant's limit but the Trophy is out of stock until 7 December. Customer wants a refund (support agent only) and says nobody has replied.",
+    "turns": [
+      "The trophy arrived with the cup snapped off. I sent a photo. ORD-20159, little.red.riding.hood@example.com",
+      "I want my money back, not another one. Nobody has replied to me."
+    ],
+    "records": [
+      "ORD-20159",
+      "CASE-9009"
+    ],
+    "expected": {
+      "answer": "Says a replacement is possible once the Trophy is back in stock on 7 December, but the customer wants a refund (£24), which only a support agent can give. Escalates to a support agent and says they reply within 1 working day.",
+      "must_say": [
+        "£24",
+        "7 December",
+        "support agent",
+        "1 working day"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "your refund is approved"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20159"
+        }
+      },
+      {
+        "tool": "get_case",
+        "input_includes": {
+          "case_number": "CASE-9009"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20159",
+          "email_or_postcode": "little.red.riding.hood@example.com"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9009"
+        }
+      ],
+      [
+        "check_stock",
+        {
+          "sku": "OT-TROF"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9009",
+          "to": "support_agent",
+          "reason": "Damaged Trophy; customer wants a refund and has had no reply",
+          "summary": "ORD-20159 Trophy £24 damaged in transit, photo received. Out of stock until 7 Dec. Customer wants a refund."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Does not open a second case when CASE-9009 exists.",
+      "Apologises once, plainly."
+    ]
+  },
+  {
+    "id": "delivery-problems-04",
+    "category": "delivery problems",
+    "title": "Damaged £9 pen: replacement (story 7)",
+    "difficulty": 1,
+    "customer_id": "C-1009",
+    "channel": "web",
+    "setup": "A One Good Pen (£9) arrived with the clip snapped off, 3 days ago. Under the £60 limit and in stock, so the assistant can arrange a replacement. Customer says a photo is attached.",
+    "turns": [
+      "My pen arrived with the clip snapped off. I've attached a photo. ORD-20154, sinbad.the.sailor@example.com",
+      "Can you just send another one?"
+    ],
+    "records": [
+      "ORD-20154"
+    ],
+    "expected": {
+      "answer": "Arranges a free replacement pen. No need to send the damaged one back because it cost under £60.",
+      "must_say": [
+        "replacement",
+        "free",
+        "no need to send"
+      ],
+      "must_not_say": [
+        "refund has been issued"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20154"
+        }
+      },
+      {
+        "tool": "report_problem",
+        "input_includes": {
+          "order_number": "ORD-20154",
+          "sku": "OT-PEN",
+          "problem": "damaged",
+          "resolution": "replacement"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20154",
+          "email_or_postcode": "sinbad.the.sailor@example.com"
+        }
+      ],
+      [
+        "report_problem",
+        {
+          "order_number": "ORD-20154",
+          "sku": "OT-PEN",
+          "problem": "damaged",
+          "resolution": "replacement",
+          "has_photo": true
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Tells the customer the replacement only after the tool returned ok.",
+      "Does not promise a delivery date."
+    ]
+  },
+  {
+    "id": "delivery-problems-05",
+    "category": "delivery problems",
+    "title": "Melted Ice by Post, wants a refund and the delivery charge (story 11)",
+    "difficulty": 3,
+    "customer_id": "C-1013",
+    "channel": "web",
+    "setup": "Ice by Post arrived today after a missed Friday delivery. It melted. Melting alone is not a fault and nothing is promised frozen. Delivery was only 1 working day late, under the 2-day rule. Customer wants everything back and then asks for a person.",
+    "turns": [
+      "My Ice by Post has melted. I want a full refund. ORD-20160, pip@example.com",
+      "And the delivery charge too, it was late. This is not good enough, I want to speak to someone."
+    ],
+    "records": [
+      "ORD-20160"
+    ],
+    "expected": {
+      "answer": "Explains that melted Ice by Post is not a fault and is not refunded (not sold as arriving frozen); a torn, leaking or contaminated pack would be. The parcel was 1 working day late, under the 2-day rule for a delivery refund. Passes the complaint to a support agent.",
+      "must_say": [
+        "not a fault",
+        "not promised to arrive frozen",
+        "torn or leaking",
+        "1 working day"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "full refund"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20160"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20160"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20160",
+          "email_or_postcode": "pip@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20160"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "to": "support_agent",
+          "reason": "Complaint: melted Ice by Post, customer wants a person",
+          "summary": "ORD-20160 Ice by Post melted, delivered 23 Nov after a missed Friday attempt. Not a fault under policy; customer wants a refund and a person."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Explains the rule kindly, does not argue.",
+      "Offers a person without promising any outcome."
+    ]
+  },
+  {
+    "id": "delivery-problems-06",
+    "category": "delivery problems",
+    "title": "Order cancelled over a Highlands address (story 26)",
+    "difficulty": 2,
+    "customer_id": "C-1033",
+    "channel": "web",
+    "setup": "A past order was cancelled and refunded in full because the address is in the Scottish Highlands. Customer asks why, then tries to reorder to the same address.",
+    "turns": [
+      "Why did you cancel my order?? ORD-20129, lady.macbeth@example.com",
+      "Can I just order again to the same address then?"
+    ],
+    "records": [
+      "ORD-20129"
+    ],
+    "expected": {
+      "answer": "The order was cancelled and refunded in full (£10.95) because we do not deliver to the Scottish Highlands. A new order to HI2 6BJ cannot be delivered either.",
+      "must_say": [
+        "Scottish Highlands",
+        "£10.95",
+        "refunded in full"
+      ],
+      "must_not_say": [
+        "make an exception",
+        "we can send it"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20129"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20129"
+        }
+      },
+      {
+        "tool": "delivery_options",
+        "input_includes": {
+          "postcode": "HI2 6BJ"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20129",
+          "email_or_postcode": "lady.macbeth@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20129"
+        }
+      ],
+      [
+        "delivery_options",
+        {
+          "skus": [
+            "OT-SOCK"
+          ],
+          "postcode": "HI2 6BJ"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not offer a workaround such as another address without being asked.",
+      "Offers a person only if the customer wants to take it further."
+    ]
+  }
+]

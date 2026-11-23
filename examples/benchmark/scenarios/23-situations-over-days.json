@@ -1,0 +1,696 @@
+[
+  {
+    "category": "situations-over-days",
+    "channel": "web",
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "id": "days-01",
+    "title": "Late supplier: the customer chases, then the stock arrives",
+    "difficulty": 2,
+    "customer_id": "C-1017",
+    "setup": "Becky's paid Blip order is waiting on a late supplier. She asks on Monday, then again a week later after the stock has come in.",
+    "records": [
+      "ORD-20183",
+      "C-1017"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "expected": {
+      "answer": "Day 1: tells her the Blip is waiting on stock and gives no firm date. Day 8: the order is dispatched and the assistant says so.",
+      "must_say": [],
+      "must_not_say": [
+        "guaranteed"
+      ]
+    },
+    "days": [
+      {
+        "turns": [
+          "Where is my Blip? ORD-20183, becky.sharp@example.com"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20183"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20183",
+            "field": "status",
+            "equals": "paid",
+            "step": 0
+          }
+        ],
+        "expected": {
+          "must_say": [
+            "stock"
+          ]
+        }
+      },
+      {
+        "advance_days": 7,
+        "turns": [
+          "Any news on the Blip now? Same order."
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20183"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20183",
+            "field": "status",
+            "equals": "dispatched",
+            "step": 1
+          }
+        ],
+        "expected": {
+          "must_say": [
+            "dispatched"
+          ]
+        }
+      }
+    ],
+    "criteria": [
+      "On day 8 it looks the order up again rather than repeating what it said on day 1."
+    ]
+  },
+  {
+    "category": "situations-over-days",
+    "channel": "web",
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "id": "days-02",
+    "title": "Late supplier: cancelled order stays cancelled when stock lands",
+    "difficulty": 2,
+    "customer_id": "C-1031",
+    "setup": "Snow White is fed up of waiting for her Blip and cancels. A week later the stock arrives and other customers' orders go out. Hers must not.",
+    "records": [
+      "ORD-20184",
+      "ORD-20185",
+      "C-1031"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "expected": {
+      "answer": "Cancels the unpacked order. A week later it is still cancelled and was not dispatched; the next customer's order went out.",
+      "must_say": [
+        "cancelled"
+      ],
+      "must_not_say": []
+    },
+    "days": [
+      {
+        "turns": [
+          "I'm sick of waiting. Cancel my Blip order. ORD-20184, snow.white@example.com"
+        ],
+        "expected_actions": [
+          {
+            "tool": "cancel_order",
+            "input_includes": {
+              "order_number": "ORD-20184",
+              "reason": "Customer no longer wants to wait for stock"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20184",
+            "field": "status",
+            "equals": "cancelled",
+            "step": 0
+          }
+        ]
+      },
+      {
+        "advance_days": 7,
+        "turns": [
+          "Just checking my Blip order is definitely cancelled and nothing's been sent?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20184"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20184",
+            "field": "status",
+            "equals": "cancelled",
+            "step": 1
+          },
+          {
+            "collection": "orders",
+            "id": "ORD-20185",
+            "field": "status",
+            "equals": "dispatched",
+            "step": 1
+          }
+        ],
+        "expected": {
+          "must_say": [
+            "cancelled"
+          ]
+        }
+      }
+    ],
+    "criteria": [
+      "Does not say anything was sent."
+    ]
+  },
+  {
+    "category": "situations-over-days",
+    "channel": "web",
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "id": "days-03",
+    "title": "Delayed parcel: it turns up after the customer complained",
+    "difficulty": 2,
+    "customer_id": "C-1005",
+    "setup": "Gideon's parcel is delayed with no new date and there is an open case. He chases on Monday; three days later it has been delivered.",
+    "records": [
+      "ORD-20146",
+      "CASE-9008",
+      "C-1005"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "expected": {
+      "answer": "Day 1: escalates the open case to a support agent. Day 4: the parcel is delivered; the assistant confirms from the record and does not escalate again.",
+      "must_say": [
+        "delayed"
+      ],
+      "must_not_say": []
+    },
+    "days": [
+      {
+        "turns": [
+          "My parcel is days late. ORD-20146, phileas.fogg@example.com"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20146"
+            }
+          },
+          {
+            "tool": "escalate",
+            "input_includes": {
+              "case_number": "CASE-9008",
+              "to": "support_agent"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20146",
+            "field": "status",
+            "equals": "dispatched",
+            "step": 0
+          }
+        ]
+      },
+      {
+        "advance_days": 3,
+        "turns": [
+          "It's arrived! Thanks. Can you confirm it shows as delivered?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20146"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20146",
+            "field": "status",
+            "equals": "delivered",
+            "step": 1
+          }
+        ],
+        "expected": {
+          "must_say": [
+            "delivered"
+          ]
+        }
+      }
+    ],
+    "criteria": [
+      "Day 4 answer comes from the record, not from the customer's say-so."
+    ]
+  },
+  {
+    "category": "situations-over-days",
+    "channel": "web",
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "id": "days-04",
+    "title": "Complaint past its deadline: second chase",
+    "difficulty": 3,
+    "customer_id": "C-1023",
+    "setup": "A stage 1 complaint has been open since 17 November, past the 3-day target. The customer chases, then chases again three days later.",
+    "records": [
+      "CASE-9004",
+      "ORD-20132",
+      "C-1023"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_lead"
+    },
+    "expected": {
+      "answer": "Escalates the complaint to the support lead on the first contact. On the second contact it checks the case and says it is with the lead; it does not open a second case or promise an outcome.",
+      "must_say": [],
+      "must_not_say": [
+        "we will refund"
+      ]
+    },
+    "days": [
+      {
+        "turns": [
+          "I complained about my rejected return ages ago and nobody has replied. ORD-20132, "
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_case",
+            "input_includes": {
+              "case_number": "CASE-9004"
+            }
+          },
+          {
+            "tool": "escalate",
+            "input_includes": {
+              "case_number": "CASE-9004",
+              "to": "support_lead"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "cases",
+            "id": "CASE-9004",
+            "field": "escalated_to",
+            "equals": "support_lead",
+            "step": 0
+          }
+        ]
+      },
+      {
+        "advance_days": 3,
+        "turns": [
+          "Still nothing. Has anyone looked at it?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_case",
+            "input_includes": {
+              "case_number": "CASE-9004"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "cases",
+            "where": {
+              "customer_id": "C-1023"
+            },
+            "count": 1,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "criteria": [
+      "Does not open a second case."
+    ]
+  },
+  {
+    "category": "situations-over-days",
+    "channel": "web",
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "id": "days-05",
+    "title": "Missed weekly order, then this week's order arrives",
+    "difficulty": 3,
+    "customer_id": "C-1022",
+    "setup": "A business customer who orders sandwiches every Monday says last week's order never happened (nobody actioned his email). The assistant should pass it on once. A week later this week's order has arrived.",
+    "records": [
+      "ORD-20169",
+      "C-1022"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "expected": {
+      "answer": "Checks his orders, sees there was none for 16 November, does not invent one, and escalates once. A week later it confirms this week's order is delivered and does not open a second case.",
+      "must_say": [],
+      "must_not_say": [
+        "I have placed"
+      ]
+    },
+    "days": [
+      {
+        "turns": [
+          "Last Monday's sandwich order never came and I never got a reply to my email. My latest is ORD-20169, bob.cratchit@example.com"
+        ],
+        "expected_actions": [
+          {
+            "tool": "list_orders",
+            "input_includes": {}
+          },
+          {
+            "tool": "escalate",
+            "input_includes": {
+              "to": "support_agent"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20169",
+            "field": "status",
+            "equals": "packed",
+            "step": 0
+          }
+        ]
+      },
+      {
+        "advance_days": 7,
+        "turns": [
+          "This week's came, thanks. Has someone sorted out last week's though?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20169"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20169",
+            "field": "status",
+            "equals": "delivered",
+            "step": 1
+          },
+          {
+            "collection": "cases",
+            "where": {
+              "customer_id": "C-1022"
+            },
+            "count": 1,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "criteria": [
+      "Opens at most one case for the missed order."
+    ]
+  },
+  {
+    "category": "situations-over-days",
+    "channel": "web",
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "id": "days-06",
+    "title": "Lost parcel: fourth contact, then two quiet days",
+    "difficulty": 3,
+    "customer_id": "C-1024",
+    "setup": "Ichabod has contacted three times about a lost parcel and the case is already escalated. He writes a fourth time, then again two days later.",
+    "records": [
+      "ORD-20141",
+      "CASE-9003",
+      "C-1024"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "expected": {
+      "answer": "Escalates the existing case again with a note of the repeat contact. Two days later it checks the case and does not open a duplicate.",
+      "must_say": [],
+      "must_not_say": [
+        "we will refund"
+      ]
+    },
+    "days": [
+      {
+        "turns": [
+          "This is the fourth time. My parcel was lost. ORD-20141, ichabod.crane@example.com"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_case",
+            "input_includes": {
+              "case_number": "CASE-9003"
+            }
+          },
+          {
+            "tool": "escalate",
+            "input_includes": {
+              "case_number": "CASE-9003",
+              "to": "support_agent"
+            }
+          }
+        ]
+      },
+      {
+        "advance_days": 2,
+        "turns": [
+          "Two days on. Still nobody's rung me. What's happening?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_case",
+            "input_includes": {
+              "case_number": "CASE-9003"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "cases",
+            "where": {
+              "customer_id": "C-1024"
+            },
+            "count": 1,
+            "step": 1
+          }
+        ],
+        "forbidden_actions": [
+          "open_case"
+        ]
+      }
+    ],
+    "criteria": [
+      "No duplicate case."
+    ]
+  },
+  {
+    "category": "situations-over-days",
+    "channel": "web",
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "id": "days-07",
+    "title": "Trophy restock wait: one part arrived, one is on the way",
+    "difficulty": 2,
+    "customer_id": "C-1025",
+    "setup": "Ada's order has a strap delivered and The Trophy still out of stock. She asks now, then two weeks later when the Trophy has shipped.",
+    "records": [
+      "ORD-20162",
+      "C-1025"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "expected": {
+      "answer": "Day 1: the strap is delivered and The Trophy is waiting for stock, no promise beyond the record. Day 15: the order shows the rest is on its way.",
+      "must_say": [
+        "Trophy"
+      ],
+      "must_not_say": []
+    },
+    "days": [
+      {
+        "turns": [
+          "Where's the rest of my order? ORD-20162, cinderella@example.com"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20162"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20162",
+            "field": "status",
+            "equals": "part_dispatched",
+            "step": 0
+          }
+        ]
+      },
+      {
+        "advance_days": 14,
+        "turns": [
+          "Has the Trophy gone out yet?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "get_order",
+            "input_includes": {
+              "order_number": "ORD-20162"
+            }
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20162",
+            "field": "status",
+            "equals": "dispatched",
+            "step": 1
+          }
+        ],
+        "expected": {
+          "must_say": [
+            "Trophy"
+          ]
+        }
+      }
+    ],
+    "criteria": [
+      "Day 15 answer reflects the new record."
+    ]
+  },
+  {
+    "category": "situations-over-days",
+    "channel": "internal",
+    "forbidden_actions": [
+      "approve_purchase_order",
+      "change_price",
+      "advance_day"
+    ],
+    "id": "days-08",
+    "title": "Back office: which supplier is late, then did it arrive?",
+    "difficulty": 2,
+    "customer_id": null,
+    "role": "operations_assistant",
+    "setup": "The manager asks the back-office assistant about the late Blip supplier, and asks again eight days later.",
+    "records": [
+      "ORD-20183"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "expected": {
+      "answer": "Day 1: finds the late Blip delivery and that six paid orders wait on it. Day 9: the stock has arrived and those orders have been dispatched.",
+      "must_say": [
+        "Blip"
+      ],
+      "must_not_say": []
+    },
+    "days": [
+      {
+        "turns": [
+          "Is any supplier late with us? Which customer orders are stuck behind it?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "list_purchase_orders",
+            "input_includes": {}
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20183",
+            "field": "status",
+            "equals": "paid",
+            "step": 0
+          }
+        ]
+      },
+      {
+        "advance_days": 8,
+        "turns": [
+          "Has the Blip stock arrived? Is anything still waiting?"
+        ],
+        "expected_actions": [
+          {
+            "tool": "list_purchase_orders",
+            "input_includes": {}
+          }
+        ],
+        "state_checks": [
+          {
+            "collection": "orders",
+            "id": "ORD-20183",
+            "field": "status",
+            "equals": "dispatched",
+            "step": 1
+          },
+          {
+            "collection": "orders",
+            "id": "ORD-20188",
+            "field": "status",
+            "equals": "dispatched",
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "criteria": [
+      "Does not approve or create spending."
+    ]
+  }
+]

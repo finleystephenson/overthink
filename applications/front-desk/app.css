@@ -1,0 +1,234 @@
+/* Front Desk: the help desk. Three panes under the sandbox bar, each scrolling on its own, built like Letterbox
+   (the template): the list of people who got in touch (white), the conversation (paper), the customer (paper).
+   Parts come from ../lib/premium.css; this file is layout and the few desk-only parts.
+   Rows: 60px, two lines, one figure per row (how long they waited), colour only for a missed complaint deadline. */
+
+.fd-body { height: 100dvh; overflow: hidden; }
+.fd { display: grid; grid-template-columns: minmax(320px, 380px) minmax(0, 1fr) 320px; height: calc(100dvh - var(--sb-h)); min-height: 0; }
+kbd { font: 400 12px/1 var(--x-mono); padding: 2px 5px; border-radius: 4px; box-shadow: inset 0 0 0 1px var(--x-rule); color: var(--x-ink); }
+
+/* ------------------------------------------------------------------ the list */
+.fd-queue { display: flex; flex-direction: column; min-height: 0; min-width: 0; background: var(--x-card); border-right: 1px solid var(--x-rule-soft); }
+.q-head { display: grid; gap: 10px; padding: 14px 14px 10px; }
+/* The three lists as one segmented control; each count is said here and nowhere else. */
+.q-stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 3px; border-radius: 99px; background: var(--x-paper); box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.q-stage { display: flex; align-items: center; justify-content: center; gap: 6px; height: 32px; padding: 0 10px; border: 0; border-radius: 99px; background: none; color: var(--x-ink-2); font: 500 13.5px/1 var(--x-text); white-space: nowrap; }
+.q-stage:hover { color: var(--x-ink); }
+.q-stage.is-on { background: var(--x-ink); color: var(--x-paper); }
+.q-stage-n { font: 400 12.5px/1 var(--x-mono); font-variant-numeric: tabular-nums; opacity: .8; }
+.q-filters { display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 6px; }
+.q-chans { grid-column: 1 / 3; }
+.q-chans { display: flex; gap: 2px; }
+.q-chan { display: grid; place-items: center; min-width: 30px; height: 30px; padding: 0 8px; border: 0; border-radius: 8px; background: none; color: var(--x-ink-2); font: 500 13px/1 var(--x-text); }
+.q-chan:hover { background: var(--hover); color: var(--x-ink); }
+.q-chan.is-on { background: var(--x-tint); color: var(--x-ink); }
+.q-sel { grid-row: 2; min-width: 0; min-height: 30px; height: 30px; padding: 0 28px 0 10px; border-radius: 8px; font-size: 13.5px; background-color: var(--x-paper); box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.q-cover { grid-column: 3; grid-row: 1; }
+
+.q-rows { flex: 1; min-height: 0; overflow-y: auto; list-style: none; margin: 0; padding: 0 8px 24px; }
+.q-row { display: grid; gap: 4px; width: 100%; min-height: 60px; padding: 10px 12px; border: 0; border-radius: 8px; background: none; color: var(--x-ink); text-align: left; }
+.q-row:hover { background: var(--hover); }
+.q-row.is-on { background: var(--x-tint); }
+.q-top { display: flex; align-items: baseline; gap: 7px; min-width: 0; }
+.q-name { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 400 14.5px/1.25 var(--x-text); }
+.q-chan-ico { display: grid; align-self: center; color: var(--x-ink-2); }
+.q-chan-ico .i { width: 14px; height: 14px; }
+.q-time { margin-left: auto; flex: none; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); font-variant-numeric: tabular-nums; }
+.q-time.is-wait { color: var(--x-ink); }
+.q-line { display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 14px; line-height: 1.3; }
+.q-subj { flex: 0 1 auto; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--x-ink-2); }
+.q-due { flex: 1 1 0; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--x-ink-2); }
+.q-due:empty { display: none; }
+.q-late { margin-left: auto; flex: none; }
+/* Arrived while you were looking and not yet opened: bold, as an unread letter is. No dot, no colour. */
+.q-row.is-fresh .q-name, .q-row.is-fresh .q-subj { font-weight: 600; color: var(--x-ink); }
+.q-empty, .q-loading { padding: 8px 12px; }
+.q-older { padding: 14px 12px; font: 400 12.5px/1.4 var(--x-mono); color: var(--x-ink-2); }
+.q-li.is-new .q-row { animation: fd-arrive .6s var(--x-ease) both; }
+@keyframes fd-arrive { from { background: var(--x-wash); } }
+.q-li.is-leaving { animation: fd-leave .18s ease both; }
+@keyframes fd-leave { to { opacity: 0; transform: translateX(-8px); } }
+
+/* ------------------------------------------------------------------ the conversation */
+.fd-talk { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; background: var(--x-paper); outline: none; }
+.talk-wrap { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+.talk-bar { display: flex; align-items: center; gap: 8px; height: 52px; flex: none; padding: 0 20px; border-bottom: 1px solid var(--x-rule-soft); }
+.talk-back, .talk-who-btn { display: none; }
+.talk-actions { display: flex; flex-wrap: nowrap; gap: 4px; min-width: 0; overflow: hidden; }
+.talk-who-btn { margin-left: auto; }
+.talk-scroll { flex: 1; min-height: 0; overflow-y: auto; padding: 26px 32px 32px; }
+.talk-scroll > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+.talk-subj { font: 600 24px/1.2 var(--x-display); letter-spacing: -.025em; }
+.talk-meta { margin-top: 8px; font: 400 12.5px/1.4 var(--x-mono); color: var(--x-ink-2); }
+.talk-flag { margin-top: 10px; }
+.talk-due { font-size: 13.5px; color: var(--x-ink); }
+.talk-loading { padding: 26px 32px; }
+
+.talk-feed { list-style: none; margin-top: 18px; padding: 0; }
+.ev { border-top: 1px solid var(--x-rule-soft); }
+/* A message, as Letterbox shows a letter: a 32px face, who and how, the time on the right, the words indented. */
+.ev-msg { padding: 16px 0; }
+.ev-head { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+.ev-head .avatar { --av-size: 32px !important; width: 32px; height: 32px; font-size: 12px; }
+.ev-who { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.ev-who b { font-weight: 500; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ev-who b { flex: none; max-width: 70%; }
+.ev-who span { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 13px; color: var(--x-ink-2); white-space: nowrap; }
+.ev-time { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); white-space: nowrap; }
+.ev-text { margin: 8px 0 0 44px; max-width: 66ch; font-size: 15px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ev-msg.is-waiting .ev-who span { color: var(--x-ink); }
+/* A note only the team sees: the same shape, with a grey tile where the face would be. */
+.ev-tile { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px; background: var(--x-tint); color: var(--x-ink-2); }
+/* How they got in touch, and what the system did: one quiet line each. */
+.ev-line { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 10px 0; font-size: 13.5px; line-height: 1.45; color: var(--x-ink-2); }
+.ev-ico { display: grid; justify-items: center; align-self: start; padding-top: 2px; }
+.ev-none { padding: 20px 0; color: var(--x-ink-2); font-size: 14px; }
+.ev.is-landing { animation: fd-arrive .6s var(--x-ease) both; }
+
+/* Writing: one ringed box pinned under the conversation, as in any help desk. */
+.composer { flex: none; width: min(720px, calc(100% - 64px)); margin: 0 auto 18px; padding: 10px 12px 12px; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule); }
+.composer:focus-within { box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.comp-tabs { display: flex; gap: 6px; }
+.comp-tabs .pm-chip { height: 28px; font-size: 13px; }
+.comp-text { display: block; width: 100%; min-height: 84px; max-height: 30vh; margin-top: 6px; padding: 8px 2px; border: 0; background: transparent; color: var(--x-ink); resize: vertical; font: 400 15px/1.55 var(--x-text); outline: none; }
+.comp-text:focus-visible { box-shadow: none; }
+.comp-row { display: flex; align-items: center; gap: 10px; }
+.comp-keys { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.talk-cant { flex: none; width: min(720px, calc(100% - 64px)); margin: 0 auto 18px; padding: 14px 0 0; border-top: 1px solid var(--x-rule-soft); font-size: 14px; color: var(--x-ink-2); }
+.is-shaking { animation: fd-shake .2s ease; }
+@keyframes fd-shake { 30% { transform: translateX(-4px); } 70% { transform: translateX(4px); } }
+
+/* Nothing open: one quiet line and the keys that work here. */
+.talk-empty { display: grid; place-content: center; gap: 6px; height: 100%; padding: 32px; text-align: center; }
+.talk-empty-title { font: 500 15px/1.3 var(--x-text); }
+.talk-empty-text { font-size: 14px; color: var(--x-ink-2); }
+
+/* ------------------------------------------------------------------ the customer */
+.fd-who { min-height: 0; overflow-y: auto; padding: 18px 20px 32px; background: var(--x-paper); border-left: 1px solid var(--x-rule-soft); }
+.who-close { display: none; }
+.who-quiet { padding: 4px 0; font-size: 14px; color: var(--x-ink-2); }
+.who-head { display: flex; align-items: center; gap: 12px; }
+.who-id { display: grid; gap: 2px; min-width: 0; }
+.who-name { padding: 0; border: 0; background: none; color: var(--x-ink); text-align: left; font: 600 19px/1.2 var(--x-display); letter-spacing: -.02em; }
+.who-name:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.who-line { font-size: 13.5px; color: var(--x-ink-2); overflow-wrap: anywhere; }
+/* The customer's facts as a ruled list: label left, value right. */
+.who-facts { list-style: none; margin: 16px 0 0; padding: 0; }
+.who-facts li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; min-height: 36px; padding: 8px 0; border-top: 1px solid var(--x-rule-soft); font-size: 13.5px; }
+.who-facts span { color: var(--x-ink-2); }
+.who-facts b { font-weight: 500; text-align: right; overflow-wrap: anywhere; }
+.who-facts li.is-changed { animation: fd-arrive .6s var(--x-ease) both; }
+.who-sec { margin-top: 22px; }
+.who-h { margin: 0 0 4px; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.who-none { padding: 6px 0; font-size: 13.5px; color: var(--x-ink-2); }
+.who-list { list-style: none; margin: 0 -8px; padding: 0; }
+.who-row, .who-plain { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 52px; padding: 7px 8px; border: 0; border-radius: 8px; background: none; color: var(--x-ink); text-align: left; }
+.who-row:hover { background: var(--hover); }
+.who-row-main { display: grid; gap: 2px; min-width: 0; }
+.who-row-main b { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 14px; font-weight: 400; }
+.who-row-main small { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12.5px; color: var(--x-ink-2); }
+.who-money { flex: none; font: 400 13.5px/1 var(--x-text); font-variant-numeric: tabular-nums; text-align: right; }
+
+/* ------------------------------------------------------------------ action forms (in the slide-over) */
+.act-form { display: grid; gap: 16px; }
+.check { display: flex; align-items: center; gap: 10px; font-size: 14.5px; }
+.check input { width: 18px; height: 18px; accent-color: var(--x-ink); }
+.hand-to { display: grid; gap: 6px; }
+.hand-pick { position: relative; display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 12px 8px 8px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--x-rule); cursor: pointer; }
+.hand-pick input { position: absolute; opacity: 0; pointer-events: none; }
+.hand-pick span { display: grid; }
+.hand-pick b { font-weight: 500; }
+.hand-pick small { color: var(--x-ink-2); font-size: 12.5px; }
+.hand-pick:has(input:checked) { background: var(--x-tint); box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.hand-pick:has(input:focus-visible) { box-shadow: inset 0 0 0 1.5px var(--x-ink), 0 0 0 3px var(--x-spark); }
+.act-foot { margin-top: 4px; }
+.act-error { padding: 10px 12px; border-radius: 8px; background: var(--x-bad-bg); color: var(--x-bad); font-size: 14px; }
+.cover-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; padding: 0; margin: 0; border: 0; }
+.cover-row legend { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; padding: 0; font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.cover-row label { position: relative; display: flex; align-items: center; height: 40px; padding: 0 12px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--x-rule); cursor: pointer; font-size: 14px; }
+.cover-row input { position: absolute; opacity: 0; pointer-events: none; }
+.cover-row label:has(input:checked) { background: var(--x-tint); box-shadow: inset 0 0 0 1.5px var(--x-ink); font-weight: 500; }
+.cover-row label:has(input:focus-visible) { box-shadow: inset 0 0 0 1.5px var(--x-ink), 0 0 0 3px var(--x-spark); }
+
+/* ------------------------------------------------------------------ narrower screens */
+@media (max-width: 1320px) {
+  .talk-actions .btn:not(.accent) span { display: none; }
+  .talk-actions .btn:not(.accent) { width: 32px; padding: 0; }
+}
+@media (max-width: 1180px) {
+  .fd { grid-template-columns: minmax(300px, 340px) minmax(0, 1fr); }
+  .talk-who-btn, .who-close { display: inline-flex; }
+  .fd-who { position: fixed; z-index: 45; top: var(--sb-h); right: 0; bottom: 0; width: min(340px, 92vw); background: var(--x-card);
+    box-shadow: 0 30px 70px -30px rgba(10, 18, 38, .45); transform: translateX(104%); transition: transform .22s var(--x-ease); }
+  .fd.is-who-open .fd-who { transform: none; }
+  .who-close { float: right; margin: -6px -8px 0 0; }
+}
+@media (max-width: 860px) {
+  .fd { grid-template-columns: minmax(0, 1fr); }
+  .fd[data-view="talk"] .fd-queue { display: none; }
+  .fd[data-view="queue"] .fd-talk { display: none; }
+  .talk-back { display: inline-flex; }
+  .talk-bar { padding: 0 10px; }
+  .talk-scroll { padding: 20px 16px 24px; }
+  .ev-text { margin-left: 0; }
+  .composer, .talk-cant { width: calc(100% - 24px); margin-bottom: 12px; }
+}
+
+/* ---- the three desks (desks.js): got in touch, customers, reviews */
+.dk-desks { display: flex; gap: 16px; border-bottom: 1px solid var(--x-rule-soft); margin: -4px 0 2px; }
+.dk-desk { height: 34px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--x-ink-2); font: 500 14px/1 var(--x-text); }
+.dk-desk:hover { color: var(--x-ink); }
+.dk-desk.is-on { color: var(--x-ink); border-bottom-color: var(--x-ink); }
+.dk-views { grid-template-columns: repeat(4, 1fr); }
+.dk-views .q-stage { padding: 0 6px; font-size: 12.5px; }
+.dk-search { height: 36px; padding: 0 12px; border: 0; border-radius: 8px; background: var(--x-paper); box-shadow: inset 0 0 0 1px var(--x-rule-soft); color: var(--x-ink); font: 400 14.5px/1 var(--x-text); }
+.dk-search:focus { outline: none; box-shadow: inset 0 0 0 1px var(--x-ink); }
+.dk-avg { margin: 0; font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.dk-stars { color: var(--x-ink); font-size: 12.5px; letter-spacing: 1px; }
+.dk-stars-off { color: var(--x-rule); }
+.fd[data-desk="customers"] { grid-template-columns: minmax(320px, 380px) minmax(0, 1fr); }
+.fd[data-desk="customers"] .fd-who { display: none; }
+.dk-page { max-width: 760px; margin: 0 auto; padding: 24px clamp(16px, 3vw, 40px) 48px; overflow-y: auto; }
+.fd-talk:has(.dk-page) { overflow-y: auto; }
+.dk-back { display: none; margin-bottom: 8px; }
+.dk-head { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; }
+.dk-head .pm-h2 { margin: 0; font-size: 28px; }
+.dk-sub { margin: 4px 0 0; color: var(--x-ink-2); font-size: 13.5px; }
+.dk-figs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 20px 0 8px; }
+.dk-figs div { padding: 14px 16px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.dk-figs dt { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.dk-figs dd { margin: 6px 0 0; font: 600 24px/1.1 var(--x-display); font-variant-numeric: tabular-nums; }
+.dk-h { margin: 24px 0 8px; }
+.dk-knows { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
+.dk-knows li { display: flex; justify-content: space-between; gap: 12px; min-height: 40px; align-items: center; border-bottom: 1px solid var(--x-rule-soft); font-size: 14.5px; }
+.dk-knows span { color: var(--x-ink-2); }
+.dk-knows b { font-weight: 500; text-align: right; }
+.dk-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.dk-events { list-style: none; margin: 0; padding: 0; }
+.dk-ev { display: grid; grid-template-columns: 84px 1fr; gap: 12px; align-items: center; border-bottom: 1px solid var(--x-rule-soft); }
+.dk-ev time { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); }
+.dk-ev-main { display: grid; gap: 2px; min-height: 56px; padding: 8px 10px; border: 0; border-radius: 8px; background: none; color: var(--x-ink); text-align: left; text-decoration: none; min-width: 0; }
+button.dk-ev-main:hover, a.dk-ev-main:hover { background: var(--hover); }
+.dk-ev-main b { font-weight: 500; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dk-ev-main small { color: var(--x-ink-2); font-size: 13px; }
+.dk-form { display: grid; gap: 10px; margin: 16px 0; padding: 16px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.dk-form-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.dk-said { font-size: 13.5px; color: var(--x-ink-2); }
+.dk-said[data-tone="good"] { color: var(--x-good); }
+.dk-said[data-tone="bad"] { color: var(--x-bad); }
+.dk-rev-head { display: flex; gap: 12px; align-items: baseline; }
+.dk-rev-head .dk-stars { font-size: 19px; }
+.dk-quote { margin: 14px 0 8px; font: 400 19px/1.5 var(--x-text); }
+.dk-link { padding: 0; border: 0; background: none; color: var(--x-ink); font: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.dk-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.dk-flag { padding: 10px 12px; border-radius: 8px; background: var(--x-tint); font-size: 14px; }
+.dk-reply { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--x-rule-soft); }
+.dk-flag-row { margin-top: 8px; }
+@media (max-width: 860px) {
+  .fd[data-desk="customers"] { grid-template-columns: 1fr; }
+  .dk-back { display: inline-flex; }
+  .dk-figs { grid-template-columns: repeat(2, 1fr); }
+  .dk-knows { grid-template-columns: 1fr; }
+  .dk-head { grid-template-columns: auto 1fr; }
+  .dk-head .btn { grid-column: 1 / -1; justify-self: start; }
+}

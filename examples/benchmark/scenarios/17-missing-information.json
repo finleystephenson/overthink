@@ -1,0 +1,326 @@
+[
+  {
+    "id": "missing-information-01",
+    "category": "missing-information",
+    "title": "Spec question the product record does not answer",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor asks whether the Blip has NFC for contactless payments and a fingerprint reader. Neither is mentioned in the Blip record or policies. The assistant must say it does not know and offer a person, not guess.",
+    "turns": [
+      "Does the Blip have NFC so I can pay with it, and a fingerprint reader?"
+    ],
+    "records": [],
+    "expected": {
+      "answer": "Looks up the Blip, says the product information does not mention NFC or a fingerprint reader, so it cannot confirm either, and offers to pass the question to a person. Does not guess.",
+      "must_say": [
+        "do not know",
+        "person"
+      ],
+      "must_not_say": [
+        "yes, it has NFC",
+        "it does have a fingerprint reader",
+        "no, it does not have NFC",
+        "it definitely"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "blip"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "get_product",
+        {
+          "id": "blip"
+        }
+      ],
+      [
+        "search_knowledge",
+        {
+          "query": "Blip NFC contactless fingerprint"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "open_case"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "repairs",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "States what the record does say about the Blip instead of only refusing",
+      "Admits the gap plainly"
+    ]
+  },
+  {
+    "id": "missing-information-02",
+    "category": "missing-information",
+    "title": "No order number, no email: nothing can be looked up",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "A visitor wants to know where her sock order is but has neither an order number nor postcode to hand and offers only her first name and 'last week'. The assistant cannot verify her and must ask rather than guess or search.",
+    "turns": [
+      "Hi it's Hannah, where's my sock order? I ordered last week."
+    ],
+    "records": [],
+    "expected": {
+      "answer": "Asks for the order number and the email or postcode on the order. Explains it cannot look anything up or say anything about an order without them. Does not guess an order or list orders.",
+      "must_say": [
+        "order number",
+        "email or postcode"
+      ],
+      "must_not_say": [
+        "your order is on its way",
+        "I found your order",
+        "it was dispatched"
+      ]
+    },
+    "expected_actions": [],
+    "forbidden_actions": [
+      "verify_customer",
+      "get_order",
+      "list_orders",
+      "open_case",
+      "escalate"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "repairs",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Asks for both pieces at once",
+      "Does not call any record tool before it has both"
+    ]
+  },
+  {
+    "id": "missing-information-03",
+    "category": "missing-information",
+    "title": "Return request with an order number but no email or postcode",
+    "difficulty": 2,
+    "customer_id": "C-1010",
+    "channel": "web",
+    "setup": "Story 8. Gretel gives ORD-20142 (Indoor Helmet £64, delivered 11 Nov, 12 days ago) but no email or postcode and no reason. The assistant must ask for the email or postcode before touching the order. Once verified it checks eligibility, then creates the return when she says it is change of mind: refund £61.05 (£64 less £2.95 label).",
+    "turns": [
+      "Can I send back my order ORD-20142?",
+      "gretel@example.com",
+      "I just changed my mind. Yes please go ahead."
+    ],
+    "records": [
+      "ORD-20142",
+      "C-1010"
+    ],
+    "expected": {
+      "answer": "Turn 1: asks for the email or postcode on the order. Turn 2: verifies, checks eligibility, asks the reason. Turn 3: creates the return and says she gets £61.05 (£64 less £2.95 for the label), with a prepaid label, within 5 working days of it arriving and passing inspection.",
+      "must_say": [
+        "£61.05",
+        "£2.95",
+        "30 days"
+      ],
+      "must_not_say": [
+        "£64 back",
+        "free to return",
+        "the helmet is faulty"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20142",
+          "sku": "OT-HELM"
+        }
+      },
+      {
+        "tool": "create_return",
+        "input_includes": {
+          "order_number": "ORD-20142"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20142",
+          "email_or_postcode": "gretel@example.com"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20142",
+          "sku": "OT-HELM"
+        }
+      ],
+      [
+        "create_return",
+        {
+          "order_number": "ORD-20142",
+          "items": [
+            {
+              "sku": "OT-HELM",
+              "qty": 1
+            }
+          ],
+          "reason": "change_of_mind"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20142"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Reads no order data before verifying",
+      "Does not choose the return reason for her"
+    ]
+  },
+  {
+    "id": "missing-information-04",
+    "category": "missing-information",
+    "title": "Broken pen: no order number, no photo, no choice of fix",
+    "difficulty": 3,
+    "customer_id": "C-1009",
+    "channel": "web",
+    "setup": "Story 7. Sinbad says his pen arrived broken but gives no order number. ORD-20154 (One Good Pen £9, delivered 20 Nov, 3 days ago, no case yet). A damaged-item report needs a photo, and he must choose replacement or refund. The assistant asks for the order number and postcode, then the photo, then his choice; a replacement is in stock and within its £60 limit.",
+    "turns": [
+      "My pen arrived broken. Sort it out.",
+      "ORD-20154, BZ4 2GZ. I haven't got a photo, it's in the bin.",
+      "Fine, I've got a photo now, just sent it. Send me a new one."
+    ],
+    "records": [
+      "ORD-20154",
+      "C-1009"
+    ],
+    "expected": {
+      "answer": "Turn 1: asks for order number and email or postcode. Turn 2: explains a photo is needed to report damage, and asks him to send one. Turn 3: reports the problem with the photo and arranges a replacement pen, saying it comes in a new shipment.",
+      "must_say": [
+        "photo",
+        "replacement"
+      ],
+      "must_not_say": [
+        "I have sent a replacement without a photo",
+        "refund of £9 has been issued",
+        "no photo needed"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "report_problem",
+        "input_includes": {
+          "order_number": "ORD-20154",
+          "problem": "damaged",
+          "resolution": "replacement"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20154",
+          "email_or_postcode": "BZ4 2GZ"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20154"
+        }
+      ],
+      [
+        "report_problem",
+        {
+          "order_number": "ORD-20154",
+          "sku": "OT-PEN",
+          "problem": "damaged",
+          "resolution": "replacement",
+          "has_photo": true
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "create_return",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "cases",
+        "where": {
+          "customer_id": "C-1009"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not call report_problem with has_photo true before he says a photo was sent",
+      "Asks for each missing item, not three at once"
+    ]
+  }
+]

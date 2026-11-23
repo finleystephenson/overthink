@@ -1,0 +1,110 @@
+[
+  {
+    "id": "REG-6001",
+    "customer_id": "C-1002",
+    "sku": "OT-BLIP",
+    "serial": "BLP-7F3K-2291",
+    "order_number": "ORD-20102",
+    "purchased_at": "2025-09-23",
+    "warranty_until": "2027-09-23"
+  },
+  {
+    "id": "REG-6002",
+    "customer_id": "C-1015",
+    "sku": "OT-BLIP",
+    "serial": "BLP-2D9M-0417",
+    "order_number": "ORD-20101",
+    "purchased_at": "2024-09-23",
+    "warranty_until": "2026-09-23"
+  },
+  {
+    "id": "REG-6003",
+    "customer_id": "C-1001",
+    "sku": "OT-BLIP",
+    "serial": "BLP-9A4R-5530",
+    "order_number": "ORD-20119",
+    "purchased_at": "2026-09-27",
+    "warranty_until": "2028-09-27"
+  },
+  {
+    "id": "REG-6004",
+    "customer_id": "C-1021",
+    "sku": "OT-BLIP",
+    "serial": "BLP-4H8W-7126",
+    "order_number": "ORD-20127",
+    "purchased_at": "2026-10-19",
+    "warranty_until": "2028-10-19"
+  },
+  {
+    "id": "REG-6005",
+    "customer_id": "C-1018",
+    "sku": "OT-BOOM",
+    "serial": "BMB-3C7Q-1189",
+    "order_number": "ORD-20112",
+    "purchased_at": "2026-08-28",
+    "warranty_until": "2028-08-28"
+  },
+  {
+    "id": "REG-6006",
+    "customer_id": "C-1017",
+    "sku": "OT-PACK",
+    "serial": "PCK-8N2V-6642",
+    "order_number": "ORD-20123",
+    "purchased_at": "2026-10-12",
+    "warranty_until": "2031-10-12"
+  },
+  {
+    "id": "REG-6007",
+    "customer_id": "C-1019",
+    "sku": "OT-UMBR",
+    "serial": "DCM-5T1L-2208",
+    "order_number": "ORD-20110",
+    "purchased_at": "2026-07-29",
+    "warranty_until": "2027-07-29"
+  },
+  {
+    "id": "REG-6008",
+    "customer_id": "C-1015",
+    "sku": "OT-BOOM",
+    "serial": "BMB-6P3Z-9034",
+    "order_number": "ORD-20105",
+    "purchased_at": "2026-01-30",
+    "warranty_until": "2028-01-30"
+  },
+  {
+    "id": "REG-6009",
+    "customer_id": "C-1010",
+    "sku": "OT-PACK",
+    "serial": "PCK-1K6B-3871",
+    "order_number": "ORD-20122",
+    "purchased_at": "2026-10-07",
+    "warranty_until": "2031-10-07"
+  },
+  {
+    "id": "REG-6010",
+    "customer_id": "C-1005",
+    "sku": "OT-BOOM",
+    "serial": "BMB-7X5J-4415",
+    "order_number": "ORD-20114",
+    "purchased_at": "2026-09-07",
+    "warranty_until": "2028-09-07"
+  },
+  {
+    "id": "REG-6011",
+    "customer_id": "C-1008",
+    "sku": "OT-TROF",
+    "serial": "DCM-2F8S-7790",
+    "order_number": "ORD-20117",
+    "purchased_at": "2026-09-17",
+    "warranty_until": "2027-09-17"
+  },
+  {
+    "id": "REG-6012",
+    "customer_id": "C-1020",
+    "sku": "OT-PUDL",
+    "serial": "PDL-9Y4D-0562",
+    "order_number": "ORD-20131",
+    "purchased_at": "2026-10-28",
+    "warranty_until": "2027-10-28"
+  }
+]

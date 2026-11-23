@@ -1,0 +1,8361 @@
+[
+ {
+  "id": "PR-001",
+  "name": "Admiral Benbow Inn",
+  "sector": "hospitality",
+  "staff": 6,
+  "location": {
+   "address_line": "3 Black Hill Cove",
+   "town": "Admiral Benbow",
+   "postcode": "AP2 9AX"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mrs Hawkins",
+   "from": "Stevenson, Haggard, Stoker and Wells (extra)",
+   "email": "mrs.hawkins.pr-001@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-002",
+  "name": "Toad Hall Estate",
+  "sector": "estate",
+  "staff": 14,
+  "location": {
+   "address_line": "Toad Hall",
+   "town": "The Riverbank",
+   "postcode": "RB1 9ZS"
+  },
+  "needs": [
+   {
+    "product": "boombox-mini",
+    "sku": "OT-BOOM",
+    "qty": 2,
+    "every": "quarter",
+    "unit_price": 89
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 1,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Toad",
+   "from": "Kenneth Grahame, The Wind in the Willows (1908)",
+   "email": "mr.toad.pr-002@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-003",
+  "name": "Baker Street Detective Agency",
+  "sector": "professional services",
+  "staff": 3,
+  "location": {
+   "address_line": "221B Baker Street",
+   "town": "London",
+   "postcode": "BK2 3YB"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 2,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "blip",
+    "sku": "OT-BLIP",
+    "qty": 1,
+    "every": "once",
+    "unit_price": 149
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 309,
+  "decision_maker": {
+   "name": "Sherlock Holmes",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "sherlock.holmes.pr-003@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-004",
+  "name": "Scrooge and Marley Counting House",
+  "sector": "professional services",
+  "staff": 4,
+  "location": {
+   "address_line": "Scrooge and Marley, Counting House Court",
+   "town": "Cornhill",
+   "postcode": "CN3 7LU"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 12,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 2,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Ebenezer Scrooge",
+   "from": "Dickens: A Christmas Carol",
+   "email": "ebenezer.scrooge.pr-004@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.12
+  }
+ },
+ {
+  "id": "PR-005",
+  "name": "Fezziwig's Warehouse",
+  "sector": "retail",
+  "staff": 25,
+  "location": {
+   "address_line": "Fezziwig's Warehouse, Counting House Court",
+   "town": "Cornhill",
+   "postcode": "CN3 5FA"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1231,
+  "decision_maker": {
+   "name": "Mr Fezziwig",
+   "from": "Dickens: A Christmas Carol",
+   "email": "mr.fezziwig.pr-005@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-006",
+  "name": "Dotheboys Hall School",
+  "sector": "education",
+  "staff": 12,
+  "location": {
+   "address_line": "Dotheboys Hall",
+   "town": "Dotheboys Hall",
+   "postcode": "DO9 4NW"
+  },
+  "needs": [
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 15
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Wackford Squeers",
+   "from": "Dickens: Nicholas Nickleby",
+   "email": "wackford.squeers.pr-006@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-007",
+  "name": "Lowood School for Girls",
+  "sector": "education",
+  "staff": 15,
+  "location": {
+   "address_line": "15 Millcote Road",
+   "town": "Thornfield",
+   "postcode": "AH3 4WQ"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Brocklehurst",
+   "from": "The Brontes and Gaskell (extra)",
+   "email": "mr.brocklehurst.pr-007@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.15
+  }
+ },
+ {
+  "id": "PR-008",
+  "name": "Dr Blimber's Academy",
+  "sector": "education",
+  "staff": 10,
+  "location": {
+   "address_line": "23 Portland Place",
+   "town": "Dombey House",
+   "postcode": "AG4 1ED"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 15
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 345,
+  "decision_maker": {
+   "name": "Doctor Blimber",
+   "from": "Dickens: later novels (extra)",
+   "email": "doctor.blimber.pr-008@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-009",
+  "name": "Miss Pinkerton's Academy",
+  "sector": "education",
+  "staff": 12,
+  "location": {
+   "address_line": "17 Hampshire Road",
+   "town": "Queen's Crawley",
+   "postcode": "AH9 7QS"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 25,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 309,
+  "decision_maker": {
+   "name": "Jemima Pinkerton",
+   "from": "Thackeray, Trollope and Eliot (extra)",
+   "email": "jemima.pinkerton.pr-009@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-010",
+  "name": "Mr Creakle's Salem House",
+  "sector": "education",
+  "staff": 9,
+  "location": {
+   "address_line": "The Schoolhouse, Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "BU7 4PU"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 15,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Creakle",
+   "from": "Dickens: David Copperfield",
+   "email": "mr.creakle.pr-010@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.18
+  }
+ },
+ {
+  "id": "PR-011",
+  "name": "Casterbridge Corn Exchange",
+  "sector": "trade",
+  "staff": 20,
+  "location": {
+   "address_line": "The Corn Merchant's, Casterbridge Road",
+   "town": "Wessex",
+   "postcode": "WX6 9PZ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1095,
+  "decision_maker": {
+   "name": "Michael Henchard",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "michael.henchard.pr-011@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-012",
+  "name": "Pemberley Estate",
+  "sector": "estate",
+  "staff": 40,
+  "location": {
+   "address_line": "Pemberley, Derbyshire Hill",
+   "town": "Longbourn",
+   "postcode": "LO9 4AH"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 60,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Mr Darcy",
+   "from": "Jane Austen",
+   "email": "mr.darcy.pr-012@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-013",
+  "name": "Longbourn House",
+  "sector": "household",
+  "staff": 7,
+  "location": {
+   "address_line": "The Library",
+   "town": "Longbourn House",
+   "postcode": "LO3 3RJ"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 5,
+    "every": "month",
+    "unit_price": 15
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Bennet",
+   "from": "Jane Austen",
+   "email": "mr.bennet.pr-013@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-014",
+  "name": "Netherfield Park",
+  "sector": "estate",
+  "staff": 18,
+  "location": {
+   "address_line": "Netherfield Park, Meryton Road",
+   "town": "Longbourn",
+   "postcode": "LO9 5DE"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 716,
+  "decision_maker": {
+   "name": "Mr Bingley",
+   "from": "Jane Austen",
+   "email": "mr.bingley.pr-014@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-015",
+  "name": "Rosings Park",
+  "sector": "estate",
+  "staff": 30,
+  "location": {
+   "address_line": "Rosings Park, Meryton Road",
+   "town": "Longbourn",
+   "postcode": "LO9 3LR"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Lady Catherine de Bourgh",
+   "from": "Jane Austen",
+   "email": "lady.catherine.de.bourgh.pr-015@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.22
+  }
+ },
+ {
+  "id": "PR-016",
+  "name": "Mansfield Park Estate",
+  "sector": "estate",
+  "staff": 22,
+  "location": {
+   "address_line": "3 Northampton Road",
+   "town": "Mansfield Park",
+   "postcode": "AG7 2RD"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Sir Thomas Bertram",
+   "from": "Jane Austen (extra)",
+   "email": "sir.thomas.bertram.pr-016@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-017",
+  "name": "Thrushcross Grange",
+  "sector": "estate",
+  "staff": 10,
+  "location": {
+   "address_line": "Thrushcross Grange",
+   "town": "Gimmerton Moor",
+   "postcode": "WH5 2ZG"
+  },
+  "needs": [
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Edgar Linton",
+   "from": "The Brontes",
+   "email": "edgar.linton.pr-017@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-018",
+  "name": "Thornfield Hall",
+  "sector": "estate",
+  "staff": 12,
+  "location": {
+   "address_line": "3 Millcote Road",
+   "town": "Thornfield",
+   "postcode": "AH3 3PY"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 2,
+    "every": "once",
+    "unit_price": 64
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Edward Rochester",
+   "from": "The Brontes and Gaskell (extra)",
+   "email": "edward.rochester.pr-018@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-019",
+  "name": "The Pickwick Club",
+  "sector": "club",
+  "staff": 8,
+  "location": {
+   "address_line": "The Pickwick Club, Manor Farm Road",
+   "town": "Dingley Dell",
+   "postcode": "DI3 9JE"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Pickwick",
+   "from": "Dickens: Pickwick Papers",
+   "email": "mr.pickwick.pr-019@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-020",
+  "name": "The Dingley Dell Cricket Club",
+  "sector": "sports club",
+  "staff": 20,
+  "location": {
+   "address_line": "Manor Farm",
+   "town": "Dingley Dell",
+   "postcode": "DI3 4YF"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 15,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 40,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Wardle",
+   "from": "Dickens: Pickwick Papers",
+   "email": "mr.wardle.pr-020@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.65
+  }
+ },
+ {
+  "id": "PR-021",
+  "name": "The Cheeryble Brothers' Warehouse",
+  "sector": "trade",
+  "staff": 18,
+  "location": {
+   "address_line": "37 Yorkshire Road",
+   "town": "Dotheboys Hall",
+   "postcode": "AF9 1QU"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1082,
+  "decision_maker": {
+   "name": "Brother Ned Cheeryble",
+   "from": "Dickens: later novels (extra)",
+   "email": "brother.ned.cheeryble.pr-021@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.7
+  }
+ },
+ {
+  "id": "PR-022",
+  "name": "Dombey and Son",
+  "sector": "trade",
+  "staff": 30,
+  "location": {
+   "address_line": "Dombey and Son, Borough High Street",
+   "town": "Marshalsea",
+   "postcode": "MA4 6WY"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 40,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 12,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1906,
+  "decision_maker": {
+   "name": "Paul Dombey",
+   "from": "Dickens: Little Dorrit, Our Mutual Friend and others",
+   "email": "paul.dombey.pr-022@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-023",
+  "name": "Jarndyce and Jarndyce Chambers",
+  "sector": "professional services",
+  "staff": 9,
+  "location": {
+   "address_line": "77 Chancery Lane",
+   "town": "Bleak Hall",
+   "postcode": "AF5 2ZQ"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Kenge",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.kenge.pr-023@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.25
+  }
+ },
+ {
+  "id": "PR-024",
+  "name": "Chancery Lane Law Chambers",
+  "sector": "professional services",
+  "staff": 11,
+  "location": {
+   "address_line": "The Law Chambers, Chancery Lane",
+   "town": "Chesney Wold",
+   "postcode": "CE1 5PX"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Tulkinghorn",
+   "from": "Dickens: Bleak House",
+   "email": "mr.tulkinghorn.pr-024@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-025",
+  "name": "Barnaby Rudge's Locksmith",
+  "sector": "trade",
+  "staff": 3,
+  "location": {
+   "address_line": "The Shepherd's Hut, Casterbridge Road",
+   "town": "Wessex",
+   "postcode": "WX6 4YN"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 14
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Gabriel Oak",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "gabriel.oak.pr-025@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-026",
+  "name": "The Maypole Inn",
+  "sector": "hospitality",
+  "staff": 5,
+  "location": {
+   "address_line": "25 Old Holborn",
+   "town": "Curiosity Shop",
+   "postcode": "AG1 1HP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 467,
+  "decision_maker": {
+   "name": "Mr Codlin",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.codlin.pr-026@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-027",
+  "name": "The Jolly Sandboys Inn",
+  "sector": "hospitality",
+  "staff": 4,
+  "location": {
+   "address_line": "25 Old Holborn",
+   "town": "Curiosity Shop",
+   "postcode": "AG1 1HP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 3,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Codlin",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.codlin.pr-027@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-028",
+  "name": "The Peacock Inn",
+  "sector": "hospitality",
+  "staff": 5,
+  "location": {
+   "address_line": "The Pickwick Club, Manor Farm Road",
+   "town": "Dingley Dell",
+   "postcode": "DI3 9JE"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Pickwick",
+   "from": "Dickens: Pickwick Papers",
+   "email": "mr.pickwick.pr-028@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-029",
+  "name": "The Leather Bottle Inn",
+  "sector": "hospitality",
+  "staff": 4,
+  "location": {
+   "address_line": "7 Manor Farm Road",
+   "town": "Dingley Dell",
+   "postcode": "DI3 5QU"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Tupman",
+   "from": "Dickens: Pickwick Papers",
+   "email": "mr.tupman.pr-029@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-030",
+  "name": "The Blue Boar Inn",
+  "sector": "hospitality",
+  "staff": 7,
+  "location": {
+   "address_line": "21 Rochester Road",
+   "town": "Satis House",
+   "postcode": "AF4 9QA"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Pumblechook",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.pumblechook.pr-030@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-031",
+  "name": "The Three Jolly Bargemen",
+  "sector": "hospitality",
+  "staff": 5,
+  "location": {
+   "address_line": "The Forge",
+   "town": "Satis Marsh",
+   "postcode": "SI2 5EE"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Joe Gargery",
+   "from": "Dickens: Great Expectations",
+   "email": "joe.gargery.pr-031@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-032",
+  "name": "Satis House Charitable Trust",
+  "sector": "charity",
+  "staff": 5,
+  "location": {
+   "address_line": "Satis House",
+   "town": "Satis Marsh",
+   "postcode": "SI2 2GD"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 20,
+  "decision_maker": {
+   "name": "Miss Havisham",
+   "from": "Dickens: Great Expectations",
+   "email": "miss.havisham.pr-032@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.1
+  }
+ },
+ {
+  "id": "PR-033",
+  "name": "Gargery's Forge",
+  "sector": "trade",
+  "staff": 3,
+  "location": {
+   "address_line": "The Forge",
+   "town": "Satis Marsh",
+   "postcode": "SI2 5EE"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 5,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 70,
+  "decision_maker": {
+   "name": "Joe Gargery",
+   "from": "Dickens: Great Expectations",
+   "email": "joe.gargery.pr-033@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-034",
+  "name": "Magwitch and Co Importers",
+  "sector": "trade",
+  "staff": 6,
+  "location": {
+   "address_line": "The Hulks",
+   "town": "Satis Marsh",
+   "postcode": "SI2 6HQ"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 14
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 10,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Abel Magwitch",
+   "from": "Dickens: Great Expectations",
+   "email": "abel.magwitch.pr-034@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-035",
+  "name": "The Marshalsea Debtors' Club",
+  "sector": "club",
+  "staff": 40,
+  "location": {
+   "address_line": "The Marshalsea, Borough High Street",
+   "town": "Marshalsea",
+   "postcode": "MA4 7WY"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "William Dorrit",
+   "from": "Dickens: Little Dorrit, Our Mutual Friend and others",
+   "email": "william.dorrit.pr-035@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-036",
+  "name": "The Circumlocution Office",
+  "sector": "government",
+  "staff": 60,
+  "location": {
+   "address_line": "43 Borough High Street",
+   "town": "Marshalsea Court",
+   "postcode": "AF6 6HE"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 100,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 15,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 3110,
+  "decision_maker": {
+   "name": "Mr Tite Barnacle",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.tite.barnacle.pr-036@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.08
+  }
+ },
+ {
+  "id": "PR-037",
+  "name": "Pecksniff's Architecture Academy",
+  "sector": "education",
+  "staff": 8,
+  "location": {
+   "address_line": "The Architect's Office, Borough High Street",
+   "town": "Marshalsea",
+   "postcode": "MA4 7ZF"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 15
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Seth Pecksniff",
+   "from": "Dickens: Little Dorrit, Our Mutual Friend and others",
+   "email": "seth.pecksniff.pr-037@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-038",
+  "name": "Todgers's Commercial Boarding House",
+  "sector": "hospitality",
+  "staff": 14,
+  "location": {
+   "address_line": "31 Salisbury Road",
+   "town": "Pecksniff Hall",
+   "postcode": "AF8 7XP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mrs Todgers",
+   "from": "Dickens: later novels (extra)",
+   "email": "mrs.todgers.pr-038@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-039",
+  "name": "Mrs Jellyby's Telescopic Philanthropy",
+  "sector": "charity",
+  "staff": 6,
+  "location": {
+   "address_line": "Telescopic Philanthropy House, Chancery Lane",
+   "town": "Chesney Wold",
+   "postcode": "CE1 9EB"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 15
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mrs Jellyby",
+   "from": "Dickens: Bleak House",
+   "email": "mrs.jellyby.pr-039@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-040",
+  "name": "Mr Vholes's Law Office",
+  "sector": "professional services",
+  "staff": 4,
+  "location": {
+   "address_line": "67 Chancery Lane",
+   "town": "Bleak Hall",
+   "postcode": "AF5 3RR"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 99,
+  "decision_maker": {
+   "name": "Mr Vholes",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.vholes.pr-040@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-041",
+  "name": "Bounderby's Mill",
+  "sector": "industry",
+  "staff": 150,
+  "location": {
+   "address_line": "The Bank",
+   "town": "Coketown",
+   "postcode": "CK4 7NA"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 30,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 60,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 3619,
+  "decision_maker": {
+   "name": "Josiah Bounderby",
+   "from": "Dickens: Hard Times",
+   "email": "josiah.bounderby.pr-041@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.25
+  }
+ },
+ {
+  "id": "PR-042",
+  "name": "The Coketown Circus",
+  "sector": "entertainment",
+  "staff": 25,
+  "location": {
+   "address_line": "19 Gradgrind Street",
+   "town": "Coketown",
+   "postcode": "AG2 8NW"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 15
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Sleary",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.sleary.pr-042@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-043",
+  "name": "Mr Crummles's Theatre Company",
+  "sector": "theatre",
+  "staff": 12,
+  "location": {
+   "address_line": "23 Yorkshire Road",
+   "town": "Dotheboys Hall",
+   "postcode": "AF9 5PL"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Crummles",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.crummles.pr-043@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-044",
+  "name": "The Theatre Royal Portsmouth",
+  "sector": "theatre",
+  "staff": 25,
+  "location": {
+   "address_line": "23 Yorkshire Road",
+   "town": "Dotheboys Hall",
+   "postcode": "AF9 5PL"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1117,
+  "decision_maker": {
+   "name": "Mr Crummles",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.crummles.pr-044@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-045",
+  "name": "Mrs Jarley's Waxworks",
+  "sector": "entertainment",
+  "staff": 6,
+  "location": {
+   "address_line": "31 Old Holborn",
+   "town": "Curiosity Shop",
+   "postcode": "AG1 1RN"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mrs Jarley",
+   "from": "Dickens: later novels (extra)",
+   "email": "mrs.jarley.pr-045@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-046",
+  "name": "Madame Defarge's Wine Shop",
+  "sector": "hospitality",
+  "staff": 4,
+  "location": {
+   "address_line": "The Wine Shop",
+   "town": "Saint Antoine",
+   "postcode": "SQ3 9DU"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 10,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 28,
+  "decision_maker": {
+   "name": "Madame Defarge",
+   "from": "Dickens: A Tale of Two Cities",
+   "email": "madame.defarge.pr-046@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.05
+  }
+ },
+ {
+  "id": "PR-047",
+  "name": "Tellson's Bank",
+  "sector": "finance",
+  "staff": 30,
+  "location": {
+   "address_line": "5 Soho Square",
+   "town": "Paris and London",
+   "postcode": "AG3 2SY"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 60,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1925,
+  "decision_maker": {
+   "name": "Mr Lorry",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.lorry.pr-047@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-048",
+  "name": "Jerry Cruncher's Porterage",
+  "sector": "trade",
+  "staff": 3,
+  "location": {
+   "address_line": "The Odd-Job Yard, Manette Court",
+   "town": "Soho Square",
+   "postcode": "SQ6 5ZD"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 5,
+    "every": "month",
+    "unit_price": 14
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Jerry Cruncher",
+   "from": "Dickens: A Tale of Two Cities",
+   "email": "jerry.cruncher.pr-048@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-049",
+  "name": "The Old Bailey Barristers' Chambers",
+  "sector": "professional services",
+  "staff": 14,
+  "location": {
+   "address_line": "17 Soho Square",
+   "town": "Paris and London",
+   "postcode": "AG3 9LJ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 40,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 3,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1487,
+  "decision_maker": {
+   "name": "Mr Stryver",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.stryver.pr-049@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-050",
+  "name": "The Dolphin's Head Tavern",
+  "sector": "hospitality",
+  "staff": 4,
+  "location": {
+   "address_line": "23 Rochester Road",
+   "town": "Satis House",
+   "postcode": "AF4 3NG"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Wopsle",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.wopsle.pr-050@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-051",
+  "name": "Veneering's Banking House",
+  "sector": "finance",
+  "staff": 25,
+  "location": {
+   "address_line": "25 Thames Lane",
+   "town": "Limehouse Reach",
+   "postcode": "AF7 4EP"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 50,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 40,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 15,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Veneering",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.veneering.pr-051@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-052",
+  "name": "Boffin's Bower",
+  "sector": "household",
+  "staff": 5,
+  "location": {
+   "address_line": "11 Thames Lane",
+   "town": "Limehouse Reach",
+   "postcode": "AF7 8UP"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Nicodemus Boffin",
+   "from": "Dickens: later novels (extra)",
+   "email": "nicodemus.boffin.pr-052@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-053",
+  "name": "Podsnap's Mansion",
+  "sector": "household",
+  "staff": 9,
+  "location": {
+   "address_line": "24 Borough High Street",
+   "town": "Marshalsea",
+   "postcode": "MA4 2ZL"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Podsnap",
+   "from": "Dickens: Little Dorrit, Our Mutual Friend and others",
+   "email": "mr.podsnap.pr-053@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.15
+  }
+ },
+ {
+  "id": "PR-054",
+  "name": "Dr Jekyll's Laboratory",
+  "sector": "professional services",
+  "staff": 3,
+  "location": {
+   "address_line": "The Cabinet Door, Queen Anne Street",
+   "town": "Soho",
+   "postcode": "OH9 5JY"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 5,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 3,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 91,
+  "decision_maker": {
+   "name": "Dr Jekyll",
+   "from": "Robert Louis Stevenson",
+   "email": "dr.jekyll.pr-054@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-055",
+  "name": "Utterson and Enfield Solicitors",
+  "sector": "professional services",
+  "staff": 5,
+  "location": {
+   "address_line": "The Lawyer's Office, Queen Anne Street",
+   "town": "Soho",
+   "postcode": "OH9 1LP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 15,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Utterson",
+   "from": "Robert Louis Stevenson",
+   "email": "mr.utterson.pr-055@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-056",
+  "name": "The Hispaniola Expedition",
+  "sector": "expedition",
+  "staff": 26,
+  "location": {
+   "address_line": "Trelawney Hall",
+   "town": "Bristol Quayside",
+   "postcode": "BI3 4WX"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 60,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 129
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Squire Trelawney",
+   "from": "Robert Louis Stevenson",
+   "email": "squire.trelawney.pr-056@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-057",
+  "name": "The Admiral Benbow Smugglers' Cove Trading",
+  "sector": "trade",
+  "staff": 8,
+  "location": {
+   "address_line": "The Spyglass Inn",
+   "town": "Bristol Quayside",
+   "postcode": "BI3 6AU"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 228,
+  "decision_maker": {
+   "name": "Long John Silver",
+   "from": "Robert Louis Stevenson",
+   "email": "long.john.silver.pr-057@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-058",
+  "name": "Pickwick's Coaching Company",
+  "sector": "transport",
+  "staff": 30,
+  "location": {
+   "address_line": "17 Manor Farm Lane",
+   "town": "Dingley Dell",
+   "postcode": "AF1 1GH"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Tony Weller",
+   "from": "Dickens: Pickwick, Twist and Copperfield (extra)",
+   "email": "tony.weller.pr-058@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-059",
+  "name": "Peggotty's Boat House Cafe",
+  "sector": "hospitality",
+  "staff": 6,
+  "location": {
+   "address_line": "11 Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "AF3 8BA"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 3,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Daniel Peggotty",
+   "from": "Dickens: Pickwick, Twist and Copperfield (extra)",
+   "email": "daniel.peggotty.pr-059@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-060",
+  "name": "Micawber and Co Corn Merchants",
+  "sector": "trade",
+  "staff": 4,
+  "location": {
+   "address_line": "Something Will Turn Up Cottage, Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "BU7 1WD"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 8,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 2,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Micawber",
+   "from": "Dickens: David Copperfield",
+   "email": "mr.micawber.pr-060@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-061",
+  "name": "Wickfield and Heep Solicitors",
+  "sector": "professional services",
+  "staff": 7,
+  "location": {
+   "address_line": "35 Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "AF3 2DF"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Wickfield",
+   "from": "Dickens: Pickwick, Twist and Copperfield (extra)",
+   "email": "mr.wickfield.pr-061@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-062",
+  "name": "Doctors' Commons Proctors",
+  "sector": "professional services",
+  "staff": 10,
+  "location": {
+   "address_line": "39 Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "AF3 1ZB"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 25,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Spenlow",
+   "from": "Dickens: Pickwick, Twist and Copperfield (extra)",
+   "email": "mr.spenlow.pr-062@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-063",
+  "name": "The Strong School",
+  "sector": "education",
+  "staff": 18,
+  "location": {
+   "address_line": "75 Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "AF3 8LX"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 15
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Doctor Strong",
+   "from": "Dickens: Pickwick, Twist and Copperfield (extra)",
+   "email": "doctor.strong.pr-063@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-064",
+  "name": "Barkis's Carrier Service",
+  "sector": "transport",
+  "staff": 3,
+  "location": {
+   "address_line": "19 Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "AF3 3XA"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Barkis",
+   "from": "Dickens: Pickwick, Twist and Copperfield (extra)",
+   "email": "barkis.pr-064@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-065",
+  "name": "The Rookery Boarding Kennels",
+  "sector": "animal care",
+  "staff": 4,
+  "location": {
+   "address_line": "9 Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "AF3 8GS"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 4,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 20,
+  "decision_maker": {
+   "name": "Clara Peggotty",
+   "from": "Dickens: Pickwick, Twist and Copperfield (extra)",
+   "email": "clara.peggotty.pr-065@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-066",
+  "name": "Hartfield Estate",
+  "sector": "household",
+  "staff": 8,
+  "location": {
+   "address_line": "Hartfield",
+   "town": "Highbury",
+   "postcode": "HH9 3EH"
+  },
+  "needs": [
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Woodhouse",
+   "from": "Jane Austen",
+   "email": "mr.woodhouse.pr-066@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-067",
+  "name": "Donwell Abbey",
+  "sector": "estate",
+  "staff": 15,
+  "location": {
+   "address_line": "Donwell Abbey",
+   "town": "Highbury",
+   "postcode": "HH9 5GS"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Knightley",
+   "from": "Jane Austen",
+   "email": "mr.knightley.pr-067@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-068",
+  "name": "Mrs Goddard's School",
+  "sector": "education",
+  "staff": 9,
+  "location": {
+   "address_line": "19 Donwell Lane",
+   "town": "Highbury",
+   "postcode": "AG8 7XR"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 15,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 15
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mrs Goddard",
+   "from": "Jane Austen (extra)",
+   "email": "mrs.goddard.pr-068@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-069",
+  "name": "The Crown Inn Highbury",
+  "sector": "hospitality",
+  "staff": 6,
+  "location": {
+   "address_line": "23 Donwell Lane",
+   "town": "Highbury",
+   "postcode": "AG8 1BZ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 438,
+  "decision_maker": {
+   "name": "Mr Cole",
+   "from": "Jane Austen (extra)",
+   "email": "mr.cole.pr-069@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-070",
+  "name": "Hunsford Parsonage",
+  "sector": "church",
+  "staff": 3,
+  "location": {
+   "address_line": "Hunsford Parsonage, Meryton Road",
+   "town": "Longbourn",
+   "postcode": "LO9 2EQ"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 3,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 21,
+  "decision_maker": {
+   "name": "Mr Collins",
+   "from": "Jane Austen",
+   "email": "mr.collins.pr-070@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-071",
+  "name": "Meryton Assembly Rooms",
+  "sector": "entertainment",
+  "staff": 8,
+  "location": {
+   "address_line": "3 Meryton Road",
+   "town": "Longbourn",
+   "postcode": "AG6 5ST"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 5,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Sir William Lucas",
+   "from": "Jane Austen (extra)",
+   "email": "sir.william.lucas.pr-071@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-072",
+  "name": "Lambton Inn",
+  "sector": "hospitality",
+  "staff": 8,
+  "location": {
+   "address_line": "27 Meryton Road",
+   "town": "Longbourn",
+   "postcode": "AG6 1LH"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 5,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mrs Reynolds",
+   "from": "Jane Austen (extra)",
+   "email": "mrs.reynolds.pr-072@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-073",
+  "name": "Northanger Abbey Estate",
+  "sector": "estate",
+  "staff": 16,
+  "location": {
+   "address_line": "Northanger Abbey, Norland Road",
+   "town": "Barton Cottage",
+   "postcode": "BC8 7XY"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "General Tilney",
+   "from": "Jane Austen",
+   "email": "general.tilney.pr-073@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-074",
+  "name": "Pump Room Baths",
+  "sector": "hospitality",
+  "staff": 20,
+  "location": {
+   "address_line": "13 Bath Pump Row",
+   "town": "Northanger",
+   "postcode": "AH1 9DL"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 783,
+  "decision_maker": {
+   "name": "Mr Allen",
+   "from": "Jane Austen (extra)",
+   "email": "mr.allen.pr-074@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-075",
+  "name": "Cranford Ladies' Tea Rooms",
+  "sector": "hospitality",
+  "staff": 5,
+  "location": {
+   "address_line": "The Tea Room, Market Street",
+   "town": "Cranford",
+   "postcode": "RA3 5WF"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Miss Matty",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "miss.matty.pr-075@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-076",
+  "name": "Barchester Cathedral Chapter",
+  "sector": "church",
+  "staff": 20,
+  "location": {
+   "address_line": "The Deanery, Cathedral Close",
+   "town": "Barchester",
+   "postcode": "BE8 8SR"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 732,
+  "decision_maker": {
+   "name": "Archdeacon Grantly",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "archdeacon.grantly.pr-076@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-077",
+  "name": "Hiram's Hospital",
+  "sector": "care",
+  "staff": 12,
+  "location": {
+   "address_line": "Hiram's Hospital, Cathedral Close",
+   "town": "Barchester",
+   "postcode": "BE8 9RE"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 24,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Harding",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "mr.harding.pr-077@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-078",
+  "name": "The Bishop's Palace Barchester",
+  "sector": "church",
+  "staff": 25,
+  "location": {
+   "address_line": "The Bishop's Palace, Cathedral Close",
+   "town": "Barchester",
+   "postcode": "BE8 7NZ"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mrs Proudie",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "mrs.proudie.pr-078@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.25
+  }
+ },
+ {
+  "id": "PR-079",
+  "name": "Wuthering Heights Farm",
+  "sector": "farm",
+  "staff": 6,
+  "location": {
+   "address_line": "Wuthering Heights",
+   "town": "Wuthering Heights",
+   "postcode": "WH3 7BX"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 12,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 89,
+  "decision_maker": {
+   "name": "Hareton Earnshaw",
+   "from": "The Brontes",
+   "email": "hareton.earnshaw.pr-079@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.25
+  }
+ },
+ {
+  "id": "PR-080",
+  "name": "Lowick Manor",
+  "sector": "estate",
+  "staff": 7,
+  "location": {
+   "address_line": "Lowick Manor, Loamshire Lane",
+   "town": "Middlemarch",
+   "postcode": "MI1 3BG"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Casaubon",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "mr.casaubon.pr-080@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.15
+  }
+ },
+ {
+  "id": "PR-081",
+  "name": "Tipton Grange",
+  "sector": "estate",
+  "staff": 8,
+  "location": {
+   "address_line": "Tipton Grange, Loamshire Lane",
+   "town": "Middlemarch",
+   "postcode": "MI1 8SU"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 10,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Dorothea Brooke",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "dorothea.brooke.pr-081@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-082",
+  "name": "Middlemarch New Hospital",
+  "sector": "health",
+  "staff": 25,
+  "location": {
+   "address_line": "The Doctor's House, Loamshire Lane",
+   "town": "Middlemarch",
+   "postcode": "MI1 8TP"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 40,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 866,
+  "decision_maker": {
+   "name": "Tertius Lydgate",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "tertius.lydgate.pr-082@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-083",
+  "name": "Vincy Ribbon Mills",
+  "sector": "industry",
+  "staff": 60,
+  "location": {
+   "address_line": "43 Lowick Gate",
+   "town": "Middlemarch",
+   "postcode": "AJ2 3YG"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 15,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 15,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1788,
+  "decision_maker": {
+   "name": "Mr Vincy",
+   "from": "Thackeray, Trollope and Eliot (extra)",
+   "email": "mr.vincy.pr-083@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-084",
+  "name": "Silas Marner's Weaving Shed",
+  "sector": "trade",
+  "staff": 2,
+  "location": {
+   "address_line": "The Weaver's Cottage",
+   "town": "Raveloe",
+   "postcode": "MI5 1AA"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 63,
+  "decision_maker": {
+   "name": "Silas Marner",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "silas.marner.pr-084@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-085",
+  "name": "Dorlcote Mill",
+  "sector": "industry",
+  "staff": 8,
+  "location": {
+   "address_line": "5 Floss Wharf",
+   "town": "Dorlcote",
+   "postcode": "AJ5 7TP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Tulliver",
+   "from": "Thackeray, Trollope and Eliot (extra)",
+   "email": "mr.tulliver.pr-085@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-086",
+  "name": "Vanity Fair Racing Stables",
+  "sector": "sports club",
+  "staff": 12,
+  "location": {
+   "address_line": "4 Pump Court",
+   "town": "Vanity Fair",
+   "postcode": "VF1 6QZ"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 457,
+  "decision_maker": {
+   "name": "Rawdon Crawley",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "rawdon.crawley.pr-086@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-087",
+  "name": "Gaunt House",
+  "sector": "household",
+  "staff": 30,
+  "location": {
+   "address_line": "Gaunt House, Pump Court",
+   "town": "Vanity Fair",
+   "postcode": "VF1 2PE"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 100,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Lord Steyne",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "lord.steyne.pr-087@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-088",
+  "name": "The Sedley Stockbroking Firm",
+  "sector": "finance",
+  "staff": 10,
+  "location": {
+   "address_line": "25 Hampshire Road",
+   "town": "Queen's Crawley",
+   "postcode": "AH9 4LS"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 25,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Sedley",
+   "from": "Thackeray, Trollope and Eliot (extra)",
+   "email": "mr.sedley.pr-088@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-089",
+  "name": "Barry Lyndon's Gaming House",
+  "sector": "entertainment",
+  "staff": 15,
+  "location": {
+   "address_line": "8 Pump Court",
+   "town": "Vanity Fair",
+   "postcode": "VF1 9GX"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Barry Lyndon",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "barry.lyndon.pr-089@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-090",
+  "name": "Tess's Talbothays Dairy",
+  "sector": "farm",
+  "staff": 20,
+  "location": {
+   "address_line": "27 Blackmoor Vale Road",
+   "town": "Marlott",
+   "postcode": "AJ7 5PP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1378,
+  "decision_maker": {
+   "name": "Dairyman Crick",
+   "from": "Hardy (extra)",
+   "email": "dairyman.crick.pr-090@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-091",
+  "name": "Weatherbury Upper Farm",
+  "sector": "farm",
+  "staff": 14,
+  "location": {
+   "address_line": "Weatherbury Farm, Casterbridge Road",
+   "town": "Wessex",
+   "postcode": "WX6 6YU"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 24,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1241,
+  "decision_maker": {
+   "name": "Bathsheba Everdene",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "bathsheba.everdene.pr-091@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-092",
+  "name": "The Casterbridge Brewery",
+  "sector": "industry",
+  "staff": 25,
+  "location": {
+   "address_line": "The Corn Merchant's, Casterbridge Road",
+   "town": "Wessex",
+   "postcode": "WX6 9PZ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 12,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1404,
+  "decision_maker": {
+   "name": "Michael Henchard",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "michael.henchard.pr-092@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-093",
+  "name": "Egdon Heath Furze Cutters",
+  "sector": "trade",
+  "staff": 6,
+  "location": {
+   "address_line": "3 Blooms-End Lane",
+   "town": "Egdon Heath",
+   "postcode": "AN1 1PH"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 24,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Clym Yeobright",
+   "from": "Hardy (extra)",
+   "email": "clym.yeobright.pr-093@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-094",
+  "name": "Jude's Masonry Yard",
+  "sector": "trade",
+  "staff": 3,
+  "location": {
+   "address_line": "The Stonemason's Yard, Casterbridge Road",
+   "town": "Wessex",
+   "postcode": "WX6 8UY"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 20,
+  "decision_maker": {
+   "name": "Jude Fawley",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "jude.fawley.pr-094@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-095",
+  "name": "Christminster College Library",
+  "sector": "education",
+  "staff": 30,
+  "location": {
+   "address_line": "7 Marygreen Lane",
+   "town": "Christminster",
+   "postcode": "AJ8 5GY"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 80,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 803,
+  "decision_maker": {
+   "name": "Richard Phillotson",
+   "from": "Hardy (extra)",
+   "email": "richard.phillotson.pr-095@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-096",
+  "name": "The Great Mail Coach Office",
+  "sector": "transport",
+  "staff": 15,
+  "location": {
+   "address_line": "The Boot Room, Manor Farm Road",
+   "town": "Dingley Dell",
+   "postcode": "DI3 5GE"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Sam Weller",
+   "from": "Dickens: Pickwick Papers",
+   "email": "sam.weller.pr-096@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-097",
+  "name": "Wilkins Micawber's Coal Barge",
+  "sector": "transport",
+  "staff": 3,
+  "location": {
+   "address_line": "Something Will Turn Up Cottage, Rookery Road",
+   "town": "Blunderstone",
+   "postcode": "BU7 1WD"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 5,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 80,
+  "decision_maker": {
+   "name": "Mr Micawber",
+   "from": "Dickens: David Copperfield",
+   "email": "mr.micawber.pr-097@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-098",
+  "name": "Chesney Wold Estate",
+  "sector": "estate",
+  "staff": 35,
+  "location": {
+   "address_line": "37 Chancery Lane",
+   "town": "Bleak Hall",
+   "postcode": "AF5 7WE"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 80,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 15,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Sir Leicester Dedlock",
+   "from": "Dickens: later novels (extra)",
+   "email": "sir.leicester.dedlock.pr-098@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-099",
+  "name": "Mr Krook's Rag and Bottle Shop",
+  "sector": "retail",
+  "staff": 2,
+  "location": {
+   "address_line": "The Rag and Bottle Shop, Chancery Lane",
+   "town": "Chesney Wold",
+   "postcode": "CE1 4NW"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 8,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Krook",
+   "from": "Dickens: Bleak House",
+   "email": "mr.krook.pr-099@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-100",
+  "name": "Mr Snagsby's Law Stationers",
+  "sector": "retail",
+  "staff": 4,
+  "location": {
+   "address_line": "57 Chancery Lane",
+   "town": "Bleak Hall",
+   "postcode": "AF5 3AQ"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 40,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 40,
+    "every": "month",
+    "unit_price": 15
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mr Snagsby",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.snagsby.pr-100@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-101",
+  "name": "Mr Bucket's Detective Office",
+  "sector": "professional services",
+  "staff": 4,
+  "location": {
+   "address_line": "47 Chancery Lane",
+   "town": "Bleak Hall",
+   "postcode": "AF5 2LB"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mr Bucket",
+   "from": "Dickens: later novels (extra)",
+   "email": "mr.bucket.pr-101@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-102",
+  "name": "The Baskerville Hall Estate",
+  "sector": "estate",
+  "staff": 14,
+  "location": {
+   "address_line": "Baskerville Hall",
+   "town": "Dartmoor",
+   "postcode": "BK3 4FD"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 2,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Sir Henry Baskerville",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "sir.henry.baskerville.pr-102@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-103",
+  "name": "Dr Mortimer's Surgery",
+  "sector": "health",
+  "staff": 3,
+  "location": {
+   "address_line": "Grimpen Surgery",
+   "town": "Dartmoor",
+   "postcode": "BK3 2ES"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Dr Mortimer",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "dr.mortimer.pr-103@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-104",
+  "name": "The Diogenes Club",
+  "sector": "club",
+  "staff": 50,
+  "location": {
+   "address_line": "The Diogenes Club",
+   "town": "Pall Mall",
+   "postcode": "BK5 6TT"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 413,
+  "decision_maker": {
+   "name": "Mycroft Holmes",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "mycroft.holmes.pr-104@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.05
+  }
+ },
+ {
+  "id": "PR-105",
+  "name": "Scotland Yard Detective Branch",
+  "sector": "government",
+  "staff": 80,
+  "location": {
+   "address_line": "Scotland Yard",
+   "town": "Whitehall",
+   "postcode": "BK1 6NN"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 20,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 100,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 3733,
+  "decision_maker": {
+   "name": "Inspector Lestrade",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "inspector.lestrade.pr-105@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.12
+  }
+ },
+ {
+  "id": "PR-106",
+  "name": "Challenger's Natural History Society",
+  "sector": "club",
+  "staff": 30,
+  "location": {
+   "address_line": "Enmore Gardens",
+   "town": "Kensington",
+   "postcode": "TL2 5GB"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 129
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Professor Challenger",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "professor.challenger.pr-106@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-107",
+  "name": "The Lost World Expedition Outfitters",
+  "sector": "expedition",
+  "staff": 12,
+  "location": {
+   "address_line": "The Albany",
+   "town": "Piccadilly",
+   "postcode": "TL6 3PX"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 129
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Lord John Roxton",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "lord.john.roxton.pr-107@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-108",
+  "name": "Nemo's Nautilus Crew",
+  "sector": "expedition",
+  "staff": 20,
+  "location": {
+   "address_line": "The Nautilus",
+   "town": "Twenty Thousand Leagues",
+   "postcode": "TT5 2NY"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 40,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 64
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1366,
+  "decision_maker": {
+   "name": "Captain Nemo",
+   "from": "Jules Verne",
+   "email": "captain.nemo.pr-108@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-109",
+  "name": "The Reform Club of Phileas Fogg",
+  "sector": "club",
+  "staff": 120,
+  "location": {
+   "address_line": "7 Savile Row",
+   "town": "Savile Row",
+   "postcode": "SV3 2HG"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 15,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 5,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Phileas Fogg",
+   "from": "Jules Verne",
+   "email": "phileas.fogg.pr-109@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-110",
+  "name": "Fogg's Travel Bureau",
+  "sector": "transport",
+  "staff": 5,
+  "location": {
+   "address_line": "7 Savile Row",
+   "town": "Savile Row",
+   "postcode": "SV3 2HG"
+  },
+  "needs": [
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 129
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 12,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 111,
+  "decision_maker": {
+   "name": "Phileas Fogg",
+   "from": "Jules Verne",
+   "email": "phileas.fogg.pr-110@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-111",
+  "name": "The Dormouse and March Hare Tea Party Ltd",
+  "sector": "hospitality",
+  "staff": 5,
+  "location": {
+   "address_line": "The Tea Table, Rabbit Hole Lane",
+   "town": "Wonderland",
+   "postcode": "WL9 1YG"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "The March Hare",
+   "from": "Alice in Wonderland and Through the Looking-Glass",
+   "email": "the.march.hare.pr-111@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-112",
+  "name": "The Queen of Hearts' Croquet Ground",
+  "sector": "sports club",
+  "staff": 40,
+  "location": {
+   "address_line": "The Croquet Ground",
+   "town": "Wonderland",
+   "postcode": "WL9 3AA"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1212,
+  "decision_maker": {
+   "name": "Queen of Hearts",
+   "from": "Alice in Wonderland and Through the Looking-Glass",
+   "email": "queen.of.hearts.pr-112@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-113",
+  "name": "Wonderland Mock Turtle Cafe",
+  "sector": "hospitality",
+  "staff": 4,
+  "location": {
+   "address_line": "The Shore",
+   "town": "Wonderland",
+   "postcode": "WL9 3BY"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "The Mock Turtle",
+   "from": "Alice in Wonderland and Through the Looking-Glass",
+   "email": "the.mock.turtle.pr-113@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-114",
+  "name": "Looking-Glass Chess Club",
+  "sector": "club",
+  "staff": 32,
+  "location": {
+   "address_line": "Square Five, Chessboard Square",
+   "town": "The Looking-Glass House",
+   "postcode": "TE5 5NU"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "The White Queen",
+   "from": "Alice in Wonderland and Through the Looking-Glass",
+   "email": "the.white.queen.pr-114@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-115",
+  "name": "The Wizard's Emerald City Palace",
+  "sector": "government",
+  "staff": 100,
+  "location": {
+   "address_line": "The Palace of Oz",
+   "town": "Emerald City",
+   "postcode": "OZ3 5AG"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 80,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 20,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 3534,
+  "decision_maker": {
+   "name": "The Wizard of Oz",
+   "from": "L. Frank Baum, The Wonderful Wizard of Oz (1900)",
+   "email": "the.wizard.of.oz.pr-115@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.25
+  }
+ },
+ {
+  "id": "PR-116",
+  "name": "Munchkinland Town Council",
+  "sector": "government",
+  "staff": 20,
+  "location": {
+   "address_line": "The Southern Palace",
+   "town": "Emerald City",
+   "postcode": "OZ3 9GT"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 60,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Glinda",
+   "from": "L. Frank Baum, The Wonderful Wizard of Oz (1900)",
+   "email": "glinda.pr-116@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-117",
+  "name": "The Wind in the Willows Boating Club",
+  "sector": "sports club",
+  "staff": 15,
+  "location": {
+   "address_line": "Mole End",
+   "town": "The Riverbank",
+   "postcode": "RB1 7SH"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mole",
+   "from": "Kenneth Grahame, The Wind in the Willows (1908)",
+   "email": "mole.pr-117@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.65
+  }
+ },
+ {
+  "id": "PR-118",
+  "name": "Rat's Riverside Picnic Hire",
+  "sector": "hospitality",
+  "staff": 3,
+  "location": {
+   "address_line": "The Hole in the Bank",
+   "town": "The Riverbank",
+   "postcode": "RB1 2RB"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Ratty",
+   "from": "Kenneth Grahame, The Wind in the Willows (1908)",
+   "email": "ratty.pr-118@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.7
+  }
+ },
+ {
+  "id": "PR-119",
+  "name": "Badger's Wild Wood Lodge",
+  "sector": "household",
+  "staff": 3,
+  "location": {
+   "address_line": "The Wild Wood Sett",
+   "town": "The Riverbank",
+   "postcode": "RB1 4WT"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 2,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 57,
+  "decision_maker": {
+   "name": "Mr Badger",
+   "from": "Kenneth Grahame, The Wind in the Willows (1908)",
+   "email": "mr.badger.pr-119@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-120",
+  "name": "The Wild Wood Weasel Security",
+  "sector": "trade",
+  "staff": 8,
+  "location": {
+   "address_line": "The Wild Wood",
+   "town": "The Riverbank",
+   "postcode": "RB1 7DB"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 16,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "The Chief Weasel",
+   "from": "Kenneth Grahame, The Wind in the Willows (1908)",
+   "email": "the.chief.weasel.pr-120@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-121",
+  "name": "Hobbs Hill Tea Shop",
+  "sector": "hospitality",
+  "staff": 4,
+  "location": {
+   "address_line": "221 Baker Street",
+   "town": "The Ground Floor",
+   "postcode": "BK5 2FJ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Mrs Hudson",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "mrs.hudson.pr-121@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-122",
+  "name": "Sherwood Forest Outfitters",
+  "sector": "retail",
+  "staff": 12,
+  "location": {
+   "address_line": "The Major Oak",
+   "town": "Sherwood Forest",
+   "postcode": "SF9 7US"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 40,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 129
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Robin Hood",
+   "from": "Robin Hood",
+   "email": "robin.hood.pr-122@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-123",
+  "name": "Nottingham Sheriff's Office",
+  "sector": "government",
+  "staff": 40,
+  "location": {
+   "address_line": "Nottingham Castle, Greenwood Path",
+   "town": "Sherwood Forest",
+   "postcode": "SF9 2GH"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 60,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1852,
+  "decision_maker": {
+   "name": "The Sheriff of Nottingham",
+   "from": "Robin Hood",
+   "email": "the.sheriff.of.nottingham.pr-123@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.1
+  }
+ },
+ {
+  "id": "PR-124",
+  "name": "Friar Tuck's Alehouse",
+  "sector": "hospitality",
+  "staff": 5,
+  "location": {
+   "address_line": "The Hermitage",
+   "town": "Sherwood Forest",
+   "postcode": "SF9 2TF"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Friar Tuck",
+   "from": "Robin Hood",
+   "email": "friar.tuck.pr-124@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-125",
+  "name": "Camelot Round Table Tavern",
+  "sector": "hospitality",
+  "staff": 14,
+  "location": {
+   "address_line": "3 Round Table Close",
+   "town": "Camelot",
+   "postcode": "AX8 2AL"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1373,
+  "decision_maker": {
+   "name": "King Arthur Pendragon",
+   "from": "Medieval: Chaucer, Malory, Roland and Boccaccio",
+   "email": "king.arthur.pendragon.pr-125@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-126",
+  "name": "Merlin's Study",
+  "sector": "professional services",
+  "staff": 2,
+  "location": {
+   "address_line": "The Crystal Cave",
+   "town": "Camelot",
+   "postcode": "CL3 2FZ"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 63,
+  "decision_maker": {
+   "name": "Merlin",
+   "from": "The Matter of Britain (Arthurian legend)",
+   "email": "merlin.pr-126@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-127",
+  "name": "Tristan and Isolde's Cornish Inn",
+  "sector": "hospitality",
+  "staff": 6,
+  "location": {
+   "address_line": "The Love Potion Cottage",
+   "town": "Camelot",
+   "postcode": "CL3 4YA"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 467,
+  "decision_maker": {
+   "name": "Isolde",
+   "from": "The Matter of Britain (Arthurian legend)",
+   "email": "isolde.pr-127@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-128",
+  "name": "Heorot Mead Hall",
+  "sector": "hospitality",
+  "staff": 30,
+  "location": {
+   "address_line": "The High Seat",
+   "town": "Heorot",
+   "postcode": "HO2 7HP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 20,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 60,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Hrothgar",
+   "from": "Chaucer, Beowulf and medieval tales",
+   "email": "hrothgar.pr-128@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-129",
+  "name": "The Tabard Inn Southwark",
+  "sector": "hospitality",
+  "staff": 12,
+  "location": {
+   "address_line": "23 Tabard Inn Yard",
+   "town": "Southwark",
+   "postcode": "AX7 6RB"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1344,
+  "decision_maker": {
+   "name": "Harry Bailly the Host",
+   "from": "Medieval: Chaucer, Malory, Roland and Boccaccio",
+   "email": "harry.bailly.the.host.pr-129@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.7
+  }
+ },
+ {
+  "id": "PR-130",
+  "name": "Canterbury Pilgrims' Guild",
+  "sector": "club",
+  "staff": 30,
+  "location": {
+   "address_line": "The Tabard Inn, Pilgrim's Way",
+   "town": "Tabard Inn",
+   "postcode": "AA6 9DE"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 40,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 129
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "The Wife of Bath",
+   "from": "Chaucer, Beowulf and medieval tales",
+   "email": "the.wife.of.bath.pr-130@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-131",
+  "name": "Long Island West Egg Estate",
+  "sector": "estate",
+  "staff": 30,
+  "location": {
+   "address_line": "The West Egg Mansion",
+   "town": "Long Island Sound",
+   "postcode": "MF4 8QR"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 200,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Jay Gatsby",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "jay.gatsby.pr-131@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-132",
+  "name": "Tom Sawyer's Whitewash Contractors",
+  "sector": "trade",
+  "staff": 6,
+  "location": {
+   "address_line": "The Whitewashed Fence, Cardiff Hill Road",
+   "town": "St Petersburg",
+   "postcode": "SB5 6RP"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 8,
+    "every": "month",
+    "unit_price": 14
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Tom Sawyer",
+   "from": "Mark Twain",
+   "email": "tom.sawyer.pr-132@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-133",
+  "name": "Huckleberry Finn Raft Company",
+  "sector": "transport",
+  "staff": 3,
+  "location": {
+   "address_line": "The Hogshead Barrel, Cardiff Hill Road",
+   "town": "St Petersburg",
+   "postcode": "SB5 9ZW"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 3,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 21,
+  "decision_maker": {
+   "name": "Huckleberry Finn",
+   "from": "Mark Twain",
+   "email": "huckleberry.finn.pr-133@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-134",
+  "name": "St Petersburg Sunday School",
+  "sector": "education",
+  "staff": 18,
+  "location": {
+   "address_line": "The Sawyer Cottage, Cardiff Hill Road",
+   "town": "St Petersburg",
+   "postcode": "SB5 8DG"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 15
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Aunt Polly",
+   "from": "Mark Twain",
+   "email": "aunt.polly.pr-134@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-135",
+  "name": "Green Gables Farm",
+  "sector": "farm",
+  "staff": 6,
+  "location": {
+   "address_line": "Green Gables",
+   "town": "Avonlea",
+   "postcode": "MF4 1TP"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 12,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Marilla Cuthbert",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "marilla.cuthbert.pr-135@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-136",
+  "name": "Avonlea Village School",
+  "sector": "education",
+  "staff": 20,
+  "location": {
+   "address_line": "Green Gables",
+   "town": "Avonlea",
+   "postcode": "MF4 3YJ"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 25,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 15
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Anne Shirley",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "anne.shirley.pr-136@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-137",
+  "name": "Misselthwaite Manor",
+  "sector": "estate",
+  "staff": 16,
+  "location": {
+   "address_line": "Misselthwaite Manor",
+   "town": "Yorkshire Moor",
+   "postcode": "MF2 5JD"
+  },
+  "needs": [
+   {
+    "product": "pocket-jungle",
+    "sku": "OT-JUNG",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 42
+   },
+   {
+    "product": "starter-puddle",
+    "sku": "OT-PUDL",
+    "qty": 2,
+    "every": "once",
+    "unit_price": 58
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mary Lennox",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "mary.lennox.pr-137@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-138",
+  "name": "Mr Fox's Hen Roost Supplies",
+  "sector": "farm",
+  "staff": 3,
+  "location": {
+   "address_line": "107 Hansel Lane",
+   "town": "Cottage in the Wood",
+   "postcode": "AY5 6UA"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 4,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 20,
+  "decision_maker": {
+   "name": "Mr Fox",
+   "from": "Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang",
+   "email": "mr.fox.pr-138@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.1
+  }
+ },
+ {
+  "id": "PR-139",
+  "name": "Sinbad's Shipping Company",
+  "sector": "transport",
+  "staff": 35,
+  "location": {
+   "address_line": "The Seven Voyages House, Bazaar Street",
+   "town": "Baghdad",
+   "postcode": "BZ4 2GZ"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 80,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 64
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Sinbad the Sailor",
+   "from": "The Arabian Nights",
+   "email": "sinbad.the.sailor.pr-139@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-140",
+  "name": "Ali Baba's Cave Storage",
+  "sector": "trade",
+  "staff": 12,
+  "location": {
+   "address_line": "The Cave Entrance, Bazaar Street",
+   "town": "Baghdad",
+   "postcode": "BZ4 8SW"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 14
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Ali Baba",
+   "from": "The Arabian Nights",
+   "email": "ali.baba.pr-140@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-141",
+  "name": "Aladdin's Lamp Emporium",
+  "sector": "retail",
+  "staff": 5,
+  "location": {
+   "address_line": "The Magic Lamp Shop, Bazaar Street",
+   "town": "Baghdad",
+   "postcode": "BZ4 1TQ"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "boombox-mini",
+    "sku": "OT-BOOM",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 89
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Aladdin",
+   "from": "The Arabian Nights",
+   "email": "aladdin.pr-141@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-142",
+  "name": "The Caliph's Baghdad Palace",
+  "sector": "government",
+  "staff": 150,
+  "location": {
+   "address_line": "The Palace Bedchamber, Bazaar Street",
+   "town": "Baghdad",
+   "postcode": "BZ4 8WY"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 300,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 50,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Scheherazade",
+   "from": "The Arabian Nights",
+   "email": "scheherazade.pr-142@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.15
+  }
+ },
+ {
+  "id": "PR-143",
+  "name": "Scheherazade's Storytelling Cafe",
+  "sector": "hospitality",
+  "staff": 8,
+  "location": {
+   "address_line": "The Palace Bedchamber, Bazaar Street",
+   "town": "Baghdad",
+   "postcode": "BZ4 8WY"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Scheherazade",
+   "from": "The Arabian Nights",
+   "email": "scheherazade.pr-143@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-144",
+  "name": "The Pied Piper Pest Control",
+  "sector": "trade",
+  "staff": 4,
+  "location": {
+   "address_line": "The Town Hall Steps",
+   "town": "Hamelin",
+   "postcode": "FT4 6UX"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 8,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 31,
+  "decision_maker": {
+   "name": "The Pied Piper",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "the.pied.piper.pr-144@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-145",
+  "name": "Hamelin Town Hall",
+  "sector": "government",
+  "staff": 30,
+  "location": {
+   "address_line": "73 Lang Fairy Book Lane",
+   "town": "Rabbit Hole Court",
+   "postcode": "AY8 1DJ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 40,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1384,
+  "decision_maker": {
+   "name": "The Mayor of Hamelin",
+   "from": "Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang",
+   "email": "the.mayor.of.hamelin.pr-145@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-146",
+  "name": "Dick Whittington's Mercers",
+  "sector": "trade",
+  "staff": 10,
+  "location": {
+   "address_line": "The Cat Stall, Gingerbread Lane",
+   "town": "The Fairy-Tale Forest",
+   "postcode": "FT8 1QH"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 14
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 438,
+  "decision_maker": {
+   "name": "Dick Whittington",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "dick.whittington.pr-146@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-147",
+  "name": "Cinderella's Glass Slipper Company",
+  "sector": "retail",
+  "staff": 4,
+  "location": {
+   "address_line": "The Hearth, Gingerbread Lane",
+   "town": "The Fairy-Tale Forest",
+   "postcode": "FT8 5DS"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Cinderella",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "cinderella.pr-147@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-148",
+  "name": "The Seven Dwarfs Mining Co",
+  "sector": "industry",
+  "staff": 8,
+  "location": {
+   "address_line": "23 Hansel Lane",
+   "town": "Cottage in the Wood",
+   "postcode": "AY5 7RF"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 40,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 821,
+  "decision_maker": {
+   "name": "The Seven Dwarfs Doc",
+   "from": "Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang",
+   "email": "the.seven.dwarfs.doc.pr-148@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-149",
+  "name": "Goldilocks Bed and Breakfast",
+  "sector": "hospitality",
+  "staff": 3,
+  "location": {
+   "address_line": "The Three Bears' Cottage, Gingerbread Lane",
+   "town": "The Fairy-Tale Forest",
+   "postcode": "FT8 9QZ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Goldilocks",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "goldilocks.pr-149@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-150",
+  "name": "Hansel and Gretel Confectioners",
+  "sector": "retail",
+  "staff": 4,
+  "location": {
+   "address_line": "The Gingerbread House, Gingerbread Lane",
+   "town": "The Fairy-Tale Forest",
+   "postcode": "FT8 4RT"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 5,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Gretel",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "gretel.pr-150@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-151",
+  "name": "The Three Little Pigs Builders",
+  "sector": "trade",
+  "staff": 3,
+  "location": {
+   "address_line": "41 Lang Fairy Book Lane",
+   "town": "Rabbit Hole Court",
+   "postcode": "AY8 3TR"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 3,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "The Three Little Pigs",
+   "from": "Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang",
+   "email": "the.three.little.pigs.pr-151@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-152",
+  "name": "Puss in Boots Courier Service",
+  "sector": "transport",
+  "staff": 4,
+  "location": {
+   "address_line": "The Miller's Cottage, Gingerbread Lane",
+   "town": "The Fairy-Tale Forest",
+   "postcode": "FT8 2LX"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 8,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 28,
+  "decision_maker": {
+   "name": "Puss in Boots",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "puss.in.boots.pr-152@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-153",
+  "name": "The Elves and the Shoemaker",
+  "sector": "retail",
+  "staff": 4,
+  "location": {
+   "address_line": "73 Hansel Lane",
+   "town": "Cottage in the Wood",
+   "postcode": "AY5 6SJ"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 163,
+  "decision_maker": {
+   "name": "The Shoemaker of the Elves",
+   "from": "Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang",
+   "email": "the.shoemaker.of.the.elves.pr-153@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-154",
+  "name": "Rumpelstiltskin's Spinning Mill",
+  "sector": "industry",
+  "staff": 6,
+  "location": {
+   "address_line": "The Spinning Hut",
+   "town": "Fairy-Tale Forest",
+   "postcode": "FT8 3HS"
+  },
+  "needs": [
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 14
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Rumpelstiltskin",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "rumpelstiltskin.pr-154@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-155",
+  "name": "Rapunzel's Tower Hair Salon",
+  "sector": "retail",
+  "staff": 4,
+  "location": {
+   "address_line": "The Tower",
+   "town": "Fairy-Tale Forest",
+   "postcode": "FT8 7GL"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 72,
+  "decision_maker": {
+   "name": "Rapunzel",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "rapunzel.pr-155@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-156",
+  "name": "Sleeping Beauty Spa and Hotel",
+  "sector": "hospitality",
+  "staff": 22,
+  "location": {
+   "address_line": "61 Hansel Lane",
+   "town": "Cottage in the Wood",
+   "postcode": "AY5 3NT"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Briar Rose",
+   "from": "Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang",
+   "email": "briar.rose.pr-156@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-157",
+  "name": "Snow Queen Ice Palace Hotel",
+  "sector": "hospitality",
+  "staff": 18,
+  "location": {
+   "address_line": "The Ice Palace, Andersen Row",
+   "town": "Denmark",
+   "postcode": "DM1 5EF"
+  },
+  "needs": [
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "The Snow Queen",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "the.snow.queen.pr-157@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-158",
+  "name": "The Ugly Duckling Swimming Club",
+  "sector": "sports club",
+  "staff": 14,
+  "location": {
+   "address_line": "The Duck Pond, Andersen Row",
+   "town": "Denmark",
+   "postcode": "DM1 4RZ"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 20,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "The Ugly Duckling",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "the.ugly.duckling.pr-158@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-159",
+  "name": "The Little Mermaid Seaside Cafe",
+  "sector": "hospitality",
+  "staff": 5,
+  "location": {
+   "address_line": "The Rock by the Harbour, Andersen Row",
+   "town": "Denmark",
+   "postcode": "DM1 7DY"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 4,
+    "every": "month",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "The Little Mermaid",
+   "from": "Grimm, Perrault and other fairy tales",
+   "email": "the.little.mermaid.pr-159@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-160",
+  "name": "The Emperor's Tailors",
+  "sector": "trade",
+  "staff": 12,
+  "location": {
+   "address_line": "9 Andersen's Lane",
+   "town": "Odense",
+   "postcode": "AY7 8DG"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 171,
+  "decision_maker": {
+   "name": "The Emperor of the New Clothes",
+   "from": "Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang",
+   "email": "the.emperor.of.the.new.clothes.pr-160@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-161",
+  "name": "Odysseus Voyage Provisioning",
+  "sector": "expedition",
+  "staff": 50,
+  "location": {
+   "address_line": "The Palace of Ithaca",
+   "town": "Ithaca",
+   "postcode": "IT9 5LR"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 100,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 20,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 64
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2455,
+  "decision_maker": {
+   "name": "Odysseus",
+   "from": "Homer and the Greek myths",
+   "email": "odysseus.pr-161@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-162",
+  "name": "Penelope's Weaving Shop",
+  "sector": "retail",
+  "staff": 4,
+  "location": {
+   "address_line": "The Loom Room",
+   "town": "The Palace of Ithaca",
+   "postcode": "IT5 1EA"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 6,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 8,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Penelope",
+   "from": "Homer and the Greek myths",
+   "email": "penelope.pr-162@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-163",
+  "name": "Athens Olympic Games Committee",
+  "sector": "sports club",
+  "staff": 60,
+  "location": {
+   "address_line": "3 Labyrinth Lane",
+   "town": "Crete",
+   "postcode": "AX4 4JR"
+  },
+  "needs": [
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 60,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 15,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 80,
+    "every": "once",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2103,
+  "decision_maker": {
+   "name": "Theseus of Athens",
+   "from": "Greek and Roman: Homer, tragedy and comedy",
+   "email": "theseus.of.athens.pr-163@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-164",
+  "name": "Mount Olympus Catering",
+  "sector": "hospitality",
+  "staff": 30,
+  "location": {
+   "address_line": "The Throne Room",
+   "town": "Mount Olympus",
+   "postcode": "MO2 1ZA"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 25,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 100,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 3424,
+  "decision_maker": {
+   "name": "Zeus",
+   "from": "Homer and the Greek myths",
+   "email": "zeus.pr-164@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-165",
+  "name": "Delphi Oracle Visitor Centre",
+  "sector": "entertainment",
+  "staff": 10,
+  "location": {
+   "address_line": "The Sun Temple",
+   "town": "Mount Olympus",
+   "postcode": "MO2 8UG"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 24,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 169,
+  "decision_maker": {
+   "name": "Apollo",
+   "from": "Homer and the Greek myths",
+   "email": "apollo.pr-165@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-166",
+  "name": "Daedalus Labyrinth Tours",
+  "sector": "entertainment",
+  "staff": 8,
+  "location": {
+   "address_line": "The Workshop, Marble Street",
+   "town": "Hellas",
+   "postcode": "HE3 8XR"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Daedalus",
+   "from": "Homer and the Greek myths",
+   "email": "daedalus.pr-166@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-167",
+  "name": "Troy City Guard",
+  "sector": "government",
+  "staff": 120,
+  "location": {
+   "address_line": "3 Scaean Gate Road",
+   "town": "Troy",
+   "postcode": "AX2 7ES"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 120,
+    "every": "once",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Hector of Troy",
+   "from": "Greek and Roman: Homer, tragedy and comedy",
+   "email": "hector.of.troy.pr-167@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-168",
+  "name": "Pandora's Gift Box Co",
+  "sector": "retail",
+  "staff": 4,
+  "location": {
+   "address_line": "The Box Room, Marble Street",
+   "town": "Hellas",
+   "postcode": "HE3 2ZB"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "bubble-wrap",
+    "sku": "OT-WRAP",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 14
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 245,
+  "decision_maker": {
+   "name": "Pandora",
+   "from": "Homer and the Greek myths",
+   "email": "pandora.pr-168@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-169",
+  "name": "Elsinore Castle Household",
+  "sector": "estate",
+  "staff": 40,
+  "location": {
+   "address_line": "The Royal Apartments",
+   "town": "Elsinore Castle",
+   "postcode": "EL3 5ER"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 60,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 12,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2000,
+  "decision_maker": {
+   "name": "Claudius",
+   "from": "Hamlet",
+   "email": "claudius.pr-169@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.25
+  }
+ },
+ {
+  "id": "PR-170",
+  "name": "The Globe Playhouse",
+  "sector": "theatre",
+  "staff": 30,
+  "location": {
+   "address_line": "The Carpenter's Shop, Moonlit Lane",
+   "town": "Athens Wood",
+   "postcode": "AW1 9WJ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 12,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1526,
+  "decision_maker": {
+   "name": "Peter Quince",
+   "from": "A Midsummer Night's Dream",
+   "email": "peter.quince.pr-170@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.7
+  }
+ },
+ {
+  "id": "PR-171",
+  "name": "Rude Mechanicals Theatre Troupe",
+  "sector": "theatre",
+  "staff": 6,
+  "location": {
+   "address_line": "3 Quince Lane",
+   "town": "Athens Wood",
+   "postcode": "AR7 9NX"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 6,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Bottom the Weaver",
+   "from": "Shakespeare: the smaller parts",
+   "email": "bottom.the.weaver.pr-171@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.65
+  }
+ },
+ {
+  "id": "PR-172",
+  "name": "Verona Merchants' Exchange",
+  "sector": "trade",
+  "staff": 20,
+  "location": {
+   "address_line": "The Warehouse, Rialto Quay",
+   "town": "Venice",
+   "postcode": "VN5 8UR"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 30,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Antonio",
+   "from": "The Merchant of Venice and Othello",
+   "email": "antonio.pr-172@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-173",
+  "name": "Illyrian Court Household",
+  "sector": "estate",
+  "staff": 22,
+  "location": {
+   "address_line": "The Duke's Palace",
+   "town": "Illyria",
+   "postcode": "IL4 2WB"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 855,
+  "decision_maker": {
+   "name": "Duke Orsino",
+   "from": "Twelfth Night",
+   "email": "duke.orsino.pr-173@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-174",
+  "name": "Belmont Estate",
+  "sector": "estate",
+  "staff": 16,
+  "location": {
+   "address_line": "Belmont House, Rialto Quay",
+   "town": "Venice",
+   "postcode": "VN5 8QU"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Portia",
+   "from": "The Merchant of Venice and Othello",
+   "email": "portia.pr-174@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-175",
+  "name": "Arden Forest Lodge",
+  "sector": "hospitality",
+  "staff": 8,
+  "location": {
+   "address_line": "The Cottage, Oak Path",
+   "town": "Forest of Arden",
+   "postcode": "FO1 9FP"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 16,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 5,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Rosalind",
+   "from": "As You Like It",
+   "email": "rosalind.pr-175@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-176",
+  "name": "Prospero's Island Retreat",
+  "sector": "hospitality",
+  "staff": 6,
+  "location": {
+   "address_line": "The Cell",
+   "town": "Prospero's Island",
+   "postcode": "HI6 2SS"
+  },
+  "needs": [
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 4,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 12,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Prospero",
+   "from": "The Tempest",
+   "email": "prospero.pr-176@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-177",
+  "name": "Boar's Head Tavern Eastcheap",
+  "sector": "hospitality",
+  "staff": 10,
+  "location": {
+   "address_line": "The Boar's Head, Garter Lane",
+   "town": "Windsor Wood",
+   "postcode": "WW1 7BS"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 3,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Mistress Quickly",
+   "from": "Falstaff and others",
+   "email": "mistress.quickly.pr-177@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-178",
+  "name": "Windsor Garter Inn",
+  "sector": "hospitality",
+  "staff": 10,
+  "location": {
+   "address_line": "9 Garter Lane",
+   "town": "Windsor Wood",
+   "postcode": "WW1 4LJ"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 16
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Master Page",
+   "from": "Falstaff and others",
+   "email": "master.page.pr-178@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-179",
+  "name": "Dunsinane Castle Garrison",
+  "sector": "government",
+  "staff": 60,
+  "location": {
+   "address_line": "Dunsinane Castle",
+   "town": "Dunsinane",
+   "postcode": "HI7 7PU"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 80,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Macbeth",
+   "from": "Macbeth",
+   "email": "macbeth.pr-179@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.15
+  }
+ },
+ {
+  "id": "PR-180",
+  "name": "Messina Governor's House",
+  "sector": "household",
+  "staff": 14,
+  "location": {
+   "address_line": "3 Don Pedro Row",
+   "town": "Messina",
+   "postcode": "AT3 7NT"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 4,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Leonato",
+   "from": "Shakespeare: the smaller parts",
+   "email": "leonato.pr-180@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-181",
+  "name": "Padua University",
+  "sector": "education",
+  "staff": 120,
+  "location": {
+   "address_line": "3 Baptista Street",
+   "town": "Padua",
+   "postcode": "AT4 5SB"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 150,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 20,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 3609,
+  "decision_maker": {
+   "name": "Baptista Minola",
+   "from": "Shakespeare: the smaller parts",
+   "email": "baptista.minola.pr-181@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.3
+  }
+ },
+ {
+  "id": "PR-182",
+  "name": "Mowgli's Jungle School",
+  "sector": "education",
+  "staff": 12,
+  "location": {
+   "address_line": "3 Jungle Book Lane",
+   "town": "Seeonee",
+   "postcode": "AP9 4DB"
+  },
+  "needs": [
+   {
+    "product": "paper-aeroplane",
+    "sku": "OT-PLAN-5",
+    "qty": 20,
+    "every": "month",
+    "unit_price": 15
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 15,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Baloo",
+   "from": "Kipling, Barrie, Jerome and others",
+   "email": "baloo.pr-182@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ },
+ {
+  "id": "PR-183",
+  "name": "Kim's Lahore Museum Shop",
+  "sector": "retail",
+  "staff": 3,
+  "location": {
+   "address_line": "3 Zam-Zammah Square",
+   "town": "Lahore",
+   "postcode": "AQ1 5UH"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 9
+   }
+  ],
+  "budget_band": "micro",
+  "monthly_budget": 100,
+  "decision_maker": {
+   "name": "Kim O'Hara",
+   "from": "Kipling, Barrie, Jerome and others",
+   "email": "kim.ohara.pr-183@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-184",
+  "name": "Quatermain Safari Outfitters",
+  "sector": "expedition",
+  "staff": 8,
+  "location": {
+   "address_line": "The Hunter's Lodge, Quatermain Road",
+   "town": "Adventure Stories",
+   "postcode": "AD5 5DA"
+  },
+  "needs": [
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 64
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 129
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Allan Quatermain",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "allan.quatermain.pr-184@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-185",
+  "name": "Blakeney Manor Household",
+  "sector": "estate",
+  "staff": 14,
+  "location": {
+   "address_line": "Richmond Manor, Quatermain Road",
+   "town": "Adventure Stories",
+   "postcode": "AD5 9PY"
+  },
+  "needs": [
+   {
+    "product": "biscuit-tin",
+    "sku": "OT-BISC-24",
+    "qty": 40,
+    "every": "once",
+    "unit_price": 16
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Sir Percy Blakeney",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "sir.percy.blakeney.pr-185@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-186",
+  "name": "Baskerville Moor Walking Club",
+  "sector": "club",
+  "staff": 40,
+  "location": {
+   "address_line": "The Upstairs Rooms, Baker Street",
+   "town": "London",
+   "postcode": "BK2 4HP"
+  },
+  "needs": [
+   {
+    "product": "daypack",
+    "sku": "OT-PACK",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 129
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 60,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Dr Watson",
+   "from": "Sherlock Holmes (stories published before 1927)",
+   "email": "dr.watson.pr-186@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-187",
+  "name": "Three Men in a Boat Hire",
+  "sector": "transport",
+  "staff": 6,
+  "location": {
+   "address_line": "3 Boat Lane",
+   "town": "Three Men on the Thames",
+   "postcode": "HM3 4AH"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 12,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Harris",
+   "from": "Later nineteenth and early twentieth century novels",
+   "email": "harris.pr-187@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.6
+  }
+ },
+ {
+  "id": "PR-188",
+  "name": "The Gilbert and Sullivan Opera Company",
+  "sector": "theatre",
+  "staff": 35,
+  "location": {
+   "address_line": "The Lord High Everything Else, Mikado Row",
+   "town": "Titipu",
+   "postcode": "TP9 1JB"
+  },
+  "needs": [
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 12,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 8,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "quarter",
+    "unit_price": 7
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1487,
+  "decision_maker": {
+   "name": "Pooh-Bah",
+   "from": "Gilbert and Sullivan",
+   "email": "pooh.bah.pr-188@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.55
+  }
+ },
+ {
+  "id": "PR-189",
+  "name": "Titipu Town Council",
+  "sector": "government",
+  "staff": 20,
+  "location": {
+   "address_line": "The Lord High Executioner's Office, Mikado Row",
+   "town": "Titipu",
+   "postcode": "TP9 5JF"
+  },
+  "needs": [
+   {
+    "product": "one-good-pen",
+    "sku": "OT-PEN",
+    "qty": 40,
+    "every": "month",
+    "unit_price": 9
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 5,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Ko-Ko",
+   "from": "Gilbert and Sullivan",
+   "email": "ko.ko.pr-189@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-190",
+  "name": "HMS Pinafore",
+  "sector": "ship",
+  "staff": 60,
+  "location": {
+   "address_line": "The Pinafore, Quarterdeck Quay",
+   "town": "Portsmouth",
+   "postcode": "PT3 8BW"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 120,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "other-umbrella",
+    "sku": "OT-UMBR",
+    "qty": 20,
+    "every": "once",
+    "unit_price": 22
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 20,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "large",
+  "monthly_budget": 2563,
+  "decision_maker": {
+   "name": "Captain Corcoran",
+   "from": "Gilbert and Sullivan",
+   "email": "captain.corcoran.pr-190@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.4
+  }
+ },
+ {
+  "id": "PR-191",
+  "name": "The Pirates of Penzance Rowing Club",
+  "sector": "sports club",
+  "staff": 25,
+  "location": {
+   "address_line": "The Pirate Ship",
+   "town": "Pirate Cove",
+   "postcode": "OR3 7DS"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 30,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "trophy",
+    "sku": "OT-TROF",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 24
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 6,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Frederic",
+   "from": "Gilbert and Sullivan",
+   "email": "frederic.pr-191@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.5
+  }
+ },
+ {
+  "id": "PR-192",
+  "name": "The Hispaniola",
+  "sector": "ship",
+  "staff": 26,
+  "location": {
+   "address_line": "The Hispaniola",
+   "town": "Bristol Quayside",
+   "postcode": "BI3 5HG"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 52,
+    "every": "once",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 8,
+    "every": "week",
+    "unit_price": 24
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 6,
+    "every": "once",
+    "unit_price": 64
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 925,
+  "decision_maker": {
+   "name": "Captain Smollett",
+   "from": "Robert Louis Stevenson",
+   "email": "captain.smollett.pr-192@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.35
+  }
+ },
+ {
+  "id": "PR-193",
+  "name": "The Nautilus",
+  "sector": "ship",
+  "staff": 20,
+  "location": {
+   "address_line": "The Nautilus",
+   "town": "Twenty Thousand Leagues",
+   "postcode": "TT5 2NY"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 40,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 10,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 1355,
+  "decision_maker": {
+   "name": "Captain Nemo",
+   "from": "Jules Verne",
+   "email": "captain.nemo.pr-193@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.2
+  }
+ },
+ {
+  "id": "PR-194",
+  "name": "The Pequod",
+  "sector": "ship",
+  "staff": 30,
+  "location": {
+   "address_line": "The Pequod, Harpoon Wharf",
+   "town": "Nantucket",
+   "postcode": "NA2 4ET"
+  },
+  "needs": [
+   {
+    "product": "spare-sock",
+    "sku": "OT-SOCK",
+    "qty": 60,
+    "every": "quarter",
+    "unit_price": 7
+   },
+   {
+    "product": "indoor-helmet",
+    "sku": "OT-HELM",
+    "qty": 10,
+    "every": "once",
+    "unit_price": 64
+   }
+  ],
+  "budget_band": "medium",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "Captain Ahab",
+   "from": "Melville, Hawthorne, Irving and Poe",
+   "email": "captain.ahab.pr-194@example.com"
+  },
+  "preferred_channel": "letter",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.15
+  }
+ },
+ {
+  "id": "PR-195",
+  "name": "The Walrus and Carpenter Seafood Co",
+  "sector": "trade",
+  "staff": 4,
+  "location": {
+   "address_line": "The Oyster Beach, Chessboard Square",
+   "town": "The Looking-Glass House",
+   "postcode": "TE5 5PN"
+  },
+  "needs": [
+   {
+    "product": "ice-by-post",
+    "sku": "OT-ICE",
+    "qty": 10,
+    "every": "month",
+    "unit_price": 16
+   },
+   {
+    "product": "emergency-sandwich",
+    "sku": "OT-SAND-HAM-3",
+    "qty": 3,
+    "every": "week",
+    "unit_price": 24
+   }
+  ],
+  "budget_band": "small",
+  "monthly_budget": 500,
+  "decision_maker": {
+   "name": "The Walrus",
+   "from": "Alice in Wonderland and Through the Looking-Glass",
+   "email": "the.walrus.pr-195@example.com"
+  },
+  "preferred_channel": "email",
+  "status": "new",
+  "last_contacted": null,
+  "notes": "",
+  "private": {
+   "reply_propensity": 0.45
+  }
+ }
+]

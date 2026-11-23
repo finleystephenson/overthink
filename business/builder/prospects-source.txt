@@ -1,0 +1,196 @@
+# Name | sector | staff | decision maker | needs (CODE x qty / w weekly, m monthly, q quarterly, o once) | budget | propensity | preferred channel
+Admiral Benbow Inn | hospitality | 6 | Mrs Hawkins | SAND3x6/w, UMBR x4/o, PEN x10/m | small | 0.45 | letter
+Toad Hall Estate | estate | 14 | Mr Toad | BOOMx2/q, HELMx1/o, ICEx6/m | medium | 0.55 | email
+Baker Street Detective Agency | professional services | 3 | Sherlock Holmes | PEN x6/m, SAND3x2/w, BLIPx1/o | small | 0.35 | letter
+Scrooge and Marley Counting House | professional services | 4 | Ebenezer Scrooge | PEN x12/m, WRAP x2/m | micro | 0.12 | letter
+Fezziwig's Warehouse | retail | 25 | Mr Fezziwig | TROFx12/o, SAND3x10/w, BISC x30/o | medium | 0.6 | email
+Dotheboys Hall School | education | 12 | Wackford Squeers | PLAN5x20/m, PEN x20/m | micro | 0.2 | letter
+Lowood School for Girls | education | 15 | Mr Brocklehurst | PEN x30/m, SOCK x20/q | micro | 0.15 | letter
+Dr Blimber's Academy | education | 10 | Doctor Blimber | PEN x20/m, PLAN5x10/m | small | 0.3 | letter
+Miss Pinkerton's Academy | education | 12 | Jemima Pinkerton | PEN x25/m, UMBR x6/o, TROFx4/o | small | 0.4 | letter
+Mr Creakle's Salem House | education | 9 | Mr Creakle | PEN x15/m | micro | 0.18 | letter
+Casterbridge Corn Exchange | trade | 20 | Michael Henchard | SAND3x10/w, UMBR x10/o | medium | 0.5 | email
+Pemberley Estate | estate | 40 | Mr Darcy | BISC x60/o, ICEx10/m, UMBR x12/o | large | 0.35 | letter
+Longbourn House | household | 7 | Mr Bennet | SOCK x20/q, PLAN5x5/m | micro | 0.3 | letter
+Netherfield Park | estate | 18 | Mr Bingley | BISC x40/o, SAND3x5/w, UMBR x8/o | medium | 0.55 | letter
+Rosings Park | estate | 30 | Lady Catherine de Bourgh | UMBR x20/o, TROFx6/o | large | 0.22 | letter
+Mansfield Park Estate | estate | 22 | Sir Thomas Bertram | BISC x30/o, UMBR x10/o | medium | 0.4 | letter
+Thrushcross Grange | estate | 10 | Edgar Linton | ICEx4/m, BISC x12/o | small | 0.3 | letter
+Thornfield Hall | estate | 12 | Edward Rochester | UMBR x6/o, ICEx4/m, HELMx2/o | small | 0.35 | letter
+The Pickwick Club | club | 8 | Mr Pickwick | SAND3x8/w, TROFx8/o, BISC x24/o | small | 0.6 | email
+The Dingley Dell Cricket Club | sports club | 20 | Mr Wardle | TROFx15/o, SAND3x6/w, SOCK x40/q | small | 0.65 | email
+The Cheeryble Brothers' Warehouse | trade | 18 | Brother Ned Cheeryble | SAND3x8/w, BISC x40/o, TROFx10/o | medium | 0.7 | email
+Dombey and Son | trade | 30 | Paul Dombey | PEN x40/m, SAND3x12/w, WRAP x6/m | medium | 0.3 | letter
+Jarndyce and Jarndyce Chambers | professional services | 9 | Mr Kenge | PEN x30/m, SAND3x5/w | small | 0.25 | letter
+Chancery Lane Law Chambers | professional services | 11 | Mr Tulkinghorn | SAND3x6/w, PEN x30/m | small | 0.3 | letter
+Barnaby Rudge's Locksmith | trade | 3 | Gabriel Oak | WRAP x4/m, PEN x6/m | micro | 0.4 | letter
+The Maypole Inn | hospitality | 5 | Mr Codlin | SAND3x4/w, UMBR x4/o | small | 0.5 | letter
+The Jolly Sandboys Inn | hospitality | 4 | Mr Codlin | SAND3x3/w, UMBR x3/o | micro | 0.45 | letter
+The Peacock Inn | hospitality | 5 | Mr Pickwick | SAND3x3/w | micro | 0.4 | email
+The Leather Bottle Inn | hospitality | 4 | Mr Tupman | SAND3x3/w, BISC x10/o | micro | 0.45 | email
+The Blue Boar Inn | hospitality | 7 | Mr Pumblechook | SAND3x4/w, UMBR x6/o | small | 0.35 | letter
+The Three Jolly Bargemen | hospitality | 5 | Joe Gargery | SAND3x4/w, ICEx4/m | micro | 0.5 | letter
+Satis House Charitable Trust | charity | 5 | Miss Havisham | UMBR x8/o | micro | 0.1 | letter
+Gargery's Forge | trade | 3 | Joe Gargery | SOCK x6/q, PEN x5/m | micro | 0.45 | letter
+Magwitch and Co Importers | trade | 6 | Abel Magwitch | WRAP x6/m, SOCK x10/q | micro | 0.2 | letter
+The Marshalsea Debtors' Club | club | 40 | William Dorrit | SAND3x10/w, PEN x20/m | small | 0.4 | letter
+The Circumlocution Office | government | 60 | Mr Tite Barnacle | PEN x100/m, SAND3x15/w | large | 0.08 | letter
+Pecksniff's Architecture Academy | education | 8 | Seth Pecksniff | PEN x20/m, PLAN5x10/m | micro | 0.3 | letter
+Todgers's Commercial Boarding House | hospitality | 14 | Mrs Todgers | SAND3x6/w, SOCK x20/q | small | 0.5 | letter
+Mrs Jellyby's Telescopic Philanthropy | charity | 6 | Mrs Jellyby | PEN x20/m, PLAN5x10/m | micro | 0.35 | letter
+Mr Vholes's Law Office | professional services | 4 | Mr Vholes | PEN x10/m | micro | 0.2 | letter
+Bounderby's Mill | industry | 150 | Josiah Bounderby | SAND3x30/w, UMBR x30/o, SOCK x60/q | large | 0.25 | letter
+The Coketown Circus | entertainment | 25 | Mr Sleary | SAND3x8/w, TROFx6/o, PLAN5x30/m | small | 0.55 | letter
+Mr Crummles's Theatre Company | theatre | 12 | Mr Crummles | SAND3x6/w, SOCK x20/q, PEN x6/m | small | 0.6 | email
+The Theatre Royal Portsmouth | theatre | 25 | Mr Crummles | TROFx10/o, SAND3x8/w, BISC x30/o | medium | 0.5 | email
+Mrs Jarley's Waxworks | entertainment | 6 | Mrs Jarley | UMBR x6/o, SAND3x3/w | micro | 0.45 | letter
+Madame Defarge's Wine Shop | hospitality | 4 | Madame Defarge | SOCK x10/q | micro | 0.05 | letter
+Tellson's Bank | finance | 30 | Mr Lorry | PEN x60/m, SAND3x10/w | medium | 0.4 | letter
+Jerry Cruncher's Porterage | trade | 3 | Jerry Cruncher | WRAP x5/m, SOCK x6/q | micro | 0.35 | letter
+The Old Bailey Barristers' Chambers | professional services | 14 | Mr Stryver | SAND3x8/w, PEN x40/m, TROFx3/o | medium | 0.35 | letter
+The Dolphin's Head Tavern | hospitality | 4 | Mr Wopsle | SAND3x3/w | micro | 0.4 | letter
+Veneering's Banking House | finance | 25 | Mr Veneering | BISC x50/o, PEN x40/m, UMBR x15/o | medium | 0.35 | letter
+Boffin's Bower | household | 5 | Nicodemus Boffin | BISC x20/o, SOCK x20/q | small | 0.5 | letter
+Podsnap's Mansion | household | 9 | Mr Podsnap | BISC x24/o | small | 0.15 | letter
+Dr Jekyll's Laboratory | professional services | 3 | Dr Jekyll | PEN x5/m, WRAP x3/m | micro | 0.3 | letter
+Utterson and Enfield Solicitors | professional services | 5 | Mr Utterson | SAND3x3/w, PEN x15/m | micro | 0.4 | letter
+The Hispaniola Expedition | expedition | 26 | Squire Trelawney | SOCK x60/o, HELMx6/o, PACK x10/o, UMBR x10/o | medium | 0.55 | letter
+The Admiral Benbow Smugglers' Cove Trading | trade | 8 | Long John Silver | SOCK x20/q, WRAP x10/m | small | 0.2 | letter
+Pickwick's Coaching Company | transport | 30 | Tony Weller | SOCK x30/q, UMBR x20/o | medium | 0.4 | email
+Peggotty's Boat House Cafe | hospitality | 6 | Daniel Peggotty | SAND3x6/w, ICEx6/m, UMBR x3/o | small | 0.5 | letter
+Micawber and Co Corn Merchants | trade | 4 | Mr Micawber | PEN x8/m, SAND3x2/w | micro | 0.5 | letter
+Wickfield and Heep Solicitors | professional services | 7 | Mr Wickfield | PEN x20/m, SAND3x4/w | small | 0.3 | letter
+Doctors' Commons Proctors | professional services | 10 | Mr Spenlow | PEN x25/m, SAND3x4/w | small | 0.3 | letter
+The Strong School | education | 18 | Doctor Strong | PEN x30/m, PLAN5x20/m, TROFx6/o | small | 0.4 | letter
+Barkis's Carrier Service | transport | 3 | Barkis | WRAP x20/m | micro | 0.45 | letter
+The Rookery Boarding Kennels | animal care | 4 | Clara Peggotty | SOCK x4/q | micro | 0.2 | letter
+Hartfield Estate | household | 8 | Mr Woodhouse | ICEx4/m, BISC x12/o | small | 0.4 | letter
+Donwell Abbey | estate | 15 | Mr Knightley | UMBR x10/o, ICEx6/m, BISC x24/o | medium | 0.5 | letter
+Mrs Goddard's School | education | 9 | Mrs Goddard | PEN x15/m, PLAN5x10/m | micro | 0.45 | letter
+The Crown Inn Highbury | hospitality | 6 | Mr Cole | SAND3x4/w, UMBR x4/o | small | 0.4 | letter
+Hunsford Parsonage | church | 3 | Mr Collins | BISC x10/o, UMBR x3/o | micro | 0.4 | letter
+Meryton Assembly Rooms | entertainment | 8 | Sir William Lucas | TROFx5/o, BISC x24/o, SAND3x4/w | small | 0.55 | email
+Lambton Inn | hospitality | 8 | Mrs Reynolds | SAND3x5/w, UMBR x5/o | small | 0.35 | letter
+Northanger Abbey Estate | estate | 16 | General Tilney | UMBR x10/o, BISC x24/o | medium | 0.4 | letter
+Pump Room Baths | hospitality | 20 | Mr Allen | UMBR x20/o, SAND3x6/w, ICEx6/m | medium | 0.5 | letter
+Cranford Ladies' Tea Rooms | hospitality | 5 | Miss Matty | SAND3x5/w, BISC x30/o | small | 0.6 | letter
+Barchester Cathedral Chapter | church | 20 | Archdeacon Grantly | SAND3x6/w, BISC x40/o, UMBR x8/o | medium | 0.35 | letter
+Hiram's Hospital | care | 12 | Mr Harding | SOCK x24/q, BISC x24/o | small | 0.45 | letter
+The Bishop's Palace Barchester | church | 25 | Mrs Proudie | BISC x40/o, UMBR x10/o | medium | 0.25 | letter
+Wuthering Heights Farm | farm | 6 | Hareton Earnshaw | SOCK x12/q, WRAP x4/m | micro | 0.25 | letter
+Lowick Manor | estate | 7 | Mr Casaubon | PEN x20/m | micro | 0.15 | letter
+Tipton Grange | estate | 8 | Dorothea Brooke | BISC x12/o, SOCK x10/q | small | 0.4 | letter
+Middlemarch New Hospital | health | 25 | Tertius Lydgate | SOCK x40/q, SAND3x6/w | medium | 0.35 | letter
+Vincy Ribbon Mills | industry | 60 | Mr Vincy | SAND3x15/w, UMBR x15/o | medium | 0.3 | letter
+Silas Marner's Weaving Shed | trade | 2 | Silas Marner | WRAP x4/m | micro | 0.3 | letter
+Dorlcote Mill | industry | 8 | Mr Tulliver | SAND3x3/w, WRAP x6/m | micro | 0.4 | letter
+Vanity Fair Racing Stables | sports club | 12 | Rawdon Crawley | TROFx6/o, SAND3x4/w | small | 0.3 | letter
+Gaunt House | household | 30 | Lord Steyne | BISC x100/o, UMBR x20/o | large | 0.2 | letter
+The Sedley Stockbroking Firm | finance | 10 | Mr Sedley | PEN x25/m, SAND3x4/w | small | 0.3 | letter
+Barry Lyndon's Gaming House | entertainment | 15 | Barry Lyndon | TROFx6/o, BISC x30/o | small | 0.35 | letter
+Tess's Talbothays Dairy | farm | 20 | Dairyman Crick | SAND3x10/w, SOCK x30/q | medium | 0.5 | letter
+Weatherbury Upper Farm | farm | 14 | Bathsheba Everdene | SAND3x8/w, SOCK x24/q, WRAP x10/m | medium | 0.6 | letter
+The Casterbridge Brewery | industry | 25 | Michael Henchard | SAND3x12/w, TROFx6/o | medium | 0.35 | email
+Egdon Heath Furze Cutters | trade | 6 | Clym Yeobright | SOCK x24/q, SAND3x3/w | micro | 0.4 | letter
+Jude's Masonry Yard | trade | 3 | Jude Fawley | SOCK x6/q | micro | 0.3 | letter
+Christminster College Library | education | 30 | Richard Phillotson | PEN x80/m | medium | 0.3 | letter
+The Great Mail Coach Office | transport | 15 | Sam Weller | SOCK x20/q, UMBR x10/o | small | 0.4 | email
+Wilkins Micawber's Coal Barge | transport | 3 | Mr Micawber | WRAP x5/m | micro | 0.4 | letter
+Chesney Wold Estate | estate | 35 | Sir Leicester Dedlock | BISC x80/o, UMBR x15/o, ICEx10/m | large | 0.3 | letter
+Mr Krook's Rag and Bottle Shop | retail | 2 | Mr Krook | WRAP x8/m | micro | 0.3 | letter
+Mr Snagsby's Law Stationers | retail | 4 | Mr Snagsby | PEN x40/m, PLAN5x40/m | small | 0.5 | letter
+Mr Bucket's Detective Office | professional services | 4 | Mr Bucket | PEN x10/m, SAND3x3/w | micro | 0.4 | email
+The Baskerville Hall Estate | estate | 14 | Sir Henry Baskerville | UMBR x8/o, HELMx2/o, BISC x24/o | medium | 0.4 | letter
+Dr Mortimer's Surgery | health | 3 | Dr Mortimer | PEN x10/m, SOCK x6/q | micro | 0.35 | letter
+The Diogenes Club | club | 50 | Mycroft Holmes | SAND3x3/w, BISC x20/o | small | 0.05 | letter
+Scotland Yard Detective Branch | government | 80 | Inspector Lestrade | SAND3x20/w, PEN x100/m | large | 0.12 | letter
+Challenger's Natural History Society | club | 30 | Professor Challenger | HELMx10/o, PACK x10/o, PEN x20/m | medium | 0.5 | email
+The Lost World Expedition Outfitters | expedition | 12 | Lord John Roxton | HELMx6/o, SOCK x30/o, PACK x6/o | medium | 0.55 | letter
+Nemo's Nautilus Crew | expedition | 20 | Captain Nemo | SOCK x40/q, SAND3x10/w, HELMx6/o | medium | 0.2 | letter
+The Reform Club of Phileas Fogg | club | 120 | Phileas Fogg | SAND3x15/w, UMBR x20/o, TROFx5/o | large | 0.5 | letter
+Fogg's Travel Bureau | transport | 5 | Phileas Fogg | PACK x6/o, UMBR x6/o, SOCK x12/q | small | 0.45 | email
+The Dormouse and March Hare Tea Party Ltd | hospitality | 5 | The March Hare | BISC x30/o, SAND3x5/w | small | 0.55 | email
+The Queen of Hearts' Croquet Ground | sports club | 40 | Queen of Hearts | TROFx20/o, SAND3x10/w, UMBR x10/o | medium | 0.2 | letter
+Wonderland Mock Turtle Cafe | hospitality | 4 | The Mock Turtle | SAND3x3/w, ICEx4/m | micro | 0.4 | letter
+Looking-Glass Chess Club | club | 32 | The White Queen | TROFx8/o, SAND3x4/w | small | 0.4 | email
+The Wizard's Emerald City Palace | government | 100 | The Wizard of Oz | UMBR x40/o, PEN x80/m, SAND3x20/w | large | 0.25 | email
+Munchkinland Town Council | government | 20 | Glinda | TROFx10/o, BISC x60/o | medium | 0.4 | email
+The Wind in the Willows Boating Club | sports club | 15 | Mole | SAND3x6/w, TROFx6/o, UMBR x10/o | small | 0.65 | email
+Rat's Riverside Picnic Hire | hospitality | 3 | Ratty | SAND3x6/w, ICEx6/m, BISC x10/o | small | 0.7 | email
+Badger's Wild Wood Lodge | household | 3 | Mr Badger | SOCK x6/q, ICEx2/m | micro | 0.3 | letter
+The Wild Wood Weasel Security | trade | 8 | The Chief Weasel | HELMx4/o, SOCK x16/q | small | 0.2 | letter
+Hobbs Hill Tea Shop | hospitality | 4 | Mrs Hudson | SAND3x4/w | micro | 0.5 | email
+Sherwood Forest Outfitters | retail | 12 | Robin Hood | SOCK x40/q, PACK x6/o, UMBR x10/o | medium | 0.5 | letter
+Nottingham Sheriff's Office | government | 40 | The Sheriff of Nottingham | PEN x60/m, SAND3x10/w | medium | 0.1 | letter
+Friar Tuck's Alehouse | hospitality | 5 | Friar Tuck | SAND3x5/w, ICEx4/m | small | 0.6 | letter
+Camelot Round Table Tavern | hospitality | 14 | King Arthur Pendragon | SAND3x10/w, TROFx12/o, BISC x24/o | medium | 0.5 | email
+Merlin's Study | professional services | 2 | Merlin | PEN x6/m | micro | 0.3 | letter
+Tristan and Isolde's Cornish Inn | hospitality | 6 | Isolde | SAND3x4/w, UMBR x4/o | small | 0.45 | letter
+Heorot Mead Hall | hospitality | 30 | Hrothgar | SAND3x20/w, TROFx10/o, SOCK x60/q | medium | 0.35 | letter
+The Tabard Inn Southwark | hospitality | 12 | Harry Bailly the Host | SAND3x10/w, UMBR x6/o, BISC x24/o | medium | 0.7 | email
+Canterbury Pilgrims' Guild | club | 30 | The Wife of Bath | SOCK x40/q, UMBR x30/o, PACK x10/o | medium | 0.5 | letter
+Long Island West Egg Estate | estate | 30 | Jay Gatsby | BISC x200/o, ICEx30/m, UMBR x20/o | large | 0.55 | email
+Tom Sawyer's Whitewash Contractors | trade | 6 | Tom Sawyer | WRAP x8/m, SAND3x3/w | micro | 0.55 | email
+Huckleberry Finn Raft Company | transport | 3 | Huckleberry Finn | SOCK x6/q, UMBR x3/o | micro | 0.4 | email
+St Petersburg Sunday School | education | 18 | Aunt Polly | PEN x10/m, PLAN5x10/m, BISC x12/o | micro | 0.5 | letter
+Green Gables Farm | farm | 6 | Marilla Cuthbert | SAND3x4/w, ICEx4/m, SOCK x12/q | small | 0.55 | letter
+Avonlea Village School | education | 20 | Anne Shirley | PEN x25/m, PLAN5x20/m, TROFx4/o | small | 0.55 | letter
+Misselthwaite Manor | estate | 16 | Mary Lennox | JUNGx6/m, PUDLx2/o, BISC x24/o | medium | 0.55 | letter
+Mr Fox's Hen Roost Supplies | farm | 3 | Mr Fox | SOCK x4/q | micro | 0.1 | letter
+Sinbad's Shipping Company | transport | 35 | Sinbad the Sailor | SOCK x80/o, UMBR x20/o, HELMx10/o | large | 0.45 | email
+Ali Baba's Cave Storage | trade | 12 | Ali Baba | WRAP x30/m, PEN x10/m | small | 0.5 | letter
+Aladdin's Lamp Emporium | retail | 5 | Aladdin | UMBR x10/o, BISC x24/o, BOOMx4/o | small | 0.5 | email
+The Caliph's Baghdad Palace | government | 150 | Scheherazade | BISC x300/o, UMBR x50/o | large | 0.15 | letter
+Scheherazade's Storytelling Cafe | hospitality | 8 | Scheherazade | SAND3x5/w, BISC x20/o | small | 0.55 | email
+The Pied Piper Pest Control | trade | 4 | The Pied Piper | SOCK x8/q, UMBR x4/o | micro | 0.3 | letter
+Hamelin Town Hall | government | 30 | The Mayor of Hamelin | SAND3x8/w, TROFx6/o, PEN x40/m | medium | 0.3 | letter
+Dick Whittington's Mercers | trade | 10 | Dick Whittington | WRAP x20/m, PEN x10/m | small | 0.55 | email
+Cinderella's Glass Slipper Company | retail | 4 | Cinderella | SOCK x20/q, UMBR x6/o | small | 0.45 | email
+The Seven Dwarfs Mining Co | industry | 8 | The Seven Dwarfs Doc | HELMx8/o, SOCK x40/q, SAND3x6/w | medium | 0.5 | letter
+Goldilocks Bed and Breakfast | hospitality | 3 | Goldilocks | SAND3x3/w, SOCK x6/q | micro | 0.45 | email
+Hansel and Gretel Confectioners | retail | 4 | Gretel | BISC x30/o, WRAP x5/m | micro | 0.4 | letter
+The Three Little Pigs Builders | trade | 3 | The Three Little Pigs | HELMx3/o, SAND3x3/w | micro | 0.5 | email
+Puss in Boots Courier Service | transport | 4 | Puss in Boots | SOCK x8/q, UMBR x4/o | micro | 0.4 | letter
+The Elves and the Shoemaker | retail | 4 | The Shoemaker of the Elves | SOCK x30/q, WRAP x6/m | small | 0.55 | letter
+Rumpelstiltskin's Spinning Mill | industry | 6 | Rumpelstiltskin | WRAP x10/m, SAND3x3/w | micro | 0.2 | letter
+Rapunzel's Tower Hair Salon | retail | 4 | Rapunzel | PEN x6/m, BISC x10/o | micro | 0.35 | email
+Sleeping Beauty Spa and Hotel | hospitality | 22 | Briar Rose | UMBR x12/o, ICEx6/m, SOCK x30/q | medium | 0.4 | email
+Snow Queen Ice Palace Hotel | hospitality | 18 | The Snow Queen | ICEx20/m, UMBR x10/o | medium | 0.2 | letter
+The Ugly Duckling Swimming Club | sports club | 14 | The Ugly Duckling | TROFx8/o, SOCK x20/q | small | 0.5 | email
+The Little Mermaid Seaside Cafe | hospitality | 5 | The Little Mermaid | SAND3x5/w, ICEx4/m | small | 0.45 | email
+The Emperor's Tailors | trade | 12 | The Emperor of the New Clothes | SOCK x30/q, PEN x10/m | small | 0.3 | letter
+Odysseus Voyage Provisioning | expedition | 50 | Odysseus | SOCK x100/o, SAND3x20/w, HELMx12/o | large | 0.35 | letter
+Penelope's Weaving Shop | retail | 4 | Penelope | PEN x6/m, WRAP x8/m | micro | 0.45 | email
+Athens Olympic Games Committee | sports club | 60 | Theseus of Athens | TROFx60/o, SAND3x15/w, SOCK x80/o | large | 0.45 | letter
+Mount Olympus Catering | hospitality | 30 | Zeus | SAND3x25/w, BISC x100/o | large | 0.3 | letter
+Delphi Oracle Visitor Centre | entertainment | 10 | Apollo | UMBR x12/o, BISC x24/o, PEN x10/m | small | 0.4 | email
+Daedalus Labyrinth Tours | entertainment | 8 | Daedalus | HELMx8/o, UMBR x8/o | small | 0.45 | email
+Troy City Guard | government | 120 | Hector of Troy | HELMx40/o, SOCK x120/o | large | 0.2 | letter
+Pandora's Gift Box Co | retail | 4 | Pandora | BISC x40/o, WRAP x10/m | small | 0.4 | email
+Elsinore Castle Household | estate | 40 | Claudius | BISC x60/o, UMBR x12/o, SAND3x12/w | large | 0.25 | letter
+The Globe Playhouse | theatre | 30 | Peter Quince | SAND3x12/w, TROFx6/o, UMBR x8/o, BISC x40/o | medium | 0.7 | email
+Rude Mechanicals Theatre Troupe | theatre | 6 | Bottom the Weaver | SAND3x4/w, SOCK x6/q | micro | 0.65 | email
+Verona Merchants' Exchange | trade | 20 | Antonio | PEN x30/m, SAND3x8/w | small | 0.35 | letter
+Illyrian Court Household | estate | 22 | Duke Orsino | BISC x30/o, UMBR x10/o, SAND3x6/w | medium | 0.4 | letter
+Belmont Estate | estate | 16 | Portia | BISC x30/o, UMBR x8/o | medium | 0.5 | letter
+Arden Forest Lodge | hospitality | 8 | Rosalind | SOCK x16/q, SAND3x5/w, UMBR x4/o | small | 0.55 | email
+Prospero's Island Retreat | hospitality | 6 | Prospero | UMBR x4/o, BISC x12/o | small | 0.35 | letter
+Boar's Head Tavern Eastcheap | hospitality | 10 | Mistress Quickly | SAND3x8/w, TROFx3/o | small | 0.6 | letter
+Windsor Garter Inn | hospitality | 10 | Master Page | SAND3x6/w, BISC x20/o | small | 0.5 | letter
+Dunsinane Castle Garrison | government | 60 | Macbeth | HELMx20/o, SOCK x80/q | medium | 0.15 | letter
+Messina Governor's House | household | 14 | Leonato | BISC x30/o, SAND3x4/w | small | 0.55 | letter
+Padua University | education | 120 | Baptista Minola | PEN x150/m, SAND3x20/w, TROFx10/o | large | 0.3 | email
+Mowgli's Jungle School | education | 12 | Baloo | PLAN5x20/m, PEN x15/m | micro | 0.45 | email
+Kim's Lahore Museum Shop | retail | 3 | Kim O'Hara | BISC x20/o, PEN x10/m | micro | 0.5 | letter
+Quatermain Safari Outfitters | expedition | 8 | Allan Quatermain | HELMx6/o, SOCK x30/o, PACK x8/o | medium | 0.55 | letter
+Blakeney Manor Household | estate | 14 | Sir Percy Blakeney | BISC x40/o, UMBR x10/o | medium | 0.5 | letter
+Baskerville Moor Walking Club | club | 40 | Dr Watson | PACK x10/o, SOCK x60/o, UMBR x20/o | medium | 0.55 | email
+Three Men in a Boat Hire | transport | 6 | Harris | SAND3x6/w, UMBR x6/o, SOCK x12/q | small | 0.6 | email
+The Gilbert and Sullivan Opera Company | theatre | 35 | Pooh-Bah | SAND3x12/w, TROFx8/o, SOCK x30/q | medium | 0.55 | letter
+Titipu Town Council | government | 20 | Ko-Ko | PEN x40/m, TROFx5/o, SAND3x6/w | small | 0.4 | letter
+HMS Pinafore | ship | 60 | Captain Corcoran | SOCK x120/o, UMBR x20/o, SAND3x20/w | large | 0.4 | letter
+The Pirates of Penzance Rowing Club | sports club | 25 | Frederic | SOCK x30/q, TROFx10/o, SAND3x6/w | small | 0.5 | email
+The Hispaniola | ship | 26 | Captain Smollett | SOCK x52/o, SAND3x8/w, HELMx6/o | medium | 0.35 | letter
+The Nautilus | ship | 20 | Captain Nemo | SOCK x40/q, SAND3x10/w | medium | 0.2 | letter
+The Pequod | ship | 30 | Captain Ahab | SOCK x60/q, HELMx10/o | medium | 0.15 | letter
+The Walrus and Carpenter Seafood Co | trade | 4 | The Walrus | ICEx10/m, SAND3x3/w | small | 0.45 | email

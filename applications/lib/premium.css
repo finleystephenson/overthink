@@ -1,0 +1,326 @@
+/* The Expanza look for the sandbox: the complete base for a screen. An app moved to the new look loads this file
+   INSTEAD of lib/ui.css (the first screen still loads both while the old app CSS is retired; this file wins).
+   The sandbox is a tool made by Expanza, so its frame uses the Expanza site's language: cool paper, deep navy ink,
+   fine rules, Bricolage Grotesque headlines, Geist text, Geist Mono labels, pill buttons, one orange spark used
+   sparingly. Overthought & Co. appears only as its own things: the spiral mark, product pictures, posts, the news.
+   Order: tokens (light, dark), the shared parts re-skinned (top bar, day card, menus, toasts, buttons),
+   then the base components every screen can use (pm-*). The full guide is applications/DESIGN.md. */
+@import url("bar.css");
+
+
+:root {
+  color-scheme: light;
+  /* Expanza tokens */
+  --x-paper: #F4F6FA; --x-card: #FFFFFF; --x-tint: #E7ECF5; --x-ink: #0B1730; --x-ink-2: #55607A; --x-ink-3: #6C7893;
+  --x-rule: #CFD7E6; --x-rule-soft: #E1E7F0; --x-night: #0A1226; --x-on-night: #EAF0FA; --x-on-night-2: #9AA9C6;
+  --x-night-rule: rgba(234, 240, 250, .14); --x-spark: #FF653C; --x-spark-ink: #BF3F19; --x-wash: #FFE8DF; --x-cobalt: #17449A;
+  --x-good: #1F7A4D; --x-good-bg: #E3F3EA; --x-bad: #B8401B; --x-bad-bg: #FDE9E1;
+  --x-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --x-text: "Geist", system-ui, sans-serif;
+  --x-mono: "Geist Mono", ui-monospace, Menlo, monospace;
+  --x-ease: cubic-bezier(.2, .75, .2, 1);
+  --x-g: clamp(16px, 4.6vw, 72px);
+  --x-r: 14px; --x-r-l: 20px;
+
+  /* ui.css tokens, mapped onto Expanza, so the shared parts (top bar, toasts, menus) follow without edits there. */
+  --page: var(--x-paper); --page-2: var(--x-tint); --panel: var(--x-card); --raised: var(--x-card); --sunken: var(--x-tint);
+  --hover: rgba(11, 23, 48, .045); --active: rgba(11, 23, 48, .08);
+  --ink: var(--x-ink); --ink-2: var(--x-ink-2); --ink-3: var(--x-ink-3); --ink-4: #A3ADC2;
+  --line: var(--x-rule-soft); --line-2: var(--x-rule); --line-3: #AEB9CF;
+  --good: var(--x-good); --good-bg: var(--x-good-bg); --bad: var(--x-bad); --bad-bg: var(--x-bad-bg);
+  --neutral: var(--x-ink-2); --neutral-bg: var(--x-tint);
+  --inv: var(--x-night); --inv-ink: var(--x-on-night); --inv-ink-2: var(--x-on-night-2); --inv-line: var(--x-night-rule);
+  --shadow-1: 0 0 0 1px var(--x-rule-soft); --shadow-2: 0 0 0 1px var(--x-rule-soft), 0 12px 32px -20px rgba(11, 23, 48, .22);
+  --shadow-3: 0 0 0 1px var(--x-rule-soft), 0 30px 70px -30px rgba(11, 23, 48, .35);
+  --r-s: 10px; --r: 14px; --r-l: 20px; --r-xl: 20px;
+  --font: var(--x-text); --display: var(--x-display); --mono: var(--x-mono);
+  --ease: var(--x-ease); --spring: var(--x-ease);
+  --focus: var(--x-spark); --sel: rgba(23, 68, 154, .18);
+  /* the app icons' tile */
+  --ot-icon-tile: #FFFFFF; --ot-icon-ink: var(--x-ink); --ot-icon-ring: var(--x-rule);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --x-paper: #070D1C; --x-card: #0E1830; --x-tint: #142041; --x-ink: #EAF0FA; --x-ink-2: #9AA9C6; --x-ink-3: #7D8BA8;
+  --x-rule: rgba(234, 240, 250, .16); --x-rule-soft: rgba(234, 240, 250, .09); --x-night: #0E1830;
+  --x-good: #6FD3A0; --x-good-bg: rgba(111, 211, 160, .12); --x-bad: #FF9A78; --x-bad-bg: rgba(255, 101, 60, .14);
+  --hover: rgba(234, 240, 250, .05); --active: rgba(234, 240, 250, .09); --ink-4: #56637F; --line-3: rgba(234, 240, 250, .26);
+  --shadow-2: 0 0 0 1px var(--x-rule-soft), 0 16px 40px -20px rgba(0, 0, 0, .7);
+  --shadow-3: 0 0 0 1px var(--x-rule), 0 30px 70px -24px rgba(0, 0, 0, .8);
+  --ot-icon-tile: #0E1830; --ot-icon-ink: #EAF0FA; --ot-icon-ring: rgba(234, 240, 250, .16);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --x-paper: #070D1C; --x-card: #0E1830; --x-tint: #142041; --x-ink: #EAF0FA; --x-ink-2: #9AA9C6; --x-ink-3: #7D8BA8;
+    --x-rule: rgba(234, 240, 250, .16); --x-rule-soft: rgba(234, 240, 250, .09); --x-night: #0E1830;
+    --x-good: #6FD3A0; --x-good-bg: rgba(111, 211, 160, .12); --x-bad: #FF9A78; --x-bad-bg: rgba(255, 101, 60, .14);
+    --hover: rgba(234, 240, 250, .05); --active: rgba(234, 240, 250, .09); --ink-4: #56637F; --line-3: rgba(234, 240, 250, .26);
+    --shadow-2: 0 0 0 1px var(--x-rule-soft), 0 16px 40px -20px rgba(0, 0, 0, .7);
+    --shadow-3: 0 0 0 1px var(--x-rule), 0 30px 70px -24px rgba(0, 0, 0, .8);
+    --ot-icon-tile: #0E1830; --ot-icon-ink: #EAF0FA; --ot-icon-ring: rgba(234, 240, 250, .16);
+  }
+}
+
+/* ------------------------------------------------------------------ base */
+body { background: var(--x-paper); color: var(--x-ink); font: 400 16px/1.5 var(--x-text); }
+::selection { background: var(--x-ink); color: var(--x-paper); }
+:focus-visible { outline: 2px solid var(--x-spark); outline-offset: 3px; border-radius: 6px; }
+:is(.h1, .h2, .h3, .big-num, .display) { font-family: var(--x-display); font-stretch: normal; font-weight: 600; letter-spacing: -.03em; }
+
+/* ------------------------------------------------------------------ the shared parts, re-skinned */
+.bar { background: color-mix(in srgb, var(--x-paper) 86%, transparent); border-bottom: 1px solid var(--x-rule-soft); }
+.bar-home { border-radius: 99px; }
+.bar-app::before { display: none; }
+.bar-app-name { font: 600 17px/1 var(--x-display); font-stretch: normal; letter-spacing: -.02em; }
+.bar-app-plain { font: 400 14px/1 var(--x-text); color: var(--x-ink-2); }
+.bar-clock { background: var(--x-card); box-shadow: 0 0 0 1px var(--x-rule-soft); padding: 4px; }
+.clock-wd { font: 500 12px/1 var(--x-mono); letter-spacing: .02em; color: var(--x-ink-2); }
+.flip { font: 600 21px/26px var(--x-display); font-stretch: normal; letter-spacing: -.03em; }
+.clock-my { font-weight: 500; font-size: 14px; }
+.clock-time { font-family: var(--x-mono); color: var(--x-ink-2); }
+.ctl { font: 500 13px/1 var(--x-text); background: transparent; box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.ctl:hover { background: var(--x-tint); }
+.ctl-play { background: var(--x-ink); color: var(--x-paper); box-shadow: none; }
+.ctl-play:hover { background: var(--x-spark); color: #1a0d06; transform: none; }
+.bar.is-playing .ctl-play { animation: none; background: var(--x-spark); color: #1a0d06; }
+.bar-daylight::after { background: linear-gradient(90deg, transparent, var(--x-spark), transparent); }
+.impact-chip { font: 500 13px/1 var(--x-text); }
+.switch { border-radius: 99px; }
+
+.daycard { border-radius: var(--x-r-l); background: var(--x-night); box-shadow: 0 30px 80px -30px rgba(10, 18, 38, .6), 0 0 0 1px var(--x-night-rule); }
+:root[data-theme="dark"] .daycard { background: #111D3A; }
+.daycard-date { font: 600 21px/1.05 var(--x-display); font-stretch: normal; letter-spacing: -.02em; }
+.daycard-span { font: 500 12px/1 var(--x-mono); }
+.daycard-items li { border-radius: 12px; background: rgba(234, 240, 250, .06); }
+.daycard-items li::before, .daycard-items li.good::before { background: var(--x-on-night-2); }
+.daycard-items li.bad::before { background: var(--x-spark); }
+.daycard-items b { font: 600 24px/1 var(--x-display); font-stretch: normal; letter-spacing: -.02em; }
+.daycard-items span { font-weight: 400; }
+.daycard-timer { height: 2px; background: var(--x-spark); }
+
+.menu { border-radius: var(--x-r-l); }
+.menu-app { font-weight: 500; font-size: 12px; border-radius: 12px; }
+.btn { font-family: var(--x-text); font-weight: 500; border-radius: 99px; }
+.btn.primary { background: var(--x-ink); color: var(--x-paper); box-shadow: none; }
+.btn.primary:hover { background: var(--x-spark); color: #1a0d06; }
+.toast { border-radius: 14px; font-family: var(--x-text); }
+
+/* ------------------------------------------------------------------ base components (pm-*) */
+
+/* A small mono label above a headline: "Overthought & Co. · Business sandbox". */
+.pm-label { display: flex; align-items: center; gap: 10px; font: 400 13px/1.2 var(--x-mono); letter-spacing: .01em; color: var(--x-ink-2); }
+.pm-label .sep { opacity: .6; }
+
+/* Headlines: Bricolage, tight, calm. Never heavier than 600. */
+.pm-h1 { margin: 0; font: 600 clamp(2.5rem, 5.6vw, 5.1rem)/1.0 var(--x-display); letter-spacing: -.04em; text-wrap: balance; color: var(--x-ink); }
+.pm-h2 { margin: 0; font: 600 clamp(1.8rem, 3.4vw, 3rem)/1.04 var(--x-display); letter-spacing: -.033em; text-wrap: balance; }
+.pm-h3 { margin: 0; font: 600 clamp(1.15rem, 1.5vw, 1.35rem)/1.15 var(--x-display); letter-spacing: -.02em; }
+/* The one sentence that explains, set large like the Expanza project page. */
+.pm-lede { margin: 0; font: 500 clamp(1.25rem, 2vw, 1.75rem)/1.22 var(--x-display); letter-spacing: -.022em; color: var(--x-ink-3); text-wrap: balance; }
+.pm-lede b { font-weight: 500; color: var(--x-ink); }
+.pm-text { font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.5; color: var(--x-ink-2); text-wrap: pretty; }
+.pm-section-label { margin: 0 0 16px; font: 500 clamp(1rem, 1.3vw, 1.15rem)/1.2 var(--x-text); color: var(--x-ink-2); }
+
+/* Pill buttons. Ink fill; the spark only on hover, because orange always means "this does something". */
+.pm-pill { display: inline-flex; align-items: center; justify-content: center; gap: .55em; height: 48px; padding: 0 22px; border: 0; border-radius: 99px; cursor: pointer;
+  background: var(--x-ink); color: var(--x-paper); font: 500 16px/1 var(--x-text); text-decoration: none; white-space: nowrap;
+  transition: background .25s var(--x-ease), color .25s, transform .25s var(--x-ease), box-shadow .25s; }
+.pm-pill:hover { background: var(--x-spark); color: #1a0d06; }
+.pm-pill:active { transform: scale(.97); }
+.pm-pill:disabled { opacity: .5; cursor: default; }
+.pm-pill.line { background: transparent; color: var(--x-ink); box-shadow: inset 0 0 0 1.5px var(--x-ink); }
+.pm-pill.line:hover { background: var(--x-ink); color: var(--x-paper); }
+.pm-pill.small { height: 38px; padding: 0 16px; font-size: 14.5px; }
+.pm-pill svg { width: 18px; height: 18px; flex: none; }
+
+/* Cards: white, a hairline ring, no shadow. Pictures sit flush to the edges. */
+.pm-card { background: var(--x-card); border-radius: var(--x-r); box-shadow: 0 0 0 1px var(--x-rule-soft); }
+/* Night panels: the one dark surface, for the thing that matters most on a screen. */
+.pm-night { --x-ink: #EAF0FA; --x-ink-2: #9AA9C6; --x-ink-3: #9AA9C6; --x-rule: rgba(234, 240, 250, .17); --x-rule-soft: rgba(234, 240, 250, .1); --x-card: rgba(234, 240, 250, .04);
+  --ot-icon-tile: #111C36; --ot-icon-ink: #EAF0FA; --ot-icon-ring: rgba(234, 240, 250, .16);
+  background: var(--x-night); color: var(--x-ink); border-radius: var(--x-r-l); }
+.pm-night .pm-pill { background: var(--x-ink); color: var(--x-night); }
+.pm-night .pm-pill:hover { background: var(--x-spark); color: #1a0d06; }
+.pm-night .pm-pill.line { background: transparent; color: var(--x-ink); box-shadow: inset 0 0 0 1.5px rgba(234, 240, 250, .45); }
+.pm-night .pm-pill.line:hover { background: var(--x-ink); color: var(--x-night); }
+
+/* Lists ruled with hairlines, like the Expanza "what we do" rows. */
+.pm-rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--x-rule); }
+.pm-rows > li { border-bottom: 1px solid var(--x-rule); }
+
+/* A dot: hollow when off, the spark when on. */
+.pm-dot { display: inline-block; width: 9px; height: 9px; flex: none; border-radius: 99px; box-shadow: inset 0 0 0 1.5px currentColor; color: var(--x-ink-2); }
+.pm-dot.on { background: var(--x-spark); box-shadow: none; }
+
+/* An app's name always comes with what it is: "Kettle · Staff chat". */
+.pm-app-name { display: inline-flex; align-items: baseline; gap: .4em; min-width: 0; }
+.pm-app-name b { font: 600 1em/1.2 var(--x-display); letter-spacing: -.015em; color: var(--x-ink); white-space: nowrap; }
+.pm-app-name span { color: var(--x-ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pm-app-name span::before { content: "· "; }
+
+/* Small mono figures and times. */
+.pm-mono { font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); font-variant-numeric: tabular-nums; }
+
+/* Code to copy (only in "Connect your AI"). */
+.pm-code { border-radius: 12px; background: var(--x-tint); overflow: hidden; }
+.pm-code-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 16px; font: 500 13.5px/1.3 var(--x-text); color: var(--x-ink-2); }
+.pm-code pre { margin: 0; padding: 0 16px 14px; overflow-x: auto; font: 400 12.5px/1.55 var(--x-mono); color: var(--x-ink); white-space: pre; }
+.pm-night .pm-code { background: rgba(234, 240, 250, .06); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}
+
+
+/* ================================================================== the base (what lib/ui.js and lib/records.js draw)
+   Everything below replaces lib/ui.css for an app that has moved. Same class names, the new look. */
+
+/* ------------------------------------------------------------------ reset */
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; background: var(--x-paper); }
+body { margin: 0; min-height: 100vh; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+img, svg { display: block; max-width: 100%; }
+code, .mono { font-family: var(--x-mono); font-size: .9em; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.i { flex: none; display: block; }
+/* Focus follows the shape it sits on: a ring drawn with box-shadow, never a square outline. */
+:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--x-paper), 0 0 0 4px var(--x-spark); border-radius: 6px; }
+
+/* ------------------------------------------------------------------ type ladder (the only sizes an app uses)
+   display 40-80 (one per screen) · title 24 · heading 19 · body 15 · small 13.5 · label 12.5 mono */
+.h1 { font: 600 clamp(32px, 4vw, 48px)/1.04 var(--x-display); letter-spacing: -.035em; }
+.h2 { font: 600 24px/1.15 var(--x-display); letter-spacing: -.025em; }
+.h3 { font: 600 19px/1.2 var(--x-display); letter-spacing: -.02em; }
+.big-num { font: 600 28px/1 var(--x-display); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.lede { font-size: 17px; line-height: 1.5; color: var(--x-ink-2); max-width: 60ch; }
+.muted { color: var(--x-ink-2); }
+.small { font-size: 13.5px; }
+.tiny { font: 400 12.5px/1.3 var(--x-mono); color: var(--x-ink-2); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------------ buttons: pills, ink or outline, no shadows */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 18px; border: 0; border-radius: 99px;
+  background: transparent; color: var(--x-ink); box-shadow: inset 0 0 0 1px var(--x-rule); font: 500 14.5px/1 var(--x-text); white-space: nowrap; text-decoration: none;
+  transition: background .15s, color .15s, box-shadow .15s; }
+.btn:hover { background: var(--x-tint); }
+.btn:active { transform: scale(.97); }
+.btn:disabled { opacity: .45; pointer-events: none; }
+.btn.primary, .btn.accent { background: var(--x-ink); color: var(--x-paper); box-shadow: none; }
+.btn.primary:hover, .btn.accent:hover { background: var(--x-spark); color: #1a0d06; }
+.btn.ghost { box-shadow: none; }
+.btn.danger { color: var(--x-bad); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--x-bad) 40%, transparent); }
+.btn.small { height: 32px; padding: 0 13px; font-size: 13.5px; }
+.btn.icon-only { width: 40px; padding: 0; }
+.btn.small.icon-only { width: 32px; }
+.btn .copied { display: none; }
+.btn.is-copied .copy-label { display: none; }
+.btn.is-copied .copied { display: inline; }
+.btn.is-copied { color: var(--x-good); }
+
+/* ------------------------------------------------------------------ inputs */
+.field { display: grid; gap: 6px; }
+.field > span { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.input, .select, .textarea { width: 100%; min-height: 40px; padding: 9px 13px; border: 0; border-radius: 8px; background: var(--x-card); color: var(--x-ink);
+  box-shadow: inset 0 0 0 1px var(--x-rule); font: 400 15px/1.4 var(--x-text); transition: box-shadow .15s; }
+.textarea { min-height: 120px; resize: vertical; line-height: 1.55; }
+.input:focus, .select:focus, .textarea:focus { outline: none; box-shadow: inset 0 0 0 1.5px var(--x-ink), 0 0 0 3px rgba(255, 101, 60, .22); }
+.select { appearance: none; padding-right: 34px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2355607A' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; background-size: 16px; }
+
+/* ------------------------------------------------------------------ chips: one choice among a few (filters, lengths) */
+.pm-chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 13px; border: 0; border-radius: 99px; background: transparent; color: var(--x-ink-2);
+  box-shadow: inset 0 0 0 1px var(--x-rule); font: 500 13.5px/1 var(--x-text); cursor: pointer; }
+.pm-chip:hover { color: var(--x-ink); }
+.pm-chip[aria-pressed="true"], .pm-chip[aria-checked="true"], .pm-chip.is-on { background: var(--x-ink); color: var(--x-paper); box-shadow: none; }
+
+/* ------------------------------------------------------------------ panels, cards and rows */
+.card { background: var(--x-card); border-radius: var(--x-r); box-shadow: inset 0 0 0 1px var(--x-rule-soft); padding: 20px; min-width: 0; }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.list { list-style: none; margin: 0; padding: 0; }
+.list > li { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 0; border-top: 1px solid var(--x-rule-soft); min-width: 0; }
+.list > li:first-child { border-top: 0; }
+/* A selectable row: 44px for one line, 60px for two; selection is a quiet tint, not a coloured block. */
+.pm-row { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 8px 12px; border-radius: 8px; color: inherit; text-decoration: none; }
+.pm-row:hover { background: var(--hover); }
+.pm-row[aria-selected="true"], .pm-row.is-on { background: var(--x-tint); }
+
+/* ------------------------------------------------------------------ avatars and status pills: one tint, no rainbow */
+.avatar { display: inline-grid; place-items: center; flex: none; width: var(--av-size); height: var(--av-size); border-radius: 50%;
+  background: var(--x-tint) !important; color: var(--x-ink-2); font: 500 calc(var(--av-size) * .36)/1 var(--x-text); }
+.avatar.is-ai { background: var(--x-ink) !important; color: var(--x-paper); }
+.pill { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 6px; font: 500 12.5px/1 var(--x-text); white-space: nowrap;
+  background: var(--x-tint); color: var(--x-ink-2); }
+.pill::before { content: none; }
+.pill.bad { background: var(--x-bad-bg); color: var(--x-bad); }
+.pill.good { background: var(--x-good-bg); color: var(--x-good); }
+.pill.info, .pill.warn { background: var(--x-tint); color: var(--x-ink); }
+
+/* ------------------------------------------------------------------ empty and loading: a quiet line, never a picture */
+.empty { display: grid; justify-items: start; gap: 4px; padding: 24px 0; text-align: left; }
+.empty-art { display: none; }
+.empty-title { font: 500 15px/1.3 var(--x-text); color: var(--x-ink); }
+.empty-text { font-size: 14px; color: var(--x-ink-2); max-width: 44ch; }
+.skel-wrap { display: grid; gap: 10px; padding: 4px 0; }
+.skel { display: block; height: 12px; border-radius: 6px; background: var(--x-tint); animation: pm-breathe 1.4s ease-in-out infinite alternate; }
+@keyframes pm-breathe { to { opacity: .5; } }
+
+/* ------------------------------------------------------------------ toasts: feedback that floats (one of the few shadows) */
+.toasts { position: fixed; z-index: 90; right: 20px; bottom: 20px; display: grid; gap: 8px; justify-items: end; pointer-events: none; }
+.toast { display: flex; align-items: center; gap: 10px; max-width: min(420px, calc(100vw - 32px)); padding: 11px 16px; border-radius: 12px; background: var(--x-night); color: #EAF0FA;
+  font: 400 14px/1.4 var(--x-text); box-shadow: 0 16px 40px -18px rgba(10, 18, 38, .6); animation: pm-toast .18s var(--x-ease) both; pointer-events: auto; }
+.toast-dot { width: 7px; height: 7px; flex: none; border-radius: 50%; background: #9AA9C6; }
+.toast.bad .toast-dot { background: var(--x-spark); }
+.toast.good .toast-dot { background: #6FD3A0; }
+.toast.is-leaving { opacity: 0; transition: opacity .15s; }
+@keyframes pm-toast { from { opacity: 0; transform: translateY(6px); } }
+
+/* ------------------------------------------------------------------ slide-over: a panel that floats in from the right */
+.over { position: fixed; inset: 0; z-index: 80; }
+.over-back { position: absolute; inset: 0; background: rgba(10, 18, 38, .28); animation: pm-fade .2s ease both; }
+.over-panel { position: absolute; top: 8px; right: 8px; bottom: 8px; width: min(480px, calc(100vw - 16px)); display: flex; flex-direction: column; background: var(--x-card);
+  border-radius: 12px; box-shadow: 0 30px 70px -30px rgba(10, 18, 38, .45), 0 0 0 1px var(--x-rule-soft); animation: pm-over .24s var(--x-ease) both; overflow: hidden; }
+.over-panel.is-wide { width: min(760px, calc(100vw - 16px)); }
+.over-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 14px 12px 22px; border-bottom: 1px solid var(--x-rule-soft); }
+.over-head h2 { font: 600 19px/1.2 var(--x-display); letter-spacing: -.02em; }
+.over-body { padding: 18px 22px 26px; overflow-y: auto; }
+.over.is-leaving .over-back, .over.is-leaving .over-panel { opacity: 0; transition: opacity .15s; }
+@keyframes pm-over { from { transform: translateX(24px); opacity: 0; } }
+@keyframes pm-fade { from { opacity: 0; } }
+
+/* ------------------------------------------------------------------ menus */
+.pop { position: fixed; z-index: 70; animation: pm-toast .16s var(--x-ease) both; }
+.menu { background: var(--x-card); border-radius: 12px; box-shadow: 0 24px 60px -24px rgba(11, 23, 48, .35), 0 0 0 1px var(--x-rule-soft); padding: 6px; max-height: calc(100vh - 90px); overflow-y: auto; }
+.menu-item { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px; padding: 6px 10px; border: 0; border-radius: 8px; background: none; text-align: left; }
+.menu-item:hover { background: var(--x-tint); }
+
+/* ------------------------------------------------------------------ app icons (the drawing is in icons.js; this is size only) */
+.app-icon { position: relative; display: inline-grid; place-items: center; flex: none; width: var(--size, 40px); height: var(--size, 40px); }
+
+/* ------------------------------------------------------------------ records (lib/records.js) */
+.rec-list > li { justify-content: space-between; align-items: baseline; }
+.rec-list b { max-width: 64%; text-align: right; font-weight: 500; overflow-wrap: anywhere; }
+.rec-h { margin: 22px 0 6px; font: 600 15px/1.2 var(--x-display); }
+.rec-steps { list-style: none; margin: 0; padding: 0 0 0 16px; border-left: 1px solid var(--x-rule); display: grid; gap: 12px; }
+.rec-steps li { position: relative; display: grid; gap: 2px; }
+.rec-steps li::before { content: ""; position: absolute; left: -20px; top: 7px; width: 7px; height: 7px; border-radius: 50%; background: var(--x-ink); }
+.rec-steps time { font: 400 12.5px/1.2 var(--x-mono); color: var(--x-ink-2); }
+.rec-person { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.rec-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.rec-chip { display: inline-flex; align-items: center; gap: 8px; max-width: 100%; min-width: 0; height: 32px; padding: 0 12px 0 6px; border: 0; border-radius: 8px; background: var(--x-tint); color: var(--x-ink); text-align: left; cursor: pointer; }
+.rec-chip:hover { box-shadow: inset 0 0 0 1px var(--x-rule); }
+.rec-chip-ico { display: grid; place-items: center; flex: none; width: 22px; height: 22px; color: var(--x-ink-2); }
+.rec-chip-text { display: flex; gap: 6px; align-items: baseline; min-width: 0; }
+.rec-chip-text b { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 500 13.5px/1 var(--x-text); }
+.rec-chip-text small { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12.5px; color: var(--x-ink-2); }
+.rec-chip[data-tone="bad"] .rec-chip-ico { color: var(--x-bad); }
+
+/* ------------------------------------------------------------------ charts: ink and one dashed grey; the spark marks a point that matters */
+:root { --chart-you: var(--x-ink); --chart-alone: var(--x-ink-2); --chart-grid: var(--x-rule-soft); --chart-mark: var(--x-spark); --chart-good: var(--x-good); --chart-bad: var(--x-bad); }

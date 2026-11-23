@@ -1,0 +1,211 @@
+{
+  "id": "other-umbrella",
+  "code": "UMBR",
+  "name": "The Other Umbrella",
+  "category": "everyday",
+  "status": "active",
+  "available_from": null,
+  "tagline": "An umbrella to keep at work. It won't help if you're at home.",
+  "summary": "A compact umbrella with a tag for hanging it in a desk drawer or on a hook at work. Sky blue with one pink panel. £22.",
+  "concept": "A compact umbrella with a strong frame and a canopy that dries quickly. It comes with a tag so you can leave it at work.",
+  "why_it_exists": "The umbrella is always at home on the days it rains at work. This is the second one.",
+  "target_customer": "People who commute and keep getting caught out.",
+  "physical": {
+    "form": "A compact manual umbrella with a straight handle, a folding frame and a protective sleeve.",
+    "materials": [
+      "Fibreglass ribs",
+      "Recycled polyester canopy",
+      "Rubberised handle"
+    ],
+    "dimensions": "Folded: 28 cm long. Open: 98 cm across.",
+    "weight": "380 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-UMBR",
+      "name": "Sky with one pink panel",
+      "options": {},
+      "price": 22,
+      "stock": 52,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It folds down to 28 cm, so it fits in a bag or a desk drawer.",
+    "It opens 98 cm across, wide enough to cover you and your shoulders.",
+    "Eight fibreglass ribs keep it strong in the wind.",
+    "It comes with a tag, so you can write your name on it and leave it at work for rainy days.",
+    "The sleeve has a hanging loop, so you can hang it on a hook."
+  ],
+  "arrives": "The umbrella comes in its sleeve inside a brown card sleeve, with the desk-drawer tag tucked in. There is no plastic. The parcel is a slim box, and the umbrella is ready to use when you open it.",
+  "specs": [
+    [
+      "Size",
+      "Folded: 28 cm long. Open: 98 cm across."
+    ],
+    [
+      "Weight",
+      "380 g"
+    ],
+    [
+      "Made of",
+      "Recycled polyester canopy, fibreglass ribs, rubberised handle"
+    ],
+    [
+      "Colour",
+      "Sky blue with one pink panel"
+    ],
+    [
+      "Canopy",
+      "98 cm across, 8 ribs"
+    ],
+    [
+      "Opening",
+      "Manual"
+    ],
+    [
+      "Sleeve",
+      "Included. Holds the umbrella folded."
+    ],
+    [
+      "Desk-drawer tag",
+      "Included"
+    ],
+    [
+      "Care",
+      "Open it to dry before folding it away. Wipe with a damp cloth."
+    ]
+  ],
+  "how_it_works": "Slide the runner up to open it and press it down to close it. Put it in its sleeve, write your name on the tag and leave it at work.",
+  "in_the_box": [
+    "The Other Umbrella",
+    "A sleeve",
+    "A desk-drawer tag"
+  ],
+  "accessories": [],
+  "compatibility": [
+    {
+      "with": "wind of over 40 mph",
+      "works": false,
+      "note": "No compact umbrella copes with it. Fold it and go indoors."
+    }
+  ],
+  "packaging": "A kraft card sleeve. No plastic.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty against faults in how it was made. A frame bent by wind is not a fault. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Open it to dry before folding it away.",
+    "Wipe the canopy with a damp cloth.",
+    "Do not store it wet."
+  ],
+  "safety": [
+    "Do not use it in lightning.",
+    "Mind the tips near eyes."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unused and in its box. See Returns."
+  },
+  "fix_club": {
+    "eligible": true,
+    "repairs": [
+      {
+        "code": "UMBR-RIB",
+        "name": "Rib or canopy repair (quoted after assessment)",
+        "price": null
+      }
+    ]
+  },
+  "page": {
+    "headline": "An umbrella to keep at work",
+    "intro": "An umbrella to keep at work. It won't help if you're at home.",
+    "sections": [
+      {
+        "title": "What it is",
+        "body": "A compact umbrella, 28 cm folded and 98 cm across when open. Sky blue with one pink panel. £22."
+      },
+      {
+        "title": "The tag",
+        "body": "Write your name on the tag and leave the umbrella in a drawer or on a hook."
+      },
+      {
+        "title": "Repairs",
+        "body": "The Fix Club repairs ribs and canopies. The price is quoted after assessment."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Why is it called The Other Umbrella?",
+      "a": "It is meant to be the second one, kept at work."
+    },
+    {
+      "q": "How big is it?",
+      "a": "28 cm folded and 98 cm across open."
+    },
+    {
+      "q": "Is it automatic?",
+      "a": "No. You open it by hand."
+    },
+    {
+      "q": "Will it survive wind?",
+      "a": "It copes with ordinary wind. A frame bent by strong wind is not a fault."
+    },
+    {
+      "q": "Can it be repaired?",
+      "a": "Yes. The Fix Club repairs ribs and canopies. The price is quoted after assessment."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Yes, within 30 days, if it is unused and in its packaging."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It will not open or close smoothly.",
+      "steps": [
+        "Open it fully and wipe the runner with a dry cloth.",
+        "Check no fabric is caught in the ribs."
+      ],
+      "if_unresolved": "Open a support case."
+    },
+    {
+      "problem": "A rib has bent.",
+      "steps": [
+        "Close it gently and stop using it in strong wind.",
+        "Take a photo."
+      ],
+      "if_unresolved": "The Fix Club can repair it. Open a support case for a quote."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "daypack",
+    "one-good-pen"
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#D3EAF8"
+  },
+  "photography_direction": "A closed and an open umbrella. Clean colour, a visible desk tag. No rain, no models.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated sky blue and sunflower yellow accents, soft studio light, pale pale blue single-colour backdrop, gentle contact shadow. A compact umbrella open in sky blue with an off-white handle and ribs, a paper tag hanging from the handle, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated sky blue and sunflower yellow accents, soft studio light, pale pale blue single-colour backdrop, gentle contact shadow. Close-up of the rubberised handle, the runner and the paper tag. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated sky blue and sunflower yellow accents, soft studio light, pale pale blue single-colour backdrop, gentle contact shadow. A compact umbrella open in sky blue with an off-white handle and ribs, a paper tag hanging from the handle, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated sky blue and sunflower yellow accents, soft studio light, pale pale blue single-colour backdrop, gentle contact shadow. A kraft card sleeve beside a closed umbrella in its sleeve. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated sky blue and sunflower yellow accents, soft studio light, pale pale blue single-colour backdrop, gentle contact shadow. A closed umbrella hanging on a pale hook beside a coat. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated sky blue and sunflower yellow accents, soft studio light, pale pale blue single-colour backdrop, gentle contact shadow. One open umbrella centred with generous empty space around it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

@@ -1,0 +1,24 @@
+# Overthink
+
+> An open-source sandbox for testing AI in a business environment. At its centre is Overthought & Co., a simulated UK online shop whose apps all work inside the sandbox. The developer's own coding agent plans the test, creates synthetic people and activity, runs it with and without the product, and reads the results. Run it from the developer's own project: `npx github:finleystephenson/overthink init`.
+
+## For coding agents
+
+- [AGENTS.md](AGENTS.md): the entry point. What Overthink is, the steps, the commands, the product contract, the map.
+- [ai-instructions/README.md](ai-instructions/README.md): the guides, in order: setup, planning a test, synthetic users, running, reading results, resetting.
+- [ai-instructions/synthetic-users.md](ai-instructions/synthetic-users.md): best practice for creating synthetic users.
+- [activity-generation/README.md](activity-generation/README.md): every activity action, the person profile, MCP, CLI and TypeScript access.
+
+## Reference
+
+- [docs/architecture.md](docs/architecture.md): how the business, engine, sandbox, simulator and tools fit together.
+- [docs/connect.md](docs/connect.md): the business's own web API and MCP, for a product that calls tools itself.
+- [docs/run.md](docs/run.md): the optional `overthink run` twin-run tool and its report.
+- [docs/audiences.md](docs/audiences.md): the persona engine's audiences (customers, staff, businesses, suppliers, the public).
+- [docs/results-schema.md](docs/results-schema.md): results.json from `overthink run`, field by field.
+- [docs/live-events.md](docs/live-events.md): the live event stream.
+
+## Optional
+
+- [README.md](README.md): the project, Overthought & Co. and the repository layout.
+- [docs/layout.md](docs/layout.md): where each folder moved in the November 2026 restructure.

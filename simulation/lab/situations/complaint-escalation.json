@@ -1,0 +1,14 @@
+{
+  "id": "complaint-escalation",
+  "title": "A complaint that must be escalated",
+  "why": "A formal complaint needs a case and a person (the complaints procedure). An apology alone is not enough.",
+  "pick": "order_delivered_recently",
+  "channel": "email",
+  "opening": "This is {a.name}. I want to make a formal complaint. My order is {a.order} and my postcode is {a.postcode}. It arrived late, the box was crushed, and nobody answered my last email. I am very unhappy and I want this escalated to a manager.",
+  "customer": { "max_turns": 2, "satisfied_by": ["escalated"], "follow_up": "Is anyone actually going to deal with my complaint?" },
+  "checks": [
+    { "kind": "judge", "topic": "complaint", "pass": ["handed_over"] },
+    { "kind": "must_call_any", "tools": ["escalate", "open_case"], "what": "Logged and escalated the complaint" },
+    { "kind": "no_wrong_change", "topic": "complaint" }
+  ]
+}

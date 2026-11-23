@@ -1,0 +1,362 @@
+{
+ "_note": "How the shop behaves in the simulator (sim/). Every rate here is an assumption chosen to sit near what the generated five-year history shows (about 0.4 contacts per order, 5% returns, 1% complaints); change a number and re-run. The business itself is described by this file, data/staff.json, data/costs.json, data/prospects.json and the world in data/world/<size>/. To describe a different business, give the simulator another set of these files (--data <folder>).",
+ "demand": {
+  "base_orders_per_day": 42,
+  "annual_growth": 0.05,
+  "season_by_month": [
+   0.7,
+   0.85,
+   0.95,
+   0.95,
+   1.0,
+   1.0,
+   0.95,
+   0.72,
+   1.0,
+   1.1,
+   1.35,
+   1.9
+  ],
+  "late_december_factor": 0.5,
+  "weekday_factor_sunday_first": [
+   1.1,
+   1.15,
+   1.0,
+   1.0,
+   0.95,
+   0.85,
+   0.85
+  ],
+  "price_elasticity": 1.1,
+  "marketing_elasticity": 0.2,
+  "reputation_weight": 0.45,
+  "stock_substitute_share": 0.3,
+  "product_weights": {
+   "spare-sock": 16,
+   "emergency-sandwich": 13,
+   "paper-aeroplane": 9,
+   "one-good-pen": 9,
+   "bubble-wrap": 8,
+   "other-umbrella": 7,
+   "ice-by-post": 4,
+   "daypack": 4,
+   "indoor-helmet": 4,
+   "trophy": 6,
+   "blip": 5,
+   "boombox-mini": 5,
+   "pocket-jungle": 5,
+   "skimming-stones": 6,
+   "starter-puddle": 4,
+   "biscuit-tin": 6
+  },
+  "second_product_chance": 0.18,
+  "accessory_chance": 0.25,
+  "next_day_share": 0.15,
+  "basket_top_up": {
+   "_note": "Assumption (sim/top-up.mjs): a standard-delivery basket at or above near_share of the free-delivery threshold gets one more item to reach it with chance rate. Surveys (UPS/comScore Pulse of the Online Shopper, 2012-2015, from memory, not checked) put shoppers who say they have ever done this at about half; 0.3 per near basket is a judgement below that. Set rate to 0 to turn it off.",
+   "rate": 0.3,
+   "near_share": 0.6
+  },
+  "customer_kind_weight": {
+   "gift": 0.6,
+   "regular": 2.2,
+   "returns_a_lot": 1.2,
+   "complains": 1.0,
+   "business": 3.0
+  }
+ },
+ "customers": {
+  "memory_hazard_per_point": 0.25,
+  "churn_at": -2.5,
+  "good_resolution_points": 0.8,
+  "partial_resolution_points": 0.1,
+  "bad_resolution_points": -1.2,
+  "wrong_action_points": -1.8,
+  "abandoned_points": -1.5,
+  "slow_points": -0.3,
+  "complaint_multiplier_per_bad_point": 0.5,
+  "memory_recovery_per_day": 0.01
+ },
+ "contacts": {
+  "channel_mix": {
+   "web_chat": 0.42,
+   "email": 0.3,
+   "phone": 0.18,
+   "text": 0.1
+  },
+  "social": {
+   "share": 0.08,
+   "mix": {
+    "mutter_dm": 0.45,
+    "squint_dm": 0.3,
+    "mutter_mention": 0.25
+   }
+  },
+  "_why_social": "Share of contacts that arrive as social messages or public mentions instead of the channel drawn first. Assumption: UK small online shops report most help by email and chat, with social a minority (roughly 5 to 10%); the split between private messages and public tags is ours. Staff treat them like chats and check the social inboxes about hourly (pickup_minutes).",
+  "channel_task": {
+   "web_chat": "answer_chat",
+   "email": "answer_email",
+   "phone": "answer_call",
+   "text": "answer_text",
+   "mutter_dm": "answer_chat",
+   "squint_dm": "answer_chat",
+   "mutter_mention": "answer_chat"
+  },
+  "arrival_hours": {
+   "web_chat": [
+    8,
+    22
+   ],
+   "email": [
+    0,
+    24
+   ],
+   "phone": [
+    9,
+    18
+   ],
+   "text": [
+    8,
+    22
+   ],
+   "mutter_dm": [
+    7,
+    23
+   ],
+   "squint_dm": [
+    7,
+    23
+   ],
+   "mutter_mention": [
+    7,
+    23
+   ]
+  },
+  "topics": {
+   "where_is_my_order": {
+    "task": null,
+    "per_order_day": 0.013,
+    "delayed_multiplier": 4,
+    "when": "in_transit"
+   },
+   "late_parcel": {
+    "task": null,
+    "per_order_day": 0.05,
+    "when": "delayed"
+   },
+   "damaged": {
+    "task": "report_problem",
+    "per_order_day": 0.005,
+    "when": "delivered",
+    "within_days": 3
+   },
+   "missing": {
+    "task": "report_problem",
+    "per_order_day": 0.001,
+    "when": "delivered",
+    "within_days": 5
+   },
+   "fault": {
+    "task": "report_problem",
+    "per_order_day": 0.0003,
+    "when": "delivered",
+    "within_days": 30
+   },
+   "return_question": {
+    "task": "process_return",
+    "per_order_day": 0.0014,
+    "when": "delivered",
+    "within_days": 28
+   },
+   "change_order": {
+    "task": "change_order",
+    "per_order_day": 0.015,
+    "when": "paid"
+   },
+   "refund_chase": {
+    "task": "chase_refund",
+    "per_order_day": 0.005,
+    "when": "refunded",
+    "within_days": 10
+   },
+   "complaint": {
+    "task": "handle_complaint",
+    "per_order_day": 0.0003,
+    "late_per_order_day": 0.05,
+    "when": "any_open",
+    "kind_multiplier": {
+     "complains": 6
+    }
+   },
+   "product_question": {
+    "task": null,
+    "per_order_today": 0.04,
+    "when": "none"
+   },
+   "presale": {
+    "task": null,
+    "per_order_today": 0.02,
+    "when": "none"
+   }
+  },
+  "queue_pressure_skill_loss": 0.35,
+  "abandon_after_days": 4,
+  "slow_after_minutes": 480,
+  "tool_response_minutes": 1,
+  "handed_over_minutes_share": 0.6,
+  "staff_goodwill_chance_complaint": 0.5,
+  "staff_goodwill_amount": 5,
+  "staff_refund_chance_fault": 0.4,
+  "return_eligible_share": 0.85,
+  "_why_rates": "Retuned 22 Nov 2026 so an untouched business gets about 0.2 contacts per order over time (published e-commerce figures run 0.19 to 0.46 tickets per order by category, https://www.eesel.ai/blog/ecommerce-support-contact-rate ; where-is-my-order about 4% of orders, https://www.retailbrew.com/stories/why-wismo-matters-and-how-dr-squatch-improved-theirs). Per-order totals: where is my order about 4%, damaged 1.5%, missing 0.5%, fault 1%, return question 4%, change order 2%, product and pre-sale questions 6%; late parcels and complaints on top. The daily rates are those totals spread over the days each kind of contact can happen. Assumptions apart from the two cited figures.",
+  "pickup_minutes": {
+   "web_chat": 3,
+   "email": 40,
+   "phone": 1,
+   "text": 20,
+   "mutter_dm": 60,
+   "squint_dm": 60,
+   "mutter_mention": 45
+  },
+  "_why_pickup": "Minutes before a free person picks up a new message, by channel: chat and calls are watched, the mailbox is checked every hour or so. Assumption."
+ },
+ "csat": {
+  "resolved": 4.5,
+  "handed_over": 3.9,
+  "resolved_by_staff": 4.3,
+  "partial": 3.0,
+  "failed": 1.8,
+  "wrong_action": 1.3,
+  "abandoned": 1.0,
+  "slow_penalty": 0.8,
+  "late_day_penalty": 0.4,
+  "max_late_day_penalty": 1.2,
+  "sla_minutes": 240,
+  "satisfied_at_least": 4
+ },
+ "reviews": {
+  "rate_per_delivered_order": 0.04,
+  "rating_bad_experience_shift": -2,
+  "rating_good_experience_shift": 0.5,
+  "base_rating_weights": [
+   [
+    5,
+    5
+   ],
+   [
+    4,
+    3
+   ],
+   [
+    3,
+    1
+   ],
+   [
+    2,
+    0.4
+   ],
+   [
+    1,
+    0.3
+   ]
+  ],
+  "reputation_memory_reviews": 200,
+  "_why_rate": "Retuned 22 Nov 2026 to the generated history: about 8% of orders get a review in a week (28 reviews from 333 orders in the last four weeks of the standard world), counting the extra reviews after bad experiences. Assumption tied to our own history."
+ },
+ "ops": {
+  "reorder_cover_days": 14,
+  "reorder_min_cover_units": 5,
+  "baseline_buying_days": [
+   "mon",
+   "thu"
+  ],
+  "tool_checks": "daily",
+  "demand_window_days": 28,
+  "default_supplier_delay": true,
+  "safety_days": 7,
+  "opening_cover_days": 35
+ },
+ "prospects": {
+  "reply_delay_days": [
+   1,
+   6
+  ],
+  "quality": {
+   "personalised": 0.25,
+   "offer_fit": 0.35,
+   "channel_match": 0.15,
+   "discount_ok": 0.15,
+   "base": 0.1
+  },
+  "buy_threshold_noise": 0.25,
+  "staff_quality": 0.45,
+  "orders_start_after_days": [
+   2,
+   7
+  ],
+  "weekly_order_day": 1,
+  "churn_after_orders": 0.02,
+  "max_outreach_per_prospect": 3,
+  "ready_to_buy_share": 0.3,
+  "share_of_need": 0.5
+ },
+ "tool": {
+  "per_item_timeout_ms": 60000
+ },
+ "memory": {
+  "compact_every_days": 14,
+  "keep_order_days": 60,
+  "keep_audit": 400
+ },
+ "customer_model": {
+  "_note": "Used only by the rich customer model (live sandboxes; --rich-customers in pnpm sim). Repeat buying follows the BG/NBD idea: each customer has their own buying rate (gamma across people) and, after each purchase, a chance of dropping out for good (beta across people). New customers arrive to replace natural dropouts, more with more marketing and a better reputation. Hidden traits and a manner for messages are drawn once per customer from the population seed and never shown through the engine's tools. Every number here is an assumption unless a source is given.",
+  "_source": "Fader, Hardie and Lee (2005), Counting your customers the easy way: an alternative to the Pareto/NBD model. https://www.brucehardie.com/papers/bgnbd_2004-04-20.pdf . The shapes below are ours, not fitted.",
+  "kinds": {
+   "gift": {
+    "heterogeneity": 0.8,
+    "dropout_a": 0.8,
+    "dropout_b": 6
+   },
+   "regular": {
+    "heterogeneity": 2.0,
+    "dropout_a": 0.5,
+    "dropout_b": 12
+   },
+   "returns_a_lot": {
+    "heterogeneity": 1.2,
+    "dropout_a": 0.8,
+    "dropout_b": 8
+   },
+   "complains": {
+    "heterogeneity": 1.2,
+    "dropout_a": 1.0,
+    "dropout_b": 6
+   },
+   "business": {
+    "heterogeneity": 3.0,
+    "dropout_a": 0.3,
+    "dropout_b": 20
+   }
+  },
+  "_why_kinds": "heterogeneity is the gamma shape of buying rates within a kind (low = a few people buy most); dropout_a and dropout_b give the beta spread of the chance of stopping for good after a purchase (mean a / (a + b): gift 12%, regular 4%, business 1.5%). Assumptions.",
+  "acquisition_follows_marketing": 1.0,
+  "_why_acquisition": "New customers arrive at the rate that replaces natural dropouts at the start, times the marketing push and reputation, raised to this power. Assumption.",
+  "traits": {
+   "price_sensitivity_sd": 0.35,
+   "patience_sd": 0.4,
+   "public_complainer_share": 0.15,
+   "leave_sd": 0.3
+  },
+  "_why_traits": "Spread (log-normal sd) of each customer's price sensitivity, patience and tendency to leave around 1; share who complain in public after a bad experience. Hidden from tools, as CEO-Bench hides willingness to pay (https://arxiv.org/html/2606.18543). Assumptions.",
+  "manner": {
+   "vague_share": 0.25,
+   "omits_order_number_share": 0.3,
+   "tone": {
+    "polite": 0.5,
+    "plain": 0.35,
+    "blunt": 0.15
+   }
+  },
+  "_why_manner": "Share of customers who describe things vaguely, who leave out their order number, and their tone. Simulated users that are all cooperative make tools look better than they are (https://arxiv.org/html/2603.11245v1; tau-trait https://arxiv.org/html/2510.04491v3). Assumptions."
+ }
+}

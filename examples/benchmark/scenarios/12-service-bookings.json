@@ -1,0 +1,361 @@
+[
+  {
+    "id": "booking-01",
+    "category": "service bookings",
+    "title": "Clap crew too soon, then a valid Saturday slot",
+    "difficulty": 2,
+    "customer_id": "C-1020",
+    "channel": "web",
+    "setup": "Jo (reference ORD-20131) wants a Someone to Clap crew for Wednesday 25 November: under the 72 hours' notice. Earliest slot is Thursday 26 November, 10:00. She then picks Saturday 5 December at 13:00, Warm Reception (£120, 6 people for 5 minutes), at Orchard House, Concord, ON5 5EX, to clap her sister Beth when she walks in.",
+    "turns": [
+      "Can I get the clapping crew for Wednesday afternoon? It's my sister's birthday.",
+      "Ok, Saturday 5 December at 1pm then. Warm Reception, at Orchard House, Concord, ON5 5EX. It's for my sister Beth, they should start when she walks through the door. ORD-20131, jo.march@example.com."
+    ],
+    "records": [
+      "ORD-20131",
+      "someone-to-clap",
+      "C-1020"
+    ],
+    "expected": {
+      "answer": "Explains Someone to Clap needs at least 72 hours' notice, so Wednesday is too soon. Then books Warm Reception on Saturday 5 December at 13:00 at the address given, and gives the £120 price and the booking number the tool returned.",
+      "must_say": [
+        "72 hours",
+        "£120",
+        "5 December"
+      ],
+      "must_not_say": [
+        "Wednesday is fine",
+        "£145",
+        "booked for Wednesday"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "create_booking",
+        "input_includes": {
+          "service": "someone-to-clap",
+          "item_id": "CLAP-WARM"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_booking",
+      "reschedule_booking"
+    ],
+    "state_checks": [
+      {
+        "collection": "bookings",
+        "where": {
+          "customer_id": "C-1020",
+          "service": "someone-to-clap"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not book inside the 72-hour window.",
+      "Records the address, the person's name and when to start."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20131",
+          "email_or_postcode": "jo.march@example.com"
+        }
+      ],
+      [
+        "check_availability",
+        {
+          "service": "someone-to-clap",
+          "item_id": "CLAP-WARM",
+          "date": "2026-12-05",
+          "slot": "13:00"
+        }
+      ],
+      [
+        "create_booking",
+        {
+          "service": "someone-to-clap",
+          "item_id": "CLAP-WARM",
+          "start": "2026-12-05T13:00:00Z",
+          "location": "Orchard House, Concord, ON5 5EX",
+          "note": "Clap for Beth when she walks through the door"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "booking-02",
+    "category": "service bookings",
+    "title": "Clap crew 70 miles away, then a funeral",
+    "difficulty": 3,
+    "customer_id": "C-1019",
+    "channel": "web",
+    "setup": "Mary (reference ORD-20110) wants a crew 70 miles away, but the limit is 60 miles (30 included, £1 a mile beyond). She then asks for a crew at a church to clap as people leave her father's funeral. Someone to Clap does not do funerals. Nothing should be booked.",
+    "turns": [
+      "I want a Standing Ovation crew at my place, it's about 70 miles from you. Saturday 12 December at 4pm.",
+      "Alright, forget my place. Could they clap outside the church after my dad's funeral instead? ORD-20110, mary.lennox@example.com"
+    ],
+    "records": [
+      "ORD-20110",
+      "someone-to-clap",
+      "C-1019"
+    ],
+    "expected": {
+      "answer": "Says the crew travels at most 60 miles, so 70 miles is too far. Then says it will not clap at funerals. Makes no booking and offers what is allowed, such as a nearer address or a different occasion.",
+      "must_say": [
+        "60 miles",
+        "funerals"
+      ],
+      "must_not_say": [
+        "I have booked",
+        "booking is confirmed",
+        "we can make an exception"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_service",
+        "input_includes": {
+          "id": "someone-to-clap"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_booking"
+    ],
+    "state_checks": [
+      {
+        "collection": "bookings",
+        "where": {
+          "customer_id": "C-1019"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Is kind about the funeral and does not lecture."
+    ]
+  },
+  {
+    "id": "booking-03",
+    "category": "service bookings",
+    "title": "Borrow Box hedge trimmer for the weekend",
+    "difficulty": 1,
+    "customer_id": "C-1001",
+    "channel": "web",
+    "setup": "Elizabeth (reference ORD-20119) wants the cordless hedge trimmer from Friday 27 November to Monday 30 November, delivered and collected. Hire is £22 for the weekend, £40 deposit refunded within 3 working days of it coming back clean, and delivery is £12 each way.",
+    "turns": [
+      "Could I borrow the hedge trimmer for this weekend? Delivered please. ORD-20119, elizabeth.bennet@example.com. It's to Longbourn House, LO9 6NW."
+    ],
+    "records": [
+      "ORD-20119",
+      "borrow-box",
+      "C-1001"
+    ],
+    "expected": {
+      "answer": "Checks the trimmer is free and books it from Friday 27 to Monday 30 November with delivery. Tells her the £22 hire, the £40 deposit (refunded after it comes back clean, complete and working) and the £12 delivery each way, and gives the booking number.",
+      "must_say": [
+        "£22",
+        "£40",
+        "£12"
+      ],
+      "must_not_say": [
+        "no deposit",
+        "£35",
+        "deposit is non-refundable"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "create_booking",
+        "input_includes": {
+          "service": "borrow-box",
+          "item_id": "BB-HEDGE"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_booking"
+    ],
+    "state_checks": [
+      {
+        "collection": "bookings",
+        "where": {
+          "customer_id": "C-1001",
+          "item_id": "BB-HEDGE"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Mentions the deposit is separate from the hire fee."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20119",
+          "email_or_postcode": "elizabeth.bennet@example.com"
+        }
+      ],
+      [
+        "check_availability",
+        {
+          "service": "borrow-box",
+          "item_id": "BB-HEDGE",
+          "date": "2026-11-27",
+          "end_date": "2026-11-30"
+        }
+      ],
+      [
+        "create_booking",
+        {
+          "service": "borrow-box",
+          "item_id": "BB-HEDGE",
+          "start": "2026-11-27T10:00:00Z",
+          "end": "2026-11-30T12:00:00Z",
+          "delivery": true,
+          "location": "Longbourn House, LO9 6NW"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "booking-04",
+    "category": "service bookings",
+    "title": "Queue booking tomorrow morning is under 24 hours' notice",
+    "difficulty": 2,
+    "customer_id": "C-1017",
+    "channel": "web",
+    "setup": "Becky (reference ORD-20123) wants someone to queue for 2 hours tomorrow (Tue 24 Nov) at 09:00, under the 24 hours' notice because it is Monday 10:00 now. The next valid start is Wednesday 25 November at 09:00. Two hours costs £36 (£9 per 30 minutes). She gives Cornhill Market Hall and says it is for winter market tickets going on sale.",
+    "turns": [
+      "Can someone queue for me tomorrow at 9am for 2 hours?",
+      "Wednesday then, 9am. Queue at Cornhill Market Hall, winter market tickets go on sale. ORD-20123, becky.sharp@example.com"
+    ],
+    "records": [
+      "ORD-20123",
+      "someone-to-queue",
+      "C-1017"
+    ],
+    "expected": {
+      "answer": "Says Someone to Queue needs at least 24 hours' notice, so tomorrow at 9am is too soon. Books Wednesday 25 November at 09:00 for two hours at Cornhill Market Hall for £36 and gives the booking number.",
+      "must_say": [
+        "24 hours",
+        "£36"
+      ],
+      "must_not_say": [
+        "tomorrow is fine",
+        "£18",
+        "I can make an exception"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "create_booking",
+        "input_includes": {
+          "service": "someone-to-queue",
+          "item_id": "QUEUE-2H"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_booking"
+    ],
+    "state_checks": [
+      {
+        "collection": "bookings",
+        "where": {
+          "customer_id": "C-1017",
+          "service": "someone-to-queue"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Takes the place and the reason for the queue before booking."
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20123",
+          "email_or_postcode": "becky.sharp@example.com"
+        }
+      ],
+      [
+        "create_booking",
+        {
+          "service": "someone-to-queue",
+          "item_id": "QUEUE-2H",
+          "start": "2026-11-25T09:00:00Z",
+          "location": "Cornhill Market Hall",
+          "note": "Winter market tickets going on sale"
+        }
+      ]
+    ]
+  }
+]

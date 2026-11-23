@@ -1,0 +1,1125 @@
+{
+ "meta": {
+  "name": "example-30d",
+  "generated_for": "same business, same seed, with and without the tool",
+  "size": "standard",
+  "scale": 0.2,
+  "role": "assistant",
+  "customers": "default",
+  "days_requested": 30,
+  "days_compared": 30,
+  "warmup_days": 0,
+  "first_seed": 1,
+  "population_seed": 1,
+  "customer_model": "classic",
+  "plugins": [],
+  "tool": {
+   "cmd": "node sim/examples/simple-responder.mjs"
+  },
+  "stopped_early": false,
+  "start_date": "2026-11-23",
+  "tool_cost_per_month": 150,
+  "count_time_saved": false,
+  "seeds": 3,
+  "interval_note": "The 95% interval for net profit is still wide (includes zero). Run more seeds for a firmer answer."
+ },
+ "headline": "With 3 seeds we can't yet tell whether it made money: net profit changed by -£38 on average (95% interval -£109 to +£34). It has not paid for itself in cash within 30 days. Separately it freed 11 staff hours (worth £177 at pay: capacity, not cash, because wages are paid either way).",
+ "cash": {
+  "label": "Cash: the change in net profit, the money that actually changed. Tool cost is separate.",
+  "net_profit_change": {
+   "n": 3,
+   "mean": -37.67,
+   "median": -48.49,
+   "p10": -57.33,
+   "p90": -13.68,
+   "sd": 28.84,
+   "ci95": [
+    -109.33,
+    33.99
+   ],
+   "interval_note": "includes zero"
+  },
+  "gross_profit_change": {
+   "n": 3,
+   "mean": -32.03,
+   "median": -48.23,
+   "p10": -51.34,
+   "p90": -6.23,
+   "sd": 31.49,
+   "ci95": [
+    -110.27,
+    46.21
+   ],
+   "interval_note": "includes zero"
+  },
+  "refunds_change": {
+   "n": 3,
+   "mean": 30.2,
+   "median": 47.8,
+   "p10": -6.48,
+   "p90": 59.84,
+   "sd": 44.16,
+   "ci95": [
+    -79.52,
+    139.92
+   ],
+   "interval_note": "includes zero"
+  },
+  "revenue_change": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "tool_cost": 148.03,
+  "net_profit_change_after_tool_cost": {
+   "n": 3,
+   "mean": -185.7,
+   "median": -196.52,
+   "p10": -205.36,
+   "p90": -161.71,
+   "sd": 28.84,
+   "ci95": [
+    -257.36,
+    -114.04
+   ],
+   "interval_note": null
+  }
+ },
+ "time_freed": {
+  "label": "Capacity, not cash: staff are paid for their contracted hours whether or not the tool saves them time.",
+  "hours_saved": {
+   "n": 3,
+   "mean": 11,
+   "median": 10.98,
+   "p10": 10.88,
+   "p90": 11.14,
+   "sd": 0.17,
+   "ci95": [
+    10.59,
+    11.42
+   ],
+   "interval_note": null
+  },
+  "value_at_pay": {
+   "n": 3,
+   "mean": 177.02,
+   "median": 176.94,
+   "p10": 175,
+   "p90": 179.08,
+   "sd": 2.55,
+   "ci95": [
+    170.7,
+    183.35
+   ],
+   "interval_note": null
+  },
+  "overtime_hours_change": {
+   "n": 3,
+   "mean": 0.01,
+   "median": -0.01,
+   "p10": -0.28,
+   "p90": 0.31,
+   "sd": 0.37,
+   "ci95": [
+    -0.91,
+    0.93
+   ],
+   "interval_note": "includes zero"
+  }
+ },
+ "payback": {
+  "basis": "cash only",
+  "days": null,
+  "weeks": null,
+  "per_seed_median_days": 3,
+  "seeds_that_paid_back": 1,
+  "seeds": 3,
+  "text": "It has not paid for itself in cash within 30 days."
+ },
+ "roi": {
+  "basis": "cash only",
+  "value_created": {
+   "n": 3,
+   "mean": -37.67,
+   "median": -48.49,
+   "p10": -57.33,
+   "p90": -13.68,
+   "sd": 28.84,
+   "ci95": [
+    -109.33,
+    33.99
+   ],
+   "interval_note": "includes zero"
+  },
+  "tool_cost": 148.03,
+  "net_value": {
+   "n": 3,
+   "mean": -185.7,
+   "median": -196.52,
+   "p10": -205.36,
+   "p90": -161.71,
+   "sd": 28.84,
+   "ci95": [
+    -257.36,
+    -114.04
+   ],
+   "interval_note": null
+  },
+  "roi": {
+   "n": 3,
+   "mean": -1.255,
+   "median": -1.328,
+   "p10": -1.387,
+   "p90": -1.093,
+   "sd": 0.195,
+   "ci95": [
+    -1.738,
+    -0.771
+   ],
+   "interval_note": null
+  },
+  "formula": "ROI = (change in net profit - tool cost) / tool cost, per seed, then summarised. Staff time saved is shown separately, not counted."
+ },
+ "baseline_mean": {
+  "revenue": 16886.67,
+  "gross_profit": 9648.33,
+  "net_profit": 3563.32,
+  "customer_satisfaction": 3.86,
+  "first_response_median_minutes": 143.33,
+  "resolution_rate": 0.88,
+  "staff_task_hours": 50.28,
+  "refunds": 279.5,
+  "complaints": 10
+ },
+ "with_tool_mean": {
+  "revenue": 16886.67,
+  "gross_profit": 9616.3,
+  "net_profit": 3525.65,
+  "customer_satisfaction": 4.15,
+  "first_response_median_minutes": 1,
+  "resolution_rate": 0.95,
+  "staff_task_hours": 39.28,
+  "refunds": 309.7,
+  "complaints": 9.67
+ },
+ "paired_differences": {
+  "revenue": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "gross_profit": {
+   "n": 3,
+   "mean": -32.03,
+   "median": -48.23,
+   "p10": -51.34,
+   "p90": -6.23,
+   "sd": 31.49,
+   "ci95": [
+    -110.27,
+    46.21
+   ],
+   "interval_note": "includes zero"
+  },
+  "net_profit": {
+   "n": 3,
+   "mean": -37.67,
+   "median": -48.49,
+   "p10": -57.33,
+   "p90": -13.68,
+   "sd": 28.84,
+   "ci95": [
+    -109.33,
+    33.99
+   ],
+   "interval_note": "includes zero"
+  },
+  "refunds": {
+   "n": 3,
+   "mean": 30.2,
+   "median": 47.8,
+   "p10": -6.48,
+   "p90": 59.84,
+   "sd": 44.16,
+   "ci95": [
+    -79.52,
+    139.92
+   ],
+   "interval_note": "includes zero"
+  },
+  "customer_satisfaction": {
+   "n": 3,
+   "mean": 0.28,
+   "median": 0.23,
+   "p10": 0.19,
+   "p90": 0.4,
+   "sd": 0.14,
+   "ci95": [
+    -0.06,
+    0.63
+   ],
+   "interval_note": "includes zero"
+  },
+  "share_satisfied": {
+   "n": 3,
+   "mean": -0.19,
+   "median": -0.23,
+   "p10": -0.27,
+   "p90": -0.1,
+   "sd": 0.11,
+   "ci95": [
+    -0.47,
+    0.08
+   ],
+   "interval_note": "includes zero"
+  },
+  "first_response_median_minutes": {
+   "n": 3,
+   "mean": -142.33,
+   "median": -144,
+   "p10": -200,
+   "p90": -84,
+   "sd": 72.51,
+   "ci95": [
+    -322.48,
+    37.82
+   ],
+   "interval_note": "includes zero"
+  },
+  "resolution_rate": {
+   "n": 3,
+   "mean": 0.08,
+   "median": 0.07,
+   "p10": 0.05,
+   "p90": 0.1,
+   "sd": 0.03,
+   "ci95": [
+    0,
+    0.15
+   ],
+   "interval_note": "includes zero"
+  },
+  "staff_task_hours": {
+   "n": 3,
+   "mean": -11,
+   "median": -10.98,
+   "p10": -11.14,
+   "p90": -10.88,
+   "sd": 0.17,
+   "ci95": [
+    -11.42,
+    -10.59
+   ],
+   "interval_note": null
+  },
+  "staff_overtime_hours": {
+   "n": 3,
+   "mean": 0.01,
+   "median": -0.01,
+   "p10": -0.28,
+   "p90": 0.31,
+   "sd": 0.37,
+   "ci95": [
+    -0.91,
+    0.93
+   ],
+   "interval_note": "includes zero"
+  },
+  "complaints": {
+   "n": 3,
+   "mean": -0.33,
+   "median": 0,
+   "p10": -0.8,
+   "p90": 0,
+   "sd": 0.58,
+   "ci95": [
+    -1.77,
+    1.1
+   ],
+   "interval_note": "includes zero"
+  },
+  "bad_reviews": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "average_review": {
+   "n": 3,
+   "mean": -0.01,
+   "median": 0,
+   "p10": -0.02,
+   "p90": 0,
+   "sd": 0.02,
+   "ci95": [
+    -0.05,
+    0.03
+   ],
+   "interval_note": "includes zero"
+  },
+  "rule_breaks": {
+   "n": 3,
+   "mean": 0.67,
+   "median": 1,
+   "p10": 0.2,
+   "p90": 1,
+   "sd": 0.58,
+   "ci95": [
+    -0.77,
+    2.1
+   ],
+   "interval_note": "includes zero"
+  },
+  "wrong_actions": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "prospects_won": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "new_business_revenue": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "lost_sales": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "lost_sales_value": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "abandoned_contacts": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "orders": {
+   "n": 3,
+   "mean": 0,
+   "median": 0,
+   "p10": 0,
+   "p90": 0,
+   "sd": 0,
+   "ci95": [
+    0,
+    0
+   ],
+   "interval_note": "includes zero"
+  },
+  "reviews": {
+   "n": 3,
+   "mean": -0.33,
+   "median": 0,
+   "p10": -0.8,
+   "p90": 0,
+   "sd": 0.58,
+   "ci95": [
+    -1.77,
+    1.1
+   ],
+   "interval_note": "includes zero"
+  }
+ },
+ "survival": {
+  "label": "Did the business run out of cash?",
+  "baseline": {
+   "seeds": 3,
+   "ran_out_of_cash": 0,
+   "lowest_cash_mean": 11500,
+   "cash_at_end_mean": 17682.14
+  },
+  "with_tool": {
+   "seeds": 3,
+   "ran_out_of_cash": 0,
+   "lowest_cash_mean": 11500,
+   "cash_at_end_mean": 17639.72
+  }
+ },
+ "moments_that_mattered": {
+  "biggest_effects": [
+   {
+    "measure": "refunds",
+    "change": 30.2,
+    "impact_gbp": -30.2,
+    "text": "Refunds up £30 per run. Mostly on \"change_order\" contacts (£257 refunded with the tool, £174 by staff alone): customers asked to cancel and the tool did it at once, while the parcel was still unpacked; staff replied hours later, when many parcels had already gone, so fewer cancellations went through.",
+    "estimated": false
+   },
+   {
+    "measure": "rule_breaks",
+    "change": 0.67,
+    "impact_gbp": null,
+    "text": "1 tool calls per run were refused by the rules, nearly all report_problem (rule_violation) on \"fault\" contacts (1).",
+    "estimated": false
+   },
+   {
+    "measure": "customer_satisfaction",
+    "change": 0.28,
+    "impact_gbp": null,
+    "text": "Customer satisfaction +0.28 on the 1 to 5 scale (-19 points more customers satisfied).",
+    "estimated": false
+   },
+   {
+    "measure": "first_response",
+    "change": -142.33,
+    "impact_gbp": null,
+    "text": "Median first response -142.33 minutes.",
+    "estimated": false
+   }
+  ],
+  "wins": [],
+  "mistakes": []
+ },
+ "curve": {
+  "stride_days": 1,
+  "basis": "cash only",
+  "day": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30
+  ],
+  "value_created": [
+   0,
+   0,
+   6.22,
+   5.63,
+   5.64,
+   -2.45,
+   4.62,
+   -1.25,
+   2.61,
+   -2.86,
+   -2.86,
+   -11.07,
+   -18.43,
+   -16.53,
+   -8,
+   3.46,
+   -17.72,
+   -17.09,
+   -22.91,
+   -22.91,
+   -25.21,
+   -23.27,
+   -30.12,
+   -30.33,
+   -31.29,
+   -31.29,
+   -38.92,
+   -36.86,
+   -35.89,
+   -37.67
+  ],
+  "tool_cost": [
+   4.93,
+   9.87,
+   14.8,
+   19.74,
+   24.67,
+   29.61,
+   34.54,
+   39.47,
+   44.41,
+   49.34,
+   54.28,
+   59.21,
+   64.14,
+   69.08,
+   74.01,
+   78.95,
+   83.88,
+   88.82,
+   93.75,
+   98.68,
+   103.62,
+   108.55,
+   113.49,
+   118.42,
+   123.36,
+   128.29,
+   133.22,
+   138.16,
+   143.09,
+   148.03
+  ]
+ },
+ "seeds": [
+  {
+   "seed": 1,
+   "baseline": {
+    "days": 30,
+    "orders": 382,
+    "new_customers": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "revenue": 16693.7,
+    "refunds": 305.95,
+    "gross_profit": 9502.31,
+    "net_profit": 3410.64,
+    "costs": {
+     "card_fees": 326.48,
+     "delivery": 1497.4,
+     "goodwill": 25,
+     "packaging": 145.16,
+     "staff_pay": 2814.95,
+     "overtime_pay": 81.23,
+     "fixed": 530.92,
+     "marketing": 670.53,
+     "outreach": 0
+    },
+    "customer_satisfaction": 3.86,
+    "share_satisfied": 0.82,
+    "first_response_median_minutes": 215,
+    "first_response_p90_minutes": 2485,
+    "first_response_mean_minutes": 668.73,
+    "contacts": 91,
+    "resolution_rate": 0.87,
+    "abandoned_contacts": 0,
+    "handled_by_tool": 0,
+    "handed_over_by_tool": 0,
+    "handled_by_staff": 96,
+    "staff_task_hours": 50.71,
+    "staff_overtime_hours": 5.3,
+    "staff_task_cost": 795.74,
+    "complaints": 11,
+    "reviews": 34,
+    "average_review": 4.12,
+    "bad_reviews": 5,
+    "reputation": 0.8,
+    "tool_calls": 0,
+    "rule_breaks": 0,
+    "refused_tool_calls": 0,
+    "failed_tool_calls": 0,
+    "tool_errors": 0,
+    "wrong_actions": 0,
+    "prospects_contacted": 22,
+    "prospects_replied": 6,
+    "prospects_won": 0,
+    "new_business_revenue": 0,
+    "breakdown": {
+     "refund_by_staff:change_order": 182.95,
+     "refund_by_staff:missing": 18,
+     "refund_by_staff:damaged": 52,
+     "refund_by_staff:fault": 53
+    },
+    "purchase_orders_raised": 4,
+    "late_parcels": 14,
+    "stockout_product_days": 0
+   },
+   "with_tool": {
+    "days": 30,
+    "orders": 382,
+    "new_customers": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "revenue": 16693.7,
+    "refunds": 368.8,
+    "gross_profit": 9454.08,
+    "net_profit": 3362.15,
+    "costs": {
+     "card_fees": 326.48,
+     "delivery": 1504.2,
+     "goodwill": 25,
+     "packaging": 145.16,
+     "staff_pay": 2814.95,
+     "overtime_pay": 74.68,
+     "fixed": 530.92,
+     "marketing": 670.53,
+     "outreach": 0
+    },
+    "customer_satisfaction": 4.09,
+    "share_satisfied": 0.59,
+    "first_response_median_minutes": 1,
+    "first_response_p90_minutes": 1,
+    "first_response_mean_minutes": 32.5,
+    "contacts": 90,
+    "resolution_rate": 0.94,
+    "abandoned_contacts": 0,
+    "handled_by_tool": 54,
+    "handed_over_by_tool": 36,
+    "handled_by_staff": 38,
+    "staff_task_hours": 39.86,
+    "staff_overtime_hours": 4.95,
+    "staff_task_cost": 621.22,
+    "complaints": 11,
+    "reviews": 33,
+    "average_review": 4.09,
+    "bad_reviews": 5,
+    "reputation": 0.8,
+    "tool_calls": 223,
+    "rule_breaks": 1,
+    "refused_tool_calls": 1,
+    "failed_tool_calls": 5,
+    "tool_errors": 0,
+    "wrong_actions": 0,
+    "prospects_contacted": 22,
+    "prospects_replied": 6,
+    "prospects_won": 0,
+    "new_business_revenue": 0,
+    "breakdown": {
+     "refund_by_tool:cancel_order:change_order": 315.8,
+     "refund_by_staff:fault": 53,
+     "refused:report_problem:rule_violation:fault": 1
+    },
+    "purchase_orders_raised": 4,
+    "late_parcels": 14,
+    "stockout_product_days": 0
+   },
+   "delta": {
+    "revenue": 0,
+    "gross_profit": -48.23,
+    "net_profit": -48.49,
+    "refunds": 62.85,
+    "customer_satisfaction": 0.23,
+    "share_satisfied": -0.23,
+    "first_response_median_minutes": -214,
+    "resolution_rate": 0.07,
+    "staff_task_hours": -10.85,
+    "staff_overtime_hours": -0.35,
+    "complaints": 0,
+    "bad_reviews": 0,
+    "average_review": -0.03,
+    "rule_breaks": 1,
+    "wrong_actions": 0,
+    "prospects_won": 0,
+    "new_business_revenue": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "abandoned_contacts": 0,
+    "orders": 0,
+    "reviews": -1
+   },
+   "hours_saved": 10.85,
+   "roi": {
+    "value_created": -48.49,
+    "cash_change": -48.49,
+    "time_saved_value": 174.52,
+    "time_counted": false,
+    "tool_cost": 148.03,
+    "net_value": -196.52,
+    "roi": -1.328,
+    "hours_saved": 10.85
+   },
+   "payback_days": null
+  },
+  {
+   "seed": 2,
+   "baseline": {
+    "days": 30,
+    "orders": 356,
+    "new_customers": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "revenue": 15644.65,
+    "refunds": 283.8,
+    "gross_profit": 9023.65,
+    "net_profit": 3097.76,
+    "costs": {
+     "card_fees": 305.58,
+     "delivery": 1396.7,
+     "goodwill": 5,
+     "packaging": 135.28,
+     "staff_pay": 2814.95,
+     "overtime_pay": 66.93,
+     "fixed": 530.92,
+     "marketing": 670.53,
+     "outreach": 0
+    },
+    "customer_satisfaction": 3.77,
+    "share_satisfied": 0.79,
+    "first_response_median_minutes": 145,
+    "first_response_p90_minutes": 2625,
+    "first_response_mean_minutes": 713.33,
+    "contacts": 84,
+    "resolution_rate": 0.83,
+    "abandoned_contacts": 0,
+    "handled_by_tool": 0,
+    "handed_over_by_tool": 0,
+    "handled_by_staff": 89,
+    "staff_task_hours": 46.34,
+    "staff_overtime_hours": 4.49,
+    "staff_task_cost": 725.96,
+    "complaints": 6,
+    "reviews": 20,
+    "average_review": 4.15,
+    "bad_reviews": 1,
+    "reputation": 0.8,
+    "tool_calls": 0,
+    "rule_breaks": 0,
+    "refused_tool_calls": 0,
+    "failed_tool_calls": 0,
+    "tool_errors": 0,
+    "wrong_actions": 0,
+    "prospects_contacted": 22,
+    "prospects_replied": 5,
+    "prospects_won": 1,
+    "new_business_revenue": 0,
+    "breakdown": {
+     "refund_by_staff:change_order": 210.8,
+     "refund_by_staff:damaged": 47,
+     "refund_by_staff:fault": 26
+    },
+    "purchase_orders_raised": 1,
+    "late_parcels": 12,
+    "stockout_product_days": 0
+   },
+   "with_tool": {
+    "days": 30,
+    "orders": 356,
+    "new_customers": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "revenue": 15644.65,
+    "refunds": 331.6,
+    "gross_profit": 8971.53,
+    "net_profit": 3038.22,
+    "costs": {
+     "card_fees": 305.58,
+     "delivery": 1398.4,
+     "goodwill": 5,
+     "packaging": 135.28,
+     "staff_pay": 2814.95,
+     "overtime_pay": 72.65,
+     "fixed": 530.92,
+     "marketing": 670.53,
+     "outreach": 0
+    },
+    "customer_satisfaction": 4.21,
+    "share_satisfied": 0.72,
+    "first_response_median_minutes": 1,
+    "first_response_p90_minutes": 1,
+    "first_response_mean_minutes": 1,
+    "contacts": 86,
+    "resolution_rate": 0.94,
+    "abandoned_contacts": 0,
+    "handled_by_tool": 62,
+    "handed_over_by_tool": 24,
+    "handled_by_staff": 24,
+    "staff_task_hours": 35.36,
+    "staff_overtime_hours": 4.88,
+    "staff_task_cost": 549.02,
+    "complaints": 6,
+    "reviews": 20,
+    "average_review": 4.15,
+    "bad_reviews": 1,
+    "reputation": 0.8,
+    "tool_calls": 206,
+    "rule_breaks": 0,
+    "refused_tool_calls": 0,
+    "failed_tool_calls": 2,
+    "tool_errors": 0,
+    "wrong_actions": 0,
+    "prospects_contacted": 22,
+    "prospects_replied": 5,
+    "prospects_won": 1,
+    "new_business_revenue": 0,
+    "breakdown": {
+     "refund_by_tool:cancel_order:change_order": 305.6,
+     "refund_by_staff:fault": 26
+    },
+    "purchase_orders_raised": 1,
+    "late_parcels": 12,
+    "stockout_product_days": 0
+   },
+   "delta": {
+    "revenue": 0,
+    "gross_profit": -52.12,
+    "net_profit": -59.54,
+    "refunds": 47.8,
+    "customer_satisfaction": 0.44,
+    "share_satisfied": -0.07,
+    "first_response_median_minutes": -144,
+    "resolution_rate": 0.11,
+    "staff_task_hours": -10.98,
+    "staff_overtime_hours": 0.39,
+    "complaints": 0,
+    "bad_reviews": 0,
+    "average_review": 0,
+    "rule_breaks": 0,
+    "wrong_actions": 0,
+    "prospects_won": 0,
+    "new_business_revenue": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "abandoned_contacts": 0,
+    "orders": 0,
+    "reviews": 0
+   },
+   "hours_saved": 10.98,
+   "roi": {
+    "value_created": -59.54,
+    "cash_change": -59.54,
+    "time_saved_value": 176.94,
+    "time_counted": false,
+    "tool_cost": 148.03,
+    "net_value": -207.57,
+    "roi": -1.402,
+    "hours_saved": 10.98
+   },
+   "payback_days": 3
+  },
+  {
+   "seed": 3,
+   "baseline": {
+    "days": 30,
+    "orders": 411,
+    "new_customers": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "revenue": 18321.65,
+    "refunds": 248.75,
+    "gross_profit": 10419.02,
+    "net_profit": 4181.55,
+    "costs": {
+     "card_fees": 356.7,
+     "delivery": 1597.6,
+     "goodwill": 20,
+     "packaging": 156.18,
+     "staff_pay": 2814.95,
+     "overtime_pay": 90.59,
+     "fixed": 530.92,
+     "marketing": 670.53,
+     "outreach": 0
+    },
+    "customer_satisfaction": 3.96,
+    "share_satisfied": 0.86,
+    "first_response_median_minutes": 70,
+    "first_response_p90_minutes": 2485,
+    "first_response_mean_minutes": 657.2,
+    "contacts": 95,
+    "resolution_rate": 0.93,
+    "abandoned_contacts": 0,
+    "handled_by_tool": 0,
+    "handed_over_by_tool": 0,
+    "handled_by_staff": 102,
+    "staff_task_hours": 53.8,
+    "staff_overtime_hours": 6.03,
+    "staff_task_cost": 844.61,
+    "complaints": 13,
+    "reviews": 28,
+    "average_review": 4.07,
+    "bad_reviews": 3,
+    "reputation": 0.8,
+    "tool_calls": 0,
+    "rule_breaks": 0,
+    "refused_tool_calls": 0,
+    "failed_tool_calls": 0,
+    "tool_errors": 0,
+    "wrong_actions": 0,
+    "prospects_contacted": 22,
+    "prospects_replied": 3,
+    "prospects_won": 0,
+    "new_business_revenue": 0,
+    "breakdown": {
+     "refund_by_staff:fault": 16,
+     "refund_by_staff:change_order": 128.75,
+     "refund_by_staff:damaged": 40,
+     "refund_by_staff:missing": 64
+    },
+    "purchase_orders_raised": 4,
+    "late_parcels": 16,
+    "stockout_product_days": 0
+   },
+   "with_tool": {
+    "days": 30,
+    "orders": 411,
+    "new_customers": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "revenue": 18321.65,
+    "refunds": 228.7,
+    "gross_profit": 10423.29,
+    "net_profit": 4176.57,
+    "costs": {
+     "card_fees": 356.7,
+     "delivery": 1607.3,
+     "goodwill": 20,
+     "packaging": 156.18,
+     "staff_pay": 2814.95,
+     "overtime_pay": 90.14,
+     "fixed": 530.92,
+     "marketing": 670.53,
+     "outreach": 0
+    },
+    "customer_satisfaction": 4.14,
+    "share_satisfied": 0.58,
+    "first_response_median_minutes": 1,
+    "first_response_p90_minutes": 1,
+    "first_response_mean_minutes": 34.26,
+    "contacts": 93,
+    "resolution_rate": 0.98,
+    "abandoned_contacts": 0,
+    "handled_by_tool": 54,
+    "handed_over_by_tool": 39,
+    "handled_by_staff": 42,
+    "staff_task_hours": 42.62,
+    "staff_overtime_hours": 6.02,
+    "staff_task_cost": 665,
+    "complaints": 12,
+    "reviews": 28,
+    "average_review": 4.07,
+    "bad_reviews": 3,
+    "reputation": 0.8,
+    "tool_calls": 232,
+    "rule_breaks": 1,
+    "refused_tool_calls": 1,
+    "failed_tool_calls": 4,
+    "tool_errors": 0,
+    "wrong_actions": 0,
+    "prospects_contacted": 22,
+    "prospects_replied": 3,
+    "prospects_won": 0,
+    "new_business_revenue": 0,
+    "breakdown": {
+     "refused:report_problem:rule_violation:fault": 1,
+     "refund_by_tool:cancel_order:change_order": 148.7,
+     "refund_by_staff:fault": 16,
+     "refund_by_staff:missing": 64
+    },
+    "purchase_orders_raised": 4,
+    "late_parcels": 16,
+    "stockout_product_days": 0
+   },
+   "delta": {
+    "revenue": 0,
+    "gross_profit": 4.27,
+    "net_profit": -4.98,
+    "refunds": -20.05,
+    "customer_satisfaction": 0.18,
+    "share_satisfied": -0.28,
+    "first_response_median_minutes": -69,
+    "resolution_rate": 0.05,
+    "staff_task_hours": -11.18,
+    "staff_overtime_hours": -0.01,
+    "complaints": -1,
+    "bad_reviews": 0,
+    "average_review": 0,
+    "rule_breaks": 1,
+    "wrong_actions": 0,
+    "prospects_won": 0,
+    "new_business_revenue": 0,
+    "lost_sales": 0,
+    "lost_sales_value": 0,
+    "abandoned_contacts": 0,
+    "orders": 0,
+    "reviews": 0
+   },
+   "hours_saved": 11.18,
+   "roi": {
+    "value_created": -4.98,
+    "cash_change": -4.98,
+    "time_saved_value": 179.61,
+    "time_counted": false,
+    "tool_cost": 148.03,
+    "net_value": -153.01,
+    "roi": -1.034,
+    "hours_saved": 11.18
+   },
+   "payback_days": null
+  }
+ ]
+}

@@ -1,0 +1,311 @@
+[
+  {
+    "id": "warranty-01",
+    "category": "warranty",
+    "title": "Blip battery fading at 26 months, out of warranty",
+    "difficulty": 2,
+    "customer_id": "C-1015",
+    "channel": "web",
+    "setup": "Story 14. Miss Havisham's Blip (ORD-20101, delivered 23 Sep 2024, REG-6002) is 26 months old. The 24-month warranty ended on 23 September 2026. Her complaint is a battery that fades fast, which is wear anyway. She assumes it is covered. No case yet and she has not asked for a repair.",
+    "turns": [
+      "My Blip's battery is rubbish now, barely lasts the morning. That's covered by the warranty isn't it?",
+      "Order ORD-20101, my email is miss.havisham@example.com."
+    ],
+    "records": [
+      "ORD-20101",
+      "REG-6002",
+      "C-1015"
+    ],
+    "expected": {
+      "answer": "The Blip warranty is 24 months from delivery and ended on 23 September 2026. A battery fading to 80% is wear, so it would not be covered even in warranty. Offers The Fix Club battery replacement at £29, with the £15 assessment fee taken off if she goes ahead, and £4.95 to post it in. Does not create a repair unless she asks.",
+      "must_say": [
+        "24 months",
+        "23 September 2026",
+        "£29",
+        "£15"
+      ],
+      "must_not_say": [
+        "covered by the warranty",
+        "free repair",
+        "free replacement",
+        "I have created a repair",
+        "I can extend the warranty"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20101"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "blip"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair",
+      "create_return",
+      "report_problem",
+      "escalate"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1015"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Corrects the assumption politely, with the dates.",
+      "Gives the battery price from the Blip record (£29), not the screen price."
+    ]
+  },
+  {
+    "id": "warranty-02",
+    "category": "warranty",
+    "title": "Unregistered Boombox Mini that will not charge: still covered",
+    "difficulty": 1,
+    "customer_id": "C-1014",
+    "channel": "web",
+    "setup": "Story 13. Robin's Boombox Mini (ORD-20106, delivered 23 Mar 2026, about 8 months ago) will not charge. He never registered it and thinks that voids the warranty. The warranty is 24 months and the order number is proof of purchase. CASE-9012 already notes that a free Fix Club repair was offered and he was going to think about it. He only asks whether it is covered.",
+    "turns": [
+      "My Boombox Mini won't charge. I never registered it, so I guess I'm stuffed?",
+      "ORD-20106, robin.hood@example.com. Is it covered or not?"
+    ],
+    "records": [
+      "ORD-20106",
+      "CASE-9012",
+      "C-1014"
+    ],
+    "expected": {
+      "answer": "Yes, it is covered. The Boombox Mini warranty is 24 months from delivery, and the order number is proof of purchase, so registering is not needed. A repair for a fault is free with a free label both ways. Offers to set it up but does not create the repair until he says so.",
+      "must_say": [
+        "24 months",
+        "free"
+      ],
+      "must_not_say": [
+        "not covered",
+        "must register first",
+        "£15 assessment fee",
+        "£35"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20106"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair",
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1014"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Says registration is not required because the order number is proof of purchase.",
+      "Does not charge any fee: this is a fault inside warranty."
+    ]
+  },
+  {
+    "id": "warranty-03",
+    "category": "warranty",
+    "title": "Cracked Blip screen at 14 months: warranty does not cover accidents",
+    "difficulty": 3,
+    "customer_id": "C-1002",
+    "channel": "web",
+    "setup": "Story 12. Jane's Blip (ORD-20102, delivered 23 Sep 2025, REG-6001) is 14 months old and inside its 24 months, but the screen cracked after a drop. FIX-5006 is already at quote_sent for £49 (valid to 4 December). She says anything inside two years must be free. Accidental damage is excluded. She has not approved the quote.",
+    "turns": [
+      "My Blip's screen is cracked. It's only 14 months old and the warranty is two years, so the fix is free right?",
+      "FIX-5006, jane.eyre@example.com. Why am I being charged then?"
+    ],
+    "records": [
+      "ORD-20102",
+      "REG-6001",
+      "FIX-5006",
+      "CASE-9007",
+      "C-1002"
+    ],
+    "expected": {
+      "answer": "The warranty is 24 months and she is inside it, but it covers faults in materials or making, not accidental damage such as drops. So the £49 screen repair on FIX-5006 stands, and the £15 assessment fee comes off that price if she approves. Does not approve the quote for her. Her legal rights are unaffected, but a drop is not a fault.",
+      "must_say": [
+        "24 months",
+        "£49",
+        "£15",
+        "accidental"
+      ],
+      "must_not_say": [
+        "free repair",
+        "I have approved",
+        "no charge",
+        "I can waive"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_repair",
+        "input_includes": {
+          "repair_number": "FIX-5006"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair",
+      "approve_repair_quote",
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "id": "FIX-5006",
+        "field": "status",
+        "equals": "quote_sent"
+      },
+      {
+        "collection": "repairs",
+        "where": {
+          "customer_id": "C-1002"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not make an exception or promise a discount.",
+      "Offers to approve the quote only if she asks."
+    ]
+  },
+  {
+    "id": "warranty-04",
+    "category": "warranty",
+    "title": "Daypack warranty length, and paper products (anonymous)",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "An anonymous visitor asks how long the Daypack is guaranteed and whether the Paper Aeroplane has a warranty. Product records and the warranty policy answer both.",
+    "turns": [
+      "How long is the warranty on the Daypack? And do your paper aeroplanes have one?"
+    ],
+    "records": [
+      "daypack",
+      "paper-aeroplane",
+      "warranty"
+    ],
+    "expected": {
+      "answer": "The Daypack has a 60-month warranty against faults in materials or making (zips, seams, buckles, rails). Paper products have no warranty. Mentions that the warranty is on top of the legal rights, starts on the delivery day, and does not cover normal wear.",
+      "must_say": [
+        "60 months",
+        "no warranty"
+      ],
+      "must_not_say": [
+        "12 months for the Daypack",
+        "24 months for the Daypack",
+        "lifetime"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "daypack"
+        }
+      },
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "paper-aeroplane"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "create_repair",
+      "open_case",
+      "escalate"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Looks the answer up rather than guessing.",
+      "Does not ask the anonymous visitor for order details."
+    ]
+  }
+]

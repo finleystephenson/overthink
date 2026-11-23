@@ -1,0 +1,7 @@
+# Prettier formats the TypeScript only, for now (see eslint.config.mjs): everything else is ignored.
+*
+!*/
+!**/*.ts
+node_modules/
+business/site/
+applications/

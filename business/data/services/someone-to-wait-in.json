@@ -1,0 +1,109 @@
+{
+  "id": "someone-to-wait-in",
+  "name": "Someone to Wait In",
+  "tagline": "We sit in your house for the parcel or the plumber. Between 8 and 6, like they said.",
+  "summary": "A named waiter with ID sits in your home for a half day or a full day.",
+  "concept": "Deliveries come between 8 and 6. You have somewhere to be. We cover the gap.",
+  "who_its_for": "Anyone waiting for a delivery, an engineer or a plumber who can't take the day off.",
+  "how_it_works": [
+    "Choose a half day (4 hours) or a full day (8 to 6).",
+    "Book at least 24 hours ahead.",
+    "We send a named waiter with ID.",
+    "They let in only the person you named, sign for things and tell you what happened."
+  ],
+  "page": {
+    "headline": "Someone to wait in",
+    "intro": "We sit in your house for the parcel or the plumber. Between 8 and 6, like they said.",
+    "sections": [
+      {
+        "title": "Prices",
+        "body": "Half day (4 hours) £45. Full day (8 to 6) £80."
+      },
+      {
+        "title": "Who comes",
+        "body": "A named waiter with ID. You'll know who it is before they arrive."
+      },
+      {
+        "title": "What they do and don't",
+        "body": "They sign for things. They do not let anyone else in or make decisions about repairs."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "How much does it cost?",
+      "a": "Half day (4 hours) is £45. Full day (8 to 6) is £80."
+    },
+    {
+      "q": "Who will turn up?",
+      "a": "A named waiter with ID, told to you in advance."
+    },
+    {
+      "q": "Will they sign for parcels?",
+      "a": "Yes."
+    },
+    {
+      "q": "Will they let the plumber in?",
+      "a": "Yes, if you have named them. Nobody else gets in."
+    },
+    {
+      "q": "Can they decide about the repair?",
+      "a": "No. They'll tell you what's said and you decide."
+    },
+    {
+      "q": "How much notice do you need?",
+      "a": "At least 24 hours."
+    },
+    {
+      "q": "Can I cancel?",
+      "a": "Full refund up to 24 hours before. None after that."
+    },
+    {
+      "q": "Where do you go?",
+      "a": "Your address, within 30 miles of us."
+    }
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#D6EBC8"
+  },
+  "photography_direction": "Colourful premium 3D studio render of a folding chair with a clipboard on a seamless pale green backdrop. No faces, no hands. One small spiral \"O\" logo mark.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render of a folding chair in sage green with a clipboard resting on the seat, seamless pale green backdrop, soft studio light, no faces. One small spiral 'O' logo mark.",
+    "detail": "Close-up 3D render of a clipboard with a blank form and a pen on a chair seat, green background, shallow depth of field, no faces. One small spiral 'O' logo mark.",
+    "in_use": "3D render of a folding chair and clipboard beside a front door with a parcel on the mat, pastel palette, no people, no faces. One small spiral 'O' logo mark.",
+    "campaign": "Premium 3D render of three folding chairs in green, orange and cream with clipboards, on a pale green backdrop, editorial still life, no faces. One small spiral 'O' logo mark."
+  },
+  "related": [
+    "someone-to-queue",
+    "someone-to-hold",
+    "borrow-box"
+  ],
+  "packages": [
+    {
+      "id": "WAIT-HALF",
+      "name": "Half day",
+      "price": 45,
+      "hours": 4,
+      "note": "4 hours."
+    },
+    {
+      "id": "WAIT-FULL",
+      "name": "Full day",
+      "price": 80,
+      "hours": 10,
+      "note": "8 to 6."
+    }
+  ],
+  "slots": [
+    "08:00",
+    "12:00"
+  ],
+  "days": "Monday to Saturday",
+  "will_not": [
+    "Let anyone in who you have not named",
+    "Make decisions about repairs"
+  ],
+  "will_not_source": "business.json services.someone-to-wait-in.will_not"
+}

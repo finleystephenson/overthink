@@ -1,0 +1,312 @@
+{
+  "id": "daypack",
+  "code": "PACK",
+  "name": "The Daypack",
+  "category": "carry",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A backpack.",
+  "summary": "A backpack, 20 L, with a front pouch and a side bottle holder built in, and rails on the front for a laptop sleeve. Water-resistant. 60-month warranty. £129.",
+  "concept": "A plain backpack with a front pouch clipped on and a bottle holder sewn into the side. Two vertical rails on the front take a laptop sleeve. It has one main compartment.",
+  "why_it_exists": "Most bags make you carry a bottle and small things loose. This one has a pouch and a bottle holder already on it.",
+  "target_customer": "Commuters and walkers who carry the same few things every day.",
+  "physical": {
+    "form": "A rounded rectangular backpack with one zipped main compartment, a padded back and two vertical rails on the front, each 24 mm wide with 12 slots.",
+    "materials": [
+      "Recycled polyester, water-resistant coated",
+      "Closed-cell foam back panel with air mesh",
+      "Webbing straps and nylon buckles",
+      "Moulded polymer rails",
+      "Metal zips"
+    ],
+    "dimensions": "44 x 29 x 15 cm (20 L)",
+    "weight": "710 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-PACK",
+      "name": "20 L",
+      "options": {},
+      "price": 129,
+      "stock": 3,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It comes with a front pouch and a side bottle holder, so your keys and a bottle have a place.",
+    "The two rails on the front take a laptop sleeve, which is sold separately.",
+    "The fabric is recycled and water-resistant, so it copes with a rainy walk to work.",
+    "The main compartment opens with one long zip, so you can see everything at once.",
+    "The padded back keeps it comfortable and stops the contents digging in.",
+    "It has a 60-month warranty, which is five years of us standing behind it."
+  ],
+  "arrives": "The bag is folded flat into a recycled-paper bag with a card hangtag, with no plastic wrap. A Laptop Sleeve, if you ordered one, comes in its own paper sleeve. A folded guide inside shows how to clip it onto the rails.",
+  "specs": [
+    [
+      "Size",
+      "44 x 29 x 15 cm (height x width x depth)"
+    ],
+    [
+      "Weight",
+      "710 g"
+    ],
+    [
+      "Made of",
+      "Recycled polyester with a water-resistant coating, foam and air-mesh back panel, nylon buckles, metal zips"
+    ],
+    [
+      "Colour",
+      "Off-white with lilac and sunflower yellow accents"
+    ],
+    [
+      "Capacity",
+      "20 L, one zipped main compartment"
+    ],
+    [
+      "Laptop pocket",
+      "Padded, up to 14-inch. A 16-inch laptop does not fit."
+    ],
+    [
+      "Pockets",
+      "Front pouch 13 x 10 x 4 cm (holds a Blip, keys and a wallet). Side bottle holder up to 75 mm wide."
+    ],
+    [
+      "Rails",
+      "Two on the front, 24 mm wide, 12 slots each, 140 mm apart. 1.5 kg per module."
+    ],
+    [
+      "Care and limits",
+      "Sheds light rain, not waterproof. Maximum load 9 kg. Wipe clean, do not machine wash."
+    ]
+  ],
+  "how_it_works": "The front pouch is already clipped to the rails. To add a Laptop Sleeve, push its two clips into the rail slots until they click. To remove one, lift the tab and pull.",
+  "in_the_box": [
+    "The Daypack with its front pouch and side bottle holder",
+    "Two rail cover strips",
+    "A folded care and rail guide"
+  ],
+  "accessories": [
+    {
+      "sku": "OT-PACK-SLV",
+      "name": "Laptop Sleeve",
+      "kind": "accessory",
+      "price": 24,
+      "stock": 70,
+      "tagline": "A padded sleeve for a laptop.",
+      "description": "A padded sleeve for a laptop up to 14 inches. It clips on to the Daypack's front rails or sits inside the main compartment. A 16-inch laptop does not fit it.",
+      "image": "img/branded/acc-daypack-sleeve.jpg",
+      "fits": [
+        "daypack"
+      ],
+      "specs": [
+        [
+          "Size",
+          "Outside: 35 x 25 x 2.5 cm"
+        ],
+        [
+          "Inside size",
+          "33 x 23.5 cm"
+        ],
+        [
+          "Largest laptop",
+          "14-inch (about 32 x 23 cm and up to 2 cm thick). A 16-inch laptop does not fit."
+        ],
+        [
+          "Weight",
+          "140 g"
+        ],
+        [
+          "Made of",
+          "Recycled polyester outer, foam padding, nylon zip"
+        ],
+        [
+          "Colour",
+          "Off-white with a pink zip, orange zip pull and a sky blue loop"
+        ],
+        [
+          "Fits",
+          "The Daypack's front rails and main compartment. Also works on its own as a sleeve."
+        ],
+        [
+          "In the pack",
+          "1 sleeve"
+        ],
+        [
+          "Care",
+          "Wipe with a damp cloth. Do not machine wash."
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Laptop Sleeve",
+      "works": true,
+      "note": "It fits a laptop up to 14-inch."
+    },
+    {
+      "with": "16-inch laptop",
+      "works": false,
+      "note": "It does not fit the Daypack or the Laptop Sleeve."
+    },
+    {
+      "with": "Front pouch",
+      "works": true,
+      "note": "It comes with the bag. It holds a Blip, keys and a wallet."
+    },
+    {
+      "with": "Side bottle holder",
+      "works": true,
+      "note": "It comes with the bag. It holds bottles up to 75 mm wide."
+    },
+    {
+      "with": "blip",
+      "works": true,
+      "note": "It fits the front pouch. It does not fit the side bottle holder."
+    },
+    {
+      "with": "boombox-mini",
+      "works": false,
+      "note": "It is too big for the front pouch. It fits in the main compartment."
+    }
+  ],
+  "packaging": "Folded in a recycled-paper bag with a card hangtag. No plastic wrap. The Laptop Sleeve comes in a paper sleeve.",
+  "warranty": {
+    "months": 60,
+    "summary": "It has a 60-month warranty against faults in how it was made, including zips, seams, buckles and rails. Normal wear, overloading and repairs by anyone else are not covered. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Wipe with a damp cloth and mild soap. Do not machine wash.",
+    "Air dry away from direct heat.",
+    "Do not re-proof with solvent-based sprays.",
+    "Do not exceed 9 kg.",
+    "Rub a stiff zip with a candle, not oil."
+  ],
+  "safety": [
+    "It is not waterproof. Keep electronics in the inner pocket in heavy rain.",
+    "Each rail holds 1.5 kg. Do not hang heavy items from them.",
+    "Do not carry more than 9 kg."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unused and in its box. See Returns."
+  },
+  "fix_club": {
+    "eligible": true,
+    "repairs": [
+      {
+        "code": "PACK-ZIP",
+        "name": "Zip replacement",
+        "price": 25
+      },
+      {
+        "code": "PACK-BUCKLE",
+        "name": "Buckle fitted",
+        "price": 8
+      }
+    ]
+  },
+  "page": {
+    "headline": "A backpack with front rails",
+    "intro": "A backpack.",
+    "sections": [
+      {
+        "title": "One size",
+        "body": "20 L, £129. It holds a laptop up to 14-inch, a bottle and lunch. A 16-inch laptop does not fit."
+      },
+      {
+        "title": "Pouch and bottle holder",
+        "body": "A front pouch and a side bottle holder come with the bag. The rails on the front take a Laptop Sleeve if you want one."
+      },
+      {
+        "title": "Fabric",
+        "body": "It is recycled polyester with a water-resistant coating. It sheds light rain, but it is not waterproof."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "What size is it?",
+      "a": "20 L. The laptop pocket takes up to 14-inch."
+    },
+    {
+      "q": "Will a 16-inch laptop fit?",
+      "a": "No."
+    },
+    {
+      "q": "Is it waterproof?",
+      "a": "No. It sheds light rain. Keep electronics in the inner pocket in heavy rain."
+    },
+    {
+      "q": "What fits in the front pouch?",
+      "a": "A Blip, keys and a wallet. Boombox Mini is too big. The pouch comes with the bag."
+    },
+    {
+      "q": "Does it come with a bottle holder?",
+      "a": "Yes. A bottle holder is sewn into the side. It takes a bottle up to 75 mm wide."
+    },
+    {
+      "q": "How much can each rail hold?",
+      "a": "1.5 kg per add-on."
+    },
+    {
+      "q": "What does the warranty cover?",
+      "a": "Faults in how it was made for 60 months, including zips, seams, buckles and rails."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "A zip is stiff.",
+      "steps": [
+        "Clear any fabric or dirt from the teeth.",
+        "Rub a candle along the teeth. Do not use oil."
+      ],
+      "if_unresolved": "Open a support case. A new zip is £25 through The Fix Club, or free if it is a warranty fault."
+    },
+    {
+      "problem": "The Laptop Sleeve or front pouch will not stay on the rails.",
+      "steps": [
+        "Push both clips fully into slots on the same row until they click.",
+        "Do not load an add-on over 1.5 kg."
+      ],
+      "if_unresolved": "Open a support case."
+    },
+    {
+      "problem": "A buckle has broken.",
+      "steps": [
+        "Stop using that strap.",
+        "The Fix Club fits a new buckle for £8."
+      ],
+      "if_unresolved": "If it broke under normal use within 60 months, it is covered. Open a support case."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "blip",
+    "boombox-mini",
+    "other-umbrella"
+  ],
+  "image": {
+    "file": "img/daypack.jpg",
+    "sweep": "#E4DEF5"
+  },
+  "photography_direction": "Sculptural and calm. The front pouch and the side bottle holder are part of the bag. Show the bag as it ships.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated lilac and sunflower yellow accents, soft studio light, pale pale lilac single-colour backdrop, gentle contact shadow. A rounded backpack with two vertical rails on the front, one small zipped pouch clipped to them, standing upright, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated lilac and sunflower yellow accents, soft studio light, pale pale lilac single-colour backdrop, gentle contact shadow. Close-up of the two front rails with a pouch clip pressed into the slots. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated lilac and sunflower yellow accents, soft studio light, pale pale lilac single-colour backdrop, gentle contact shadow. A rounded backpack with two vertical rails on the front, one small zipped pouch clipped to them, standing upright, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated lilac and sunflower yellow accents, soft studio light, pale pale lilac single-colour backdrop, gentle contact shadow. A folded Daypack in a recycled-paper bag with a card hangtag. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated lilac and sunflower yellow accents, soft studio light, pale pale lilac single-colour backdrop, gentle contact shadow. A Daypack on a pale bench with a bottle in the side holder. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated lilac and sunflower yellow accents, soft studio light, pale pale lilac single-colour backdrop, gentle contact shadow. One backpack centred with generous empty space around it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

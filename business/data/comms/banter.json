@@ -1,0 +1,1597 @@
+{
+ "_note": "Banter and everyday chat for #random and #general, built from parts. people[id].obs: [topic, text] about ordinary office life, with slots {yday} {week} {top} {dayname} {month} {weather} (facts of the day). replies[person][topic]: answers that fit the topic. habits: a person's sign-off tics. clauses: a fact of the day tacked on. weather: by month. Banter picks without replacement within a month.",
+ "people": {
+  "S-01": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "The kettle has been on since nine, and I am not ashamed to say it is the heart of this company."
+    },
+    {
+     "topic": "kettle",
+     "text": "I have bought a new tin of tea. It is on the shelf above the sink, and it is for everyone, even Mr Scrooge."
+    },
+    {
+     "topic": "kettle",
+     "text": "If the kettle is empty, please do fill it for the next person. It is the oldest rule we have and the best."
+    },
+    {
+     "topic": "lunch",
+     "text": "I have brought a pie for lunch. It is far too large for one man, and I mean that as an invitation."
+    },
+    {
+     "topic": "lunch",
+     "text": "Lunch is a sacred thing. Please take a proper hour, and do not eat at your desk if you can help it."
+    },
+    {
+     "topic": "lunch",
+     "text": "The baker's had a tray of iced buns this morning. I bought six. They will not last, so be quick."
+    },
+    {
+     "topic": "weather",
+     "text": "It is a {weather} {dayname}, and I find that a warm room and a good team put right most things.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "weather",
+     "text": "{weather} out there. Wrap up if you are going to the post box, and borrow my scarf if you need to.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "post",
+     "text": "The post has come, and there is a postcard from a customer who says the sock changed her mornings. I have pinned it up."
+    },
+    {
+     "topic": "post",
+     "text": "Another good letter this morning. It makes the work feel worth it, and it is only a Tuesday-sized letter."
+    },
+    {
+     "topic": "customer",
+     "text": "We took {yday_n} yesterday. Every one is a person who chose us, and I like to remember that."
+    },
+    {
+     "topic": "customer",
+     "text": "I had a kind email from a customer today. I shall not say which, but I read it twice and smiled."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is the favourite this week. Do give it a fond look as you pass the shelf."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}, which is a perfectly good day for doing things properly and going home on time."
+    },
+    {
+     "topic": "plants",
+     "text": "I have put a little plant on the windowsill. It looks lonely, so please say good morning to it."
+    },
+    {
+     "topic": null,
+     "text": "The office is looking very well this {month}. Thank you all for keeping it so tidy."
+    },
+    {
+     "topic": "sock",
+     "text": "There is a pile of Spare Socks by the door, waiting to go out. I have never seen a happier pile."
+    },
+    {
+     "topic": "stockroom",
+     "text": "I was down in the stockroom earlier. Mole has made it very neat. I told him so, and he went pink."
+    },
+    {
+     "topic": "clock",
+     "text": "We have been at this {month} work a long time now, and I think we are getting rather good at it."
+    },
+    {
+     "topic": "lunch",
+     "text": "I have a cake in the cupboard. It is not for any occasion. That is the best sort of cake."
+    }
+   ],
+   "habits": [
+    "That is all. Thank you, everyone.",
+    "Do help yourselves.",
+    "Splendid.",
+    "I mean that.",
+    "Now, back to it.",
+    "Bless you all."
+   ]
+  },
+  "S-02": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "The kettle was left on again. It boiled for twenty minutes and no one drank any of it. I have turned it off."
+    },
+    {
+     "topic": "kettle",
+     "text": "Tea bags are used once. Twice is a luxury, and thrice is a scandal, but I will not name names."
+    },
+    {
+     "topic": "lunch",
+     "text": "I have brought bread and cheese. It costs very little, and it tastes of nothing wasted."
+    },
+    {
+     "topic": null,
+     "text": "Someone bought a pastry from the baker's on the company's tab. I do not say who. I only say I have seen the slip."
+    },
+    {
+     "topic": "weather",
+     "text": "It is {weather} today. The heating is on. I should like to see it off by three.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "weather",
+     "text": "Another {weather} {dayname}. A good day for staying indoors and counting things."
+    },
+    {
+     "topic": "post",
+     "text": "The post has brought two bills and no letters of thanks. That is the usual ratio."
+    },
+    {
+     "topic": null,
+     "text": "A stamp costs money. Please do not use two when one will do."
+    },
+    {
+     "topic": "customer",
+     "text": "Yesterday's orders came to {yday_n}. I have counted them twice, to be sure, which cost nothing."
+    },
+    {
+     "topic": null,
+     "text": "A customer asked for a free gift. I said the gift was the product. It was not well received."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is selling best this week. It had better, for what it cost us to stock."
+    },
+    {
+     "topic": "clock",
+     "text": "The month of {month} is a month like any other. It has the same number of pennies in it."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}. The rent is due and does not care what day it is."
+    },
+    {
+     "topic": null,
+     "text": "The stockroom light was on at six. A light left on is a coin left on a table."
+    },
+    {
+     "topic": "plants",
+     "text": "The new plant on the windowsill costs nothing to feed but water. I have approved it, on those terms."
+    },
+    {
+     "topic": "sock",
+     "text": "The Spare Sock sells for seven pounds and costs us far less. I find that a most agreeable fact."
+    },
+    {
+     "topic": null,
+     "text": "I have found a coat button in the drawer. I have put it in the lost-and-found jar. It may be worth something."
+    },
+    {
+     "topic": null,
+     "text": "The biscuit tin is lighter than it was on Monday. I have not complained. I have only noticed."
+    }
+   ],
+   "habits": [
+    "That is all.",
+    "I do not exaggerate.",
+    "Counted, and entered.",
+    "Mark it.",
+    "Waste not.",
+    "I have said my piece."
+   ]
+  },
+  "S-03": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "I am sorry to say the kettle is making a noise. I think it wants descaling. I will do it at lunch if no one minds."
+    },
+    {
+     "topic": null,
+     "text": "I brought in a spare mug in case a visitor comes. It is on the shelf, with a small label."
+    },
+    {
+     "topic": "lunch",
+     "text": "I have a sandwich from home. It is not one of ours, I'm afraid. I hope that isn't disloyal."
+    },
+    {
+     "topic": "lunch",
+     "text": "It is a little cold for the walk to the baker's, so I'll eat at my desk. I'll put the crumbs in the bin."
+    },
+    {
+     "topic": "weather",
+     "text": "It is {weather} this {dayname} and I did not bring an umbrella. I hope it holds off for the walk home."
+    },
+    {
+     "topic": "weather",
+     "text": "I am wearing two jumpers. It is rather {weather} in the corner by the window.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "post",
+     "text": "There is a letter for Mr Scrooge in the tray. I've put it where he will see it, but not so he is startled."
+    },
+    {
+     "topic": null,
+     "text": "The postman wished me a good morning. I do hope I said it back. I believe I did."
+    },
+    {
+     "topic": "customer",
+     "text": "I entered {yday_n} for yesterday. I hope I have not made an error. I checked, in any case."
+    },
+    {
+     "topic": "customer",
+     "text": "A customer thanked us for a very small thing today. It made my morning in a way I cannot quite explain."
+    },
+    {
+     "topic": "products",
+     "text": "{top} did best this week, according to my sheets. I have underlined it in blue."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}. I have the {month} figures to do, and I am glad of it, in a way."
+    },
+    {
+     "topic": null,
+     "text": "The clock in the hall says ten past, and my watch says nine past. I am not sure whom to trust."
+    },
+    {
+     "topic": null,
+     "text": "I went down to the stockroom to ask Mole a question. He had already answered it before I asked, which was kind."
+    },
+    {
+     "topic": "plants",
+     "text": "The little plant has a new leaf. I would not like to make a fuss, but it seems to be doing well."
+    },
+    {
+     "topic": "sock",
+     "text": "I have counted the Spare Socks on the shelf, and the number is the number it should be. Which is a pleasant thing."
+    },
+    {
+     "topic": null,
+     "text": "I put the pencils in order this morning. I hope no one minds. They were all lying about."
+    },
+    {
+     "topic": null,
+     "text": "There was a crumb in the ledger today. I'm sorry. It has been removed with a clean cloth."
+    }
+   ],
+   "habits": [
+    "I hope that's all right.",
+    "I'm sorry to mention it.",
+    "Thank you for reading.",
+    "If I may.",
+    "Sorry for the bother."
+   ]
+  },
+  "S-04": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "The kettle boiled at 9:02. It was ready at 9:03. I record this only because it was exact.",
+     "lo": 550
+    },
+    {
+     "topic": "kettle",
+     "text": "Tea break began at 10:30 and finished at 10:44. A fourteen-minute interval is correct.",
+     "lo": 650
+    },
+    {
+     "topic": "lunch",
+     "text": "Lunch was at 12:00 as scheduled. The sandwich was consumed in nine minutes. I walked for twenty.",
+     "lo": 760
+    },
+    {
+     "topic": "lunch",
+     "text": "The baker's closed at 13:00 sharp. I arrived at 12:58. A close thing, and I do not like close things.",
+     "lo": 790
+    },
+    {
+     "topic": null,
+     "text": "{weather}. The carrier collects at 15:30 and the parcels are at the door by 15:20.",
+     "hi": 900
+    },
+    {
+     "topic": null,
+     "text": "{dayname}: loading took 11 minutes yesterday, which is two more than normal. I have written it down.",
+     "lo": 0
+    },
+    {
+     "topic": "post",
+     "text": "The post was delivered at 8:47 today. Yesterday it was 8:52. I am keeping a log."
+    },
+    {
+     "topic": "returned_parcel",
+     "text": "A parcel came back today with a note on it. It had been to the right house and the wrong door."
+    },
+    {
+     "topic": "customer",
+     "text": "Yesterday: {yday_n}. The last parcel left at 15:42. I have written the time in the log."
+    },
+    {
+     "topic": null,
+     "text": "A customer telephoned to ask when the van would come. I told them the minute. They said that was unusual."
+    },
+    {
+     "topic": "products",
+     "text": "{top} was the most-packed item this week. I can pack it in four minutes."
+    },
+    {
+     "topic": null,
+     "text": "The hall clock was two minutes slow. I have corrected it. Please do not touch it."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}. The week has seven days and I have used each of them well."
+    },
+    {
+     "topic": "stockroom",
+     "text": "Stockroom shelves were tidy at 8:40. By 8:55 they had been tidied again. Mole is thorough."
+    },
+    {
+     "topic": null,
+     "text": "The tape gun has been moved. I would like it back at the bench, on the left, at the usual angle."
+    },
+    {
+     "topic": "sock",
+     "text": "There are 34 Spare Socks ready for dispatch. I have counted them, and then counted them again."
+    },
+    {
+     "topic": "plants",
+     "text": "The plant on the windowsill leans toward the light by about four degrees. I have turned the pot a quarter."
+    },
+    {
+     "topic": null,
+     "text": "I walked to work in twenty-three minutes today. One minute less than yesterday. I will not explain further."
+    }
+   ],
+   "habits": [
+    "Recorded.",
+    "To the minute.",
+    "Noted in the log.",
+    "Exactly so.",
+    "That is all.",
+    "On time."
+   ]
+  },
+  "S-05": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "I made a pot of tea and left it on the table. It is a bit strong. I hope it is all right."
+    },
+    {
+     "topic": "kettle",
+     "text": "The kettle makes a nice sound when it starts. It is like a small bird. I like that."
+    },
+    {
+     "topic": "lunch",
+     "text": "I have brought a boiled egg. I peeled it this morning. It is a good egg."
+    },
+    {
+     "topic": "lunch",
+     "text": "The baker's gave me a bun with too much sugar on it. I have saved a piece for anyone who wants one."
+    },
+    {
+     "topic": "weather",
+     "text": "It is {weather} today. I like the sound of it on the roof when I am down in the stockroom."
+    },
+    {
+     "topic": "weather",
+     "text": "{weather} this {dayname}. I wore my thick socks. They are not ours. They are my own.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "returned_parcel",
+     "text": "A parcel came back from the carrier today, a bit squashed. I flattened the box and put it in the pile."
+    },
+    {
+     "topic": null,
+     "text": "The postman's dog came in and sat by the door. He did not want anything. I gave him half a biscuit."
+    },
+    {
+     "topic": "customer",
+     "text": "I packed {yday_n} yesterday. It was a good kind of tired."
+    },
+    {
+     "topic": "customer",
+     "text": "A customer sent a drawing of the Spare Sock. I have put it on the wall by the shelf, if anyone wants to look."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is on the front shelf this week. I put a little label by it, in pencil."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}. I like {dayname}s. They are not too busy and not too quiet."
+    },
+    {
+     "topic": "stockroom",
+     "text": "I tidied the shelves again. I think I like it best when everything is in its place, even the odd things."
+    },
+    {
+     "topic": null,
+     "text": "There is a spider behind the tape shelf. She has made a very good web. I have left her to it."
+    },
+    {
+     "topic": "sock",
+     "text": "The Spare Sock boxes are stacked in tens. I like them stacked in tens. They look like a little wall."
+    },
+    {
+     "topic": "plants",
+     "text": "The little plant on the sill has a new leaf. I gave it some water, but only a bit."
+    },
+    {
+     "topic": null,
+     "text": "I found a nice mug at the back of the cupboard. I washed it and put it by the kettle."
+    },
+    {
+     "topic": "clock",
+     "text": "I always think the afternoon is the loveliest bit, when it goes quiet and the light comes in low."
+    }
+   ],
+   "habits": [
+    "I hope that's all right.",
+    "That's all.",
+    "Thank you."
+   ]
+  },
+  "S-06": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "Whoever is responsible for the state of the kettle knows who they are. I will say no more, this once."
+    },
+    {
+     "topic": "kettle",
+     "text": "A reminder that the kettle is for everyone and the washing up is for everyone too."
+    },
+    {
+     "topic": "lunch",
+     "text": "Lunch is at one. I would like everyone to eat something that is not a biscuit.",
+     "hi": 770
+    },
+    {
+     "topic": "lunch",
+     "text": "I have made a stew and brought enough for three. Sam, Esther, that means you."
+    },
+    {
+     "topic": "weather",
+     "text": "It is {weather} and I want everyone to have a hot drink before the afternoon queue.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "weather",
+     "text": "{weather} this {dayname}. Coats on the pegs, not the chairs, please.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "post",
+     "text": "The post has come. I have put the customer letters on my desk and the bills on Mr Scrooge's, as is right."
+    },
+    {
+     "topic": "returned_parcel",
+     "text": "A parcel came back unopened this morning. I have written to the customer, kindly but clearly."
+    },
+    {
+     "topic": "customer",
+     "text": "Yesterday we had {yday_n}. The inbox is the length it should be, and I would like it to stay that way."
+    },
+    {
+     "topic": null,
+     "text": "A customer asked for the manager, then for the manager's manager. They got Mr Fezziwig, who gave them tea."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is the one people are asking about most this week. Sam, Esther, please know the answers."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}. The next meeting is at ten, and it starts at ten."
+    },
+    {
+     "topic": "clock",
+     "text": "I would like all desks clear by five on {dayname}. It makes Monday kinder."
+    },
+    {
+     "topic": null,
+     "text": "I have asked Mole to leave one clear aisle in the stockroom. The boxes had begun to wander."
+    },
+    {
+     "topic": null,
+     "text": "The Spare Sock page gets a good many questions. I have written the answers down so we say the same thing each time."
+    },
+    {
+     "topic": "plants",
+     "text": "The plant on the windowsill is doing better than the rest of us. I have decided to take that as encouragement."
+    },
+    {
+     "topic": null,
+     "text": "There is a pile of lost-property gloves in my drawer. Claim yours or they go to the charity shop on Friday."
+    },
+    {
+     "topic": null,
+     "text": "I would like someone to tell me where the good scissors have gone. I will wait."
+    }
+   ],
+   "habits": [
+    "That is all.",
+    "Thank you.",
+    "Please take note.",
+    "I mean it kindly.",
+    "Carry on.",
+    "I'll say no more."
+   ]
+  },
+  "S-07": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "The kettle is boiling with a noise like a donkey in a tin bath, but it does produce the tea, so I forgive it."
+    },
+    {
+     "topic": "kettle",
+     "text": "Made tea for the whole office and gave Mr Scrooge the chipped mug. He never notices. It is like a game."
+    },
+    {
+     "topic": "lunch",
+     "text": "I had a pie for lunch that was as big as a hat. I mean a small hat. Possibly a bonnet."
+    },
+    {
+     "topic": "lunch",
+     "text": "The baker's pasties are the best thing in the county, and the second-best thing is looking at the baker's pasties."
+    },
+    {
+     "topic": "weather",
+     "text": "It is {weather} out there, wet as a haddock's holiday. I came in with half the street on my coat."
+    },
+    {
+     "topic": "weather",
+     "text": "A {weather} {dayname}, and a cat on the doorstep looking as miserable as a duck in a dry well."
+    },
+    {
+     "topic": "post",
+     "text": "The post came in a heap as high as a plum duff. I sorted it in a minute and a half and felt very grand."
+    },
+    {
+     "topic": "returned_parcel",
+     "text": "A parcel came back this morning with 'not known at this address' on it, which is a hard thing to be told about your own address."
+    },
+    {
+     "topic": "customer",
+     "text": "{yday_n} yesterday, as busy as a bee in a bonnet shop. Lovely."
+    },
+    {
+     "topic": null,
+     "text": "A customer asked me whether the Indoor Helmet works outdoors. I told them it works wherever there is a head."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is flying out this week like a pigeon from a pie, and I am glad to see it go."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}, and I feel as lively as a cricket on a hot brick."
+    },
+    {
+     "topic": null,
+     "text": "My watch has stopped. I have decided it is a sign. Of what, I have not worked out."
+    },
+    {
+     "topic": "stockroom",
+     "text": "Mole has made the stockroom as tidy as a bishop's bedroom. I had to ask him where anything was."
+    },
+    {
+     "topic": "sock",
+     "text": "The Spare Sock pile by the door has grown like a mushroom. A very tidy mushroom, mind."
+    },
+    {
+     "topic": "plants",
+     "text": "The windowsill plant is a handsome thing, taller than it was and prouder than it ought to be."
+    },
+    {
+     "topic": "lunch",
+     "text": "I could eat a horse. I won't, but I could. A sandwich will do, if it is one of ours."
+    },
+    {
+     "topic": null,
+     "text": "I saw a postman with a moustache like a hairbrush. I felt he deserved a mention."
+    }
+   ],
+   "habits": [
+    "Lovely stuff.",
+    "Fair play.",
+    "Cheers all.",
+    "Right you are."
+   ]
+  },
+  "S-08": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "I hope nobody minds, but I have descaled the kettle. It looked a bit tired."
+    },
+    {
+     "topic": "kettle",
+     "text": "I made tea for the queue and left a cup on Mrs Hudson's desk. I hope that is all right."
+    },
+    {
+     "topic": "lunch",
+     "text": "I brought a small salad. It is rather plain. I hope it does not smell of onions."
+    },
+    {
+     "topic": "lunch",
+     "text": "Thank you to whoever left the bun on my desk. I do not know who it was, but it was very kind."
+    },
+    {
+     "topic": "weather",
+     "text": "It is {weather} today. I hope everyone got in without too much trouble."
+    },
+    {
+     "topic": "weather",
+     "text": "{weather} this {dayname}. I'm told it may be better by the weekend, although I always hope for too much.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "topic": "post",
+     "text": "A letter came for me in the post, which was a surprise. It was from a customer who had written a thank-you."
+    },
+    {
+     "topic": "returned_parcel",
+     "text": "A parcel came back to us today. I hope the customer is all right. I've put a note on the case."
+    },
+    {
+     "topic": "customer",
+     "text": "Yesterday there were {yday_n}, so the queue is a little longer than usual. I'm managing, I think."
+    },
+    {
+     "topic": "customer",
+     "text": "A customer was very nice to me on the phone today. I'm not used to it, but I enjoyed it."
+    },
+    {
+     "topic": "products",
+     "text": "{top} has had the most questions this week. I have started a small list of the answers."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}. I feel I have not quite got the week yet, but I am trying."
+    },
+    {
+     "topic": null,
+     "text": "I took a box down to the stockroom and Mole took it from me before I could say anything. He is very helpful."
+    },
+    {
+     "topic": "sock",
+     "text": "I have been reading about the Spare Sock. It is more thoughtful than I had thought."
+    },
+    {
+     "topic": "plants",
+     "text": "I watered the windowsill plant. I hope I did not give it too much."
+    },
+    {
+     "topic": null,
+     "text": "Someone left a flask in the kitchen. It is blue. If it is yours, it is on the second shelf."
+    },
+    {
+     "topic": null,
+     "text": "I stayed late on Tuesday, and I noticed how quiet the office is in the evening. I rather liked it."
+    },
+    {
+     "topic": null,
+     "text": "I'm sorry to be a bother, but has anyone seen the stapler? I'm sure I had it a minute ago."
+    }
+   ],
+   "habits": []
+  },
+  "S-09": {
+   "obs": [
+    {
+     "topic": null,
+     "text": "Kettle supplies, as of this morning: tea, 40 bags; milk, one pint; sugar, half a bag. I have written it on the list."
+    },
+    {
+     "topic": null,
+     "text": "We are low on mugs. I have put two on my list, to be bought in the next order."
+    },
+    {
+     "topic": "lunch",
+     "text": "Supplies for lunch: bread, cheese, two apples. I plan ahead. It is a habit from long ago."
+    },
+    {
+     "topic": "lunch",
+     "text": "I have put aside a loaf for the week. It is wrapped in a cloth. Please do not use the end."
+    },
+    {
+     "topic": null,
+     "text": "It is {weather} today. I have checked the roof for leaks, and there is one, small, which I have marked."
+    },
+    {
+     "topic": null,
+     "text": "{weather} {dayname}. The stockroom door needs a better seal. I have added it to the list."
+    },
+    {
+     "topic": null,
+     "text": "The post brought a catalogue of tape. I have read it with great interest and marked three items."
+    },
+    {
+     "topic": "post",
+     "text": "A parcel came back. I have put it on the shelf with a label, so we know what it is and where it was."
+    },
+    {
+     "topic": "customer",
+     "text": "Yesterday's {yday_n} will want replacing on the shelves, and I have a list for it."
+    },
+    {
+     "topic": null,
+     "text": "A customer asked for a spare part we do not make. I have written it down, in case we should."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is the best-seller this week. I have checked how many we have left, and written down the number."
+    },
+    {
+     "topic": null,
+     "text": "It is {dayname}. I make a list of what to buy every {dayname}, and today's list is a long one."
+    },
+    {
+     "topic": null,
+     "text": "I have inspected the stockroom shelves and made a list of what is running low. It has eleven items."
+    },
+    {
+     "topic": null,
+     "text": "Spare tape, spare labels, spare string. Always have spare string. That is my rule."
+    },
+    {
+     "topic": "sock",
+     "text": "The Spare Sock is the one product I never worry about. It is small, it keeps, and it always sells."
+    },
+    {
+     "topic": null,
+     "text": "The plant on the windowsill needs a bigger pot. I have added a pot to the list."
+    },
+    {
+     "topic": null,
+     "text": "I have written down everything I need before winter: boxes, tape, a stove, candles. I like to be ready."
+    },
+    {
+     "topic": null,
+     "text": "If the van breaks down, I know where we can find a spare. I always know where the spare is."
+    }
+   ],
+   "habits": [
+    "Added to the list.",
+    "Noted for the order.",
+    "I like to be ready.",
+    "Written down.",
+    "One spare, always.",
+    "That is all."
+   ]
+  },
+  "S-10": {
+   "obs": [
+    {
+     "topic": "kettle",
+     "text": "I have had the most wonderful idea about the kettle. I will tell you when I have worked out what it is."
+    },
+    {
+     "topic": "kettle",
+     "text": "Could we get a kettle that plays a tune when it boils? I think it would be marvellous for morale."
+    },
+    {
+     "topic": "lunch",
+     "text": "I've read about a new kind of lunch box and I think it will change everything. I'll bring one in."
+    },
+    {
+     "topic": "lunch",
+     "text": "Anyone want to try a new sandwich filling I invented in the shower? It involves pickles. Possibly jam."
+    },
+    {
+     "topic": "weather",
+     "text": "It is {weather} today, which is exactly the right weather for a new project. I have several."
+    },
+    {
+     "topic": "weather",
+     "text": "{weather} {dayname}! I think it would be a splendid day for a photograph of the Spare Sock in the rain."
+    },
+    {
+     "topic": null,
+     "text": "The post has brought a magazine about kites. I've read it from cover to cover and I'm going to learn."
+    },
+    {
+     "topic": null,
+     "text": "A parcel came back to us with a lovely stamp on it. I have taken a photograph. It might make a post."
+    },
+    {
+     "topic": "customer",
+     "text": "We had {yday_n} yesterday! Imagine if it was double! I have a plan for double."
+    },
+    {
+     "topic": "customer",
+     "text": "A customer wrote us a poem about the Spare Sock. It rhymes. I'm having it framed."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is the star this week. I'm thinking of a small film about it. Perhaps a very small film."
+    },
+    {
+     "topic": "clock",
+     "text": "It is {dayname}, and I feel a new craze coming on. I won't say which until I know."
+    },
+    {
+     "topic": null,
+     "text": "I woke up with an idea about a newsletter. Then I lost it. It will come back. They always do."
+    },
+    {
+     "topic": "stockroom",
+     "text": "I went to the stockroom and photographed the shelves. They look like art, but with boxes."
+    },
+    {
+     "topic": "sock",
+     "text": "I think the Spare Sock deserves its own theme tune. Does anyone play the accordion?"
+    },
+    {
+     "topic": "plants",
+     "text": "I have bought a second plant for the windowsill. I think we are building a small jungle. Possibly a pocket one."
+    },
+    {
+     "topic": null,
+     "text": "I've decided I'm going to learn juggling. I've bought three oranges. Two are already gone."
+    },
+    {
+     "topic": null,
+     "text": "I am in the middle of reading about a craze for pressing flowers. I think we should do something. I don't know what."
+    }
+   ],
+   "habits": [
+    "More soon!",
+    "I'm so excited!",
+    "Possibly!",
+    "Hold that thought!",
+    "Isn't it marvellous?",
+    "Brilliant!"
+   ]
+  },
+  "S-11": {
+   "obs": [
+    {
+     "topic": null,
+     "text": "Mended a kettle. Not ours. Someone left it on the bench with a note."
+    },
+    {
+     "topic": "kettle",
+     "text": "Kettle is fine. I checked the element."
+    },
+    {
+     "topic": "lunch",
+     "text": "Lunch at the bench. Sandwich. Quiet."
+    },
+    {
+     "topic": "lunch",
+     "text": "The baker's pasty is good. I do not say that often."
+    },
+    {
+     "topic": "weather",
+     "text": "{weather}. The workshop stays warm. I like that."
+    },
+    {
+     "topic": null,
+     "text": "{dayname}, {weather}. Window handle is loose again. I'll tighten it."
+    },
+    {
+     "topic": "returned_parcel",
+     "text": "A parcel came back with a dent. Not a fault. Just a dent."
+    },
+    {
+     "topic": "post",
+     "text": "Post brought a part I was waiting for. Good."
+    },
+    {
+     "topic": "customer",
+     "text": "Yesterday: {yday_n}. Few returns. Good."
+    },
+    {
+     "topic": "customer",
+     "text": "A customer sent a photo of a repair. It was not ours, but the repair was neat."
+    },
+    {
+     "topic": "products",
+     "text": "{top} is the one I see most on the bench this week. It is a sound design."
+    },
+    {
+     "topic": null,
+     "text": "It is {dayname}. The bench is clear. I will find something to take apart."
+    },
+    {
+     "topic": null,
+     "text": "Stockroom shelf had a loose bracket. Fixed it. Took four minutes."
+    },
+    {
+     "topic": "sock",
+     "text": "Spare Sock needs no repair. Hard to improve."
+    },
+    {
+     "topic": "plants",
+     "text": "The plant on the sill is fine. It needs nothing. I admire that."
+    },
+    {
+     "topic": null,
+     "text": "Solder smells like a good morning. I do not say that to everyone."
+    },
+    {
+     "topic": null,
+     "text": "Biscuit tin is empty. I did not do it. I have a witness. The witness is a spider."
+    }
+   ],
+   "habits": [
+    "That is all.",
+    "Fine.",
+    "Done.",
+    "Noted.",
+    "Seen.",
+    "Good."
+   ]
+  }
+ },
+ "replies": {
+  "S-01": {
+   "kettle": [
+    "Quite so. It is a good kettle.",
+    "Thank you for looking after it.",
+    "Splendid. The kettle deserves it."
+   ],
+   "lunch": [
+    "A good lunch is half the afternoon. Do take your time.",
+    "That sounds delightful. Please save me a corner.",
+    "Capital. I will join you, if there is room at the table."
+   ],
+   "weather": [
+    "So it is. A warm room puts most things right.",
+    "Quite so. Do look after yourselves.",
+    "Indeed. Thank you for mentioning it."
+   ],
+   "post": [
+    "Thank you for sorting it. I'll read the letters after lunch, with a cup of tea.",
+    "A good letter makes the whole day. Please do put it on the wall.",
+    "Splendid. Leave it on my desk, and I'll write back myself."
+   ],
+   "customer": [
+    "That is a fine thing to hear. Thank you for telling us.",
+    "Our customers are very good to us. We must be good to them.",
+    "Wonderful. A little kindness goes a long way, in both directions."
+   ],
+   "products": [
+    "That is the sort of news I like. Thank you.",
+    "Good, good. And a small cheer for everyone who made it.",
+    "Quite so. Thank you for telling us."
+   ],
+   "clock": [
+    "Quite right. We have time for a decent day's work and a decent evening.",
+    "A good rule. I shall keep it.",
+    "Indeed. No need to hurry what can be done properly."
+   ],
+   "stockroom": [
+    "Mole does it beautifully. Please tell him I said so.",
+    "A tidy stockroom is a happy stockroom. Thank you all.",
+    "That is good to hear. I shall go down and have a look."
+   ],
+   "sock": [
+    "The sock is a fine thing. We should be proud of it.",
+    "Splendid. One sock, thought through. It is a small triumph.",
+    "Very good. I'll have a look at them on my way out."
+   ],
+   "plants": [
+    "I am so pleased. We shall have a forest by spring, if this continues.",
+    "A little green does everyone good. Thank you.",
+    "Lovely. I'll bring in a second one, if there is room."
+   ],
+   "returned_parcel": [
+    "Poor parcel. Please make sure the customer is looked after, whatever it cost.",
+    "Thank you. Do be kind to the customer when you write.",
+    "A pity. Let us see that it is put right."
+   ]
+  },
+  "S-03": {
+   "kettle": [
+    "I'll keep an eye on it, if I may.",
+    "Thank you. I'll mention it to anyone who asks.",
+    "I hope that is all right."
+   ],
+   "lunch": [
+    "That sounds very nice. I'm sorry, I did not bring enough to share.",
+    "Thank you for saying. I'll make sure to take a proper break.",
+    "I'll join you, if I am not in the way."
+   ],
+   "weather": [
+    "I noticed that on the way in, I'm afraid.",
+    "Yes, I thought the same.",
+    "I hope it suits everyone."
+   ],
+   "post": [
+    "Thank you for sorting it. I'll put the bills in the tray, as usual.",
+    "I hope the letter is a kind one. I'll leave it where it can be seen."
+   ],
+   "customer": [
+    "That is very good. I have written the figure in the book, I hope correctly.",
+    "Thank you. I hope the customers keep on being so kind.",
+    "I'm glad. It is a comfort to have good news in the figures."
+   ],
+   "products": [
+    "I'll note that on my sheets. Thank you.",
+    "That is useful to know. I will underline it.",
+    "I hope I have recorded the numbers right. I'll check them again."
+   ],
+   "clock": [
+    "Thank you. I'll be sure to leave on time, if I can.",
+    "I'm sorry, I lost track of the day. Thank you for reminding me.",
+    "That is a good rule. I shall try to follow it."
+   ],
+   "stockroom": [
+    "I'm sorry to hear it, and glad it is being seen to.",
+    "Thank you, Mole. I do appreciate how tidy it is.",
+    "I'll make a note of it, if that helps."
+   ],
+   "sock": [
+    "A small triumph. I rather like them.",
+    "Thank you. I'll put it in the figures.",
+    "Thank you. I'll make a note of it, if that helps."
+   ],
+   "plants": [
+    "It does look better than it did. I'm glad.",
+    "Thank you. I'll make a note of it, if that helps.",
+    "I hope that's all right."
+   ],
+   "returned_parcel": [
+    "I'm sorry to hear it. I'll note it in the books if it needs a refund.",
+    "Thank you for telling me. I hope the customer is not too put out.",
+    "I'll check the order, if that helps."
+   ]
+  },
+  "S-05": {
+   "kettle": [
+    "That's nice.",
+    "I'll remember that.",
+    "Thank you for telling me."
+   ],
+   "lunch": [
+    "Thank you. I'll sit by the window and have mine.",
+    "That's nice.",
+    "Thank you for telling me."
+   ],
+   "weather": [
+    "I noticed it too.",
+    "It is nice to hear.",
+    "I'll remember that."
+   ],
+   "post": [
+    "I hope the letter was nice. It sounds nice."
+   ],
+   "customer": [
+    "I'm glad. I like to think of someone opening a box and being pleased.",
+    "That's a nice thing. Thank you for telling me.",
+    "That's nice."
+   ],
+   "products": [
+    "I'll put it at the front. I'll put it where it can be seen.",
+    "That's good. I'll make sure there are enough in the boxes.",
+    "That's nice."
+   ],
+   "clock": [
+    "Thank you. I'll be on time, or a minute early, which is the same thing.",
+    "I like {dayname}s, too.",
+    "That sounds right. I'll go with that."
+   ],
+   "stockroom": [
+    "I'm sorry if I made a mess. I tidied it again just now.",
+    "Thank you. I do like it neat.",
+    "That's nice."
+   ],
+   "sock": [
+    "That's nice.",
+    "Thank you for telling me.",
+    "I'll remember that."
+   ],
+   "plants": [
+    "It does look happy. I think it likes the window.",
+    "That's nice.",
+    "Thank you for telling me."
+   ],
+   "returned_parcel": [
+    "I'll find a new box for it, if it is going out again.",
+    "Poor thing. I'll put it by the packing bench.",
+    "I'll look at it, in case it can be mended."
+   ]
+  },
+  "S-06": {
+   "kettle": [
+    "Noted. Please do not leave it to someone else.",
+    "Thank you. The kettle is everyone's responsibility.",
+    "I will see to it, if no one else does."
+   ],
+   "lunch": [
+    "Good. Please eat properly and take a full break.",
+    "Thank you. I will hold you to it.",
+    "Sit down for it, please. Not at the desk."
+   ],
+   "weather": [
+    "Noted. Please dress for it.",
+    "Thank you. We carry on regardless.",
+    "Quite so."
+   ],
+   "post": [
+    "Thank you. I will take the customer letters. You take the bills.",
+    "I will answer it today. Thank you for flagging."
+   ],
+   "customer": [
+    "I will pick that up. Do not worry.",
+    "That is good. Keep it up, and keep it polite.",
+    "Noted. Thank you."
+   ],
+   "products": [
+    "Noted. Thank you.",
+    "Quite so. Carry on.",
+    "Thank you. I'll bear it in mind."
+   ],
+   "clock": [
+    "Quite right. We'll start on time.",
+    "I'll hold you to that.",
+    "Noted. Thank you."
+   ],
+   "stockroom": [
+    "Good. I would like it to stay that way.",
+    "I'll take a look at it this afternoon.",
+    "Noted. Thank you."
+   ],
+   "sock": [
+    "Noted. That's a good sign.",
+    "I'd like them packed well. Customers notice.",
+    "Noted. Thank you."
+   ],
+   "plants": [
+    "It does help. Thank you for looking after it.",
+    "Noted. Thank you.",
+    "Quite so. Carry on."
+   ],
+   "returned_parcel": [
+    "Thank you. Please add a note to the case, and I will write to the customer.",
+    "I will deal with it. Please leave the paperwork on my desk.",
+    "Noted. Let me know what the carrier says."
+   ]
+  },
+  "S-07": {
+   "kettle": [
+    "Bless that kettle, it's the busiest thing in the building.",
+    "Fair play to the kettle.",
+    "I'll drink to that, in a manner of speaking."
+   ],
+   "lunch": [
+    "That sounds as good as a Christmas goose. Save me a bit!",
+    "I'm there before you can say knife and fork.",
+    "Lunch is the best bit of the day, bar the bit after it."
+   ],
+   "weather": [
+    "Weather's a funny customer, as the umbrella said to the hat.",
+    "Right you are, and no mistake.",
+    "I'd noticed, as keen as a weathercock."
+   ],
+   "post": [
+    "Right as a trivet. I'll sort the rest, as quick as a wink.",
+    "I do like a post day, it's like Christmas for grown-ups.",
+    "That's a good letter. I'll read it twice, once for me and once for the dog."
+   ],
+   "customer": [
+    "Lovely stuff! That's what we're here for, as the vicar said to the churchwarden.",
+    "Bless them, they're all as good as gold. Well, most of them.",
+    "Right you are, as the fiddler said to the dancer."
+   ],
+   "products": [
+    "That's the way, like a duck takes to water.",
+    "Selling like hot buns at a fair, it is.",
+    "I'll tell the next person who asks. Nice and firm."
+   ],
+   "clock": [
+    "Time flies like an arrow, and fruit flies like a banana.",
+    "I'm as spry as a spring lamb today.",
+    "A good day for it, as they say."
+   ],
+   "stockroom": [
+    "Tidier than a bishop's bedroom, that is. I'm impressed.",
+    "Mole's the man for the job, as neat as a new pin.",
+    "I'll go and have a look, and try not to move anything."
+   ],
+   "sock": [
+    "Happy as a sandboy, that pile. Pat it on the head for me.",
+    "A sock a day keeps the cold away, as nobody says.",
+    "I've a soft spot for the Spare Sock. It's the quiet hero of the shop."
+   ],
+   "plants": [
+    "Green as a gooseberry, and prouder than a peacock.",
+    "I'll give it a little talking-to. Plants like to be encouraged.",
+    "A handsome thing, that. Better-looking than the lot of us."
+   ],
+   "returned_parcel": [
+    "Back like a boomerang, bless it. I'll write to them kindly.",
+    "Poor parcel, home again with its tail between its legs.",
+    "I'll chase the carrier. I'm as keen as a bloodhound on this one."
+   ]
+  },
+  "S-08": {
+   "kettle": [
+    "Thank you for letting us know.",
+    "I'll look after it too, if that helps.",
+    "That is kind."
+   ],
+   "lunch": [
+    "That sounds lovely. I hope I'm not in the way if I sit nearby.",
+    "Thank you. I'll make sure to have a proper break.",
+    "Thank you for telling us."
+   ],
+   "weather": [
+    "Yes, I noticed too.",
+    "Thank you for saying.",
+    "I hope everyone is comfortable."
+   ],
+   "post": [
+    "Thank you. I'll sort the rest, if that helps.",
+    "I hope the letter was a kind one. I'll keep an eye out."
+   ],
+   "customer": [
+    "Thank you. I'm glad it went well.",
+    "Thank you for telling us.",
+    "I'm glad you said."
+   ],
+   "products": [
+    "That is useful. I'll mention it to the next person who writes.",
+    "I'll check the page, in case it needs a note.",
+    "Thank you for telling us."
+   ],
+   "clock": [
+    "I'll try to keep pace. Thank you.",
+    "I hope I have not been too slow. I'll do better.",
+    "That is a good way of looking at it."
+   ],
+   "stockroom": [
+    "Thank you, Mole. I'd have been lost without you.",
+    "I'm sorry if I got in the way. I'll try not to next time.",
+    "Thank you for telling us."
+   ],
+   "sock": [
+    "It is a thoughtful little thing, isn't it? I've grown fond of it.",
+    "I like it more than I thought I would.",
+    "Thank you for telling us."
+   ],
+   "plants": [
+    "I'm glad it is doing well. I think it likes you.",
+    "Thank you for telling us.",
+    "I'm glad you said."
+   ],
+   "returned_parcel": [
+    "I'll check whether the customer has written in. I hope it is nothing serious.",
+    "Thank you. I'll keep an eye on the case.",
+    "I'll write to them, if that would help."
+   ]
+  },
+  "S-10": {
+   "kettle": [
+    "Brilliant! The kettle is the heart of the office!",
+    "I love the kettle! It has presence!",
+    "Yes! May I photograph it?"
+   ],
+   "lunch": [
+    "That sounds marvellous! May I take a picture of it?",
+    "Brilliant! Absolutely brilliant!",
+    "Yes! I love it!"
+   ],
+   "weather": [
+    "Weather! It makes everything more dramatic!",
+    "I love weather! It is good for photographs!",
+    "Yes! I shall take a picture from the window!"
+   ],
+   "post": [
+    "A post-day post! That's an idea. Possibly a good one!",
+    "Can I photograph the letter? With permission, of course!",
+    "How marvellous! I'll put it on the board for everyone!"
+   ],
+   "customer": [
+    "This is exactly what we need! May I use it in a post, with permission?",
+    "That's wonderful! I have eleven ideas, but I'll tell you only one!",
+    "Brilliant! Absolutely brilliant!"
+   ],
+   "products": [
+    "Yes! A film! Or a small book! Or a song! Possibly all three!",
+    "Brilliant! I'll put it in the next post! Possibly two!",
+    "I knew it! I said so at the start! Possibly in a dream!"
+   ],
+   "clock": [
+    "Yes! Anything can happen on a {dayname}!",
+    "I feel it too! Something is going to happen!",
+    "What a day! I shall make something of it!"
+   ],
+   "stockroom": [
+    "The stockroom is a work of art! May I photograph it?",
+    "Mole, you're a genius! I will tell everyone!",
+    "Brilliant! Absolutely brilliant!"
+   ],
+   "sock": [
+    "A theme tune for the sock! Yes! I'll write it tonight!",
+    "Brilliant! The Spare Sock deserves a parade, or at least a small procession!",
+    "Yes! We should have a sock day! Possibly a week!"
+   ],
+   "plants": [
+    "A jungle! I said so! A pocket jungle! Brilliant!",
+    "Yes! More plants! We could have a forest by Friday!",
+    "I'll name it! I'll call it Gerald! Possibly Geraldine!"
+   ],
+   "returned_parcel": [
+    "Oh no! I'll hold the post about that product until it is sorted!",
+    "A parcel comes home! Could we make that into a story? Possibly not.",
+    "I'll make sure we do not promise anything we cannot send!"
+   ]
+  },
+  "S-11": {
+   "kettle": [
+    "Fine.",
+    "Noted.",
+    "Seen."
+   ],
+   "lunch": [
+    "Sounds good.",
+    "Fine by me.",
+    "Agreed. Eat."
+   ],
+   "weather": [
+    "Seen.",
+    "Noted.",
+    "Fine."
+   ],
+   "post": [
+    "Good.",
+    "Seen."
+   ],
+   "customer": [
+    "Good.",
+    "Noted.",
+    "Fine. Keep it up."
+   ],
+   "products": [
+    "Sound design. Not surprised.",
+    "Good.",
+    "Fine."
+   ],
+   "clock": [
+    "Agreed.",
+    "Noted.",
+    "Fine by me."
+   ],
+   "stockroom": [
+    "Fine work.",
+    "Noted.",
+    "Fine."
+   ],
+   "sock": [
+    "Agreed. It is hard to improve.",
+    "Good.",
+    "Fine."
+   ],
+   "plants": [
+    "Good plant.",
+    "Noted.",
+    "Fine."
+   ],
+   "returned_parcel": [
+    "Send it to the bench if it is damaged.",
+    "Noted.",
+    "Fine. I'll check it over."
+   ]
+  },
+  "S-02": {
+   "returned_parcel": [
+    "A returned parcel is a refund or a second postage. Both cost money.",
+    "Who pays for the carriage? I should like to know.",
+    "I will want to see the carrier's invoice before anyone says sorry."
+   ]
+  },
+  "S-04": {
+   "returned_parcel": [
+    "The dispatch log shows the time it left. I will check it against the carrier's record.",
+    "Recorded. I will look at the label.",
+    "Noted. I will compare the times."
+   ]
+  },
+  "S-09": {
+   "returned_parcel": [
+    "I'll note the stock that came back, and put it on the list.",
+    "Written down. I'll check how many we have left.",
+    "Noted. I will keep one spare for the next order."
+   ]
+  }
+ },
+ "weather": {
+  "01": [
+   "bitterly cold",
+   "frosty",
+   "dark and cold"
+  ],
+  "02": [
+   "grey and damp",
+   "raw",
+   "wet"
+  ],
+  "03": [
+   "blustery",
+   "bright but cold",
+   "changeable"
+  ],
+  "04": [
+   "showery",
+   "fresh",
+   "mild and wet"
+  ],
+  "05": [
+   "bright",
+   "mild",
+   "pleasant"
+  ],
+  "06": [
+   "warm",
+   "long and light",
+   "muggy"
+  ],
+  "07": [
+   "hot",
+   "close",
+   "sunny"
+  ],
+  "08": [
+   "sticky",
+   "warm and grey",
+   "humid"
+  ],
+  "09": [
+   "crisp",
+   "mild",
+   "settled"
+  ],
+  "10": [
+   "misty",
+   "brisk",
+   "damp"
+  ],
+  "11": [
+   "dark",
+   "foggy",
+   "raw"
+  ],
+  "12": [
+   "frosty",
+   "wintry",
+   "cold and bright"
+  ]
+ },
+ "names": {
+  "S-01": [
+   "Mr Fezziwig",
+   "Sir"
+  ],
+  "S-02": [
+   "Scrooge",
+   "Mr Scrooge"
+  ],
+  "S-03": [
+   "Bob",
+   "Cratchit"
+  ],
+  "S-04": [
+   "Fogg",
+   "Phileas"
+  ],
+  "S-05": [
+   "Mole",
+   "Mole, dear"
+  ],
+  "S-06": [
+   "Mrs Hudson",
+   "Mrs H"
+  ],
+  "S-07": [
+   "Sam",
+   "Weller"
+  ],
+  "S-08": [
+   "Esther",
+   "Miss Summerson"
+  ],
+  "S-09": [
+   "Robinson",
+   "Crusoe"
+  ],
+  "S-10": [
+   "Toad",
+   "Mr Toad"
+  ],
+  "S-11": [
+   "Hephaestus",
+   "Heph"
+  ]
+ },
+ "address_patterns": [
+  "{name}: ",
+  "{name}. ",
+  "Thank you, {name}. ",
+  "Yes, {name}. ",
+  "Ah, {name}. "
+ ],
+ "lead_ins": {
+  "any": [
+   "Quick thing.",
+   "While I think of it.",
+   "Just now.",
+   "Small note.",
+   "For the record."
+  ]
+ },
+ "evening": {
+  "people": [
+   "S-02",
+   "S-03",
+   "S-09",
+   "S-10"
+  ],
+  "chance": 0.05
+ }
+}

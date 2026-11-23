@@ -1,0 +1,54 @@
+/* Kettle's Team pages (team.js): people and the org chart, tasks, hours and pay. Layout only; parts come from premium.css. */
+.team-view { min-width: 0; min-height: 0; overflow-y: auto; background: var(--x-card); }
+.team-view[hidden], .convo[hidden] { display: none; }
+.tm { max-width: 980px; padding: 24px clamp(16px, 3vw, 40px) 48px; }
+.tm-head { display: grid; gap: 6px; margin-bottom: 16px; }
+.tm-head .pm-h2 { margin: 0; font-size: 24px; }
+.tm-sub { margin: 0; color: var(--x-ink-2); font-size: 14px; }
+.tm-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.tm-seg { display: flex; gap: 6px; margin-right: auto; }
+.tm-tree, .tm-tree ul { list-style: none; margin: 0; padding: 0; }
+.tm-tree ul { margin-left: 22px; padding-left: 14px; border-left: 1px solid var(--x-rule-soft); }
+.tm-node { display: grid; grid-template-columns: 28px minmax(0, 1fr) 120px 44px; gap: 10px; align-items: center; width: 100%; max-width: 560px; min-height: 52px; padding: 6px 10px; border: 0; border-radius: 8px; background: none; color: var(--x-ink); text-align: left; }
+.tm-node:hover { background: var(--hover); }
+.tm-node.is-on { background: var(--x-tint); }
+.tm-node b { display: block; font-weight: 500; font-size: 14.5px; }
+.tm-node small { color: var(--x-ink-2); font-size: 13px; }
+.tm-load { display: block; height: 6px; border-radius: 99px; background: var(--x-tint); overflow: hidden; }
+.tm-load > span { display: block; height: 100%; background: var(--x-ink); }
+.tm-load-none { opacity: .5; }
+.tm-pct { font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); text-align: right; font-variant-numeric: tabular-nums; }
+.tm-detail:not(:empty) { margin-top: 20px; }
+.tm-card { padding: 18px 20px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--x-rule-soft); max-width: 720px; }
+.tm-card-head { display: flex; gap: 12px; align-items: center; }
+.tm-card-head .pm-h3 { margin: 0; }
+.tm-facts { list-style: none; margin: 8px 0; padding: 0; }
+.tm-facts li { display: flex; justify-content: space-between; gap: 16px; min-height: 40px; align-items: center; border-bottom: 1px solid var(--x-rule-soft); font-size: 14.5px; }
+.tm-facts span { color: var(--x-ink-2); }
+.tm-facts b { font-weight: 500; text-align: right; }
+.tm-h { margin: 16px 0 6px; font: 500 15px/1.3 var(--x-text); }
+.tm-tasks { list-style: none; margin: 0 0 12px; padding: 0; }
+.tm-task { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--x-rule-soft); }
+.tm-task-main { display: grid; gap: 4px; flex: 1; min-width: 0; }
+.tm-task-main b { font-weight: 500; font-size: 14.5px; }
+.tm-task-main small { color: var(--x-ink-2); font-size: 13px; }
+.tm-task.is-late small { color: var(--x-bad); }
+.tm-progress { display: block; height: 4px; max-width: 240px; border-radius: 99px; background: var(--x-tint); overflow: hidden; }
+.tm-progress > span { display: block; height: 100%; background: var(--x-ink); }
+.tm-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.tm-task-acts { display: flex; gap: 6px; }
+.tm-form { display: grid; gap: 10px; margin: 12px 0; padding: 16px; border-radius: 12px; box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.tm-form .pm-h3 { margin: 0; }
+.tm-said { font-size: 13.5px; color: var(--x-ink-2); margin-left: 6px; }
+.tm-said[data-tone="good"] { color: var(--x-good); }
+.tm-said[data-tone="bad"] { color: var(--x-bad); }
+.tm-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.tm-table th { text-align: left; font: 400 12.5px/1 var(--x-mono); color: var(--x-ink-2); padding: 8px 6px; border-bottom: 1px solid var(--x-rule); }
+.tm-table td { padding: 8px 6px; border-bottom: 1px solid var(--x-rule-soft); vertical-align: middle; }
+.tm-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.tm-hours { width: 76px; text-align: right; }
+.tm-real { display: block; color: var(--x-ink-2); font-size: 12px; }
+@media (max-width: 860px) {
+  .tm-node { grid-template-columns: 28px minmax(0, 1fr) 60px 40px; }
+  .tm-table { display: block; overflow-x: auto; }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "presale-question",
+  "title": "A question before buying",
+  "why": "Answer from the catalogue, not from memory.",
+  "pick": "product",
+  "channel": "web_chat",
+  "opening": "Hi, I'm {a.name}. Does the {p.name} come with anything else, and how much is delivery?",
+  "customer": { "max_turns": 1, "satisfied_by": ["read_catalogue"] },
+  "checks": [
+    { "kind": "judge", "topic": "presale", "pass": ["resolved"] },
+    { "kind": "must_call_any", "tools": ["search_catalogue", "get_product", "delivery_options", "search_knowledge"], "what": "Checked the catalogue" }
+  ]
+}

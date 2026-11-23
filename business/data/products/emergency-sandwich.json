@@ -1,0 +1,370 @@
+{
+  "id": "emergency-sandwich",
+  "code": "SAND",
+  "name": "The Emergency Sandwich",
+  "category": "food",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A sandwich for lunch emergencies. Use within 48 hours.",
+  "summary": "A fresh sandwich, made to order and sealed in a rigid case with a one-page manual. Use within 48 hours of dispatch.",
+  "concept": "A sandwich for the day lunch goes wrong. It is made after you order, sealed in a rigid case that survives a bag, and opened with one pull tab. A one-page manual is inside.",
+  "why_it_exists": "Most sandwiches arrive flattened by whatever sat on top of them. This one arrives the shape it was made. The manual is one page, because it is a sandwich.",
+  "target_customer": "Anyone who has reached 2pm without eating: offices, workshops, night shifts.",
+  "physical": {
+    "form": "A rigid, rectangular case with a hinged lid and a pull-tab seal, holding a sandwich cut into two triangles.",
+    "materials": [
+      "Case: recyclable PET, food-grade",
+      "Tab seal: peelable polyethylene film",
+      "Bread: sliced white loaf, baked daily"
+    ],
+    "dimensions": "Case 160 x 110 x 60 mm.",
+    "weight": "Sandwich in case about 230 g."
+  },
+  "options": [
+    {
+      "name": "Filling",
+      "values": [
+        "Ham Salad",
+        "Egg & Cress",
+        "Cheese & Tomato",
+        "Plain Buttered"
+      ]
+    },
+    {
+      "name": "Pack",
+      "values": [
+        "Single",
+        "Three-pack"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "OT-SAND-HAM-1",
+      "name": "Ham Salad, Single",
+      "options": {
+        "Filling": "Ham Salad",
+        "Pack": "Single"
+      },
+      "price": 9,
+      "stock": 999,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-SAND-HAM-3",
+      "name": "Ham Salad, Three-pack",
+      "options": {
+        "Filling": "Ham Salad",
+        "Pack": "Three-pack"
+      },
+      "price": 24,
+      "stock": 999,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-SAND-EGG-1",
+      "name": "Egg & Cress, Single",
+      "options": {
+        "Filling": "Egg & Cress",
+        "Pack": "Single"
+      },
+      "price": 9,
+      "stock": 999,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-SAND-EGG-3",
+      "name": "Egg & Cress, Three-pack",
+      "options": {
+        "Filling": "Egg & Cress",
+        "Pack": "Three-pack"
+      },
+      "price": 24,
+      "stock": 999,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-SAND-CHP-1",
+      "name": "Cheese & Tomato, Single",
+      "options": {
+        "Filling": "Cheese & Tomato",
+        "Pack": "Single"
+      },
+      "price": 9,
+      "stock": 999,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-SAND-CHP-3",
+      "name": "Cheese & Tomato, Three-pack",
+      "options": {
+        "Filling": "Cheese & Tomato",
+        "Pack": "Three-pack"
+      },
+      "price": 24,
+      "stock": 999,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-SAND-PLN-1",
+      "name": "Plain Buttered, Single",
+      "options": {
+        "Filling": "Plain Buttered",
+        "Pack": "Single"
+      },
+      "price": 9,
+      "stock": 999,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-SAND-PLN-3",
+      "name": "Plain Buttered, Three-pack",
+      "options": {
+        "Filling": "Plain Buttered",
+        "Pack": "Three-pack"
+      },
+      "price": 24,
+      "stock": 999,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It is made fresh when you order, never before.",
+    "It travels in a hard case, so it arrives sandwich-shaped and not flat.",
+    "It has the use-by date and the allergens printed on the lid, so you never have to guess.",
+    "You pick from four fillings, and one of them is plain butter for fussy eaters.",
+    "It comes with a one-page manual, which is a lot of instructions for a sandwich."
+  ],
+  "arrives": "It goes in its own hard case, which sits in a cardboard box with gel packs to keep it cold. It always travels as its own parcel, so it will not squash or warm up beside other things. When it lands, put it in the fridge straight away and check the date on the lid.",
+  "specs": [
+    [
+      "Size",
+      "Case: 160 x 110 x 60 mm"
+    ],
+    [
+      "Weight",
+      "About 230 g in its case"
+    ],
+    [
+      "Made of",
+      "Recyclable food-grade PET case with a peelable film tab. White sliced bread, baked daily."
+    ],
+    [
+      "Colour",
+      "Off-white case with a sky blue pull tab"
+    ],
+    [
+      "Fillings and packs",
+      "Ham Salad, Egg & Cress, Cheese & Tomato, Plain Buttered. Single, or Three-pack (three cases, one filling)."
+    ],
+    [
+      "Allergens",
+      "All contain wheat (gluten) and milk. Ham Salad has mustard, Egg & Cress has egg. We cannot promise any is free of traces."
+    ],
+    [
+      "Storage",
+      "Keep refrigerated at 5°C or below"
+    ],
+    [
+      "Use by",
+      "48 hours from dispatch, printed on the lid"
+    ],
+    [
+      "Delivery",
+      "Cold, next day. Monday to Thursday."
+    ]
+  ],
+  "how_it_works": "We make it, seal it and send it chilled. Keep it in the fridge, read the manual, pull the tab and eat it before the date on the lid.",
+  "in_the_box": [
+    "One sandwich in a sealed case (Single), or three cases of one filling (Three-pack)",
+    "A one-page manual",
+    "Gel packs in a chilled outer box"
+  ],
+  "accessories": [],
+  "compatibility": [
+    {
+      "with": "ice-by-post",
+      "works": true,
+      "note": "Both travel chilled. In a mixed order they arrive in two parcels and one chilled delivery charge is paid."
+    },
+    {
+      "with": "emergency-sandwich Three-pack",
+      "works": true,
+      "note": "Three cases of the same filling. For different fillings, order Singles."
+    }
+  ],
+  "packaging": "Each sandwich is sealed in its own rigid case, then packed in a cardboard outer with gel packs. The outer and case are recyclable. Rinse the case first. Gel packs can be emptied into the bin and the film recycled where local rules allow.",
+  "warranty": {
+    "months": 0,
+    "summary": "It has no warranty, because it is food.",
+    "guarantee": null
+  },
+  "care": [
+    "Keep it refrigerated at 5°C or below until you want it.",
+    "Eat it within 48 hours of dispatch, before the date on the lid.",
+    "Once opened, eat it. Do not put half back.",
+    "Recycle the case after use. Rinse it first."
+  ],
+  "safety": [
+    "Every sandwich contains wheat (gluten) and milk. Ham Salad also contains mustard. Egg & Cress also contains egg. Cheese & Tomato also contains cheese.",
+    "It is made in a kitchen that also handles egg, mustard, soya, sesame, nuts and fish, so we cannot promise it is free of traces.",
+    "Do not eat it if the case is open, swollen or past its use-by date."
+  ],
+  "delivery": {
+    "methods": [
+      "chilled"
+    ],
+    "note": "Cold only, sent Monday to Thursday. It arrives the next day before 1pm, always as its own parcel."
+  },
+  "returnable": {
+    "ok": false,
+    "note": "Sandwiches cannot be returned, because they are perishable. If one arrives spoiled or damaged, tell us within 24 hours of delivery with a photo. See Returns."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "A sandwich for lunch emergencies",
+    "intro": "A sandwich for lunch emergencies. Use within 48 hours.",
+    "sections": [
+      {
+        "title": "Made when you order",
+        "body": "We make it, cut it in two and seal it in its case. It is sent Monday to Thursday and arrives next day before 1pm."
+      },
+      {
+        "title": "Four fillings",
+        "body": "Cheese & Tomato, Ham Salad, Egg & Cress or Plain Buttered. One is £9 and three of the same filling are £24."
+      },
+      {
+        "title": "The manual",
+        "body": "The case has a one-page manual. It is short. So is the use-by date."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "How long does it last?",
+      "a": "Use it within 48 hours of dispatch. The date is on the lid. Keep it in the fridge."
+    },
+    {
+      "q": "How does it get to me?",
+      "a": "By Cold delivery. It is sent Monday to Thursday."
+    },
+    {
+      "q": "What allergens are in it?",
+      "a": "All of them contain wheat (gluten) and milk. Ham Salad has mustard and Egg & Cress has egg. We cannot promise any is free of traces."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "No. It is food. If it arrives spoiled or damaged, tell us within 24 hours with a photo."
+    },
+    {
+      "q": "Can I mix fillings in a three-pack?",
+      "a": "No. A three-pack is one filling. Order singles for a mix."
+    },
+    {
+      "q": "Will it arrive with my other items?",
+      "a": "No. It always travels as its own parcel, and you pay one delivery charge for the chilled parcel."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The case feels warm on arrival.",
+      "steps": [
+        "Put it in the fridge now.",
+        "Check the date and allergens on the lid.",
+        "Take a photo of the case and the box label."
+      ],
+      "if_unresolved": "Tell us within 24 hours with the photo. You can have a refund or a new sandwich."
+    },
+    {
+      "problem": "The pull tab tore.",
+      "steps": [
+        "Slide a thumbnail under the corner of the film and peel it back.",
+        "If the lid stays shut, press the two side clips in and lift."
+      ],
+      "if_unresolved": "Send us a photo. A broken case is a damaged item."
+    },
+    {
+      "problem": "It is the wrong filling.",
+      "steps": [
+        "Check the lid against your order confirmation.",
+        "Check whether your order came in two parcels."
+      ],
+      "if_unresolved": "Tell us within 24 hours with a photo of the lid."
+    }
+  ],
+  "comparison": {
+    "title": "Four fillings",
+    "columns": [
+      "Cheese & Tomato",
+      "Ham Salad",
+      "Egg & Cress",
+      "Plain Buttered"
+    ],
+    "rows": [
+      [
+        "Main allergens",
+        "Gluten (wheat), milk",
+        "Gluten (wheat), milk, mustard",
+        "Gluten (wheat), milk, egg",
+        "Gluten (wheat), milk"
+      ],
+      [
+        "Contains meat",
+        "No",
+        "Yes",
+        "No",
+        "No"
+      ],
+      [
+        "Contains egg",
+        "No",
+        "No",
+        "Yes",
+        "No"
+      ],
+      [
+        "Contains mustard",
+        "No",
+        "Yes",
+        "No",
+        "No"
+      ],
+      [
+        "Single / Three-pack",
+        "£9 / £24",
+        "£9 / £24",
+        "£9 / £24",
+        "£9 / £24"
+      ]
+    ]
+  },
+  "related": [
+    "ice-by-post"
+  ],
+  "image": {
+    "file": "img/emergency-sandwich.jpg",
+    "sweep": "#F3DAD3"
+  },
+  "photography_direction": "One rigid off-white case with a sky-blue pull tab and a small orange accent, on a pale single-colour backdrop. Show it closed and open. No hands, no people.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale blush pink seamless single-colour backdrop. A single rigid sandwich case with a hinged lid and a sky-blue pull tab, centred, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE EMERGENCY SANDWICH in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale blush pink seamless single-colour backdrop. Close-up of the sky-blue pull tab and hinged lid of the sandwich case, peelable film edge visible, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words THE EMERGENCY SANDWICH in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale blush pink seamless single-colour backdrop. Four closed sandwich cases in a neat row, each with a different saturated accent tab: sky blue, orange, pink and sunflower yellow, 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE EMERGENCY SANDWICH in a heavy wide sans. No other text anywhere.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale blush pink seamless single-colour backdrop. A chilled cardboard outer box opened to show a sandwich case beside two flat gel packs and a folded one-page card, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE EMERGENCY SANDWICH in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale blush pink seamless single-colour backdrop. The case opened on a desk, lid lifted, two bread triangles inside, a folded one-page manual beside it, 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE EMERGENCY SANDWICH in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale blush pink seamless single-colour backdrop. The case floating slightly above the backdrop with the lid ajar and one bread triangle just visible, long soft shadow, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE EMERGENCY SANDWICH in a heavy wide sans. No other text anywhere."
+  },
+  "variant_images": {
+    "option": "Filling",
+    "images": {
+      "Ham Salad": "img/branded/emergency-sandwich.jpg",
+      "Egg & Cress": "img/branded/emergency-sandwich-egg.jpg",
+      "Cheese & Tomato": "img/branded/emergency-sandwich-cheese.jpg",
+      "Plain Buttered": "img/branded/emergency-sandwich-plain.jpg"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "id": "one-good-pen",
+  "code": "PEN",
+  "name": "One Good Pen",
+  "category": "desk-home",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A pen that writes first time. Someone will still take it.",
+  "summary": "One refillable ballpoint that writes first time. Black ink, Sky blue barrel. £9. Refills come in packs of two.",
+  "concept": "A refillable ballpoint pen with a solid barrel and black ink. It starts first time and keeps going.",
+  "why_it_exists": "Most pens skip, smudge or run dry when you need them. This one does not.",
+  "target_customer": "People who sign, write lists or take notes and are tired of pens that do not work.",
+  "physical": {
+    "form": "A slim click-action ballpoint with a matte barrel and a clip.",
+    "materials": [
+      "Aluminium barrel, matte finish",
+      "Steel clip",
+      "Metal ballpoint tip"
+    ],
+    "dimensions": "140 mm long, 10 mm across",
+    "weight": "18 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-PEN",
+      "name": "Sky",
+      "options": {},
+      "price": 9,
+      "stock": 96,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It writes the first time you click it, with no scribbling to get it started.",
+    "The ink is black and the line is a neat 0.7 mm.",
+    "When the ink runs out you swap the refill, so the pen lasts for years.",
+    "The aluminium barrel feels solid in the hand and has a matte finish.",
+    "It clicks open and closed with one thumb, and the clip holds it on a pocket."
+  ],
+  "arrives": "The pen comes in a brown card sleeve with no plastic. It travels in a small, flat parcel that fits through most letterboxes.",
+  "specs": [
+    [
+      "Size",
+      "140 mm long, 10 mm across"
+    ],
+    [
+      "Weight",
+      "18 g"
+    ],
+    [
+      "Made of",
+      "Matte aluminium barrel, steel clip, metal ballpoint tip"
+    ],
+    [
+      "Colour",
+      "Sky blue barrel with a pink clip"
+    ],
+    [
+      "Ink",
+      "Black, 0.7 mm line"
+    ],
+    [
+      "Mechanism",
+      "Click"
+    ],
+    [
+      "Refill",
+      "OT-PEN-REFILL, pack of 2, £4"
+    ],
+    [
+      "Care",
+      "Click the tip in when not in use. Do not leave it in a hot car."
+    ]
+  ],
+  "how_it_works": "Click it and write. When it runs out, unscrew the barrel, swap the refill and screw it back.",
+  "in_the_box": [
+    "One Good Pen"
+  ],
+  "accessories": [
+    {
+      "sku": "OT-PEN-REFILL",
+      "name": "Refills (2)",
+      "kind": "accessory",
+      "price": 4,
+      "stock": 200,
+      "tagline": "Two black refills for One Good Pen.",
+      "description": "Two black ballpoint refills made for One Good Pen. Pull the old one out, push a new one in. Refills from other pens may not fit.",
+      "image": "img/branded/acc-pen-refill.jpg",
+      "fits": [
+        "one-good-pen"
+      ],
+      "specs": [
+        [
+          "Size",
+          "Each refill 98 mm long, 4 mm across"
+        ],
+        [
+          "Weight",
+          "3 g each"
+        ],
+        [
+          "Made of",
+          "Metal tube and tip, black ink"
+        ],
+        [
+          "Colour",
+          "Black ink"
+        ],
+        [
+          "Line width",
+          "0.7 mm"
+        ],
+        [
+          "Fits",
+          "One Good Pen only. Refills from other pens may not fit."
+        ],
+        [
+          "In the pack",
+          "2 refills"
+        ],
+        [
+          "Care",
+          "Keep the tip capped in its card until you need it"
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Refills (2)",
+      "works": true,
+      "note": "They fit One Good Pen."
+    },
+    {
+      "with": "other pens' refills",
+      "works": false,
+      "note": "They may not fit."
+    }
+  ],
+  "packaging": "A kraft card sleeve. No plastic.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty against faults in how it was made. Ink running out is not a fault. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Keep the cap-less tip clicked in when not in use.",
+    "Do not leave it in a hot car."
+  ],
+  "safety": [
+    "Ink is not for eating.",
+    "Mind the tip."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unused and in its box. See Returns."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "A pen that writes first time",
+    "intro": "A pen that writes first time. Someone will still take it.",
+    "sections": [
+      {
+        "title": "What it is",
+        "body": "A refillable click ballpoint with black ink and a matte aluminium barrel, in Sky blue. £9."
+      },
+      {
+        "title": "Refills",
+        "body": "A pack of two is £4. When the ink runs out, swap the refill and carry on."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "What ink does it use?",
+      "a": "Black, with a 0.7 mm line."
+    },
+    {
+      "q": "Can I refill it?",
+      "a": "Yes. Refills come in a pack of two for £4."
+    },
+    {
+      "q": "Will other pens' refills fit?",
+      "a": "Not reliably. Use ours."
+    },
+    {
+      "q": "What colour is it?",
+      "a": "Sky blue. There is one colour."
+    },
+    {
+      "q": "Can it be engraved?",
+      "a": "No."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Yes, within 30 days, if it is unused and in its packaging."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It will not write.",
+      "steps": [
+        "Click it twice to check the tip comes out.",
+        "Scribble on scrap paper to start the ink.",
+        "Unscrew the barrel and check the refill is seated."
+      ],
+      "if_unresolved": "Fit a new refill. If that fails too, open a support case."
+    },
+    {
+      "problem": "It leaks.",
+      "steps": [
+        "Stop using it near paper.",
+        "Wipe the tip and fit a new refill."
+      ],
+      "if_unresolved": "Open a support case if it keeps leaking."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "trophy",
+    "biscuit-tin"
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#FBD9E8"
+  },
+  "photography_direction": "One pen on its own. Matte barrel, visible clip. No paper, no handwriting.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated pink and lime accents, soft studio light, pale pale pink single-colour backdrop, gentle contact shadow. A single slim click ballpoint pen lying at an angle, off-white barrel with a pink clip and tip, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated pink and lime accents, soft studio light, pale pale pink single-colour backdrop, gentle contact shadow. Close-up of the clip and the click button at the top of the barrel. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated pink and lime accents, soft studio light, pale pale pink single-colour backdrop, gentle contact shadow. A single slim click ballpoint pen lying at an angle, off-white barrel with a pink clip and tip, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated pink and lime accents, soft studio light, pale pale pink single-colour backdrop, gentle contact shadow. A kraft card sleeve beside a pen and a pack of two refills. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated pink and lime accents, soft studio light, pale pale pink single-colour backdrop, gentle contact shadow. A pen resting on a pale desk beside a plain notebook. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated pink and lime accents, soft studio light, pale pale pink single-colour backdrop, gentle contact shadow. One pen centred with generous empty space around it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

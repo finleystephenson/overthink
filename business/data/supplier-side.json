@@ -1,0 +1,39 @@
+{
+  "_note": "The supplier side (world/supplier-side.mjs): each supplier's contact person, how they write, and what they will agree to. Read with data/world/<size>/suppliers.json (lead times, terms) and data/organisations.json supplier_constraints (capacity, disruptions). Every number here is an assumption chosen to look like a small UK trade supplier, not measured. Contacts are storybook characters (out of copyright) who are not customers of the shop.",
+  "rules": {
+    "_note": "reply_after_working_days: a supplier answers on the next working day; slow_reply_after_working_days when the relationship has gone cool. memory_days: how far back a supplier remembers rudeness and late payment. busy_share: an expedite needs the shop's open orders with that supplier to be under this share of a week's capacity. late_payment_grace_days: a bill paid this many days after its terms is not counted as late. Standing starts at 0: each rude email counts rude, each late payment late_payment, each agreed change beyond changes_free in changes_days counts per_extra_change, each polite thank-you counts thanks (at most thanks_cap in all). At or below cool_at the supplier answers more slowly and halves what it offers; at or below no_favours_at it refuses changes altogether.",
+    "reply_after_working_days": 1,
+    "slow_reply_after_working_days": 2,
+    "memory_days": 180,
+    "busy_share": 0.75,
+    "late_payment_grace_days": 3,
+    "standing": { "rude": -1, "late_payment": -1, "changes_free": 3, "changes_days": 90, "per_extra_change": -0.5, "thanks": 0.25, "thanks_cap": 1, "cool_at": -1, "no_favours_at": -2 },
+    "new_order_reply_days": 5
+  },
+  "suppliers": {
+    "SUP-01": { "contact": { "name": "Mrs Sowerby", "first": "Susan", "from": "The Secret Garden (Frances Hodgson Burnett, 1911)" }, "box": "sowerby", "tone": "warm",
+      "expedite_share": 0, "expedite_refusal": "we already bake the night before and deliver the next morning, so it cannot come any sooner",
+      "volume_multiple": 3, "volume_discount_percent": 3, "change_window_days": 0 },
+    "SUP-02": { "contact": { "name": "Captain Hatteras", "first": "John", "from": "The Adventures of Captain Hatteras (Jules Verne, 1866)" }, "box": "hatteras", "tone": "brisk",
+      "expedite_share": 0, "expedite_refusal": "ice is packed the morning it is sent, so next-day is already as fast as it goes",
+      "volume_multiple": 3, "volume_discount_percent": 3, "change_window_days": 0 },
+    "SUP-03": { "contact": { "name": "Mrs Glegg", "first": "Jane", "from": "The Mill on the Floss (George Eliot, 1860)" }, "box": "glegg", "tone": "formal",
+      "expedite_share": 0.3, "volume_multiple": 2, "volume_discount_percent": 5, "change_window_days": 3 },
+    "SUP-04": { "contact": { "name": "Trotty Veck", "first": "Toby", "from": "The Chimes (Charles Dickens, 1844)" }, "box": "veck", "tone": "plain",
+      "expedite_share": 0.4, "volume_multiple": 2, "volume_discount_percent": 4, "change_window_days": 2 },
+    "SUP-05": { "contact": { "name": "Sol Gills", "first": "Solomon", "from": "Dombey and Son (Charles Dickens, 1848)" }, "box": "gills", "tone": "formal",
+      "expedite_share": 0.2, "volume_multiple": 3, "volume_discount_percent": 3, "change_window_days": 5 },
+    "SUP-06": { "contact": { "name": "Mr Sloppy", "first": "Sloppy", "from": "Our Mutual Friend (Charles Dickens, 1865)" }, "box": "sloppy", "tone": "plain",
+      "expedite_share": 0.25, "volume_multiple": 2, "volume_discount_percent": 5, "change_window_days": 5 },
+    "SUP-07": { "contact": { "name": "Caleb Plummer", "first": "Caleb", "from": "The Cricket on the Hearth (Charles Dickens, 1845)" }, "box": "plummer", "tone": "warm",
+      "expedite_share": 0.3, "volume_multiple": 2, "volume_discount_percent": 6, "change_window_days": 4 },
+    "SUP-08": { "contact": { "name": "Mrs Bagnet", "first": "Mrs", "from": "Bleak House (Charles Dickens, 1853)" }, "box": "bagnet", "tone": "plain",
+      "expedite_share": 0.3, "volume_multiple": 2, "volume_discount_percent": 5, "change_window_days": 4 },
+    "SUP-09": { "contact": { "name": "Ben Weatherstaff", "first": "Ben", "from": "The Secret Garden (Frances Hodgson Burnett, 1911)" }, "box": "weatherstaff", "tone": "brisk",
+      "expedite_share": 0.3, "volume_multiple": 2, "volume_discount_percent": 4, "change_window_days": 2 },
+    "SUP-10": { "contact": { "name": "Mr Otter", "first": "Otter", "from": "The Wind in the Willows (Kenneth Grahame, 1908)" }, "box": "otter", "tone": "warm",
+      "expedite_share": 0.4, "volume_multiple": 2, "volume_discount_percent": 5, "change_window_days": 3 },
+    "SUP-11": { "contact": { "name": "Gabriel Varden", "first": "Gabriel", "from": "Barnaby Rudge (Charles Dickens, 1841)" }, "box": "varden", "tone": "warm",
+      "expedite_share": 0.4, "volume_multiple": 2, "volume_discount_percent": 5, "change_window_days": 3 }
+  }
+}

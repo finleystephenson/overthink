@@ -1,0 +1,6 @@
+{
+  "name": "Example command product",
+  "version": "0.1.0",
+  "transport": "command",
+  "command": "node command.mjs"
+}

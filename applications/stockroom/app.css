@@ -1,0 +1,98 @@
+/* Stockroom: the shelves, what moved, the counts, the suppliers, the purchase orders. The rail-and-view layout and
+   the shared parts come from ../lib/workspace.css; charts from ../lib/charts.css. Products are the subject of the
+   shelves, so their pictures stay large; a shelf's level is one thin ink bar with a tick for "order now", and only
+   an empty or low shelf takes the bad colour. No green blocks, no rings, no shadows. */
+
+.chip-n { font: 400 12.5px/1 var(--x-mono); opacity: .75; }
+.t-lede.sr-lede { margin: 0 0 16px; }
+.sr-state { font-size: 13px; color: var(--x-ink-2); white-space: nowrap; }
+.check { display: flex; align-items: center; gap: 8px; font-size: 14.5px; }
+.check input { width: 16px; height: 16px; accent-color: var(--x-ink); }
+.thumb { display: block; flex: none; width: var(--s); height: var(--s); border-radius: 6px; background: var(--sweep, var(--x-tint)); overflow: hidden; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Shelves: a bay per product, the picture large and flush, its versions as ruled rows. */
+.bays { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 18px; align-items: start; }
+.bay { border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); overflow: hidden; }
+.bay-pic { aspect-ratio: 16 / 9; background: var(--sweep); overflow: hidden; }
+.bay-pic img { width: 100%; height: 100%; object-fit: cover; }
+.bay.is-off .bay-pic img { opacity: .55; }
+.bay-name { padding: 12px 14px 4px; font: 600 16px/1.25 var(--x-display); letter-spacing: -.015em; }
+.bins { list-style: none; margin: 0; padding: 0 6px 6px; }
+.bins li + li { border-top: 1px solid var(--x-rule-soft); }
+.bin { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; width: 100%; padding: 10px 8px; border: 0; border-radius: 8px; background: none; color: var(--x-ink); text-align: left; }
+.bin:hover { background: var(--hover); }
+.bin-name { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 14.5px; }
+.bin-n { font: 500 14.5px/1.2 var(--x-text); font-variant-numeric: tabular-nums; text-align: right; }
+.bin .lvl { grid-column: 1 / -1; }
+.bin-cover { grid-column: 1 / -1; font-size: 12.5px; color: var(--x-ink-2); }
+.bin-cover.w5 { color: var(--x-ink); }
+/* The level: days of selling up to 30, a tick where an order must go in. */
+.lvl { position: relative; display: block; height: 4px; border-radius: 2px; background: var(--x-tint); }
+.lvl i { position: absolute; inset: 0 auto 0 0; width: calc(var(--w) * 100%); border-radius: 2px; background: var(--x-ink); }
+.lvl.is-low i { background: var(--x-bad); }
+.lvl b { position: absolute; top: -3px; bottom: -3px; left: calc(var(--m) * 100%); width: 1.5px; background: var(--x-ink-2); }
+.lvl.is-made { background: repeating-linear-gradient(90deg, var(--x-tint) 0 6px, transparent 6px 10px); }
+
+/* One shelf (slide-over). */
+.sku-top { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; align-items: center; }
+.sku-pic { display: block; aspect-ratio: 1; border-radius: 12px; background: var(--sweep); overflow: hidden; }
+.sku-pic img { width: 100%; height: 100%; object-fit: cover; }
+.sku-figs { display: grid; gap: 16px; margin: 0; }
+.sku-lasts { font-size: 19px !important; letter-spacing: -.02em; }
+.sr-note { margin-top: 8px; }
+.sr-arrivals { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; font-size: 14px; color: var(--x-ink-2); }
+.sr-arrivals b { color: var(--x-ink); font-weight: 500; }
+.move-q { min-width: 52px; font-weight: 500; }
+.sr-diff { flex: none; font-size: 13.5px; }
+.od-rows time { text-align: right; }
+.od-acts, .od-sect .said { margin-top: 10px; }
+
+/* Movements and counts. */
+.sr-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sr-more { margin-top: 8px; }
+.sr-count-card { display: grid; gap: 12px; max-width: 560px; padding: 18px 20px; border-radius: 12px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.count-form { margin-top: 0; padding: 0; box-shadow: none; background: none; }
+.count-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: end; }
+.count-in { font: 600 19px/1 var(--x-display); font-variant-numeric: tabular-nums; }
+
+/* Suppliers: one ruled table. */
+.sr-sups td { height: 60px; }
+.sr-sub { display: block; max-width: 46ch; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12.5px; color: var(--x-ink-2); }
+.sr-sups td.r .sr-sub { max-width: none; }
+.sr-pics { display: flex; gap: 4px; }
+
+/* Purchase orders: a board of three columns; cards are a supplier, the lines, and one next step. */
+.lanes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.lane { min-width: 0; padding: 10px; border-radius: 12px; background: var(--x-tint); }
+.lane-head { display: flex; align-items: baseline; justify-content: space-between; padding: 2px 4px 10px; font: 500 14.5px/1.2 var(--x-text); }
+.lane-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.lane-empty { padding: 8px 4px; font-size: 13.5px; color: var(--x-ink-2); }
+.po { display: grid; gap: 8px; padding: 12px; border-radius: 8px; background: var(--x-card); box-shadow: inset 0 0 0 1px var(--x-rule-soft); }
+.po.is-changed { animation: ws-arrive .6s var(--x-ease) both; }
+.po-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.po-head b { font: 500 14.5px/1.25 var(--x-text); }
+.po-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.po-lines li { display: flex; align-items: center; gap: 8px; font-size: 13.5px; }
+.po-lines .grow { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.po-foot { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding-top: 8px; border-top: 1px solid var(--x-rule-soft); }
+.po-now { font-size: 12.5px; color: var(--x-ink-2); }
+
+/* Raising an order. */
+.po-form { display: grid; gap: 14px; }
+.po-pick .qty { width: 84px; flex: none; text-align: right; font-variant-numeric: tabular-nums; }
+.po-total { display: flex; align-items: center; gap: 12px; }
+.po-total span { margin-left: auto; font-size: 13.5px; color: var(--x-ink-2); }
+.po-total .big-num { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 1100px) {
+  .lanes { grid-template-columns: 1fr; }
+  .sr-sups th:nth-child(5), .sr-sups td:nth-child(5), .sr-sups th:nth-child(6), .sr-sups td:nth-child(6), .sr-sups th:nth-child(7), .sr-sups td:nth-child(7) { display: none; }
+}
+@media (max-width: 860px) {
+  .sku-top { grid-template-columns: 96px minmax(0, 1fr); }
+  .sr-sups th:nth-child(2), .sr-sups td:nth-child(2), .sr-sups th:nth-child(3), .sr-sups td:nth-child(3) { display: none; }
+  .sr-sub { max-width: 22ch; }
+  .sr-sups th:nth-child(8), .sr-sups td:nth-child(8) { display: none; }
+  .count-pair { grid-template-columns: 1fr; }
+}

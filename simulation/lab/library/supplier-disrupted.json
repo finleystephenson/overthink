@@ -1,0 +1,11 @@
+{
+  "title": "A key supplier is disrupted for three weeks",
+  "question": "What if a key supplier is disrupted for three weeks?",
+  "note": "The shop opens with about five weeks of stock, so a supplier problem only shows once reorders are due: the disruption starts on day 14 and the run is 60 days long.",
+  "start": { "size": "standard" },
+  "days": 60, "seeds": 5,
+  "arms": [
+    { "id": "pen-supplier", "label": "Kestrel Paper & Pen at a quarter capacity and 14 days slower, for 3 weeks", "interventions": [{ "type": "supplier_problem", "day": 14, "params": { "supplier": "SUP-04", "capacity_factor": 0.25, "extra_lead_days": 14, "days": 21 } }] },
+    { "id": "all-suppliers", "label": "Every supplier late four times as often, for 3 weeks", "interventions": [{ "type": "supplier_disruption", "day": 14, "params": { "days": 21, "late_times": 4 } }] }
+  ]
+}

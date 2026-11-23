@@ -1,0 +1,278 @@
+{
+  "id": "starter-puddle",
+  "code": "PUDL",
+  "name": "The Starter Puddle",
+  "category": "desk-home",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A tray that catches rain.",
+  "summary": "A shallow puddle-shaped tray in matte cast resin. It holds 15 mm of water and arrives empty. 60 cm across, Sky blue. £58.",
+  "concept": "A shallow puddle-shaped tray with a raised lip, made to sit on a flat surface and catch rain. It arrives empty.",
+  "why_it_exists": "Some people miss puddles. This one stays where you put it.",
+  "target_customer": "Gardens, patios and hallways with a flat floor and a taste for puddles.",
+  "physical": {
+    "form": "A shallow, irregular, puddle-shaped tray with a raised lip about 20 mm high and a flat underside",
+    "materials": [
+      "Cast polyurethane resin",
+      "Matte textured finish",
+      "Self-adhesive felt feet (underside)"
+    ],
+    "dimensions": "600 mm across; 20 mm overall height; 15 mm water depth",
+    "weight": "4.0 kg empty, about 7.2 kg with water"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-PUDL",
+      "name": "60 cm, Sky",
+      "options": {},
+      "price": 58,
+      "stock": 27,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It is a shallow tray shaped like a puddle that catches rain.",
+    "It holds 15 mm of water, so it is deep enough for a real splash.",
+    "It is 60 cm across in sky blue, with a matte finish.",
+    "It arrives empty, so you can wait for the rain or fill it to the line.",
+    "It has felt feet, so it does not slide or scratch the floor."
+  ],
+  "arrives": "It is sent empty and flat in a card carton with card padding, and it has felt feet already fitted. A card in the box shows the fill line. Take it out and put it on a level surface.",
+  "specs": [
+    [
+      "Size",
+      "600 mm across x 20 mm tall (irregular puddle shape)"
+    ],
+    [
+      "Weight",
+      "4.0 kg empty, about 7.2 kg with water"
+    ],
+    [
+      "Made of",
+      "Cast polyurethane resin, matte textured finish, self-adhesive felt feet"
+    ],
+    [
+      "Colour",
+      "Sky"
+    ],
+    [
+      "Water capacity",
+      "About 3.2 L (15 mm deep)"
+    ],
+    [
+      "Water",
+      "Not included. It arrives empty."
+    ],
+    [
+      "Drainage",
+      "None. Tip or sponge out."
+    ],
+    [
+      "Surface",
+      "Needs a level surface"
+    ],
+    [
+      "Care",
+      "Wipe with a damp cloth. No abrasive cleaners. Keep out of hard frost with water in it."
+    ]
+  ],
+  "how_it_works": "Put it on a level surface and let it fill with rain, or add water up to the fill line. There is no drain, so tip or sponge the water out when you are done.",
+  "in_the_box": [
+    "One Starter Puddle with felt feet fitted",
+    "A card with the fill line and safety notes"
+  ],
+  "accessories": [
+    {
+      "sku": "OT-PUDL-MAT",
+      "name": "Splash Mat",
+      "kind": "accessory",
+      "price": 22,
+      "stock": 60,
+      "tagline": "A mat that keeps the floor dry indoors.",
+      "description": "A waterproof round mat that goes under The Starter Puddle. It catches splashes, so you can use the puddle indoors. It is made for the puddle and will not fit other trays.",
+      "image": "img/branded/acc-puddle-mat.jpg",
+      "fits": [
+        "starter-puddle"
+      ],
+      "specs": [
+        [
+          "Size",
+          "75 cm across x 6 mm thick"
+        ],
+        [
+          "Weight",
+          "1.1 kg"
+        ],
+        [
+          "Made of",
+          "Foam core with a wipe-clean waterproof top and a silicone edge"
+        ],
+        [
+          "Colour",
+          "Off-white centre with a sky blue edge"
+        ],
+        [
+          "Fits",
+          "The Starter Puddle (60 cm), with 7 cm of room all round"
+        ],
+        [
+          "In the pack",
+          "1 mat"
+        ],
+        [
+          "Use",
+          "Indoors, on a floor. Mop up spills straight away."
+        ],
+        [
+          "Care",
+          "Wipe with a damp cloth. Air dry."
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Splash Mat",
+      "works": true,
+      "note": "It fits under the puddle with room to spare."
+    },
+    {
+      "with": "skimming-stones",
+      "works": false,
+      "note": "Do not put stones in it. They chip the resin."
+    },
+    {
+      "with": "sloped surfaces",
+      "works": false,
+      "note": "It needs a level surface, or the water pools to one side."
+    }
+  ],
+  "packaging": "Ships empty and flat in a card carton, padded with card. The carton is recyclable.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty against faults in how it was made, such as a casting flaw. Accidental damage is not covered, but The Fix Club may repair it. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Empty after use. There is no drain, so tip or sponge it out.",
+    "Wipe with a damp cloth. No abrasive cleaners.",
+    "Keep out of hard frost with water in it.",
+    "Stand on the felt feet, level."
+  ],
+  "safety": [
+    "Water on a floor is slippery. Wipe up spills at once.",
+    "Keep it away from stairs, doors and paths.",
+    "15 mm of water is shallow, but supervise young children and pets."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unused and in its box. See Returns."
+  },
+  "fix_club": {
+    "eligible": true,
+    "repairs": [
+      {
+        "code": "PUDL-CHIP",
+        "name": "Chip and crack repair",
+        "price": null
+      }
+    ]
+  },
+  "page": {
+    "headline": "A tray that catches rain",
+    "intro": "A tray that catches rain.",
+    "sections": [
+      {
+        "title": "What it is",
+        "body": "A shallow tray in matte cast resin with a raised lip. It is 60 cm across and holds 15 mm of water. £58."
+      },
+      {
+        "title": "It arrives empty",
+        "body": "Fill it with rain or from a jug, up to the fill line."
+      },
+      {
+        "title": "Indoors",
+        "body": "Use the Splash Mat (£22) under it indoors. It catches splashes and keeps the floor dry."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Does it come with water?",
+      "a": "No. It arrives empty."
+    },
+    {
+      "q": "How much does it hold?",
+      "a": "About 3.2 L, 15 mm deep."
+    },
+    {
+      "q": "Does it have a drain?",
+      "a": "No. Tip it or sponge it out."
+    },
+    {
+      "q": "Can I use it indoors?",
+      "a": "Yes, on a level floor with the Splash Mat."
+    },
+    {
+      "q": "How heavy is it?",
+      "a": "4.0 kg empty and about 7.2 kg full."
+    },
+    {
+      "q": "Can it be repaired?",
+      "a": "Yes. The Fix Club repairs chips and cracks. The price is quoted after assessment."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "The water pools to one side.",
+      "steps": [
+        "Check the surface is level.",
+        "Move it to flatter ground."
+      ],
+      "if_unresolved": "Empty it and put it down again."
+    },
+    {
+      "problem": "The lip has chipped or cracked.",
+      "steps": [
+        "Empty the water.",
+        "Photograph the damage and note when it happened."
+      ],
+      "if_unresolved": "Contact support. A casting fault is covered. Other damage can be repaired by The Fix Club."
+    },
+    {
+      "problem": "The felt feet have come off.",
+      "steps": [
+        "Clean and dry the underside.",
+        "Stick on new self-adhesive felt feet."
+      ],
+      "if_unresolved": "Contact support with your order number."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "skimming-stones",
+    "pocket-jungle"
+  ],
+  "image": {
+    "file": "img/starter-puddle.jpg",
+    "sweep": "#DDE6E1"
+  },
+  "photography_direction": "One shallow puddle-shaped tray in Sky blue on a pale backdrop. Empty or filled. No people.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and lime accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A shallow irregular puddle-shaped tray, matte off-white with a lime edge, holding a thin layer of clear water, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE STARTER PUDDLE in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and lime accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. Close-up of the raised lip of the tray with a thin film of water at its edge, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words THE STARTER PUDDLE in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and lime accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. A shallow irregular puddle-shaped tray, matte off-white with a lime edge, holding a thin layer of clear water, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE STARTER PUDDLE in a heavy wide sans. No other text anywhere. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and lime accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. The empty tray in a flat card carton beside a dark grey splash mat, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE STARTER PUDDLE in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and lime accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. The tray on a plain pale paving surface with a few raindrop ripples, 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE STARTER PUDDLE in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and lime accents, soft studio light, gentle contact shadow, pale sky blue seamless single-colour backdrop. The tray alone, centred, with a soft reflection on the water, long soft shadow, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE STARTER PUDDLE in a heavy wide sans. No other text anywhere."
+  }
+}

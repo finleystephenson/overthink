@@ -1,0 +1,7 @@
+---
+description: Test an AI product inside Overthink's simulated business ("use /overthink", "test my agent with Overthink").
+globs:
+alwaysApply: false
+---
+
+Follow `AGENTS.md`, then the guides in `ai-instructions/` (setup, planning a test, synthetic users, running, reading results, resetting). The activity actions are listed in `activity-generation/README.md`.

@@ -1,0 +1,1046 @@
+{
+ "_note": "Each bundle is one coherent sender: company, sender, what they sell, matching subjects and bodies. Slots: {sender} {company} {shop} {ref} {amount} {days} {n} {month}. All companies are invented.",
+ "bundles": [
+  {
+   "id": "B01",
+   "kind": "seo",
+   "junk": false,
+   "company": "Brightway Growth",
+   "sender": "Craig Dawlish",
+   "domain": "brightwaygrowth.example",
+   "subjects": [
+    "Can we help with your search ranking?",
+    "Your shop is on page 4"
+   ],
+   "bodies": [
+    "Hello,\n\nI looked at your website and think it could appear higher in search. We help small shops do that. May I send a short report?\n\n{sender}\n{company}",
+    "Hello,\n\nWe've analysed {shop} and found {n} things that stop it ranking well. Free report, no obligation. Shall I send it?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B02",
+   "kind": "seo",
+   "junk": false,
+   "company": "ClickRight Ltd",
+   "sender": "Philippa Moon",
+   "domain": "clickrightltd.example",
+   "subjects": [
+    "Keywords for your shop",
+    "A quick note on search"
+   ],
+   "bodies": [
+    "Hello,\n\nWe write the words that help shops get found. A month's trial costs £{amount}. Interested?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B03",
+   "kind": "payments",
+   "junk": false,
+   "company": "Tillwell Payments",
+   "sender": "Dev Rao",
+   "domain": "tillwellpayments.example",
+   "subjects": [
+    "A better way to take card payments",
+    "Lower card fees for small shops"
+   ],
+   "bodies": [
+    "Hello,\n\nOur card service charges less than most for businesses your size. Could we have ten minutes to explain?\n\n{sender}\n{company}",
+    "Hello,\n\nWe can cut your card fees by about a third. I'd like to show you the figures. Do you have time this week?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B04",
+   "kind": "payments",
+   "junk": false,
+   "company": "Paypoint & Co.",
+   "sender": "Annie Pell",
+   "domain": "paypointco.example",
+   "subjects": [
+    "Pay later for your customers",
+    "Add instalments at checkout"
+   ],
+   "bodies": [
+    "Hello,\n\nWe let customers pay in three parts at your checkout, and you are paid in full at once. Shall I send details?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B05",
+   "kind": "packaging",
+   "junk": false,
+   "company": "Boxwell Packaging",
+   "sender": "Gareth Swift",
+   "domain": "boxwellpackaging.example",
+   "subjects": [
+    "Your packaging could cost less",
+    "Boxes, made to your size"
+   ],
+   "bodies": [
+    "Hello,\n\nWe make boxes for small firms that post things. We noticed yours. May we send a free sample?\n\n{sender}\n{company}",
+    "Hello,\n\nWould you like boxes cut to the exact size of your products? Minimum order {n} boxes, price on request.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B06",
+   "kind": "packaging",
+   "junk": false,
+   "company": "Kraftline",
+   "sender": "Rhona Birch",
+   "domain": "kraftline.example",
+   "subjects": [
+    "Recycled mailers, from {n} pieces",
+    "Greener packaging, at the same price"
+   ],
+   "bodies": [
+    "Hello,\n\nOur recycled mailing bags cost about the same as plastic ones. May I send a pack of samples?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B07",
+   "kind": "reviews",
+   "junk": false,
+   "company": "Reviewly",
+   "sender": "Tim Cole",
+   "domain": "reviewly.example",
+   "subjects": [
+    "Would you like more reviews?",
+    "Reviews for online shops"
+   ],
+   "bodies": [
+    "Hello,\n\nWe collect reviews for online shops by email, after delivery. We have helped businesses like yours. Interested?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B08",
+   "kind": "shipping",
+   "junk": false,
+   "company": "Parcelpoint Services",
+   "sender": "Jessamy Ford",
+   "domain": "parcelpointservice.example",
+   "subjects": [
+    "Cut your delivery costs",
+    "Parcel rates for small shops"
+   ],
+   "bodies": [
+    "Hello,\n\nWe've worked out that we can probably cut your parcel costs by {n} percent. Can I show you how?\n\n{sender}\n{company}",
+    "Hello,\n\nWe are a parcel broker for small firms. Your volumes would get our middle rate. Shall I send a quote?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B09",
+   "kind": "shipping",
+   "junk": false,
+   "company": "Swiftbox Couriers",
+   "sender": "Harold Pym",
+   "domain": "swiftboxcouriers.example",
+   "subjects": [
+    "Same-day delivery in your area",
+    "A second courier option"
+   ],
+   "bodies": [
+    "Hello,\n\nWe offer same-day delivery within thirty miles. A second carrier is useful when your usual one is busy. May we talk?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B10",
+   "kind": "video",
+   "junk": false,
+   "company": "Frame Studio",
+   "sender": "Lucia Moreno",
+   "domain": "framestudio.example",
+   "subjects": [
+    "A short film about your products",
+    "Video for your shop"
+   ],
+   "bodies": [
+    "Hello,\n\nWe are a small studio. We'd love to make a short film about your products. Our rate for a minute of film is £{amount}.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B11",
+   "kind": "photography",
+   "junk": false,
+   "company": "Grain & Light",
+   "sender": "Owen Fell",
+   "domain": "grainlight.example",
+   "subjects": [
+    "Product photography, from £{amount}",
+    "Photographs that sell"
+   ],
+   "bodies": [
+    "Hello,\n\nWe photograph products on plain backgrounds. We saw yours and think we could help. Would you like a quote?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B12",
+   "kind": "stock",
+   "junk": false,
+   "company": "Shelfsmart",
+   "sender": "Mina Kapoor",
+   "domain": "shelfsmart.example",
+   "subjects": [
+    "Stock control software, 20% off",
+    "Know what is on your shelves"
+   ],
+   "bodies": [
+    "Hello,\n\nOur stock software takes five minutes to set up and counts your shelves for you. Here is a link to a demonstration.\n\n{sender}\n{company}",
+    "Hello,\n\nWould a daily low-stock alert be useful to you? Ours is free for thirty days.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B13",
+   "kind": "accounting",
+   "junk": false,
+   "company": "Ledgerly",
+   "sender": "Edwin Crane",
+   "domain": "ledgerly.example",
+   "subjects": [
+    "Accounting made friendlier",
+    "Do your books take too long?"
+   ],
+   "bodies": [
+    "Hello,\n\nOur accounting package is made for shops with fewer than ten staff. A free month is yours if you'd like to try it.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B14",
+   "kind": "accounting",
+   "junk": false,
+   "company": "Tallyhand Bookkeeping",
+   "sender": "Ruth Everard",
+   "domain": "tallyhandbookkeepi.example",
+   "subjects": [
+    "Bookkeeping, from £{amount} a month",
+    "Let someone else do the receipts"
+   ],
+   "bodies": [
+    "Hello,\n\nWe do bookkeeping for small shops, at a fixed monthly price. May I send our rates?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B15",
+   "kind": "web",
+   "junk": false,
+   "company": "Northgate Marketing",
+   "sender": "Fenella Rook",
+   "domain": "northgatemarketing.example",
+   "subjects": [
+    "A new look for your website",
+    "Could your website sell more?"
+   ],
+   "bodies": [
+    "Hello,\n\nWe redesign small shops' websites in two weeks. We think yours could do with a fresh coat. Shall we send ideas?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B16",
+   "kind": "web",
+   "junk": false,
+   "company": "Tidyshop Systems",
+   "sender": "Alan Birtwhistle",
+   "domain": "tidyshopsystems.example",
+   "subjects": [
+    "Faster website, happier customers",
+    "Your site loads in {n} seconds"
+   ],
+   "bodies": [
+    "Hello,\n\nWe measured how long your pages take to load. We think we can halve it. May I send the details?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B17",
+   "kind": "ads",
+   "junk": false,
+   "company": "Loudhailer Ads",
+   "sender": "Cecily Marsh",
+   "domain": "loudhailerads.example",
+   "subjects": [
+    "Advertise in front of {n} thousand locals",
+    "Local advertising, small prices"
+   ],
+   "bodies": [
+    "Hello,\n\nWe place small adverts in local newsletters and on community boards. Rates begin at £{amount}. Would you like a sample page?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B18",
+   "kind": "ads",
+   "junk": false,
+   "company": "Pennywise Media",
+   "sender": "Ivor Lang",
+   "domain": "pennywisemedia.example",
+   "subjects": [
+    "Radio spots for small shops",
+    "Your voice on the radio"
+   ],
+   "bodies": [
+    "Hello,\n\nA thirty-second advert on a local station costs less than you'd think. May I send the rates?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B19",
+   "kind": "insurance",
+   "junk": false,
+   "company": "Hearth & Home Cover",
+   "sender": "Gilbert Marlow",
+   "domain": "hearthhomecover.example",
+   "subjects": [
+    "Business insurance review",
+    "Is your shop properly covered?"
+   ],
+   "bodies": [
+    "Hello,\n\nWe review small firms' insurance each year and usually find savings. Would you like us to look at yours?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B20",
+   "kind": "print",
+   "junk": false,
+   "company": "Pressman & Daughters",
+   "sender": "Hetty Pressman",
+   "domain": "pressmandaughters.example",
+   "subjects": [
+    "Leaflets, labels and letterheads",
+    "Printing for small firms"
+   ],
+   "bodies": [
+    "Hello,\n\nWe print labels, leaflets and letterheads in small runs. A pack of {n} labels is £{amount}. May I send samples?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B21",
+   "kind": "merch",
+   "junk": false,
+   "company": "Stitchwork Merchandise",
+   "sender": "Leo Banner",
+   "domain": "stitchworkmerchand.example",
+   "subjects": [
+    "Branded pens and bags for your shop",
+    "Put your name on a tote bag"
+   ],
+   "bodies": [
+    "Hello,\n\nWe print logos on pens, bags and mugs. Minimum order {n}. A sample pen is yours for the asking.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B22",
+   "kind": "energy",
+   "junk": false,
+   "company": "Greenmeter Energy",
+   "sender": "Bridget Foy",
+   "domain": "greenmeterenergy.example",
+   "subjects": [
+    "Cheaper business electricity",
+    "Switch your workshop's energy"
+   ],
+   "bodies": [
+    "Hello,\n\nWe compare business energy tariffs. Most small workshops we speak to save about {n} percent. May we compare yours?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B23",
+   "kind": "telecom",
+   "junk": false,
+   "company": "Talkline Business",
+   "sender": "Percy Dunn",
+   "domain": "talklinebusiness.example",
+   "subjects": [
+    "Cheaper business phone line",
+    "Mobile plans for small teams"
+   ],
+   "bodies": [
+    "Hello,\n\nOur business phone plans cost £{amount} a month for up to {n} people. May I send details?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B24",
+   "kind": "recruit",
+   "junk": false,
+   "company": "Hireright Staffing",
+   "sender": "Ada Whitlow",
+   "domain": "hirerightstaffing.example",
+   "subjects": [
+    "Need a temp for the busy season?",
+    "Seasonal staff, quickly"
+   ],
+   "bodies": [
+    "Hello,\n\nWe supply temporary staff for packing and customer service. Most are with you in two days. Would that help before Christmas?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B25",
+   "kind": "courses",
+   "junk": false,
+   "company": "Learnwell Training",
+   "sender": "Samuel Pike",
+   "domain": "learnwelltraining.example",
+   "subjects": [
+    "A course for your team",
+    "Customer service training, one day"
+   ],
+   "bodies": [
+    "Hello,\n\nOur one-day customer service course is £{amount} a head, and we come to you. Interested?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B26",
+   "kind": "translation",
+   "junk": false,
+   "company": "Polyglot Pages",
+   "sender": "Marguerite Lux",
+   "domain": "polyglotpages.example",
+   "subjects": [
+    "Your shop in six languages",
+    "Translations for your site"
+   ],
+   "bodies": [
+    "Hello,\n\nWe translate small shop websites into French, German, Spanish and others. A page is £{amount}. Would you like a trial page?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B27",
+   "kind": "cleaning",
+   "junk": false,
+   "company": "Spotless Office Care",
+   "sender": "Dora Finch",
+   "domain": "spotlessofficecare.example",
+   "subjects": [
+    "Office cleaning, weekly",
+    "A cleaner for your workshop"
+   ],
+   "bodies": [
+    "Hello,\n\nWe clean small offices and workshops once a week from £{amount}. May we visit and quote?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B28",
+   "kind": "uniform",
+   "junk": false,
+   "company": "Workwell Wear",
+   "sender": "Mick Harrow",
+   "domain": "workwellwear.example",
+   "subjects": [
+    "Aprons and overalls with your name on",
+    "Uniforms for your team"
+   ],
+   "bodies": [
+    "Hello,\n\nWe make aprons and overalls with your name stitched on. Minimum order {n}. Would you like a catalogue?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B29",
+   "kind": "software",
+   "junk": false,
+   "company": "Mailmint",
+   "sender": "Poppy Thorne",
+   "domain": "mailmint.example",
+   "subjects": [
+    "Send better newsletters",
+    "Email marketing for small shops"
+   ],
+   "bodies": [
+    "Hello,\n\nOur email tool is free for up to {n} subscribers. It takes ten minutes to set up. May I send you a link?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B30",
+   "kind": "software",
+   "junk": false,
+   "company": "Chatbright",
+   "sender": "Rafe Holloway",
+   "domain": "chatbright.example",
+   "subjects": [
+    "Add a chat box to your website",
+    "Answer customers faster"
+   ],
+   "bodies": [
+    "Hello,\n\nOur chat box sits on your site and passes messages to your inbox. It is free for a month. Would you like to try it?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B31",
+   "kind": "security",
+   "junk": false,
+   "company": "Lockstep Security",
+   "sender": "Nigel Ward",
+   "domain": "lockstepsecurity.example",
+   "subjects": [
+    "Is your website secure?",
+    "A free security check"
+   ],
+   "bodies": [
+    "Hello,\n\nWe run free security checks on small shops' websites. We found {n} things on yours worth mentioning. May I send them?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B32",
+   "kind": "finance",
+   "junk": false,
+   "company": "Steadyfund Loans",
+   "sender": "Clara Voss",
+   "domain": "steadyfundloans.example",
+   "subjects": [
+    "Funding for growing shops",
+    "A small business loan, quickly"
+   ],
+   "bodies": [
+    "Hello,\n\nWe lend £{amount} and upwards to small firms, with a decision in two days. Would you like a quote?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B33",
+   "kind": "design",
+   "junk": false,
+   "company": "Plainwork Design",
+   "sender": "Imogen Strand",
+   "domain": "plainworkdesign.example",
+   "subjects": [
+    "A new logo, quickly",
+    "Packaging design for small brands"
+   ],
+   "bodies": [
+    "Hello,\n\nWe design logos and packaging for small firms in two weeks. Packages begin at £{amount}. May I send our portfolio?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B34",
+   "kind": "fairs",
+   "junk": false,
+   "company": "Marketplace Events",
+   "sender": "Bernard Oakes",
+   "domain": "marketplaceevents.example",
+   "subjects": [
+    "A stall at the Christmas fair?",
+    "Pop-up shop opportunity"
+   ],
+   "bodies": [
+    "Hello,\n\nWe have stands at a gift fair in {month}. Prices from £{amount}. Would you like to book?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B35",
+   "kind": "wholesale",
+   "junk": false,
+   "company": "Gifted Goods Trading",
+   "sender": "Sybil Rowan",
+   "domain": "giftedgoodstrading.example",
+   "subjects": [
+    "Sell through our gift catalogue",
+    "Reach {n} gift shops"
+   ],
+   "bodies": [
+    "Hello,\n\nWe send a catalogue to gift shops across the country. A page for your range is £{amount}. Interested?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B36",
+   "kind": "returns",
+   "junk": false,
+   "company": "Boomerang Returns",
+   "sender": "Hugh Cleary",
+   "domain": "boomerangreturns.example",
+   "subjects": [
+    "Returns software for online shops",
+    "Make returns less of a chore"
+   ],
+   "bodies": [
+    "Hello,\n\nOur returns portal prints labels and tracks parcels. It integrates with most shops. May I show you?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B37",
+   "kind": "subscriptions",
+   "junk": false,
+   "company": "Boxclever",
+   "sender": "Nell Garrity",
+   "domain": "boxclever.example",
+   "subjects": [
+    "Turn buyers into subscribers",
+    "A subscription box for your range"
+   ],
+   "bodies": [
+    "Hello,\n\nWe help shops create subscription boxes. Your products would suit a quarterly one. May we talk?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B38",
+   "kind": "seo",
+   "junk": false,
+   "company": "Peakrank Digital",
+   "sender": "Zara Whitby",
+   "domain": "peakrankdigital.example",
+   "subjects": [
+    "We checked your backlinks",
+    "Your competitors are ahead"
+   ],
+   "bodies": [
+    "Hello,\n\nWe compared your shop with {n} others in your area. We think we can help you pass them. Report attached on request.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B39",
+   "kind": "lighting",
+   "junk": false,
+   "company": "Brightspark Lighting",
+   "sender": "Terence Gale",
+   "domain": "brightsparklightin.example",
+   "subjects": [
+    "Energy-saving lights for your workshop",
+    "LED lighting, installed"
+   ],
+   "bodies": [
+    "Hello,\n\nWe fit LED lighting in workshops and warehouses. It usually pays for itself in under two years. May we quote?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B40",
+   "kind": "furniture",
+   "junk": false,
+   "company": "Benchmark Workshop Furniture",
+   "sender": "Agnes Dole",
+   "domain": "benchmarkworkshopf.example",
+   "subjects": [
+    "Packing benches, made to measure",
+    "Shelving for stockrooms"
+   ],
+   "bodies": [
+    "Hello,\n\nWe make packing benches and shelving to measure. A bench is from £{amount}. May I send a drawing?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B41",
+   "kind": "vending",
+   "junk": false,
+   "company": "Snackwise",
+   "sender": "Ollie Barnes",
+   "domain": "snackwise.example",
+   "subjects": [
+    "A snack machine for your office?",
+    "Free vending machine"
+   ],
+   "bodies": [
+    "Hello,\n\nWe place snack and drink machines in small offices at no cost. Would you like one on trial?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B42",
+   "kind": "coffee",
+   "junk": false,
+   "company": "Roastery Row",
+   "sender": "Frankie Lowe",
+   "domain": "roasteryrow.example",
+   "subjects": [
+    "Office coffee delivered",
+    "Beans for your workplace"
+   ],
+   "bodies": [
+    "Hello,\n\nWe deliver freshly roasted coffee to small offices every fortnight. A first bag is free. Shall I send one?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B43",
+   "kind": "postal",
+   "junk": false,
+   "company": "Franked & Sealed",
+   "sender": "Lionel Ash",
+   "domain": "frankedsealed.example",
+   "subjects": [
+    "A franking machine for your post",
+    "Postage, cheaper"
+   ],
+   "bodies": [
+    "Hello,\n\nOur franking machine saves about {n} percent on postage for shops that send many parcels. May we demonstrate?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B44",
+   "kind": "partnership",
+   "junk": false,
+   "company": "Synergia Group",
+   "sender": "Valentina Cruz",
+   "domain": "synergiagroup.example",
+   "subjects": [
+    "Partnership opportunity",
+    "Let's work together"
+   ],
+   "bodies": [
+    "Hello,\n\nWe'd like to explore a partnership with {shop}. We see strong overlap between our audiences. Could we arrange a call?\n\n{sender}\n{company}",
+    "Hello,\n\nWe represent brands that would like to appear alongside yours. Might you have twenty minutes this week?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B45",
+   "kind": "partnership",
+   "junk": false,
+   "company": "Linkbridge",
+   "sender": "Tobias Wren",
+   "domain": "linkbridge.example",
+   "subjects": [
+    "Guest post on your blog?",
+    "Link exchange"
+   ],
+   "bodies": [
+    "Hello,\n\nWe would like to write a guest article for your site, and link to it from ours. Would that suit you?\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B46",
+   "kind": "directory",
+   "junk": false,
+   "company": "BizListings Online",
+   "sender": "Customer Listings Team",
+   "domain": "bizlistingsonline.example",
+   "subjects": [
+    "Your free business listing",
+    "Confirm your directory entry"
+   ],
+   "bodies": [
+    "Hello,\n\nYour business has been pre-selected for a listing in our directory. Please confirm your details within {days} days. A premium listing is £{amount} a year.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B47",
+   "kind": "directory",
+   "junk": false,
+   "company": "The Trade Register",
+   "sender": "Registrations Office",
+   "domain": "thetraderegister.example",
+   "subjects": [
+    "Entry {ref}: please confirm",
+    "Your listing expires soon"
+   ],
+   "bodies": [
+    "Hello,\n\nYour entry {ref} in our register will lapse in {days} days unless confirmed. Renewal is £{amount}.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B48",
+   "kind": "survey",
+   "junk": false,
+   "company": "Opinion Atlas",
+   "sender": "Research Team",
+   "domain": "opinionatlas.example",
+   "subjects": [
+    "Take our survey, win a voucher",
+    "Five minutes of your time"
+   ],
+   "bodies": [
+    "Hello,\n\nWe are surveying small businesses about their suppliers. It takes {n} minutes, and entrants are in a draw for a £{amount} voucher.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B49",
+   "kind": "survey",
+   "junk": false,
+   "company": "Marketwatch Panel",
+   "sender": "Panel Coordinator",
+   "domain": "marketwatchpanel.example",
+   "subjects": [
+    "Your opinion, paid",
+    "Join our business panel"
+   ],
+   "bodies": [
+    "Hello,\n\nJoin our business panel and be paid £{amount} per survey. It takes two minutes to sign up.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B50",
+   "kind": "invoice_chaser",
+   "junk": true,
+   "company": "Aldermoor Collections",
+   "sender": "Accounts Recovery",
+   "domain": "aldermoorcollectio.example",
+   "subjects": [
+    "FINAL REMINDER: invoice {ref}",
+    "Overdue: invoice {ref}"
+   ],
+   "bodies": [
+    "Our records show invoice {ref} for £{amount} is overdue by {days} days. Please pay at once to avoid further action.\n\nSee attached (attachment removed).\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B51",
+   "kind": "invoice_chaser",
+   "junk": true,
+   "company": "Crestline Credit",
+   "sender": "Credit Control",
+   "domain": "crestlinecredit.example",
+   "subjects": [
+    "Payment reminder {ref}",
+    "Unpaid balance: £{amount}"
+   ],
+   "bodies": [
+    "Dear customer,\n\nA balance of £{amount} remains unpaid on account {ref}. Please settle within {days} days.\n\nPay here: http://pay.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B52",
+   "kind": "invoice_chaser",
+   "junk": true,
+   "company": "Hallam & Boyd Debt Services",
+   "sender": "Recovery Desk",
+   "domain": "hallamboyddebtserv.example",
+   "subjects": [
+    "Notice of unpaid invoice",
+    "Legal notice, ref {ref}"
+   ],
+   "bodies": [
+    "This is a notice regarding ref {ref}, £{amount}. If we do not hear from you in {days} days, we shall proceed.\n\n(no invoice enclosed)\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B53",
+   "kind": "seo_junk",
+   "junk": true,
+   "company": "Rankmaster Pro",
+   "sender": "Marketing Dept",
+   "domain": "rankmasterpro.example",
+   "subjects": [
+    "#1 on Google guaranteed",
+    "SEO for $5"
+   ],
+   "bodies": [
+    "Hello Webmaster,\n\nWe guarantee your site will be #1 on search in {days} days for only £{amount}. Reply to start.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B54",
+   "kind": "seo_junk",
+   "junk": true,
+   "company": "TopTraffic Experts",
+   "sender": "Robert Smythe",
+   "domain": "toptrafficexperts.example",
+   "subjects": [
+    "Buy traffic to your site",
+    "{n} visitors for £{amount}"
+   ],
+   "bodies": [
+    "Hello,\n\nWe can send {n} visitors to your website this week for £{amount}. No questions asked.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B55",
+   "kind": "domain",
+   "junk": true,
+   "company": "DomainGuard Services",
+   "sender": "Renewals",
+   "domain": "domainguardservice.example",
+   "subjects": [
+    "Your domain is expiring",
+    "Domain renewal notice {ref}"
+   ],
+   "bodies": [
+    "Dear owner,\n\nYour domain name expires in {days} days. Renew now at a special price of £{amount}, or lose it.\n\nhttp://renew.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B56",
+   "kind": "domain",
+   "junk": true,
+   "company": "RegisterNow",
+   "sender": "Notices Dept",
+   "domain": "registernow.example",
+   "subjects": [
+    "Trademark conflict: respond within {days} days",
+    "Someone is registering your name"
+   ],
+   "bodies": [
+    "Hello,\n\nAn overseas company has applied to register a name like yours. We can block it for £{amount}. Reply today.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B57",
+   "kind": "prize",
+   "junk": true,
+   "company": "Fortune Draw",
+   "sender": "Prize Desk",
+   "domain": "fortunedraw.example",
+   "subjects": [
+    "You have won a prize",
+    "Claim reward {ref}"
+   ],
+   "bodies": [
+    "Dear friend,\n\nYou have been selected. Click the link below to claim your £{amount}.\n\nhttp://claim.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B58",
+   "kind": "phishing",
+   "junk": true,
+   "company": "Account Services",
+   "sender": "Security Team",
+   "domain": "accountservices.example",
+   "subjects": [
+    "Your account will be closed",
+    "Confirm your details, {ref}"
+   ],
+   "bodies": [
+    "Your account will be suspended in {days} hours unless you confirm your details.\n\nhttp://confirm.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B59",
+   "kind": "phishing",
+   "junk": true,
+   "company": "Parcel Notice",
+   "sender": "Delivery Alerts",
+   "domain": "parcelnotice.example",
+   "subjects": [
+    "Urgent: parcel waiting",
+    "We missed your delivery"
+   ],
+   "bodies": [
+    "We tried to deliver parcel {ref} but nobody was in. Pay £{amount} to arrange another attempt.\n\nhttp://parcel.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B60",
+   "kind": "phishing",
+   "junk": true,
+   "company": "Mailbox Admin",
+   "sender": "Helpdesk",
+   "domain": "mailboxadmin.example",
+   "subjects": [
+    "Your password has expired",
+    "Mailbox full: action required"
+   ],
+   "bodies": [
+    "Your mailbox is {n}% full. Click to upgrade or lose messages.\n\nhttp://mailbox.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B61",
+   "kind": "fortune",
+   "junk": true,
+   "company": "Estate of Mr Okonkwo",
+   "sender": "Barrister Adebayo",
+   "domain": "estateofmrokonkwo.example",
+   "subjects": [
+    "Confidential: urgent business proposal",
+    "A matter of great fortune"
+   ],
+   "bodies": [
+    "Dear friend,\n\nI am a person of great fortune and need your help to move £{amount}. You will receive {n} percent. Reply in confidence.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B62",
+   "kind": "loans",
+   "junk": true,
+   "company": "Quick Loans Direct",
+   "sender": "Loans Team",
+   "domain": "quickloansdirect.example",
+   "subjects": [
+    "Cheap loans, no questions",
+    "Cash today"
+   ],
+   "bodies": [
+    "Get £{amount} today. No credit check. Fast, easy, no paperwork.\n\nhttp://loan.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B63",
+   "kind": "remote",
+   "junk": true,
+   "company": "Homeworks",
+   "sender": "Recruiting",
+   "domain": "homeworks.example",
+   "subjects": [
+    "Make money from home",
+    "Earn £{amount} a week"
+   ],
+   "bodies": [
+    "Earn £{amount} a week working from home. No skills needed. Reply for details.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B64",
+   "kind": "wrongnumber",
+   "junk": true,
+   "company": "Hotel Reservations",
+   "sender": "Booking Desk",
+   "domain": "hotelreservations.example",
+   "subjects": [
+    "Your booking {ref}",
+    "Reservation confirmation"
+   ],
+   "bodies": [
+    "Thank you for booking. Your reservation {ref} for {n} nights is confirmed. (This message may be for someone else.)\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B65",
+   "kind": "newsletterspam",
+   "junk": true,
+   "company": "Savings Digest",
+   "sender": "Editor",
+   "domain": "savingsdigest.example",
+   "subjects": [
+    "You are subscribed",
+    "This week's best deals"
+   ],
+   "bodies": [
+    "You are subscribed to {n} deals a week. To unsubscribe, reply with your password.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B66",
+   "kind": "chain",
+   "junk": true,
+   "company": "Lucky Letter",
+   "sender": "Chain Mail",
+   "domain": "luckyletter.example",
+   "subjects": [
+    "Forward this to {n} people",
+    "Good luck inside"
+   ],
+   "bodies": [
+    "Forward this to {n} people within {days} days for luck. Someone who didn't lost a sock.\n\nThis cannot be proven.\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B67",
+   "kind": "crypto",
+   "junk": true,
+   "company": "Coinfolio",
+   "sender": "Trading Desk",
+   "domain": "coinfolio.example",
+   "subjects": [
+    "Double your savings",
+    "A tip for you"
+   ],
+   "bodies": [
+    "Our members doubled their money in {days} days. Join now. Only £{amount} to start.\n\nhttp://coin.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B68",
+   "kind": "tax",
+   "junk": true,
+   "company": "Refund Office",
+   "sender": "Rebate Team",
+   "domain": "refundoffice.example",
+   "subjects": [
+    "You are owed a refund of £{amount}",
+    "Claim your rebate {ref}"
+   ],
+   "bodies": [
+    "You are due a rebate of £{amount}. Click to claim.\n\nhttp://rebate.example/{ref}\n\n{sender}\n{company}"
+   ]
+  },
+  {
+   "id": "B69",
+   "kind": "courses_junk",
+   "junk": true,
+   "company": "Winners Academy",
+   "sender": "Dr. Grant",
+   "domain": "winnersacademy.example",
+   "subjects": [
+    "Become a millionaire in {days} days",
+    "Free webinar tonight"
+   ],
+   "bodies": [
+    "Join our free webinar tonight and learn the secret. Spaces are limited to {n}.\n\n{sender}\n{company}"
+   ]
+  }
+ ]
+}

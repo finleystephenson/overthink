@@ -1,0 +1,498 @@
+{
+  "_note": "Mail the company sends and receives that is not a customer enquiry: order notes, supplier traffic, newsletters, press, junk, pitches and mail between staff. Slots in braces. Brand voice: plain, exact, dry. No exclamation marks.",
+  "order_confirmation": {
+    "subjects": [
+      "Your order {order}",
+      "Order {order}: received",
+      "We have {order}",
+      "Thank you: {order}",
+      "{order} confirmed",
+      "Your order is in: {order}",
+      "Order {order}, in hand",
+      "Confirmation of {order}",
+      "We've got it: {order}",
+      "{order}: what happens next"
+    ],
+    "bodies": [
+      "Hello {first},\n\nWe have your order {order}.\n\n{items}\n\nTotal: {total}. We will write again when it leaves.\n\n{sign}",
+      "Hello {first},\n\nThank you. Order {order} is in and being looked at by a person.\n\n{items}\n\nTotal paid: {total}.\n\n{sign}",
+      "Dear {first},\n\nYour order {order} has been received.\n\n{items}\n\nTotal: {total}. Nothing further is needed from you.\n\n{sign}",
+      "Hello {first},\n\nOrder {order} is confirmed. What you ordered:\n\n{items}\n\nTotal: {total}. If anything is wrong, reply to this and we'll look before it's packed.\n\n{sign}",
+      "Hello {first},\n\nThis is to say we have {order}.\n\n{items}\n\nTotal: {total}. Packing usually happens the next working day.\n\n{sign}",
+      "Hi {first},\n\nThank you for your order. We've written down {order} exactly as you gave it to us.\n\n{items}\n\nTotal: {total}.\n\n{sign}",
+      "Hello {first},\n\nYour order {order} is confirmed and paid.\n\n{items}\n\nTotal: {total}. A dispatch note follows.\n\n{sign}",
+      "Dear {first},\n\nWe have received {order}.\n\n{items}\n\nTotal: {total}. If the address below is wrong, tell us now.\n\n{address}\n\n{sign}",
+      "Hello {first},\n\nOrder {order}, as follows.\n\n{items}\n\nTotal: {total}. We will not email you again unless something changes.\n\n{sign}",
+      "Hello {first},\n\nThank you for ordering. {order} is now with the packing bench.\n\n{items}\n\nTotal: {total}.\n\n{sign}",
+      "Hi {first},\n\nWe're writing to confirm {order}.\n\n{items}\n\nTotal: {total}. Delivery details are on your order page.\n\n{sign}",
+      "Dear {first},\n\nYour order {order} has been placed.\n\n{items}\n\nTotal: {total}. Please keep this email; it has the number in it.\n\n{sign}"
+    ],
+    "footnotes": [
+      "¹ Thank you for reading this far.",
+      "¹ Every order is checked twice. The second time is for fun.",
+      "¹ This email was written by a person, once, and reused.",
+      "¹ We do not send adverts in confirmations.",
+      "¹ Replies to this go to a real inbox.",
+      "¹ The small print is on the website, in a readable size."
+    ]
+  },
+  "order_dispatch": {
+    "subjects": [
+      "{order} has left",
+      "Dispatched: {order}",
+      "On its way: {order}",
+      "Your parcel for {order}",
+      "{order} is with the carrier",
+      "Sent: {order}",
+      "{order}: dispatch note",
+      "Tracking for {order}",
+      "{order} is out of the door",
+      "Parcel leaving: {order}"
+    ],
+    "bodies": [
+      "Hello {first},\n\n{order} has been dispatched with {carrier}. Tracking number: {tracking}.\n\nExpected by {eta}.\n\n{sign}",
+      "Hello {first},\n\nYour parcel left today. Carrier: {carrier}. Tracking: {tracking}. Expected: {eta}.\n\n{sign}",
+      "Dear {first},\n\nWe've given {order} to {carrier}. The tracking number is {tracking}. They estimate {eta}.\n\n{sign}",
+      "Hello {first},\n\nGood news, plainly put: {order} is on its way. {carrier}, tracking {tracking}, expected {eta}.\n\n{sign}",
+      "Hi {first},\n\nIt has gone. {carrier} have it, and the tracking number is {tracking}. They expect to deliver by {eta}.\n\n{sign}",
+      "Hello {first},\n\nParcel packed and handed over. Carrier {carrier}; tracking {tracking}; expected {eta}. If it doesn't arrive, write to us before you write to anybody else.\n\n{sign}",
+      "Dear {first},\n\n{order} was dispatched this morning with {carrier} (tracking {tracking}). Estimated delivery: {eta}.\n\n{sign}",
+      "Hello {first},\n\nThis is the dispatch note for {order}. Carrier: {carrier}. Reference: {tracking}. Estimated arrival: {eta}.\n\n{sign}",
+      "Hello {first},\n\nYour order has been packed by Phileas Fogg, who has written the time on the box. It is now with {carrier}, tracking {tracking}, expected {eta}.\n\n{sign}",
+      "Hi {first},\n\n{order} is out. The carrier is {carrier} and the tracking number is {tracking}. Expected {eta}.\n\n{sign}"
+    ],
+    "chilled": [
+      "Hello {first},\n\nYour chilled parcel for {order} left today in its insulated box with {carrier}. Tracking: {tracking}. Please put the contents in a fridge when it arrives. Expected {eta}.\n\n{sign}",
+      "Hello {first},\n\n{order} is chilled and on its way with {carrier} (tracking {tracking}). Expected {eta}. Please do not leave it on a doorstep in the sun.\n\n{sign}",
+      "Dear {first},\n\nThe sandwiches, or whatever else is cold, have left with {carrier}. Tracking {tracking}. Expected {eta}. Please refrigerate on arrival.\n\n{sign}"
+    ]
+  },
+  "order_cancelled": {
+    "subjects": [
+      "{order} cancelled",
+      "Cancellation of {order}",
+      "{order}: cancelled as asked",
+      "Your order {order} will not be sent"
+    ],
+    "bodies": [
+      "Hello {first},\n\n{order} has been cancelled. Any payment taken will go back to the card you used.\n\n{sign}",
+      "Hello {first},\n\nAs requested, {order} will not be sent. Refunds can take a few working days to show.\n\n{sign}",
+      "Dear {first},\n\nWe have cancelled {order}. Nothing was packed. If this was a mistake, order again and we will be glad to see you.\n\n{sign}",
+      "Hello {first},\n\nThis is to confirm {order} is cancelled. We have not charged you for it.\n\n{sign}"
+    ]
+  },
+  "payment_failed": {
+    "subjects": [
+      "Payment for {order} did not go through",
+      "{order}: payment problem",
+      "Your card was declined: {order}",
+      "We could not take payment for {order}"
+    ],
+    "bodies": [
+      "Hello {first},\n\nThe payment for {order} did not go through, and we have not taken any money. If you'd like to try again, the order is on your account page.\n\n{sign}",
+      "Hello {first},\n\nYour bank declined the payment for {order}. Nothing has been charged. You can try a different card whenever you like.\n\n{sign}",
+      "Dear {first},\n\nWe could not take payment for {order}, so it has not been packed. Try again on the website, or reply and we'll help.\n\n{sign}"
+    ]
+  },
+  "supplier": {
+    "po_sent": {
+      "subjects": [
+        "Purchase order {po}",
+        "Order {po} from Overthought & Co.",
+        "New order: {po}",
+        "{po}: please confirm",
+        "Our order {po}",
+        "Order for {supplier_short}: {po}",
+        "{po} for your attention",
+        "Purchase order {po}, due {due}"
+      ],
+      "bodies": [
+        "Good morning,\n\nPlease find our purchase order {po}:\n\n{lines}\n\nWe would like it by {due}. Please confirm you can do that.\n\n{sign}",
+        "Hello,\n\nOrder {po} below.\n\n{lines}\n\nRequired by {due}. A reply to confirm the date would be most useful.\n\n{sign}",
+        "Dear all at {supplier},\n\nWe're ordering again.\n\n{lines}\n\nPO: {po}. Due: {due}. Thank you.\n\n{sign}",
+        "Hello,\n\nPurchase order {po} attached in text:\n\n{lines}\n\nCould you confirm quantity and delivery date?\n\n{sign}",
+        "Good afternoon,\n\nThis is {po}:\n\n{lines}\n\nWe have stock running down on these and would like them by {due}.\n\n{sign}",
+        "Hello,\n\nWe'd like to place order {po}.\n\n{lines}\n\nDelivery to the Market Hindle workshop, please, by {due}.\n\n{sign}",
+        "Dear {supplier_short},\n\nOrder {po} follows. We'd like to receive it by {due}; please tell me at once if that cannot be met.\n\n{lines}\n\n{sign}",
+        "Hello,\n\nOur order {po}:\n\n{lines}\n\nPrices as per our agreement. By {due} if you can.\n\n{sign}",
+        "Good morning,\n\nPlease supply as follows under {po}.\n\n{lines}\n\nRequired {due}.\n\n{sign}",
+        "Hello,\n\nHere is order {po}. The lines are below and the date we need them by is {due}.\n\n{lines}\n\n{sign}",
+        "Dear {supplier_short},\n\nWe'd like the following, order number {po}. Please acknowledge.\n\n{lines}\n\nWe need it by {due}.\n\n{sign}",
+        "Hello,\n\nA new order, {po}.\n\n{lines}\n\nThank you. Delivery by {due} if at all possible.\n\n{sign}"
+      ]
+    },
+    "confirmed": {
+      "subjects": [
+        "Re: Purchase order {po}",
+        "Confirmed: {po}",
+        "Order {po} acknowledged",
+        "Re: Order {po} from Overthought & Co.",
+        "{po}: confirmed for {due}",
+        "Re: {po}: please confirm"
+      ],
+      "bodies": [
+        "Hello,\n\nThank you for order {po}. We confirm delivery by {due}.\n\nDespatch office, {supplier}",
+        "Good morning,\n\nOrder {po} received and in the diary. We expect to deliver by {due}.\n\nRegards,\n{supplier}",
+        "Hello,\n\nConfirmed: {po}. It will be with you by {due}.\n\nSales desk, {supplier}",
+        "Dear Mr Crusoe,\n\nWe have {po}. We will have it ready for {due}.\n\nKind regards,\n{supplier}",
+        "Hello,\n\nThanks for {po}. All lines are in hand. Due date {due} stands.\n\n{supplier}",
+        "Hello,\n\n{po} acknowledged. We aim for {due} and will tell you if that changes.\n\nOffice, {supplier}",
+        "Good afternoon,\n\nYour order {po} is in our system. Delivery by {due}.\n\nBest,\n{supplier}",
+        "Hello,\n\nReceived with thanks. {po} is scheduled for {due}.\n\n{supplier}"
+      ]
+    },
+    "delay": {
+      "subjects": [
+        "Delay to {po}",
+        "{po}: running late",
+        "Update on order {po}",
+        "Revised date for {po}",
+        "{po}: not ready yet",
+        "Sorry: {po}"
+      ],
+      "bodies": [
+        "Hello,\n\nWe are sorry to say {po} will not be ready by {due}. We now expect to send it on {new_date}. We apologise for the delay.\n\n{supplier}",
+        "Good morning,\n\nA quick note to say {po} is running behind. New date: {new_date}. The original was {due}.\n\nRegards,\n{supplier}",
+        "Dear Mr Crusoe,\n\nI must tell you that {po} has been delayed. We now hope to dispatch on {new_date}. I'm sorry for the inconvenience.\n\n{supplier}",
+        "Hello,\n\nOrder {po} is not going to make {due}. Our new estimate is {new_date}. We will write again if it moves.\n\nDespatch office, {supplier}",
+        "Hello,\n\nWe've had a hold-up with the materials for {po}. It should be with you on or around {new_date}.\n\n{supplier}",
+        "Good afternoon,\n\nOur apologies: {po} will be late. Expected {new_date}. Please call if that causes you a problem.\n\n{supplier}",
+        "Hello,\n\nA short note: {po} was promised for {due} and will now be {new_date}. Sorry.\n\n{supplier}",
+        "Hello,\n\nThe batch for {po} was not finished in time. We plan to send it on {new_date}.\n\nSales desk, {supplier}"
+      ]
+    },
+    "invoice": {
+      "subjects": [
+        "Invoice for {po}",
+        "Invoice {inv}: {po}",
+        "Our invoice: order {po}",
+        "Invoice attached: {po}",
+        "{po}: invoice",
+        "Account: invoice {inv}"
+      ],
+      "bodies": [
+        "Hello,\n\nInvoice {inv} for order {po}. Amount due: {amount}, payable in {terms} days.\n\nAccounts, {supplier}",
+        "Good morning,\n\nPlease find our invoice {inv} for {po}: {amount}. Payment terms are {terms} days.\n\nRegards,\n{supplier}",
+        "Hello,\n\nInvoice {inv}. Order {po}. Total {amount}. Terms: {terms} days from today.\n\nAccounts office, {supplier}",
+        "Dear Mr Cratchit,\n\nHere is invoice {inv} against {po}, for {amount}. Please pay within {terms} days.\n\n{supplier}",
+        "Hello,\n\nInvoice for goods delivered under {po}: {amount}. Reference {inv}. Thank you for your custom.\n\n{supplier}",
+        "Hello,\n\nWe attach invoice {inv} for {po}, {amount}. Due in {terms} days.\n\nAccounts, {supplier}",
+        "Good afternoon,\n\nInvoice {inv}, {amount}, for goods supplied on {po}. Terms {terms} days.\n\n{supplier}",
+        "Hello,\n\nPlease treat this as the invoice for {po}. Reference {inv}. Amount {amount}.\n\n{supplier}"
+      ]
+    },
+    "remittance": {
+      "subjects": [
+        "Payment sent: {po}",
+        "Remittance for invoice {inv}",
+        "Paid: {po}",
+        "Payment advice, {po}",
+        "Remittance advice: {inv}",
+        "We have paid {inv}"
+      ],
+      "bodies": [
+        "Hello,\n\nWe have paid {amount} for {po} (your invoice {inv}). It should be with you in a day or two.\n\nBob Cratchit\nOverthought & Co.",
+        "Good morning,\n\nPayment for {inv}, {amount}, has been sent today. Please tell me if it does not arrive.\n\nB. Cratchit",
+        "Hello,\n\nRemittance advice: invoice {inv}, order {po}, {amount}. Paid today.\n\nBob Cratchit, Overthought & Co.",
+        "Dear all at {supplier},\n\nI have sent {amount} against {inv}. I hope it reaches you without trouble.\n\nBob Cratchit",
+        "Hello,\n\nPaid: {inv}, {amount}. With thanks for {po}.\n\nAccounts, Overthought & Co.",
+        "Hello,\n\nThis is to say payment of {amount} was made today for invoice {inv}. Please check it against your books.\n\nB. Cratchit"
+      ]
+    },
+    "sign_buyer": [
+      "Robinson Crusoe\nBuying, Overthought & Co.",
+      "R. Crusoe\nOverthought & Co.",
+      "Robinson Crusoe\nBuyer",
+      "Regards,\nRobinson Crusoe"
+    ]
+  },
+  "newsletter": {
+    "subjects": [
+      "{campaign}",
+      "News from Overthought & Co.",
+      "{campaign}: details inside",
+      "A note about {campaign}",
+      "This month, plainly",
+      "{campaign}, with a small print",
+      "What we are doing and why",
+      "Overthought & Co.: this week",
+      "{campaign}. Read the footnote.",
+      "Something new, and a reminder",
+      "A short letter from the workshop",
+      "{campaign}: we have thought about it"
+    ],
+    "bodies": [
+      "Hello,\n\n{campaign} starts today. {offer}\n\nThe usual conditions apply, and the small print is on the site in a readable size.\n\n{sign}",
+      "Hello,\n\nA short note. {campaign} is under way. {offer}\n\nIf it isn't for you, do not worry. We will not mind.\n\n{sign}",
+      "Dear customer,\n\nWe have been thinking about {campaign}. {offer}\n\nAs always, it works as described.\n\n{sign}",
+      "Hello,\n\nHere is what's happening: {campaign}. {offer}\n\nWe've written it down so you don't have to remember.\n\n{sign}",
+      "Hello,\n\n{campaign}. {offer}\n\nNothing here is urgent, but some of it is nice.\n\n{sign}",
+      "Hello,\n\nThis week we are doing {campaign}. {offer}\n\nThere is a footnote in the shop that you may enjoy. We did.\n\n{sign}",
+      "Hello,\n\nFor those who read the whole email: {campaign}. {offer}\n\nThank you for reading it.\n\n{sign}",
+      "Dear friend of the shop,\n\n{campaign} is here. {offer}\n\nWe have tested everything, and have opinions about all of it.\n\n{sign}",
+      "Hello,\n\nIn brief: {campaign}. {offer}\n\nIn full: it is on the website.\n\n{sign}",
+      "Hello,\n\nWe're sending this because {campaign} seemed worth mentioning. {offer}\n\nYou can stop hearing from us by replying with one word.\n\n{sign}"
+    ],
+    "offers": [
+      "Use code {code} for {pct}% off.",
+      "Code {code} takes {pct}% off until it ends.",
+      "There is no code. It is simply on the site.",
+      "Take {pct}% off with {code}.",
+      "Nothing to enter; the price is shown at checkout.",
+      "Mention {code} at checkout. It works for {pct}% off."
+    ]
+  },
+  "press": {
+    "items": [
+      {
+        "subjects": [
+          "Gift guide: would you send samples?",
+          "Our Christmas gift guide",
+          "Gift guide 2026: request"
+        ],
+        "bodies": [
+          "Hello,\n\nI'm putting together a gift guide for a regional paper and would like to include something from your range. Could you send details and a sample for photography?\n\nThanks,\n{who}\n{org}",
+          "Hello,\n\nWe run a small weekly column on practical gifts. Would you be happy to be listed? We'd need a picture and a price.\n\n{who}, {org}"
+        ],
+        "reply": [
+          "Hello {who},\n\nThank you. We are happy to be listed. Pictures and prices are on the press page; samples we can lend, but not give.\n\nMr Toad\nMarketing"
+        ]
+      },
+      {
+        "subjects": [
+          "Podcast invitation",
+          "Would you come on the show?",
+          "Interview request"
+        ],
+        "bodies": [
+          "Hello,\n\nI host a small podcast about ordinary objects. Would someone from the company talk to us for twenty minutes? We record on Thursdays.\n\n{who}\n{org}",
+          "Hello,\n\nOur listeners like companies that take small things seriously. Can we interview someone?\n\n{who}, {org}"
+        ],
+        "reply": [
+          "Hello {who},\n\nThank you for asking. We'd be glad to. Please suggest two Thursdays and we will say which suits.\n\nMr Toad"
+        ]
+      },
+      {
+        "subjects": [
+          "Stockist enquiry",
+          "Selling your products in our shop",
+          "Wholesale"
+        ],
+        "bodies": [
+          "Hello,\n\nWe run a small shop and would like to stock some of your products. Do you have wholesale terms?\n\n{who}, {org}",
+          "Hello,\n\nCustomers have asked about your sandwich and your pen. Could we buy a few to sell?\n\n{who}\n{org}"
+        ],
+        "reply": [
+          "Hello {who},\n\nThank you. We don't have standard wholesale terms yet. If you tell us what you'd like and how often, we'll work out a price.\n\nMr Toad\nOverthought & Co."
+        ]
+      },
+      {
+        "subjects": [
+          "Collaboration idea",
+          "A joint thing?",
+          "Working together"
+        ],
+        "bodies": [
+          "Hello,\n\nWe think our two businesses could do something together for the autumn. Could we have a call?\n\n{who}, {org}",
+          "Hello,\n\nWe make a different kind of ordinary thing and think yours would sit well beside it. Interested?\n\n{who}\n{org}"
+        ],
+        "reply": [
+          "Hello {who},\n\nThank you. We'll think about it properly, which takes us a while. Please send a few lines on what you have in mind.\n\nMr Toad"
+        ]
+      },
+      {
+        "subjects": [
+          "Local news piece",
+          "Small business feature",
+          "Feature on the shop"
+        ],
+        "bodies": [
+          "Hello,\n\nWe'd like to write about local firms that have grown in five years. Could someone speak to us?\n\n{who}\n{org}",
+          "Hello,\n\nThe newsroom here is keen to cover independent companies. May we have a few minutes with someone?\n\n{who}, {org}"
+        ],
+        "reply": [
+          "Hello {who},\n\nThank you. Mr Fezziwig would be glad to speak to you. Please suggest a time.\n\nMr Toad"
+        ]
+      },
+      {
+        "subjects": [
+          "Correction request",
+          "A small error on your site",
+          "Typo?"
+        ],
+        "bodies": [
+          "Hello,\n\nI noticed a small slip on one of your pages and wanted to tell you in case it's useful.\n\n{who}",
+          "Hello,\n\nA reader pointed out a mistake in a footnote. We thought you'd want to know.\n\n{who}, {org}"
+        ],
+        "reply": [
+          "Hello {who},\n\nThank you for telling us. It has been corrected, and a footnote has been added admitting it.\n\nMr Toad"
+        ]
+      }
+    ],
+    "orgs": [
+      "The Hindle Gazette",
+      "Small Things Weekly",
+      "The Marrowfield Mercury",
+      "A Fine Mess (podcast)",
+      "Everyday Objects Review",
+      "The Plain Dealer",
+      "Kettle & Co. gifts",
+      "Oldmarrow Notes"
+    ],
+    "people": [
+      "Alice Liddell",
+      "Phoebe Pettigrew",
+      "Jem Rowe",
+      "Dinah Fell",
+      "Tobias Brand",
+      "Hester Clay",
+      "Lucas Brindle",
+      "Marian Pell"
+    ]
+  },
+  "junk": {
+    "senders": [
+      "Prize Desk",
+      "Account Services",
+      "Billing",
+      "Dear Friend",
+      "Quick Loans",
+      "Parcel Notice",
+      "Domain Support",
+      "Invoices Dept"
+    ],
+    "subjects": [
+      "You have won a prize",
+      "Your account will be closed",
+      "Invoice attached, please pay",
+      "Urgent: parcel waiting",
+      "Make money from home",
+      "Your domain is expiring",
+      "Final reminder",
+      "Confirm your details",
+      "Congratulations",
+      "Cheap loans, no questions",
+      "Your password has expired",
+      "Re: your payment",
+      "A gift for you",
+      "Free sample",
+      "Action required",
+      "Important notice"
+    ],
+    "bodies": [
+      "Dear customer,\n\nYou have been selected. Click the link below to claim.\n\nhttp://claim.example/now",
+      "Your account will be suspended unless you confirm your details today.\n\nhttp://confirm.example/account",
+      "Please see the attached invoice and pay at once.\n\n(attachment removed)",
+      "We tried to deliver a parcel but nobody was in. Pay a small fee to arrange another attempt.\n\nhttp://parcel.example/fee",
+      "Earn more working from home. No skills needed. Reply for details.",
+      "Your domain name expires in 2 days. Renew now at a special price.",
+      "Dear friend, I am a person of great fortune and need your help to move some money.",
+      "Hello, we noticed your website could rank higher. Reply to find out how.",
+      "Confirm your password within 24 hours or lose access.",
+      "Get a loan today. No credit check. Fast.",
+      "Congratulations! You are our millionth visitor. Collect your prize.",
+      "Re: payment. Please see below. Link: http://pay.example/now"
+    ]
+  },
+  "pitch": {
+    "subjects": [
+      "Quick question about your website",
+      "Can we help with your search ranking?",
+      "A better way to take card payments",
+      "Your packaging could cost less",
+      "Would you like more reviews?",
+      "Cut your delivery costs",
+      "Partnership opportunity",
+      "Free audit of your shop",
+      "Hello from a design studio",
+      "Stock control software, 20% off",
+      "Accounting made friendlier",
+      "Video for your products"
+    ],
+    "bodies": [
+      "Hello,\n\nWe help small shops rank higher in search. May I send you a short report on yours?\n\n{who}\n{org}",
+      "Hello,\n\nOur card terminal is cheaper than most. Could we have ten minutes to explain?\n\n{who}, {org}",
+      "Hello,\n\nWe make boxes for small companies that ship things. We noticed yours. May we send a sample?\n\n{who}\n{org}",
+      "Hello,\n\nWe collect reviews for online shops. We have helped businesses like yours. Interested?\n\n{who}, {org}",
+      "Hello,\n\nWe've worked out that we can cut your parcel costs, probably. Can I show you how?\n\n{who}\n{org}",
+      "Hello,\n\nWe are a small studio. We'd love to make a short film about your products.\n\n{who}, {org}",
+      "Hello,\n\nOur stock software takes five minutes to set up. Here is a link to a demonstration.\n\n{who}\n{org}",
+      "Hello,\n\nI saw your shop and liked it. We offer a free audit of any online shop. Reply if you'd like one.\n\n{who}, {org}"
+    ],
+    "orgs": [
+      "Brightway Growth",
+      "ClickRight Ltd",
+      "Boxwell Packaging",
+      "Reviewly",
+      "Parcelpoint Services",
+      "Frame Studio",
+      "Shelfsmart",
+      "Ledgerly",
+      "Northgate Marketing",
+      "Tidyshop Systems"
+    ],
+    "people": [
+      "Craig Dawlish",
+      "Philippa Moon",
+      "Dev Rao",
+      "Annie Pell",
+      "Gareth Swift",
+      "Rhona Birch",
+      "Tim Cole",
+      "Jessamy Ford"
+    ]
+  },
+  "internal": {
+    "weekly_figures": {
+      "subjects": [
+        "Weekly figures: {week}",
+        "Figures for the week to {week}",
+        "The week in numbers: {week}",
+        "Week ending {week}",
+        "Weekly numbers, {week}"
+      ],
+      "bodies": [
+        "Dear Mr Fezziwig,\n\nI hope I am not troubling you. The figures for the week to {week}: {orders} orders, takings {revenue}, refunds {refunds}. Everything is entered and checked, I believe.\n\nYours, B. Cratchit",
+        "Dear Mr Fezziwig,\n\nWeek to {week}. Orders: {orders}. Takings: {revenue}. Refunds: {refunds}. I have checked them twice, and Mr Scrooge once.\n\nBob Cratchit",
+        "Mr Fezziwig,\n\nHere are the figures for the week to {week}. {orders} orders came to {revenue}; {refunds} went back in refunds. Please tell me if anything looks odd.\n\nB. Cratchit",
+        "Dear Mr Fezziwig,\n\nWeek to {week}: {orders} orders, {revenue} taken, {refunds} refunded. I am sorry it is not later; I wanted to be sure.\n\nBob",
+        "Dear Mr Fezziwig,\n\nThe week to {week} in short: {orders} orders, {revenue} in, {refunds} out in refunds. The books agree with the bank.\n\nYours, Bob Cratchit"
+      ],
+      "replies": [
+        "Thank you, Bob. {orders} orders for the week to {week}, and {revenue} taken. Very good. Go home on time tonight, please.\n\nFezziwig",
+        "Many thanks, Bob. {orders} orders is a fine thing to read on a Monday. Put the kettle on.\n\nFezziwig",
+        "Thank you. {revenue} for the week to {week}. All well. I'll tell the others.\n\nFezziwig",
+        "Capital, Bob. Thank you for being so careful with the {orders}.\n\nFezziwig",
+        "Received, with thanks. {orders} orders and {revenue} is a week to be pleased with, or at least to accept calmly.\n\nFezziwig",
+        "Bob, thank you. I see {revenue} and {orders} orders. Do not stay late over it.\n\nFezziwig",
+        "Thank you, Bob. I have read the figures for {week}. They are in good order, which is thanks to you.\n\nFezziwig",
+        "Good, good. {orders} orders in the week to {week}. Please tell Mr Scrooge I said it was well done, and then please leave before he answers.\n\nFezziwig",
+        "Thank you. Another careful week, to {week}. I shall mention it at the meeting.\n\nFezziwig",
+        "Noted with thanks. {revenue}. A cup of tea is on its way to your desk.\n\nFezziwig"
+      ]
+    },
+    "cost_query": {
+      "subjects": [
+        "Query: {what}",
+        "{what}: why?",
+        "Entry {ref}",
+        "Please explain {ref}",
+        "A cost I do not understand",
+        "Query on {ref}"
+      ],
+      "bodies": [
+        "Cratchit,\n\nEntry {ref}: {amount} for {what}. Why? I should like it explained by the end of the day.\n\nScrooge",
+        "Bob,\n\nI see {amount} against {what} ({ref}). Is that right? It looks like more than last time.\n\nE. Scrooge",
+        "Cratchit,\n\n{what}, {amount}. I have looked at the invoice and cannot find the reason. Please advise.\n\nScrooge",
+        "Mr Cratchit,\n\nThe entry {ref} for {what} is {amount}. I would like to know if it could have been less.\n\nScrooge",
+        "Bob,\n\nQuery on {ref}: {amount}. If that is the proper price, say so. If not, say why not.\n\nScrooge"
+      ],
+      "replies": [
+        "Dear Mr Scrooge,\n\nI have checked {ref}. The amount is correct as invoiced, {amount}. I am very sorry if it is more than expected. I have attached the paperwork to the entry.\n\nBob",
+        "Mr Scrooge,\n\nI looked again and {ref} is right: {amount} for {what}. I'll note the reason on the entry so it isn't asked twice.\n\nB. Cratchit",
+        "Dear Mr Scrooge,\n\nYes, {amount} is what was charged. I think it is fair, but I will ask the supplier whether they can do better next time.\n\nBob Cratchit",
+        "Mr Scrooge,\n\nI have gone through it line by line. {ref} stands. I hope that is satisfactory.\n\nBob"
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  // Node 24 runs the .ts files directly (type stripping), so tsc only checks types here: noEmit.
+  // See https://nodejs.org/api/typescript.html for why erasableSyntaxOnly and verbatimModuleSyntax are on.
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "lib": ["ES2024"],
+    "types": ["node"],
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // The older JavaScript is not type-checked yet. TypeScript code reaches it through the hand-written
+    // declaration files next to it (for example simulation/simulator/core.d.mts), which describe only what the TypeScript uses.
+    "allowJs": false,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "activity-generation/**/*.ts",
+    "integrations/**/*.ts",
+    "observability/**/*.ts",
+    "simulation/**/*.ts",
+    "infrastructure/**/*.ts",
+    "tests/**/*.ts",
+    "examples/**/*.ts",
+    "bin/**/*.ts",
+    "**/*.d.mts"
+  ],
+  "exclude": ["node_modules", "business/site", "applications"]
+}

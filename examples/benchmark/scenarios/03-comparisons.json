@@ -1,0 +1,268 @@
+[
+  {
+    "id": "comparisons-01",
+    "category": "comparisons",
+    "title": "Skips or Doesn't Skip",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor compares the two stone sets.",
+    "turns": [
+      "Skips or Doesn't Skip? What's the actual difference?"
+    ],
+    "records": [
+      "skimming-stones",
+      "OT-STON-SKP-5",
+      "OT-STON-RND-5"
+    ],
+    "expected": {
+      "answer": "Skips (£12 for five) are flat and thin and made to skip; Doesn't Skip (£6 for five) are round and thick and will not skip. The Boulder is a separate single large stone.",
+      "must_say": [
+        "Skips",
+        "£12",
+        "Doesn't Skip",
+        "£6",
+        "flat",
+        "round"
+      ],
+      "must_not_say": [
+        "Doesn't Skip skip well",
+        "£18 for five"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "skimming-stones"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "comparisons-02",
+    "category": "comparisons",
+    "title": "Pocket Jungle or Starter Puddle",
+    "difficulty": 2,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor wants a gift and compares two desk-home products using real specs.",
+    "turns": [
+      "Gift for a friend who likes weird home stuff. Pocket Jungle or Starter Puddle?",
+      "Which one's less hassle?"
+    ],
+    "records": [
+      "pocket-jungle",
+      "starter-puddle"
+    ],
+    "expected": {
+      "answer": "Compares them: Pocket Jungle £42, live plant, mist every 1 to 2 weeks, Sooner only; Starter Puddle £58, 60 cm tray arrives empty, needs a level surface, no upkeep. Neither is better outright.",
+      "must_say": [
+        "£42",
+        "£58",
+        "Pocket Jungle",
+        "Starter Puddle",
+        "level surface"
+      ],
+      "must_not_say": [
+        "the puddle is waterproof for outdoors only",
+        "Jungle needs daily watering"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "compare_products",
+        "input_includes": {
+          "ids": [
+            "pocket-jungle",
+            "starter-puddle"
+          ]
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [],
+    "ideal": [
+      [
+        "compare_products",
+        {
+          "ids": [
+            "pocket-jungle",
+            "starter-puddle"
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "id": "comparisons-03",
+    "category": "comparisons",
+    "title": "Paper Aeroplane: one or five",
+    "difficulty": 1,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor asks whether the pack of five is worth it.",
+    "turns": [
+      "Is the pack of five aeroplanes worth it or should I just get one?"
+    ],
+    "records": [
+      "paper-aeroplane",
+      "OT-PLAN-1",
+      "OT-PLAN-5"
+    ],
+    "expected": {
+      "answer": "One is £4, a pack of five is £15, so cheaper per plane in the pack. All five are identical.",
+      "must_say": [
+        "£4",
+        "£15",
+        "five identical"
+      ],
+      "must_not_say": [
+        "five different designs",
+        "£20"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "get_product",
+        "input_includes": {
+          "id": "paper-aeroplane"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": []
+  },
+  {
+    "id": "comparisons-04",
+    "category": "comparisons",
+    "title": "Blip or Boombox Mini warranty",
+    "difficulty": 3,
+    "customer_id": null,
+    "channel": "web",
+    "setup": "Anonymous visitor assumes the battery is covered. Both have 24-month warranties; battery fade to 80% is wear.",
+    "turns": [
+      "Blip or Boombox Mini, which has the better warranty? I assume the battery's covered on both?"
+    ],
+    "records": [
+      "blip",
+      "boombox-mini"
+    ],
+    "expected": {
+      "answer": "Both have a 24-month warranty against faults in how they were made. Battery fade to 80% is wear and not covered, and drops and liquid damage are not covered. Blip £149, Boombox Mini £89.",
+      "must_say": [
+        "24 months",
+        "£149",
+        "£89",
+        "battery fade",
+        "wear"
+      ],
+      "must_not_say": [
+        "battery is covered",
+        "lifetime warranty"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "compare_products",
+        "input_includes": {
+          "ids": [
+            "blip",
+            "boombox-mini"
+          ]
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [],
+    "ideal": [
+      [
+        "compare_products",
+        {
+          "ids": [
+            "blip",
+            "boombox-mini"
+          ]
+        }
+      ]
+    ]
+  }
+]

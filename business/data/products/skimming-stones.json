@@ -1,0 +1,338 @@
+{
+  "id": "skimming-stones",
+  "code": "STON",
+  "name": "Skimming Stones",
+  "category": "outdoors",
+  "status": "active",
+  "available_from": null,
+  "tagline": "Ones that skip, and ones that don't.",
+  "summary": "Flat stones that skip, round stones that don't, and one very large stone. Slate offcuts from a quarry.",
+  "concept": "Tumbled slate stones in three kinds. Skips are flat and thin. Doesn't Skip are round and thick. The Boulder is one very large stone.",
+  "why_it_exists": "Flat stones are easy to find only when you don't need them. These are picked for the job, and so are the ones that won't do it.",
+  "target_customer": "People who skim stones, and people who want a very large stone.",
+  "physical": {
+    "form": "Tumbled slate stones: flat discs (Skips), round thick stones (Doesn't Skip) and one very large stone (The Boulder).",
+    "materials": [
+      "Slate offcuts from a working quarry",
+      "Tumbled smooth in a drum",
+      "Unwaxed"
+    ],
+    "dimensions": "Skips: 45 to 65 mm across, 5 to 8 mm thick. Doesn't Skip: 45 to 60 mm across, 25 to 40 mm thick. The Boulder: about 250 mm across.",
+    "weight": "Skips about 55 g each. Doesn't Skip about 120 g each. The Boulder about 4 kg."
+  },
+  "options": [
+    {
+      "name": "Type",
+      "values": [
+        "Skips (5)",
+        "Doesn't Skip (5)",
+        "The Boulder (1)"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "OT-STON-SKP-5",
+      "name": "Skips, 5 stones",
+      "options": {
+        "Type": "Skips (5)"
+      },
+      "price": 12,
+      "stock": 90,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-STON-RND-5",
+      "name": "Doesn't Skip, 5 stones",
+      "options": {
+        "Type": "Doesn't Skip (5)"
+      },
+      "price": 6,
+      "stock": 120,
+      "restock_date": null
+    },
+    {
+      "sku": "OT-STON-BLD",
+      "name": "The Boulder, 1 stone",
+      "options": {
+        "Type": "The Boulder (1)"
+      },
+      "price": 18,
+      "stock": 8,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "The Skips are five flat stones, which are thin enough to skip across still water.",
+    "The Doesn't Skip stones are round and thick, so they sink, and we are honest about that.",
+    "The Boulder is one very large stone of about 4 kg, and it is just a big stone.",
+    "All of them are slate offcuts from a quarry, so no stone was taken from a beach.",
+    "They are priced from £6, so a handful costs less than lunch."
+  ],
+  "arrives": "The small stones come in a brown card sleeve inside a padded paper envelope. The Boulder travels in a sturdy box with card padding, because it is heavy, so it goes Soon only. When the parcel lands, take it in with both hands if it is the Boulder.",
+  "specs": [
+    [
+      "Size",
+      "Skips: 45 to 65 mm across, 5 to 8 mm thick. Doesn't Skip: 45 to 60 mm across, 25 to 40 mm thick. The Boulder: about 250 mm across."
+    ],
+    [
+      "Weight",
+      "Skips about 55 g each (about 275 g for five). Doesn't Skip about 120 g each (about 600 g for five). The Boulder about 4 kg."
+    ],
+    [
+      "Made of",
+      "Slate offcuts from a working quarry, tumbled smooth in a drum. Unwaxed."
+    ],
+    [
+      "Colour",
+      "Natural slate: grey, blue-grey and some darker banding. Each stone differs."
+    ],
+    [
+      "Skips",
+      "Flat. 5 stones, in a card sleeve."
+    ],
+    [
+      "Doesn't Skip",
+      "Round and thick. 5 stones, in a card sleeve."
+    ],
+    [
+      "The Boulder",
+      "One stone, in a sturdy box. Standard delivery only."
+    ],
+    [
+      "Delivery",
+      "Soon only"
+    ],
+    [
+      "Care",
+      "Rinse in fresh water if you like. They need nothing else."
+    ]
+  ],
+  "how_it_works": "Hold a Skips stone between thumb and curled finger. Throw it low and flat, with spin, at still water. Doesn't Skip stones sink. The Boulder is a stone.",
+  "in_the_box": [
+    "Skips or Doesn't Skip: five stones in a card sleeve",
+    "The Boulder: one stone in a sturdy box"
+  ],
+  "accessories": [
+    {
+      "sku": "OT-STON-POUCH",
+      "name": "Stone Pouch",
+      "kind": "accessory",
+      "price": 16,
+      "stock": 70,
+      "tagline": "A pouch that holds five stones.",
+      "description": "A waxed canvas drawstring pouch that holds five Skips or five Doesn't Skip stones, so they do not rattle around in a bag or pocket. It does not fit The Boulder.",
+      "image": "img/branded/acc-stones-pouch.jpg",
+      "fits": [
+        "skimming-stones"
+      ],
+      "specs": [
+        [
+          "Size",
+          "14 cm wide x 13 cm tall x 6 cm deep (base)"
+        ],
+        [
+          "Opening",
+          "About 10 cm wide when the drawstring is loose"
+        ],
+        [
+          "Capacity",
+          "5 stones: five Skips (45 to 65 mm across), or five Doesn't Skip (45 to 60 mm across, about 600 g). Does not fit The Boulder."
+        ],
+        [
+          "Weight",
+          "45 g empty"
+        ],
+        [
+          "Made of",
+          "Waxed cotton canvas, polyester cord, plastic cord toggle"
+        ],
+        [
+          "Colour",
+          "Orange with a pink cord and a sky blue toggle"
+        ],
+        [
+          "Closing",
+          "Drawstring with a toggle"
+        ],
+        [
+          "In the pack",
+          "1 pouch. Stones not included."
+        ],
+        [
+          "Care",
+          "Wipe with a damp cloth. Do not machine wash."
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Stone Pouch",
+      "works": true,
+      "note": "It holds five Skips or Doesn't Skip stones. It does not fit The Boulder."
+    },
+    {
+      "with": "starter-puddle",
+      "works": false,
+      "note": "Do not put stones in the Starter Puddle. They chip it."
+    }
+  ],
+  "packaging": "Small stones come in a kraft card sleeve in a padded paper envelope. The Boulder is packed in a sturdy box with card padding. All card is recyclable.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty for a stone that arrives cracked through. Chips from throwing and stones lost in water are not covered. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Rinse in fresh water if you like. They don't need anything else.",
+    "Take stones home or leave them where you found a flat spot. Do not leave them in flower beds."
+  ],
+  "safety": [
+    "Throw only at open water with nobody in the way.",
+    "The Boulder weighs about 4 kg. Keep it off your feet.",
+    "Small stones are a choking hazard for young children."
+  ],
+  "delivery": {
+    "methods": [
+      "standard"
+    ],
+    "note": "Soon only. The Boulder is heavy, so it cannot go Sooner."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return stones within 30 days if they have not been thrown and are in their sleeve. Thrown stones cannot be returned. See Returns."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "Stones that skip, and ones that don't",
+    "intro": "Ones that skip, and ones that don't.",
+    "sections": [
+      {
+        "title": "Skips and Doesn't Skip",
+        "body": "Skips are five flat stones for £12. Doesn't Skip are five round stones for £6, and they sink."
+      },
+      {
+        "title": "The Boulder",
+        "body": "One very large stone for £18, about 4 kg. It is not for throwing."
+      },
+      {
+        "title": "Where they come from",
+        "body": "They are slate offcuts from a quarry, tumbled smooth. None are taken from beaches."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "What is the difference?",
+      "a": "Skips are flat and thin and skip on still water. Doesn't Skip stones are round and sink."
+    },
+    {
+      "q": "How many stones do I get?",
+      "a": "Five of Skips or Doesn't Skip. The Boulder is one stone."
+    },
+    {
+      "q": "How big is The Boulder?",
+      "a": "About 250 mm across and about 4 kg."
+    },
+    {
+      "q": "How is The Boulder delivered?",
+      "a": "By Soon delivery."
+    },
+    {
+      "q": "Can I return stones?",
+      "a": "Yes, within 30 days, if they have not been thrown."
+    },
+    {
+      "q": "Does the Stone Pouch fit them?",
+      "a": "It holds five Skips or Doesn't Skip stones. It does not fit The Boulder."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "My Skips stone just sinks.",
+      "steps": [
+        "Hold it between thumb and curled finger.",
+        "Throw it low and flat, with spin, at still water."
+      ],
+      "if_unresolved": "It takes practice. Doesn't Skip stones will never skip."
+    },
+    {
+      "problem": "A stone arrived cracked.",
+      "steps": [
+        "Photograph the stone and the packaging.",
+        "Keep the sleeve."
+      ],
+      "if_unresolved": "Contact support with your order number and the photo."
+    }
+  ],
+  "comparison": {
+    "title": "Which stones",
+    "columns": [
+      "Skips",
+      "Doesn't Skip",
+      "The Boulder"
+    ],
+    "rows": [
+      [
+        "Price",
+        "£12",
+        "£6",
+        "£18"
+      ],
+      [
+        "Stones",
+        "5",
+        "5",
+        "1"
+      ],
+      [
+        "Shape",
+        "Flat",
+        "Round",
+        "Very large"
+      ],
+      [
+        "Skips on water",
+        "Yes, with practice",
+        "No",
+        "No"
+      ],
+      [
+        "Delivery",
+        "Soon only",
+        "Soon only",
+        "Soon only"
+      ]
+    ]
+  },
+  "related": [
+    "paper-aeroplane",
+    "starter-puddle"
+  ],
+  "image": {
+    "file": "img/skimming-stones.jpg",
+    "sweep": "#DCE3E8"
+  },
+  "photography_direction": "Smooth stones in off-white with sky-blue and orange accents on a pale backdrop. Show flat vs round vs large. No people.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. Three flat stones stacked in a gentle pile, matte off-white, one with an orange band, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words SKIMMING STONES in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. Close-up of the thin edge of a flat stone, tumbled and smooth, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words SKIMMING STONES in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. Three groups side by side: five flat stones, five round stones and one very large stone, 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words SKIMMING STONES in a heavy wide sans. No other text anywhere.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. A kraft card sleeve of five flat stones beside a drawstring pouch in sky blue, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words SKIMMING STONES in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. One flat stone caught in mid air above a still pale surface with a single ripple ring, 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words SKIMMING STONES in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale lilac seamless single-colour backdrop. The very large stone alone, centred, long soft shadow, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words SKIMMING STONES in a heavy wide sans. No other text anywhere."
+  },
+  "variant_images": {
+    "option": "Type",
+    "images": {
+      "Skips (5)": "img/branded/skimming-stones-skips.jpg",
+      "Doesn't Skip (5)": "img/branded/skimming-stones-round.jpg",
+      "The Boulder (1)": "img/branded/skimming-stones-boulder.jpg"
+    }
+  }
+}

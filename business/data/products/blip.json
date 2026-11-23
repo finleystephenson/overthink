@@ -1,0 +1,408 @@
+{
+  "id": "blip",
+  "code": "BLIP",
+  "name": "Blip",
+  "category": "tech",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A very small phone. Calls, texts, email.",
+  "summary": "A very small phone with a 3-inch screen. It does calls, texts and email, plus an alarm clock and a torch. £149.",
+  "concept": "Blip is a tiny phone that does calls, texts and email, plus an alarm clock and a torch. It has a 3-inch touchscreen, a battery that lasts days and a USB-C port.",
+  "why_it_exists": "A lot of the time a phone is only needed to ring, to text and to check email. Blip does those and leaves the rest out.",
+  "target_customer": "People who want a second phone, a weekend phone, or a first phone, and who are happy with fewer things on it.",
+  "physical": {
+    "form": "A slim, rounded slab with a 3-inch touchscreen, a matte back and a single power key on the right edge. USB-C on the bottom. A small loop in the frame for a lanyard.",
+    "materials": [
+      "Aluminium frame",
+      "Matte recycled-polymer back",
+      "Toughened glass front",
+      "Soft-touch finish"
+    ],
+    "dimensions": "96 x 52 x 9 mm",
+    "weight": "76 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-BLIP",
+      "name": "Sky",
+      "options": {},
+      "price": 149,
+      "stock": 2,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "You can make calls on Blip.",
+    "You can send texts on Blip.",
+    "You can send and read emails on Blip.",
+    "Blip works as an alarm clock.",
+    "Blip has a torch.",
+    "Blip does not have a camera, apps or a web browser."
+  ],
+  "arrives": "Blip comes in a small brown card box with a pull-out tray, held shut by a paper band. The phone is wrapped in recycled paper and there is no plastic film. Charge it before you set it up; the charger is sold separately.",
+  "specs": [
+    [
+      "Size",
+      "96 x 52 x 9 mm"
+    ],
+    [
+      "Weight",
+      "76 g"
+    ],
+    [
+      "Made of",
+      "Aluminium frame, matte recycled-polymer back, toughened glass front"
+    ],
+    [
+      "Colour",
+      "Sky (off-white body with sky blue, orange and pink accents)"
+    ],
+    [
+      "Display",
+      "3-inch colour touchscreen, 480 x 640"
+    ],
+    [
+      "Does",
+      "Calls (4G, with Wi-Fi calling), texts and email, plus an alarm clock and a torch. No app store, no browser, no camera."
+    ],
+    [
+      "Battery life",
+      "Up to 5 days of normal use. About 10 days on standby (1,800 mAh, not user-removable)"
+    ],
+    [
+      "Charging",
+      "USB-C, about 1 hour from flat. The Blip Charger is sold separately."
+    ],
+    [
+      "Connections",
+      "One nano-SIM, Wi-Fi 5, Bluetooth 5.3, USB-C. No headphone socket. Splash resistant (not independently tested)."
+    ]
+  ],
+  "how_it_works": "Charge it, put in a nano-SIM and follow the setup. Sign in to your email. You make calls and send texts with your normal number.",
+  "in_the_box": [
+    "Blip",
+    "A USB-C cable, 0.5 m",
+    "A SIM tool",
+    "A quick start card",
+    "No plug. The Blip Charger is sold separately."
+  ],
+  "accessories": [
+    {
+      "sku": "OT-BLIP-CASE",
+      "name": "Blip Case",
+      "kind": "accessory",
+      "price": 14,
+      "stock": 90,
+      "tagline": "A soft case that fits Blip only.",
+      "description": "A soft case made for Blip. It has a raised lip around the screen to keep the glass off the table. It fits Blip only, not any other phone.",
+      "image": "img/branded/acc-blip-case.jpg",
+      "fits": [
+        "blip"
+      ],
+      "specs": [
+        [
+          "Size",
+          "104 x 60 x 14 mm outside, for a phone that is 96 x 52 x 9 mm"
+        ],
+        [
+          "Weight",
+          "22 g"
+        ],
+        [
+          "Made of",
+          "Soft silicone"
+        ],
+        [
+          "Colour",
+          "Orange"
+        ],
+        [
+          "Fits",
+          "Blip only. It will not fit other phones, and Blip will not fit other cases."
+        ],
+        [
+          "Lanyard loop",
+          "Has an opening for the lanyard loop on Blip's frame"
+        ],
+        [
+          "Raised lip",
+          "2 mm around the screen"
+        ],
+        [
+          "In the pack",
+          "1 case"
+        ],
+        [
+          "Care",
+          "Wipe with a damp cloth. Take Blip out to clean underneath."
+        ]
+      ]
+    },
+    {
+      "sku": "OT-BLIP-CHG",
+      "name": "Blip Charger",
+      "kind": "accessory",
+      "price": 19,
+      "stock": 160,
+      "tagline": "A plug and cable for Blip.",
+      "description": "A plug and a braided USB-C cable that charge Blip. They also charge the Boombox Mini. They will charge other USB-C devices too, but we have only matched them to Blip and the Boombox Mini.",
+      "image": "img/branded/acc-blip-charger.jpg",
+      "fits": [
+        "blip",
+        "boombox-mini"
+      ],
+      "specs": [
+        [
+          "Size",
+          "Plug: 40 x 40 x 28 mm (UK 3-pin)"
+        ],
+        [
+          "Weight",
+          "68 g with cable"
+        ],
+        [
+          "Made of",
+          "Plastic plug, braided nylon cable, metal USB-C ends"
+        ],
+        [
+          "Colour",
+          "White plug, sky blue cable with an orange end"
+        ],
+        [
+          "Cable",
+          "1 m, fixed to the plug, USB-C"
+        ],
+        [
+          "Power",
+          "20 W maximum. UK 3-pin plug, 100 to 240 V."
+        ],
+        [
+          "Fits",
+          "Blip and Boombox Mini"
+        ],
+        [
+          "In the pack",
+          "1 plug with attached cable"
+        ],
+        [
+          "Care",
+          "Wipe dry. Keep away from water."
+        ]
+      ]
+    },
+    {
+      "sku": "OT-BLIP-LAN",
+      "name": "Blip Lanyard",
+      "kind": "accessory",
+      "price": 14,
+      "stock": 95,
+      "tagline": "A lanyard that threads through Blip.",
+      "description": "A woven lanyard, 120 cm long, that threads through the loop on Blip's frame so you can wear it around your neck. It is made for Blip. It is not made for other phones or for the Boombox Mini.",
+      "image": "img/branded/acc-blip-lanyard.jpg",
+      "fits": [
+        "blip"
+      ],
+      "specs": [
+        [
+          "Size",
+          "120 cm long (loop), 5 mm wide"
+        ],
+        [
+          "Weight",
+          "12 g"
+        ],
+        [
+          "Made of",
+          "Woven polyester cord, plastic bead"
+        ],
+        [
+          "Colour",
+          "Sunflower yellow"
+        ],
+        [
+          "Fits",
+          "Blip only, through the loop in its frame"
+        ],
+        [
+          "Fastening",
+          "Threads through the loop. No clips."
+        ],
+        [
+          "In the pack",
+          "1 lanyard"
+        ],
+        [
+          "Care",
+          "Wipe, or hand wash and air dry"
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Blip Case",
+      "works": true,
+      "note": "It fits Blip only."
+    },
+    {
+      "with": "Blip Charger",
+      "works": true,
+      "note": "It charges Blip and Boombox Mini."
+    },
+    {
+      "with": "Blip Lanyard",
+      "works": true,
+      "note": "It threads through the loop in Blip's frame."
+    },
+    {
+      "with": "boombox-mini",
+      "works": true,
+      "note": "It pairs over Bluetooth. They share a charger."
+    },
+    {
+      "with": "daypack",
+      "works": true,
+      "note": "It is too small to need a case, and it fits the Daypack's front pouch. It does not fit the Daypack's side bottle holder."
+    },
+    {
+      "with": "second SIM or eSIM",
+      "works": false,
+      "note": "Blip takes one nano-SIM only."
+    }
+  ],
+  "packaging": "A kraft card box with a pull-out tray and a paper band. No plastic film. The phone is wrapped in recycled paper and the cable is held with a paper loop.",
+  "warranty": {
+    "months": 24,
+    "summary": "It has a 24-month warranty against faults in how it was made. Battery fade to 80% is wear, and drops and liquid damage are not covered. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Clean the screen with a soft, slightly damp cloth. Dry it straight away.",
+    "Keep it away from heat above 35 °C. A parked car in summer counts.",
+    "Use a damage-free USB-C cable and charger.",
+    "Do not open the phone yourself. Repairs by anyone other than The Fix Club are outside the warranty."
+  ],
+  "safety": [
+    "It resists splashes. Do not charge it wet or put it under water.",
+    "Do not use a damaged charger or cable.",
+    "If the battery swells or gets hot, stop using it, unplug it and contact us."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days. You may switch it on and try it, but it must be undamaged, complete, in its box and reset with any account removed. See Returns."
+  },
+  "fix_club": {
+    "eligible": true,
+    "repairs": [
+      {
+        "code": "BLIP-SCREEN",
+        "name": "Screen replacement",
+        "price": 49
+      },
+      {
+        "code": "BLIP-BATTERY",
+        "name": "Battery replacement",
+        "price": 29
+      }
+    ]
+  },
+  "page": {
+    "headline": "A very small phone",
+    "intro": "A very small phone. Calls, texts, email.",
+    "sections": [
+      {
+        "title": "What it does",
+        "body": "You can make calls, send texts and send and read emails on Blip. It works as an alarm clock and it has a torch. It does not have a camera, apps or a web browser."
+      },
+      {
+        "title": "Size and battery",
+        "body": "It is 96 mm tall and weighs 76 g. The battery lasts days, and it charges over USB-C."
+      },
+      {
+        "title": "Looking after it",
+        "body": "The Fix Club replaces the screen for £49 and the battery for £29. The warranty is 24 months."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "What can Blip do?",
+      "a": "You can make calls, send texts and send and read emails. It is also an alarm clock and a torch."
+    },
+    {
+      "q": "Can I add other things to it?",
+      "a": "No. It has no camera, apps or web browser, and you cannot add them."
+    },
+    {
+      "q": "Which email accounts work?",
+      "a": "Standard email accounts. Sign in on the phone with your address and password."
+    },
+    {
+      "q": "How long does the battery last?",
+      "a": "Up to 5 days of normal use. It charges over USB-C."
+    },
+    {
+      "q": "Does it take two SIMs?",
+      "a": "No. One nano-SIM."
+    },
+    {
+      "q": "How much do repairs cost?",
+      "a": "Screen £49, battery £29. A fault in warranty is free."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It will not turn on.",
+      "steps": [
+        "Plug it in and leave it for 15 minutes.",
+        "Hold the power key for 10 seconds.",
+        "Try a different cable and socket."
+      ],
+      "if_unresolved": "Open a support case. In warranty, The Fix Club will look at it."
+    },
+    {
+      "problem": "It charges slowly or not at all.",
+      "steps": [
+        "Push the cable in fully and clear any lint from the port with a wooden toothpick.",
+        "Try another cable and charger."
+      ],
+      "if_unresolved": "Open a support case. A loose port may need The Fix Club."
+    },
+    {
+      "problem": "I cannot make calls or send texts.",
+      "steps": [
+        "Check the SIM is in the right way round.",
+        "Check you have signal. Move to a window or outside.",
+        "Restart it."
+      ],
+      "if_unresolved": "Ask your mobile network if the SIM is active, then open a support case."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "boombox-mini",
+    "daypack"
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#D6E8F7"
+  },
+  "photography_direction": "A very small phone shown honestly small: a hand-scale cue like a mug or a coin beside it is fine. Sky blue, matte finish, nothing on the screen but a clock.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated sky blue, orange and pink accents, soft studio light, pale sky blue single-colour backdrop, gentle contact shadow. A very small phone with a 3-inch screen showing only a clock, standing upright, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated sky blue, orange and pink accents, soft studio light, pale sky blue single-colour backdrop, gentle contact shadow. Close-up of the phone's rounded corner, the power key and the lanyard loop in the frame. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated sky blue, orange and pink accents, soft studio light, pale sky blue single-colour backdrop, gentle contact shadow. A very small phone with a 3-inch screen showing only a clock, standing upright, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated sky blue, orange and pink accents, soft studio light, pale sky blue single-colour backdrop, gentle contact shadow. A small kraft box with a pull-out tray holding the phone and a short USB-C cable. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated sky blue, orange and pink accents, soft studio light, pale sky blue single-colour backdrop, gentle contact shadow. The tiny phone resting on a pale desk beside a mug and a notebook. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated sky blue, orange and pink accents, soft studio light, pale sky blue single-colour backdrop, gentle contact shadow. One tiny phone centred with a great deal of empty space around it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

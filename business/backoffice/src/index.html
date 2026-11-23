@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back office · Overthought &amp; Co.</title>
+<meta name="description" content="Everything behind Overthought & Co., a made-up online shop: orders, customers, stock, suppliers, money, customer service, and the systems and data a developer can inspect.">
+<link rel="icon" href="img/mark.svg" type="image/svg+xml">
+<script>try { const t = localStorage.getItem("bo-theme"); document.documentElement.dataset.theme = t || "light"; } catch { document.documentElement.dataset.theme = "light"; }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@100..150,700..900&family=Hanken+Grotesk:wght@400..800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="app.css">
+<link rel="modulepreload" href="core.js">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+  <aside class="side" id="side" aria-label="Sections">
+    <a class="brand" href="#/overview" aria-label="Overthought &amp; Co. back office: company overview">
+      <img src="img/mark.svg" alt="" width="30" height="30">
+      <span><b>Overthought &amp; Co.</b><small>Back office</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main"></nav>
+    <p class="side-foot" id="sideFoot"></p>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+  <div class="main-col">
+    <header class="top">
+      <button class="iconbtn menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false" aria-label="Open the sections menu"><svg class="icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
+      <button class="top-search" id="openPalette" aria-label="Search orders, customers, products, suppliers and pages" aria-keyshortcuts="Control+K Meta+K">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><span class="lbl">Search or jump to…</span><kbd id="kbdHint">Ctrl K</kbd>
+      </button>
+      <div class="top-tools">
+        <label class="viewas" id="viewAsWrap" title="See the back office as one role sees it. Hidden parts follow the engine's own permission rules."><span>View as</span><select id="viewAs" aria-label="View as role"></select></label>
+        <button class="iconbtn" id="spoilers" aria-pressed="false" title="Show spoilers: mark the planted problems" aria-label="Show spoilers"><svg class="icon" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="2.8"/></svg></button>
+        <button class="iconbtn" id="theme" title="Switch between light and dark" aria-label="Switch between light and dark"><svg class="icon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+      </div>
+    </header>
+    <div id="roleBar" class="role-bar" hidden></div>
+    <main id="main" tabindex="-1"></main>
+    <footer class="foot">Overthought &amp; Co. is a demonstration company. Every person and number here is made up.</footer>
+  </div>
+</div>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

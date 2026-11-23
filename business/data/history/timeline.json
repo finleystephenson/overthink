@@ -1,0 +1,1229 @@
+{
+  "_note": "Written once, by hand, for the world built at scale 0.2. Dates 2021-03-14 to 2026-11-22. 'evidence' names the records a claim rests on; 'invented' means the records are silent.",
+  "entries": [
+    {
+      "date": "2021-03-14",
+      "title": "The lost sock",
+      "kind": "founding",
+      "text": "Mr Fezziwig loses one sock from a good pair and finds that nobody sells a single sock. He writes the problem on the back of an envelope. This is the day the company counts as its start.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "company.json staffing_now: Fezziwig joined 2021-03-14. The story of the sock is invented.",
+      "links": {}
+    },
+    {
+      "date": "2021-04-02",
+      "title": "The rule",
+      "kind": "founding",
+      "text": "Fezziwig decides the shop will take ordinary things further than they needed to go, then be plain about the result. Each product gets one honest line and at most one caveat.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "invented",
+      "links": {}
+    },
+    {
+      "date": "2021-05-20",
+      "title": "The name",
+      "kind": "founding",
+      "text": "Overthought & Co. is chosen because it says what the shop does in one word. The '& Co.' is there to make one man look like a small firm.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "invented",
+      "links": {}
+    },
+    {
+      "date": "2021-06-18",
+      "title": "A small warehouse",
+      "kind": "premises",
+      "text": "Fezziwig takes a small unit for a packing bench, shelving and a kettle. There is no shopfront and the company states no address.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "company.json what_we_do: 'one small warehouse'. The unit is invented.",
+      "links": {}
+    },
+    {
+      "date": "2021-07-09",
+      "title": "Three products to start",
+      "kind": "product",
+      "text": "He picks The Emergency Sandwich, The Spare Sock and The Paper Aeroplane for launch day. Each can be explained in a sentence. Everything else can wait.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH: sandwich, sock, aeroplane 2021-11-22. Reasoning invented.",
+      "links": {
+        "products": [
+          "emergency-sandwich",
+          "spare-sock",
+          "paper-aeroplane"
+        ]
+      }
+    },
+    {
+      "date": "2021-08-12",
+      "title": "Finding someone to make one sock",
+      "kind": "supplier",
+      "text": "Beckside Mill is the only mill that does not laugh. They need 14 days and want paying 30 days after delivery.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "suppliers SUP-03: lead_time_days 14, payment_terms_days 30. The asking round is invented.",
+      "links": {
+        "suppliers": [
+          "SUP-03"
+        ],
+        "products": [
+          "spare-sock"
+        ]
+      }
+    },
+    {
+      "date": "2021-09-03",
+      "title": "Paper people",
+      "kind": "supplier",
+      "text": "Kestrel Paper & Pen will make the aeroplanes, pre-folded, as singles and packs of five. Ten days from order to delivery.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "suppliers SUP-04: lead_time_days 10, payment_terms_days 30.",
+      "links": {
+        "suppliers": [
+          "SUP-04"
+        ],
+        "products": [
+          "paper-aeroplane"
+        ]
+      }
+    },
+    {
+      "date": "2021-09-20",
+      "title": "The bakery says yes",
+      "kind": "supplier",
+      "text": "Hollin Bakehouse agrees to make sandwiches only when one is ordered, delivered the next morning. It means no stock and no waste.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "suppliers SUP-01: lead_time_days 1; sandwich is made to order (catalogue.mjs). First order PO-3004 on 2021-12-06. Agreement date invented.",
+      "links": {
+        "suppliers": [
+          "SUP-01"
+        ],
+        "products": [
+          "emergency-sandwich"
+        ]
+      }
+    },
+    {
+      "date": "2021-10-08",
+      "title": "The first two orders",
+      "kind": "supplier",
+      "text": "Fezziwig places two purchase orders on the same day. 12 socks and 12 sock clips go to Beckside Mill. 10 single aeroplanes and 10 five-packs go to Kestrel.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3001 and PO-3002 ordered 2021-10-08.",
+      "links": {
+        "pos": [
+          "PO-3001",
+          "PO-3002"
+        ],
+        "suppliers": [
+          "SUP-03",
+          "SUP-04"
+        ]
+      }
+    },
+    {
+      "date": "2021-10-18",
+      "title": "The aeroplanes arrive",
+      "kind": "supplier",
+      "text": "The aeroplanes arrive on the day promised. He counts all 20 and puts them on the shelf nearest the door.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3002 due 2021-10-18, received 2021-10-18.",
+      "links": {
+        "pos": [
+          "PO-3002"
+        ],
+        "suppliers": [
+          "SUP-04"
+        ]
+      }
+    },
+    {
+      "date": "2021-10-29",
+      "title": "The socks are a week late",
+      "kind": "mishap",
+      "text": "The socks arrive seven days after the due date. It is the company's first supplier delay and it does not affect anyone, because nobody has bought anything yet.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3001 due 2021-10-22, received 2021-10-29.",
+      "links": {
+        "pos": [
+          "PO-3001"
+        ],
+        "suppliers": [
+          "SUP-03"
+        ]
+      }
+    },
+    {
+      "date": "2021-11-22",
+      "title": "Launch day",
+      "kind": "milestone",
+      "text": "The shop opens with three products, a launch-week campaign and a 10% code, HELLO10. 41 people visit on the first day. One of them buys: Mr Baddeley orders two Spare Socks that evening.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "company.json founded 2021-11-22; opening_cash £11,500; web_sessions_daily 2021-11-22: 41 visits, 1 order; ORD-10001 2021-11-22T18:48, 2 x OT-SOCK, discount £1.20, total £14.75; CMP-001 spend £15, code HELLO10.",
+      "links": {
+        "campaigns": [
+          "CMP-001"
+        ],
+        "products": [
+          "spare-sock"
+        ]
+      }
+    },
+    {
+      "date": "2021-12-06",
+      "title": "The first sandwich",
+      "kind": "customer",
+      "text": "The first sandwich is ordered and Fezziwig raises the first purchase order with the bakery: two egg three-packs. They arrive the next morning. December 2021 ends with five orders and £128.75.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3004 ordered 2021-12-06, received 2021-12-07 (SUP-01); first OT-SAND order 2021-12-06; monthly_summary 2021-12: orders 5, revenue £128.75.",
+      "links": {
+        "pos": [
+          "PO-3004"
+        ],
+        "suppliers": [
+          "SUP-01"
+        ],
+        "products": [
+          "emergency-sandwich"
+        ]
+      }
+    },
+    {
+      "date": "2021-12-17",
+      "title": "A second Beckside order",
+      "kind": "supplier",
+      "text": "Fezziwig reorders from Beckside Mill. It arrives on the due date, which makes it a better delivery than the first.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3003 ordered 2021-12-03, due and received 2021-12-17 (SUP-03).",
+      "links": {
+        "pos": [
+          "PO-3003"
+        ],
+        "suppliers": [
+          "SUP-03"
+        ]
+      }
+    },
+    {
+      "date": "2021-12-31",
+      "title": "The first six weeks",
+      "kind": "money",
+      "text": "The company ends 2021 with six orders, £143.50 of revenue and a loss of £368.05. Cash is £11,033.53, from £11,500 at the start.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2021: orders 6, revenue £143.50, profit -£368.05; cash 2021-12 £11,033.53; company.json opening_cash £11,500.",
+      "links": {}
+    },
+    {
+      "date": "2022-01-03",
+      "title": "The first stock count",
+      "kind": "mishap",
+      "text": "Fezziwig counts the aeroplane five-packs and finds 9 where the system says 10. He decides it was a mis-pick. It stays a small mystery.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "stock_counts SC-0002 2022-01-03: OT-PLAN-5 system 10, counted 9. His reaction invented.",
+      "links": {
+        "products": [
+          "paper-aeroplane"
+        ]
+      }
+    },
+    {
+      "date": "2022-01-05",
+      "title": "The first aeroplane",
+      "kind": "customer",
+      "text": "A Paper Aeroplane sells for the first time, six weeks after launch. January has two orders in total.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "First OT-PLAN order 2022-01-05; monthly_summary 2022-01: orders 2, revenue £44.90.",
+      "links": {
+        "products": [
+          "paper-aeroplane"
+        ]
+      }
+    },
+    {
+      "date": "2022-01-10",
+      "title": "The returns note",
+      "kind": "milestone",
+      "text": "Fezziwig writes a note for customers who want to send something back. 14 days from delivery, free postage if faulty, food cannot be returned. He writes it before anyone has asked.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "documents DOC-05 'Returns: what to tell customers (2022)' written 2022-01-10, now out of date.",
+      "links": {}
+    },
+    {
+      "date": "2022-02-07",
+      "title": "One Good Pen",
+      "kind": "product",
+      "text": "The pen joins the range. It writes first time, and someone will still take it. The two-week launch campaign costs £13 and brings 27 visits and no orders.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH one-good-pen 2022-02-07; CMP-004 spend £13, visits 27, orders_attributed 0.",
+      "links": {
+        "products": [
+          "one-good-pen"
+        ],
+        "campaigns": [
+          "CMP-004"
+        ]
+      }
+    },
+    {
+      "date": "2022-02-27",
+      "title": "The first return",
+      "kind": "customer",
+      "text": "The first return is logged. Someone has sent something back with a reason and a date. The returns folder starts here.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "returns.json earliest created_at 2022-02-27; returns per year: 2022 6, 2023 28, 2024 69, 2025 104, 2026 110.",
+      "links": {}
+    },
+    {
+      "date": "2022-03-13",
+      "title": "The first pen",
+      "kind": "customer",
+      "text": "The first pen sells five weeks after the pen launch. March 2022 has six orders, £86.70 of revenue and £6.00 refunded.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "First OT-PEN order 2022-03-13; monthly_summary 2022-03: orders 6, revenue £86.70, refunds £6.",
+      "links": {
+        "products": [
+          "one-good-pen"
+        ]
+      }
+    },
+    {
+      "date": "2022-04-04",
+      "title": "Pre-Popped Bubble Wrap",
+      "kind": "product",
+      "text": "Bubble Wrap joins the range as sheets and a roll. It is quiet packaging for people who post things. The launch campaign costs £13 and brings 25 visits and no orders.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH bubble-wrap 2022-04-04; CMP-006 spend £13, visits 25, orders 0.",
+      "links": {
+        "products": [
+          "bubble-wrap"
+        ],
+        "campaigns": [
+          "CMP-006"
+        ]
+      }
+    },
+    {
+      "date": "2022-05-16",
+      "title": "The first bubble wrap",
+      "kind": "customer",
+      "text": "Bubble Wrap sells for the first time, six weeks after launch. May 2022 has six orders and £143.70, the best month so far.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "First OT-WRAP order 2022-05-16; monthly_summary 2022-05: orders 6, revenue £143.70 (highest of 2022 to that date).",
+      "links": {
+        "products": [
+          "bubble-wrap"
+        ]
+      }
+    },
+    {
+      "date": "2022-07-05",
+      "title": "The first review",
+      "kind": "customer",
+      "text": "A customer gives The Spare Sock two stars. It went through at the heel in a month. It is the first review the shop receives.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "reviews REV-0001 2022-07-05, spare-sock, rating 2, ORD-10032.",
+      "links": {
+        "products": [
+          "spare-sock"
+        ]
+      }
+    },
+    {
+      "date": "2022-07-22",
+      "title": "Fellside Bags",
+      "kind": "supplier",
+      "text": "Fezziwig orders 10 umbrellas from Fellside Bags ahead of the umbrella launch. They arrive 21 days later, on the due date.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3013 ordered 2022-07-22, received 2022-08-12 (SUP-08).",
+      "links": {
+        "pos": [
+          "PO-3013"
+        ],
+        "suppliers": [
+          "SUP-08"
+        ],
+        "products": [
+          "other-umbrella"
+        ]
+      }
+    },
+    {
+      "date": "2022-09-05",
+      "title": "The Other Umbrella",
+      "kind": "product",
+      "text": "The umbrella to keep at work launches at £19. It won't help if you're at home. The campaign costs £14, brings 35 visits and no orders. The first umbrella sells on 1 October.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH other-umbrella 2022-09-05; CMP-012 spend £14, visits 35, orders 0; first OT-UMBR order 2022-10-01; price_history OT-UMBR old price £19.",
+      "links": {
+        "products": [
+          "other-umbrella"
+        ],
+        "campaigns": [
+          "CMP-012"
+        ]
+      }
+    },
+    {
+      "date": "2022-09-19",
+      "title": "The first five stars",
+      "kind": "customer",
+      "text": "A customer says the Paper Aeroplane flies further than anything they could fold themselves. It is the first five-star review. September has nine orders and £221.55, double August's.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "reviews REV-0002 2022-09-19 rating 5; monthly_summary 2022-08: 3 orders, £45.85; 2022-09: 9 orders, £221.55. Any link is not claimed.",
+      "links": {
+        "products": [
+          "paper-aeroplane"
+        ]
+      }
+    },
+    {
+      "date": "2022-11-21",
+      "title": "The first Black Friday",
+      "kind": "milestone",
+      "text": "Black Friday week brings about four times the usual daily orders, from 0.4 a day to 1.4. November ends with 19 orders and £414.65. The gift guide email costs £5 and brings 13 orders.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "world_events WE-00069 'Black Friday week' 2022-11-21 to 11-28; orders per day 0.36 before, 1.38 during; monthly_summary 2022-11: orders 19, revenue £414.65; CMP-014 spend £5, code GIFT22, visits 403, orders 13.",
+      "links": {
+        "campaigns": [
+          "CMP-014"
+        ]
+      }
+    },
+    {
+      "date": "2022-12-31",
+      "title": "The first full year",
+      "kind": "money",
+      "text": "2022 ends with 98 orders, £2,177.70 of revenue and a loss of £1,998.62. December has 27 orders and £562.65. Cash is £9,106.35.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2022: orders 98, revenue £2,177.70, profit -£1,998.62; 2022-12 orders 27, revenue £562.65, cash £9,106.35.",
+      "links": {}
+    },
+    {
+      "date": "2023-02-06",
+      "title": "The Daypack",
+      "kind": "product",
+      "text": "The Daypack launches, a backpack and nothing more. It sells on launch day. February's cash falls to £7,909.23, from £8,659.71, with stock to pay for.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH daypack 2023-02-06; first OT-PACK order 2023-02-06; monthly_summary 2023-01 cash £8,659.71, 2023-02 cash £7,909.23.",
+      "links": {
+        "products": [
+          "daypack"
+        ]
+      }
+    },
+    {
+      "date": "2023-03-01",
+      "title": "The first price list",
+      "kind": "milestone",
+      "text": "A price list for 2023 is written so nobody has to remember what anything costs. It goes out of date when prices move.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "documents DOC-03 'Price list 2023' written 2023-03-01, now out of date.",
+      "links": {}
+    },
+    {
+      "date": "2023-05-02",
+      "title": "Ice by Post",
+      "kind": "product",
+      "text": "Ice by Post launches with a plain caveat that it may not arrive frozen. The first order is on 15 May, with the first purchase order for three bags the same day.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH ice-by-post 2023-05-02; first OT-ICE order 2023-05-15; PO-3066 ordered 2023-05-15, received 2023-05-16 (SUP-02).",
+      "links": {
+        "pos": [
+          "PO-3066"
+        ],
+        "suppliers": [
+          "SUP-02"
+        ],
+        "products": [
+          "ice-by-post"
+        ]
+      }
+    },
+    {
+      "date": "2023-05-31",
+      "title": "The first profitable month",
+      "kind": "money",
+      "text": "May 2023 has 35 orders and £1,193.40 of revenue. Profit is £24.21, the first month the company has made money. It is small. Fezziwig counts it anyway.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2023-05: orders 35, revenue £1,193.40, profit £24.21 (first positive month).",
+      "links": {}
+    },
+    {
+      "date": "2023-09-04",
+      "title": "The Indoor Helmet",
+      "kind": "product",
+      "text": "A soft padded cap for cupboard doors and low beams launches. It is clear that it is not safety equipment. Beckside Mill also makes it.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH indoor-helmet 2023-09-04; first OT-HELM order 2023-09-12; SUP-03 products include indoor-helmet.",
+      "links": {
+        "products": [
+          "indoor-helmet"
+        ],
+        "suppliers": [
+          "SUP-03"
+        ]
+      }
+    },
+    {
+      "date": "2023-09-11",
+      "title": "Mrs Hudson joins",
+      "kind": "people",
+      "text": "Mrs Hudson joins to answer the inbox and the phone. September has 51 orders, up from 31 in August, and the returns and questions have started to need a person. She starts on a few hours a week.",
+      "people": [
+        "Mrs Hudson"
+      ],
+      "evidence": "company.json staffing_now: Hudson joined 2023-09-11, 5.6 hrs/week; monthly_summary 2023-08 orders 31, 2023-09 orders 51; staffing_by_month wages 2023-08 £423.85, 2023-09 £652.97. Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2023-09-22",
+      "title": "Ashgrove Workshop",
+      "kind": "supplier",
+      "text": "Fezziwig orders 10 trophies from Ashgrove Workshop ahead of the launch. The lead time is 28 days and they arrive on 20 October, as promised.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3117 ordered 2023-09-22, received 2023-10-20 (SUP-07).",
+      "links": {
+        "pos": [
+          "PO-3117"
+        ],
+        "suppliers": [
+          "SUP-07"
+        ],
+        "products": [
+          "trophy"
+        ]
+      }
+    },
+    {
+      "date": "2023-10-31",
+      "title": "October passes £2,500",
+      "kind": "money",
+      "text": "October 2023 has 67 orders and £2,548.00 of revenue, with a profit of £141.77. It is the best month so far. A refund total of £184.00 is the highest yet.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2023-10: orders 67, revenue £2,548, profit £141.77, refunds £184.",
+      "links": {}
+    },
+    {
+      "date": "2023-11-06",
+      "title": "The Trophy",
+      "kind": "product",
+      "text": "The Trophy launches, engraved 'Well done.' It cannot be changed, which is the point. The first one sells on launch day.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH trophy 2023-11-06; first OT-TROF order 2023-11-06.",
+      "links": {
+        "products": [
+          "trophy"
+        ]
+      }
+    },
+    {
+      "date": "2023-11-19",
+      "title": "The first repair request",
+      "kind": "customer",
+      "text": "A customer asks the Fix Club to repair an umbrella whose rib has bent. The request is declined. It is the first repair record.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "repairs FIX-5101 2023-11-19, OT-UMBR, 'Rib bent and sticks when opening', status declined.",
+      "links": {
+        "products": [
+          "other-umbrella"
+        ]
+      }
+    },
+    {
+      "date": "2023-12-22",
+      "title": "A storm in the south-west",
+      "kind": "mishap",
+      "text": "A named storm closes roads in the south-west the week before Christmas. Couriers stop deliveries in the worst areas, and orders fall to about one a day for the week. December still ends with 86 orders and £2,708.35.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "world_events WE-00145 'Storm in the south-west' 2023-12-22 to 12-28 (carrier delay 3 days); orders per day 3.6 before, 0.9 during; monthly_summary 2023-12: orders 86, revenue £2,708.35.",
+      "links": {}
+    },
+    {
+      "date": "2023-12-31",
+      "title": "The second full year",
+      "kind": "money",
+      "text": "2023 ends with 475 orders, £16,032.50 of revenue and a loss of £371.02. It is a small loss, with profit in some months. Cash is £8,093.48.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2023: orders 475, revenue £16,032.50, profit -£371.02; cash 2023-12 £8,093.48.",
+      "links": {}
+    },
+    {
+      "date": "2024-01-08",
+      "title": "Mr Toad joins",
+      "kind": "people",
+      "text": "Mr Toad joins to run marketing, on a few hours a week. He has a craze for every new channel and Fezziwig gives him a small budget. Marketing spend has already doubled since the summer.",
+      "people": [
+        "Mr Toad"
+      ],
+      "evidence": "company.json staffing_now: Toad joined 2024-01-08; monthly_summary marketing_spend 2023-07 £68, 2023-12 £169, 2024-01 £134. Reason and craze invented.",
+      "links": {}
+    },
+    {
+      "date": "2024-01-19",
+      "title": "Marrowfield Devices",
+      "kind": "supplier",
+      "text": "The first order for a very small phone goes to Marrowfield Devices: 10 phones with cases, chargers and lanyards. They arrive ten days later, on time. January 2024 loses £529.00.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "PO-3189 ordered 2024-01-19, received 2024-01-29 (SUP-05); monthly_summary 2024-01: profit -£529.",
+      "links": {
+        "pos": [
+          "PO-3189"
+        ],
+        "suppliers": [
+          "SUP-05"
+        ],
+        "products": [
+          "blip"
+        ]
+      }
+    },
+    {
+      "date": "2024-02-29",
+      "title": "Cash dips for the phone",
+      "kind": "money",
+      "text": "February's supplier payments are £3,073.88 and cash falls to £5,147.67, the lowest so far. Marrowfield's lead times are written down in an email on 20 February.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2024-02: supplier_payments £3,073.88, cash £5,147.67 (from £7,558.21); DOC-07 email from Marrowfield Devices 2024-02-20, now out of date.",
+      "links": {
+        "suppliers": [
+          "SUP-05"
+        ]
+      }
+    },
+    {
+      "date": "2024-03-04",
+      "title": "Blip",
+      "kind": "product",
+      "text": "Blip launches, a very small phone for calls, texts and email. The first sells on 11 March. March 2024 has 81 orders, £4,626.65 of revenue and a profit of £627.24, the best month so far.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH blip 2024-03-04; first OT-BLIP order 2024-03-11; monthly_summary 2024-03: orders 81, revenue £4,626.65, profit £627.24.",
+      "links": {
+        "products": [
+          "blip"
+        ]
+      }
+    },
+    {
+      "date": "2024-03-25",
+      "title": "Phileas Fogg joins",
+      "kind": "people",
+      "text": "Phileas Fogg joins to run deliveries and dispatch. Orders have gone from 48 in January to 81 in March, and parcels need to leave and arrive at stated times. He promises delivery times to the minute.",
+      "people": [
+        "Phileas Fogg"
+      ],
+      "evidence": "company.json staffing_now: Fogg joined 2024-03-25, 4.4 hrs/week; monthly_summary 2024-01 orders 48, 2024-03 orders 81. Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2024-04-01",
+      "title": "The first price rise",
+      "kind": "money",
+      "text": "The Spare Sock goes from £6 to £7, One Good Pen from £8 to £9 and The Other Umbrella from £19 to £22. April makes a loss of £470.97 after £281.00 of refunds.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "price_history 2024-04-01: OT-SOCK 6->7, OT-PEN 8->9, OT-UMBR 19->22; monthly_summary 2024-03 refunds £347.05, 2024-04 refunds £281, profit -£470.97. No cause claimed.",
+      "links": {
+        "products": [
+          "spare-sock",
+          "one-good-pen",
+          "other-umbrella"
+        ]
+      }
+    },
+    {
+      "date": "2024-05-13",
+      "title": "The packing guide",
+      "kind": "milestone",
+      "text": "Fogg writes the packing guide so every parcel is packed the same way. It says what goes in first.",
+      "people": [
+        "Phileas Fogg"
+      ],
+      "evidence": "documents DOC-02 'Packing guide' written 2024-05-13. Author invented.",
+      "links": {}
+    },
+    {
+      "date": "2024-06-17",
+      "title": "Mole joins",
+      "kind": "people",
+      "text": "Mole joins the stock room. June has 101 orders, the first month over 100, and the shelves need counting and tidying. He is told where everything is, and then apologises for it.",
+      "people": [
+        "Mole"
+      ],
+      "evidence": "company.json staffing_now: Mole joined 2024-06-17; monthly_summary 2024-06 orders 101 (first over 100). Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2024-08-19",
+      "title": "Robinson Crusoe joins",
+      "kind": "people",
+      "text": "Robinson Crusoe joins to do the buying. A Beckside order has just arrived 12 days late and he wants a second supplier for everything. He is not content with only one of anything.",
+      "people": [
+        "Robinson Crusoe"
+      ],
+      "evidence": "company.json staffing_now: Crusoe joined 2024-08-19; PO-3304 (SUP-03) due 2024-08-18, received 2024-08-30. Reason invented.",
+      "links": {
+        "pos": [
+          "PO-3304"
+        ],
+        "suppliers": [
+          "SUP-03"
+        ]
+      }
+    },
+    {
+      "date": "2024-08-31",
+      "title": "Five months of losses",
+      "kind": "money",
+      "text": "August is another loss, £430.47, on 93 orders. Every month from April to August has lost money. Cash is £5,576.91.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2024-04 to 2024-08 profit: -£470.97, -£217.35, -£145.80, -£394.96, -£430.47; cash 2024-08 £5,576.91.",
+      "links": {}
+    },
+    {
+      "date": "2024-09-02",
+      "title": "Bubble wrap goes viral",
+      "kind": "milestone",
+      "text": "A film of someone unrolling pre-popped bubble wrap in silence is watched millions of times. Bubble Wrap demand is nearly three times its usual. September has 127 orders, up from 93 in August, and £5,349.30.",
+      "people": [
+        "Mr Fezziwig",
+        "Mr Toad"
+      ],
+      "evidence": "world_events WE-00199 'Bubble wrap goes viral' 2024-09-02 to 09-07, demand x2.937 for bubble-wrap; news NW 2024-09-02; monthly_summary 2024-08 orders 93, 2024-09 orders 127, revenue £5,349.30.",
+      "links": {
+        "products": [
+          "bubble-wrap"
+        ]
+      }
+    },
+    {
+      "date": "2024-09-16",
+      "title": "Ebenezer Scrooge joins",
+      "kind": "people",
+      "text": "Ebenezer Scrooge joins to stop the money leaking. The company has lost money in five months running and he wants to know where it goes. He starts on a couple of hours a week.",
+      "people": [
+        "Ebenezer Scrooge"
+      ],
+      "evidence": "company.json staffing_now: Scrooge joined 2024-09-16, 1.6 hrs/week; monthly_summary profits Apr-Aug 2024 all negative. Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2024-11-04",
+      "title": "Bob Cratchit joins",
+      "kind": "people",
+      "text": "Bob Cratchit joins to do the day-to-day books. November has 253 orders, up from 173 in October, and the invoices have started to stack up. Scrooge approves.",
+      "people": [
+        "Bob Cratchit",
+        "Ebenezer Scrooge"
+      ],
+      "evidence": "company.json staffing_now: Cratchit joined 2024-11-04; monthly_summary 2024-10 orders 173, 2024-11 orders 253. Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2024-11-16",
+      "title": "Christmas gift guide 2024",
+      "kind": "marketing",
+      "text": "The gift guide email costs £11 and brings 3,246 visits and 97 orders. It is by far the best return the company has had on a pound.",
+      "people": [
+        "Mr Toad"
+      ],
+      "evidence": "CMP-051 spend £11, code GIFT24, visits 3,246, orders_attributed 97.",
+      "links": {
+        "campaigns": [
+          "CMP-051"
+        ]
+      }
+    },
+    {
+      "date": "2024-12-07",
+      "title": "A mention in a weekend paper",
+      "kind": "marketing",
+      "text": "A weekend paper mentions the shop in a gift guide. It costs nothing and brings 1,476 visits and 31 orders in a week. December 2024 has 331 orders and £14,239.40 of revenue, the best month yet.",
+      "people": [
+        "Mr Fezziwig",
+        "Mr Toad"
+      ],
+      "evidence": "CMP-054 2024-12-07 to 12-14: spend £0, visits 1,476, orders_attributed 31; monthly_summary 2024-12: orders 331, revenue £14,239.40, profit £3,074.42.",
+      "links": {
+        "campaigns": [
+          "CMP-054"
+        ]
+      }
+    },
+    {
+      "date": "2024-12-13",
+      "title": "The bags are 12 days late",
+      "kind": "mishap",
+      "text": "A Fellside Bags order arrives 12 days after it was due, in the middle of the Christmas rush. A Kestrel order is also late and short at the new year.",
+      "people": [
+        "Phileas Fogg",
+        "Robinson Crusoe"
+      ],
+      "evidence": "PO-3400 (SUP-08) due 2024-12-01, received 2024-12-13; PO-3451 (SUP-04) due 2025-01-01, received 2025-01-12, OT-PLAN-1 66 of 89.",
+      "links": {
+        "pos": [
+          "PO-3400",
+          "PO-3451"
+        ],
+        "suppliers": [
+          "SUP-08",
+          "SUP-04"
+        ]
+      }
+    },
+    {
+      "date": "2024-12-16",
+      "title": "Hephaestus joins",
+      "kind": "people",
+      "text": "Hephaestus joins the Fix Club bench. Blips and Daypacks are coming back with faults, and repairs have been done by whoever was free. He asks for a shelf of small tools.",
+      "people": [
+        "Hephaestus"
+      ],
+      "evidence": "company.json staffing_now: Hephaestus joined 2024-12-16, 1.6 hrs/week; returns per year 2023 28, 2024 69; repairs.json (25 records). Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2024-12-31",
+      "title": "2024 ends",
+      "kind": "money",
+      "text": "2024 ends with 1,519 orders, £65,018.90 of revenue and a profit of £5,309.68. It is the first full year in profit. Cash is £14,981.18.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2024: orders 1,519, revenue £65,018.90, profit £5,309.68; cash 2024-12 £14,981.18.",
+      "links": {}
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Tidewater Audio",
+      "kind": "supplier",
+      "text": "Crusoe places the first order with Tidewater Audio for a small speaker: 10 Boombox units and 10 cases. The lead time is 28 days and payment terms are 45 days, the longest he has got.",
+      "people": [
+        "Robinson Crusoe"
+      ],
+      "evidence": "PO-3468 ordered 2025-01-17, received 2025-02-14 (SUP-06); SUP-06 payment_terms_days 45.",
+      "links": {
+        "pos": [
+          "PO-3468"
+        ],
+        "suppliers": [
+          "SUP-06"
+        ],
+        "products": [
+          "boombox-mini"
+        ]
+      }
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Sam Weller joins",
+      "kind": "people",
+      "text": "Sam Weller joins as a second voice on the support desk. Orders are 148 a month and the returns, 104 this year, are keeping Mrs Hudson busy. He is quick on the phone and customers believe him.",
+      "people": [
+        "Sam Weller"
+      ],
+      "evidence": "company.json staffing_now: Weller joined 2025-02-24, 5.6 hrs/week; monthly_summary 2025-02 orders 148; returns 2025 total 104. Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2025-02-28",
+      "title": "The lowest cash",
+      "kind": "money",
+      "text": "February's supplier payments are £9,975.99, against £2,176.34 of cost of goods. Cash falls from £9,204.29 to £1,400.05, the lowest in five years. Spring stock has been bought before it has been sold.",
+      "people": [
+        "Mr Fezziwig",
+        "Ebenezer Scrooge"
+      ],
+      "evidence": "monthly_summary 2025-02: supplier_payments £9,975.99, cost_of_goods £2,176.34, cash £1,400.05 (lowest); 2025-01 cash £9,204.29.",
+      "links": {}
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Boombox Mini",
+      "kind": "product",
+      "text": "Boombox Mini launches with no line of copy, because the name does the work. March 2025 has 194 orders, £9,473.95 and a profit of £892.87. Cash recovers to £4,987.98.",
+      "people": [
+        "Mr Fezziwig",
+        "Robinson Crusoe"
+      ],
+      "evidence": "catalogue.mjs LAUNCH boombox-mini 2025-03-03; first OT-BOOM order 2025-03-03; monthly_summary 2025-03: orders 194, revenue £9,473.95, profit £892.87, cash £4,987.98.",
+      "links": {
+        "products": [
+          "boombox-mini"
+        ]
+      }
+    },
+    {
+      "date": "2025-04-14",
+      "title": "The speaker order is 11 days late",
+      "kind": "mishap",
+      "text": "A Tidewater order arrives 11 days after it was due. Fogg tells waiting customers a revised time to the minute. It is more helpful than it sounds.",
+      "people": [
+        "Phileas Fogg"
+      ],
+      "evidence": "PO-3507 ordered 2025-03-06, due 2025-04-03, received 2025-04-14 (SUP-06). Fogg's reply invented.",
+      "links": {
+        "pos": [
+          "PO-3507"
+        ],
+        "suppliers": [
+          "SUP-06"
+        ]
+      }
+    },
+    {
+      "date": "2025-06-30",
+      "title": "Cash passes £12,000",
+      "kind": "money",
+      "text": "June 2025 has 205 orders and £9,393.25, with a profit of £909.93. Cash is £12,380.11, about two and a half times what it was in March.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2025-06: orders 205, revenue £9,393.25, profit £909.93, cash £12,380.11; 2025-03 cash £4,987.98.",
+      "links": {}
+    },
+    {
+      "date": "2025-07-07",
+      "title": "Esther Summerson joins",
+      "kind": "people",
+      "text": "Esther Summerson joins the support desk on mornings. July has 210 orders, the most the company has taken in a summer month. She starts with the oldest open case.",
+      "people": [
+        "Esther Summerson"
+      ],
+      "evidence": "company.json staffing_now: Summerson joined 2025-07-07, 4.8 hrs/week; monthly_summary 2025-07 orders 210. Reason invented.",
+      "links": {}
+    },
+    {
+      "date": "2025-11-30",
+      "title": "November 2025",
+      "kind": "money",
+      "text": "November has 303 orders, £15,371.95 of revenue and a profit of £3,005.21. Cash is £23,220.03. The gift guide email brings 119 orders for £15.",
+      "people": [
+        "Mr Toad"
+      ],
+      "evidence": "monthly_summary 2025-11: orders 303, revenue £15,371.95, profit £3,005.21, cash £23,220.03; CMP-069 spend £15, code GIFT25, orders_attributed 119.",
+      "links": {
+        "campaigns": [
+          "CMP-069"
+        ]
+      }
+    },
+    {
+      "date": "2025-12-03",
+      "title": "A miser's change of heart",
+      "kind": "milestone",
+      "text": "A miser known across the city buys gifts for a whole family and a turkey, and the shop's orders double for a week, from about 10 a day to about 20. The busiest days in the records follow, with 26 orders on 7 December and 26 on 16 December.",
+      "people": [
+        "Mr Fezziwig",
+        "Phileas Fogg",
+        "Mrs Hudson"
+      ],
+      "evidence": "world_events WE-00279 'A miser's change of heart' 2025-12-03 to 12-08; orders per day 10.3 before, 20.0 during; orders.json: 26 on 2025-12-07 and 26 on 2025-12-16.",
+      "links": {}
+    },
+    {
+      "date": "2025-12-31",
+      "title": "The Christmas that nearly did not fit",
+      "kind": "mishap",
+      "text": "December 2025 has 411 orders and £18,831.50 of revenue, the best month in five years, with a profit of £3,619.65. Refunds are £850.65, the highest so far. The team is stretched and the kettle is on.",
+      "people": [
+        "Mr Fezziwig",
+        "Phileas Fogg",
+        "Mrs Hudson",
+        "Sam Weller",
+        "Esther Summerson"
+      ],
+      "evidence": "monthly_summary 2025-12: orders 411, revenue £18,831.50, profit £3,619.65, refunds £850.65, cash £25,086.39.",
+      "links": {}
+    },
+    {
+      "date": "2025-12-31",
+      "title": "2025 ends",
+      "kind": "money",
+      "text": "2025 ends with 2,527 orders, £119,703.90 of revenue and a profit of £10,241.45. Cash is £25,086.39.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary 2025: orders 2,527, revenue £119,703.90, profit £10,241.45; cash 2025-12 £25,086.39.",
+      "links": {}
+    },
+    {
+      "date": "2026-02-28",
+      "title": "Stock for the year",
+      "kind": "money",
+      "text": "February's supplier payments are £11,757.43 against £3,788.82 of cost of goods, and cash falls from £21,452.30 to £13,335.96. It is a loss of £167.73 on 182 orders.",
+      "people": [
+        "Ebenezer Scrooge"
+      ],
+      "evidence": "monthly_summary 2026-01 cash £21,452.30, 2026-02 cash £13,335.96, supplier_payments £11,757.43, cost_of_goods £3,788.82, profit -£167.73.",
+      "links": {}
+    },
+    {
+      "date": "2026-04-17",
+      "title": "Glasshouse Growers",
+      "kind": "supplier",
+      "text": "Crusoe orders 10 Pocket Jungle terrariums with plants and kits from Glasshouse Growers. They arrive a week later, on time.",
+      "people": [
+        "Robinson Crusoe"
+      ],
+      "evidence": "PO-3904 ordered 2026-04-17, received 2026-04-24 (SUP-09).",
+      "links": {
+        "pos": [
+          "PO-3904"
+        ],
+        "suppliers": [
+          "SUP-09"
+        ],
+        "products": [
+          "pocket-jungle"
+        ]
+      }
+    },
+    {
+      "date": "2026-05-01",
+      "title": "Riverstone Goods",
+      "kind": "supplier",
+      "text": "The first order of Skimming Stones goes to Riverstone Goods: 10 each of the flat set, round set, the Boulder and the pouch. It arrives on 15 May.",
+      "people": [
+        "Robinson Crusoe"
+      ],
+      "evidence": "PO-3919 ordered 2026-05-01, received 2026-05-15 (SUP-10).",
+      "links": {
+        "pos": [
+          "PO-3919"
+        ],
+        "suppliers": [
+          "SUP-10"
+        ],
+        "products": [
+          "skimming-stones"
+        ]
+      }
+    },
+    {
+      "date": "2026-06-01",
+      "title": "Pocket Jungle and Skimming Stones",
+      "kind": "product",
+      "text": "Pocket Jungle launches on 1 June and Skimming Stones on 15 June. The first jungle sells on 3 June and the first stones on 18 June.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH pocket-jungle 2026-06-01, skimming-stones 2026-06-15; first sales 2026-06-03 and 2026-06-18.",
+      "links": {
+        "products": [
+          "pocket-jungle",
+          "skimming-stones"
+        ]
+      }
+    },
+    {
+      "date": "2026-06-07",
+      "title": "The heatwave",
+      "kind": "milestone",
+      "text": "Temperatures pass thirty degrees and the country finds it owns no fans. Ice by Post and Skimming Stones sell well. June 2026 has 301 orders and £14,404.40 of revenue, the best month since December.",
+      "people": [
+        "Mr Fezziwig",
+        "Phileas Fogg"
+      ],
+      "evidence": "world_events WE-00312 'Heatwave' 2026-06-07 to 06-11 (ice-by-post demand x1.392, skimming-stones x1.343); news 2026-06-07; monthly_summary 2026-06: orders 301, revenue £14,404.40, profit £2,656.64.",
+      "links": {
+        "products": [
+          "ice-by-post",
+          "skimming-stones"
+        ]
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "title": "Tinsmith & Oven",
+      "kind": "supplier",
+      "text": "Crusoe orders the first 10 Biscuit Tins from Tinsmith & Oven. They arrive a week later. The tin contains biscuits and is not a sewing kit.",
+      "people": [
+        "Robinson Crusoe"
+      ],
+      "evidence": "PO-4006 ordered 2026-07-24, received 2026-07-31 (SUP-11).",
+      "links": {
+        "pos": [
+          "PO-4006"
+        ],
+        "suppliers": [
+          "SUP-11"
+        ],
+        "products": [
+          "biscuit-tin"
+        ]
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "title": "A month of refunds",
+      "kind": "money",
+      "text": "July 2026 has 216 orders and £9,769.30 of revenue, with a profit of £195.34. Refunds are £970.25, the highest in a month. It is the quietest profit since the spring.",
+      "people": [
+        "Mrs Hudson",
+        "Sam Weller"
+      ],
+      "evidence": "monthly_summary 2026-07: orders 216, revenue £9,769.30, refunds £970.25 (highest), profit £195.34.",
+      "links": {}
+    },
+    {
+      "date": "2026-08-03",
+      "title": "The Starter Puddle",
+      "kind": "product",
+      "text": "The Starter Puddle launches, a tray that catches rain, and sells on the first day. August has 185 orders and £8,678.50, with a small profit of £42.94.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH starter-puddle 2026-08-03; first OT-PUDL order 2026-08-03; monthly_summary 2026-08: orders 185, revenue £8,678.50, profit £42.94.",
+      "links": {
+        "products": [
+          "starter-puddle"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "title": "The Biscuit Tin",
+      "kind": "product",
+      "text": "The Biscuit Tin launches and sells for the first time the next day. September has 278 orders and £13,256.10, with a profit of £1,776.72.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "catalogue.mjs LAUNCH biscuit-tin 2026-09-07; first OT-BISC order 2026-09-08; monthly_summary 2026-09: orders 278, revenue £13,256.10, profit £1,776.72.",
+      "links": {
+        "products": [
+          "biscuit-tin"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "title": "The Christmas plan",
+      "kind": "milestone",
+      "text": "Fezziwig writes the Christmas plan. The Trophy sells out every December, so the batch is ordered early. The gift guide goes out in mid-November and there are no new products until January.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "documents DOC-09 'Christmas planning 2026' written 2026-10-05.",
+      "links": {}
+    },
+    {
+      "date": "2026-11-17",
+      "title": "The terrariums are 12 days late",
+      "kind": "mishap",
+      "text": "A Glasshouse Growers order arrives 12 days after it was due. Pocket Jungle stock runs low for a week.",
+      "people": [
+        "Robinson Crusoe",
+        "Phileas Fogg"
+      ],
+      "evidence": "PO-4136 ordered 2026-10-29, due 2026-11-05, received 2026-11-17 (SUP-09). Effect on stock invented.",
+      "links": {
+        "pos": [
+          "PO-4136"
+        ],
+        "suppliers": [
+          "SUP-09"
+        ],
+        "products": [
+          "pocket-jungle"
+        ]
+      }
+    },
+    {
+      "date": "2026-11-22",
+      "title": "Five years",
+      "kind": "milestone",
+      "text": "The company is five years old. It has taken 7,180 orders and £322,514.15 of revenue, and made £26,256.36 profit. November so far has 264 orders and £11,198.80, and cash is £33,554.14, the most it has ever had. November's wages are not posted yet, so its profit is overstated.",
+      "people": [
+        "Mr Fezziwig"
+      ],
+      "evidence": "monthly_summary totals 2021-11 to 2026-11: orders 7,180, revenue £322,514.15, profit £26,256.36; 2026-11 orders 264, revenue £11,198.80, wages 0 (month not closed), cash £33,554.14; 2026 to date orders 2,555, revenue £119,437.65.",
+      "links": {}
+    }
+  ]
+}

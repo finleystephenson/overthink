@@ -1,0 +1,277 @@
+{
+  "id": "borrow-box",
+  "name": "Borrow Box",
+  "tagline": "The things you'd buy, use once and put in the loft. Borrow one for a weekend instead.",
+  "summary": "Twelve occasional objects, borrowed by the weekend or the week. Delivered to you and picked up again.",
+  "concept": "Most households own a gazebo used one afternoon a year. We keep the gazebo so you don't have to.",
+  "who_its_for": "Anyone with a party, a wall to strip or a hedge to cut who doesn't want to own the equipment afterwards.",
+  "how_it_works": [
+    "Pick up to three items and a period: a weekend or a week.",
+    "Book at least 24 hours ahead. The deposit is taken at booking.",
+    "Items are delivered and picked up within 30 miles.",
+    "Use them. Return them clean, complete and working.",
+    "The deposit comes back once the items are checked in."
+  ],
+  "page": {
+    "headline": "Borrow it. Use it. Give it back.",
+    "intro": "The things you'd buy, use once and put in the loft. Borrow one for a weekend instead.",
+    "sections": [
+      {
+        "title": "Weekend or week",
+        "body": "A weekend runs from Friday 10:00 to Monday 12:00. A week is any seven days. Both prices are on every item."
+      },
+      {
+        "title": "Delivered and picked up",
+        "body": "Items are delivered and picked up within 30 miles, for £12 each way."
+      },
+      {
+        "title": "The deposit",
+        "body": "Every item has a deposit, shown by its price. It is refunded within 3 working days of the item coming back clean, complete and working. Damage is charged at repair cost, taken from the deposit first."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "How many items can I borrow at once?",
+      "a": "Up to three per booking."
+    },
+    {
+      "q": "How far ahead do I need to book?",
+      "a": "At least 24 hours. Gazebos go quickly on dry weekends."
+    },
+    {
+      "q": "What if I return something late?",
+      "a": "A fee of £10 a day, capped at the item's replacement value."
+    },
+    {
+      "q": "What if I break something?",
+      "a": "Fair wear is fine. Damage or missing parts are charged at repair cost, up to the replacement value, from the deposit first."
+    },
+    {
+      "q": "Can I cancel?",
+      "a": "Full refund up to 48 hours before, half the hire fee after that. The deposit is always refunded in full."
+    },
+    {
+      "q": "Can I change the dates?",
+      "a": "Yes, free, up to 48 hours before, if the item is free on the new dates."
+    },
+    {
+      "q": "Do you deliver?",
+      "a": "Within 30 miles of us, for £12 each way."
+    },
+    {
+      "q": "Is the chocolate included?",
+      "a": "No. The chocolate fountain comes without chocolate."
+    }
+  ],
+  "image": {
+    "file": "img/borrow-box.jpg",
+    "sweep": "#E9DFC9"
+  },
+  "photography_direction": "A single item or small group on a seamless warm-sand backdrop: a folded gazebo in its bag, a coiled extension lead, a very large pan with its lid beside it. Soft large-source light, gentle contact shadow, no people, no props that are not part of the hire.",
+  "image_prompts": {
+    "hero": "Studio photograph of a folded white gazebo in a grey carry bag, a coiled orange 50 m extension lead on a drum and a large steel pan with lid, arranged neatly on a seamless warm sand backdrop, soft diffused light, gentle shadow, no people, no text.",
+    "detail": "Close-up of a luggage-style tag on the handle of a folded gazebo bag, with a hand-written item code and a deposit line, shallow depth of field, warm sand background.",
+    "in_use": "A garden gazebo set up on a lawn on a dry day with folding tables beneath it, seen from a distance, no people visible, natural overcast light.",
+    "campaign": "A tall wooden stepladder standing alone in the centre of a plain sand-coloured room, a small hand-lettered tag tied to it reading 'Back Monday', editorial still-life style."
+  },
+  "related": [
+    "someone-to-clap",
+    "someone-to-wait-in"
+  ],
+  "items": [
+    {
+      "id": "BB-GAZEBO",
+      "name": "Gazebo, 3 m × 3 m",
+      "category": "outdoors",
+      "price_weekend": 45,
+      "price_week": 70,
+      "deposit": 60,
+      "units": 2,
+      "replacement_value": 220,
+      "includes": [
+        "Frame",
+        "Roof cover",
+        "Four side panels",
+        "Pegs and guy lines",
+        "Carry bag"
+      ],
+      "note": "Needs two adults to put up. Instruction card included."
+    },
+    {
+      "id": "BB-LEAD",
+      "name": "50 m extension lead",
+      "category": "tools",
+      "price_weekend": 12,
+      "price_week": 20,
+      "deposit": 25,
+      "units": 3,
+      "replacement_value": 70,
+      "includes": [
+        "Lead on reel",
+        "Four sockets"
+      ],
+      "note": "Unwind it fully before use. The reel gets warm if you do not."
+    },
+    {
+      "id": "BB-LADDER",
+      "name": "Tall ladder, 4.2 m",
+      "category": "tools",
+      "price_weekend": 28,
+      "price_week": 45,
+      "deposit": 50,
+      "units": 2,
+      "replacement_value": 190,
+      "includes": [
+        "Extending ladder",
+        "Stabiliser bar"
+      ],
+      "note": "Not for use on ice or in wind."
+    },
+    {
+      "id": "BB-KARAOKE",
+      "name": "Karaoke machine",
+      "category": "party",
+      "price_weekend": 35,
+      "price_week": 55,
+      "deposit": 50,
+      "units": 2,
+      "replacement_value": 180,
+      "includes": [
+        "Speaker unit",
+        "Two microphones",
+        "Mains lead",
+        "Lyrics tablet"
+      ],
+      "note": "Songs are on the lyrics tablet. Neighbours are not."
+    },
+    {
+      "id": "BB-CHOC",
+      "name": "Chocolate fountain",
+      "category": "party",
+      "price_weekend": 30,
+      "price_week": 48,
+      "deposit": 40,
+      "units": 1,
+      "replacement_value": 120,
+      "includes": [
+        "Three-tier fountain",
+        "Base with heater",
+        "Cleaning brush"
+      ],
+      "note": "Chocolate not included. Wipe it out while it is still warm."
+    },
+    {
+      "id": "BB-STEAMER",
+      "name": "Wallpaper steamer",
+      "category": "home",
+      "price_weekend": 18,
+      "price_week": 28,
+      "deposit": 30,
+      "units": 3,
+      "replacement_value": 85,
+      "includes": [
+        "Steam plate",
+        "Hose",
+        "Water tank"
+      ],
+      "note": "Hot. Use the stripping knife, not a screwdriver."
+    },
+    {
+      "id": "BB-CARPET",
+      "name": "Carpet cleaner",
+      "category": "home",
+      "price_weekend": 32,
+      "price_week": 50,
+      "deposit": 40,
+      "units": 2,
+      "replacement_value": 240,
+      "includes": [
+        "Machine",
+        "Hand tool",
+        "Two tanks"
+      ],
+      "note": "Cleaning solution not included. Empty both tanks before returning."
+    },
+    {
+      "id": "BB-COOLBOX",
+      "name": "Large cool box, 90 litre",
+      "category": "outdoors",
+      "price_weekend": 15,
+      "price_week": 24,
+      "deposit": 20,
+      "units": 3,
+      "replacement_value": 90,
+      "includes": [
+        "Cool box",
+        "Drain plug"
+      ],
+      "note": "Returned dry. Ice is available separately."
+    },
+    {
+      "id": "BB-TABLES",
+      "name": "Folding tables, set of four",
+      "category": "party",
+      "price_weekend": 24,
+      "price_week": 38,
+      "deposit": 40,
+      "units": 3,
+      "replacement_value": 160,
+      "includes": [
+        "Four 1.8 m tables"
+      ],
+      "note": "Each seats six. Tablecloths not included."
+    },
+    {
+      "id": "BB-PROJECTOR",
+      "name": "Projector and screen",
+      "category": "party",
+      "price_weekend": 40,
+      "price_week": 60,
+      "deposit": 60,
+      "units": 2,
+      "replacement_value": 280,
+      "includes": [
+        "Projector",
+        "Tripod screen",
+        "HDMI lead",
+        "Mains lead",
+        "Carry case"
+      ],
+      "note": "Needs a dim room. A garden at dusk counts."
+    },
+    {
+      "id": "BB-HEDGE",
+      "name": "Hedge trimmer, cordless",
+      "category": "garden",
+      "price_weekend": 22,
+      "price_week": 35,
+      "deposit": 40,
+      "units": 2,
+      "replacement_value": 130,
+      "includes": [
+        "Trimmer",
+        "Two batteries",
+        "Charger",
+        "Blade cover"
+      ],
+      "note": "Returned with the blade cover on and the batteries charged."
+    },
+    {
+      "id": "BB-PAN",
+      "name": "A very large pan, 40 litre",
+      "category": "kitchen",
+      "price_weekend": 20,
+      "price_week": 32,
+      "deposit": 30,
+      "units": 1,
+      "replacement_value": 95,
+      "includes": [
+        "Pan",
+        "Lid"
+      ],
+      "note": "Holds enough chilli for about forty. It does not come with the chilli."
+    }
+  ]
+}

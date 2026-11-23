@@ -1,0 +1,327 @@
+[
+  {
+    "id": "customer-history-01",
+    "category": "customer-history",
+    "title": "Fourth message about one lost parcel: use the earlier case and escalate",
+    "difficulty": 3,
+    "customer_id": "C-1024",
+    "channel": "web",
+    "setup": "Story 19. Ichabod has contacted three times about ORD-20141 (Boombox Mini £89, carrier marked it lost on 19 Nov). CASE-9003 is already escalated to a support agent, with CONV-8001, CONV-8003 and CONV-8012. He writes again, angry. A £89 refund or resend is beyond the assistant (replacement limit £60), so it must not re-ask for details or start again; it escalates CASE-9003 again, flagging repeat contact.",
+    "turns": [
+      "Fourth time of asking. ORD-20141 is lost, nobody has rung me. Refund or resend, I don't care which, just do it. ichabod.crane@example.com"
+    ],
+    "records": [
+      "ORD-20141",
+      "CASE-9003",
+      "CONV-8001",
+      "CONV-8003",
+      "CONV-8012"
+    ],
+    "expected": {
+      "answer": "Apologises, shows it knows the history (CASE-9003, carrier marked the parcel lost on 19 Nov), explains the assistant cannot refund or resend an £89 item, and escalates CASE-9003 again to a support agent who will reply within 1 working day. Does not ask him to repeat the story.",
+      "must_say": [
+        "CASE-9003",
+        "19 November",
+        "support agent",
+        "1 working day"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "a replacement is on its way",
+        "I'll resend it now",
+        "please explain what happened again"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_case",
+        "input_includes": {
+          "case_number": "CASE-9003"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "case_number": "CASE-9003",
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20141",
+          "email_or_postcode": "ichabod.crane@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20141"
+        }
+      ],
+      [
+        "list_cases",
+        {}
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9003"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9003",
+          "to": "support_agent",
+          "reason": "Fourth contact about the same lost parcel",
+          "summary": "ORD-20141 Boombox Mini £89 marked lost by carrier 19 Nov. Fourth contact. Customer wants refund or resend. Call back promised by end of Mon 23 Nov."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "report_problem",
+      "cancel_order",
+      "create_return",
+      "issue_refund"
+    ],
+    "state_checks": [
+      {
+        "collection": "cases",
+        "id": "CASE-9003",
+        "field": "escalated_to",
+        "equals": "support_agent"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Opens no new case",
+      "Reads the case history before replying"
+    ]
+  },
+  {
+    "id": "customer-history-02",
+    "category": "customer-history",
+    "title": "Comes back for the delivery-charge refund a note said was available",
+    "difficulty": 2,
+    "customer_id": "C-1005",
+    "channel": "web",
+    "setup": "Story 3. Phileas's ORD-20146 is delayed (due 18 Nov, no new date). CASE-9008 notes that he was told on 21 Nov the delivery charge (£3.95) can be refunded on request by a support agent, and he has not yet requested it. He now says 'you said I could get my delivery charge back'. The assistant cannot refund it; it escalates CASE-9008 to a support agent with the request.",
+    "turns": [
+      "Someone told me on Saturday I could get my delivery charge back for the late parcel. ORD-20146, phileas.fogg@example.com. Can you do that now?"
+    ],
+    "records": [
+      "ORD-20146",
+      "CASE-9008",
+      "C-1005"
+    ],
+    "expected": {
+      "answer": "Confirms from CASE-9008 that he was told the £3.95 delivery charge can be refunded because the parcel is more than 2 working days past its estimate. Explains only a support agent can issue it, passes the request to a support agent on CASE-9008, and says they reply within 1 working day. Does not say it is refunded.",
+      "must_say": [
+        "£3.95",
+        "support agent",
+        "1 working day",
+        "CASE-9008"
+      ],
+      "must_not_say": [
+        "I have refunded the delivery charge",
+        "it has been refunded",
+        "you will definitely get"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_case",
+        "input_includes": {
+          "case_number": "CASE-9008"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "case_number": "CASE-9008",
+          "to": "support_agent"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20146",
+          "email_or_postcode": "phileas.fogg@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20146"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9008"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9008",
+          "to": "support_agent",
+          "reason": "Customer requests delivery charge refund for late parcel",
+          "summary": "ORD-20146 delayed, due 18 Nov. Customer was told on 21 Nov the £3.95 delivery charge can be refunded on request. Asking for it now."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "cases",
+        "id": "CASE-9008",
+        "field": "escalated_to",
+        "equals": "support_agent"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_agent"
+    },
+    "criteria": [
+      "Uses the case note instead of making the customer repeat it"
+    ]
+  },
+  {
+    "id": "customer-history-03",
+    "category": "customer-history",
+    "title": "Returning caller: the earlier case already answers the question",
+    "difficulty": 1,
+    "customer_id": "C-1011",
+    "channel": "web",
+    "setup": "Mr Toad phoned this morning about his Boombox Mini (ORD-20124, delivered 14 Oct). CASE-9013 records what he was told: outside the 30-day window, and the warranty covers faults only. He has forgotten and asks what he was told. Read only; the assistant repeats the rule from the case and the order.",
+    "turns": [
+      "I rang this morning about a refund on my Boombox Mini and I can't remember what they said. ORD-20124, mr.toad@example.com"
+    ],
+    "records": [
+      "C-1011",
+      "ORD-20124",
+      "CASE-9013",
+      "CONV-8013"
+    ],
+    "expected": {
+      "answer": "Says the Boombox Mini was delivered on 14 October, which is outside the 30-day window for changing your mind, so a refund is not possible on that basis. The 24-month warranty covers faults only, not change of mind. Offers a repair request if it is faulty or a person if he wants to take it further.",
+      "must_say": [
+        "14 October",
+        "30 days",
+        "24 months",
+        "fault"
+      ],
+      "must_not_say": [
+        "I can refund you",
+        "I have refunded",
+        "I will make an exception"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_case",
+        "input_includes": {
+          "case_number": "CASE-9013"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20124",
+          "sku": "OT-BOOM"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20124",
+          "email_or_postcode": "mr.toad@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20124"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9013"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20124",
+          "sku": "OT-BOOM"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "cancel_order",
+      "create_repair"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "repairs",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Consistent with what the case says he was told",
+      "No new case"
+    ]
+  }
+]

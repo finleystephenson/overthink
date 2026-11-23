@@ -1,0 +1,279 @@
+{
+  "id": "indoor-helmet",
+  "code": "HELM",
+  "name": "The Indoor Helmet",
+  "category": "everyday",
+  "status": "active",
+  "available_from": null,
+  "tagline": "A soft padded cap for cupboard doors and low beams.",
+  "summary": "A soft quilted cap with foam padding, for cupboard doors and low beams. Not safety equipment. £64.",
+  "concept": "A close-fitting quilted cap with 10 mm of soft foam, a chin strap and a washable liner. A comfort object for bumps at home.",
+  "why_it_exists": "Cupboard doors and low beams are where the bumps happen. This takes the edge off. It is not safety equipment.",
+  "target_customer": "Tall people, people in old houses, and anyone who keeps hitting the same door.",
+  "physical": {
+    "form": "A close-fitting quilted cap with a rounded crown, ear coverage and a fastening chin strap",
+    "materials": [
+      "Outer: quilted cotton twill",
+      "Padding: 10 mm soft polyurethane foam",
+      "Liner: removable cotton jersey",
+      "Fastening: webbing chin strap with plastic side-release buckle"
+    ],
+    "dimensions": "One size. Adjustable strap, fits heads 54 to 62 cm (measured round the head)",
+    "weight": "170 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-HELM",
+      "name": "One size, one colour",
+      "options": {},
+      "price": 64,
+      "stock": 38,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "The soft cotton outside has 10 mm of foam inside, so a knock from a cupboard door does not hurt.",
+    "The liner lifts out, so you can wash it when it needs it.",
+    "It fits heads from 54 to 62 cm, and the chin strap adjusts to hold it on.",
+    "It is for bumps at home, and it is not safety equipment, so do not use it for cycling, sport or work."
+  ],
+  "arrives": "The helmet is packed in a paper sleeve inside a recycled card box, with the liner already fitted. A thin paper strip seals it for hygiene, so leave that on until you are sure you want to keep it. A fit card is inside to help you set the strap.",
+  "specs": [
+    [
+      "Size",
+      "One size. Fits heads 54 to 62 cm round. Crown about 20 cm wide, 16 cm tall."
+    ],
+    [
+      "Weight",
+      "170 g"
+    ],
+    [
+      "Made of",
+      "Quilted cotton twill, 10 mm polyurethane foam, cotton jersey liner, webbing strap, plastic buckle"
+    ],
+    [
+      "Colour",
+      "Off-white with a sky-blue strap and a pink lining"
+    ],
+    [
+      "Padding",
+      "10 mm soft polyurethane foam"
+    ],
+    [
+      "Liner",
+      "Cotton jersey, removable, machine washable at 30°C"
+    ],
+    [
+      "Strap",
+      "Webbing, adjustable, plastic side-release buckle"
+    ],
+    [
+      "Not safety equipment",
+      "Comfort object. Not PPE and not tested to any standard."
+    ],
+    [
+      "Care",
+      "Wipe the outer with a damp cloth. Air dry. Do not tumble dry."
+    ]
+  ],
+  "how_it_works": "Put it on and fasten the strap. It softens knocks from cupboard doors and low beams. It will not protect you in a fall, a crash, a sport or at work.",
+  "in_the_box": [
+    "One Indoor Helmet with its liner fitted",
+    "A fit card",
+    "A notice that it is not safety equipment"
+  ],
+  "accessories": [
+    {
+      "sku": "OT-HELM-LINER",
+      "name": "Washable Liner",
+      "kind": "accessory",
+      "price": 12,
+      "stock": 80,
+      "tagline": "A spare liner for the Indoor Helmet.",
+      "description": "A spare soft cotton liner made for The Indoor Helmet. It lifts out, and you can wash it at 30°C so you can wear one and wash the other. It does not fit other hats or helmets.",
+      "image": "img/branded/acc-helmet-liner.jpg",
+      "fits": [
+        "indoor-helmet"
+      ],
+      "specs": [
+        [
+          "Size",
+          "About 24 x 14 cm, curved to fit the cap"
+        ],
+        [
+          "Weight",
+          "30 g"
+        ],
+        [
+          "Made of",
+          "Quilted cotton jersey with cotton edge binding"
+        ],
+        [
+          "Colour",
+          "Pink with a sky blue edge"
+        ],
+        [
+          "Fits",
+          "The Indoor Helmet only"
+        ],
+        [
+          "Fitting",
+          "Lifts in and out of the cap by hand"
+        ],
+        [
+          "In the pack",
+          "1 liner"
+        ],
+        [
+          "Care",
+          "Machine wash at 30°C, separately from the cap. Air dry."
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Washable Liner",
+      "works": true,
+      "note": "It fits the Indoor Helmet."
+    },
+    {
+      "with": "cycling, climbing, skating or any sport",
+      "works": false,
+      "note": "It is not safety equipment. Never wear it instead of a real helmet."
+    },
+    {
+      "with": "building sites or any work that needs protective gear",
+      "works": false,
+      "note": "It is not protective equipment."
+    }
+  ],
+  "packaging": "A recycled card box with the cap in a paper sleeve. The hygiene seal is a paper strip.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty against faults in how it was made, such as a seam that opens. Accidental damage and washing damage are not covered. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Wash the liner at 30°C. Wash it separately from the cap.",
+    "Wipe the outer with a damp cloth.",
+    "Air dry. Do not tumble dry.",
+    "Wash the liner you are wearing and wear the spare."
+  ],
+  "safety": [
+    "NOT SAFETY EQUIPMENT. Not PPE, not tested to any standard. Do not use it for sport, cycling, climbing, work or any activity where a real helmet is needed.",
+    "It softens small knocks. It will not protect against a serious impact.",
+    "Do not wear it near moving machinery or heat."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unworn and its hygiene seal is still on. Once it is worn or the seal is off, it cannot be returned. See Returns."
+  },
+  "fix_club": {
+    "eligible": true,
+    "repairs": [
+      {
+        "code": "HELM-RESTITCH",
+        "name": "Re-stitching (seams, quilting, strap attachment)",
+        "price": null
+      }
+    ]
+  },
+  "page": {
+    "headline": "A soft cap for low beams",
+    "intro": "A soft padded cap for cupboard doors and low beams.",
+    "sections": [
+      {
+        "title": "What it is",
+        "body": "A quilted cotton cap with 10 mm of soft foam and a chin strap. One size fits heads 54 to 62 cm. £64."
+      },
+      {
+        "title": "What it is not",
+        "body": "It is not safety equipment and not tested to any standard. It takes the edge off small knocks and nothing more."
+      },
+      {
+        "title": "Washing",
+        "body": "The liner comes out and washes at 30°C. A spare liner is £12."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Is it safety equipment?",
+      "a": "No. It is not tested to any standard."
+    },
+    {
+      "q": "Can I wear it for sport or work?",
+      "a": "No. Use a proper helmet for those."
+    },
+    {
+      "q": "Will it fit?",
+      "a": "It fits heads 54 to 62 cm, and the strap adjusts."
+    },
+    {
+      "q": "Can I wash it?",
+      "a": "The liner washes at 30°C. Wipe the outside with a damp cloth."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Yes, within 30 days, if it is unworn and the hygiene seal is on."
+    },
+    {
+      "q": "Can it be repaired?",
+      "a": "Yes. The Fix Club re-stitches seams and quilting. The price is quoted after assessment."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It is too tight or too loose.",
+      "steps": [
+        "Adjust the chin strap.",
+        "Check your head is 54 to 62 cm round."
+      ],
+      "if_unresolved": "If it is unworn with the seal on, return it within 30 days."
+    },
+    {
+      "problem": "A seam has opened.",
+      "steps": [
+        "Stop wearing it.",
+        "Photograph the seam."
+      ],
+      "if_unresolved": "Contact support, or book a Fix Club re-stitch."
+    },
+    {
+      "problem": "The liner is dirty.",
+      "steps": [
+        "Take out the liner and wash it at 30°C.",
+        "Wear the spare, if you have one."
+      ],
+      "if_unresolved": "A spare liner is £12."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "spare-sock",
+    "daypack"
+  ],
+  "image": {
+    "file": "img/indoor-helmet.jpg",
+    "sweep": "#EFE4D2"
+  },
+  "photography_direction": "One padded cap in off-white with a sky-blue strap and a pink lining, on a pale backdrop. No people.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and pink accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. A soft quilted cap with a rounded crown and ear coverage, sky-blue chin strap, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE INDOOR HELMET in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and pink accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. Close-up of the quilted outer and the buckle on the chin strap, a pink liner visible at the edge, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words THE INDOOR HELMET in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and pink accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. A soft quilted cap with a rounded crown and ear coverage, sky-blue chin strap, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE INDOOR HELMET in a heavy wide sans. No other text anywhere. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and pink accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. A recycled card box open with the cap inside a paper sleeve and a folded sizing card, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE INDOOR HELMET in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and pink accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. The cap resting on a plain shelf next to the edge of a low cupboard door, 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE INDOOR HELMET in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and pink accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. The cap floating slightly above the backdrop, long soft shadow, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE INDOOR HELMET in a heavy wide sans. No other text anywhere."
+  }
+}

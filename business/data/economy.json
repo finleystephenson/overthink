@@ -1,0 +1,38 @@
+{
+  "_note": "The economy around Overthought & Co. Monthly figures move as seeded mean-reverting processes from the starting values below. Every starting value and anchor is an ASSUMPTION written from memory of recent UK figures, not checked against the source; the source to check is named beside it. Simulated figures are evidence about this world only, never a forecast of the real one.",
+  "release_day": 15,
+  "start": {
+    "month": "2026-11",
+    "cpi_inflation": { "value": 2.8, "unit": "% a year", "status": "assumption", "check": "ONS, Consumer price inflation (CPI 12-month rate)" },
+    "consumer_confidence": { "value": -19, "unit": "index (0 = as many feel better as worse)", "status": "assumption", "check": "GfK Consumer Confidence Index (NIQ/GfK)" },
+    "unemployment": { "value": 5.2, "unit": "% of people who want work", "status": "assumption", "check": "ONS, Labour market overview (unemployment rate, 16+)" },
+    "bank_rate": { "value": 3.5, "unit": "% a year", "status": "assumption", "check": "Bank of England, Bank Rate history" },
+    "wage_growth": { "value": 3.6, "unit": "% a year", "status": "assumption", "check": "ONS, Average weekly earnings, regular pay growth" }
+  },
+  "history_anchors": {
+    "_note": "Points the five-year history passes through (one per year, October figures), joined by a seeded wobbly line. ASSUMPTIONS from memory of UK figures; check each against the sources named in start.",
+    "status": "assumption",
+    "points": [
+      { "month": "2021-11", "cpi_inflation": 5.1, "consumer_confidence": -14, "unemployment": 4.1, "bank_rate": 0.1, "wage_growth": 4.3 },
+      { "month": "2022-10", "cpi_inflation": 11.1, "consumer_confidence": -47, "unemployment": 3.7, "bank_rate": 2.25, "wage_growth": 5.7 },
+      { "month": "2023-10", "cpi_inflation": 4.6, "consumer_confidence": -30, "unemployment": 4.2, "bank_rate": 5.25, "wage_growth": 7.7 },
+      { "month": "2024-10", "cpi_inflation": 2.3, "consumer_confidence": -21, "unemployment": 4.3, "bank_rate": 5.0, "wage_growth": 4.8 },
+      { "month": "2025-10", "cpi_inflation": 3.6, "consumer_confidence": -17, "unemployment": 5.0, "bank_rate": 4.0, "wage_growth": 4.6 },
+      { "month": "2026-11", "cpi_inflation": 2.8, "consumer_confidence": -19, "unemployment": 5.2, "bank_rate": 3.5, "wage_growth": 3.6 }
+    ]
+  },
+  "processes": {
+    "_note": "Each month: next = now + reversion x (long-run - now) + noise. Long-run values and speeds are assumptions chosen so figures drift back towards normal over a few years, as they tend to.",
+    "cpi_inflation": { "long_run": 2.0, "reversion": 0.08, "noise": 0.25, "min": -1, "max": 15 },
+    "consumer_confidence": { "long_run": -15, "reversion": 0.15, "noise": 3.0, "min": -50, "max": 5, "real_pay_weight": 1.5 },
+    "unemployment": { "long_run": 4.5, "reversion": 0.04, "noise": 0.08, "min": 2.5, "max": 12 },
+    "wage_growth": { "long_run": 3.5, "reversion": 0.08, "noise": 0.2, "min": -2, "max": 10 },
+    "bank_rate": { "neutral": 3.0, "inflation_weight": 1.0, "unemployment_weight": 0.5, "step": 0.25, "move_chance": 0.6, "decision_months": [2, 3, 5, 6, 8, 9, 11, 12], "min": 0.1, "max": 8 }
+  },
+  "effects": {
+    "_note": "How the figures reach the shop, each measured against the starting value (so an unchanged economy changes nothing). Sizes are assumptions picked to be modest: a novelty gift shop sells things nobody needs, so confidence matters, but a month's figures move it by a few per cent at most.",
+    "confidence": { "lag_months": 1, "demand_per_point": 0.003, "min": 0.9, "max": 1.1 },
+    "inflation": { "lag_months": 2, "goods_pass_through": 0.5, "carrier_pass_through": 0.6, "min": 0.95, "max": 1.15 },
+    "price_sensitivity": { "lag_months": 1, "per_unemployment_point": 0.04, "per_rate_point": 0.03, "min": 0.85, "max": 1.3 }
+  }
+}

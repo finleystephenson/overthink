@@ -1,0 +1,729 @@
+[
+  {
+    "id": "C-1001",
+    "name": "Elizabeth Bennet",
+    "email": "elizabeth.bennet@example.com",
+    "phone": "07700 900101",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Longbourn House, Meryton Road",
+        "town": "Longbourn",
+        "postcode": "LO9 6NW",
+        "default": true
+      },
+      {
+        "id": "A2",
+        "line1": "The Annexe, Longbourn House, Meryton Road",
+        "town": "Longbourn",
+        "postcode": "LO9 6NW",
+        "default": false
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2025-03-02T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1002",
+    "name": "Jane Eyre",
+    "email": "jane.eyre@example.com",
+    "phone": "07700 900104",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Thornfield Hall, Moor Road",
+        "town": "Thornfield",
+        "postcode": "TH9 9LJ",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2025-09-10T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1003",
+    "name": "Tom Sawyer",
+    "email": "tom.sawyer@example.com",
+    "phone": "07700 900107",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Whitewashed Fence, Cardiff Hill Road",
+        "town": "St Petersburg",
+        "postcode": "SB5 6RP",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-01-14T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1004",
+    "name": "Dorothy Gale",
+    "email": "dorothy.gale@example.com",
+    "phone": "07700 900110",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Farmhouse Landing, Yellow Brick Road",
+        "town": "Emerald City",
+        "postcode": "OZ3 7EG",
+        "default": true
+      }
+    ],
+    "contact_preference": "sms",
+    "marketing_opt_in": true,
+    "created_at": "2025-06-21T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1005",
+    "name": "Phileas Fogg",
+    "email": "phileas.fogg@example.com",
+    "phone": "07700 900113",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "7 Savile Row",
+        "town": "Savile Row",
+        "postcode": "SV3 2HG",
+        "default": true
+      }
+    ],
+    "contact_preference": "phone",
+    "marketing_opt_in": false,
+    "created_at": "2025-12-03T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1006",
+    "name": "Emma Woodhouse",
+    "email": "emma.woodhouse@example.com",
+    "phone": "07700 900116",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Hartfield",
+        "town": "Highbury",
+        "postcode": "HH9 3UD",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2025-08-18T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1007",
+    "name": "Captain Nemo",
+    "email": "captain.nemo@example.com",
+    "phone": "07700 900119",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Nautilus",
+        "town": "Twenty Thousand Leagues",
+        "postcode": "TT5 2NY",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-02-27T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1008",
+    "name": "Little Red Riding Hood",
+    "email": "little.red.riding.hood@example.com",
+    "phone": "07700 900122",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Cottage Path, Gingerbread Lane",
+        "town": "The Fairy-Tale Forest",
+        "postcode": "FT8 2ND",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2025-10-11T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1009",
+    "name": "Sinbad the Sailor",
+    "email": "sinbad.the.sailor@example.com",
+    "phone": "07700 900125",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Seven Voyages House, Bazaar Street",
+        "town": "Baghdad",
+        "postcode": "BZ4 2GZ",
+        "default": true
+      }
+    ],
+    "contact_preference": "sms",
+    "marketing_opt_in": false,
+    "created_at": "2026-03-30T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1010",
+    "name": "Gretel",
+    "email": "gretel@example.com",
+    "phone": "07700 900128",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Gingerbread House, Gingerbread Lane",
+        "town": "The Fairy-Tale Forest",
+        "postcode": "FT8 4RT",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2026-05-09T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1011",
+    "name": "Mr Toad",
+    "email": "mr.toad@example.com",
+    "phone": "07700 900131",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Toad Hall",
+        "town": "The Riverbank",
+        "postcode": "RB1 9ZS",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2025-04-04T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1012",
+    "name": "Goldilocks",
+    "email": "goldilocks@example.com",
+    "phone": "07700 900134",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Three Bears' Cottage, Gingerbread Lane",
+        "town": "The Fairy-Tale Forest",
+        "postcode": "FT8 9QZ",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-04-19T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1013",
+    "name": "Pip",
+    "email": "pip@example.com",
+    "phone": "07700 900137",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Forge, Forge Lane",
+        "town": "Satis Marsh",
+        "postcode": "SI2 8ZR",
+        "default": true
+      }
+    ],
+    "contact_preference": "phone",
+    "marketing_opt_in": false,
+    "created_at": "2026-01-08T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1014",
+    "name": "Robin Hood",
+    "email": "robin.hood@example.com",
+    "phone": "07700 900140",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Major Oak",
+        "town": "Sherwood Forest",
+        "postcode": "SF9 7US",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-03-11T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1015",
+    "name": "Miss Havisham",
+    "email": "miss.havisham@example.com",
+    "phone": "07700 900143",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Satis House",
+        "town": "Satis Marsh",
+        "postcode": "SI2 2GD",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2024-09-10T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1016",
+    "name": "Long John Silver",
+    "email": "long.john.silver@example.com",
+    "phone": "07700 900146",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Spyglass Inn",
+        "town": "Bristol Quayside",
+        "postcode": "BI3 6AU",
+        "default": true
+      }
+    ],
+    "contact_preference": "sms",
+    "marketing_opt_in": true,
+    "created_at": "2026-07-02T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1017",
+    "name": "Becky Sharp",
+    "email": "becky.sharp@example.com",
+    "phone": "07700 900149",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Miss Pinkerton's Academy, Pump Court",
+        "town": "Vanity Fair",
+        "postcode": "VF1 5TU",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2025-09-29T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1018",
+    "name": "Count of Monte Cristo",
+    "email": "count.of.monte.cristo@example.com",
+    "phone": "07700 900152",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Island Treasure Cave, Marseille Quay",
+        "town": "Chateau d'If",
+        "postcode": "CD8 9WD",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2025-07-15T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1019",
+    "name": "Mary Lennox",
+    "email": "mary.lennox@example.com",
+    "phone": "07700 900155",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Misselthwaite Manor",
+        "town": "Yorkshire Moor",
+        "postcode": "MF2 5JD",
+        "default": true
+      }
+    ],
+    "contact_preference": "phone",
+    "marketing_opt_in": false,
+    "created_at": "2025-06-02T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1020",
+    "name": "Jo March",
+    "email": "jo.march@example.com",
+    "phone": "07700 900158",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Orchard House",
+        "town": "Concord",
+        "postcode": "ON5 5EX",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2026-08-22T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1021",
+    "name": "Ali Baba",
+    "email": "ali.baba@example.com",
+    "phone": "07700 900161",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Cave Entrance, Bazaar Street",
+        "town": "Baghdad",
+        "postcode": "BZ4 8SW",
+        "default": true
+      }
+    ],
+    "contact_preference": "sms",
+    "marketing_opt_in": false,
+    "created_at": "2025-01-20T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1022",
+    "name": "Bob Cratchit",
+    "email": "bob.cratchit@example.com",
+    "phone": "07700 900164",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Scrooge and Marley's Counting House",
+        "town": "Cornhill",
+        "postcode": "CN3 6FU",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2025-10-05T09:00:00Z",
+    "credit_balance": 0,
+    "notes": "Office manager at Scrooge and Marley's counting house. Emails every Monday morning for the team's sandwiches; we place the order for him."
+  },
+  {
+    "id": "C-1023",
+    "name": "Mrs Bennet",
+    "email": "mrs.bennet@example.com",
+    "phone": "07700 900167",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Morning Room",
+        "town": "Longbourn House",
+        "postcode": "LO3 8QN",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-09-01T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1024",
+    "name": "Ichabod Crane",
+    "email": "ichabod.crane@example.com",
+    "phone": "07700 900170",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Schoolhouse",
+        "town": "Sleepy Hollow",
+        "postcode": "LP1 7TN",
+        "default": true
+      }
+    ],
+    "contact_preference": "phone",
+    "marketing_opt_in": false,
+    "created_at": "2026-06-17T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1025",
+    "name": "Cinderella",
+    "email": "cinderella@example.com",
+    "phone": "07700 900173",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Hearth, Gingerbread Lane",
+        "town": "The Fairy-Tale Forest",
+        "postcode": "FT8 5DS",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2026-11-01T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1026",
+    "name": "Ebenezer Scrooge",
+    "email": "ebenezer.scrooge@example.com",
+    "phone": "07700 900176",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Scrooge and Marley, Counting House Court",
+        "town": "Cornhill",
+        "postcode": "CN3 7LU",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-11-22T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1027",
+    "name": "Juliet Capulet",
+    "email": "juliet.capulet@example.com",
+    "phone": "07700 900179",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Balcony Flat, Via Cappello",
+        "town": "Verona",
+        "postcode": "VE3 4JL",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2026-05-30T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1028",
+    "name": "Tybalt Capulet",
+    "email": "tybalt.capulet@example.com",
+    "phone": "07700 900182",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Gatehouse, Via Scala",
+        "town": "Verona",
+        "postcode": "VE3 1RH",
+        "default": true
+      }
+    ],
+    "contact_preference": "sms",
+    "marketing_opt_in": false,
+    "created_at": "2026-09-12T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1029",
+    "name": "Queen of Hearts",
+    "email": "queen.of.hearts@example.com",
+    "phone": "07700 900185",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Croquet Ground",
+        "town": "Wonderland",
+        "postcode": "WL9 3AA",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-10-04T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1030",
+    "name": "Dr Watson",
+    "email": "dr.watson@example.com",
+    "phone": "07700 900188",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Upstairs Rooms, Baker Street",
+        "town": "London",
+        "postcode": "BK2 4HP",
+        "default": true
+      }
+    ],
+    "contact_preference": "phone",
+    "marketing_opt_in": false,
+    "created_at": "2026-02-03T09:00:00Z",
+    "credit_balance": 10,
+    "notes": "12 Nov 2026, support agent: gave £10 goodwill credit after ORD-20138 arrived 3 working days late. Customer was calm about it. Agreed limit for this issue; do not offer more."
+  },
+  {
+    "id": "C-1031",
+    "name": "Snow White",
+    "email": "snow.white@example.com",
+    "phone": "07700 900191",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Seven Beds Cottage, Gingerbread Lane",
+        "town": "The Fairy-Tale Forest",
+        "postcode": "FT8 6GE",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2026-08-10T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1032",
+    "name": "Pinocchio",
+    "email": "pinocchio@example.com",
+    "phone": "07700 900194",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Puppet Theatre, Via Collodi",
+        "town": "Mansfield and Avonlea",
+        "postcode": "MF7 5BG",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2024-10-01T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1033",
+    "name": "Lady Macbeth",
+    "email": "lady.macbeth@example.com",
+    "phone": "07700 900197",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Spare Room",
+        "town": "Dunsinane Castle",
+        "postcode": "HI2 6BJ",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": false,
+    "created_at": "2026-10-19T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1034",
+    "name": "Macbeth",
+    "email": "macbeth@example.com",
+    "phone": "07700 900200",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "Dunsinane Castle",
+        "town": "Dunsinane",
+        "postcode": "HI7 7PU",
+        "default": true
+      }
+    ],
+    "contact_preference": "phone",
+    "marketing_opt_in": false,
+    "created_at": "2026-07-20T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1035",
+    "name": "Thumbelina",
+    "email": "thumbelina@example.com",
+    "phone": "07700 900203",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Walnut Shell, Andersen Row",
+        "town": "Denmark",
+        "postcode": "DM1 6QX",
+        "default": true
+      }
+    ],
+    "contact_preference": "sms",
+    "marketing_opt_in": false,
+    "created_at": "2025-06-06T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  },
+  {
+    "id": "C-1036",
+    "name": "Mowgli",
+    "email": "mowgli@example.com",
+    "phone": "07700 900206",
+    "addresses": [
+      {
+        "id": "A1",
+        "line1": "The Wolf Den",
+        "town": "Seeonee Hills",
+        "postcode": "TJ6 1HP",
+        "default": true
+      }
+    ],
+    "contact_preference": "email",
+    "marketing_opt_in": true,
+    "created_at": "2026-10-28T09:00:00Z",
+    "credit_balance": 0,
+    "notes": ""
+  }
+]

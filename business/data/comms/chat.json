@@ -1,0 +1,998 @@
+{
+  "_note": "Staff chat lines by situation and speaker. Each situation: channel, posters (who may start it), replyers (who may answer), lines (per poster), replies (per replyer). Slots: {order} {total} {product} {po} {supplier} {days} {campaign} {name} {first} {rating} {month} {profit} {amount} {count} {date}. Staff write like themselves: Fezziwig warm and generous, Scrooge counts every penny, Cratchit meek and careful, Fogg exact about time, Mole shy and homely, Hudson firm and kind, Weller cheerful with odd comparisons, Summerson modest, Crusoe keeps lists, Toad over-excited, Hephaestus terse. No emoji, no exclamation marks except Toad and Weller and Fezziwig, who earn them.",
+  "reaction_words": [
+    "noted",
+    "thanks",
+    "seen",
+    "ha",
+    "good",
+    "agreed"
+  ],
+  "situations": {
+    "big_order": {
+      "channel": "orders",
+      "posters": [
+        "S-06",
+        "S-04",
+        "S-01",
+        "S-09",
+        "S-07"
+      ],
+      "replyers": [
+        "S-01",
+        "S-02",
+        "S-05",
+        "S-03",
+        "S-10"
+      ],
+      "lines": {
+        "S-06": [
+          "{order} is a large one, {total}. I have read it through and it looks right. Please pack it with care.",
+          "Large order in: {order}, {total}. Customer has paid. Nothing unusual to flag.",
+          "{order} came in at {total}. I have put a note on it so nobody splits the parcel by accident."
+        ],
+        "S-04": [
+          "{order}, {total}. I will pack it at 9:00 sharp tomorrow and it will be with the carrier by 11:15.",
+          "{order} is {count} items. Packing time estimated at forty minutes. Start 9:00.",
+          "Big one: {order}. If the stock is where the system says it is, dispatch is in the 9:00 slot."
+        ],
+        "S-01": [
+          "Look at {order}, everyone. {total}. Somebody has looked at our shelf and liked it. Splendid.",
+          "A fine order this morning: {order}. {total}. Well done all round, though I did nothing but sit here.",
+          "{order} is a good one. Please say thank you to the customer in whatever way you can."
+        ],
+        "S-09": [
+          "{order} is {total}. That will eat into {product}. I'll check how many are left.",
+          "{order}: {count} items. I am counting what's on the shelf against it.",
+          "With {order} out, {product} drops lower. Adding it to my list."
+        ],
+        "S-07": [
+          "{order} is big enough to sink a small boat, {total}. Lovely.",
+          "Nothing like a large order to put a spring in the step, as the kangaroo said to the other kangaroo. {order}, {total}."
+        ]
+      },
+      "replies": {
+        "S-01": [
+          "Wonderful. Make a note of the customer's name, please. They deserve a card.",
+          "Splendid. Tea all round, on me.",
+          "Do pack it well. It deserves a good box."
+        ],
+        "S-02": [
+          "Has it been paid in full? I see the total. I should like to see the payment.",
+          "{total}. Acceptable. Is the delivery cost covered?",
+          "Very well. Do not give away free wrapping."
+        ],
+        "S-05": [
+          "I'll find the biggest box we have. It is under the shelf.",
+          "I can help carry it, if anyone needs me to.",
+          "I will bring the boxes down. It might take me a minute."
+        ],
+        "S-03": [
+          "Entered, with thanks. I hope I have the total right.",
+          "I have put it in the books. Hope that is all right."
+        ],
+        "S-10": [
+          "Could we photograph the parcel before it goes? It is a very photogenic order.",
+          "A big order! Could this be our first post of the week? Perhaps not. But perhaps."
+        ]
+      }
+    },
+    "po_raised": {
+      "channel": "stockroom",
+      "posters": [
+        "S-09"
+      ],
+      "replyers": [
+        "S-05",
+        "S-02",
+        "S-04",
+        "S-01"
+      ],
+      "lines": {
+        "S-09": [
+          "Ordered from {supplier}: {po}. {count} lines, due {date}. List below.\n{lines}",
+          "{po} sent to {supplier}. Due {date}. We were running low on {product} and it seemed the sensible thing.",
+          "Order placed: {po}, {supplier}, {amount}. Stock of {product} was thin. I have written the date in the book.",
+          "Supplies are low on {product}, so {po} went to {supplier} this afternoon. Due {date}.",
+          "{po}: {supplier}. I have made a list of what goes in and what comes out. Due {date}.",
+          "Another order: {po}, to {supplier}. {product} again. I do not like to be without it.",
+          "{po} has been sent. If anything arrives early, put it on the left shelf.",
+          "I have ordered for the week: {po}. Everything on the list, and one spare of the thing we always run short of.",
+          "Placed {po} with {supplier}, due {date}. {product} is the reason. The rest of the list is below.\n{lines}",
+          "I've made the order for the week, {po}, to {supplier}. {amount}. Due {date}. I think it is enough, but I have written the number down in case it is not.",
+          "{po} is out to {supplier}. Due {date}. The shelf for {product} had a gap, and I do not like gaps.",
+          "Order {po}, {supplier}: {count} lines, {amount}. I will cross each one off when it comes."
+        ]
+      },
+      "replies": {
+        "S-05": [
+          "I'll make room on the shelf. It might take me a little while to find some.",
+          "Thank you, Robinson. I will watch for the van.",
+          "I'll count it in when it comes. Very carefully."
+        ],
+        "S-02": [
+          "{amount}. I should like to know that it was the best price available.",
+          "Do you have a second quote? One supplier is not a market.",
+          "Which supplier is cheapest for this? I would like to see the other prices.",
+          "Check the unit cost against last time. Costs only ever go one way.",
+          "Put the due date in the book. A late order costs more than a dear one.",
+          "I'd like that order a little smaller next time. Stock is money lying down."
+        ],
+        "S-04": [
+          "Delivery window noted. I will be at the door at 8:45.",
+          "If it comes on the due date, I'll record the arrival to the minute."
+        ],
+        "S-01": [
+          "Good. Better to have a little too much than a little too little.",
+          "Thank you, Robinson. You think of everything."
+        ]
+      }
+    },
+    "po_received": {
+      "channel": "stockroom",
+      "posters": [
+        "S-05",
+        "S-04"
+      ],
+      "replyers": [
+        "S-09",
+        "S-01",
+        "S-02",
+        "S-03"
+      ],
+      "lines": {
+        "S-05": [
+          "{po} has come from {supplier}. I've counted it and put it away. I hope that is right.",
+          "The van's been. {po}, all of it, I think. I counted twice.",
+          "Delivery from {supplier}: {po}. Everything in the boxes matches the list. I put the heavy ones low.",
+          "{po} is on the shelf. There was a bit of straw in one box. I've swept it up.",
+          "{supplier} delivered {po} this morning. I stacked it neatly, and wrote on the labels.",
+          "I have put {po} away. It smells of good cardboard, which I like.",
+          "Stock from {po} is in. I counted it twice, so it should be right.",
+          "{po}: in. Two of the boxes were a bit damp from the rain, but the contents are fine."
+        ],
+        "S-04": [
+          "{po} arrived at {time}. Unloaded by {time2}. All lines present.",
+          "Delivery {po} from {supplier} received at {time}. {count} lines. Checked against the order.",
+          "{po} in at {time}. It was due {date}. Entered.",
+          "{supplier}'s van arrived at {time} on the dot. {po}, complete."
+        ]
+      },
+      "replies": {
+        "S-09": [
+          "Thank you, Mole. I'll tick it off the list.",
+          "Good. That is one thing off the list.",
+          "Received. I'll mark {po} done.",
+          "That is one more tick on the list. I'll look at what is next.",
+          "Good. I'll set the next order date in my book.",
+          "Received and recorded. Thank you."
+        ],
+        "S-01": [
+          "Well done, Mole. Always a pleasure to see the shelves fill up.",
+          "Splendid. Thank you.",
+          "Thank you, Mole. A full shelf is a lovely sight.",
+          "Good. Please give the driver a cup of tea next time, if he has time."
+        ],
+        "S-02": [
+          "Has the invoice come? I would like to see it before we pay.",
+          "Check the quantity against the invoice, please. We pay for what arrives.",
+          "Match it to the invoice line by line. I will check your matching.",
+          "When the invoice comes, I shall read the small print first.",
+          "A delivery is not a payment. Do not pay until the figures agree."
+        ],
+        "S-03": [
+          "Thank you. I'll look out for the invoice and enter it when it comes.",
+          "Thank you. I'll watch for the invoice and enter it the day it comes.",
+          "Received, with thanks. The invoice is the next thing I'm hoping for.",
+          "I'll pencil it in for the books now, and ink it when the invoice arrives.",
+          "Thank you, Mole. I'll match it against the order before I pay anything."
+        ]
+      }
+    },
+    "po_late": {
+      "channel": "stockroom",
+      "posters": [
+        "S-09",
+        "S-04"
+      ],
+      "replyers": [
+        "S-02",
+        "S-01",
+        "S-05",
+        "S-10"
+      ],
+      "lines": {
+        "S-09": [
+          "{po} from {supplier} is late. It was due {date}. I have written to them. We have {product} for about {days} more days.",
+          "{supplier} have told me {po} will not come on time. New date {date2}. Watching the shelf.",
+          "Our supplies of {product} will run out before {po} comes if nothing changes. I'm looking at what else we have.",
+          "Delay on {po}. {supplier} say {date2}. It is the first time in a while, if I remember my own book.",
+          "{po} is late. {supplier} were due on {date}. I have written the day down, and the day it comes.",
+          "I do not like it when {supplier} are late, but {po} is. New date {date2}.",
+          "Late order: {po}, {supplier}. {product} runs thin until then. I'll tell you if the list changes."
+        ],
+        "S-04": [
+          "{po} was due {date} and has not arrived. It is now {days} days after the stated time. I will not hold the door open.",
+          "Waiting on {po}. {days} days past its date. I'll log the arrival to the minute when it comes.",
+          "{po} is {days} days past due. I have the dispatch side ready for the moment it arrives.",
+          "{supplier}'s {po} is still not here. Due {date}. I've checked the door twice."
+        ]
+      },
+      "replies": {
+        "S-02": [
+          "Late means we lose sales. I should like to know what it costs us.",
+          "Are we entitled to a discount for late delivery? Look at the terms.",
+          "Late goods are paid for late. Remember that, Bob."
+        ],
+        "S-01": [
+          "These things happen. Let us be patient, and ask them kindly.",
+          "Thank you for telling us. Is there anything customers need to hear?"
+        ],
+        "S-05": [
+          "The shelf for {product} is rather bare. I have moved things to hide it.",
+          "I'll keep what is left for the orders that have been paid."
+        ],
+        "S-10": [
+          "Could we pause the posts about {product} until it's back? Or is that overthinking? (Joke.)"
+        ]
+      }
+    },
+    "late_delivery": {
+      "channel": "orders",
+      "posters": [
+        "S-04",
+        "S-06"
+      ],
+      "replyers": [
+        "S-07",
+        "S-08",
+        "S-01",
+        "S-09"
+      ],
+      "lines": {
+        "S-04": [
+          "Parcel for {order} was due {date}. It arrived {days} days after. I have recorded the carrier's time.",
+          "{order}: delivered {days} days late. That is not our time, but it is our reputation.",
+          "Carrier is late on {order}. {days} days past estimate. Noted for the log.",
+          "{order} reached the customer {days} days after the carrier's estimate. We packed on time. Logged.",
+          "The delivery of {order} was {days} days late by the carrier's clock. I have kept the record.",
+          "{order}: parcel late by {days} days. The dispatch time on our side was correct."
+        ],
+        "S-06": [
+          "{order} came late, {days} days. I'll write to the customer before they write to us.",
+          "Late parcel: {order}. I will contact the customer and offer our apologies.",
+          "{order} reached {name} late. I'll write to them and make sure nothing else is wrong.",
+          "Late arrival on {order}, {days} days. I'll check whether {name} has already been in touch."
+        ]
+      },
+      "replies": {
+        "S-07": [
+          "That carrier is slower than a snail with a wheelbarrow, bless it. I'll send an apology.",
+          "I'll write to the customer. Something kind, and short."
+        ],
+        "S-08": [
+          "I can write to them, if that's useful. I'll add a note to the case.",
+          "I'm sorry to hear it. I'll keep an eye on whether they get in touch."
+        ],
+        "S-01": [
+          "Thank you both. A kind word costs nothing, and we have plenty.",
+          "Please tell them we are sorry. I mean that."
+        ],
+        "S-09": [
+          "If it happens again with this carrier, I'd like to look at the alternatives."
+        ]
+      }
+    },
+    "complaint": {
+      "channel": "customers",
+      "posters": [
+        "S-06",
+        "S-07",
+        "S-08"
+      ],
+      "replyers": [
+        "S-01",
+        "S-06",
+        "S-08",
+        "S-07"
+      ],
+      "lines": {
+        "S-06": [
+          "{name} has made a formal complaint about {order}. It is logged as {case}. I will read it twice and answer in the time we promised.",
+          "New complaint, {case}, from {name}. Reason is in the case notes. Nobody reply to them directly; I'll do it.",
+          "{case} is a complaint. I have acknowledged it. Please do not close anything linked to it.",
+          "Complaint in from {name}, logged as {case}. I will answer it myself and copy Mr Fezziwig.",
+          "{case} is open: {name}, about {order}. It is a fair complaint, as far as I can tell at this stage."
+        ],
+        "S-07": [
+          "Got a prickly one here, {case}. {name} is not best pleased. I'll try to be as soothing as a warm bath in winter.",
+          "{case}: {name} is unhappy. I've replied, and I'll check back this afternoon.",
+          "{name} has written in about {order}. {case}. They have a point, and I'd like to say so politely.",
+          "Another for the pile, {case}. {name} is cross but civil, which is how I like them."
+        ],
+        "S-08": [
+          "I have opened {case} for {name}. I am not sure I've got everything right, so Mrs Hudson, would you check it?",
+          "{name} wrote in about {order}. I have logged it as {case}. I hope that is the right way.",
+          "{case} is from {name}. I'll write back today and say we are looking at it.",
+          "I have a complaint from {name}, {case}. I want to get this right, so I'll read the policy first."
+        ]
+      },
+      "replies": {
+        "S-01": [
+          "Thank you. Let us answer them properly. If it needs money to put right, spend it.",
+          "Please let me know if I should write too. A line from me sometimes helps."
+        ],
+        "S-06": [
+          "I'll take it from here. Thank you for logging it so quickly.",
+          "Well spotted. I'll add it to my list."
+        ],
+        "S-08": [
+          "Thank you. I will watch the case.",
+          "I'll do whatever helps."
+        ],
+        "S-07": [
+          "I'll stand by with a pot of tea and a reasonable tone."
+        ]
+      }
+    },
+    "good_review": {
+      "channel": "customers",
+      "posters": [
+        "S-08",
+        "S-07",
+        "S-01"
+      ],
+      "replyers": [
+        "S-10",
+        "S-01",
+        "S-02",
+        "S-06"
+      ],
+      "lines": {
+        "S-08": [
+          "A kind review on {product}, {rating} stars from {name}. I thought you might like to read it.",
+          "{name} left {rating} stars for {product}. I'm glad it arrived well.",
+          "{name} wrote a nice note with {rating} stars on {product}. It made my morning, a little.",
+          "A good review of {product}: {name}, {rating} stars. I have saved it for the notes file."
+        ],
+        "S-07": [
+          "Lovely review on {product} from {name}, {rating} stars. Warms the cockles of the heart, and other less-polite organs.",
+          "{rating} stars from {name} for {product}. That's the sort of thing that makes a Tuesday better than a Wednesday.",
+          "{name} has given {product} {rating} stars and a kind word. Somebody up there likes us, or at least somebody in {name}'s house.",
+          "Nice one: {rating} stars from {name} on {product}. Warm as toast."
+        ],
+        "S-01": [
+          "Have you seen {name}'s review of {product}? {rating} stars. This is why we do what we do.",
+          "Another good word for {product}, from {name}: {rating} stars. Please pass it round.",
+          "I read {name}'s {rating}-star review of {product} twice. Then I read it to the kettle."
+        ]
+      },
+      "replies": {
+        "S-10": [
+          "Could we put this on the site? With permission, of course. It's perfect.",
+          "This is excellent. May I use it in a post?"
+        ],
+        "S-01": [
+          "Splendid. Thank you for telling us.",
+          "Read it aloud at the next meeting, please."
+        ],
+        "S-02": [
+          "Very good. Does it translate into more orders? I would like to know.",
+          "Nice. But feelings are not figures."
+        ],
+        "S-06": [
+          "Well deserved. Thank you for the reminder.",
+          "That is a good one."
+        ]
+      }
+    },
+    "bad_review": {
+      "channel": "customers",
+      "posters": [
+        "S-08",
+        "S-06",
+        "S-07"
+      ],
+      "replyers": [
+        "S-01",
+        "S-06",
+        "S-04",
+        "S-10"
+      ],
+      "lines": {
+        "S-08": [
+          "{name} left {rating} stars for {product}. It is a hard read, and fair, I think. I'll reply if you agree.",
+          "A low review on {product} from {name}. They say it did not go well. I've written a reply for checking.",
+          "{name} gave {product} {rating} stars. I think we should answer promptly and honestly.",
+          "A hard review from {name}: {rating} stars for {product}. I'll look at what went wrong."
+        ],
+        "S-06": [
+          "{rating} stars on {product} from {name}. I'll reply, politely, and look at the order.",
+          "Review on {product}: {rating} stars. We'll learn from it and say so.",
+          "{product} got {rating} stars from {name}. I have read the whole review. We will reply today."
+        ],
+        "S-07": [
+          "{name} gave {product} {rating} stars. A bit of a thumbs-down in a hard hat. I'll look at the order.",
+          "{name}'s {rating} stars for {product} sting a bit, like nettles. I'll look at the order and write back."
+        ]
+      },
+      "replies": {
+        "S-01": [
+          "Thank you. We shall learn from it. Please be kind in the reply.",
+          "Do answer them. And offer to put it right."
+        ],
+        "S-06": [
+          "Agreed. I'll sign it.",
+          "I'll check the order first."
+        ],
+        "S-04": [
+          "If it was a delivery issue, I have the times.",
+          "I'll check the dispatch notes."
+        ],
+        "S-10": [
+          "I'll not post anything about {product} today. Is that sensible?"
+        ]
+      }
+    },
+    "month_end": {
+      "channel": "money",
+      "posters": [
+        "S-03",
+        "S-02"
+      ],
+      "replyers": [
+        "S-01",
+        "S-02",
+        "S-03"
+      ],
+      "lines": {
+        "S-03": [
+          "Month-end for {month} is done. {orders} orders, {profit} profit. I hope that is what was expected.",
+          "The books for {month} are closed. Takings {revenue}, profit {profit}. Please tell me if anything looks wrong.",
+          "{month}: {orders} orders, profit {profit}. I have checked the bank twice.",
+          "I've finished {month}. Profit is {profit}. Sorry if it's later than usual.",
+          "{month} is closed and balanced. {orders} orders, profit {profit}. I'm afraid it took me longer than I said.",
+          "Figures for {month}: {orders} orders and {profit} profit. I rechecked the supplier payments twice, to be safe.",
+          "I've put {month} to bed. Profit {profit}. The bank and the books agree, which is always a relief.",
+          "{month} is done: {orders} orders, {profit}. I hope you will not find a mistake. I looked for one and could not."
+        ],
+        "S-02": [
+          "{month} closed. Profit {profit}. Every penny accounted for, and several asked about.",
+          "Month-end done. {profit} for {month}. I do not discuss feelings, only figures.",
+          "{month}: profit {profit} on {orders} orders. Costs next, and I will be reading them slowly.",
+          "The books for {month} are shut. {profit}. I have initialled every page."
+        ]
+      },
+      "replies": {
+        "S-01": [
+          "Thank you, Bob and Ebenezer. Well done. A good month's work deserves a biscuit.",
+          "Wonderful. Thank you for being so careful."
+        ],
+        "S-02": [
+          "Acceptable. Could be better. Could be worse.",
+          "Costs are the thing to watch. Not the profit.",
+          "I will go through the ledger myself."
+        ],
+        "S-03": [
+          "Thank you. I'm glad.",
+          "I'll keep going, and I'll try to be quicker next time."
+        ]
+      }
+    },
+    "campaign_start": {
+      "channel": "marketing",
+      "posters": [
+        "S-10"
+      ],
+      "replyers": [
+        "S-01",
+        "S-02",
+        "S-06",
+        "S-04"
+      ],
+      "lines": {
+        "S-10": [
+          "{campaign} starts today. I have a good feeling about this one. A very good feeling.",
+          "It's today: {campaign}! Everything is ready. I have not slept. (I slept.)",
+          "{campaign} is live. This could be the next big thing. I say that every time and have been right twice.",
+          "{campaign} has started. Spend is {amount}. I have lovely ideas for the second week.",
+          "Today we begin {campaign}. Please be nice to customers who come in through it. They are fragile and valuable.",
+          "{campaign}, now. I wonder if we could make a film? Perhaps a small one.",
+          "I've pressed the button on {campaign}. The pictures look marvellous. I'd go so far as to say splendid.",
+          "Launching {campaign} now, and I have some thoughts about the one after.",
+          "{campaign} is up. I've checked the links four times. Five, actually.",
+          "Quick one: {campaign} has gone live. I am absurdly pleased.",
+          "{campaign}. Live. Spend {amount}. Tell your friends, or at least tell Mrs Hudson.",
+          "We are go for {campaign}. I've written a caption for every day of it."
+        ]
+      },
+      "replies": {
+        "S-01": [
+          "Splendid, Toad. Go gently, and give them a good time.",
+          "I hope it goes well. Thank you for the effort."
+        ],
+        "S-02": [
+          "{amount}? What will it bring back? I should like to see the figure afterwards.",
+          "Spend now, count later. I prefer the other way round."
+        ],
+        "S-06": [
+          "If it brings more questions, I'll want to know in advance.",
+          "Please tell me what the offer is, so I can answer people properly."
+        ],
+        "S-04": [
+          "Start time noted: {time}. I will count the orders that follow."
+        ]
+      }
+    },
+    "stock_count_diff": {
+      "channel": "stockroom",
+      "posters": [
+        "S-05"
+      ],
+      "replyers": [
+        "S-09",
+        "S-02",
+        "S-04",
+        "S-01"
+      ],
+      "lines": {
+        "S-05": [
+          "I counted {product} today and there are {count} fewer than the system says. I've counted three times. I'm sorry.",
+          "The count for {product} is off by {count}. I looked behind the shelves too.",
+          "Stock count: {product}. Not quite right. {count} difference. I hope someone can tell me why."
+        ]
+      },
+      "replies": {
+        "S-09": [
+          "Thank you, Mole. I'll note it. It might be a packing slip.",
+          "I'll check my list against it."
+        ],
+        "S-02": [
+          "Missing stock is missing money. I should like to see the count sheet.",
+          "Where have they gone? Things don't vanish."
+        ],
+        "S-04": [
+          "I will check the dispatch log for the last two weeks.",
+          "I'll look at what left, by the minute."
+        ],
+        "S-01": [
+          "Don't fret, Mole. These things turn up."
+        ]
+      }
+    },
+    "faulty_return": {
+      "channel": "stockroom",
+      "posters": [
+        "S-11"
+      ],
+      "replyers": [
+        "S-06",
+        "S-05",
+        "S-01",
+        "S-02"
+      ],
+      "lines": {
+        "S-11": [
+          "Returned {product} on the bench. Looking now.",
+          "Return in: {product}. Reason: fault. I'll test it.",
+          "{product} back from a customer. Will tell you what is wrong.",
+          "Bench has a returned {product}. More soon.",
+          "Looked at the returned {product}. Result in the case notes."
+        ]
+      },
+      "replies": {
+        "S-06": [
+          "Thank you. Please add it to the case when you've finished.",
+          "Tell me what you find, and I'll write to them."
+        ],
+        "S-05": [
+          "I'll move it to the repair shelf. Mind the corner.",
+          "I'll bring the box over."
+        ],
+        "S-01": [
+          "Good work, Hephaestus. As ever.",
+          "Thank you. Say if you need anything."
+        ],
+        "S-02": [
+          "Is it a fault of ours, or theirs? The answer affects the refund."
+        ]
+      }
+    },
+    "general_monday": {
+      "channel": "general",
+      "posters": [
+        "S-01"
+      ],
+      "replyers": [
+        "S-03",
+        "S-05",
+        "S-07",
+        "S-06",
+        "S-04",
+        "S-02",
+        "S-09",
+        "S-10",
+        "S-11",
+        "S-08"
+      ],
+      "lines": {
+        "S-01": [
+          "Good morning, everyone. New week. Let us do good work and go home on time.",
+          "Monday again. I am glad to see you all. The kettle is on.",
+          "A fresh week, and a fresh page. Let us make a good one.",
+          "Welcome back, all. If anybody needs anything this week, you've only to ask me.",
+          "Good morning. Tell me if anything is not right, and I will try to put it right.",
+          "Good morning. We start the week with a clean desk and a full kettle.",
+          "The week begins. Let us do it properly, and finish it on time.",
+          "Monday, and the office smells of toast. That is a good sign.",
+          "Welcome to a new week. If anything is wrong, tell me now and not on Friday.",
+          "A new week, and the post is already here. Good things come in envelopes.",
+          "Good morning. I have put a plate of shortbread by the kettle, and a note saying please eat it.",
+          "Monday: the best day to begin a thing well. Let us do so.",
+          "I hope everyone had a restful weekend. Mine involved a very long walk and a short nap.",
+          "Good morning, all. I have a good feeling about this week, and I have been wrong before, but rarely."
+        ]
+      },
+      "replies": {
+        "S-03": [
+          "Good morning, Mr Fezziwig.",
+          "Good morning. I've put the figures in your tray.",
+          "Good morning. I have started on the figures."
+        ],
+        "S-05": [
+          "Morning. I'm in the stockroom if anyone needs me.",
+          "Good morning.",
+          "Morning. I opened the stockroom early."
+        ],
+        "S-07": [
+          "Morning, guv'nor, bright as a button.",
+          "All present and correct, and a bit damp.",
+          "Morning! Fresh as a daisy, or at least a dandelion."
+        ],
+        "S-06": [
+          "Good morning. Please eat something.",
+          "Good morning, Mr Fezziwig. The desk is ready."
+        ],
+        "S-04": [
+          "Good morning. 9:00 and all present."
+        ],
+        "S-02": [
+          "Good morning. I have the figures ready if wanted."
+        ],
+        "S-09": [
+          "Good morning. I have my list for the week."
+        ],
+        "S-10": [
+          "Good morning! I have ideas for the week."
+        ],
+        "S-11": [
+          "Morning."
+        ],
+        "S-08": [
+          "Good morning, Mr Fezziwig. I hope the week is kind to us."
+        ]
+      },
+      "tails": [
+        "Please tell me if anything is wrong before Friday.",
+        "There are biscuits in the tin, for later.",
+        "The post is on the table.",
+        "I'll be at my desk if anyone needs me.",
+        "Do go home on time this week.",
+        "Let me know if you need anything.",
+        "The heating is on.",
+        "Thank you for coming in.",
+        "I shall not make a speech.",
+        "Let us have a good week."
+      ]
+    },
+    "general_friday": {
+      "channel": "general",
+      "posters": [
+        "S-01",
+        "S-06"
+      ],
+      "replyers": [
+        "S-07",
+        "S-03",
+        "S-05",
+        "S-10",
+        "S-04",
+        "S-02",
+        "S-09",
+        "S-11",
+        "S-08"
+      ],
+      "lines": {
+        "S-01": [
+          "It is Friday, and we have all done well this week. Thank you. Go home and rest.",
+          "Last day of the week. Please leave things tidy, and take something home from the biscuit tin.",
+          "Friday. Thank you for everything this week. I mean it.",
+          "Friday afternoon. Please tidy your desk, and take a biscuit from the tin on your way out.",
+          "Another week done. Thank you, all of you, for the care you took.",
+          "The last day of the week, and I am proud of what we did in it.",
+          "Friday, and the sun is out, or was when I looked. Go home on time.",
+          "I have enjoyed this week. I hope you did too, or at least did not mind it.",
+          "The week is nearly done. Thank you for the little kindnesses I saw in it."
+        ],
+        "S-06": [
+          "Friday. Please finish what you have started and leave me a note about the rest.",
+          "End of week. Tidy desks and an empty inbox, if you please.",
+          "Friday. Clear your inbox, or leave me a note about what remains.",
+          "Please check your cases before you leave. Nothing should be left half-said.",
+          "Friday. Please leave your workspace as you would like to find it on Monday.",
+          "End of the week. Whatever is not finished, write down so it is not forgotten."
+        ]
+      },
+      "replies": {
+        "S-07": [
+          "Hurray for Friday, which is the best day apart from the others.",
+          "Off to the pub, as the saying goes.",
+          "Cheers! Off to the pub, as the saying goes. Or home to the cat."
+        ],
+        "S-03": [
+          "Thank you, Mr Fezziwig. See you Monday.",
+          "I have finished everything, I think.",
+          "Thank you. I have put the week's figures in your tray."
+        ],
+        "S-05": [
+          "Have a nice weekend, all.",
+          "Thank you. I tidied the stockroom before I left."
+        ],
+        "S-10": [
+          "Weekend project time! I have so many ideas!",
+          "Weekend! I will think of something for Monday!"
+        ],
+        "S-04": [
+          "Everything is packed and logged. Have a good weekend."
+        ],
+        "S-02": [
+          "Friday. The week's costs are all entered."
+        ],
+        "S-09": [
+          "The list for next week is written."
+        ],
+        "S-11": [
+          "Bench is clear. Good weekend."
+        ],
+        "S-08": [
+          "Thank you. Have a good weekend, everyone."
+        ]
+      },
+      "tails": [
+        "See you on Monday.",
+        "Do not stay late on my account.",
+        "Have a restful weekend.",
+        "Please take care going home.",
+        "The week was better than I expected.",
+        "Leave the kettle for me.",
+        "Thank you, all of you.",
+        "Go home, and do not think about the stockroom.",
+        "I shall see you all on Monday.",
+        "Mind the step on the way out."
+      ]
+    },
+    "general_notice": {
+      "channel": "general",
+      "posters": [
+        "S-06",
+        "S-01",
+        "S-04"
+      ],
+      "replyers": [
+        "S-07",
+        "S-03",
+        "S-05",
+        "S-02",
+        "S-04",
+        "S-09",
+        "S-10",
+        "S-11",
+        "S-08",
+        "S-01",
+        "S-06"
+      ],
+      "lines": {
+        "S-06": [
+          "Reminder: the staff meeting is at ten tomorrow. It will start at ten.",
+          "Reminder: please put your expenses in by Friday.",
+          "The kitchen has been cleaned. I would like it to stay that way.",
+          "Reminder: please keep the kitchen as you found it.",
+          "Reminder: holiday requests to me by the end of the month, please.",
+          "The staff meeting moves to eleven today. It will start at eleven."
+        ],
+        "S-01": [
+          "Dear all, I have asked the carrier to come an hour earlier on the next working day. Please have the parcels ready.",
+          "A short notice: the shop will shut for the bank holiday. I will see you after.",
+          "A small notice: the biscuit tin is for everyone, and I will refill it on Friday.",
+          "Please do say good morning to the new plant. It is shy."
+        ],
+        "S-04": [
+          "The carrier collects at 15:30 precisely. Please have parcels at the door by 15:20.",
+          "Fire drill at 11:00 on Thursday. It will last four minutes.",
+          "The carrier will collect at 15:30. Parcels at the door by 15:20.",
+          "Stockroom stocktake on Thursday at 14:00. It will take about forty minutes."
+        ]
+      },
+      "replies": {
+        "S-07": [
+          "Understood, as the actress said.",
+          "Aye aye."
+        ],
+        "S-03": [
+          "Noted. Thank you.",
+          "I'll be there."
+        ],
+        "S-05": [
+          "I will remember. I wrote it on my hand.",
+          "Thank you."
+        ],
+        "S-02": [
+          "Noted. I should like to see the figures afterwards.",
+          "Understood. Do not let it cost more than it must."
+        ],
+        "S-04": [
+          "Noted. I will make sure of it.",
+          "Understood. Times logged."
+        ],
+        "S-09": [
+          "Noted. I will add it to my list."
+        ],
+        "S-10": [
+          "Noted! Thank you!"
+        ],
+        "S-11": [
+          "Noted.",
+          "Seen."
+        ],
+        "S-08": [
+          "Understood. Thank you for telling us."
+        ],
+        "S-01": [
+          "Thank you. Quite right.",
+          "Noted, with thanks."
+        ],
+        "S-06": [
+          "Noted. I will tell the desk."
+        ]
+      },
+      "tails": [
+        "Thank you.",
+        "That is all.",
+        "Please let me know if that is a problem.",
+        "I will say it once more on Friday.",
+        "Questions to me, please.",
+        "It will not take long.",
+        "Thank you for your patience.",
+        "I shall put a note by the door."
+      ]
+    }
+  },
+  "dm": [
+    {
+      "pair": [
+        "S-03",
+        "S-02"
+      ],
+      "a_says": [
+        "Mr Scrooge, I'm sorry to trouble you, but could you look at the figures when you have a moment?",
+        "I've put the bank statement on your desk. I hope that's the right one.",
+        "Is it all right if I leave early on Thursday? I'll make up the time.",
+        "I double-checked the supplier invoices. They all agree, I think."
+      ],
+      "b_says": [
+        "Cratchit, the coal for the office is on the ledger twice. Look into it.",
+        "I will look at them after lunch. Not before.",
+        "Thursday is acceptable. Make up the hours.",
+        "Do not apologise. Be accurate."
+      ]
+    },
+    {
+      "pair": [
+        "S-05",
+        "S-09"
+      ],
+      "a_says": [
+        "Robinson, we are down to one box of the small tape. Should I tell you or write it on the list?",
+        "I found the missing carton behind the shelf. It was only hiding.",
+        "Do you want the new stock on the left or the right shelf?",
+        "I've counted the spare boxes. There are forty-one."
+      ],
+      "b_says": [
+        "Write it on the list, Mole. Under 'tape'. Thank you.",
+        "Good. Cross it off the list and tell no one it was ever lost.",
+        "Left. Always the left. It is easier to count.",
+        "Forty-one. I make it forty-one as well. Good."
+      ]
+    },
+    {
+      "pair": [
+        "S-06",
+        "S-07"
+      ],
+      "a_says": [
+        "Sam, the Hindle complaint is yours to answer by Thursday. Have you started?",
+        "Please check your inbox. Two of them are older than they should be.",
+        "Thank you for staying late. I noticed.",
+        "Can you take the phone for an hour while I read the policy?"
+      ],
+      "b_says": [
+        "Started, Mrs H, and going well. As the pudding said to the spoon.",
+        "On it. I'll have them cleared before the clock gets its elbows out.",
+        "Happy to, mum. Nothing like a bit of overtime to build character.",
+        "Course I can. I'll be as polite as a vicar at a tea party."
+      ]
+    },
+    {
+      "pair": [
+        "S-06",
+        "S-08"
+      ],
+      "a_says": [
+        "Esther, how are you finding the queue today? Be honest.",
+        "Your last reply to the customer was well done. I mean it.",
+        "If you are unsure about a refund, ask me. Do not guess.",
+        "Take a proper lunch today. That's an instruction."
+      ],
+      "b_says": [
+        "It is a little heavy, but I'm managing, I think. Thank you for asking.",
+        "Thank you. I did read it three times before sending.",
+        "I will. I'm always afraid of getting it wrong.",
+        "I will. Thank you, Mrs Hudson."
+      ]
+    },
+    {
+      "pair": [
+        "S-10",
+        "S-01"
+      ],
+      "a_says": [
+        "Mr Fezziwig, I have had the most wonderful idea. May I tell you about it?",
+        "Could we spend a little more on the next campaign? Only a little. Possibly a medium amount.",
+        "I've drafted three posts and cannot choose. Would you look?",
+        "Is it all right if I try something new with the newsletter?"
+      ],
+      "b_says": [
+        "Of course, Toad. But gently, and over a biscuit.",
+        "Let us see the figures first, and then I'll say yes if I can.",
+        "Send them over. I will read them with my tea.",
+        "If it is honest, and not too clever, yes."
+      ]
+    },
+    {
+      "pair": [
+        "S-04",
+        "S-05"
+      ],
+      "a_says": [
+        "Mole, I need the Monday parcels at the door by 8:50. Not 8:55.",
+        "Parcels packed at 14:12. Can you take them to the carrier's box?",
+        "Thank you for the tidy shelves. It saves me four minutes a day.",
+        "The scales were off by two grams. I have recalibrated them."
+      ],
+      "b_says": [
+        "I'll have them there at 8:45, to be safe.",
+        "Yes, I'll take them now. I'll be careful with the sandwiches.",
+        "Thank you. I like it tidy as well.",
+        "Oh, thank you for telling me. I had not noticed."
+      ]
+    },
+    {
+      "pair": [
+        "S-11",
+        "S-06"
+      ],
+      "a_says": [
+        "Bench is clear. Send me whatever is outstanding.",
+        "Returned unit has a fault. Details in case notes.",
+        "Parts arrived. Repairs resume tomorrow.",
+        "Customer's repair is done. Ready to post."
+      ],
+      "b_says": [
+        "Thank you. I have three for you, listed in the cases.",
+        "Read it. I will write to the customer.",
+        "Good. I will tell the people waiting.",
+        "Thank you. I'll arrange the postage."
+      ]
+    }
+  ]
+}

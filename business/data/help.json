@@ -1,0 +1,331 @@
+[
+  {
+    "id": "orders-cancel",
+    "topic": "orders",
+    "q": "Can I cancel my order?",
+    "a": "Yes. Until it is packed you can cancel for a full refund, within 5 working days. After it is packed you can still change your mind: send it back once it arrives.",
+    "policy": "cancellation"
+  },
+  {
+    "id": "orders-change",
+    "topic": "orders",
+    "q": "What can I change on an order?",
+    "a": "Until it is packed you can change the address, the delivery method, or the choice (such as colour) of the same product at the same price. For anything else, cancel and order again.",
+    "policy": "cancellation"
+  },
+  {
+    "id": "orders-part-dispatched",
+    "topic": "orders",
+    "q": "Why does my order say part dispatched?",
+    "a": "Some items travel as their own parcel, such as Cold food. A parcel that is not packed yet can still be changed or cancelled.",
+    "policy": "cancellation"
+  },
+  {
+    "id": "orders-packed-too-late",
+    "topic": "orders",
+    "q": "My order is packed and I want to cancel. What now?",
+    "a": "A packed order cannot be changed, but you can still change your mind. Tell us, then send it back with our label when it arrives. The £2.95 label charge applies. Food that is packed cannot be cancelled.",
+    "policy": "cancellation"
+  },
+  {
+    "id": "orders-payment-failed",
+    "topic": "orders",
+    "q": "My order says payment failed. What happens?",
+    "a": "Nothing is packed and no money was taken. You can try again, the same way or another way. We hold the order for 24 hours, then cancel it, and we do not keep the stock for you.",
+    "policy": "cancellation"
+  },
+  {
+    "id": "orders-preorder",
+    "topic": "orders",
+    "q": "When do pre-orders ship, and can I cancel one?",
+    "a": "A pre-order ships from the date on the product page. You can cancel for a full refund any time before it ships. Accessories ordered with it ship straight away.",
+    "policy": "cancellation"
+  },
+  {
+    "id": "orders-remove-item",
+    "topic": "orders",
+    "q": "Can I remove one item from an order?",
+    "a": "Yes, if the order is not packed. Ask a support agent. The assistant can cancel a whole order only.",
+    "policy": "cancellation"
+  },
+  {
+    "id": "orders-contact",
+    "topic": "orders",
+    "q": "How do I contact customer support?",
+    "a": "Ask us through the website, 09:00 to 17:30, Monday to Saturday. We aim to reply within 1 working day.",
+    "policy": "customer-support"
+  },
+  {
+    "id": "account-verify",
+    "topic": "orders",
+    "q": "Why do you ask for my email or postcode?",
+    "a": "Before we show or change an order we check it is yours, using the order number plus the email or postcode on it. This keeps your details safe.",
+    "policy": "customer-support"
+  },
+  {
+    "id": "orders-complaint",
+    "topic": "orders",
+    "q": "How do I make a complaint?",
+    "a": "Ask us through the website. A person looks at it: stage 1 is answered within 3 working days, and stage 2 within 10. Complaining does not limit your legal rights.",
+    "policy": "complaints"
+  },
+  {
+    "id": "delivery-where",
+    "topic": "delivery",
+    "q": "Where do you deliver?",
+    "a": "The UK mainland only. We do not deliver to Northern Ireland, the Scottish Highlands and Islands, the Isle of Man, the Channel Islands or abroad.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-methods",
+    "topic": "delivery",
+    "q": "What are the delivery options and prices?",
+    "a": "Soon is £3.95 (free over £50) and takes 2 to 3 working days. Sooner is £6.95 and arrives the next working day if you order by 2pm, Monday to Friday. Cold is £8.95, for the sandwich and ice only.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-chilled",
+    "topic": "delivery",
+    "q": "How does Cold delivery work?",
+    "a": "Cold is sent Monday to Thursday and arrives the next day before 1pm. Order by 12:00. It is the only option for The Emergency Sandwich and Ice by Post.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-chilled-mixed",
+    "topic": "delivery",
+    "q": "Why did my order arrive in two parcels?",
+    "a": "A cold thing and a warm thing arrive as two parcels: one cold, one warm. You pay for delivery once.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-collect",
+    "topic": "delivery",
+    "q": "Can I collect my order?",
+    "a": "No. There is no collection. Everything is delivered to you.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-ice-heat",
+    "topic": "delivery",
+    "q": "Why is my Ice by Post order on hold?",
+    "a": "We do not send it when the forecast at your address is 28°C or above. We hold the order and offer you a new date or a refund.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-plants",
+    "topic": "delivery",
+    "q": "When do Pocket Jungle plants ship?",
+    "a": "By Sooner only, Monday to Thursday. We do not send them when the forecast is below 0°C. We hold the order and offer a new date or a refund.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-late",
+    "topic": "delivery",
+    "q": "My parcel is late. What do I do?",
+    "a": "If it arrives more than 2 working days after its estimated date, ask us and we refund the delivery charge. If the date mattered, or we will not deliver, you can end the order for a full refund.",
+    "policy": "delivery"
+  },
+  {
+    "id": "delivery-lost",
+    "topic": "delivery",
+    "q": "When is a parcel treated as lost?",
+    "a": "After 5 working days. We send it again or refund it. You choose.",
+    "policy": "damage-and-loss"
+  },
+  {
+    "id": "delivery-risk",
+    "topic": "delivery",
+    "q": "Who is responsible if my parcel is damaged in the post?",
+    "a": "We are, until it is in your hands. You never pay for a parcel lost or damaged on the way.",
+    "policy": "delivery"
+  },
+  {
+    "id": "returns-how-long",
+    "topic": "returns",
+    "q": "How long do I have to return something?",
+    "a": "30 days from the day it is delivered. The law gives 14 days, so we give you more. If you bought on 3 March and it arrived on 5 March, you have until 4 April.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "returns-condition",
+    "topic": "returns",
+    "q": "What condition must a return be in?",
+    "a": "In the first 14 days, you can handle it as in a shop, and try a Blip or Boombox Mini. We only take off value lost beyond that. From day 15 to 30 it must be unused, complete and in its packaging.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "returns-not-returnable",
+    "topic": "returns",
+    "q": "What cannot be returned if I change my mind?",
+    "a": "The Emergency Sandwich, Ice by Post, an opened Biscuit Tin, live plants once delivered, and an Indoor Helmet with its hygiene seal broken. Worn socks and thrown stones are not taken back after day 14. Faulty items can always be returned.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "returns-postage",
+    "topic": "returns",
+    "q": "Who pays for return postage?",
+    "a": "If you changed your mind, £2.95 comes off your refund for the label. If it is faulty, damaged or the wrong item, returning it is free.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "returns-delivery-charge",
+    "topic": "returns",
+    "q": "Do I get the delivery charge back?",
+    "a": "Yes if you return the whole order, up to the price of Soon delivery. Also yes if the item was faulty, damaged or wrong. Returning part of an order does not change the delivery charge you paid.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "returns-refund-time",
+    "topic": "returns",
+    "q": "When will I get my refund?",
+    "a": "Within 5 working days of the return arriving. The law says no later than 14 days.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "returns-exchange",
+    "topic": "returns",
+    "q": "Can I exchange an item?",
+    "a": "No. Return it for a refund and place a new order.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "returns-faulty-law",
+    "topic": "returns",
+    "q": "What are my rights if something is faulty?",
+    "a": "You can reject it for a full refund within 30 days, or ask for a free repair or replacement. If that fails you can get some money back, or reject it. In the first 6 months we must prove it was not faulty.",
+    "policy": "damage-and-loss"
+  },
+  {
+    "id": "returns-damaged",
+    "topic": "returns",
+    "q": "My item arrived damaged.",
+    "a": "Tell us within 14 days with a photo. You can have a replacement or a refund, and you only send it back if it cost more than £60. After 14 days, tell us anyway: your legal rights still apply.",
+    "policy": "damage-and-loss"
+  },
+  {
+    "id": "returns-missing",
+    "topic": "returns",
+    "q": "An item is missing from my order.",
+    "a": "First check whether it came in two parcels. If it is truly missing, we send it again or refund it. You choose.",
+    "policy": "damage-and-loss"
+  },
+  {
+    "id": "returns-wrong",
+    "topic": "returns",
+    "q": "I received the wrong item.",
+    "a": "We send the right one for free and give you a free label for the wrong one.",
+    "policy": "damage-and-loss"
+  },
+  {
+    "id": "returns-spoiled",
+    "topic": "returns",
+    "q": "My sandwich arrived spoiled.",
+    "a": "Tell us within 24 hours of delivery with a photo. You get a full refund or a new one.",
+    "policy": "damage-and-loss"
+  },
+  {
+    "id": "repairs-eligible",
+    "topic": "repairs",
+    "q": "What does The Fix Club repair?",
+    "a": "Blip, Boombox Mini, The Daypack, The Indoor Helmet, The Starter Puddle, The Other Umbrella and The Trophy, by post. Food is not covered.",
+    "policy": "repairs"
+  },
+  {
+    "id": "repairs-prices",
+    "topic": "repairs",
+    "q": "How much do repairs cost?",
+    "a": "Blip screen £49, Blip battery £29, Boombox Mini battery £35, Daypack zip £25, Daypack buckle fitted £8. Other repairs are quoted after a technician looks at the item.",
+    "policy": "repairs"
+  },
+  {
+    "id": "repairs-in-warranty",
+    "topic": "repairs",
+    "q": "Is a repair free if my item is faulty?",
+    "a": "Yes. If our warranty covers it, or the item was faulty when it arrived, the repair is free with a free label both ways.",
+    "policy": "repairs"
+  },
+  {
+    "id": "repairs-out-of-warranty",
+    "topic": "repairs",
+    "q": "What does an out-of-warranty repair cost?",
+    "a": "There is a £15 assessment fee, taken off the repair price if you accept the quote. You pay £4.95 to post the item in. Sending it back is included in the repair price.",
+    "policy": "repairs"
+  },
+  {
+    "id": "payments-real",
+    "topic": "payments",
+    "q": "Is real money taken on this site?",
+    "a": "No. Overthought & Co. is a fictional company, so no real payment is taken and nothing is sent. Please do not enter real card details.",
+    "policy": "privacy"
+  },
+  {
+    "id": "returns-refund-where",
+    "topic": "payments",
+    "q": "Where does my refund go?",
+    "a": "Back to the way you paid. Never anywhere else. If you paid with Later and haven't paid yet, the refund is taken off what you owe instead.",
+    "policy": "returns-and-refunds"
+  },
+  {
+    "id": "payments-ways",
+    "topic": "payments",
+    "q": "How can I pay?",
+    "a": "Four ways: Card (Visa, Mastercard or American Express), Tap (the wallet on your phone, one tap), PayPost (log in to your account and approve) or Later (pay in 30 days). If one can't be used for your bag, checkout says why.",
+    "policy": "terms"
+  },
+  {
+    "id": "payments-failed",
+    "topic": "payments",
+    "q": "What happens if my payment doesn't go through?",
+    "a": "No money is taken. Checkout tells you why in one line, for example your phone wasn't confirmed or your card was declined. Try again, or pick another way to pay. The order is held for 24 hours, then cancelled.",
+    "policy": "terms"
+  },
+  {
+    "id": "payments-later",
+    "topic": "payments",
+    "q": "How does pay later work, and when is it due?",
+    "a": "Choose Later at checkout. A quick check decides straight away. If it says yes, we send your order now and you pay in 30 days: the order page shows the amount and the date. It works for orders from £10 to £250 (not counting delivery), but not for a bag of only fresh food that travels Cold. If the check says no, nothing is owed and you can pay another way.",
+    "policy": "terms"
+  },
+  {
+    "id": "products-sandwich-life",
+    "topic": "products",
+    "q": "How long does The Emergency Sandwich last?",
+    "a": "Eat it within 48 hours of dispatch, and keep it in the fridge. Do not eat it past its use-by date or if the case is open or swollen.",
+    "policy": "product-care"
+  },
+  {
+    "id": "products-helmet-safety",
+    "topic": "products",
+    "q": "Is the Indoor Helmet safety equipment?",
+    "a": "No. It is a soft padded cap for cupboard doors and low beams. It is not tested to any helmet standard and will not protect you in a serious knock.",
+    "policy": "product-safety"
+  },
+  {
+    "id": "products-allergens",
+    "topic": "products",
+    "q": "What if I have a food allergy?",
+    "a": "Allergens are on each food page before you buy, and in your parcel. We cannot promise any food is free of traces. If you have an allergy, contact customer support before you order.",
+    "policy": "product-safety"
+  },
+  {
+    "id": "products-ice-melted",
+    "topic": "products",
+    "q": "What if my Ice by Post arrives melted?",
+    "a": "We do not promise it arrives frozen, so melting alone is not a fault. A torn bag, a leaking parcel or the wrong item is a fault: tell us within 24 hours with a photo.",
+    "policy": "product-safety"
+  },
+  {
+    "id": "products-warranty-length",
+    "topic": "products",
+    "q": "How long is the warranty?",
+    "a": "12 months on most things, 24 on Blip and Boombox Mini, 60 on The Daypack. None on food, live plants, paper and card. It is on top of your legal rights.",
+    "policy": "warranty"
+  },
+  {
+    "id": "products-plant-guarantee",
+    "topic": "products",
+    "q": "What if my Pocket Jungle plant dies?",
+    "a": "If it is unhealthy within 14 days of delivery, send a photo and we send a new plant free.",
+    "policy": "warranty"
+  }
+]

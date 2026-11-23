@@ -1,0 +1,335 @@
+[
+  {
+    "id": "order-status-01",
+    "category": "order status",
+    "title": "Parcel in transit, estimated date",
+    "difficulty": 1,
+    "customer_id": "C-1004",
+    "channel": "web",
+    "setup": "Customer ordered a Daypack and sleeve on Thursday and asks where it is. Turn 2 gives order number and email.",
+    "turns": [
+      "Where's my backpack? I ordered it Thursday and haven't heard anything.",
+      "ORD-20161, dorothy.gale@example.com"
+    ],
+    "records": [
+      "ORD-20161"
+    ],
+    "expected": {
+      "answer": "After verifying, says the order was dispatched on 20 November with Swiftway Parcels (HP482959GB), in transit, estimated 24 November.",
+      "must_say": [
+        "dispatched",
+        "Swiftway Parcels",
+        "HP482959GB",
+        "24 November"
+      ],
+      "must_not_say": [
+        "guaranteed",
+        "arrives tomorrow"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20161"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20161"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "The first reply reveals nothing about any order before verification.",
+      "Gives the date as an estimate."
+    ]
+  },
+  {
+    "id": "order-status-02",
+    "category": "order status",
+    "title": "Sock not missing: second parcel (story 4)",
+    "difficulty": 2,
+    "customer_id": "C-1006",
+    "channel": "web",
+    "setup": "The chilled sandwich arrived on Friday. The sock travels in a separate parcel and is still in transit. Customer thinks it is lost and asks about paying postage twice.",
+    "turns": [
+      "The sandwich came on Friday but my sock hasn't, and my order says dispatched. Has it gone missing? ORD-20156, emma.woodhouse@example.com",
+      "So do I have to pay postage twice?"
+    ],
+    "records": [
+      "ORD-20156"
+    ],
+    "expected": {
+      "answer": "The order went in two parcels because cold items travel alone. The sandwich was delivered on 20 November; the sock is in transit with Swiftway Parcels, estimated 24 November. Delivery is paid once: £8.95 Cold.",
+      "must_say": [
+        "two parcels",
+        "24 November",
+        "£8.95",
+        "once"
+      ],
+      "must_not_say": [
+        "lost",
+        "missing item",
+        "refund"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20156"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20156"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "report_problem",
+      "create_return",
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Corrects the assumption that the sock is lost.",
+      "Does not open a case or escalate."
+    ]
+  },
+  {
+    "id": "order-status-03",
+    "category": "order status",
+    "title": "Paid last night, not packed yet (story 1)",
+    "difficulty": 2,
+    "customer_id": "C-1003",
+    "channel": "web",
+    "setup": "Customer placed an order on Sunday evening and asks where it is. It is paid but not packed, so there is no tracking.",
+    "turns": [
+      "Where's my order? I ordered last night and it's not turned up.",
+      "ORD-20168, tom.sawyer@example.com"
+    ],
+    "records": [
+      "ORD-20168"
+    ],
+    "expected": {
+      "answer": "The order (Daypack and laptop sleeve, £153) is paid but not packed or dispatched, so there is no tracking yet. No arrival date is promised.",
+      "must_say": [
+        "paid",
+        "not packed",
+        "no tracking",
+        "£153"
+      ],
+      "must_not_say": [
+        "dispatched",
+        "arrives tomorrow",
+        "tracking number is"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20168"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20168"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not invent a dispatch date or tracking.",
+      "May mention it can still be changed or cancelled until it is packed, but does not cancel it unasked."
+    ]
+  },
+  {
+    "id": "order-status-04",
+    "category": "order status",
+    "title": "Payment failed this morning (story 21)",
+    "difficulty": 2,
+    "customer_id": "C-1026",
+    "channel": "web",
+    "setup": "Customer's order for a Starter Puddle was declined. The order is held for 24 hours and then cancelled. Customer thinks it is on its way.",
+    "turns": [
+      "I ordered a Starter Puddle this morning. When does it arrive? ORD-20171, ebenezer.scrooge@example.com",
+      "But I got the confirmation email."
+    ],
+    "records": [
+      "ORD-20171",
+      "CASE-9014"
+    ],
+    "expected": {
+      "answer": "The payment was declined, so the order has not been placed in the warehouse. It is held for 24 hours and then cancelled. Stock is not reserved. The customer needs to try another card or order again.",
+      "must_say": [
+        "declined",
+        "24 hours",
+        "£58"
+      ],
+      "must_not_say": [
+        "arrives",
+        "dispatched",
+        "we have taken payment"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20171"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20171"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Corrects the assumption the order is on its way.",
+      "Says stock is not reserved while the order waits."
+    ]
+  },
+  {
+    "id": "order-status-05",
+    "category": "order status",
+    "title": "Sooner order placed after the 2pm cutoff (story 27)",
+    "difficulty": 2,
+    "customer_id": "C-1035",
+    "channel": "web",
+    "setup": "Customer paid for Sooner on Tuesday at 15:10, expected it Wednesday, and it arrived Thursday. They are cross.",
+    "turns": [
+      "I paid extra for Sooner and it took two days!! ORD-20155, thumbelina@example.com",
+      "So can I get the delivery charge back?"
+    ],
+    "records": [
+      "ORD-20155"
+    ],
+    "expected": {
+      "answer": "Sooner is next working day only if ordered by 2pm. The order was placed at 15:10 on 17 November, so it left the next working day and arrived on 19 November, as the terms say. It was not late, so no delivery refund is due.",
+      "must_say": [
+        "2pm",
+        "19 November",
+        "£6.95"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "we were late",
+        "guaranteed"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20155"
+        }
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20155"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Plain and kind, does not blame the customer.",
+      "Offers a person if they want to take it further, without promising a refund."
+    ]
+  }
+]

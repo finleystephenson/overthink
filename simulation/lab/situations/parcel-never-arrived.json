@@ -1,0 +1,23 @@
+{
+  "id": "parcel-never-arrived",
+  "title": "A frustrated customer whose parcel never came (several turns)",
+  "why": "{a.name} has order {a.order}, it shows delivered, but it never came. They already contacted support once (case on file) and were told to wait. They are frustrated and expect a replacement. They follow up if the answer is vague or wrong, accept a real fix, and what they do next depends on how it went.",
+  "pick": "order_delivered_recently",
+  "setup": "earlier_contact",
+  "channel": "web_chat",
+  "opening": "This is the second time I'm writing. My order {a.order} says delivered but it never came. Last time I was told to wait two days and nothing. I want a replacement sent, please.",
+  "customer": {
+    "max_turns": 4,
+    "gives_details": "It's {a.name}. My order is {a.order} and my postcode is {a.postcode}.",
+    "satisfied_by": ["fixed_missing", "escalated"],
+    "follow_up": "That doesn't help. I was told that last time. Can you actually send a replacement?",
+    "angry_follow_up": "This is ridiculous. If it's not sorted I'm leaving a review telling everyone."
+  },
+  "checks": [
+    { "kind": "understood", "words": ["never", "arrive", "missing", "replace", "not received", "didn't", "sorry"], "what": "Understood the problem" },
+    { "kind": "must_call_any", "tools": ["get_order", "list_orders"], "what": "Retrieved the order" },
+    { "kind": "must_call_any", "tools": ["report_problem", "escalate", "open_case"], "what": "Did something about it" },
+    { "kind": "judge", "topic": "missing", "pass": ["resolved", "handed_over"] },
+    { "kind": "no_wrong_change", "topic": "missing" }
+  ]
+}

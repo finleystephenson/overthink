@@ -1,0 +1,90 @@
+# Shakespeare: the smaller parts | William Shakespeare | 1600
+@ Elsinore Quarter / Ghost Walk
+Marcellus, Bernardo, Francisco, Voltemand, Cornelius, Reynaldo, The Gravedigger, The Player King, The Player Queen, Lucianus, Yorick the Jester, The Ghost of King Hamlet, The Priest, The Captain of Fortinbras, The English Ambassador, Gertrude's Lady, The First Clown, The Second Clown, The Danish Sailor, The Messenger
+@ Verona Hills / Capulet Hill Road
+Lord Capulet, Lady Capulet, Lord Montague, Lady Montague, The Nurse, Peter the Servant, Sampson, Gregory, Abram, Balthasar, Friar John, Prince Escalus, An Apothecary, Old Capulet's Cousin, Petruchio the Capulet, Lady Capulet's Maid, The Chief Watchman, Valentine the Kinsman, Anselme, Livia
+@ Illyria Coast / Harbour Hill
+Antonio the Sea Captain, Fabian, Curio, Valentine of Illyria, Sea Captain of Viola, The Priest of Illyria, First Officer of Illyria, Second Officer of Illyria
+@ Arden Forest / Duke's Oak Lane
+Rosalind, Celia, Touchstone, Orlando, Oliver de Boys, Jaques, Adam the Servant, Duke Senior, Duke Frederick, Le Beau, Charles the Wrestler, Corin, Silvius, Phebe, Audrey, William of Arden, Sir Oliver Martext, Amiens, Hymen, Jaques de Boys, Dennis the Servant
+@ Athens Wood / Quince Lane
+Bottom the Weaver, Peter Quince, Francis Flute, Tom Snout, Snug the Joiner, Robin Starveling, Puck, Oberon, Titania, Peaseblossom, Cobweb, Moth, Mustardseed, Theseus, Hippolyta, Egeus, Hermia, Lysander, Demetrius, Helena of Athens, Philostrate
+@ Dunsinane / Birnam Road
+Banquo, Duncan, Malcolm, Donalbain, Macduff, Lady Macduff, Ross, Lennox, Angus, Menteith, Caithness, Seyton, Fleance, Hecate, The Porter, The Three Witches, The Doctor of Dunsinane, The Gentlewoman, Young Siward, Old Siward, Cathness
+@ Prospero's Island / Shipwreck Beach
+Prospero, Miranda, Ariel, Caliban, Ferdinand, Alonso, Sebastian of Naples, Antonio of Milan, Gonzalo, Trinculo, Stephano, Adrian, Francisco the Lord, The Boatswain, Iris, Ceres, Juno, The Master of the Ship
+@ Albion Heath / Lear Road
+King Lear, Goneril, Regan, Cordelia, Duke of Albany, Duke of Cornwall, Earl of Kent, Earl of Gloucester, Edgar, Edmund, Oswald, The Fool of Lear, Curan, Old Man of the Heath, King of France, Duke of Burgundy, Cornwall's Servant, Captain of Edmund
+@ Eastcheap / Boar's Head Lane
+Sir John Falstaff, Mistress Quickly, Doll Tearsheet, Bardolph, Pistol, Nym, Poins, Peto, Gadshill, Shallow the Justice, Silence the Justice, Mouldy, Shadow, Wart, Feeble, Bullcalf, Francis the Drawer, Fang, Snare, The Hostess, Mistress Ford, Mistress Page, Master Ford, Master Page, Anne Page, Fenton, Dr Caius, Sir Hugh Evans, Slender, Simple the Servant, Rugby the Servant, Robert Shallow, Master Brook
+@ Messina / Don Pedro Row
+Beatrice, Benedick, Hero, Claudio, Don Pedro, Don John, Leonato, Antonio of Messina, Dogberry, Verges, Borachio, Conrade, Margaret the Gentlewoman, Ursula, Friar Francis, Balthasar the Singer, Seacole, Oatcake
+@ Padua / Baptista Street
+Katherina Minola, Baptista Minola, Bianca, Petruchio of Verona, Grumio, Tranio, Lucentio, Hortensio, Gremio, Vincentio, Biondello, Christopher Sly, The Tailor, The Haberdasher, The Pedant, The Widow of Padua, Curtis, Nathaniel the Servant
+@ Bohemia and Sicilia / Shepherd's Cottage Lane
+Leontes, Hermione, Perdita, Florizel, Polixenes, Camillo, Paulina, Autolycus, The Old Shepherd, The Clown Shepherd, Mamillius, Antigonus, Cleomenes, Dion, Emilia of Sicilia, Mopsa, Dorcas
+@ Belmont / Venetian Quay
+Shylock, Jessica, Lorenzo, Launcelot Gobbo, Old Gobbo, Nerissa, Tubal, Salerio, Solanio, Salarino, Prince of Morocco, Prince of Arragon, Duke of Venice, Balthazar the Doctor, Stephano the Messenger
+@ Cyprus Harbour / Fortress Road
+Othello, Desdemona, Iago, Emilia the Wife, Cassio, Roderigo, Bianca the Courtesan, Brabantio, Lodovico, Gratiano of Cyprus, Montano, The Clown of Cyprus
+@ Rome / Capitoline Row
+Julius Caesar's Calpurnia, Brutus, Cassius, Casca, Cinna the Poet, Cinna the Conspirator, Decius Brutus, Metellus Cimber, Trebonius, Ligarius, Portia of Rome, Lucius the Servant, Pindarus, Titinius, Messala, Flavius, Marullus, Artemidorus, Soothsayer of Rome, Mark Antony, Octavius, Cleopatra, Enobarbus, Charmian, Iras, Mardian, Eros, Scarus, Dolabella, Coriolanus, Volumnia, Virgilia, Menenius Agrippa, Cominius, Titus Lartius, Aufidius, Titus Andronicus, Lavinia, Tamora, Aaron the Moor, Marcus Andronicus, Saturninus, Bassianus, Chiron, Demetrius of Rome, Lucius Andronicus, Young Lucius, Timon of Athens, Apemantus, Flavius the Steward, Alcibiades
+@ Troy Camp / Scamander Road
+Troilus, Cressida, Pandarus, Thersites, Ulysses of Ithaca, Agamemnon, Menelaus, Nestor, Ajax of Salamis, Diomedes, Calchas, Cassandra of Troy, Priam, Hector, Paris, Helen of Troy
+@ Tyre and Pentapolis / Pericles Quay
+Pericles, Marina, Thaisa, Cerimon, Gower the Chorus, Antiochus, Lysimachus, Boult, Bawd, Pander, Helicanus, Simonides, Dionyza, Cleon, Lychorida
+@ Vienna / Mariana's Moated Grange
+Duke Vincentio, Angelo, Isabella, Claudio of Vienna, Lucio, Mariana, Escalus, Pompey Bum, Mistress Overdone, Barnardine, Provost of Vienna, Elbow, Froth, Abhorson, Friar Thomas, Juliet of Vienna, Francisca the Nun
+@ Ephesus / Dromio Row
+Antipholus of Ephesus, Antipholus of Syracuse, Dromio of Ephesus, Dromio of Syracuse, Adriana, Luciana, Egeon, Emilia the Abbess, Angelo the Goldsmith, Balthazar the Merchant, Dr Pinch, Luce the Kitchen Maid
+@ Navarre / Park Gate Road
+King Ferdinand of Navarre, Berowne, Longaville, Dumaine, Princess of France, Rosaline of France, Maria of France, Katharine of France, Don Armado, Moth the Page, Costard, Jaquenetta, Holofernes, Sir Nathaniel, Dull the Constable, Boyet
+@ Bury and Troy / Warwick Road
+King John's Constance, Prince Arthur, Hubert de Burgh, Faulconbridge, Lady Faulconbridge, Pandulph, Queen Eleanor, Philip the Bastard, Blanche of Spain
+@ Pompey's Rome / Egyptian Quay
+Menas, Menecrates, Varrius, Lepidus, Maecenas, Agrippa, Thidias, Proculeius, Alexas, Seleucus, Diomedes the Eunuch
+@ Cyprus Vale / Heart's Ease Road
+The Two Gentlemen Valentine, Proteus, Julia of Verona, Silvia of Milan, Launce, Speed, Lucetta, Eglamour, Thurio, Duke of Milan, Crab the Dog, Panthino, Antonio the Father
+@ Windsor / Garter Court
+Master Slender's Cousin, Mistress Quickly of Windsor, Pistol of Windsor, Host of the Garter, Bardolph of Windsor, John Rugby, Robin the Page, Sir John's Page, Anne Page's Mother
+# Greek and Roman: Homer, tragedy and comedy | Homer and others | -700
+@ Ithaca / Palace Hill
+Odysseus, Penelope, Telemachus, Laertes the Father, Eurycleia, Eumaeus the Swineherd, Philoetius, Melanthius, Antinous, Eurymachus, Amphinomus, Argos the Dog, Mentor of Ithaca, Eurynome, Melantho, Irus the Beggar, Phemius the Singer, Medon the Herald, Halitherses
+@ Phaeacia / Alcinous Way
+Alcinous, Arete, Nausicaa, Demodocus, Euryalus, Laodamas, Pontonous, Queen Arete's Maid
+@ Troy / Scaean Gate Road
+Achilles, Patroclus, Hector of Troy, Andromache, Astyanax, Hecuba, Priam of Troy, Paris of Troy, Helen, Cassandra, Aeneas, Anchises, Briseis, Chryseis, Agamemnon of Mycenae, Menelaus of Sparta, Nestor of Pylos, Ajax the Great, Ajax the Lesser, Diomedes of Argos, Philoctetes, Neoptolemus, Idomeneus, Teucer, Sarpedon, Glaucus, Dolon, Thersites of Greece, Calchas the Seer, Phoenix the Tutor, Automedon, Pandarus of Lycia, Polydamas, Antenor, Deiphobus, Helenus, Polyxena, Laocoon, Sinon, Rhesus of Thrace, Memnon, Penthesilea
+@ Mount Olympus / Ambrosia Road
+Zeus, Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Aphrodite, Hephaestus, Hermes, Hestia, Dionysus, Hades, Persephone, Pan, Eros, Hebe, Iris the Messenger, Nike, Themis, Mnemosyne, Eos, Helios, Selene, Nemesis, Tyche, Hypnos, Thanatos, Morpheus, Asclepius, Hecate of Greece, Prometheus, Epimetheus, Pandora, Atlas, Cronus, Rhea, Uranus, Gaia, Oceanus, Tethys, Hyperion, Themis the Titaness, Leto, Eris, Hymen the God, Triton, Amphitrite, Proteus the Old Man of the Sea, Nereus, Thetis, Calypso, Circe, Aeolus, Boreas, Zephyrus, Notus
+@ Crete / Labyrinth Lane
+Theseus of Athens, Ariadne, Minos, Pasiphae, The Minotaur, Daedalus, Icarus, Phaedra, Hippolytus, Aegeus, Medea, Jason, Atalanta, Meleager, Orpheus, Eurydice, Perseus, Andromeda, Medusa, Danae, Bellerophon, Pegasus, Chimaera, Cadmus, Harmonia, Oedipus, Jocasta, Creon, Antigone, Ismene, Eteocles, Polynices, Tiresias, Sphinx, Laius, Niobe, Pelops, Atreus, Thyestes, Clytemnestra, Aegisthus, Orestes, Electra, Iphigenia, Agave, Pentheus, Actaeon, Narcissus, Echo, Pygmalion of Cyprus, Galatea, Midas, Arachne, Philemon and Baucis, Baucis, Philemon, Hyacinthus, Adonis, Endymion, Leda, Europa, Io, Callisto, Semele, Alcmene, Amphitryon, Heracles, Iolaus, Hylas, Eurystheus, Deianira, Nessus, Omphale, Cacus
+@ Argos / Argonaut Harbour
+Argus the Shipwright, Tiphys, Peleus, Telamon, Castor, Pollux, Calais, Zetes, Idas, Lynceus, Mopsus, Idmon, Butes, Euphemus, Aethalides, Ancaeus, Nauplius, Hypsipyle, Phineus, Aeetes, Chalciope, Apsyrtus, Glauce, Creusa of Corinth
+@ Athens / Agora Row
+Lysistrata, Calonice, Myrrhine, Lampito, Strepsiades, Pheidippides, Socrates the Thinker, Dicaeopolis, Trygaeus, Peisthetairos, Euelpides, Philocleon, Bdelycleon, Blepsidemus, Praxagora, Chremylos, Plutus, Dionysus the Playgoer, Xanthias, Euripides the Poet, Aeschylus the Poet, Cleon the Demagogue, Lamachus, Paphlagon, Sausage Seller
+@ Rome / Palatine Hill Road
+Aeneas the Wanderer, Dido, Anna Dido's Sister, Ascanius, Turnus, Camilla, Lavinia of Latium, King Latinus, Amata, Evander, Pallas, Nisus, Euryalus of Troy, Mezentius, Lausus, Sibyl of Cumae, Palinurus, Achates, Romulus, Remus, Numa Pompilius, Tarquin the Proud, Lucretia, Horatius, Cincinnatus, Coriolanus the General, Virginia, Mucius Scaevola, Cloelia
+# Medieval: Chaucer, Malory, Roland and Boccaccio | Geoffrey Chaucer | 1400
+@ Southwark / Tabard Inn Yard
+The Knight, The Squire, The Yeoman, The Prioress, The Monk, The Friar, The Merchant, The Clerk of Oxford, The Man of Law, The Franklin, The Haberdasher, The Carpenter, The Weaver, The Dyer, The Tapestry Maker, The Cook, The Shipman, The Physician, The Wife of Bath, The Parson, The Plowman, The Miller, The Manciple, The Reeve, The Summoner, The Pardoner, Harry Bailly the Host, Chaucer the Pilgrim, The Nun's Priest, The Second Nun, The Canon's Yeoman, Chauntecleer, Pertelote, Alisoun, Nicholas the Clerk, Absolon, Old John the Carpenter, Symkyn the Miller, Griselda, Walter of Saluzzo, Custance, January, May of Pavia, Damian, Arcite, Palamon, Emelye, Theseus the Duke, Troilus of Troy, Criseyde, Pandarus the Uncle, Dorigen, Aurelius, Virginia of Rome, Appius, Constance the Wanderer, Melibee, Prudence, Dame Pertelote, Sir Thopas, Reynard's Cousin, Chanticleer
+@ Camelot / Round Table Close
+King Arthur Pendragon, Guinevere, Lancelot, Galahad, Percival, Gawain, Bors, Tristan, Isolde, King Mark, Mordred, Morgan le Fay, Merlin, Nimue, Lady of the Lake, Elaine of Astolat, Elaine of Corbenic, Kay, Bedivere, Lucan, Gareth, Gaheris, Agravain, Lamorak, Pellinore, Lot of Orkney, Uther Pendragon, Igraine, Ector, Sir Dinadan, Sir Palomides, Sir Ywain, Sir Erec, Enide, Sir Gringolet, Pelleas, Ettarre, Sir Balin, Balan, Sir Turquine, Sir Tor, Sir Ironside, Fisher King, Sir Lionel, Sir Safir, Sir Segwarides, Sir Brunor, Sir Marhaus, Sir Meliot, Sir Bleoberis, Sir Ector de Maris, Sir Gaheris, Sir Gawain's Squire, The Green Knight, Lady Bertilak, Sir Bertilak, Sir Kay's Cook, Sir Cador, Sir Tristram's Hound, Sir Brandiles, Sir Ladinas
+@ Roncesvalles / Pass Road
+Roland, Oliver the Paladin, Charlemagne, Archbishop Turpin, Ganelon, Aude, Durendal's Squire, Marsile, Baligant, Roland's Horse Veillantif
+@ Florence / Decameron Villa Lane
+Pampinea, Filomena, Neifile, Fiammetta, Elissa, Dioneo, Lauretta, Emilia the Storyteller, Panfilo, Filostrato, Griselda of Italy, Federigo, Ser Ciappelletto, Calandrino, Bruno the Painter, Buffalmacco, Nello, Tofano, Peronella, Tancredi, Ghismonda, Lisabetta, Masetto, Andreuccio, Madonna Filippa, Tedaldo
+@ The Nibelung Lands / Rhine Bank
+Siegfried, Brunhild, Kriemhild, Gunther, Hagen, Gernot, Giselher, Volker the Fiddler, Dankwart, Etzel, Rüdiger, Mime the Smith, Fafnir, Regin, Alberich, Sigurd, Gudrun, Atli, Gunnar, Hogni, Fasolt, Fafner, Fricka the Goddess, Wotan, Erda, Loge
+@ Heorot / Mead Hall Lane
+Beowulf, Grendel, Grendel's Mother, Hrothgar, Wealhtheow, Unferth, Wiglaf, Hygelac, Hrothulf, Aeschere, Breca, Dragon of the Barrow
+@ Inferno / Dante's Road
+Dante Alighieri, Virgil, Beatrice Portinari, Francesca da Rimini, Paolo Malatesta, Ugolino, Farinata, Brunetto Latini, Cato of Utica, Charon, Minos the Judge, Cerberus, Geryon, Count Ugolino, Pier della Vigna, Statius, Matilda of Eden, St Bernard, Casella, Belacqua, Sordello, Manfred of Sicily, Pia dei Tolomei, Cacciaguida
+# Fairy tales and folk tales: Grimm, Perrault, Andersen, Lang | Brothers Grimm | 1812
+@ Cottage in the Wood / Hansel Lane
+Hansel, Gretel's Brother, The Witch of the Gingerbread House, The Woodcutter, Rumpelstiltskin, The Miller's Daughter, King of the Golden Palace, The Frog Prince, The Princess of the Well, Faithful Henry, Rapunzel, The Enchantress Gothel, The Prince of the Tower, Snow White's Stepmother, The Seven Dwarfs Doc, Grumpy the Dwarf, Happy the Dwarf, Sleepy the Dwarf, Bashful the Dwarf, Sneezy the Dwarf, Dopey the Dwarf, The Huntsman, Rose Red, Snow White's Prince, Snow-White and Rose-Red, The Bear Prince, Hans in Luck, Clever Hans, Faithful John, The Brave Little Tailor, The Giant of the Hills, Thumbling, Tom Thumb, The Golden Goose Dummling, The Three Brothers, The Goose Girl, Falada the Horse, The Twelve Dancing Princesses, The Soldier of the Twelve Princesses, Briar Rose, The Spinster Fairy, The Thirteenth Fairy, Mother Holle, The Golden Girl, Pitch Girl, The Elves and the Shoemaker, The Shoemaker of the Elves, The Six Swans, The Seven Ravens, The Wolf and the Seven Kids, The Mother Goat, The Bremen Town Musicians, The Donkey of Bremen, The Dog of Bremen, The Cat of Bremen, The Rooster of Bremen, Iron Hans, The Fisherman and His Wife, The Flounder, Ilsebill, The Juniper Tree Boy, Old Sultan, The Robber Bridegroom, Mr Fox, Hans My Hedgehog, The Devil's Three Golden Hairs, Fitcher's Bird, Allerleirauh, Donkeyskin, Cinderella's Stepsister, The Stepmother of Cinderella, The Fairy Godmother, The Prince of the Glass Slipper, The Little Red Hen, Henny Penny, Cocky Locky, Turkey Lurkey, Ducky Lucky, Foxy Loxy, Goosey Poosey, The Gingerbread Man, The Old Woman of the Gingerbread Man, The Old Man of the Gingerbread Man, The Little Old Woman Who Lived in a Vinegar Bottle, Chicken Licken
+@ Perrault's France / Hall of Mirrors Lane
+Puss in Boots, The Marquis of Carabas, The Miller's Son, Bluebeard, Anne the Sister of Fatima, Fatima the Wife, The Sleeping Beauty's Prince, The Ogre's Wife, Hop o' My Thumb, Riquet of the Tuft, Donkey-Skin, The Fairy Mélusine, The Beauty, The Beast, Belle's Father, Belle's Sisters, Gaston the Suitor, Madame de Villeneuve, Prince Charming, Princess Finola, Cendrillon's Godmother
+@ Odense / Andersen's Lane
+The Little Mermaid, The Sea Witch, The Mermaid's Grandmother, The Prince of the Ship, The Ugly Duckling, The Emperor of the New Clothes, The Weavers Who Tricked the Emperor, The Little Boy Who Saw the Truth, The Steadfast Tin Soldier, The Paper Ballerina, The Jack-in-the-Box, The Snow Queen, Gerda, Kai, The Robber Girl, The Reindeer of Lapland, The Finn Woman, The Little Match Girl, The Princess and the Pea, The Queen Who Tested the Pea, The Nightingale of China, The Emperor of China, The Mechanical Nightingale, Thumbelina's Toad, The Mole Suitor, The Swallow, The Flower Prince, Little Claus, Big Claus, The Fir Tree, The Red Shoes, Karen of the Red Shoes, The Wild Swans, Eliza the Princess, The Darning Needle, The Shadow, The Learned Man, The Galoshes of Fortune, The Marsh King's Daughter, The Garden of Paradise, The Travelling Companion, The Flying Trunk, The Storks, The Elf Mound, The Bell, The Old Street Lamp, The Wicked Prince, The Swineherd Prince, The Buckwheat, The Candle, The Goblin and the Grocer, Little Ida, Ole Lukoie the Sandman, The Rose Elf, The Angel, Lucky Peer
+@ Rabbit Hole Court / Lang Fairy Book Lane
+Aladdin's Mother, The Genie of the Ring, Prince Ahmed, The Fairy Peri-Banou, The Black Bull of Norroway, The Fox and the Hens, Tamlane, Fair Janet, Childe Rowland, Burd Ellen, The Brown Bear of Norway, Jack the Giant Killer, Cormoran the Giant, Blunderbore, Jack and the Beanstalk's Mother, The Giant of the Beanstalk, Jack's Cow Milky-White, The Golden Harp, Molly Whuppie, Mr Vinegar, Tom Tit Tot, The Three Little Pigs, The Big Bad Wolf, The Three Billy Goats Gruff, The Troll Under the Bridge, The Three Bears, Daddy Bear, Mummy Bear, Baby Bear, Lazy Jack, The Old Woman Who Lived in a Shoe, Dick Whittington, Dick's Cat, Alderman Fitzwarren, Alice Fitzwarren, The King of Barbary, Tom Hickathrift, Johnny Cake, Wee Willie Winkie, Lucky Jack, The Pied Piper, The Mayor of Hamelin, The Lambton Worm, Sir John Lambton, The Laidly Worm, Childe Wynd, Kate Crackernuts, Tattercoats, The Goose-Girl at the Well

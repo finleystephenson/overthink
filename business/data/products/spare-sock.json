@@ -1,0 +1,251 @@
+{
+  "id": "spare-sock",
+  "code": "SOCK",
+  "name": "The Spare Sock",
+  "category": "everyday",
+  "status": "active",
+  "available_from": null,
+  "tagline": "One good sock, sold singly, to replace the one that vanished.",
+  "summary": "One sock, sold singly. One size (UK 6 to 11), off-white with a blue cuff. £7.",
+  "concept": "A single knitted crew sock, sold on its own, to match the one you still have.",
+  "why_it_exists": "Socks go missing one at a time. Replacing a whole pair for one lost sock is a waste, so we sell the one.",
+  "target_customer": "Anyone with a drawer of odd socks and one that is still good.",
+  "physical": {
+    "form": "A single knitted crew sock with a flat toe seam, a reinforced heel and a ribbed cuff, on a card hanger.",
+    "materials": [
+      "80% combed cotton, 17% recycled polyamide, 3% elastane",
+      "Recycled card hanger"
+    ],
+    "dimensions": "Foot length 265 mm. Cuff height 100 mm.",
+    "weight": "40 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-SOCK",
+      "name": "One size, one colour",
+      "options": {},
+      "price": 7,
+      "stock": 140,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "You get one sock, and the price is for one.",
+    "It is one size and fits UK shoe sizes 6 to 11, so it will probably fit you.",
+    "It is off-white with a blue cuff, so it matches a lot of pairs.",
+    "It has a flat seam across the toe and a strong heel, so it does not rub and lasts.",
+    "It is sold on its own, so you do not pay for a whole pair when you lost only one."
+  ],
+  "arrives": "The sock is folded once over a recycled card hanger and held with a paper band, with no plastic. The hanger has the washing instructions on it, so keep it on until you have checked the sock matches. It is a small, flat parcel.",
+  "specs": [
+    [
+      "Size",
+      "One size, fits UK 6 to 11. Foot length 265 mm, cuff height 100 mm."
+    ],
+    [
+      "Weight",
+      "40 g"
+    ],
+    [
+      "Made of",
+      "80% combed cotton, 17% recycled polyamide, 3% elastane"
+    ],
+    [
+      "Colour",
+      "Off-white with a sky blue cuff"
+    ],
+    [
+      "Height",
+      "Crew, 100 mm ribbed cuff"
+    ],
+    [
+      "Toe",
+      "Flat seam"
+    ],
+    [
+      "Heel",
+      "Reinforced"
+    ],
+    [
+      "In the pack",
+      "1 sock on a recycled card hanger. Sold singly."
+    ],
+    [
+      "Care",
+      "Machine wash at 30°C, inside out. No bleach."
+    ]
+  ],
+  "how_it_works": "Lay your remaining sock next to it. Keep the hanger card on until you are sure it will do.",
+  "in_the_box": [
+    "One sock on a card hanger"
+  ],
+  "accessories": [
+    {
+      "sku": "OT-SOCK-CLIP",
+      "name": "Sock Clips (6)",
+      "kind": "accessory",
+      "price": 5,
+      "stock": 200,
+      "tagline": "Six clips that keep a pair together.",
+      "description": "Six small clips that hold a pair of socks together in the wash, so one does not go missing. They fit this sock and any other.",
+      "image": "img/branded/acc-sock-clip.jpg",
+      "fits": [
+        "spare-sock"
+      ],
+      "specs": [
+        [
+          "Size",
+          "Each clip about 35 x 12 x 8 mm"
+        ],
+        [
+          "Weight",
+          "About 3 g each, 18 g for six"
+        ],
+        [
+          "Made of",
+          "Stainless steel spring with plastic grips"
+        ],
+        [
+          "Colour",
+          "Mixed: sky blue, orange and pink"
+        ],
+        [
+          "Fits",
+          "The Spare Sock and any other sock"
+        ],
+        [
+          "In the pack",
+          "6 clips"
+        ],
+        [
+          "Use",
+          "Clip a pair together before the wash. Safe in a machine wash."
+        ],
+        [
+          "Care",
+          "Dry them after use to stop rust"
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Sock Clips (6)",
+      "works": true,
+      "note": "The clips hold the sock to its pair in the wash."
+    }
+  ],
+  "packaging": "One sock folded once over a recycled card hanger, held with a paper band. No plastic. The hanger carries the care label.",
+  "warranty": {
+    "months": 12,
+    "summary": "It has a 12-month warranty against faults in how it was made. Thinning at the heel is wear, not a fault. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Wash at 30°C, inside out.",
+    "Wash with the sock it is replacing so they age together.",
+    "No bleach."
+  ],
+  "safety": [
+    "It is not flame resistant.",
+    "It is not a medical or compression sock.",
+    "Keep the elastic away from babies and toddlers."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days if it is unworn and still on its hanger card. Once it is worn or the card is off, it cannot be returned. See Returns."
+  },
+  "fix_club": {
+    "eligible": false,
+    "repairs": []
+  },
+  "page": {
+    "headline": "One good sock, sold singly",
+    "intro": "One good sock, sold singly, to replace the one that vanished.",
+    "sections": [
+      {
+        "title": "One sock",
+        "body": "The price is for one sock. Order two if you need two."
+      },
+      {
+        "title": "One size, one colour",
+        "body": "It fits UK 6 to 11 and is off-white with a blue cuff. It may not match your other sock."
+      },
+      {
+        "title": "Keep the card",
+        "body": "It can be returned while it is unworn and on its card. After that it cannot, for hygiene."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Do I get one sock or two?",
+      "a": "One."
+    },
+    {
+      "q": "What size is it?",
+      "a": "One size, fits UK 6 to 11."
+    },
+    {
+      "q": "What colour is it?",
+      "a": "Off-white with a blue cuff. There is one colour."
+    },
+    {
+      "q": "How do I wash it?",
+      "a": "At 30°C, inside out. Tumble dry low or dry flat."
+    },
+    {
+      "q": "Can I return it?",
+      "a": "Yes, within 30 days, if it is unworn and still on its card."
+    },
+    {
+      "q": "What are Sock Clips for?",
+      "a": "They hold a pair together in the wash."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It does not match my other sock.",
+      "steps": [
+        "Compare them side by side in daylight.",
+        "It only matches a sock that is off-white with a blue cuff."
+      ],
+      "if_unresolved": "If it is unworn and on its card, return it within 30 days."
+    },
+    {
+      "problem": "It is too tight or too loose.",
+      "steps": [
+        "Check your shoe size is UK 6 to 11.",
+        "Wash it once at 30°C. The knit relaxes."
+      ],
+      "if_unresolved": "Return it unworn and on its card within 30 days."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "indoor-helmet",
+    "one-good-pen"
+  ],
+  "image": {
+    "file": "img/spare-sock.jpg",
+    "sweep": "#F1E7D2"
+  },
+  "photography_direction": "One sock standing upright with a card hanger beside it, off-white with a sky-blue cuff band, on a pale backdrop. No people.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. A single crew sock standing upright, ribbed cuff in sky blue, flat toe seam visible, a slim card hanger leaning beside it, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE SPARE SOCK in a heavy wide sans. No other text anywhere.",
+    "detail": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. Close-up of the ribbed cuff and flat toe seam of a single sock, knit texture clear, macro lens, shallow depth of field. One small printed mark on the object: a simple spiral O logo beside the words THE SPARE SOCK in a heavy wide sans. No other text anywhere.",
+    "variants": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. A single crew sock standing upright, ribbed cuff in sky blue, flat toe seam visible, a slim card hanger leaning beside it, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE SPARE SOCK in a heavy wide sans. No other text anywhere. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. A single sock folded over its card hanger, a small steel clip beside it, top-down 50 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE SPARE SOCK in a heavy wide sans. No other text anywhere.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. A single sock laid flat next to a second sock, ready to compare, on a plain surface, top-down 35 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE SPARE SOCK in a heavy wide sans. No other text anywhere.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body with saturated sky blue and orange accents, soft studio light, gentle contact shadow, pale sunflower yellow seamless single-colour backdrop. One sock standing alone and tall in the middle of the frame, long soft shadow, 85 mm lens. One small printed mark on the object: a simple spiral O logo beside the words THE SPARE SOCK in a heavy wide sans. No other text anywhere."
+  }
+}

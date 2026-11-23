@@ -1,0 +1,248 @@
+{
+ "_note": "The team. Read by sim/. Pay is UK 2026 small-business rates (National Living Wage \u00a312.71 an hour from April 2026; supervisors and specialists above it). Hours are contracted weekly hours; they are paid whether or not there is work, and work beyond them is overtime at the overtime rate (costs.json). `minutes` is how long one task takes this person at normal speed. `skill` is the chance they handle a contact correctly at normal load (the sim lowers it when the queue is long). Every name here is also in data/characters.json (the first list is fixed), so `customer_clash` says so: the simulator never lets a staff member shop. `scale` in the simulator multiplies hours (and so pay): read each person as 'this role, times the scale'.",
+ "reference_orders_per_day": 42,
+ "days": [
+  "mon",
+  "tue",
+  "wed",
+  "thu",
+  "fri"
+ ],
+ "day_start": "09:00",
+ "staff": [
+  {
+   "id": "S-01",
+   "name": "Mr Fezziwig",
+   "from": "A Christmas Carol",
+   "job": "Runs the place",
+   "role": "manager",
+   "weekly_hours": 22,
+   "hourly_pay": 19.5,
+   "skill": 0.96,
+   "overtime": false,
+   "tasks": {
+    "approve_large_refund": 6,
+    "approve_purchase_order": 5,
+    "weekly_review": 90,
+    "handle_complaint_stage2": 25
+   },
+   "fixed_daily_minutes": 30,
+   "customer_clash": "C-1026 and others share names; kept in customers",
+   "start": "09:00"
+  },
+  {
+   "id": "S-02",
+   "name": "Ebenezer Scrooge",
+   "from": "A Christmas Carol",
+   "job": "Finance",
+   "role": "finance",
+   "weekly_hours": 8,
+   "hourly_pay": 21.0,
+   "skill": 0.98,
+   "overtime": false,
+   "tasks": {
+    "reconcile_books": 45,
+    "chase_overdue_payment": 12,
+    "month_end": 180
+   },
+   "fixed_daily_minutes": 20,
+   "customer_clash": "C-1026",
+   "start": "09:00"
+  },
+  {
+   "id": "S-03",
+   "name": "Bob Cratchit",
+   "from": "A Christmas Carol",
+   "job": "Bookkeeping",
+   "role": "finance",
+   "weekly_hours": 14,
+   "hourly_pay": 13.4,
+   "skill": 0.94,
+   "overtime": true,
+   "tasks": {
+    "reconcile_books": 30,
+    "record_supplier_invoice": 6,
+    "chase_overdue_payment": 9
+   },
+   "fixed_daily_minutes": 60,
+   "customer_clash": "C-1022",
+   "start": "09:00"
+  },
+  {
+   "id": "S-04",
+   "name": "Phileas Fogg",
+   "from": "Around the World in Eighty Days",
+   "job": "Deliveries and dispatch",
+   "role": "warehouse",
+   "weekly_hours": 22,
+   "hourly_pay": 13.2,
+   "skill": 0.97,
+   "overtime": true,
+   "tasks": {
+    "pack_order": 4,
+    "chase_late_parcel": 11,
+    "process_return": 9
+   },
+   "fixed_daily_minutes": 25,
+   "customer_clash": "C-1005",
+   "start": "09:00"
+  },
+  {
+   "id": "S-05",
+   "name": "Mole",
+   "from": "The Wind in the Willows",
+   "job": "Stock room",
+   "role": "warehouse",
+   "weekly_hours": 20,
+   "hourly_pay": 12.9,
+   "skill": 0.95,
+   "overtime": true,
+   "tasks": {
+    "pack_order": 4.5,
+    "receive_delivery": 14,
+    "stock_count": 25,
+    "process_return": 10
+   },
+   "fixed_daily_minutes": 20,
+   "customer_clash": "kept in customers",
+   "start": "09:00"
+  },
+  {
+   "id": "S-06",
+   "name": "Mrs Hudson",
+   "from": "The Sherlock Holmes stories",
+   "job": "Customer service lead",
+   "role": "support_lead",
+   "weekly_hours": 28,
+   "hourly_pay": 15.8,
+   "skill": 0.96,
+   "overtime": true,
+   "tasks": {
+    "answer_email": 6,
+    "answer_call": 5,
+    "answer_chat": 4,
+    "answer_text": 2.5,
+    "process_return": 8,
+    "handle_complaint": 16,
+    "report_problem": 9,
+    "change_order": 5,
+    "chase_refund": 6
+   },
+   "fixed_daily_minutes": 20,
+   "customer_clash": "kept in customers",
+   "start": "11:30"
+  },
+  {
+   "id": "S-07",
+   "name": "Sam Weller",
+   "from": "The Pickwick Papers",
+   "job": "Customer service",
+   "role": "support_agent",
+   "weekly_hours": 28,
+   "hourly_pay": 12.9,
+   "skill": 0.9,
+   "overtime": true,
+   "tasks": {
+    "answer_email": 7.5,
+    "answer_call": 6.5,
+    "answer_chat": 4.5,
+    "answer_text": 3,
+    "process_return": 10,
+    "handle_complaint": 20,
+    "report_problem": 11,
+    "change_order": 6,
+    "chase_refund": 7
+   },
+   "fixed_daily_minutes": 15,
+   "customer_clash": "kept in customers",
+   "start": "09:00"
+  },
+  {
+   "id": "S-08",
+   "name": "Esther Summerson",
+   "from": "Bleak House",
+   "job": "Customer service",
+   "role": "support_agent",
+   "weekly_hours": 24,
+   "hourly_pay": 12.9,
+   "skill": 0.92,
+   "overtime": true,
+   "tasks": {
+    "answer_email": 7,
+    "answer_call": 6,
+    "answer_chat": 4.2,
+    "answer_text": 2.8,
+    "process_return": 9.5,
+    "handle_complaint": 19,
+    "report_problem": 10,
+    "change_order": 5.5,
+    "chase_refund": 6.5
+   },
+   "fixed_daily_minutes": 15,
+   "customer_clash": "kept in customers",
+   "start": "12:30"
+  },
+  {
+   "id": "S-09",
+   "name": "Robinson Crusoe",
+   "from": "Robinson Crusoe",
+   "job": "Buying",
+   "role": "buyer",
+   "weekly_hours": 10,
+   "hourly_pay": 16.5,
+   "skill": 0.93,
+   "overtime": false,
+   "tasks": {
+    "check_stock": 12,
+    "place_supplier_order": 10,
+    "approve_draft_order": 3,
+    "chase_supplier": 8,
+    "supplier_review": 40
+   },
+   "fixed_daily_minutes": 0,
+   "buying_days": [
+    "mon",
+    "thu"
+   ],
+   "customer_clash": "kept in customers",
+   "start": "09:00"
+  },
+  {
+   "id": "S-10",
+   "name": "Mr Toad",
+   "from": "The Wind in the Willows",
+   "job": "Marketing",
+   "role": "marketing",
+   "weekly_hours": 10,
+   "hourly_pay": 14.8,
+   "skill": 0.55,
+   "overtime": false,
+   "tasks": {
+    "send_outreach": 14,
+    "write_campaign": 120,
+    "follow_up_prospect": 10
+   },
+   "fixed_daily_minutes": 30,
+   "customer_clash": "C-1011",
+   "start": "09:00"
+  },
+  {
+   "id": "S-11",
+   "name": "Hephaestus",
+   "from": "Greek myth",
+   "job": "Fix Club bench",
+   "role": "technician",
+   "weekly_hours": 8,
+   "hourly_pay": 15.2,
+   "skill": 0.95,
+   "overtime": false,
+   "tasks": {
+    "assess_repair": 25,
+    "write_quote": 8
+   },
+   "fixed_daily_minutes": 0,
+   "customer_clash": "kept in customers",
+   "start": "09:00"
+  }
+ ]
+}

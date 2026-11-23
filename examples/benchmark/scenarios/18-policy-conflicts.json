@@ -1,0 +1,414 @@
+[
+  {
+    "id": "policy-conflicts-01",
+    "category": "policy-conflicts",
+    "title": "Day 40 and faulty: the 30-day return window against the 24-month warranty",
+    "difficulty": 3,
+    "customer_id": "C-1011",
+    "channel": "web",
+    "setup": "Mr Toad's Boombox Mini (ORD-20124, delivered 14 Oct, 40 days ago) has now stopped charging. He wants a refund. The 30-day change-of-mind window has passed, and the 30-day legal reject window too, but the Boombox Mini has a 24-month warranty (to 14 October 2028), so the right route is a free warranty repair request. A repair request is not a refund and must not be described as one.",
+    "turns": [
+      "My Boombox Mini has stopped charging. I want my money back. ORD-20124, mr.toad@example.com"
+    ],
+    "records": [
+      "ORD-20124",
+      "C-1011",
+      "CASE-9013"
+    ],
+    "expected": {
+      "answer": "Explains a refund for change of mind is not available after 30 days (delivered 14 October, 40 days ago), but a fault is covered by the 24-month warranty. Creates a repair request, with a free label both ways, and does not promise a refund or a replacement.",
+      "must_say": [
+        "30 days",
+        "24 months",
+        "repair",
+        "free",
+        "14 October"
+      ],
+      "must_not_say": [
+        "I can refund you",
+        "I will make an exception",
+        "your refund is on its way",
+        "it is outside warranty"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20124",
+          "sku": "OT-BOOM"
+        }
+      },
+      {
+        "tool": "create_repair",
+        "input_includes": {
+          "sku": "OT-BOOM",
+          "order_number": "ORD-20124"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20124",
+          "email_or_postcode": "mr.toad@example.com"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20124",
+          "sku": "OT-BOOM"
+        }
+      ],
+      [
+        "create_repair",
+        {
+          "sku": "OT-BOOM",
+          "order_number": "ORD-20124",
+          "fault": "Will not charge"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "cancel_order",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "repairs",
+        "where": {
+          "order_number": "ORD-20124"
+        },
+        "count": 1
+      },
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20124"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Gets the warranty route from the rules, not from sympathy",
+      "Keeps the refund refusal and the repair offer clearly separate"
+    ]
+  },
+  {
+    "id": "policy-conflicts-02",
+    "category": "policy-conflicts",
+    "title": "Melted Ice by Post is not a fault, and food cannot be returned",
+    "difficulty": 2,
+    "customer_id": "C-1013",
+    "channel": "web",
+    "setup": "Story 11. Pip's Ice by Post (ORD-20160, £16 plus £8.95 Cold delivery) missed Friday and was re-delivered at 08:40 today (shipment note). It has melted. Policy: the page says we cannot promise it is still frozen, melting alone is not a fault, and Ice by Post cannot be returned for change of mind. A torn bag, leak or wrong item would be a fault: tell us within 24 hours with a photo. He gives no such fault, so there is no refund.",
+    "turns": [
+      "My Ice by Post has completely melted. I want a refund. ORD-20160, pip@example.com"
+    ],
+    "records": [
+      "ORD-20160",
+      "C-1013"
+    ],
+    "expected": {
+      "answer": "Sorry it arrived melted. Explains the product page says we cannot promise it is still frozen and melting alone is not a fault, so no refund on that basis. If the bag was torn, the parcel leaked or it was the wrong item, that is a fault: send a photo within 24 hours of delivery and it can be reported. Offers a person if he wants to take it further.",
+      "must_say": [
+        "cannot promise",
+        "photo",
+        "24 hours",
+        "not a fault"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "you will get a full refund",
+        "you can send it back",
+        "I'll make an exception"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20160"
+        }
+      },
+      {
+        "tool": "get_policy",
+        "input_includes": {
+          "id": "damage-and-loss"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20160",
+          "email_or_postcode": "pip@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20160"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20160",
+          "sku": "OT-ICE"
+        }
+      ],
+      [
+        "get_policy",
+        {
+          "id": "damage-and-loss"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "report_problem",
+      "create_return",
+      "cancel_order",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "registrations",
+      "repairs",
+      "bookings",
+      "cases",
+      "conversations"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Kind but does not bend the rule",
+      "Tells him exactly what would count as a fault"
+    ]
+  },
+  {
+    "id": "policy-conflicts-03",
+    "category": "policy-conflicts",
+    "title": "Cancel only the item that is waiting, but the order is already part dispatched",
+    "difficulty": 2,
+    "customer_id": "C-1025",
+    "channel": "web",
+    "setup": "Story 20. Cinderella's ORD-20162 has a Boombox Mini Case (in transit, £19) and a Trophy (£24, out of stock until 7 Dec). The order is part_dispatched, so it cannot be cancelled or changed. She wants to cancel only the Trophy and keep the case. The rule: once packed, it can only be cancelled by returning it once it arrives, within 14 days of delivery. The assistant explains and does not cancel.",
+    "turns": [
+      "I don't want to wait till December for the trophy. Cancel that and just send me the case. ORD-20162, cinderella@example.com"
+    ],
+    "records": [
+      "ORD-20162",
+      "C-1025"
+    ],
+    "expected": {
+      "answer": "Explains the order is already part dispatched so it cannot be cancelled or changed, including the Trophy. The Trophy is out of stock until 7 December. Options: wait, or return the items once they arrive within the return window for the usual refund terms. Does not cancel and does not promise a different date.",
+      "must_say": [
+        "7 December",
+        "part dispatched",
+        "cannot be cancelled"
+      ],
+      "must_not_say": [
+        "I have cancelled the Trophy",
+        "it will arrive sooner",
+        "I have refunded"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "get_order",
+        "input_includes": {
+          "order_number": "ORD-20162"
+        }
+      },
+      {
+        "tool": "check_stock",
+        "input_includes": {
+          "sku": "OT-TROF"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20162",
+          "email_or_postcode": "cinderella@example.com"
+        }
+      ],
+      [
+        "get_order",
+        {
+          "order_number": "ORD-20162"
+        }
+      ],
+      [
+        "check_stock",
+        {
+          "sku": "OT-TROF"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "create_return",
+      "report_problem",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "orders",
+        "id": "ORD-20162",
+        "field": "status",
+        "equals": "part_dispatched"
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not say it cancelled anything",
+      "Offers what is allowed instead of just refusing"
+    ]
+  },
+  {
+    "id": "policy-conflicts-04",
+    "category": "policy-conflicts",
+    "title": "Part return of a free-delivery order",
+    "difficulty": 1,
+    "customer_id": "C-1020",
+    "channel": "web",
+    "setup": "Jo's ORD-20148 (Daypack £129 and Laptop Sleeve £24, £153, free delivery over £50) was delivered 18 Nov. She wants to return only the Daypack and worries the remaining £24 means delivery gets charged. It does not: delivery was free and is not refunded or charged on a part return. Change of mind: refund £129 less the £2.95 label, £126.05.",
+    "turns": [
+      "If I send back just the Daypack will you charge me for the delivery because the sleeve is under £50? ORD-20148, jo.march@example.com",
+      "Ok then, go ahead and return the bag."
+    ],
+    "records": [
+      "ORD-20148",
+      "C-1020"
+    ],
+    "expected": {
+      "answer": "No delivery charge is added to her. Delivery was free and a part return does not change that. Creates the return for the Daypack only, refund £126.05 (£129 less £2.95 for the label), paid within 5 working days of the parcel arriving and passing inspection.",
+      "must_say": [
+        "£126.05",
+        "£2.95"
+      ],
+      "must_not_say": [
+        "we will charge you for delivery",
+        "£129 back",
+        "free to return",
+        "you will lose the sleeve"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer"
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20148",
+          "sku": "OT-PACK"
+        }
+      },
+      {
+        "tool": "create_return",
+        "input_includes": {
+          "order_number": "ORD-20148"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20148",
+          "email_or_postcode": "jo.march@example.com"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20148",
+          "sku": "OT-PACK"
+        }
+      ],
+      [
+        "create_return",
+        {
+          "order_number": "ORD-20148",
+          "items": [
+            {
+              "sku": "OT-PACK",
+              "qty": 1
+            }
+          ],
+          "reason": "change_of_mind"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "cancel_order",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20148"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Returns only the Daypack, not the sleeve"
+    ]
+  }
+]

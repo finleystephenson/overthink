@@ -1,0 +1,106 @@
+{
+  "id": "someone-to-hold",
+  "name": "Someone to Hold",
+  "tagline": "We wait on hold. You take over when a human answers.",
+  "summary": "We sit through the hold music and ring you when a person picks up.",
+  "concept": "Hold music takes time and no skill. We supply the time.",
+  "who_its_for": "Anyone with a call to make to an energy company, a council or an airline.",
+  "how_it_works": [
+    "Book a call: £6, including up to 60 minutes on hold.",
+    "Give us the number and what the call is about.",
+    "We call and wait. We never give your details or pretend to be you.",
+    "When a human answers, we put you through and you take over."
+  ],
+  "page": {
+    "headline": "Someone to wait on hold",
+    "intro": "We wait on hold. You take over when a human answers.",
+    "sections": [
+      {
+        "title": "Prices",
+        "body": "£6 per call, up to 60 minutes on hold. £3 for each extra 30 minutes."
+      },
+      {
+        "title": "What we do",
+        "body": "You give us the number and what it's about. We wait, then hand over when a person answers."
+      },
+      {
+        "title": "What we will not do",
+        "body": "We do not give your details or pretend to be you. We do not hold for emergency, medical or bank security lines."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "How much does it cost?",
+      "a": "£6 per call, covering up to 60 minutes on hold. Each extra 30 minutes is £3."
+    },
+    {
+      "q": "What do you need from me?",
+      "a": "The number, and what the call is about."
+    },
+    {
+      "q": "Do you talk to them for me?",
+      "a": "No. We wait. When a person answers, you take over."
+    },
+    {
+      "q": "Will you give my details?",
+      "a": "Never. We do not give your details or pretend to be you."
+    },
+    {
+      "q": "Which calls won't you hold for?",
+      "a": "Emergency, medical, or bank security lines."
+    },
+    {
+      "q": "What if nobody answers?",
+      "a": "You pay for the time we waited, up to the limit."
+    },
+    {
+      "q": "Can I cancel?",
+      "a": "Full refund up to 24 hours before. None after that."
+    },
+    {
+      "q": "How much notice do you need?",
+      "a": "At least 24 hours."
+    }
+  ],
+  "image": {
+    "file": null,
+    "sweep": "#CFE3F5"
+  },
+  "photography_direction": "Colourful premium 3D studio render of a phone handset on a stand on a seamless sky blue backdrop. No faces, no hands. One small spiral \"O\" logo mark.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render of a glossy yellow phone handset resting on a small stand, seamless sky blue backdrop, soft studio light, no faces. One small spiral 'O' logo mark.",
+    "detail": "Close-up 3D render of a coiled phone cord and handset on a stand, sky blue background, shallow depth of field, no faces. One small spiral 'O' logo mark.",
+    "in_use": "3D render of a handset on a stand beside a small hourglass on a pastel desk, no people, no faces. One small spiral 'O' logo mark.",
+    "campaign": "Premium 3D render of three handsets in yellow, pink and white on stands of different heights on a blue backdrop, editorial still life, no faces. One small spiral 'O' logo mark."
+  },
+  "related": [
+    "someone-to-queue",
+    "someone-to-wait-in"
+  ],
+  "packages": [
+    {
+      "id": "HOLD-CALL",
+      "name": "One call",
+      "price": 6,
+      "minutes": 60,
+      "note": "Up to 60 minutes on hold."
+    },
+    {
+      "id": "HOLD-EXTRA",
+      "name": "Extra 30 minutes",
+      "price": 3,
+      "minutes": 30,
+      "note": "Added to a call as needed."
+    }
+  ],
+  "days": "Monday to Saturday",
+  "will_not": [
+    "Give your details or pretend to be you",
+    "Hold for emergency lines",
+    "Hold for medical lines",
+    "Hold for bank security lines"
+  ],
+  "will_not_source": "business.json services.someone-to-hold.will_not"
+}

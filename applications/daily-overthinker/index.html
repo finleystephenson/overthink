@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Daily Overthinker · News · Overthought &amp; Co.</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Newsreader is the paper's own serif: the one place a different voice is right, because it is a newspaper. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+<link rel="stylesheet" href="../lib/premium.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<main class="dly" id="main">
+  <article class="paper" id="paper">
+    <header class="mast">
+      <h1 class="mast-title" id="title">&nbsp;</h1>
+      <div class="mast-line">
+        <button class="mast-step" id="earlier" type="button" title="An earlier edition (Left arrow)">&larr; Earlier</button>
+        <p class="mast-date"><time id="dateline">&nbsp;</time><span class="mast-ed" id="edition-name">Morning edition</span></p>
+        <button class="mast-step" id="later" type="button" title="A later edition (Right arrow)">Later &rarr;</button>
+      </div>
+      <nav class="mast-nav" aria-label="Sections">
+        <a href="#front">Front page</a>
+        <a href="#sec-calendar">Diary</a>
+        <a href="#sec-trade">Trade</a>
+        <a href="#sec-storybook">Storybook</a>
+        <a href="#archive">Back issues</a>
+        <button type="button" class="btn small desk-open" id="desk-open" title="Change what happens (E)">The editor's desk</button>
+      </nav>
+    </header>
+    <div class="backissue" id="backissue" hidden></div>
+    <div id="pages" aria-live="polite"></div>
+    <section class="archive" id="archive" aria-labelledby="archive-title">
+      <header class="archive-head">
+        <h2 class="sec-title" id="archive-title">Back issues</h2>
+        <div class="archive-month">
+          <button class="btn small icon-only ghost" id="month-prev" type="button" aria-label="Month before">&larr;</button>
+          <b id="month-name">&nbsp;</b>
+          <button class="btn small icon-only ghost" id="month-next" type="button" aria-label="Month after">&rarr;</button>
+          <label class="archive-jump"><span class="sr">Go to a date</span><input class="input" type="date" id="jump"></label>
+        </div>
+      </header>
+      <div class="cal" id="cal"></div>
+    </section>
+  </article>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

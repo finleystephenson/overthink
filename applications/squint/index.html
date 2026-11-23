@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Squint · Photo sharing · Overthought &amp; Co.</title>
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Anybody only for the business's own name on its profile. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@125,900&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap">
+<link rel="stylesheet" href="../lib/premium.css">
+<link rel="stylesheet" href="../lib/social.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<!-- The business's own photo account: its profile, then the views. The pictures are the star. -->
+<main class="sq" id="main">
+  <header class="sq-profile" id="profile" aria-label="The shop's account"></header>
+  <nav class="sq-tabs" id="tabs" aria-label="Views"></nav>
+  <section class="sq-view" id="view" aria-live="polite"></section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

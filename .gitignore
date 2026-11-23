@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+
+# Secrets: never commit a key. Copy .env.example to .env and fill it in.
+.env
+.env.*
+!.env.example
+
+# Generated worlds: built on first run (bin/ensure-world.mjs, npm start, any overthink command), same files every time.
+business/data/world/
+business/data/world-bench/
+
+# Built sites (node business/site/build.mjs, node business/backoffice/build.mjs)
+business/site/dist/
+business/backoffice/dist/
+
+# Run output: Overthink's own folder (cache, the running sandbox's key), reports and experiment results
+.overthink/
+overthink-report/
+simulation/lab/results/
+examples/benchmark/results/
+*.log
+
+# Internal working notes: briefs, plans and drafts written while building. Kept out of the public repository.
+docs/app-audit.md
+docs/app-builder-brief.md
+docs/brand.md
+docs/brief.md
+docs/build-brief.md
+docs/catalogue.md
+docs/consistency-report.md
+docs/direction-brief.md
+docs/environment-design.md
+docs/explore-design.md
+docs/finish-plan.md
+docs/history/
+docs/law-notes.md
+docs/legal-drafts.md
+docs/old-catalogue.json
+docs/open-world.md
+docs/phase-1-spec.md
+docs/plan-overthink.md
+docs/project-00-plan.md
+docs/range-v2.md
+docs/scenario-brief.md
+docs/seo-notes.md
+docs/simulator-design.md
+business/site/directions/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

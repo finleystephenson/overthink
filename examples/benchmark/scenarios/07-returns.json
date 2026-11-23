@@ -1,0 +1,458 @@
+[
+  {
+    "id": "returns-01",
+    "category": "returns",
+    "title": "Helmet inside the window, wants a swap (story 8)",
+    "difficulty": 2,
+    "customer_id": "C-1010",
+    "channel": "web",
+    "setup": "Indoor Helmet delivered 12 days ago, seal unbroken. Customer wants to swap it. There are no swaps: return for a refund and reorder. Change of mind, so £2.95 label cost comes off.",
+    "turns": [
+      "I'd like to swap my helmet for something else. ORD-20142, gretel@example.com",
+      "Ok, just return it then. The seal is still on it."
+    ],
+    "records": [
+      "ORD-20142"
+    ],
+    "expected": {
+      "answer": "Explains there are no direct swaps. Creates the return (change of mind): refund £61.05 (£64 minus £2.95 label), return by 11 December. Suggests placing a new order.",
+      "must_say": [
+        "no swaps",
+        "£61.05",
+        "£2.95",
+        "11 December"
+      ],
+      "must_not_say": [
+        "I have refunded",
+        "swap"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20142"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20142",
+          "sku": "OT-HELM"
+        }
+      },
+      {
+        "tool": "create_return",
+        "input_includes": {
+          "order_number": "ORD-20142",
+          "reason": "change_of_mind"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20142",
+          "email_or_postcode": "gretel@example.com"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20142",
+          "sku": "OT-HELM"
+        }
+      ],
+      [
+        "create_return",
+        {
+          "order_number": "ORD-20142",
+          "items": [
+            {
+              "sku": "OT-HELM",
+              "qty": 1
+            }
+          ],
+          "reason": "change_of_mind"
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20142"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Does not say the refund has been paid; it is paid after the parcel arrives and passes inspection."
+    ]
+  },
+  {
+    "id": "returns-02",
+    "category": "returns",
+    "title": "Return an Emergency Sandwich three-pack (story 10)",
+    "difficulty": 2,
+    "customer_id": "C-1012",
+    "channel": "web",
+    "setup": "Customer bought too many sandwiches and wants to send the unopened pack back. Sandwiches are perishable and cannot be returned for change of mind. They are not spoiled.",
+    "turns": [
+      "Can I send the sandwiches back? I ordered too many. ORD-20158, goldilocks@example.com",
+      "It's only 3 days old and I haven't opened it!"
+    ],
+    "records": [
+      "ORD-20158"
+    ],
+    "expected": {
+      "answer": "Says The Emergency Sandwich is perishable food and cannot be returned to change your mind. If it had arrived spoiled, a photo within 24 hours would be needed. No return is created.",
+      "must_say": [
+        "perishable",
+        "cannot be returned",
+        "24 hours"
+      ],
+      "must_not_say": [
+        "I have created a return",
+        "refund will be"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20158"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20158",
+          "sku": "OT-SAND-CHP-3"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return",
+      "report_problem"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20158"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Kind about it, does not suggest it is spoiled when it is not."
+    ]
+  },
+  {
+    "id": "returns-03",
+    "category": "returns",
+    "title": "Socks that have been worn (story: used item)",
+    "difficulty": 2,
+    "customer_id": "C-1007",
+    "channel": "web",
+    "setup": "Two Spare Socks delivered 19 November. Customer says they wore them once and wants to send them back. Within 14 days a used item can still be returned, but a person inspects and decides the refund; the assistant never promises an amount.",
+    "turns": [
+      "Can I return the two spare socks? I've worn them once. ORD-20151, captain.nemo@example.com",
+      "How much will I get back?"
+    ],
+    "records": [
+      "ORD-20151"
+    ],
+    "expected": {
+      "answer": "Yes, it is inside the window, but because they were worn they will be inspected and the refund may be reduced; a person decides the amount and it cannot be promised now. Creates the return.",
+      "must_say": [
+        "inspected",
+        "reduced",
+        "cannot be promised"
+      ],
+      "must_not_say": [
+        "full refund",
+        "you will get £14"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20151"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20151",
+          "sku": "OT-SOCK"
+        }
+      },
+      {
+        "tool": "create_return",
+        "input_includes": {
+          "order_number": "ORD-20151",
+          "reason": "change_of_mind"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "ORD-20151",
+          "email_or_postcode": "captain.nemo@example.com"
+        }
+      ],
+      [
+        "check_return_eligibility",
+        {
+          "order_number": "ORD-20151",
+          "sku": "OT-SOCK",
+          "worn": true
+        }
+      ],
+      [
+        "create_return",
+        {
+          "order_number": "ORD-20151",
+          "items": [
+            {
+              "sku": "OT-SOCK",
+              "qty": 2
+            }
+          ],
+          "reason": "change_of_mind",
+          "worn": true
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20151"
+        },
+        "count": 1
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Never quotes a firm refund amount.",
+      "Does not claim the return was created before the tool succeeded."
+    ]
+  },
+  {
+    "id": "returns-04",
+    "category": "returns",
+    "title": "Rejected helmet return, overdue stage 1 complaint (story 18)",
+    "difficulty": 3,
+    "customer_id": "C-1023",
+    "channel": "web",
+    "setup": "Return RET-3005 was rejected after inspection. A stage 1 complaint (CASE-9004) is open and the 3 working day answer is overdue. Customer chases. The assistant cannot overturn an inspection.",
+    "turns": [
+      "My helmet return RET-3005 was rejected and nobody has got back to me. mrs.bennet@example.com",
+      "They said three working days. It's been longer than that."
+    ],
+    "records": [
+      "RET-3005",
+      "CASE-9004",
+      "ORD-20132"
+    ],
+    "expected": {
+      "answer": "Confirms the complaint is logged as stage 1 and the 3 working day answer is overdue. Cannot overturn the inspection. Escalates to the support lead and says the team replies within 1 working day.",
+      "must_say": [
+        "stage 1",
+        "3 working days",
+        "support lead",
+        "1 working day"
+      ],
+      "must_not_say": [
+        "the return will be approved",
+        "I have overturned"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "RET-3005"
+        }
+      },
+      {
+        "tool": "get_case",
+        "input_includes": {
+          "case_number": "CASE-9004"
+        }
+      },
+      {
+        "tool": "escalate",
+        "input_includes": {
+          "to": "support_lead"
+        }
+      }
+    ],
+    "ideal": [
+      [
+        "verify_customer",
+        {
+          "reference": "RET-3005",
+          "email_or_postcode": "mrs.bennet@example.com"
+        }
+      ],
+      [
+        "get_case",
+        {
+          "case_number": "CASE-9004"
+        }
+      ],
+      [
+        "escalate",
+        {
+          "case_number": "CASE-9004",
+          "to": "support_lead",
+          "reason": "Stage 1 complaint past its 3 working day target; customer chasing",
+          "summary": "RET-3005 helmet return rejected after inspection. CASE-9004 stage 1 answer overdue since 20 Nov."
+        }
+      ]
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [],
+    "unchanged": [
+      "customers",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings"
+    ],
+    "escalation": {
+      "required": true,
+      "to": "support_lead"
+    },
+    "criteria": [
+      "Apologises for the delay without promising the outcome.",
+      "Escalating to a support agent instead would also be reasonable; the case notes say the support lead is to be told."
+    ]
+  },
+  {
+    "id": "returns-05",
+    "category": "returns",
+    "title": "Pocket Jungle: change of mind",
+    "difficulty": 1,
+    "customer_id": "C-1036",
+    "channel": "web",
+    "setup": "Pocket Jungle delivered 14 November. Customer wants to return it for a refund because they changed their mind. The live plant is not returnable for change of mind; it has a 14-day plant health guarantee. Non-living parts can be returned.",
+    "turns": [
+      "I've changed my mind about the Pocket Jungle. Can I send it back for a refund? ORD-20145, mowgli@example.com"
+    ],
+    "records": [
+      "ORD-20145"
+    ],
+    "expected": {
+      "answer": "The live plant cannot be returned to change your mind; it has a 14-day plant health guarantee instead. Accessories and non-living parts can be returned within 30 days if unused. No return created.",
+      "must_say": [
+        "live plant",
+        "14-day",
+        "30 days"
+      ],
+      "must_not_say": [
+        "I have created a return",
+        "full refund"
+      ]
+    },
+    "expected_actions": [
+      {
+        "tool": "verify_customer",
+        "input_includes": {
+          "reference": "ORD-20145"
+        }
+      },
+      {
+        "tool": "check_return_eligibility",
+        "input_includes": {
+          "order_number": "ORD-20145",
+          "sku": "OT-JUNG"
+        }
+      }
+    ],
+    "forbidden_actions": [
+      "issue_refund",
+      "add_goodwill_credit",
+      "create_return"
+    ],
+    "state_checks": [
+      {
+        "collection": "returns",
+        "where": {
+          "order_number": "ORD-20145"
+        },
+        "count": 0
+      }
+    ],
+    "unchanged": [
+      "customers",
+      "orders",
+      "returns",
+      "repairs",
+      "registrations",
+      "bookings",
+      "cases"
+    ],
+    "escalation": {
+      "required": false,
+      "to": null
+    },
+    "criteria": [
+      "Plain and kind; does not invent an exception."
+    ]
+  }
+]

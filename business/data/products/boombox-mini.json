@@ -1,0 +1,297 @@
+{
+  "id": "boombox-mini",
+  "code": "BOOM",
+  "name": "Boombox Mini",
+  "category": "tech",
+  "status": "active",
+  "available_from": null,
+  "tagline": "",
+  "summary": "A small Bluetooth speaker. £89. Fabric front, five buttons, and a battery The Fix Club can replace.",
+  "concept": "A portable Bluetooth speaker with a fabric front, a soft-touch body and buttons you can find without looking. Small and light.",
+  "why_it_exists": "Many portable speakers are too small to hear or too big to carry. This one fits a bag, a shelf or a picnic, plays clearly and has a battery that can be replaced.",
+  "target_customer": "People who want music in a kitchen, garden or campsite without a fuss.",
+  "physical": {
+    "form": "A rounded rectangular body with a woven fabric front, a flat top with five raised buttons and a strap loop at each end. USB-C on the back.",
+    "materials": [
+      "Soft-touch recycled plastic body",
+      "Woven polyester fabric grille",
+      "Rubberised base",
+      "Aluminium strap loops"
+    ],
+    "dimensions": "168 x 74 x 74 mm",
+    "weight": "540 g"
+  },
+  "options": [],
+  "variants": [
+    {
+      "sku": "OT-BOOM",
+      "name": "Standard",
+      "options": {},
+      "price": 89,
+      "stock": 64,
+      "restock_date": null
+    }
+  ],
+  "features": [
+    "It plays clear, loud sound that fills a room, and the battery runs for up to 14 hours at medium volume.",
+    "It connects to two phones at once, so a friend can take over the music without any fuss.",
+    "You charge it with a USB-C cable, the same kind many phones already use.",
+    "The five buttons are different shapes and sit in the same place every time, so you can find them without looking.",
+    "It is small and light enough to carry in a bag, and it has a strap loop at each end."
+  ],
+  "arrives": "The speaker sits in a card cradle inside a brown card sleeve, so it is held firmly without any foam. The cable is tied with a paper loop. The charger is not included, so use any USB-C charger you have.",
+  "specs": [
+    [
+      "Size",
+      "168 x 74 x 74 mm"
+    ],
+    [
+      "Weight",
+      "540 g"
+    ],
+    [
+      "Made of",
+      "Soft-touch recycled plastic, woven polyester fabric front, rubberised base, aluminium strap loops"
+    ],
+    [
+      "Colour",
+      "Off-white with orange and sky blue accents"
+    ],
+    [
+      "Sound",
+      "12 W, one driver and two passive radiators. 70 Hz to 20 kHz. Built-in microphone for speakerphone calls."
+    ],
+    [
+      "Battery life",
+      "Up to 14 hours at medium volume. Less at high volume (3,000 mAh, not user-removable)."
+    ],
+    [
+      "Charging",
+      "USB-C, up to 18 W, about 3 hours from flat. Works with the Blip Charger or any USB-C charger."
+    ],
+    [
+      "Bluetooth",
+      "Bluetooth 5.3, about 10 m in the open, SBC and AAC"
+    ],
+    [
+      "Protection",
+      "Splash resistant (not independently tested)"
+    ]
+  ],
+  "how_it_works": "Hold the power button for two seconds. Hold the pair button until the light blinks, then choose Boombox Mini on your phone. Charge it over USB-C.",
+  "in_the_box": [
+    "Boombox Mini",
+    "A USB-C cable, 0.5 m",
+    "A quick start card",
+    "No plug. Use the Blip Charger or any USB-C charger."
+  ],
+  "accessories": [
+    {
+      "sku": "OT-BOOM-CASE",
+      "name": "Travel Case",
+      "kind": "accessory",
+      "price": 19,
+      "stock": 90,
+      "tagline": "A padded case that fits the speaker.",
+      "description": "A padded zip case made for the Boombox Mini, with a small pocket for the cable. The speaker fits snugly inside. It does not fit other speakers or Blip.",
+      "image": "img/branded/acc-boombox-case.jpg",
+      "fits": [
+        "boombox-mini"
+      ],
+      "specs": [
+        [
+          "Size",
+          "Outside: 20 x 11 x 10 cm"
+        ],
+        [
+          "Inside size",
+          "18 x 8.5 x 8.5 cm, for a speaker that is 16.8 x 7.4 x 7.4 cm"
+        ],
+        [
+          "Weight",
+          "160 g"
+        ],
+        [
+          "Made of",
+          "Woven polyester outer, foam padding, nylon zip"
+        ],
+        [
+          "Colour",
+          "Off-white with a blue zip, orange zip pull and yellow carry loop"
+        ],
+        [
+          "Fits",
+          "Boombox Mini only"
+        ],
+        [
+          "Cable pocket",
+          "Holds the 0.5 m USB-C cable"
+        ],
+        [
+          "In the pack",
+          "1 case"
+        ],
+        [
+          "Care",
+          "Wipe with a damp cloth. Air dry."
+        ]
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "with": "Blip Charger",
+      "works": true,
+      "note": "It charges Boombox Mini."
+    },
+    {
+      "with": "any USB-C charger",
+      "works": true,
+      "note": "Any USB-C charger works."
+    },
+    {
+      "with": "Travel Case",
+      "works": true,
+      "note": "It fits the speaker."
+    },
+    {
+      "with": "blip",
+      "works": true,
+      "note": "Pairs over Bluetooth. They share a charger."
+    },
+    {
+      "with": "Blip Case",
+      "works": false,
+      "note": "Blip accessories fit Blip only, except the charger."
+    }
+  ],
+  "packaging": "A kraft card sleeve with a card cradle that holds the speaker without foam. The cable is held with a paper loop.",
+  "warranty": {
+    "months": 24,
+    "summary": "It has a 24-month warranty against faults in how it was made. Battery fade to 80% is wear, and drops and liquid damage are not covered. See Warranty.",
+    "guarantee": null
+  },
+  "care": [
+    "Wipe the body and grille with a dry or slightly damp cloth.",
+    "Keep the USB-C port dry. Let the speaker dry fully after a splash before charging.",
+    "Do not leave it in a hot car or in direct sun for hours.",
+    "Charge it every few months if it is in storage."
+  ],
+  "safety": [
+    "It resists splashes. Do not put it under water.",
+    "Loud sound can harm your hearing.",
+    "If the battery swells or gets hot, stop using it, unplug it and contact us."
+  ],
+  "delivery": {
+    "methods": [
+      "standard",
+      "next-day"
+    ],
+    "note": "Soon or Sooner. Soon is free over £50."
+  },
+  "returnable": {
+    "ok": true,
+    "note": "You can return it within 30 days. You may switch it on and try it, but it must be undamaged, complete, in its box and reset. See Returns."
+  },
+  "fix_club": {
+    "eligible": true,
+    "repairs": [
+      {
+        "code": "BOOM-BATTERY",
+        "name": "Battery replacement",
+        "price": 35
+      }
+    ]
+  },
+  "page": {
+    "headline": "A small Bluetooth speaker",
+    "intro": "A small Bluetooth speaker.",
+    "sections": [
+      {
+        "title": "Size and battery",
+        "body": "It is 168 mm long and plays for up to 14 hours."
+      },
+      {
+        "title": "Buttons",
+        "body": "Five raised buttons on top: power, play, volume up, volume down and pair."
+      },
+      {
+        "title": "Charging",
+        "body": "It charges over USB-C with the Blip Charger or any USB-C charger. A short cable is in the box."
+      }
+    ],
+    "footnotes": []
+  },
+  "faq": [
+    {
+      "q": "Does it have an aux socket?",
+      "a": "No. It connects over Bluetooth."
+    },
+    {
+      "q": "Can I pair two speakers for stereo?",
+      "a": "No. Two Boombox Minis play separately."
+    },
+    {
+      "q": "What charger does it use?",
+      "a": "The Blip Charger or any USB-C charger. The cable is in the box."
+    },
+    {
+      "q": "How long does the battery last?",
+      "a": "Up to 14 hours at medium volume. Less when it is loud."
+    },
+    {
+      "q": "Is it waterproof?",
+      "a": "No. It resists splashes. Do not put it under water or charge it wet."
+    },
+    {
+      "q": "Can the battery be replaced?",
+      "a": "Yes. The Fix Club does it for £35."
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "It will not pair.",
+      "steps": [
+        "Switch the speaker off and on.",
+        "Hold the pair button until the light blinks.",
+        "Delete Boombox Mini from your phone's Bluetooth list and pair again."
+      ],
+      "if_unresolved": "Try a second phone. If that fails too, open a support case."
+    },
+    {
+      "problem": "It will not charge.",
+      "steps": [
+        "Push the cable in fully and check the port for lint.",
+        "Try another cable and charger."
+      ],
+      "if_unresolved": "Open a support case. In warranty, The Fix Club will look at it."
+    },
+    {
+      "problem": "The sound crackles.",
+      "steps": [
+        "Lower the volume on the speaker and the phone.",
+        "Move closer. Bluetooth reaches about 10 m in the open.",
+        "Charge it."
+      ],
+      "if_unresolved": "Open a support case."
+    }
+  ],
+  "comparison": null,
+  "related": [
+    "blip",
+    "daypack"
+  ],
+  "image": {
+    "file": "img/boombox-mini.jpg",
+    "sweep": "#FBE3C9"
+  },
+  "photography_direction": "Solid and calm. Woven grille and matte body are the point. One speaker, with a mug or plant for scale. No glowing rings, no light-up gimmicks.",
+  "image_prompts": {
+    "hero": "Colourful premium 3D studio render, matte off-white body, saturated orange and sky blue accents, soft studio light, pale pale peach single-colour backdrop, gentle contact shadow. A small Bluetooth speaker with a woven fabric front and five raised top buttons, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "detail": "Colourful premium 3D studio render, matte off-white body, saturated orange and sky blue accents, soft studio light, pale pale peach single-colour backdrop, gentle contact shadow. Close-up of the woven grille and the five raised buttons on the top face. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "variants": "Colourful premium 3D studio render, matte off-white body, saturated orange and sky blue accents, soft studio light, pale pale peach single-colour backdrop, gentle contact shadow. A small Bluetooth speaker with a woven fabric front and five raised top buttons, centred. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object. Shown from a three-quarter angle.",
+    "packaging": "Colourful premium 3D studio render, matte off-white body, saturated orange and sky blue accents, soft studio light, pale pale peach single-colour backdrop, gentle contact shadow. A kraft sleeve and card cradle holding the speaker, a short cable coiled beside it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "in_use": "Colourful premium 3D studio render, matte off-white body, saturated orange and sky blue accents, soft studio light, pale pale peach single-colour backdrop, gentle contact shadow. A Mini speaker on a pale kitchen shelf beside a plant. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object.",
+    "campaign": "Colourful premium 3D studio render, matte off-white body, saturated orange and sky blue accents, soft studio light, pale pale peach single-colour backdrop, gentle contact shadow. One speaker centred with a great deal of empty space around it. One small printed mark only: a simple spiral O logo beside the product name in a heavy wide sans. No other text on the object."
+  }
+}

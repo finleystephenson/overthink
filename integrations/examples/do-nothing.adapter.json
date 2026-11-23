@@ -1,0 +1,6 @@
+{
+  "name": "Does nothing",
+  "version": "floor",
+  "transport": "command",
+  "command": "node do-nothing.mjs"
+}
