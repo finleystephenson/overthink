@@ -35,6 +35,7 @@ Overthink is an open-source sandbox for testing AI in a business environment. At
 | --- | --- |
 | [`extending.md`](extending.md) | Recipes: a tool, a plug-in, an intervention, an experiment, an app, an organisation or event, another business. |
 | [`../CONTRIBUTING.md`](../CONTRIBUTING.md) | Style, rules, tests, how to send a change. |
+| [`typescript-migration.md`](typescript-migration.md) | Which parts are TypeScript and which are older JavaScript, and the module-by-module plan for moving them. |
 | [`../SECURITY.md`](../SECURITY.md) | What is protected, what is not, and how to report a vulnerability. |
 
 Per-folder docs: [`../simulation/simulator/README.md`](../simulation/simulator/README.md) (the simulator), [`../infrastructure/server/README.md`](../infrastructure/server/README.md) (the server), [`../applications/README.md`](../applications/README.md) (the apps), [`../applications/DESIGN.md`](../applications/DESIGN.md) (their look), [`../examples/README.md`](../examples/README.md) (worked examples).

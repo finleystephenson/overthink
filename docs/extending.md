@@ -6,15 +6,15 @@ Recipes for adding to the project. Each one names the files and the check to run
 
 A tool is something an AI or an app can call, with roles and an input schema. New tools live in their own file under `infrastructure/engine/`, added with `extend()`.
 
-1. Copy the shape of a small existing extension, such as `infrastructure/engine/reviews.js` or `infrastructure/engine/levers.js`. Start the file with `import { extend, kit } from "./engine.js";`.
+1. Write it in TypeScript. Copy the shape of a recent extension, such as `infrastructure/engine/contacts.ts` (a small one) or `infrastructure/engine/calendar.ts`. Start the file with `import {extend, kit} from './engine.js';` (the types come from `engine.d.ts`; add to it only what you use).
 2. Call `extend({ state: [...], counters: [...], tools: [...] })`.
    - `state`: names of new record lists kept in the world. Each loads from `<world folder>/<name>.json` or starts empty.
    - `counters`: `[prefix, state key, id field]`, so new ids carry on from the highest one.
    - `tools`: `{ name, roles, description, input_schema, run(ctx, input) }`. Take helpers from `kit` (`fail`, `round2`, `nextId`, `schema`, `roles`). `run` reads `ctx.st` and throws with `fail("code", "plain message")` on a broken rule. Say WHY a role may or may not use it.
    - To deepen a core tool, use `replace` (see `infrastructure/engine/knowledge.js`).
-3. Add `import "./yourfile.js";` to `infrastructure/engine/all.js`. Always import `infrastructure/engine/all.js`, never `engine.js`, where you make a world.
-4. Write a test next to it (`infrastructure/engine/yourfile.test.js`, `node:test`): the success case and each refusal. Add the file to the `test` script in `package.json`, or it will not run.
-5. Check: `node --test infrastructure/engine/yourfile.test.js`, then `npm test`.
+3. Add `import "./yourfile.ts";` to `infrastructure/engine/all.js`. Always import `infrastructure/engine/all.js`, never `engine.js`, where you make a world.
+4. Write a test next to it (`infrastructure/engine/yourfile.test.ts`, `node:test`): the success case and each refusal. The `test` script finds `*.test.ts` files by itself.
+5. Check: `node --test infrastructure/engine/yourfile.test.ts`, then `pnpm typecheck`, `pnpm lint` and `npm test`.
 
 The server, MCP and `GET /openapi.json` pick the tool up with no other change. To give a tool to the world lens only, use `roles: kit.roles.LENSES` as `simulation/world/extension.js` does.
 

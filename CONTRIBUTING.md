@@ -21,7 +21,7 @@ The top-level folders, and what each holds, are in the [README](README.md#what-i
 ## Style
 
 - **New code is TypeScript**, following Google's TypeScript style guide, run directly by Node 24 (type stripping): erasable syntax only, named exports, `interface` for shapes, no `any`, JSDoc on every export. `pnpm lint` (ESLint and Prettier) and `pnpm typecheck` enforce it.
-- **The older JavaScript** (engine, server, simulator, world, lab, apps) follows Google's JavaScript style: plain ES modules, two-space indent, double quotes, semicolons. It moves to TypeScript module by module; make small, exact edits to it meanwhile.
+- **The older JavaScript** (engine, server, simulator, world, lab, apps) follows Google's JavaScript style: plain ES modules, two-space indent, double quotes, semicolons. It moves to TypeScript module by module, by the steps and in the order in [docs/typescript-migration.md](docs/typescript-migration.md); make small, exact edits to it meanwhile. The apps in the browser stay JavaScript, because they have no build step.
 - No build step, no framework. No new dependencies without an issue first.
 - `const` by default, `camelCase` for code, `UPPER_CASE` for constants.
 - Small named functions that do one thing. No clever tricks.

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Overthought &amp; Co. · Sandbox desktop</title>
+<meta name="description" content="The computer the AI works on: Overthought &amp; Co.'s apps, each in its own window, and what your AI is doing, live.">
+<meta name="ot-front-door" content="1">
+<meta name="ot-desktop" content="1">
+<meta name="theme-color" content="#0B1730">
+<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
+<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@125,900&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="desktop.css">
+</head>
+<body>
+<!-- The sandbox desktop: the computer the AI works on. The menu bar, the windows, the dock; on a phone or tablet,
+     a home screen of apps. Everything here is drawn by desktop.js; this page only holds the layers in order. -->
+<div class="wall" aria-hidden="true"><div class="wall-a"></div><div class="wall-b"></div><div class="wall-grain"></div></div>
+
+<header class="menubar" id="menubar">
+  <nav class="mb-left" aria-label="The company">
+    <button class="mb-co" id="coMenu" type="button" aria-haspopup="menu" aria-expanded="false"></button>
+    <button class="mb-item" id="appsMenu" type="button" aria-haspopup="menu" aria-expanded="false">Apps</button>
+    <button class="mb-item mb-wide" id="winMenu" type="button" aria-haspopup="menu" aria-expanded="false">Window</button>
+  </nav>
+  <div class="mb-right">
+    <button class="mb-live" id="live" type="button" aria-controls="panel" aria-expanded="false" aria-label="Activity">
+      <span class="mb-pip" aria-hidden="true"></span><span class="mb-live-t" id="liveText"></span>
+    </button>
+    <button class="mb-icon" id="searchBtn" type="button" aria-label="Search the company (Ctrl K)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.2"/><path d="m19.5 19.5-4-4"/></svg>
+    </button>
+    <button class="mb-clock" id="clock" type="button" aria-label="The business's time"></button>
+  </div>
+</header>
+
+<div class="menus" id="menus"></div>
+<main class="desk" id="desk" aria-label="Desktop"></main>
+<div class="home" id="home" aria-label="Apps" hidden></div>
+<div class="snap" id="snap" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3.5 19 11l-6.2 1.6L9.6 19Z"/></svg><span>Your AI</span></div>
+
+<nav class="dock" id="dock" aria-label="Dock"></nav>
+
+<aside class="panel" id="panel" aria-label="Activity" hidden></aside>
+<div class="banners" id="banners" role="status" aria-live="polite"></div>
+<div class="spot" id="spot" hidden></div>
+
+<script type="module" src="desktop.js"></script>
+</body>
+</html>

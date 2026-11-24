@@ -4,7 +4,7 @@ Instructions for coding agents (Claude Code, Codex, Cursor, Gemini CLI, Copilot 
 
 ## What Overthink is
 
-An open-source sandbox for testing AI in a business environment. At its centre is Overthought & Co., a simulated UK online shop whose apps all work inside the sandbox: email, customer help, team chat, social posts, orders, stock, money, documents, news, and Rummage to search across them.
+An open-source sandbox for testing AI in a business environment. At its centre is Overthought & Co., a simulated UK online shop whose apps all work inside the sandbox: email, a calendar, an address book, customer help, team chat, social posts, orders, stock, money, files, news, and Rummage to search across them.
 
 **You are the experimenter.** Overthink builds the environment, not the experiments. You plan the test, create the synthetic people and activity, run it with and without the product, and read the results. Nothing here prescribes a test.
 
@@ -29,7 +29,7 @@ From the user's project: `npx github:finleystephenson/overthink <command>`. From
 | --- | --- |
 | `overthink init [--url <address> \| --command "<cmd>"] [--channels <list>] [--yes] [--no-run]` | Writes `overthink.adapter.ts` and checks it. Without `--no-run` it also makes a short twin run. |
 | `overthink check --adapter <file\|url>` | One message on a fresh business: proves the wiring. |
-| `overthink up [--adapter <file>] [--access <level>] [--size demo\|standard] [--port 4747] [--open]` | A live sandbox: the apps (Rummage at `/`), the business tools, the activity toolset. With `--adapter`, the product is deployed on its channels. Writes `.overthink/sandbox.json`. |
+| `overthink up [--adapter <file>] [--access <level>] [--size demo\|standard] [--port 4747] [--open]` | A live sandbox: the apps (the sandbox desktop at `/`, with Rummage as its search), the business tools, the activity toolset. With `--adapter`, the product is deployed on its channels. Writes `.overthink/sandbox.json`. |
 | `overthink act <action> [--field value ...]` | One activity action against that sandbox. `overthink act --help` lists them all. |
 | `overthink reset [--yes]` | Puts the running sandbox back to its start, and deletes this project's run folder and cache. |
 | `overthink run --adapter <file> ...` | Optional: a ready-made twin run with model-voiced customers and a report ([`docs/run.md`](docs/run.md)). |
@@ -37,7 +37,7 @@ From the user's project: `npx github:finleystephenson/overthink <command>`. From
 
 ## The activity actions
 
-`create_person`, `list_people`, `remember`, `send_email`, `send_message`, `post`, `place_order`, `change_order`, `cancel_order`, `return_order`, `leave_review`, `supplier_event`, `staff_event`, `world_event`, `call_business_tool`, `advance_time`, `schedule`, `list_schedule`, `batch`, `observe`, `impact`, `reset`. Fields and what each one creates: [`activity-generation/README.md`](activity-generation/README.md).
+`create_person`, `list_people`, `remember`, `send_email`, `send_message`, `post`, `place_order`, `change_order`, `cancel_order`, `return_order`, `leave_review`, `supplier_event`, `staff_event`, `meeting_request`, `world_event`, `call_business_tool`, `advance_time`, `schedule`, `list_schedule`, `batch`, `observe`, `impact`, `reset`. Fields and what each one creates: [`activity-generation/README.md`](activity-generation/README.md).
 
 ## The contract (how the product is called)
 
@@ -68,7 +68,7 @@ Examples to copy: [`integrations/examples/`](integrations/examples) (an HTTP pro
 
 - Node 24, pnpm. New code is TypeScript, run directly by Node (type stripping), so only erasable syntax: no `enum`, no parameter properties, no `namespace`. Imports name the `.ts` file. `bin/typescript.mjs` lets the same source run from inside `node_modules`.
 - Style: Google's TypeScript style guide. Named exports only, `interface` for shapes, no `any`, `import type` for types, JSDoc on every export, comments that say why.
-- The older JavaScript (`infrastructure/engine/`, `infrastructure/server/`, `simulation/simulator/`, `simulation/world/`, `simulation/lab/`) moves to TypeScript module by module. TypeScript reaches it through small hand-written declaration files beside it (`simulation/simulator/core.d.mts`, `infrastructure/engine/engine.d.ts`): describe only what is used.
+- The older JavaScript (`infrastructure/engine/`, `infrastructure/server/`, `simulation/simulator/`, `simulation/world/`, `simulation/lab/`) moves to TypeScript module by module, in the order and by the steps in [`docs/typescript-migration.md`](docs/typescript-migration.md). TypeScript reaches it through small hand-written declaration files beside it (`simulation/simulator/core.d.mts`, `infrastructure/engine/engine.d.ts`): describe only what is used.
 - Make small, exact edits to existing JavaScript; keep `pnpm test`, `pnpm typecheck` and `pnpm lint` green. Do not edit `business/data/seed/` or the generated worlds in `business/data/world*/`.
 - Every change to the business goes through an engine tool, so the role rules apply and the change is in the audit. Things that arrive from outside go through the world-lens tools in `infrastructure/engine/activity.ts`.
 - The simulator's fairness depends on common random numbers (`simulation/simulator/README.md`, "What makes the comparison fair"). Nothing a product, the activity toolkit or a people model does may draw from the simulator's random streams.
@@ -79,8 +79,8 @@ Examples to copy: [`integrations/examples/`](integrations/examples) (an HTTP pro
 | --- | --- |
 | `business/data/` | The company as data: products, staff, policies, procedures, the population, the event library. |
 | `business/builder/` | Builds the company's five years of history into `business/data/world*/`, and validates it. |
-| `applications/` | The apps (browser): Rummage (`home/`), Letterbox, Front Desk, Kettle, Mutter, Squint, Till, Stockroom, Tally, Megaphone, Filing Cabinet, The Daily Overthinker, the Control Room, the explorer. `lib/` is shared. |
-| `infrastructure/engine/` | Records, tools, roles and rules. `activity.ts` holds the world-lens tools for outside activity. |
+| `applications/` | The apps (browser): the sandbox desktop (`desktop/`), Rummage (`home/`), Letterbox, Calendar, Contacts, Front Desk, Kettle, Mutter, Squint, Till, Stockroom, Tally, Megaphone, Files, The Daily Overthinker, the Control Room, the explorer. `apps.json` lists them; `lib/` is shared. |
+| `infrastructure/engine/` | Records, tools, roles and rules. `activity.ts` holds the world-lens tools for outside activity; `calendar.ts` the company calendar (`list_events`, `get_event`, `create_event`, `update_event`, `cancel_event`); `contacts.ts` the address book (`list_contact_cards`, `get_contact_card`, `update_contact_card`). |
 | `infrastructure/server/` | Sandboxes, the web API, MCP (`/mcp` for products, `/mcp/activity` for the owner), security. |
 | `infrastructure/session.ts` | `.overthink/sandbox.json`: where `overthink act` finds the running sandbox. |
 | `integrations/` | The adapter contract, transports and tool gateway (`adapter/`), `init/`, `deploy.ts` (a product on a live sandbox's channels), `examples/`, `claude-plugin/`. |

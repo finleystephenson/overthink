@@ -80,7 +80,7 @@ test('up, act, the product answers, Rummage shows it, reset', {timeout: 120000},
   await until('the session file', () => readSession(dir) !== null);
   const session = readSession(dir);
   assert.ok(session !== null);
-  assert.match(printed, /Rummage/);
+  assert.match(printed, /sandbox desktop/);
   const act = new ActivityClient(session);
 
   const [ann] = await act.createPeople({count: 1});

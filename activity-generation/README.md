@@ -27,6 +27,7 @@ All four are made from [`actions.ts`](actions.ts), so they never drift apart. On
 | `place_order`, `change_order`, `cancel_order`, `return_order`, `leave_review` | What a person does on the shop's website, under the shop's rules | Till, Stockroom, Tally |
 | `supplier_event` | A purchase order runs late, changes price or quantity; a supplier writes in | Stockroom, Letterbox |
 | `staff_event` | Someone in the team says something in Kettle; their hours change | Kettle |
+| `meeting_request` | A supplier, partner or customer asks for a meeting or call; it waits as tentative until someone answers | Calendar |
 | `world_event` | A world event from the library or your own: demand, delays, costs | The Daily Overthinker |
 | `call_business_tool` | Any business tool as a role, for look-ups (catalogue, staff, purchase orders) | |
 | `advance_time` | Moves the business on: the simulator's own customers, staff, parcels and suppliers carry on | everywhere |

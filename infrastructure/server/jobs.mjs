@@ -3,7 +3,7 @@
 // simulator's comparison with the business left alone. No AI model is called: every sentence is built from numbers.
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
-import { parseFrontMatter } from "../engine/load.js";
+import { parseFrontMatter } from "../engine/load.ts";
 import { DATA_DIR } from "./world-data.mjs";
 import { customerVoices, sampleVoices, adoption, knockOn } from "./voices.mjs";
 import { checkServiceUrl, DEFAULT_TIMEOUT_SECONDS, MAX_TIMEOUT_SECONDS } from "./deliver.mjs";

@@ -145,8 +145,8 @@ export function parseSafeJson(text) {
 /** Serves a static GET or HEAD. Returns true when it answered. no-cache so an edited file shows on the next reload. */
 async function serveStatic(req, res, url, frameAncestors) {
   if (req.method !== "GET" && req.method !== "HEAD") return false;
-  // A browser opening the root wants the company's front door (applications/home/); an API client asking for JSON still gets the API's root.
-  if (url.pathname === "/" && String(req.headers.accept || "").includes("text/html")) return redirect(res, 302, "/apps/home/");
+  // A browser opening the root wants the front door, the sandbox desktop (applications/desktop/); an API client asking for JSON still gets the API's root.
+  if (url.pathname === "/" && String(req.headers.accept || "").includes("text/html")) return redirect(res, 302, "/apps/desktop/");
   if (url.pathname === "/apps") return redirect(res, 301, "/apps/");
   if (url.pathname === "/explore" || url.pathname.startsWith("/explore/")) return redirect(res, 301, `/apps/explore/${url.pathname.slice("/explore/".length)}${url.search}`);
   // WHY: browsers always ask for /favicon.ico; answer it (or an empty 204) so the console shows no 404.

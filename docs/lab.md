@@ -146,7 +146,7 @@ node simulation/lab/overthink.mjs --reference-only     # just the floor and the 
 
 **Connecting.** The product speaks the simulator's tool protocol (`simulation/simulator/README.md`): a JSON message in, `{"reply": "..."}` out, by a command (stdin/stdout) or a web address (POST). Every message carries `api_url`, `token` and `mcp_url`, so the product calls the shop's tools over the web API or MCP with its role's permissions. An MCP-client product needs a small wrapper that passes the message in. It may add `cost_gbp`, `usage`, `version` and `model` to a reply; the lab records them.
 
-**Scope.** `{ "read": [...], "act": [...] }`, tool names or apps (`email`, `orders`, `customers`, `returns`, `refunds`, `cases`, `catalogue`, `stock`, `repairs`, `bookings`, `knowledge`, `social`, `marketing`, `money`, `news`) or `*`. Read-only tools need a read entry, others an act entry (an act entry also allows reading that app). The lab's server refuses a call outside the scope with `out_of_scope` before the engine sees it, and records it in the trace; it counts under safety.
+**Scope.** `{ "read": [...], "act": [...] }`, tool names or apps (`email`, `orders`, `customers`, `returns`, `refunds`, `cases`, `catalogue`, `stock`, `repairs`, `bookings`, `knowledge`, `social`, `marketing`, `money`, `news`, `calendar`, `contacts`) or `*`. Read-only tools need a read entry, others an act entry (an act entry also allows reading that app). The lab's server refuses a call outside the scope with `out_of_scope` before the engine sees it, and records it in the trace; it counts under safety.
 
 **Situations** (`simulation/lab/situations/*.json`), each on a fresh copy of the business, run `--repeats` times:
 

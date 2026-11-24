@@ -2,7 +2,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { createWorld } from "../../infrastructure/engine/all.js";
-import { loadData } from "../../infrastructure/engine/load.js";
+import { loadData } from "../../infrastructure/engine/load.ts";
 import { scoreCode, combine, consistency } from "./score.mjs";
 import { judge } from "./judge.mjs";
 import { stepsOf, flatten } from "./steps.mjs";

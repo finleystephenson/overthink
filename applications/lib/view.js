@@ -4,15 +4,11 @@
 //      forgets the sandbox this tab had, so the app opens that seed and arm;
 //   2. on the run summary (applications/view/), puts a small bar on the page: which run, a switch to the same moment
 //      without the product, and the way back to Rummage (the apps' own top bar has the switch everywhere else);
-//   3. badges every record the product created, changed or wrote ("Your AI"), by matching the record ids the server
-//      lists at /view/marks against the ids the apps already put in data-* attributes.
+//   3. the "Your AI" marks on every record the product touched are lib/your-ai.js's job (startApp() starts it in every
+//      app), so they look and connect the same here as on a live sandbox.
 
 const COOKIE = "ot-view";
 const SANDBOX_KEY = "ot-sandbox";  // applications/lib/client.js keeps the tab's sandbox here
-// The data-* attributes the apps put record ids in (Letterbox threads and emails, Front Desk items, Till orders ...).
-const ID_ATTRS = ["data-id", "data-email", "data-thread", "data-order", "data-key", "data-po", "data-msg", "data-open",
-  "data-post", "data-reply", "data-ref", "data-doc", "data-row", "data-settle", "data-case", "data-contact"];
-
 function readCookie() {
   const m = /(?:^|;\s*)ot-view=(\d+)\.(without|with)/.exec(document.cookie);
   return m ? { seed: Number(m[1]), arm: m[2] } : null;
@@ -53,7 +49,8 @@ function bar(run, view, count) {
   el.setAttribute("role", "region");
   el.setAttribute("aria-label", "Finished run");
   const seeds = run.seeds.map((s) => `<option value="${s}"${s === view.seed ? " selected" : ""}>Run ${s}</option>`).join("");
-  el.innerHTML = `<a class="ot-home" href="/">Rummage</a>
+  el.innerHTML = `<a class="ot-home" href="/">Desktop</a>
+    <a class="ot-home" href="/apps/home/">Rummage</a>
     <a class="ot-home" href="/apps/view/">Run summary</a>
     <select class="ot-seed" aria-label="Which run">${seeds}</select>
     <span class="ot-switch" role="group" aria-label="With or without your AI">
@@ -83,25 +80,7 @@ const STYLE = `
 .ot-switch button{border:0;background:none;color:inherit;font:inherit;padding:5px 10px;border-radius:99px;cursor:pointer}
 .ot-switch button[aria-pressed="true"]{background:#ff7433;color:#16172b}
 .ot-count{opacity:.8}.ot-ro{font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
-[data-ot-ai]{position:relative;box-shadow:inset 3px 0 0 #ff7433}
-[data-ot-ai]::after{content:attr(data-ot-ai);position:absolute;top:4px;right:6px;z-index:2;pointer-events:none;
-  background:#ff7433;color:#16172b;font:600 10px/1 Geist,system-ui,sans-serif;letter-spacing:.04em;padding:3px 6px;border-radius:99px}
 @media (max-width:640px){.ot-viewbar{border-radius:16px;bottom:8px}.ot-count{display:none}}`;
-
-/** Badges every element whose data-* id is one the product touched. Cheap: one attribute look-up per element. */
-function badge(root, marks) {
-  for (const attr of ID_ATTRS) {
-    for (const el of root.querySelectorAll(`[${attr}]`)) {
-      // Front Desk keys look like "ct:CT-00012" or "conv:CONV-0041": the id is after the colon.
-      const id = el.getAttribute(attr).replace(/^[a-z]+:/, "");
-      const m = marks.get(id);
-      if (m && !el.hasAttribute("data-ot-ai")) {
-        el.setAttribute("data-ot-ai", "Your AI");
-        el.title = `Your AI: ${m.map((x) => x.what).join("; ")}`;
-      }
-    }
-  }
-}
 
 async function start() {
   const style = document.createElement("style");
@@ -117,15 +96,6 @@ async function start() {
   if (document.readyState === "loading") await new Promise((r) => document.addEventListener("DOMContentLoaded", r, { once: true }));
   // The apps' own top bar (lib/topbar.js) and Rummage's panel have the switch; only the run summary needs this bar.
   if (location.pathname.startsWith("/apps/view/")) bar(run, view, byId.size);
-  if (view.arm !== "with" || !byId.size) return;
-  badge(document.body, byId);
-  // WHY observe: the apps draw their lists after their reads come back, and redraw on every click.
-  let queued = false;
-  new MutationObserver(() => {
-    if (queued) return;
-    queued = true;
-    requestAnimationFrame(() => { queued = false; badge(document.body, byId); });
-  }).observe(document.body, { childList: true, subtree: true });
 }
 
 start().catch((e) => console.warn("overthink view:", e.message));

@@ -11,7 +11,7 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { createWorld } from "../../infrastructure/engine/all.js";
-import { loadData } from "../../infrastructure/engine/load.js";
+import { loadData } from "../../infrastructure/engine/load.ts";
 import { checkState, includesSubset, deepEqual, findRecord, recordKey } from "./score.mjs";
 import { stepsOf, flatten } from "./steps.mjs";
 

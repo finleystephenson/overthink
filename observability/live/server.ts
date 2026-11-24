@@ -52,7 +52,7 @@ export async function startLiveServer(stream: LiveStream, port = LIVE_PORT): Pro
       return;
     }
     if (url.pathname !== '/live/events') {
-      // Rummage, the company's search engine, opens at / and follows this run from the same address.
+      // The sandbox desktop opens at / and follows this run from the same address.
       void serveFrontDoor(req, res, url).then((served) => {
         if (!served)
           res.writeHead(404, {'Content-Type': 'text/plain'}).end('Not found. Try /live/events');

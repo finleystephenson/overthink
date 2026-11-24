@@ -100,12 +100,27 @@ const GLYPHS = {
     <circle cx="12" cy="7.4" r="3.2" fill="${TOUCH}" stroke="${CUT}" stroke-width="1.4"/>
     <path d="M6.4 20.6a5.6 5.6 0 0 1 11.2 0Z" ${INK} stroke="${CUT}" stroke-width="1.4"/>`,
 
-  // A cabinet with a file standing up in the top drawer.
-  filing: `
-    <path d="M7.4 9V4.4a1 1 0 0 1 1-1h2.8l1.2 1.4h3.2a1 1 0 0 1 1 1V9Z" fill="${TOUCH}" stroke="none"/>
-    <rect x="4.5" y="7.4" width="15" height="13.6" rx="2" ${INK}/>
-    <path d="M4.5 14.2h15" stroke="${CUT}" stroke-width="1.2"/>
-    <path d="M10 10.8h4M10 17.6h4" stroke="${CUT}" stroke-width="1.6"/>`,
+  // A folder with a paper standing up in it; the paper is the touch of colour.
+  files: `
+    <path d="M3 6.2a1.8 1.8 0 0 1 1.8-1.8h4.4l2 2.2h8a1.8 1.8 0 0 1 1.8 1.8v2.4H3Z" ${INK}/>
+    <rect x="6.4" y="7.4" width="11.2" height="6" rx=".9" fill="${TOUCH}" stroke="${CUT}" stroke-width="1.2"/>
+    <path d="M3 11.2h18v7.6a1.8 1.8 0 0 1-1.8 1.8H4.8A1.8 1.8 0 0 1 3 18.8Z" ${INK} stroke="${CUT}" stroke-width="1.2"/>
+    <path d="M9.6 15.8h4.8" stroke="${CUT}" stroke-width="1.6"/>`,
+
+  // A desk calendar: rings, a header, and today in colour.
+  calendar: `
+    <rect x="3" y="4.6" width="18" height="16" rx="2.4" ${INK}/>
+    <path d="M3.6 9.4h16.8" stroke="${CUT}" stroke-width="1.4"/>
+    <path d="M8 2.8v3.6M16 2.8v3.6" stroke-width="2"/>
+    <rect x="13.4" y="12.4" width="4.4" height="4.4" rx="1" fill="${TOUCH}" stroke="none"/>
+    <path d="M6.6 13.2h3.4M6.6 16.4h3.4" stroke="${CUT}" stroke-width="1.4"/>`,
+
+  // An address card: a person on the left, lines of detail; the person is the touch of colour.
+  contacts: `
+    <rect x="3" y="4.6" width="18" height="14.8" rx="2.4" ${INK}/>
+    <circle cx="8.8" cy="10.4" r="2.2" fill="${TOUCH}" stroke="none"/>
+    <path d="M5.4 16.4a3.4 3.4 0 0 1 6.8 0Z" fill="${TOUCH}" stroke="none"/>
+    <path d="M14.2 10h4M14.2 13.4h4M14.2 16.6h2.6" stroke="${CUT}" stroke-width="1.5"/>`,
 
   // Rummage, the search engine: a magnifying glass dipped into a crate. The glass is the touch of colour.
   rummage: `
@@ -123,6 +138,9 @@ const GLYPHS = {
     <circle cx="12" cy="13.2" r="1.3" fill="${CUT}" stroke="none"/>`,
 };
 
+// WHY the alias: Files was called Filing Cabinet, and older screens may still ask for its old drawing by name.
+GLYPHS.filing = GLYPHS.files;
+
 /**
  * An app's icon: its mark on a plain tile.
  * @param {{icon: string, accent: string, id?: string}} app an entry from apps.json
@@ -135,7 +153,7 @@ export function appIcon(app, { size = 64 } = {}) {
   const tile = `--accent:${app.accent};--size:${size}px;color:var(--ot-icon-ink,#0B1730);`
     + "background:var(--ot-icon-tile,#fff);box-shadow:inset 0 0 0 1px var(--ot-icon-ring,#CFD7E6);border-radius:calc(var(--size) * .27)";
   return `<span class="app-icon ot-icon" data-icon="${String(app.icon).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`)}" style="${tile}" aria-hidden="true">
-    <svg viewBox="0 0 24 24" style="width:64%;height:64%" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${GLYPHS[app.icon] || GLYPHS.filing}</svg>
+    <svg viewBox="0 0 24 24" style="width:64%;height:64%" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${GLYPHS[app.icon] || GLYPHS.files}</svg>
   </span>`;
 }
 

@@ -1,4 +1,4 @@
-// Filing Cabinet: the company's knowledge base. Every document the business keeps, searchable by title and text,
+// Files: the company's documents. Every document the business keeps, searchable by title and text,
 // within what the person at the computer may read: supplier agreements, product sheets, policies, procedures, monthly
 // meeting notes, the staff handbook and the older hand-written papers. People who write documents can add and change
 // them (save_document); what is written here is what search_knowledge gives a connected AI from then on.
@@ -9,7 +9,7 @@ import { isScreenRead } from "../lib/client.js";
 import { plainText } from "../lib/plain.js";
 import { recordChip, wireRecordChips } from "../lib/records.js";
 
-const APP_ID = "filing-cabinet";
+const APP_ID = "files";
 const { world, app } = await startApp({ id: APP_ID });
 document.title = `${app.name} · Overthought & Co.`;
 const main = document.getElementById("main");
@@ -251,7 +251,7 @@ function editor(d) {
     if (d) input.id = d.id;
     const r = await world.call("save_document", input);
     if (!r.ok) { $("said").textContent = r.error.message; $("said").dataset.tone = "bad"; return; }
-    toast(d ? "Saved. Anyone who searches finds the new words." : "Saved in the cabinet.");
+    toast(d ? "Saved. Anyone who searches finds the new words." : "Saved in Files.");
     await load();
     openDoc(r.data.id);
   });

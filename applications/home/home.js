@@ -9,6 +9,7 @@ import { getClient } from "../lib/client.js";
 import { appIcon, spiral } from "../lib/icons.js";
 import { esc, loadApps } from "../lib/ui.js";
 import { connectLive, nowLine, phrase, plainIds } from "../lib/live.js";
+import { aiBadge, startYourAi } from "../lib/your-ai.js";
 import { TABS, makeSources } from "./sources.js";
 
 const $ = (id) => document.getElementById(id);
@@ -197,8 +198,11 @@ function resultHtml(r, ws, fresh) {
   const icon = app ? appIcon(app, { size: 28 }) : `<span class="app-icon" style="border-radius:8px;box-shadow:inset 0 0 0 1px var(--line-2)"></span>`;
   const title = r.href ? `<a href="${esc(r.href)}">${bold(r.title, ws)}</a>` : bold(r.title, ws);
   const date = day(r.date);
-  return `<article class="res${r.ai ? " is-ai" : ""}${fresh ? " new" : ""}">
-    <div class="src">${icon}<span class="where"><b>${esc(app?.name || "The run")}</b>${r.where ? `<span>${esc(r.where)}</span>` : ""}</span>${r.ai ? '<span class="ai">Your AI</span>' : ""}</div>
+  // A record your AI touched wears the shared treatment (lib/your-ai.js), which also opens its story; a line from the
+  // run itself is not a record, so it carries the badge only.
+  const mark = r.ai && r.kind !== "ai" && r.id ? ` data-ot-ai-id="${esc(r.id)}"` : "";
+  return `<article class="res${r.ai ? " is-ai" : ""}${fresh ? " new" : ""}"${mark}>
+    <div class="src">${icon}<span class="where"><b>${esc(app?.name || "The run")}</b>${r.where ? `<span>${esc(r.where)}</span>` : ""}</span>${r.ai && !mark ? aiBadge() : ""}</div>
     <h3>${title}</h3>
     ${date || r.snip ? `<p class="snip">${date ? `<span class="d">${esc(date)}${r.snip ? " — " : ""}</span>` : ""}${bold(r.snip || "", ws)}</p>` : ""}
   </article>`;
@@ -355,6 +359,7 @@ async function main() {
   paintApps();
   const world = getClient();
   S.sources = makeSources(world);
+  startYourAi({ world, apps: [...S.apps.values()], icon: appIcon });
   wire();
   // Which server this is: `overthink view` answers /view/run; any server with a run answers /live/status.
   const run = await fetch("/view/run", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null);

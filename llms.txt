@@ -1,6 +1,6 @@
 # Overthink
 
-> An open-source sandbox for testing AI in a business environment. At its centre is Overthought & Co., a simulated UK online shop whose apps all work inside the sandbox. The developer's own coding agent plans the test, creates synthetic people and activity, runs it with and without the product, and reads the results. Run it from the developer's own project: `npx github:finleystephenson/overthink init`.
+> An open-source sandbox for testing AI in a business environment. At its centre is Overthought & Co., a simulated UK online shop whose apps all work inside the sandbox: email, calendar, contacts, customer help, team chat, social posts, orders, stock, money, files and news. The developer's own coding agent plans the test, creates synthetic people and activity, runs it with and without the product, and reads the results. Run it from the developer's own project: `npx github:finleystephenson/overthink init`.
 
 ## For coding agents
 
@@ -12,6 +12,7 @@
 ## Reference
 
 - [docs/architecture.md](docs/architecture.md): how the business, engine, sandbox, simulator and tools fit together.
+- [docs/typescript-migration.md](docs/typescript-migration.md): which parts are TypeScript, which are older JavaScript, and the plan for moving them.
 - [docs/connect.md](docs/connect.md): the business's own web API and MCP, for a product that calls tools itself.
 - [docs/run.md](docs/run.md): the optional `overthink run` twin-run tool and its report.
 - [docs/audiences.md](docs/audiences.md): the persona engine's audiences (customers, staff, businesses, suppliers, the public).

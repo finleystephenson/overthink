@@ -9,7 +9,7 @@
 // the operations assistant read everything inside.
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { parseFrontMatter } from "../../../infrastructure/engine/load.js";
+import { parseFrontMatter } from "../../../infrastructure/engine/load.ts";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 /** Unit costs and supplier terms: the people who buy, receive, pay for and approve stock. */

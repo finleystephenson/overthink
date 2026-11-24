@@ -7,7 +7,7 @@ import { clean, dateWords, refRow, hrefFor, onMoved } from "./parts.js";
 
 const APPS = { till: "Till · Orders", letterbox: "Letterbox · Email", stockroom: "Stockroom · Stock", "front-desk": "Front Desk · Customer help", tally: "Tally · Money",
   squint: "Squint · Photos", mutter: "Mutter · Short posts", kettle: "Kettle · Staff chat", rota: "Rota · Who works when", megaphone: "Megaphone · Marketing",
-  "daily-overthinker": "The Daily Overthinker · News", "filing-cabinet": "Filing Cabinet · Documents", "control-room": "Control Room · Results" };
+  "daily-overthinker": "The Daily Overthinker · News", files: "Files · Documents", "control-room": "Control Room · Results" };
 const appLink = (id) => (APPS[id] ? `<a class="xapp" href="#/apps/${esc(id)}">Open in ${esc(APPS[id].split(" · ")[0])}<span> · ${esc(APPS[id].split(" · ")[1])}</span></a>` : "");
 
 export async function renderEntity(main, kind, id) {

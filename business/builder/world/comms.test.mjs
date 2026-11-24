@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
-import { loadData } from "../../../infrastructure/engine/load.js";
+import { loadData } from "../../../infrastructure/engine/load.ts";
 import { deriveComms } from "./comms.mjs";
 import { loadCommsData } from "./comms-data.mjs";
 import { ROSTER } from "../../../infrastructure/engine/comms.js";

@@ -15,15 +15,16 @@ const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 /** The tabs, in order. `kinds` are the sources each tab searches. */
 export const TABS = [
-  { id: "all", label: "All", kinds: ["ai", "people", "orders", "email", "chat", "posts", "reviews", "docs", "news", "products"] },
+  { id: "all", label: "All", kinds: ["ai", "people", "orders", "email", "chat", "posts", "events", "reviews", "docs", "news", "products"] },
   { id: "ai", label: "Your AI", kinds: ["ai"] },
   { id: "email", label: "Email", kinds: ["email"] },
   { id: "chat", label: "Chat", kinds: ["chat"] },
   { id: "posts", label: "Posts", kinds: ["posts"] },
   { id: "orders", label: "Orders", kinds: ["orders", "products"] },
   { id: "people", label: "People", kinds: ["people"] },
+  { id: "calendar", label: "Calendar", kinds: ["events"] },
   { id: "reviews", label: "Reviews", kinds: ["reviews"] },
-  { id: "docs", label: "Documents", kinds: ["docs"] },
+  { id: "docs", label: "Files", kinds: ["docs"] },
   { id: "news", label: "News", kinds: ["news"] },
 ];
 
@@ -129,12 +130,28 @@ export function makeSources(world) {
       }));
     },
 
+    async events(q, n) {
+      // WHY a window, not everything: a calendar search means what is coming up or just happened, not 2021.
+      const today = (await cached("today", () => world.clock().then((c) => String(c.now).slice(0, 10)).catch(() => null))) || new Date().toISOString().slice(0, 10);
+      const shift = (d, days) => new Date(Date.parse(`${d}T00:00:00Z`) + days * 86400000).toISOString().slice(0, 10);
+      const d = await read("list_events", { from: shift(today, -30), to: shift(today, 60), ...(q ? { search: q } : {}) });
+      const KIND = { meeting: "Meeting", supplier_call: "Supplier call", reminder: "Reminder", other: "Entry", delivery: "Delivery", booking: "Booking", task: "Task due", campaign: "Campaign", world: "In the world" };
+      const soon = (d?.events || []).filter((e) => e.kind !== "shift" && e.status !== "cancelled")
+        .sort((a, b) => Math.abs(Date.parse(a.start.slice(0, 10)) - Date.parse(today)) - Math.abs(Date.parse(b.start.slice(0, 10)) - Date.parse(today)));
+      return soon.slice(0, n).map((e) => ({
+        kind: "events", id: e.id, app: "calendar", where: `Calendar › ${KIND[e.kind] || "Entry"}`,
+        title: e.title, snip: `${e.all_day ? (e.end !== e.start ? `Until ${new Date(`${e.end}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", timeZone: "UTC" })}` : "All day") : `${e.start.slice(11, 16)} to ${e.end.slice(11, 16)}`}${e.people?.length ? ` · ${e.people.map((p) => p.name).join(", ")}` : ""}${e.status === "tentative" ? " · not answered yet" : ""}.`,
+        date: e.start.slice(0, 10),
+        href: `../calendar/?view=day&date=${encodeURIComponent(e.start.slice(0, 10))}&event=${encodeURIComponent(e.id)}`,
+      }));
+    },
+
     async docs(q, n) {
       const d = await read("search_documents", { ...(q ? { query: q } : {}), limit: n });
       return (d?.documents || []).map((x) => ({
-        kind: "docs", id: x.id, app: "filing-cabinet", where: `Documents › ${x.kind}`,
+        kind: "docs", id: x.id, app: "files", where: `Files › ${x.kind}`,
         title: x.title, snip: `${cap(x.kind)}${x.status === "out_of_date" ? ", out of date" : ""}.${x.summary ? ` ${x.summary}` : ""}`, date: x.written_at || null,
-        href: `../filing-cabinet/?doc=${encodeURIComponent(x.id)}`,
+        href: `../files/?doc=${encodeURIComponent(x.id)}`,
       }));
     },
 

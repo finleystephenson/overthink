@@ -359,6 +359,48 @@ export const ACTIONS: readonly ActionDef[] = [
     run: async (env, i) => Promise.resolve(staffEvent(env, i)),
   },
   {
+    name: 'meeting_request',
+    title: 'Someone outside asks to meet',
+    description:
+      'Someone outside the company asks for a meeting or a call: a supplier (supplier_id fills in its contact person), a partner or a customer (from_name, from_email, organisation). title, start (a time, 2026-11-24T10:00), minutes (default 30), kind (meeting or supplier_call), invite (staff ids; default the buyer for a supplier, else the manager), notes, where. It waits in the Calendar as tentative until someone accepts (update_event status confirmed) or declines (cancel_event).',
+    input: schema(
+      {
+        title: s,
+        start: s,
+        minutes: int,
+        kind: {type: 'string', enum: ['meeting', 'supplier_call']},
+        supplier_id: s,
+        from_name: s,
+        from_email: s,
+        organisation: s,
+        invite: {type: 'array', items: s},
+        notes: s,
+        where: s,
+      },
+      ['title', 'start'],
+    ),
+    run: async (env, i) =>
+      Promise.resolve(
+        asWorld(
+          env,
+          'receive_meeting_request',
+          pick(i, [
+            'title',
+            'start',
+            'minutes',
+            'kind',
+            'supplier_id',
+            'from_name',
+            'from_email',
+            'organisation',
+            'invite',
+            'notes',
+            'where',
+          ]),
+        ),
+      ),
+  },
+  {
     name: 'world_event',
     title: 'Something happens in the wider world',
     description:

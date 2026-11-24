@@ -90,7 +90,7 @@ const job = await api(base, `/sandboxes/${sandbox.id}/jobs/manager/start`, { tok
 console.log(`
 Overthought & Co. is running.
 
-  Rummage, the company's apps:  ${base}/
+  The sandbox desktop:          ${base}/
   The explorer (the whole world):  ${base}/apps/explore/
 
 Connect an AI to a ready sandbox (${o.size}, id ${sandbox.id}). Pick one way:

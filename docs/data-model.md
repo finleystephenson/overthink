@@ -237,7 +237,7 @@ It ends with a one-screen summary: customers, orders, revenue and profit by year
 One plain JavaScript module with no dependencies. The same code runs behind the website (in the browser), behind the AI assistant's tools, and in the tests.
 
 ```js
-import { loadData } from "./load.js";
+import { loadData } from "./load.ts";
 import { createWorld } from "./engine.js";
 const data = loadData("data", { world: "standard" });   // leave out { world } to use business/data/seed
 const world = createWorld({ ...data, now: "2026-11-23T10:00:00Z" });

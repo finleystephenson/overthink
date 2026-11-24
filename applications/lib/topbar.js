@@ -149,7 +149,7 @@ export function mountTopBar({ app, apps, world }) {
 const PLAIN = {
   letterbox: "Email", kettle: "Team chat", squint: "Photos", mutter: "Short posts", "front-desk": "Customer help",
   "daily-overthinker": "News", "control-room": "Time and results", till: "Orders and products", stockroom: "Stock and suppliers",
-  tally: "Money", megaphone: "Marketing", rota: "The team", "filing-cabinet": "Documents", home: "Search",
+  tally: "Money", megaphone: "Marketing", rota: "The team", files: "Documents", calendar: "Schedule", contacts: "Address book", home: "Search",
 };
 
 /**

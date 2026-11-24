@@ -257,7 +257,7 @@ test("static files: the apps and pictures are served read-only, safe against esc
   assert.equal(appsJson.status, 200);
   assert.match(appsJson.headers.get("content-type"), /application\/json/);
   assert.equal((await get("/apps", { accept: "text/html" })).status, 301);
-  assert.equal((await get("/", { accept: "text/html" })).headers.get("location"), "/apps/home/");
+  assert.equal((await get("/", { accept: "text/html" })).headers.get("location"), "/apps/desktop/");
   assert.equal((await get("/")).status, 200, "an API client still gets the API root");
   for (const bad of ["/apps/../package.json", "/apps/%2e%2e/package.json", "/apps/..%2fpackage.json", "/img/%2e%2e%2f%2e%2e%2fpackage.json", "/apps/dev.mjs", "/apps/.hidden", "/apps/lib/", "/img/no-such-file.png"]) {
     assert.equal((await get(bad)).status, 404, bad);

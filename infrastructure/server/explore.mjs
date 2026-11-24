@@ -316,7 +316,7 @@ export function searchWorld(world, q, { limit = 20 } = {}) {
 // ------------------------------------------------------------------ one thing, with its connections
 
 const ref = (kind, id, title, note = "") => ({ kind, id, title, ...(note ? { note } : {}) });
-const APP_FOR = { order: "till", email: "letterbox", case: "front-desk", contact: "front-desk", stock: "stockroom", ledger: "tally", news: "daily-overthinker", social_squint: "squint", social_mutter: "mutter", chat: "kettle", rota: "rota", document: "filing-cabinet", campaign: "megaphone", review: "front-desk", purchase_order: "stockroom" };
+const APP_FOR = { order: "till", email: "letterbox", case: "front-desk", contact: "front-desk", stock: "stockroom", ledger: "tally", news: "daily-overthinker", social_squint: "squint", social_mutter: "mutter", chat: "kettle", rota: "rota", document: "files", campaign: "megaphone", review: "front-desk", purchase_order: "stockroom" };
 
 /**
  * Everything about one thing, in one shape for every kind:
@@ -679,7 +679,7 @@ const DOSSIERS = {
     const d = world.state.documents.find((x) => x.id === id);
     if (!d) return null;
     return { title: d.title, kind_label: "Document", sentence: plain(String(d.body || "").replace(/^#.*\n/, "").split("\n").find((l) => l.trim()) || "", idx),
-      facts: [{ label: "Written", value: dw(d.written_at) }, { label: "Status", value: d.status }], body: plain(d.body, idx), connections: [], history: [], apps: ["filing-cabinet"] };
+      facts: [{ label: "Written", value: dw(d.written_at) }, { label: "Status", value: d.status }], body: plain(d.body, idx), connections: [], history: [], apps: ["files"] };
   },
 
   app(world, idx, id) {
@@ -872,7 +872,7 @@ function appForTool(tool) {
   if (/campaign|marketing/.test(tool)) return "megaphone";
   if (/staff|cover/.test(tool)) return "rota";
   if (/order|price|product|catalogue/.test(tool)) return "till";
-  if (/document/.test(tool)) return "filing-cabinet";
+  if (/document/.test(tool)) return "files";
   return null;
 }
 

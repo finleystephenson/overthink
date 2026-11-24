@@ -1,6 +1,6 @@
 # Live events: `overthink.live/1`
 
-What a run streams while it happens: what the product read, what it did, what it said, and how people reacted. The local front door (`applications/home/`) reads it to show a live feed in which each line opens the app where it happened. A coding agent can read the same stream.
+What a run streams while it happens: what the product read, what it did, what it said, and how people reacted. The sandbox desktop (`applications/desktop/`, the local front door) reads it: at a person's pace each action comes forward in its app's window; faster, it streams into a calm activity panel. Each line opens the app where it happened. A coding agent can read the same stream.
 
 The TypeScript types are in `observability/live/events.ts`; this page is the contract. `schema` changes only when a reader would break. New event types and new fields inside `data` can be added without a bump, so readers must ignore what they do not know.
 
@@ -55,7 +55,7 @@ Every event has these fields:
 | `audience` | `customers`, `staff`, `businesses`, `suppliers`, `public`, or `null`. |
 | `channel` | Where it happened: `web_chat`, `email`, `phone`, `text`, `mutter_dm`, `squint_dm`, `mutter_mention`, `internal`, `supplier_mail`, `outreach`, `publishing`, or `null`. |
 | `session` | The conversation or piece of work (`session_id` in the adapter contract), or `null`. |
-| `app` | The company app to open: `letterbox`, `front-desk`, `kettle`, `mutter`, `squint`, `till`, `stockroom`, `tally`, `megaphone`, `filing-cabinet`, or `null`. |
+| `app` | The company app to open: `letterbox`, `front-desk`, `kettle`, `mutter`, `squint`, `till`, `stockroom`, `tally`, `megaphone`, `files`, `calendar`, `contacts`, or `null`. |
 | `record` | The id of the record it concerns (an email, contact, post, order, purchase order, prospect), or `null`. |
 | `link` | A path on the `overthink view` server that opens that record, or `null`. Valid once the run has finished and `overthink view --run <out>` serves it. |
 | `summary` | One plain line for a feed. Facts only. |

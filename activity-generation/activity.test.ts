@@ -179,6 +179,20 @@ test('supplier, staff and world events go through the engine', async () => {
   assert.ok(event.ok, JSON.stringify(event));
 });
 
+test('a meeting request from outside lands in the Calendar as tentative', async () => {
+  const {act, state} = fresh();
+  const asked = await act.perform('meeting_request', {
+    supplier_id: 'SUP-01',
+    title: 'Christmas bake schedule',
+    start: '2026-11-25T09:00',
+    minutes: 20,
+  });
+  assert.ok(asked.ok, JSON.stringify(asked));
+  const ev = rows(state, 'calendar_events').find((e) => e['title'] === 'Christmas bake schedule');
+  assert.equal(ev?.['status'], 'tentative');
+  assert.equal(ev['kind'], 'supplier_call');
+});
+
 test('scheduled actions run on their day; batches report each step; reset forgets everything', async () => {
   const {act, state} = fresh();
   const [p] = await act.createPeople();

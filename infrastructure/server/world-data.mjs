@@ -4,7 +4,7 @@
 // imported; going through all.js gives every sandbox every tool.
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { loadData } from "../engine/load.js";
+import { loadData } from "../engine/load.ts";
 import { createWorld, loadState } from "../engine/all.js";
 import { attachPlan } from "../engine/levers.js";
 import { loadBusiness } from "../../simulation/simulator/data.mjs";

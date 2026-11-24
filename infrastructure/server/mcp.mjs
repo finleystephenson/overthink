@@ -8,7 +8,7 @@ import {
   ListToolsRequestSchema, CallToolRequestSchema, ListResourcesRequestSchema, ReadResourceRequestSchema,
   ListPromptsRequestSchema, GetPromptRequestSchema, McpError, ErrorCode,
 } from "@modelcontextprotocol/sdk/types.js";
-import { parseFrontMatter } from "../engine/load.js";
+import { parseFrontMatter } from "../engine/load.ts";
 import { DATA_DIR } from "./world-data.mjs";
 import { JOBS, PROCEDURES, needJob, instructionsFor, handover, companyOverview, publicJob, HELPER_TOOLS, callHelper, canMoveTime as mayMoveTime } from "./jobs.mjs";
 
@@ -29,8 +29,8 @@ export const toolsForRole = (world, role) =>
 // lists rather than on each tool: the engine's tools are shared with the browser and the bench; this is MCP's concern.
 const READ_PREFIX = /^(list|get|search|check|compare|read|price_history|stock_history|social_stats|web_sessions|delivery_options|payment_methods|business_snapshot|ledger_search|verify)/;
 const DESTRUCTIVE = new Set(["cancel_order", "cancel_booking", "issue_refund", "approve_large_refund", "add_goodwill_credit", "discontinue_product", "delete_email", "delete_draft",
-  "end_campaign", "cancel_world_event", "set_staffing", "add_ledger_correction", "settle_pay_later", "advance_day"]);
-const IDEMPOTENT = new Set(["mark_email", "set_support_cover", "set_marketing_budget", "adjust_stock", "record_stock_count", "update_order", "update_campaign"]);
+  "end_campaign", "cancel_world_event", "cancel_event", "set_staffing", "add_ledger_correction", "settle_pay_later", "advance_day"]);
+const IDEMPOTENT = new Set(["mark_email", "set_support_cover", "set_marketing_budget", "adjust_stock", "record_stock_count", "update_order", "update_campaign", "update_contact_card"]);
 /** "list_emails" → "List emails". */
 export const titleOf = (name) => `${name[0].toUpperCase()}${name.slice(1).replace(/_/g, " ")}`;
 /** MCP tool annotations for an engine tool. Nothing here reaches the real world, so openWorldHint is always false. */

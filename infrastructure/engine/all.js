@@ -15,3 +15,5 @@ import "../../simulation/world/people.js";
 import "./suppliers-comms.js";
 // WHY TypeScript here: new engine code is TypeScript. Node strips the types; bin/typescript.mjs does it inside node_modules.
 import "./activity.ts";
+import "./calendar.ts";
+import "./contacts.ts";

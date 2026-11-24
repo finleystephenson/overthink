@@ -26,6 +26,8 @@ export const APPS = {
   marketing: /campaign|marketing|prospect|outreach/,
   money: /ledger|bill|pay_later|business_snapshot|books/,
   news: /news|world_event|event_template/,
+  calendar: /^(list|get|create|update|cancel)_events?$/,
+  contacts: /contact_card/,
 };
 
 /**

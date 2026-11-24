@@ -3,6 +3,8 @@
 // strings or DOM nodes, and apps put them where they like.
 import { getClient } from "./client.js";
 import { mountTopBar } from "./topbar.js";
+import { appIcon } from "./icons.js";
+import { startYourAi } from "./your-ai.js";
 
 // ------------------------------------------------------------------ text and numbers
 
@@ -342,5 +344,7 @@ export async function startApp({ id }) {
   if (isDarkColour(app.accent)) document.documentElement.style.setProperty("--app-dot", "var(--sky)");
   const world = getClient();
   const bar = mountTopBar({ app, apps, world });
+  // The one "Your AI" treatment (lib/your-ai.js): every record the AI touched, marked and connected, in every app.
+  startYourAi({ world, apps, icon: appIcon });
   return { world, app, apps, bar };
 }

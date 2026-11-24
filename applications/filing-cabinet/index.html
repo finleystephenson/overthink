@@ -3,19 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Filing Cabinet · Documents · Overthought &amp; Co.</title>
-<link rel="icon" href="../lib/mark.svg" type="image/svg+xml">
-<!-- Apply the saved theme before anything paints, so there is no flash of the wrong one. -->
-<script>try { const t = localStorage.getItem("ot-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap">
-<link rel="stylesheet" href="../lib/premium.css">
-<link rel="stylesheet" href="app.css">
+<title>Files · Documents · Overthought &amp; Co.</title>
+<!-- Filing Cabinet is now called Files. Old links (?doc=KB-0001) carry on to the same document. -->
+<script>location.replace("../files/" + location.search + location.hash);</script>
+<meta http-equiv="refresh" content="0; url=../files/">
 </head>
-<body class="fc-body">
-<!-- Three panes, as in any documents browser: sections, the papers in one section, the page being read. -->
-<main class="fc" id="main"></main>
-<script type="module" src="app.js"></script>
-</body>
+<body><p><a href="../files/">The company's documents now live in Files.</a></p></body>
 </html>

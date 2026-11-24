@@ -6,7 +6,7 @@ import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 import { createWorld } from "./all.js";
-import { loadData } from "./load.js";
+import { loadData } from "./load.ts";
 import { CHANNEL_ROLES, ROSTER, SHARED_BOXES } from "./comms.js";
 
 const dataDir = join(fileURLToPath(new URL("../../", import.meta.url)), "business", "data");

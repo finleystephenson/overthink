@@ -353,7 +353,7 @@ out("knowledge.json", {
 });
 
 // ------------------------------------------------------------ the engine and the server, imported for real
-const { loadData } = await import(path.join(ROOT, "infrastructure/engine/load.js"));
+const { loadData } = await import(path.join(ROOT, "infrastructure/engine/load.ts"));
 const { createWorld } = await import(path.join(ROOT, "infrastructure/engine/engine.js"));
 let serverMods = {};
 try {

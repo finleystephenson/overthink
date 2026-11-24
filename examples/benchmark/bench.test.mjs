@@ -8,7 +8,7 @@ import { scriptedCustomer, fakeCustomer, anthropicCustomer, converseWith, END } 
 import { stepsOf, flatten } from "./steps.mjs";
 import { checkFacts, validateScenario, loadScenarioFiles } from "./check-scenarios.mjs";
 import { callsFromTrace, httpAgent } from "./adapters.mjs";
-import { loadData } from "../../infrastructure/engine/load.js";
+import { loadData } from "../../infrastructure/engine/load.ts";
 import { parseArgs } from "./run.mjs";
 
 const r = (id, category, pass) => ({ id, category, pass });

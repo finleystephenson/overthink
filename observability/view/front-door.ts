@@ -1,8 +1,8 @@
 /**
- * @fileoverview Rummage, the company's search engine (applications/home/), on any local Overthink server: `/` opens it and
- * `/apps/*` serves the company's pages. `overthink view` has its own copy of these routes (observability/view/server.ts); the
- * live run's server (observability/live/server.ts) mounts this one, so a run started with `--live --open` opens Rummage and its
- * live line follows the run from the same address.
+ * @fileoverview The front door, the sandbox desktop (applications/desktop/), on any local Overthink server: `/` opens it
+ * and `/apps/*` serves the company's pages (Rummage, the search engine, is one app on it). `overthink view` has its own copy of these routes (observability/view/server.ts); the
+ * live run's server (observability/live/server.ts) mounts this one, so a run started with `--live --open` opens the desktop,
+ * which follows the run from the same address.
  */
 import {readFile} from 'node:fs/promises';
 import type http from 'node:http';
@@ -10,7 +10,7 @@ import path from 'node:path';
 import {pageCsp, resolveStatic} from '../../infrastructure/server/http.mjs';
 
 /** The front door's address. */
-export const FRONT_DOOR = '/apps/home/';
+export const FRONT_DOOR = '/apps/desktop/';
 
 const TYPES: Readonly<Record<string, string>> = {
   '.html': 'text/html; charset=utf-8',

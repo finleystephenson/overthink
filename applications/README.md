@@ -1,19 +1,23 @@
 # applications/: the company computer
 
-The screens of Overthought & Co.: a home screen, one app per job (mail, help desk, staff chat, social, news, shop, stock, accounts...), and the Control Room, which runs the simulator. Static files only: HTML, CSS and plain ES modules. No framework, no build step, no dependencies.
+The screens of Overthought & Co.: a home screen, one app per job (mail, calendar, contacts, help desk, staff chat, social, news, shop, stock, accounts, files...), and the Control Room, which runs the simulator. Static files only: HTML, CSS and plain ES modules. No framework, no build step, no dependencies.
 
 ```bash
 node applications/dev.mjs            # http://127.0.0.1:8790/apps/   (--port to change it)
 ```
 
-The real server (`infrastructure/server/main.mjs`) serves the apps (`/apps/`), the pictures (`/img/`), the web API and MCP from one port. `dev.mjs` is a thin wrapper that starts it with the defaults the apps are built against (port 8790, `--plugins events`); any other `infrastructure/server/main.mjs` option passes straight through. Opening `/` in a browser goes to Rummage, the company's search engine (`applications/home/`).
+The real server (`infrastructure/server/main.mjs`) serves the apps (`/apps/`), the pictures (`/img/`), the web API and MCP from one port. `dev.mjs` is a thin wrapper that starts it with the defaults the apps are built against (port 8790, `--plugins events`); any other `infrastructure/server/main.mjs` option passes straight through. Opening `/` in a browser goes to the sandbox desktop (`applications/desktop/`): the computer the AI works on, with each app in its own window and Rummage (`applications/home/`) as its search.
 
 ## How it fits together
 
 ```
 applications/
   apps.json            every app: id, name, description, accent, icon, status, roles. Names live ONLY here.
-  home/                Rummage, the company's search engine and front door (served at /): search across every tool,
+  desktop/             the sandbox desktop, the front door at /: menu bar, dock (built from apps.json), each app in a
+                       window (?embed=1), search (Ctrl/Cmd K), and the AI watched live at any speed: windows come forward
+                       at a person's pace, a calm activity panel (counts, live/slow/paused, follow a thread, timeline)
+                       when it is faster. wm-core.js and watch.js are the logic (tested); feed-burst.mjs streams a test burst
+  home/                Rummage, the company's search engine (one app on the desktop): search across every tool,
                        the tools grid, and your AI's actions and their effect, live during `overthink run --live`
   index.html           sends old links on to home/
   control-room/        the simulator's app: clock, try something (price, marketing, hours, event), impact, the business now,
@@ -25,6 +29,9 @@ applications/
     ui.css             the design system: tokens (light and dark), type, parts, the top bar, motion
     ui.js              helpers and parts: html``, money(), avatar(), pill(), toast(), slideOver(), countTo(), startApp()...
     topbar.js          the slim bar on every app: Rummage (home), the app's name, and what a run brings
+    your-ai.js         the one "Your AI" treatment in every app: marks what the AI touched, its cursor, and the story
+                       behind each mark (the conversation that caused it, what else it changed, what followed), linked
+                       across apps. startApp() starts it; an app can mark anything with data-ot-ai-id="<record id>"
     live.js            reads a run's live events (docs/live-events.md) into plain lines, for Rummage and the bar
     icons.js           app icons (one drawing per app) and small interface icons
     days.js            turns the simulator's day lines into figures and words (bar, Home, Control Room)

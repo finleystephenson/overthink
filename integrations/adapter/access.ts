@@ -41,6 +41,8 @@ export const ACCESS_PRESETS: Readonly<Record<string, {scope: Scope | null; what:
         'stock',
         'knowledge',
         'marketing',
+        'calendar',
+        'contacts',
       ],
     },
     what: 'everything except refunds, goodwill and the books',

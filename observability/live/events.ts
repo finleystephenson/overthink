@@ -162,13 +162,15 @@ export function clip(text: string | null | undefined): string {
 
 /** Tools by the company app their records live in. First match wins. */
 const APP_OF: readonly [RegExp, string][] = [
+  [/^(list|get|create|update|cancel)_events?$|meeting_request/, 'calendar'],
+  [/contact_card/, 'contacts'],
   [/email|mailbox|draft/, 'letterbox'],
   [/social|post/, 'mutter'],
   [/campaign|marketing|newsletter/, 'megaphone'],
   [/chat_message|channel|direct_messages|task|workload|org_chart/, 'kettle'],
   [/stock|purchase_order|supplier/, 'stockroom'],
   [/ledger|pay_later|monthly_summary/, 'tally'],
-  [/document|knowledge|policy/, 'filing-cabinet'],
+  [/document|knowledge|policy/, 'files'],
   [/case|escalate|contact|conversation|verify_customer/, 'front-desk'],
   [/prospect|outreach/, 'letterbox'],
   [/order|refund|return|product|price|catalogue|goodwill/, 'till'],

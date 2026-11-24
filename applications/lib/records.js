@@ -26,6 +26,13 @@ const KINDS = {
   task: { label: "Task", tool: "get_task", input: (id) => ({ task_id: id }), aliases: ["task_id"], owner: ["kettle", (d, id) => `task=${encodeURIComponent(id)}`, "Open in Team"] },
   organisation: { label: "Organisation", tool: "get_organisation", input: (id) => ({ id }), aliases: ["organisation_id", "competitor"], owner: ["daily-overthinker", () => "", "Read the news"] },
   news: { label: "News", tool: "get_news_item", input: (id) => ({ id }), aliases: ["news_id"], owner: ["daily-overthinker", (d, id) => `story=${encodeURIComponent(id)}`, "Open in the paper"] },
+  // WHY the address book's card for staff: there is no business tool that reads one person, and the card is
+  // already cut to what the role may see (pay only for finance and the manager).
+  staff: { label: "Team", tool: "get_contact_card", input: (id) => ({ card_id: id }), aliases: ["staff_id", "assignee"], owner: ["kettle", () => "team=people", "Open in Team"] },
+  prospect: { label: "Prospect", tool: "get_prospect", input: (id) => ({ prospect_id: id }), aliases: ["prospect_id"], owner: ["contacts", (d, id) => `card=${encodeURIComponent(id)}`, "Open in Contacts"] },
+  booking: { label: "Booking", tool: "get_booking", input: (id) => ({ booking_number: id }), aliases: ["booking_number"], owner: ["calendar", (d, id) => `event=${encodeURIComponent(`booking:${id}`)}`, "See it in the calendar"] },
+  event: { label: "Calendar", tool: "get_event", input: (id) => ({ event_id: id }), aliases: ["event_id"], owner: ["calendar", (d, id) => `event=${encodeURIComponent(id)}`, "Open in the calendar"] },
+  world_event: { label: "World event", tool: "get_world_event", input: (id) => ({ id }), owner: ["daily-overthinker", () => "", "Read the news"] },
 };
 
 /** The kind for any name a link may use ("customer_id" is "customer"), or null for one that cannot be opened. */
@@ -80,6 +87,13 @@ function fullWhen(iso) {
   return iso.length === 10 ? `${p.weekday} ${p.day} ${p.month}` : `${p.weekday} ${p.day} ${p.month} ${p.year}, ${p.time}`;
 }
 
+/** When a calendar entry is, in words: "Tuesday 24 November, 10:00 to 10:30" or "24 to 30 November". */
+function eventWhen(d) {
+  if (!d?.start) return "";
+  if (d.all_day) return d.end && d.end !== d.start ? `${shortDay(d.start)} to ${shortDay(d.end)}` : fullWhen(d.start);
+  return `${fullWhen(d.start)} to ${timeParts(d.end).time}`;
+}
+
 function shortDay(iso) {
   const p = timeParts(iso.length === 10 ? `${iso}T00:00:00Z` : iso);
   return `${p.day} ${p.monthShort}`;
@@ -129,6 +143,18 @@ export function summariseRecord(kind, id, d) {
   }
   if (k === "campaign") {
     return { title: d.name || d.title || id, facts: [words(d.status || d.channel || "")].filter(Boolean), tone: "" };
+  }
+  if (k === "staff") {
+    return { title: d.name, facts: [d.title, d.email].filter(Boolean), tone: "" };
+  }
+  if (k === "prospect") {
+    return { title: d.name, facts: [d.sector && words(d.sector), d.status && words(d.status)].filter(Boolean), tone: "" };
+  }
+  if (k === "event") {
+    return { title: d.title, facts: [eventWhen(d), d.status === "tentative" ? "not answered yet" : d.status === "cancelled" ? "cancelled" : null].filter(Boolean), tone: d.status === "cancelled" ? "bad" : d.status === "tentative" ? "warn" : "" };
+  }
+  if (k === "world_event") {
+    return { title: d.title, facts: [d.start ? shortDay(d.start) : null, words(d.status || "")].filter(Boolean), tone: "" };
   }
   return { title: plainRef(id) || recordLabel(kind), facts: [], tone: "" };
 }
@@ -190,6 +216,22 @@ function recordBody(k, id, d) {
   }
   if (k === "news") {
     return `<p class="muted small">${esc(d.section || "")} · ${esc(fullWhen(d.at))}</p><p>${esc(d.story || "")}</p>`;
+  }
+  if (k === "staff") {
+    const f = d.facts || {};
+    return `<div class="rec-person">${avatar(d.name, { size: 64 })}<div><p class="h3">${esc(d.name)}</p><p class="muted small">${esc(d.title || "")}</p></div></div>
+      <ul class="list rec-list">${row("Email", d.email)}${row("Starts at", f.starts_at)}${row("Hours a week", f.contracted_hours_a_week)}${row("Open tasks", f.open_tasks)}${f.hourly_pay != null ? row("Pay an hour", money2(f.hourly_pay)) : ""}${row("From the book", f.from_the_book)}</ul>`;
+  }
+  if (k === "prospect") {
+    const dm = d.decision_maker || {};
+    return `<ul class="list rec-list">${row("Who decides", dm.name)}${row("Email", dm.email)}${row("Where", d.location?.town)}${row("What they do", d.sector && words(d.sector))}${row("Where it is", d.status && words(d.status))}${row("Last in touch", d.last_contacted ? fullWhen(d.last_contacted) : "never")}</ul>`;
+  }
+  if (k === "event") {
+    return `<ul class="list rec-list">${row("When", eventWhen(d))}${row("Where", d.where)}${row("Who", (d.people || []).map((p) => p.name).join(", "))}${d.from_outside ? row("Asked for by", [d.from_outside.name, d.from_outside.organisation].filter(Boolean).join(", ")) : ""}${row("Made by", d.organiser?.name)}</ul>
+      ${d.notes ? `<p>${esc(d.notes)}</p>` : ""}${d.record ? `<p>${recordChip(d.record.kind, d.record.id)}</p>` : ""}`;
+  }
+  if (k === "world_event") {
+    return `<p class="muted small">${esc(fullWhen(d.start))}${d.end && d.end !== d.start ? ` to ${esc(fullWhen(d.end))}` : ""}</p><p>${esc(d.story || d.headline || "")}</p>`;
   }
   return `<ul class="list rec-list">${Object.entries(d).filter(([, v]) => v != null && v !== "" && typeof v !== "object").slice(0, 12)
     .map(([key, v]) => row(words(key), /_at$/.test(key) ? fullWhen(String(v)) : typeof v === "number" && /total|amount|budget|spend|cost/.test(key) ? money2(v) : String(v))).join("")}</ul>`;

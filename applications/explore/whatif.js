@@ -176,7 +176,7 @@ function plan(main) {
 
 function appHrefFromWords(text) {
   const name = String(text).split(" (")[0].trim().toLowerCase();
-  const ids = { till: "till", tally: "tally", letterbox: "letterbox", "front desk": "front-desk", stockroom: "stockroom", rota: "rota", megaphone: "megaphone", squint: "squint", mutter: "mutter", kettle: "kettle", "the daily overthinker": "daily-overthinker", "filing cabinet": "filing-cabinet", "control room": "control-room" };
+  const ids = { till: "till", tally: "tally", letterbox: "letterbox", "front desk": "front-desk", stockroom: "stockroom", rota: "rota", megaphone: "megaphone", squint: "squint", mutter: "mutter", kettle: "kettle", "the daily overthinker": "daily-overthinker", "filing cabinet": "files", files: "files", "control room": "control-room" };
   return ids[name] ? `#/apps/${ids[name]}` : null;
 }
 

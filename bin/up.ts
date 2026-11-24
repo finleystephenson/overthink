@@ -1,7 +1,7 @@
 /**
  * @fileoverview `overthink up`: a live sandbox of Overthought & Co. for the developer's agent to work in.
  *
- * One local server, one sandbox. It serves the company's apps (Rummage at /), the business tools a product uses
+ * One local server, one sandbox. It serves the company's apps (the sandbox desktop at /), the business tools a product uses
  * (web API and /mcp), and the activity toolset the agent uses to create people and activity, move time, observe
  * and reset (/mcp/activity, /sandboxes/{id}/activity). With --adapter the product is deployed on its channels and
  * answers the activity that reaches them. The address and the owner key go to .overthink/sandbox.json, where
@@ -79,7 +79,7 @@ export async function up(o: UpOptions): Promise<number> {
   const open = `${url}/#sandbox=${sandbox.id}&key=${token}`;
   console.log(`Overthought & Co. is running in a sandbox (${o.size}, id ${sandbox.id}).
 
-  Rummage, the company's apps:  ${open}
+  The sandbox desktop:           ${open}
   Activity, for your agent:      claude mcp add --transport http overthink-activity ${url}/mcp/activity --header "Authorization: Bearer ${token}"
                                  or: overthink act <action> ...   (overthink act --help)
   The business, for a product:   ${url}/mcp and ${url}/tools/{name}   (docs/connect.md)

@@ -923,7 +923,7 @@ test("audit records every call, including failures, with changes on success", ()
 
 // ------------------------------------------------------------ back office on the generated demo world
 
-import { loadData } from "./load.js";
+import { loadData } from "./load.ts";
 const DATA = new URL("../../business/data", import.meta.url).pathname;
 const demoData = loadData(DATA, { world: "demo", bench: true }); // the story world: these tests use story records
 const demo = () => createWorld({ ...demoData, now: NOW });

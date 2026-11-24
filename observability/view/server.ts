@@ -9,7 +9,7 @@
  * 2. Read-only, twice over. Requests that could change anything are refused at the door (only reads, tool calls and
  *    MCP pass), and the store itself runs only reading tools, rolls back the one line of audit a read writes, and
  *    puts the world back if a call changed it anyway. Nothing here can change a world; there is a test for it.
- * 3. The view's own pages and data: the company's front door at / (applications/home/), the run summary at /apps/view/, the
+ * 3. The view's own pages and data: the front door at / (the sandbox desktop, applications/desktop/), the run summary at /apps/view/, the
  *    report at /report, the marks at /view/marks, any record at /view/record/<id>, and the run's live events at
  *    /live/* (observability/view/live.ts).
  *    Every app page gets applications/lib/view.js added, which badges "Your AI" on every marked record and adds the switch to
@@ -28,6 +28,7 @@ import type {Principal, Sandbox} from '../../infrastructure/server/sandboxes.mjs
 import {worldFromState} from '../../infrastructure/server/world-data.mjs';
 import {applyDelta, readBundle, savedSeeds, stateHash} from './bundle.ts';
 import type {SeedBundle} from './bundle.ts';
+import {FRONT_DOOR} from './front-door.ts';
 import {eventsFromWorlds, handleLive, liveSourceFor} from './live.ts';
 import type {Mark} from './marks.ts';
 
@@ -303,7 +304,7 @@ export function createViewServer(run: RunWorlds): http.Server {
     const method = req.method ?? 'GET';
     const view = viewOf(req, run.seeds);
     if (method === 'GET' && url.pathname === '/') {
-      res.writeHead(302, {Location: '/apps/home/'}).end();
+      res.writeHead(302, {Location: FRONT_DOOR}).end();
       return;
     }
     if (method === 'GET' && url.pathname.startsWith('/live/') && handleLive(req, res, url, live))

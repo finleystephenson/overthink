@@ -139,7 +139,7 @@ Letterbox (`letterbox/app.css`, `letterbox/app.js`) is the first app moved to `p
 - Stacked chips (more than one coloured chip per row), notification dots that duplicate a count.
 - Bouncy motion (`--spring`), animations on frequent actions, the flip-clock date.
 
-## Learned re-skinning Kettle, Squint, Mutter, The Daily Overthinker, Filing Cabinet, Control Room (22 Nov)
+## Learned re-skinning Kettle, Squint, Mutter, The Daily Overthinker, Filing Cabinet (now Files), Control Room (22 Nov)
 
 - **Build beside, swap whole.** `apps/_next-<id>/` works unchanged (imports are `../lib/...`); copy its files over the app when finished, then delete the folder. Delete retired files by hand (`control-room/impact-panel.js` is gone).
 - **Social parts live in `lib/social.css`** (new): like/repost controls, "Written by", stand-ins, the "What this post did" table and the account charts. Squint and Mutter load it after `premium.css`. `lib/social.js` now draws "What this post did" as a ruled table (people who saw it, likes, reposts, comments, visits, orders, "heading for N", why in plain words, whether the writing was scored), pass `now` so a post the simulator made says "only likes and comments are counted" instead of "move on a day". `burst()` is now a no-op; customers' stand-ins are one tint with ink initials.

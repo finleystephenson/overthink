@@ -199,7 +199,7 @@ async function openLive(
     stream,
     positiveInt(v['live-port'] ?? String(LIVE_PORT), '--live-port'),
   );
-  console.error(`Watch it in Rummage, the company's search: ${server.url}/`);
+  console.error(`Watch it on the sandbox desktop: ${server.url}/`);
   console.error(
     `Live: ${server.url}/ (the front door), events at ${server.url}/live/events (docs/live-events.md)`,
   );
@@ -514,7 +514,7 @@ async function view(v: {
   }
   const {url, run: worlds} = await startViewServer(dir, positiveInt(v.port, '--port'));
   const first = worlds.open(worlds.seeds[0] ?? 1, 'with');
-  console.log(`Rummage, the company's search, at the end of the run (read-only): ${url}/`);
+  console.log(`The sandbox desktop, on the finished run (read-only): ${url}/`);
   console.log(
     `Runs (seeds): ${worlds.seeds.join(', ')}. Your AI's records are badged; switch to "Without your AI" at the bottom.`,
   );

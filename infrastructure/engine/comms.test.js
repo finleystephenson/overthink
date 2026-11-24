@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 import { createWorld } from "./all.js";
-import { loadData } from "./load.js";
+import { loadData } from "./load.ts";
 import { deriveComms } from "../../business/builder/world/comms.mjs";
 import { loadCommsData } from "../../business/builder/world/comms-data.mjs";
 

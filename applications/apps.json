@@ -33,6 +33,50 @@
       ]
     },
     {
+      "id": "calendar",
+      "layer": "business",
+      "name": "Calendar",
+      "plain": "Schedule",
+      "description": "The company's week: deliveries, bookings, shifts, campaigns, meetings and calls.",
+      "accent": "#4f8df5",
+      "icon": "calendar",
+      "status": "ready",
+      "roles": [
+        "manager",
+        "support_lead",
+        "support_agent",
+        "technician",
+        "coordinator",
+        "warehouse",
+        "buyer",
+        "finance",
+        "marketing",
+        "operations_assistant"
+      ]
+    },
+    {
+      "id": "contacts",
+      "layer": "business",
+      "name": "Contacts",
+      "plain": "Address book",
+      "description": "Everyone the business knows: customers, suppliers, the team, partners and prospects.",
+      "accent": "#e6a98c",
+      "icon": "contacts",
+      "status": "ready",
+      "roles": [
+        "manager",
+        "support_lead",
+        "support_agent",
+        "technician",
+        "coordinator",
+        "warehouse",
+        "buyer",
+        "finance",
+        "marketing",
+        "operations_assistant"
+      ]
+    },
+    {
       "id": "daily-overthinker",
       "layer": "business",
       "name": "The Daily Overthinker",
@@ -173,13 +217,13 @@
       ]
     },
     {
-      "id": "filing-cabinet",
+      "id": "files",
       "layer": "business",
-      "name": "Filing Cabinet",
+      "name": "Files",
       "plain": "Documents",
-      "description": "Policies, procedures, product records and agreements.",
+      "description": "Every document the business keeps: policies, procedures, product sheets, agreements and notes.",
       "accent": "#d8d2c6",
-      "icon": "filing",
+      "icon": "files",
       "status": "ready",
       "roles": [
         "manager",

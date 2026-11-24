@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { createWorld } from "./all.js";
-import { loadData } from "./load.js";
+import { loadData } from "./load.ts";
 import { eventsPlugin } from "./events.js";
 import { scheduleEvents, activeEffects, newsFor, rampFactor, statusOn, describeEffects, checkEffects, instantiate, needsUnlaunchedProduct } from "./events-core.js";
 import { buildEventHistory } from "../../business/builder/world/events.mjs";
